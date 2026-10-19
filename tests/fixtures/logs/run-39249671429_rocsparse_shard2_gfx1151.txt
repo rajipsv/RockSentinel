@@ -1,0 +1,119 @@
+# Source: ROCm/TheRock Actions run 39249671429 (test_artifacts.yml #3351, commit f79fc42, main)
+# Job: Test rocsparse / Test rocsparse (shard 2/3) (gfx1151), job id 118078343556
+# https://github.com/ROCm/TheRock/actions/runs/39249671429/job/118078343556
+# Excerpt copied manually from the "Test" step on 2026-10-19 (log requires GitHub sign-in).
+# Note: excerpt only; repeated kpack loader lines above this point were omitted by the copier.
+kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/lib/librocsparse.so.1.0', co_index=249, lookup_key='math-libs/BLAS/rocSPARSE/stage/lib/librocsparse.so.1.0#249', 2 search paths
+kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx1151.kpack
+kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx11-generic.kpack
+kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx1151.kpack
+kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx11-generic.kpack
+kpack: archive not found: /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx11-generic.kpack
+kpack: archive not found: /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx1151.kpack
+kpack: archive not found: /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx11-generic.kpack
+kpack: trying architecture: amdgcn-amd-amdhsa--gfx1151
+kpack:   archive /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx1151.kpack has architecture gfx1151
+kpack:   found kernel: 57984 bytes
+kpack: loaded code object: 57984 bytes
+kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/lib/librocsparse.so.1.0', co_index=248, lookup_key='math-libs/BLAS/rocSPARSE/stage/lib/librocsparse.so.1.0#248', 2 search paths
+kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx1151.kpack
+kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx11-generic.kpack
+kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx1151.kpack
+kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx11-generic.kpack
+kpack: archive not found: /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx11-generic.kpack
+kpack: archive not found: /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx1151.kpack
+kpack: archive not found: /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx11-generic.kpack
+kpack: trying architecture: amdgcn-amd-amdhsa--gfx1151
+kpack:   archive /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx1151.kpack has architecture gfx1151
+kpack:   found kernel: 135888 bytes
+kpack: loaded code object: 135888 bytes
+[       OK ] BsrGeam.full_pipeline (3 ms)
+[----------] 1 test from BsrGeam (3 ms total)
+
+[----------] 1 test from SpGeam
+[ RUN      ] SpGeam.bad_args
+[       OK ] SpGeam.bad_args (0 ms)
+[----------] 1 test from SpGeam (0 ms total)
+
+[----------] 11 tests from internal_extra_csrgemm_bitmap
+[ RUN      ] internal_extra_csrgemm_bitmap.nnz_i64_i64
+kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse/rocsparse-unit-test-device', co_index=37, lookup_key='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse/rocsparse-unit-test-device#37', 2 search paths
+kpack: expanded pattern: ../../.kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx1151.kpack
+kpack: expanded pattern: ../../.kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx11-generic.kpack
+kpack: expanded pattern: .kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx1151.kpack
+kpack: expanded pattern: .kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx11-generic.kpack
+kpack: archive not found: /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx11-generic.kpack
+kpack: archive not found: /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx1151.kpack
+kpack: archive not found: /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx11-generic.kpack
+kpack: trying architecture: amdgcn-amd-amdhsa--gfx1151
+kpack:   archive /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx1151.kpack has architecture gfx1151
+kpack:   found kernel: 409912 bytes
+kpack: loaded code object: 409912 bytes
+[       OK ] internal_extra_csrgemm_bitmap.nnz_i64_i64 (140 ms)
+[ RUN      ] internal_extra_csrgemm_bitmap.symbolic_i64_i64
+kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse/rocsparse-unit-test-device', co_index=14, lookup_key='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse/rocsparse-unit-test-device#14', 2 search paths
+kpack: expanded pattern: ../../.kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx1151.kpack
+kpack: expanded pattern: ../../.kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx11-generic.kpack
+kpack: expanded pattern: .kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx1151.kpack
+kpack: expanded pattern: .kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx11-generic.kpack
+kpack: archive not found: /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx11-generic.kpack
+kpack: archive not found: /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx1151.kpack
+kpack: archive not found: /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx11-generic.kpack
+kpack: trying architecture: amdgcn-amd-amdhsa--gfx1151
+kpack:   archive /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx1151.kpack has architecture gfx1151
+kpack:   found kernel: 1062104 bytes
+kpack: loaded code object: 1062104 bytes
+[       OK ] internal_extra_csrgemm_bitmap.symbolic_i64_i64 (158 ms)
+[ RUN      ] internal_extra_csrgemm_bitmap.calc_c32
+[       OK ] internal_extra_csrgemm_bitmap.calc_c32 (430 ms)
+[ RUN      ] internal_extra_csrgemm_bitmap.numeric_f32
+[       OK ] internal_extra_csrgemm_bitmap.numeric_f32 (365 ms)
+[ RUN      ] internal_extra_csrgemm_bitmap.numeric_c64
+[       OK ] internal_extra_csrgemm_bitmap.numeric_c64 (461 ms)
+[ RUN      ] internal_extra_csrgemm_bitmap.pass_sizing_i64_i64
+[       OK ] internal_extra_csrgemm_bitmap.pass_sizing_i64_i64 (43 ms)
+[ RUN      ] internal_extra_csrgemm_bitmap.nnz_tiled_i32_i32
+[       OK ] internal_extra_csrgemm_bitmap.nnz_tiled_i32_i32 (120 ms)
+[ RUN      ] internal_extra_csrgemm_bitmap.symbolic_tiled_i64_i64
+[       OK ] internal_extra_csrgemm_bitmap.symbolic_tiled_i64_i64 (162 ms)
+[ RUN      ] internal_extra_csrgemm_bitmap.calc_tiled_f64_i64_i64
+Warning: Queue error - HSA_STATUS_ERROR_MEMORY_FAULT
+
+****************************************************************************
+*** GPU HANG ANALYSIS - VGPU(0x64e2032e22d0) Queue(0x72f329848000)
+****************************************************************************
+SWq=0x72f329848000, HWq=0x72f30d800000, id=1, priority=1, Dispatch Header = 0xb02 (type=2, barrier=1, acquire=1, release=1), setup=3, grid=[256, 16, 1], workgroup=[256, 1, 1], private_seg_size=0, group_seg_size=0, kernel_obj=0x72f1038bae00, kernarg_address=0x72f207801d00, completion_signal=0x0, rptr=55919, wptr=55923
+****************************************************************************
+
+:0:rocdevice.cpp            :4002: 2027993962326 us:  [host: 15d56e8b06b6, GPU index: 0, faulting addr: 0x72f104dc4000, kernel: void rocsparse::csrgemm_bitmap_emit_kernel<256u, long, long>(long, long, long, long const*, long const*, long const*, long const*, unsigned int const*, long const*, long const*, rocsparse_index_base_, long*)]
+Memory access fault by GPU node-1 (Agent handle: 0x64e203123630) on address 0x72f104dc4000. Reason: Page not present or supervisor privilege.
+GPU coredump: kernel core_pattern is a pipe handler; falling back to local file (GPU ELF is incompatible with CPU coredump handlers).  Set HSA_COREDUMP_PATTERN to override.
+
+
+67% tests passed, 1 tests failed out of 3
+
+Label Time Summary:
+comprehensive     =   9.60 sec*proc (2 tests)
+ex_gpu_gfx1151    = 128.89 sec*proc (3 tests)
+full              =   9.60 sec*proc (2 tests)
+gpu               =   9.51 sec*proc (1 test)
+pr                = 119.29 sec*proc (1 test)
+quick             =   9.60 sec*proc (2 tests)
+standard          = 128.89 sec*proc (3 tests)
+
+Total Test time (real) = 128.89 sec
+
+The following tests FAILED:
+	 16 - rocsparse-unit-test-device_gfx1151 (Subprocess aborted)
+# TEST_COMPONENT: rocsparse -> Test Directory: build/bin/rocsparse
+# TEST_TYPE: standard -> Category: standard
+# AMDGPU_FAMILIES: gfx1151 -> GPU Architecture: gfx1151
+
+# Discovering available test labels...
+# Found 1 GPU suite test(s)
+# Available GPU architectures: ['gfx1151']
+
+# Using GPU suite label: ex_gpu_gfx1151
+# Running: ctest -L ^standard$ -L ^ex_gpu_gfx1151$ --output-on-failure --parallel 1 --timeout 7200 --test-dir build/bin/rocsparse -V
+
+Error: Process completed with exit code 8.

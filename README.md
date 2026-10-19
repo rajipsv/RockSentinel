@@ -1,0 +1,25 @@
+# RockSentinel
+
+AI agents that triage [ROCm/TheRock](https://github.com/ROCm/TheRock) CI failures on Azure. The agents read the logs, find the real error, attribute it to a component, GPU family and platform, trace it to the change that likely caused it, and learn from past cases. Results are shown in a reviewer console.
+
+RockSentinel is **read-only toward GitHub**: it never posts, comments or pushes. Reviewers decide what to share.
+
+## Status
+Design phase. See the full design: [docs/ADLC-RockSentinel.md](docs/ADLC-RockSentinel.md).
+
+## At a glance
+- **AI agents:** Triage, Root-Cause Advisor, Memory Curator (PR Reviewer planned). They are run by a deterministic Supervisor, with a Report Builder at the end.
+- **Tools via MCP:** GitHub's official MCP server (read-only), plus custom `therock-ci` and `memory` servers.
+- **Azure:** Container Apps jobs, Service Bus, Cosmos DB, Azure Data Explorer, Azure OpenAI, Static Web Apps, Key Vault, managed identity, App Insights. Infrastructure as code in Bicep, deployed with `azd`.
+- **Evaluation:** a golden set of real TheRock failures, a non-AI baseline, grounding checks and prompt-injection safety tests. See [evals/golden/](evals/golden/).
+
+## Repository layout (so far)
+```
+docs/            design document (ADLC)
+evals/golden/    labelled real-failure cases
+tests/fixtures/  recorded CI log excerpts
+```
+
+## Acknowledgements
+- [ROCm/TheRock](https://github.com/ROCm/TheRock): the CI system analysed, plus its `skills/`, `detect_failed_logs.py` and `reproduce_test_failure.py`.
+- [affaan-m/ECC](https://github.com/affaan-m/ECC) (MIT): skill and harness patterns adapted for the agents.

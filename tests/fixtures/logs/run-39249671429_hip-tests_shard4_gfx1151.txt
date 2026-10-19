@@ -1,0 +1,10 @@
+# Source: ROCm/TheRock Actions run 39249671429 (test_artifacts.yml #3351, commit f79fc42, main)
+# Job: Test hip-tests / Test hip-tests (shard 4/4) (gfx1151)
+# Run: https://github.com/ROCm/TheRock/actions/runs/39249671429
+# Excerpt copied manually from the "Test" step on 2026-10-19 (log requires GitHub sign-in).
+# Note: short excerpt only; the earlier part of the log was not copied.
+          Start   59: Unit_hiprtcGpuMaxThreadPerBlockComplrOptnTst
+  15/1284 Test   #59: Unit_hiprtcGpuMaxThreadPerBlockComplrOptnTst ..............................................................................***Timeout 600.11 sec
+
+          Start   63: Unit_hiprtcDisabledInfiniteNumComplrOptnTst
+Error: The action 'Test' has timed out after 120 minutes.
