@@ -9,10 +9,13 @@ description = "Agentic CI failure triage for ROCm/TheRock on Azure"
 readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "MIT" }
-dependencies = []
+dependencies = ["mcp>=2.3,<3"]
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0", "ruff>=0.6"]
+dev = ["pytest>=8.0", "anyio>=4.0", "ruff>=0.6"]
+
+[project.scripts]
+therock-ci-mcp = "rocksentinel.therock_ci.server:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/rocksentinel"]

@@ -16,6 +16,8 @@ Design phase. See the full design: [docs/ADLC-RockSentinel.md](docs/ADLC-RockSen
 ## Repository layout (so far)
 ```
 src/rocksentinel/therock_ci/extract.py   deterministic error extraction (extract_errors)
+src/rocksentinel/therock_ci/mappers.py   job -> component/family/platform, path/symbol -> component
+src/rocksentinel/therock_ci/server.py    therock-ci MCP server (MCP Python SDK 2.x)
 tests/unit/                              unit + golden grounding tests
 tests/fixtures/                          recorded CI log excerpts
 evals/golden/                            labelled real-failure cases
