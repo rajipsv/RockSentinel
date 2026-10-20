@@ -189,6 +189,47 @@ class GitHubClient:
 
     # --- API --------------------------------------------------------------------------------
 
+    def list_runs(
+        self,
+        repo: str,
+        *,
+        since: datetime | None = None,
+        since_hours: int = 24,
+        status: str = "completed",
+        workflow: str | None = None,
+        branch: str | None = None,
+        limit: int = 20,
+    ) -> list[RunRef]:
+        """Workflow runs created since `since` (or the last `since_hours`), newest first.
+
+        `status` is any GitHub run status/conclusion filter: "completed", "failure", ...
+        """
+        validate_repo(repo)
+        start = since or (datetime.now(UTC) - timedelta(hours=since_hours))
+        per_page = min(max(limit, 1), 100)
+        params: dict[str, Any] = {
+            "status": status,
+            "created": f">={start.strftime('%Y-%m-%dT%H:%M:%SZ')}",
+            "per_page": per_page,
+        }
+        if branch:
+            params["branch"] = branch
+        path = (
+            f"/repos/{repo}/actions/workflows/{workflow}/runs"
+            if workflow
+            else f"/repos/{repo}/actions/runs"
+        )
+        runs: list[RunRef] = []
+        page = 1
+        while len(runs) < limit:
+            data = self._get_json(path, {**params, "page": page})
+            batch = [_run_from_api(r) for r in data.get("workflow_runs", [])]
+            runs.extend(batch)
+            if len(batch) < per_page:
+                break
+            page += 1
+        return runs[:limit]
+
     def list_failed_runs(
         self,
         repo: str,
@@ -198,22 +239,14 @@ class GitHubClient:
         branch: str | None = None,
         limit: int = 20,
     ) -> list[RunRef]:
-        validate_repo(repo)
-        since = (datetime.now(UTC) - timedelta(hours=since_hours)).strftime("%Y-%m-%dT%H:%M:%SZ")
-        params: dict[str, Any] = {
-            "status": "failure",
-            "created": f">={since}",
-            "per_page": min(max(limit, 1), 100),
-        }
-        if branch:
-            params["branch"] = branch
-        path = (
-            f"/repos/{repo}/actions/workflows/{workflow}/runs"
-            if workflow
-            else f"/repos/{repo}/actions/runs"
+        return self.list_runs(
+            repo,
+            since_hours=since_hours,
+            status="failure",
+            workflow=workflow,
+            branch=branch,
+            limit=limit,
         )
-        data = self._get_json(path, params)
-        return [_run_from_api(r) for r in data.get("workflow_runs", [])][:limit]
 
     def list_jobs(self, repo: str, run_id: int, *, failed_only: bool = True) -> list[JobRef]:
         validate_repo(repo)

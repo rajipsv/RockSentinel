@@ -46,6 +46,13 @@ JOB_CASES = [
     ),
     (
         "multi_arch_ci.yml",
+        "Linux::release / Build Multi-Arch Stages / wsl-rocdxg / Stage - WSL ROCDXG",
+        None,
+        dict(component="wsl-rocdxg", gpu_family=None, platform="linux", stage="build",
+             shard=None, variant=None),
+    ),
+    (
+        "multi_arch_ci.yml",
         "CI Summary",
         None,
         dict(component=None, gpu_family=None, platform=None, stage="summary",

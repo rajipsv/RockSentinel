@@ -17,7 +17,7 @@ Design: `docs/ADLC-RockSentinel.md`. Keep code consistent with it; if a decision
 - [x] 0a. `extract_errors` + tests
 - [x] 0b. `therock-ci` MCP server + mappers
 - [x] 0c. Read-only GitHub client, `list_failed_runs`, `get_job_log_windows`
-- [ ] 1. Poller + local SQLite job store (interface that ADX implements later)
+- [x] 1. Poller + local SQLite job store (interface that ADX implements later)
 - [ ] 2. `job_history` tool (failing-since, rerun/flake evidence, same-run co-failures)
 - [ ] 3. B0 non-AI baseline + eval runner over the golden set
 - [ ] 4. Grow the golden set to ~30–50 human-reviewed cases

@@ -19,6 +19,8 @@ src/rocksentinel/therock_ci/extract.py   deterministic error extraction (extract
 src/rocksentinel/therock_ci/mappers.py   job -> component/family/platform, path/symbol -> component
 src/rocksentinel/therock_ci/server.py    therock-ci MCP server (MCP Python SDK 2.x)
 src/rocksentinel/github/client.py        read-only GitHub REST client (runs, jobs, logs)
+src/rocksentinel/ingest/poller.py        polls completed runs, stores every job, queues failures
+src/rocksentinel/store/                  storage interfaces + local SQLite adapter (.data/, git-ignored)
 scripts/record_github_fixtures.py        records trimmed real API responses for tests
 tests/unit/                              unit + golden grounding tests
 tests/fixtures/                          recorded CI log excerpts
@@ -33,6 +35,14 @@ git-ignored `.env` file at the repo root:
 GITHUB_TOKEN=<your token>
 ```
 Tests never use the network: they replay recorded responses from `tests/fixtures/github/`.
+
+## Poll TheRock CI locally
+```bash
+.venv/Scripts/python -m rocksentinel.ingest.poller --since-hours 24 --max-runs 20
+```
+This stores every job result (pass and fail) in `.data/rocksentinel.db` and queues failures
+for triage. Re-running is safe: writes are idempotent, and each poll re-reads a 6-hour
+lookback before its saved cursor to catch runs that finished late.
 
 ## Run the tests
 ```bash

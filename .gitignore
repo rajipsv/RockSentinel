@@ -10,6 +10,9 @@ __pycache__/
 .azure/
 local.settings.json
 
+# Local data (SQLite job store)
+.data/
+
 # Secrets and env
 .env
 *.env
@@ -18,6 +21,9 @@ local.settings.json
 .vscode/
 .idea/
 .claude/settings.local.json
+
+# Office lock/temp files (e.g. opening docs in Word)
+~$*
 
 # OS
 .DS_Store

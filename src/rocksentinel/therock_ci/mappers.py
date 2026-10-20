@@ -58,6 +58,9 @@ _FAMILY_IN_PARENS = re.compile(r"\((gfx[0-9][0-9A-Za-z]*(?:-[a-z]+)?)")
 _SHARD = re.compile(r"\(shard (\d+)/(\d+)\)")
 _TEST_SEGMENT = re.compile(r"^Test (?!gfx)([A-Za-z0-9_.\-]+)(?: \(([A-Za-z]+)\))?")
 _BUILD_GROUP = re.compile(r"^([a-z][a-z0-9\-]+) \(gfx")
+# A bare lowercase slug segment after a "Build ..." segment names the build stage,
+# e.g. "Linux::release / Build Multi-Arch Stages / wsl-rocdxg / Stage - WSL ROCDXG".
+_STAGE_SLUG = re.compile(r"^[a-z][a-z0-9\-]+$")
 _SYMBOL_HEAD = re.compile(r"^(?:void\s+)?([A-Za-z_][A-Za-z0-9_]*)::")
 
 
@@ -102,10 +105,10 @@ def map_job_to_family(workflow: str, job_name: str, runner_label: str | None = N
             stage = "test"
         elif seg.startswith("Build"):
             stage = stage or "build"
-        else:
-            g = _BUILD_GROUP.match(seg)
-            if g and g.group(1) in COMPONENT_GROUPS:
-                component = component or g.group(1)
+        elif (g := _BUILD_GROUP.match(seg)) and g.group(1) in COMPONENT_GROUPS:
+            component = component or g.group(1)
+        elif stage == "build" and _STAGE_SLUG.match(seg):
+            component = component or seg
     if "Summary" in job_name:
         stage = stage or "summary"
 
