@@ -15,9 +15,18 @@ Design phase. See the full design: [docs/ADLC-RockSentinel.md](docs/ADLC-RockSen
 
 ## Repository layout (so far)
 ```
-docs/            design document (ADLC)
-evals/golden/    labelled real-failure cases
-tests/fixtures/  recorded CI log excerpts
+src/rocksentinel/therock_ci/extract.py   deterministic error extraction (extract_errors)
+tests/unit/                              unit + golden grounding tests
+tests/fixtures/                          recorded CI log excerpts
+evals/golden/                            labelled real-failure cases
+docs/                                    design document (ADLC)
+```
+
+## Run the tests
+```bash
+python -m venv .venv
+.venv/Scripts/python -m pip install -e ".[dev]"   # on Linux/macOS: .venv/bin/python
+.venv/Scripts/python -m pytest
 ```
 
 ## Acknowledgements
