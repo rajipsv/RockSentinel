@@ -38,6 +38,7 @@ async def test_lists_expected_tools():
         "map_path_to_component",
         "list_failed_runs",
         "get_job_log_windows",
+        "job_history",
     }
 
 

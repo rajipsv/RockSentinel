@@ -17,6 +17,7 @@ Design phase. See the full design: [docs/ADLC-RockSentinel.md](docs/ADLC-RockSen
 ```
 src/rocksentinel/therock_ci/extract.py   deterministic error extraction (extract_errors)
 src/rocksentinel/therock_ci/mappers.py   job -> component/family/platform, path/symbol -> component
+src/rocksentinel/therock_ci/history.py   job_history: failing-since, flake evidence, co-failures
 src/rocksentinel/therock_ci/server.py    therock-ci MCP server (MCP Python SDK 2.x)
 src/rocksentinel/github/client.py        read-only GitHub REST client (runs, jobs, logs)
 src/rocksentinel/ingest/poller.py        polls completed runs, stores every job, queues failures

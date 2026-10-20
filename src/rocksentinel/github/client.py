@@ -248,14 +248,18 @@ class GitHubClient:
             limit=limit,
         )
 
-    def list_jobs(self, repo: str, run_id: int, *, failed_only: bool = True) -> list[JobRef]:
+    def list_jobs(
+        self, repo: str, run_id: int, *, failed_only: bool = True, all_attempts: bool = False
+    ) -> list[JobRef]:
+        """Jobs of a run. A rerun gets new job ids; `all_attempts` keeps the earlier attempts
+        (needed for rerun/flake evidence), otherwise only the latest attempt is returned."""
         validate_repo(repo)
         jobs: list[JobRef] = []
         page = 1
         while True:
             data = self._get_json(
                 f"/repos/{repo}/actions/runs/{run_id}/jobs",
-                {"filter": "latest", "per_page": 100, "page": page},
+                {"filter": "all" if all_attempts else "latest", "per_page": 100, "page": page},
             )
             batch = [_job_from_api(j) for j in data.get("jobs", [])]
             jobs.extend(batch)

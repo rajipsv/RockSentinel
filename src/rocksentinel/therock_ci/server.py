@@ -13,7 +13,9 @@ from __future__ import annotations
 from mcp.server.mcpserver import MCPServer  # mcp 2.x name for FastMCP
 
 from rocksentinel.github.client import GitHubClient
+from rocksentinel.store.base import JobStore
 from rocksentinel.therock_ci import extract as _extract
+from rocksentinel.therock_ci import history as _history
 from rocksentinel.therock_ci import mappers
 
 DEFAULT_REPO = "ROCm/TheRock"
@@ -36,6 +38,36 @@ def set_github_client(client: GitHubClient | None) -> None:
     """Swap the GitHub client (tests use one backed by recorded responses)."""
     global _github
     _github = client
+
+
+_store: JobStore | None = None
+
+
+def get_store() -> JobStore:
+    """The job store filled by the poller (local SQLite; ADX in Azure)."""
+    global _store
+    if _store is None:
+        from rocksentinel.store.sqlite_store import SQLiteStore
+
+        _store = SQLiteStore()
+    return _store
+
+
+def set_store(store: JobStore | None) -> None:
+    global _store
+    _store = store
+
+
+@mcp.tool()
+def job_history(job_id: int, limit: int = 50) -> dict:
+    """History of one CI job across runs, from the job store filled by the poller.
+
+    Returns: failing-since (start of the current failure streak), last success, recent
+    outcomes, failure rate, flake evidence (passed on rerun in the same run; mixed
+    results on the same commit), and same-run co-failures with a platform-event hint
+    (several components failing on the same runner pool in one run attempt).
+    """
+    return _history.job_history(get_store(), job_id, limit=max(5, min(limit, 200)))
 
 
 @mcp.tool()

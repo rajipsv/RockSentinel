@@ -47,6 +47,10 @@ class JobStore(Protocol):
     def jobs_for_run(self, run_id: int) -> list[JobResult]: ...
     def count_jobs(self) -> int: ...
 
+    def history(self, repo: str, workflow: str, job_name: str, limit: int = 50) -> list[JobResult]:
+        """All attempts of the same job (same workflow + job name) across runs, newest first."""
+        ...
+
 
 class TriageQueue(Protocol):
     def enqueue(self, job: JobResult) -> bool:

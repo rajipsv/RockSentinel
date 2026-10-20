@@ -80,7 +80,8 @@ def poll_once(
     written = queued = 0
     newest = cursor
     for run in runs:
-        run_jobs = gh.list_jobs(repo, run.run_id, failed_only=False)
+        # all_attempts: reruns get new job ids; keeping earlier attempts preserves flake evidence
+        run_jobs = gh.list_jobs(repo, run.run_id, failed_only=False, all_attempts=True)
         results = [to_job_result(repo, run, j) for j in run_jobs]
         written += jobs.upsert_jobs(results)
         queued += sum(queue.enqueue(r) for r in results if r.failed)
