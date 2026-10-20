@@ -1,0 +1,62 @@
+"""Rule-based failure classifier over the taxonomy in the design doc (Appendix A).
+
+Shared by the B0 and B1 baselines, so differences between them come only from how
+evidence is extracted, not from the rules.
+"""
+
+from __future__ import annotations
+
+from collections.abc import Iterable
+
+CATEGORIES = (
+    "infra",
+    "flaky",
+    "regression",
+    "submodule-bump",
+    "packaging",
+    "windows-specific",
+    "asan",
+    "unknown",
+)
+
+BUMP_WORKFLOWS = frozenset({"bump_submodules.yml", "compiler_bump.yml"})
+_PACKAGING_HINTS = ("native_linux_packages", "native_windows_packages", "packages_install",
+                    "python_packages", "wheels")
+
+_INFRA_KINDS = frozenset({"infra", "killed"})
+_HANG_KINDS = frozenset({"test_timeout", "step_timeout", "gpu_hang"})
+_CODE_KINDS = frozenset({
+    "gpu_memory_fault", "crash", "build_error", "gtest_failed", "python_error",
+    "ctest_failed_list", "ctest_summary",
+})
+
+
+def classify(
+    kinds: Iterable[str],
+    *,
+    workflow: str,
+    variant: str | None = None,
+    likely_flaky: bool = False,
+) -> tuple[str, str]:
+    """Return (category, reason). Tie-breaks follow Appendix A:
+    asan > infra > hang(infra) > flaky > submodule-bump > packaging > regression > unknown."""
+    found = set(kinds)
+    if "gpu_memory_fault" in found:
+        # The ROCm runtime prints "*** GPU HANG ANALYSIS" as part of a memory-fault dump;
+        # with a fault present it is not an independent hang (found by golden-001).
+        found.discard("gpu_hang")
+    if "asan" in found or (variant == "asan" and found & _CODE_KINDS):
+        return "asan", "AddressSanitizer report or ASan workflow failure"
+    if found & _INFRA_KINDS:
+        return "infra", f"infrastructure signal: {sorted(found & _INFRA_KINDS)}"
+    if found & _HANG_KINDS:
+        return "infra", f"hang/timeout signal: {sorted(found & _HANG_KINDS)}"
+    if likely_flaky:
+        return "flaky", "passed on rerun or same commit passed elsewhere"
+    if workflow in BUMP_WORKFLOWS and found:
+        return "submodule-bump", f"failure in bump workflow {workflow}"
+    if any(h in workflow for h in _PACKAGING_HINTS) and found:
+        return "packaging", f"failure in packaging workflow {workflow}"
+    if found & _CODE_KINDS:
+        return "regression", f"code/test failure signal: {sorted(found & _CODE_KINDS)}"
+    return "unknown", "no recognised failure signal"

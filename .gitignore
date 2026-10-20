@@ -10,8 +10,9 @@ __pycache__/
 .azure/
 local.settings.json
 
-# Local data (SQLite job store)
+# Local data (SQLite job store) and generated eval reports
 .data/
+evals/reports/
 
 # Secrets and env
 .env

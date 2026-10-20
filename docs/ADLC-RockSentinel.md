@@ -675,10 +675,13 @@ The set is split into **dev (70%)**, used freely while iterating, and **held-out
 | Cache hit rate | P4, cost | Shows learning is happening, since each hit skips the strong model |
 | **Lift over the non-AI baseline** | all, cost | The baseline is TheRock's `detect_failed_logs.py` excerpt plus a keyword rule classifier. The agents must beat it on first-error accuracy and category macro-F1, or they aren't worth their token cost |
 
-**Baselines.** Every L2 report shows three rows:
-1. **B0:** the `detect_failed_logs.py`-style keyword excerpt with a rule-based classifier, with no LLM.
-2. **Triage only**, using the mini model.
-3. **Triage + RCA**, using the full pipeline.
+**Baselines.** Every L2 report shows these rows:
+1. **B0:** the `detect_failed_logs.py`-style keyword excerpt (last keyword match, 12 before / 20 after) with the rule-based classifier. No LLM.
+2. **B1:** RockSentinel's deterministic `extract_errors` (normalized lines, root cause ranked first) with the **same** rule classifier. No LLM. Because B0 and B1 share the rules, any difference between them comes only from evidence extraction.
+3. **Triage only**, using the mini model.
+4. **Triage + RCA**, using the full pipeline.
+
+Implemented in `src/rocksentinel/baseline/` and `src/rocksentinel/evals/runner.py` (`python -m rocksentinel.evals.runner`). First result on the 2 provisional golden cases: both systems classify the category correctly, but B1 finds the failing test and the faulting kernel, and reaches a grounding rate of 1.00 against B0's 0.62. The eval also caught a rule bug: the ROCm runtime prints `*** GPU HANG ANALYSIS` inside a memory-fault dump, which B1 first misread as an infra hang.
 
 A change that doesn't beat B0 by at least 10 macro-F1 points isn't shipped, which is the "is the AI earning its keep?" check.
 

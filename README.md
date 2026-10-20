@@ -18,6 +18,8 @@ Design phase. See the full design: [docs/ADLC-RockSentinel.md](docs/ADLC-RockSen
 src/rocksentinel/therock_ci/extract.py   deterministic error extraction (extract_errors)
 src/rocksentinel/therock_ci/mappers.py   job -> component/family/platform, path/symbol -> component
 src/rocksentinel/therock_ci/history.py   job_history: failing-since, flake evidence, co-failures
+src/rocksentinel/baseline/               non-AI baselines: B0 (TheRock-style excerpt), B1 (extract_errors)
+src/rocksentinel/evals/runner.py         scores systems on the golden set
 src/rocksentinel/therock_ci/server.py    therock-ci MCP server (MCP Python SDK 2.x)
 src/rocksentinel/github/client.py        read-only GitHub REST client (runs, jobs, logs)
 src/rocksentinel/ingest/poller.py        polls completed runs, stores every job, queues failures
@@ -44,6 +46,13 @@ Tests never use the network: they replay recorded responses from `tests/fixtures
 This stores every job result (pass and fail) in `.data/rocksentinel.db` and queues failures
 for triage. Re-running is safe: writes are idempotent, and each poll re-reads a 6-hour
 lookback before its saved cursor to catch runs that finished late.
+
+## Run the evals
+```bash
+.venv/Scripts/python -m rocksentinel.evals.runner --out evals/reports/latest.json
+```
+It prints category accuracy and macro-F1, component/family/platform match, failing-test and
+kernel match, and the grounding rate for each system. The LLM agents must beat B0 and B1.
 
 ## Run the tests
 ```bash
