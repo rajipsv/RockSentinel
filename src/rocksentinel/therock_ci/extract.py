@@ -69,6 +69,21 @@ _STEP_TIMEOUT = re.compile(r"timed out after (\d+) minutes")
 
 _FAULT_KINDS = {"gpu_memory_fault", "gpu_hang", "asan", "crash"}
 
+# Raw GitHub Actions logs: "2026-10-19T13:40:51.0080074Z 16: Memory access fault ..."
+#   timestamp prefix, optional "##[error]"-style command, optional ctest -V "<test#>: " prefix.
+_TIMESTAMP = re.compile(r"^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d+)?Z ")
+_GHA_COMMAND = re.compile(r"^##\[(?:error|warning|notice|debug|group|endgroup)\]")
+_CTEST_PREFIX = re.compile(r"^\d{1,4}: ")
+_ANSI = re.compile(r"\x1b\[[0-9;]*[A-Za-z]")
+
+
+def normalize_line(line: str) -> str:
+    """Strip GitHub log timestamps, workflow-command markers, ctest -V prefixes and ANSI codes."""
+    line = _ANSI.sub("", line)
+    line = _TIMESTAMP.sub("", line, count=1)
+    line = _GHA_COMMAND.sub("", line, count=1)
+    return _CTEST_PREFIX.sub("", line, count=1)
+
 
 @dataclass(frozen=True)
 class ErrorCandidate:
@@ -125,7 +140,7 @@ def extract_errors(log_text: str, max_candidates: int = DEFAULT_MAX_CANDIDATES) 
     Candidates are ordered by severity, then by position, so a GPU fault ranks
     above the ctest summary and exit code it caused.
     """
-    lines = log_text.splitlines()
+    lines = [normalize_line(raw) for raw in log_text.splitlines()]
     total = len(lines)
     found: list[ErrorCandidate] = []
 

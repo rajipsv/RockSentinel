@@ -111,6 +111,19 @@ def test_root_cause_beats_earlier_lower_severity_line():
     assert extract_errors(log).first_error.kind == "gpu_memory_fault"
 
 
+def test_normalizes_raw_github_log_lines():
+    raw = (
+        "2026-10-19T13:40:50.1Z 16: [ RUN      ] Suite.Case\n"
+        "2026-10-19T13:40:51.0080074Z 16: Memory access fault by GPU node-1 on address 0x1.\n"
+        "2026-10-19T13:40:52.3247183Z ##[error]Process completed with exit code 8.\n"
+    )
+    result = extract_errors(raw)
+    assert result.first_error.kind == "gpu_memory_fault"
+    assert result.first_error.text.startswith("Memory access fault")
+    assert result.failing_test == "Suite.Case"
+    assert result.exit_code == 8
+
+
 def test_window_is_clamped_to_log_bounds():
     result = extract_errors("Segmentation fault\n")
     assert result.first_error.window == (1, 1)

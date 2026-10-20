@@ -1,0 +1,124 @@
+2026-10-19T13:40:48.9493182Z 16: kpack: loaded code object: 135888 bytes
+2026-10-19T13:40:48.9504166Z 16: [       OK ] BsrGeam.full_pipeline (3 ms)
+2026-10-19T13:40:48.9504341Z 16: [----------] 1 test from BsrGeam (3 ms total)
+2026-10-19T13:40:48.9504480Z 16: 
+2026-10-19T13:40:48.9504599Z 16: [----------] 1 test from SpGeam
+2026-10-19T13:40:48.9504734Z 16: [ RUN      ] SpGeam.bad_args
+2026-10-19T13:40:48.9505264Z 16: [       OK ] SpGeam.bad_args (0 ms)
+2026-10-19T13:40:48.9505408Z 16: [----------] 1 test from SpGeam (0 ms total)
+2026-10-19T13:40:48.9505541Z 16: 
+2026-10-19T13:40:48.9505663Z 16: [----------] 11 tests from internal_extra_csrgemm_bitmap
+2026-10-19T13:40:48.9505845Z 16: [ RUN      ] internal_extra_csrgemm_bitmap.nnz_i64_i64
+2026-10-19T13:40:48.9547413Z 16: kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse/rocsparse-unit-test-device', co_index=37, lookup_key='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse/rocsparse-unit-test-device#37', 2 search paths
+2026-10-19T13:40:48.9549371Z 16: kpack: expanded pattern: ../../.kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx1151.kpack
+2026-10-19T13:40:48.9550573Z 16: kpack: expanded pattern: ../../.kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx11-generic.kpack
+2026-10-19T13:40:48.9551821Z 16: kpack: expanded pattern: .kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx1151.kpack
+2026-10-19T13:40:48.9553113Z 16: kpack: expanded pattern: .kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx11-generic.kpack
+2026-10-19T13:40:48.9554261Z 16: kpack: archive not found: /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx11-generic.kpack
+2026-10-19T13:40:48.9555214Z 16: kpack: archive not found: /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx1151.kpack
+2026-10-19T13:40:48.9556173Z 16: kpack: archive not found: /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx11-generic.kpack
+2026-10-19T13:40:48.9556965Z 16: kpack: trying architecture: amdgcn-amd-amdhsa--gfx1151
+2026-10-19T13:40:48.9557736Z 16: kpack:   archive /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx1151.kpack has architecture gfx1151
+2026-10-19T13:40:48.9558455Z 16: kpack:   found kernel: 409912 bytes
+2026-10-19T13:40:48.9558870Z 16: kpack: loaded code object: 409912 bytes
+2026-10-19T13:40:49.0907989Z 16: [       OK ] internal_extra_csrgemm_bitmap.nnz_i64_i64 (140 ms)
+2026-10-19T13:40:49.0908713Z 16: [ RUN      ] internal_extra_csrgemm_bitmap.symbolic_i64_i64
+2026-10-19T13:40:49.1054764Z 16: kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse/rocsparse-unit-test-device', co_index=14, lookup_key='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse/rocsparse-unit-test-device#14', 2 search paths
+2026-10-19T13:40:49.1056670Z 16: kpack: expanded pattern: ../../.kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx1151.kpack
+2026-10-19T13:40:49.1057879Z 16: kpack: expanded pattern: ../../.kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx11-generic.kpack
+2026-10-19T13:40:49.1059126Z 16: kpack: expanded pattern: .kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx1151.kpack
+2026-10-19T13:40:49.1059730Z 16: kpack: expanded pattern: .kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx11-generic.kpack
+2026-10-19T13:40:49.1060102Z 16: kpack: archive not found: /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx11-generic.kpack
+2026-10-19T13:40:49.1060415Z 16: kpack: archive not found: /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx1151.kpack
+2026-10-19T13:40:49.1060741Z 16: kpack: archive not found: /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx11-generic.kpack
+2026-10-19T13:40:49.1061016Z 16: kpack: trying architecture: amdgcn-amd-amdhsa--gfx1151
+2026-10-19T13:40:49.1068335Z 16: kpack:   archive /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx1151.kpack has architecture gfx1151
+2026-10-19T13:40:49.1068601Z 16: kpack:   found kernel: 1062104 bytes
+2026-10-19T13:40:49.1068751Z 16: kpack: loaded code object: 1062104 bytes
+2026-10-19T13:40:49.2494987Z 16: [       OK ] internal_extra_csrgemm_bitmap.symbolic_i64_i64 (158 ms)
+2026-10-19T13:40:49.2495226Z 16: [ RUN      ] internal_extra_csrgemm_bitmap.calc_c32
+2026-10-19T13:40:49.6799691Z 16: [       OK ] internal_extra_csrgemm_bitmap.calc_c32 (430 ms)
+2026-10-19T13:40:49.6799998Z 16: [ RUN      ] internal_extra_csrgemm_bitmap.numeric_f32
+2026-10-19T13:40:50.0450150Z 16: [       OK ] internal_extra_csrgemm_bitmap.numeric_f32 (365 ms)
+2026-10-19T13:40:50.0450667Z 16: [ RUN      ] internal_extra_csrgemm_bitmap.numeric_c64
+2026-10-19T13:40:50.5066212Z 16: [       OK ] internal_extra_csrgemm_bitmap.numeric_c64 (461 ms)
+2026-10-19T13:40:50.5066487Z 16: [ RUN      ] internal_extra_csrgemm_bitmap.pass_sizing_i64_i64
+2026-10-19T13:40:50.5501423Z 16: [       OK ] internal_extra_csrgemm_bitmap.pass_sizing_i64_i64 (43 ms)
+2026-10-19T13:40:50.5501933Z 16: [ RUN      ] internal_extra_csrgemm_bitmap.nnz_tiled_i32_i32
+2026-10-19T13:40:50.6707776Z 16: [       OK ] internal_extra_csrgemm_bitmap.nnz_tiled_i32_i32 (120 ms)
+2026-10-19T13:40:50.6708564Z 16: [ RUN      ] internal_extra_csrgemm_bitmap.symbolic_tiled_i64_i64
+2026-10-19T13:40:50.8336430Z 16: [       OK ] internal_extra_csrgemm_bitmap.symbolic_tiled_i64_i64 (162 ms)
+2026-10-19T13:40:50.8337115Z 16: [ RUN      ] internal_extra_csrgemm_bitmap.calc_tiled_f64_i64_i64
+2026-10-19T13:40:51.0068298Z 16: Warning: Queue error - HSA_STATUS_ERROR_MEMORY_FAULT
+2026-10-19T13:40:51.0075689Z 16: 
+2026-10-19T13:40:51.0075839Z 16: ****************************************************************************
+2026-10-19T13:40:51.0076250Z 16: *** GPU HANG ANALYSIS - VGPU(0x64e2032e22d0) Queue(0x72f329848000)
+2026-10-19T13:40:51.0076436Z 16: ****************************************************************************
+2026-10-19T13:40:51.0076989Z 16: SWq=0x72f329848000, HWq=0x72f30d800000, id=1, priority=1, Dispatch Header = 0xb02 (type=2, barrier=1, acquire=1, release=1), setup=3, grid=[256, 16, 1], workgroup=[256, 1, 1], private_seg_size=0, group_seg_size=0, kernel_obj=0x72f1038bae00, kernarg_address=0x72f207801d00, completion_signal=0x0, rptr=55919, wptr=55923
+2026-10-19T13:40:51.0077549Z 16: ****************************************************************************
+2026-10-19T13:40:51.0077697Z 16: 
+2026-10-19T13:40:51.0079360Z 16: :0:rocdevice.cpp            :4002: 2027993962326 us:  [host: 15d56e8b06b6, GPU index: 0, faulting addr: 0x72f104dc4000, kernel: void rocsparse::csrgemm_bitmap_emit_kernel<256u, long, long>(long, long, long, long const*, long const*, long const*, long const*, unsigned int const*, long const*, long const*, rocsparse_index_base_, long*)]
+2026-10-19T13:40:51.0080074Z 16: Memory access fault by GPU node-1 (Agent handle: 0x64e203123630) on address 0x72f104dc4000. Reason: Page not present or supervisor privilege.
+2026-10-19T13:40:51.0140315Z 16: GPU coredump: kernel core_pattern is a pipe handler; falling back to local file (GPU ELF is incompatible with CPU coredump handlers).  Set HSA_COREDUMP_PATTERN to override.
+2026-10-19T13:40:52.2789922Z 3/3 Test #16: rocsparse-unit-test-device_gfx1151 ......Subprocess aborted***Exception:   9.51 sec
+2026-10-19T13:40:52.2791234Z Note: This is test shard 2 of 3.
+2026-10-19T13:40:52.2791699Z [==========] Running 296 tests from 141 test suites.
+2026-10-19T13:40:52.2792102Z [----------] Global test environment set-up.
+2026-10-19T13:40:52.2792472Z [----------] 4 tests from Conversion
+2026-10-19T13:40:52.2792983Z [ RUN      ] Conversion.csr2hyb_hyb2csr
+2026-10-19T13:40:52.2793587Z kpack: cache created: disabled=0, debug=1, override_paths=0, prefix_paths=0
+2026-10-19T13:40:52.2794874Z kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse/rocsparse-unit-test-device', co_index=20, lookup_key='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse/rocsparse-unit-test-device#20', 2 search paths
+2026-10-19T13:40:52.2796598Z kpack: expanded pattern: ../../.kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx1151.kpack
+2026-10-19T13:40:52.2797879Z kpack: expanded pattern: ../../.kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx11-generic.kpack
+2026-10-19T13:40:52.2799342Z kpack: expanded pattern: .kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx1151.kpack
+2026-10-19T13:40:52.2800083Z kpack: expanded pattern: .kpack/sparse_test_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx11-generic.kpack
+2026-10-19T13:40:52.2800800Z kpack: opened and cached archive: /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx1151.kpack
+2026-10-19T13:40:52.2801170Z kpack:   architecture: gfx1151
+2026-10-19T13:40:52.2801411Z kpack: archive not found: /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx11-generic.kpack
+2026-10-19T13:40:52.2801736Z kpack: archive not found: /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx1151.kpack
+2026-10-19T13:40:52.2802098Z kpack: archive not found: /__w/TheRock/TheRock/build/bin/rocsparse/.kpack/sparse_test_gfx11-generic.kpack
+2026-10-19T13:40:52.2802403Z kpack: trying architecture: amdgcn-amd-amdhsa--gfx1151
+2026-10-19T13:40:52.2802679Z kpack:   archive /__w/TheRock/TheRock/build/.kpack/sparse_test_gfx1151.kpack has architecture gfx1151
+2026-10-19T13:40:52.2802933Z kpack:   found kernel: 3320 bytes
+2026-10-19T13:40:52.2803106Z kpack: loaded code object: 3320 bytes
+2026-10-19T13:40:52.2803758Z kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/lib/librocsparse.so.1.0', co_index=307, lookup_key='math-libs/BLAS/rocSPARSE/stage/lib/librocsparse.so.1.0#307', 2 search paths
+2026-10-19T13:40:52.2804338Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx1151.kpack
+2026-10-19T13:40:52.2804754Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx11-generic.kpack
+2026-10-19T13:40:52.2805172Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx1151.kpack
+2026-10-19T13:40:52.2805596Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx11-generic.kpack
+2026-10-19T13:40:52.2805966Z kpack: opened and cached archive: /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx1151.kpack
+2026-10-19T13:40:52.2806194Z kpack:   architecture: gfx1151
+2026-10-19T13:40:52.2806411Z kpack: archive not found: /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx11-generic.kpack
+2026-10-19T13:40:52.2806707Z kpack: archive not found: /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx1151.kpack
+2026-10-19T13:40:52.2807016Z kpack: archive not found: /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx11-generic.kpack
+2026-10-19T13:40:52.2807278Z kpack: trying architecture: amdgcn-amd-amdhsa--gfx1151
+2026-10-19T13:40:52.2807546Z kpack:   archive /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx1151.kpack has architecture gfx1151
+2026-10-19T13:40:52.2807788Z kpack:   found kernel: 22408 bytes
+2026-10-19T13:40:52.2807936Z kpack: loaded code object: 22408 bytes
+2026-10-19T13:40:52.2808393Z kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/lib/librocsparse.so.1.0', co_index=11, lookup_key='math-libs/BLAS/rocSPARSE/stage/lib/librocsparse.so.1.0#11', 2 search paths
+2026-10-19T13:40:52.2808920Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx1151.kpack
+2026-10-19T13:40:52.2809331Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx11-generic.kpack
+2026-10-19T13:40:52.2809743Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx1151.kpack
+2026-10-19T13:40:52.2810157Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx11-generic.kpack
+2026-10-19T13:40:52.2810521Z kpack: archive not found: /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx11-generic.kpack
+2026-10-19T13:40:52.2810813Z kpack: archive not found: /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx1151.kpack
+2026-10-19T13:40:52.2811115Z kpack: archive not found: /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx11-generic.kpack
+2026-10-19T13:40:52.2811375Z kpack: trying architecture: amdgcn-amd-amdhsa--gfx1151
+2026-10-19T13:40:52.2811641Z kpack:   archive /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx1151.kpack has architecture gfx1151
+2026-10-19T13:40:52.2811889Z kpack:   found kernel: 1062104 bytes
+2026-10-19T13:40:52.2812060Z kpack: loaded code object: 1062104 bytes
+2026-10-19T13:40:52.2812468Z kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/lib/librocsparse.so.1.0', co_index=314, lookup_key='math-libs/BLAS/rocSPARSE/stage/lib/librocsparse.so.1.0#314', 2 search paths
+2026-10-19T13:40:52.2813001Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx1151.kpack
+2026-10-19T13:40:52.2813412Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx11-generic.kpack
+2026-10-19T13:40:52.2813823Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx1151.kpack
+2026-10-19T13:40:52.2814242Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx11-generic.kpack
+2026-10-19T13:40:52.2814622Z kpack: archive not found: /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx11-generic.kpack
+2026-10-19T13:40:52.2814915Z kpack: archive not found: /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx1151.kpack
+2026-10-19T13:40:52.2815234Z kpack: archive not found: /__w/TheRock/TheRock/build/lib/.kpack/sparse_lib_gfx11-generic.kpack
+2026-10-19T13:40:52.2815492Z kpack: trying architecture: amdgcn-amd-amdhsa--gfx1151
+2026-10-19T13:40:52.2815760Z kpack:   archive /__w/TheRock/TheRock/build/.kpack/sparse_lib_gfx1151.kpack has architecture gfx1151
+2026-10-19T13:40:52.2816008Z kpack:   found kernel: 16592 bytes
+...
+2026-10-19T13:40:52.3238485Z # Running: ctest -L ^standard$ -L ^ex_gpu_gfx1151$ --output-on-failure --parallel 1 --timeout 7200 --test-dir build/bin/rocsparse -V
+2026-10-19T13:40:52.3238490Z 
+2026-10-19T13:40:52.3247183Z ##[error]Process completed with exit code 8.
