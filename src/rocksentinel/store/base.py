@@ -51,6 +51,10 @@ class JobStore(Protocol):
         """All attempts of the same job (same workflow + job name) across runs, newest first."""
         ...
 
+    def failed_jobs(self, limit: int = 200) -> list[JobResult]:
+        """Failed or timed-out jobs, newest first."""
+        ...
+
 
 class TriageQueue(Protocol):
     def enqueue(self, job: JobResult) -> bool:

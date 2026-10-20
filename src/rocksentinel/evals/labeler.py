@@ -1,0 +1,282 @@
+"""Labelling helper: propose golden cases from the job store; a human reviews them.
+
+    python -m rocksentinel.evals.labeler propose --max 10   # fetch logs, write proposals
+    python -m rocksentinel.evals.labeler list                # show pending proposals
+    python -m rocksentinel.evals.labeler accept cand-123 [--category infra] [--note "..."]
+    python -m rocksentinel.evals.labeler reject cand-123
+
+Proposed labels come from B1's rules, so accepting them unchecked would grade B1
+against itself. Each proposal therefore says where its label came from
+(`label_source`): outcome-based sources (e.g. passed on rerun) are strong, rule-based
+ones must be verified against the log. Only `accept`ed cases are marked `confirmed`.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+from collections.abc import Iterable
+from dataclasses import dataclass
+from datetime import UTC, datetime
+from pathlib import Path
+
+from rocksentinel.baseline.rules import CATEGORIES, classify
+from rocksentinel.github.client import GitHubClient, GitHubError
+from rocksentinel.store.base import JobResult, JobStore
+from rocksentinel.therock_ci.extract import extract_errors
+from rocksentinel.therock_ci.history import job_history
+from rocksentinel.therock_ci.mappers import map_symbol_to_component
+
+ROOT = Path(__file__).resolve().parents[3]
+MAX_FIXTURE_LINES = 1500
+CONTEXT_BEFORE_FIRST_WINDOW = 50
+
+
+@dataclass(frozen=True)
+class Paths:
+    root: Path = ROOT
+
+    @property
+    def dataset(self) -> Path:
+        return self.root / "evals" / "golden" / "dataset.jsonl"
+
+    @property
+    def proposals(self) -> Path:
+        return self.root / "evals" / "golden" / "proposals.jsonl"
+
+    @property
+    def fixtures(self) -> Path:
+        return self.root / "tests" / "fixtures" / "logs"
+
+
+def _read_jsonl(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    return [json.loads(x) for x in path.read_text(encoding="utf-8").splitlines() if x.strip()]
+
+
+def _write_jsonl(path: Path, rows: Iterable[dict]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows),
+                    encoding="utf-8")
+
+
+def fixture_excerpt(log_text: str) -> list[str]:
+    """Keep enough of the raw log for both baselines to be scored fairly.
+
+    Starts a little before the first ranked error and runs to the end of the log (where
+    B0 looks), trimming the middle only when the result would be huge.
+    """
+    lines = log_text.splitlines()
+    if len(lines) <= MAX_FIXTURE_LINES:
+        return lines
+    first = extract_errors(log_text, max_candidates=1).first_error
+    start = max(0, first.window[0] - 1 - CONTEXT_BEFORE_FIRST_WINDOW) if first else 0
+    segment = lines[start:]
+    if len(segment) <= MAX_FIXTURE_LINES:
+        return segment
+    head, tail = 900, MAX_FIXTURE_LINES - 900
+    return segment[:head] + ["... [middle trimmed by labeler] ..."] + segment[-tail:]
+
+
+def _diverse(jobs: list[JobResult], skip_ids: set[int], limit: int) -> list[JobResult]:
+    """One job per (workflow, job name), preferring new component/family/platform combos."""
+    seen_names: set[tuple[str, str]] = set()
+    seen_combo: set[tuple] = set()
+    first_pass, second_pass = [], []
+    for job in jobs:
+        if job.job_id in skip_ids or (job.workflow, job.job_name) in seen_names:
+            continue
+        seen_names.add((job.workflow, job.job_name))
+        combo = (job.component, job.gpu_family, job.platform)
+        (second_pass if combo in seen_combo else first_pass).append(job)
+        seen_combo.add(combo)
+    return (first_pass + second_pass)[:limit]
+
+
+def propose_case(store: JobStore, gh: GitHubClient, job: JobResult, paths: Paths) -> dict:
+    log = gh.get_job_log(job.repo, job.job_id)
+    excerpt = fixture_excerpt(log)
+    fixture = paths.fixtures / f"run-{job.run_id}_job-{job.job_id}.txt"
+    fixture.parent.mkdir(parents=True, exist_ok=True)
+    header = [
+        f"# Source: {job.repo} Actions run {job.run_id} attempt {job.attempt}, job {job.job_id}",
+        f"# Job: {job.job_name} ({job.workflow})",
+        f"# Excerpt saved by rocksentinel.evals.labeler on {datetime.now(UTC):%Y-%m-%d}",
+    ]
+    fixture.write_text("\n".join(header + excerpt) + "\n", encoding="utf-8")
+
+    result = extract_errors("\n".join(excerpt))
+    history = job_history(store, job.job_id)
+    flake = history["flake_evidence"]
+    category, reason = classify(
+        [c.kind for c in result.candidates], workflow=job.workflow,
+        likely_flaky=flake["likely_flaky"],
+    )
+    if flake["passed_on_rerun_same_run"]:
+        source = "outcome: passed on rerun of the same run (strong)"
+    elif flake["same_sha_passed_elsewhere"]:
+        source = "outcome: same commit passed in another run (strong)"
+    else:
+        source = f"rules (B1): {reason} - VERIFY against the log"
+
+    must_cite = []
+    for c in result.candidates:
+        if c.kind != "exit_code" and c.text not in must_cite:
+            must_cite.append(c.text)
+        if len(must_cite) == 3:
+            break
+
+    component = job.component or (
+        map_symbol_to_component(result.faulting_kernel).component
+        if result.faulting_kernel else None
+    )
+    return {
+        "case_id": f"cand-{job.job_id}",
+        "status": "proposed",
+        "repo": job.repo,
+        "run_id": job.run_id,
+        "attempt": job.attempt,
+        "job_id": job.job_id,
+        "workflow": job.workflow,
+        "job_name": job.job_name,
+        "runner_label": job.runner_label,
+        "head_sha": job.head_sha,
+        "failed_at": job.finished_at,
+        "job_url": f"https://github.com/{job.repo}/actions/runs/{job.run_id}/job/{job.job_id}",
+        "log_fixture": fixture.relative_to(paths.root).as_posix(),
+        "label_source": source,
+        "expected": {
+            "category": category,
+            "component": component,
+            "gpu_family": job.gpu_family,
+            "platform": job.platform,
+            "failing_test": result.failing_test,
+            "failing_kernel": result.faulting_kernel,
+            "must_cite": must_cite,
+        },
+        "context": {
+            "failing_since": history["failing_since"],
+            "co_failures": history["same_run_co_failures"]["count"],
+            "platform_event_hint": history["same_run_co_failures"]["platform_event_hint"],
+        },
+    }
+
+
+def propose(store: JobStore, gh: GitHubClient, max_cases: int = 10,
+            paths: Paths | None = None) -> list[dict]:
+    paths = paths or Paths()
+    existing = _read_jsonl(paths.dataset) + _read_jsonl(paths.proposals)
+    skip = {c["job_id"] for c in existing if c.get("job_id")}
+    candidates = _diverse(store.failed_jobs(limit=500), skip, limit=500)
+    new: list[dict] = []
+    for job in candidates:
+        if len(new) >= max_cases:
+            break
+        try:
+            new.append(propose_case(store, gh, job, paths))
+        except GitHubError as exc:
+            # e.g. 404: the job failed before any step ran, or its log has expired
+            print(f"skipped job {job.job_id}: {exc}")
+    _write_jsonl(paths.proposals, _read_jsonl(paths.proposals) + new)
+    return new
+
+
+def _next_golden_id(dataset: list[dict]) -> str:
+    nums = [int(c["case_id"].split("-")[1]) for c in dataset
+            if c.get("case_id", "").startswith("golden-")]
+    return f"golden-{max(nums, default=0) + 1:03d}"
+
+
+def accept(case_id: str, *, category: str | None = None, note: str | None = None,
+           reviewer: str = "human reviewer", paths: Paths | None = None) -> dict:
+    paths = paths or Paths()
+    proposals = _read_jsonl(paths.proposals)
+    match = next((p for p in proposals if p["case_id"] == case_id), None)
+    if match is None:
+        raise KeyError(f"no proposal {case_id}")
+    if category is not None and category not in CATEGORIES:
+        raise ValueError(f"category must be one of {CATEGORIES}")
+    dataset = _read_jsonl(paths.dataset)
+    case = {k: v for k, v in match.items() if k not in ("status",)}
+    case["case_id"] = _next_golden_id(dataset)
+    case["split"] = "dev"
+    case["label_status"] = "confirmed"
+    case["labelled_by"] = f"{reviewer} via labeler"
+    case["labelled_on"] = f"{datetime.now(UTC):%Y-%m-%d}"
+    if category:
+        case["expected"] = {**case["expected"], "category": category}
+        case["label_source"] = f"human override (proposed: {match['expected']['category']})"
+    if note:
+        case["review_note"] = note
+    _write_jsonl(paths.dataset, dataset + [case])
+    _write_jsonl(paths.proposals, [p for p in proposals if p["case_id"] != case_id])
+    return case
+
+
+def reject(case_id: str, paths: Paths | None = None) -> None:
+    paths = paths or Paths()
+    proposals = _read_jsonl(paths.proposals)
+    match = next((p for p in proposals if p["case_id"] == case_id), None)
+    if match is None:
+        raise KeyError(f"no proposal {case_id}")
+    _write_jsonl(paths.proposals, [p for p in proposals if p["case_id"] != case_id])
+    fixture = paths.root / match["log_fixture"]
+    if fixture.exists():
+        fixture.unlink()
+
+
+def format_proposals(proposals: list[dict]) -> str:
+    if not proposals:
+        return "no pending proposals"
+    out = []
+    for p in proposals:
+        e = p["expected"]
+        out.append(
+            f"{p['case_id']}  [{e['category']}]  {e['component']} | {e['gpu_family']} | "
+            f"{e['platform']}\n"
+            f"    job:    {p['job_name']} ({p['workflow']})\n"
+            f"    why:    {p['label_source']}\n"
+            f"    test:   {e['failing_test']}   kernel: {e['failing_kernel']}\n"
+            f"    cites:  {e['must_cite'][:2]}\n"
+            f"    log:    {p['job_url']}"
+        )
+    return "\n".join(out)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Propose and review golden eval cases.")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+    p_prop = sub.add_parser("propose")
+    p_prop.add_argument("--max", type=int, default=10)
+    p_prop.add_argument("--db", default=".data/rocksentinel.db")
+    sub.add_parser("list")
+    p_acc = sub.add_parser("accept")
+    p_acc.add_argument("case_id")
+    p_acc.add_argument("--category", choices=CATEGORIES)
+    p_acc.add_argument("--note")
+    p_rej = sub.add_parser("reject")
+    p_rej.add_argument("case_id")
+    args = parser.parse_args()
+
+    if args.cmd == "propose":
+        from rocksentinel.store.sqlite_store import SQLiteStore
+
+        store = SQLiteStore(args.db)
+        with GitHubClient() as gh:
+            new = propose(store, gh, args.max)
+        store.close()
+        print(format_proposals(new))
+        print(f"\n{len(new)} new proposals in {Paths().proposals}")
+    elif args.cmd == "list":
+        print(format_proposals(_read_jsonl(Paths().proposals)))
+    elif args.cmd == "accept":
+        case = accept(args.case_id, category=args.category, note=args.note)
+        print(f"accepted as {case['case_id']} [{case['expected']['category']}] (confirmed)")
+    elif args.cmd == "reject":
+        reject(args.case_id)
+        print(f"rejected {args.case_id}")
+
+
+if __name__ == "__main__":
+    main()

@@ -107,6 +107,16 @@ class SQLiteStore:
     # --- TriageQueue --------------------------------------------------------------------
 
     @_locked
+    def failed_jobs(self, limit: int = 200) -> list[JobResult]:
+        rows = self._db.execute(
+            f"SELECT {', '.join(_COLUMNS)} FROM job_results "
+            "WHERE conclusion IN ('failure', 'timed_out') "
+            "ORDER BY COALESCE(finished_at, started_at) DESC LIMIT ?",
+            (limit,),
+        ).fetchall()
+        return [JobResult(*r) for r in rows]
+
+    @_locked
     def enqueue(self, job: JobResult) -> bool:
         with self._db:
             cur = self._db.execute(

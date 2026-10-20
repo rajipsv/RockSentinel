@@ -20,6 +20,7 @@ src/rocksentinel/therock_ci/mappers.py   job -> component/family/platform, path/
 src/rocksentinel/therock_ci/history.py   job_history: failing-since, flake evidence, co-failures
 src/rocksentinel/baseline/               non-AI baselines: B0 (TheRock-style excerpt), B1 (extract_errors)
 src/rocksentinel/evals/runner.py         scores systems on the golden set
+src/rocksentinel/evals/labeler.py        proposes golden cases from real failures for human review
 src/rocksentinel/therock_ci/server.py    therock-ci MCP server (MCP Python SDK 2.x)
 src/rocksentinel/github/client.py        read-only GitHub REST client (runs, jobs, logs)
 src/rocksentinel/ingest/poller.py        polls completed runs, stores every job, queues failures
@@ -53,6 +54,16 @@ lookback before its saved cursor to catch runs that finished late.
 ```
 It prints category accuracy and macro-F1, component/family/platform match, failing-test and
 kernel match, and the grounding rate for each system. The LLM agents must beat B0 and B1.
+
+## Grow the golden set (human review)
+```bash
+.venv/Scripts/python -m rocksentinel.evals.labeler propose --max 10   # from the job store
+.venv/Scripts/python -m rocksentinel.evals.labeler list
+.venv/Scripts/python -m rocksentinel.evals.labeler accept cand-<job_id> [--category infra] [--note "..."]
+.venv/Scripts/python -m rocksentinel.evals.labeler reject cand-<job_id>
+```
+Proposed labels come from B1's rules, so open each job's log and verify before accepting;
+accepting unchecked would grade B1 against itself. Only accepted cases are `confirmed`.
 
 ## Run the tests
 ```bash
