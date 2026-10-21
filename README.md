@@ -26,6 +26,8 @@ src/rocksentinel/llm/provider.py         LLMProvider interface + ReplayProvider 
 src/rocksentinel/llm/openai_compat.py    live provider for Ollama / OpenAI / Azure OpenAI + recorder
 src/rocksentinel/harness/                agent loop, policy hooks, budgets, grounding
 src/rocksentinel/agents/triage.py        Triage agent (skill: skills/triage-therock/SKILL.md)
+src/rocksentinel/agents/rca.py           RCA agent (skill: skills/rca-therock/SKILL.md)
+src/rocksentinel/therock_ci/changes.py   find_introducing_change: symbol -> commit -> TheRock bump
 src/rocksentinel/console/                Console API (framework-free) + local dev server
 web/                                     Console frontend (static HTML/JS, served by SWA in Azure)
 src/rocksentinel/therock_ci/server.py    therock-ci MCP server (MCP Python SDK 2.x)

@@ -39,6 +39,7 @@ async def test_lists_expected_tools():
         "list_failed_runs",
         "get_job_log_windows",
         "job_history",
+        "find_introducing_change",
     }
 
 

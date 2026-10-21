@@ -27,7 +27,7 @@ Design: `docs/ADLC-RockSentinel.md`. Keep code consistent with it; if a decision
 - [ ] 6. Harness + Triage agent (`LLMProvider`; replay mode; OpenAI-compatible live provider: Ollama locally or Azure OpenAI)
   - [x] 6a. Harness + Triage agent in replay mode (no live LLM)
   - [ ] 6b. Live OpenAI-compatible provider (built) + first live Triage run + Triage as an eval system row vs B0/B1
-- [ ] 7. RCA agent + `find_introducing_change`
+- [x] 7. RCA agent + `find_introducing_change` (replay mode; live evals once Azure is set up)
 - [ ] 8. Console UI (local via SWA CLI)
 - [ ] 9. Azure deployment (Bicep + azd; switch `LLMProvider` to Azure OpenAI; rerun evals)
 - [ ] 10. Eval gate in CI + runbook, threat model, interview guide

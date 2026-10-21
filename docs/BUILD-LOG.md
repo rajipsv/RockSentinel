@@ -17,7 +17,7 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 
 - Golden set: 35 real TheRock failures, 33 confirmed by a human; 24 dev / 11 held-out test.
 - Pattern coverage on 25 failures *outside* the golden set: 92% hit a specific pattern.
-- Tests: 202 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
+- Tests: 214 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
 
 ---
 
@@ -165,6 +165,22 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 **Interview talking point:** "A vendor sunset mid-project cost me no code changes. The agents talk to an interface, and one OpenAI-compatible provider covers a local model, OpenAI and Azure."
 
 **Interview talking point:** "I built and tested the harness before connecting any model. Every safety property (allowlist, budgets, redaction, grounding) is enforced in code and covered by replayed tests, including a prompt-injection attempt."
+
+## Step 7: RCA agent + `find_introducing_change` (this commit)
+**Built:**
+- **`find_introducing_change`** ([therock_ci/changes.py](../src/rocksentinel/therock_ci/changes.py)), a deterministic, read-only `therock-ci` tool:
+  1. takes the distinctive words of a failing symbol (`rocsparse::csrgemm_bitmap_emit_kernel<...>` → `csrgemm bitmap`) and searches the submodule repo's commits;
+  2. lists TheRock's submodule bumps;
+  3. uses the GitHub compare API to find the first bump whose new SHA contains the commit and whose old SHA doesn't.
+- **The RCA agent** ([agents/rca.py](../src/rocksentinel/agents/rca.py)), with skill [skills/rca-therock](../skills/rca-therock/SKILL.md), an `RcaResult` schema (hypothesis, suspected change, grounded evidence, next step, confidence) and read-only tools. Tested in replay mode.
+
+**Proof:** run live against real GitHub, the tool reproduces the manual golden-001 investigation exactly: kernel → rocm-libraries `183759b` (#12830) → TheRock bump **#8986** (`24bdd07 → 3dc098e`, 2026-10-14). That took several manual API calls before; it's now one tool call.
+
+**Why / decisions:** the history tracing is deterministic code, not an LLM guessing. The agent decides *when* to call it and *how to interpret* the result, which is the "agentic where judgment is needed" split.
+
+**Not yet:** live RCA evals need a capable model (Azure, step 9).
+
+**Interview talking point:** "The RCA agent's key move, tracing a GPU fault to the exact submodule commit and the TheRock bump PR that shipped it, is a deterministic tool I first did by hand and then automated."
 
 ---
 

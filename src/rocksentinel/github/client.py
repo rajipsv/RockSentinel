@@ -277,3 +277,38 @@ class GitHubClient:
         if resp.status_code != 200:
             raise GitHubError(f"log for job {job_id} -> {resp.status_code}")
         return resp.text
+
+    # --- history tracing (used by find_introducing_change) --------------------------------
+
+    def search_commits(self, repo: str, terms: list[str], limit: int = 10) -> list[dict]:
+        """GitHub commit search in one repo: [{sha, date, message, url}], newest first."""
+        validate_repo(repo)
+        query = " ".join([f"repo:{repo}", *terms])
+        data = self._get_json("/search/commits", {"q": query, "sort": "committer-date",
+                                                   "order": "desc", "per_page": min(limit, 30)})
+        return [{"sha": i["sha"], "date": i["commit"]["committer"]["date"],
+                 "message": i["commit"]["message"].splitlines()[0], "url": i["html_url"]}
+                for i in data.get("items", [])][:limit]
+
+    def list_commits(self, repo: str, *, path: str | None = None, since: str | None = None,
+                     limit: int = 100) -> list[dict]:
+        """Commits of a repo (optionally touching `path`), newest first."""
+        validate_repo(repo)
+        params: dict[str, Any] = {"per_page": min(limit, 100)}
+        if path:
+            params["path"] = path
+        if since:
+            params["since"] = since
+        data = self._get_json(f"/repos/{repo}/commits", params)
+        return [{"sha": c["sha"], "date": c["commit"]["committer"]["date"],
+                 "message": c["commit"]["message"].splitlines()[0], "url": c["html_url"]}
+                for c in data][:limit]
+
+    def compare_status(self, repo: str, base: str, head: str) -> str:
+        """'ahead' | 'behind' | 'identical' | 'diverged' for head relative to base."""
+        validate_repo(repo)
+        sha = re.compile(r"[0-9a-fA-F]{7,40}")
+        if not (sha.fullmatch(base) and sha.fullmatch(head)):
+            raise ValueError("compare_status expects commit SHAs")
+        data = self._get_json(f"/repos/{repo}/compare/{base}...{head}", {"per_page": 1})
+        return data["status"]

@@ -227,6 +227,19 @@ def map_path_to_component(path_or_symbol: str) -> dict:
     return info.as_dict()
 
 
+@mcp.tool()
+def find_introducing_change(symbol: str, submodule_repo: str = "ROCm/rocm-libraries",
+                            submodule_path: str = "rocm-libraries",
+                            since_days: int = 30) -> dict:
+    """Trace a failing symbol (kernel, function or test name) to candidate commits in a
+    submodule repo, and to the TheRock submodule bump (PR) that brought each one in."""
+    from rocksentinel.therock_ci.changes import find_introducing_change as _find
+
+    return _find(get_github(), symbol, submodule_repo=submodule_repo,
+                 submodule_path=submodule_path, therock_repo=DEFAULT_REPO,
+                 since_days=max(1, min(since_days, 90)))
+
+
 def main() -> None:
     mcp.run()
 
