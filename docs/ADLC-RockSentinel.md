@@ -898,6 +898,12 @@ The hooks follow ECC `hooks.json`: PreToolUse, PostToolUse and Stop.
 - This makes **evals deterministic and free of GitHub calls**. It also lets any production case be reproduced exactly, using the recorded versions from §3.3.
 - Record mode in production stores MCP responses with the case. Logs are public, but secrets are redacted anyway.
 
+### 7.10a Implementation status (step 6a)
+The run-time harness exists in `src/rocksentinel/harness/` and is exercised in **replay mode**: `ReplayProvider` plays recorded model turns, so harness behaviour is tested deterministically and for free.
+- **Enforced in code:** the per-agent tool allowlist; Triage's required first tool (`get_job_log_windows`); step, tool-call and estimated-token budgets; redaction of tokens, Bearer headers and signed URLs; `<untrusted_data>` envelopes on every tool result; Pydantic output validation with one repair attempt; the grounding check (uncited evidence removed, confidence −0.2 each); and the escalation rule (regression/unknown or confidence < 0.7 → RCA).
+- **Tested** with a simulated prompt injection, a fooled model attempting a write tool (denied), made-up evidence, invalid JSON, budget exhaustion, secret leakage and tool errors.
+- **Not yet done:** a live provider (GitHub Models), and recording real model turns so Triage can be scored as a system next to B0/B1.
+
 ### 7.11 The two harnesses
 
 | | Build-time harness | Run-time harness |

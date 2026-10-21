@@ -22,6 +22,9 @@ src/rocksentinel/baseline/               non-AI baselines: B0 (TheRock-style exc
 src/rocksentinel/evals/runner.py         scores systems on the golden set
 src/rocksentinel/evals/labeler.py        proposes golden cases from real failures for human review
 src/rocksentinel/memory/                 memory MCP server: signatures, cases, instincts, feedback
+src/rocksentinel/llm/provider.py         LLMProvider interface + ReplayProvider (offline)
+src/rocksentinel/harness/                agent loop, policy hooks, budgets, grounding
+src/rocksentinel/agents/triage.py        Triage agent (skill: skills/triage-therock/SKILL.md)
 src/rocksentinel/console/                Console API (framework-free) + local dev server
 web/                                     Console frontend (static HTML/JS, served by SWA in Azure)
 src/rocksentinel/therock_ci/server.py    therock-ci MCP server (MCP Python SDK 2.x)

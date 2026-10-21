@@ -25,6 +25,8 @@ Design: `docs/ADLC-RockSentinel.md`. Keep code consistent with it; if a decision
 - [x] 4a. Console v0 (pulled forward, user request): local review UI for proposals (accept/reject), golden cases and eval results; step 8 extends it into the full Console
 - [x] 5. `memory` MCP server (signatures, cases, instincts, feedback; SQLite locally)
 - [ ] 6. Harness + Triage agent (`LLMProvider`; replay mode; GitHub Models for live dev)
+  - [x] 6a. Harness + Triage agent in replay mode (no live LLM)
+  - [ ] 6b. Live provider (GitHub Models, OpenAI-compatible) + Triage as an eval system row vs B0/B1
 - [ ] 7. RCA agent + `find_introducing_change`
 - [ ] 8. Console UI (local via SWA CLI)
 - [ ] 9. Azure deployment (Bicep + azd; switch `LLMProvider` to Azure OpenAI; rerun evals)

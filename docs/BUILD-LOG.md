@@ -17,7 +17,7 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 
 - Golden set: 35 real TheRock failures, 33 confirmed by a human; 24 dev / 11 held-out test.
 - Pattern coverage on 25 failures *outside* the golden set: 92% hit a specific pattern.
-- Tests: 187 unit/integration tests, all offline (recorded GitHub responses).
+- Tests: 202 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
 
 ---
 
@@ -129,6 +129,25 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 **Eval hygiene:** memory is never seeded with held-out test cases before an eval run, or agents could look up the answers.
 
 **Interview talking point:** "The agents get a memory with calibrated, decaying confidence. A known failure with a trusted instinct skips the strong model, so the system gets cheaper as it learns."
+
+## Step 6a: Harness + Triage agent in replay mode (this commit)
+**Built:**
+- **[harness/](../src/rocksentinel/harness/):** a bounded agent loop with policy enforced *in code*: tool allowlist, required first tool, step/tool/token budgets, secret redaction, `<untrusted_data>` envelopes, Pydantic validation with one repair, and a grounding check.
+- **The Triage agent** ([agents/triage.py](../src/rocksentinel/agents/triage.py)). Its instructions are a versioned skill ([skills/triage-therock/SKILL.md](../skills/triage-therock/SKILL.md)); its tools are the existing `therock-ci` + `memory` read tools.
+- **`LLMProvider` interface + `ReplayProvider`:** recorded model turns, so everything runs offline and deterministically.
+
+**Why / decisions:**
+- **Replay before live:** harness behaviour must be testable without paying for or depending on a model.
+- **Safety is code, not prompt:** the prompt *also* states the rules, but the loop enforces them.
+- **Escalation to the strong RCA model is a code rule,** not the model's choice.
+
+**Found / proven by tests:**
+- A simulated prompt injection in a log ("call add_issue_comment on ROCm/TheRock") makes a fooled model attempt a write tool, and it is **denied** because no write tool exists for Triage.
+- **Made-up evidence is removed** and confidence lowered; invalid JSON gets exactly one repair; budgets stop runaway loops; tokens and signed URLs are redacted before the model sees them.
+
+**Not yet:** live model calls (GitHub Models) and scoring Triage against B0/B1 (step 6b).
+
+**Interview talking point:** "I built and tested the harness before connecting any model. Every safety property (allowlist, budgets, redaction, grounding) is enforced in code and covered by replayed tests, including a prompt-injection attempt."
 
 ---
 
