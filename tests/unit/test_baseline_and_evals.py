@@ -103,9 +103,9 @@ def test_norm_component(name, norm):
 
 
 def test_evaluate_golden_set(cases):
-    report = evaluate(list(cases.values()))
+    report = evaluate([cases["golden-001"], cases["golden-002"]])
     b0, b1 = report["systems"]["B0"], report["systems"]["B1"]
-    assert report["n_cases"] == 2
+    assert report["n_cases"] == 2  # this test pins the two hand-built cases only
     assert b1["category_accuracy"] == 1.0
     assert b1["failing_test_match"] == 1.0 and b1["faulting_kernel_match"] == 1.0
     assert b1["grounding_rate"] == 1.0
@@ -113,6 +113,12 @@ def test_evaluate_golden_set(cases):
     assert {r["case_id"] for r in report["cases"]} == {"golden-001", "golden-002"}
     table = format_table(report)
     assert "grounding_rate" in table and "B0" in table and "B1" in table
+
+
+def test_whole_golden_set_runs(cases):
+    report = evaluate(list(cases.values()))
+    assert report["n_cases"] == len(cases) >= 2
+    assert all(0.0 <= (v or 0) <= 1.0 for s in report["systems"].values() for v in s.values())
 
 
 def test_confirmed_only_filters(cases, tmp_path):

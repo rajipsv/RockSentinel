@@ -100,6 +100,41 @@ def test_poll_once_stores_all_jobs_and_queues_failures(store):
     assert result.cursor and store.get_state("poller:ROCm/TheRock:last_created_at")
 
 
+def test_poll_skips_run_on_github_error_and_keeps_cursor_before_it(store):
+    runs = {"workflow_runs": [
+        {"id": 1, "run_number": 1, "run_attempt": 1, "name": "a", "path": "x/a.yml",
+         "head_sha": "s1", "head_branch": "main", "event": "push", "conclusion": "failure",
+         "created_at": "2026-10-20T10:00:00Z", "html_url": "u"},
+        {"id": 2, "run_number": 2, "run_attempt": 1, "name": "a", "path": "x/a.yml",
+         "head_sha": "s2", "head_branch": "main", "event": "push", "conclusion": "failure",
+         "created_at": "2026-10-20T12:00:00Z", "html_url": "u"},
+    ]}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path.endswith("/actions/runs"):
+            return httpx.Response(200, json=runs)
+        if "/runs/1/" in request.url.path:
+            return httpx.Response(502, json={"message": "Server Error"})
+        return httpx.Response(200, json={"jobs": [{
+            "id": 22, "run_id": 2, "run_attempt": 1, "name": "Test x (gfx1151)",
+            "conclusion": "failure", "labels": ["l"], "html_url": "u"}]})
+
+    with GitHubClient("t", transport=httpx.MockTransport(handler), backoff_s=0) as gh:
+        result = poll_once(gh, store, store, store)
+    assert result.skipped_runs == (1,)
+    assert store.count_jobs() == 1
+    assert result.cursor == "2026-10-20T09:59:59Z"  # stays before the skipped run
+
+
+def test_backfill_ignores_cursor(store):
+    calls: list[httpx.Request] = []
+    store.set_state("poller:ROCm/TheRock:last_created_at", "2026-10-19T08:00:00Z")
+    with GitHubClient("t", transport=recorded_transport(calls)) as gh:
+        poll_once(gh, store, store, store, since_hours=168, backfill=True)
+    created = [c for c in calls if c.url.path.endswith("/actions/runs")][0].url.params["created"]
+    assert not created.startswith(">=2026-10-19T02")  # not cursor - 6h
+
+
 def test_poll_twice_is_idempotent_and_uses_cursor_with_lookback(store):
     calls: list[httpx.Request] = []
     with GitHubClient("t", transport=recorded_transport(calls)) as gh:

@@ -94,12 +94,14 @@ def test_accept_confirms_and_numbers_case(store, gh, paths):
     rows = [r for r in _rows(paths.dataset) if r.get("job_id") != JOB_ID]
     paths.dataset.write_text("".join(json.dumps(r) + "\n" for r in rows), encoding="utf-8")
     propose(store, gh, paths=paths)
+    highest = max(int(r["case_id"].split("-")[1]) for r in rows)
+    expected_id = f"golden-{highest + 1:03d}"
 
     case = accept(f"cand-{JOB_ID}", note="checked the log", paths=paths)
-    assert case["case_id"] == "golden-003"
+    assert case["case_id"] == expected_id
     assert case["label_status"] == "confirmed" and case["review_note"] == "checked the log"
     assert _rows(paths.proposals) == []
-    assert _rows(paths.dataset)[-1]["case_id"] == "golden-003"
+    assert _rows(paths.dataset)[-1]["case_id"] == expected_id
 
 
 def test_accept_with_category_override(store, gh, paths):
@@ -129,6 +131,30 @@ def test_invalid_category_rejected(store, gh, paths):
     propose(store, gh, paths=paths)
     with pytest.raises(ValueError):
         accept(f"cand-{JOB_ID}", category="banana", paths=paths)
+
+
+def test_per_run_cap_and_rebalance(paths, monkeypatch):
+    s = SQLiteStore(":memory:")
+    s.upsert_jobs([
+        _job(10 + i, f"Test c{i} (gfx1151)", component=f"c{i}", run_id=500) for i in range(4)
+    ] + [_job(20, "Test d (gfx90a)", component="d", family="gfx90a", run_id=600)])
+
+    def fake_case(store, gh, job, paths):
+        return {"case_id": f"cand-{job.job_id}", "run_id": job.run_id, "job_id": job.job_id,
+                "log_fixture": f"tests/fixtures/logs/x-{job.job_id}.txt"}
+
+    monkeypatch.setattr(labeler, "propose_case", fake_case)
+    new = propose(s, None, max_cases=10, paths=paths, max_per_run=2)
+    runs = [p["run_id"] for p in new]
+    assert runs.count(500) == 2 and runs.count(600) == 1
+
+    # proposals written before the cap existed get trimmed by rebalance
+    over = [{"case_id": f"cand-{n}", "run_id": 700, "job_id": n,
+             "log_fixture": f"tests/fixtures/logs/x-{n}.txt"} for n in (1, 2, 3)]
+    paths.proposals.write_text("".join(json.dumps(r) + "\n" for r in over), encoding="utf-8")
+    assert labeler.rebalance(paths, max_per_run=2) == ["cand-3"]
+    assert [p["case_id"] for p in _rows(paths.proposals)] == ["cand-1", "cand-2"]
+    s.close()
 
 
 def test_diverse_prefers_new_combos_and_dedupes_names():

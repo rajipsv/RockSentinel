@@ -14,7 +14,7 @@ import argparse
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 
-from rocksentinel.github.client import GitHubClient, JobRef, RunRef
+from rocksentinel.github.client import GitHubClient, GitHubError, JobRef, RunRef
 from rocksentinel.store.base import JobResult, JobStore, StateStore, TriageQueue
 from rocksentinel.therock_ci.mappers import map_job_to_family
 
@@ -29,6 +29,7 @@ class PollResult:
     jobs_written: int
     failures_queued: int
     cursor: str | None
+    skipped_runs: tuple[int, ...] = ()
 
 
 def _parse_ts(value: str | None) -> datetime | None:
@@ -71,17 +72,29 @@ def poll_once(
     since_hours: int = 24,
     branch: str | None = "main",
     max_runs: int = 50,
+    backfill: bool = False,
 ) -> PollResult:
+    """Poll once. `backfill` ignores the saved cursor and reads the last `since_hours`."""
     key = _CURSOR_KEY.format(repo=repo)
     cursor = _parse_ts(state.get_state(key))
-    since = (cursor - LOOKBACK) if cursor else datetime.now(UTC) - timedelta(hours=since_hours)
+    if cursor and not backfill:
+        since = cursor - LOOKBACK
+    else:
+        since = datetime.now(UTC) - timedelta(hours=since_hours)
 
     runs = gh.list_runs(repo, since=since, status="completed", branch=branch, limit=max_runs)
     written = queued = 0
     newest = cursor
+    skipped: list[RunRef] = []
     for run in runs:
-        # all_attempts: reruns get new job ids; keeping earlier attempts preserves flake evidence
-        run_jobs = gh.list_jobs(repo, run.run_id, failed_only=False, all_attempts=True)
+        try:
+            # all_attempts: reruns get new job ids; keeping earlier attempts keeps flake evidence
+            run_jobs = gh.list_jobs(repo, run.run_id, failed_only=False, all_attempts=True)
+        except GitHubError as exc:
+            # One flaky GitHub response (e.g. 502 after retries) must not stop ingestion.
+            print(f"skipped run {run.run_id}: {exc}")
+            skipped.append(run)
+            continue
         results = [to_job_result(repo, run, j) for j in run_jobs]
         written += jobs.upsert_jobs(results)
         queued += sum(queue.enqueue(r) for r in results if r.failed)
@@ -89,10 +102,18 @@ def poll_once(
         if created and (newest is None or created > newest):
             newest = created
 
+    # Never move the cursor past a skipped run, so the next poll retries it.
+    for run in skipped:
+        created = _parse_ts(run.created_at)
+        if created and newest and created <= newest:
+            newest = created - timedelta(seconds=1)
+
     new_cursor = newest.strftime("%Y-%m-%dT%H:%M:%SZ") if newest else None
     if new_cursor:
         state.set_state(key, new_cursor)
-    return PollResult(len(runs), written, queued, new_cursor)
+    return PollResult(
+        len(runs), written, queued, new_cursor, tuple(r.run_id for r in skipped)
+    )
 
 
 def main() -> None:
@@ -104,6 +125,8 @@ def main() -> None:
     parser.add_argument("--branch", default="main")
     parser.add_argument("--max-runs", type=int, default=20)
     parser.add_argument("--db", default=".data/rocksentinel.db")
+    parser.add_argument("--backfill", action="store_true",
+                        help="ignore the saved cursor and read the whole --since-hours window")
     args = parser.parse_args()
 
     store = SQLiteStore(args.db)
@@ -111,11 +134,12 @@ def main() -> None:
         result = poll_once(
             gh, store, store, store,
             repo=args.repo, since_hours=args.since_hours,
-            branch=args.branch or None, max_runs=args.max_runs,
+            branch=args.branch or None, max_runs=args.max_runs, backfill=args.backfill,
         )
     print(
         f"runs={result.runs_seen} jobs_written={result.jobs_written} "
         f"failures_queued={result.failures_queued} cursor={result.cursor} "
+        f"skipped_runs={len(result.skipped_runs)} "
         f"total_jobs_in_store={store.count_jobs()}"
     )
     store.close()

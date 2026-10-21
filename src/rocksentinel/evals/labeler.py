@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections import Counter
 from collections.abc import Iterable
 from dataclasses import dataclass
 from datetime import UTC, datetime
@@ -163,23 +164,49 @@ def propose_case(store: JobStore, gh: GitHubClient, job: JobResult, paths: Paths
     }
 
 
+DEFAULT_MAX_PER_RUN = 2
+
+
 def propose(store: JobStore, gh: GitHubClient, max_cases: int = 10,
-            paths: Paths | None = None) -> list[dict]:
+            paths: Paths | None = None, max_per_run: int = DEFAULT_MAX_PER_RUN) -> list[dict]:
+    """Propose up to `max_cases` new cases, at most `max_per_run` per CI run.
+
+    Failures in one run often share a cause (one runner pool, one commit), so a per-run
+    cap keeps the golden set from being dominated by a few correlated cases.
+    """
     paths = paths or Paths()
     existing = _read_jsonl(paths.dataset) + _read_jsonl(paths.proposals)
     skip = {c["job_id"] for c in existing if c.get("job_id")}
-    candidates = _diverse(store.failed_jobs(limit=500), skip, limit=500)
+    per_run = Counter(c["run_id"] for c in existing if c.get("run_id"))
+    candidates = _diverse(store.failed_jobs(limit=1000), skip, limit=1000)
     new: list[dict] = []
     for job in candidates:
         if len(new) >= max_cases:
             break
+        if per_run[job.run_id] >= max_per_run:
+            continue
         try:
             new.append(propose_case(store, gh, job, paths))
+            per_run[job.run_id] += 1
         except GitHubError as exc:
             # e.g. 404: the job failed before any step ran, or its log has expired
             print(f"skipped job {job.job_id}: {exc}")
     _write_jsonl(paths.proposals, _read_jsonl(paths.proposals) + new)
     return new
+
+
+def rebalance(paths: Paths | None = None, max_per_run: int = DEFAULT_MAX_PER_RUN) -> list[str]:
+    """Drop pending proposals beyond `max_per_run` per run (keeps the earliest proposed)."""
+    paths = paths or Paths()
+    per_run = Counter(c["run_id"] for c in _read_jsonl(paths.dataset) if c.get("run_id"))
+    dropped = []
+    for p in _read_jsonl(paths.proposals):
+        if per_run[p["run_id"]] >= max_per_run:
+            reject(p["case_id"], paths)
+            dropped.append(p["case_id"])
+        else:
+            per_run[p["run_id"]] += 1
+    return dropped
 
 
 def _next_golden_id(dataset: list[dict]) -> str:
@@ -250,7 +277,10 @@ def main() -> None:
     p_prop = sub.add_parser("propose")
     p_prop.add_argument("--max", type=int, default=10)
     p_prop.add_argument("--db", default=".data/rocksentinel.db")
+    p_prop.add_argument("--max-per-run", type=int, default=DEFAULT_MAX_PER_RUN)
     sub.add_parser("list")
+    p_reb = sub.add_parser("rebalance", help="drop pending proposals beyond the per-run cap")
+    p_reb.add_argument("--max-per-run", type=int, default=DEFAULT_MAX_PER_RUN)
     p_acc = sub.add_parser("accept")
     p_acc.add_argument("case_id")
     p_acc.add_argument("--category", choices=CATEGORIES)
@@ -264,12 +294,17 @@ def main() -> None:
 
         store = SQLiteStore(args.db)
         with GitHubClient() as gh:
-            new = propose(store, gh, args.max)
+            new = propose(store, gh, args.max, max_per_run=args.max_per_run)
         store.close()
         print(format_proposals(new))
         print(f"\n{len(new)} new proposals in {Paths().proposals}")
     elif args.cmd == "list":
-        print(format_proposals(_read_jsonl(Paths().proposals)))
+        proposals = _read_jsonl(Paths().proposals)
+        print(format_proposals(proposals))
+        print(f"\n{len(proposals)} pending from {len({p['run_id'] for p in proposals})} runs")
+    elif args.cmd == "rebalance":
+        dropped = rebalance(max_per_run=args.max_per_run)
+        print(f"dropped {len(dropped)} over-represented proposals: {dropped}")
     elif args.cmd == "accept":
         case = accept(args.case_id, category=args.category, note=args.note)
         print(f"accepted as {case['case_id']} [{case['expected']['category']}] (confirmed)")
