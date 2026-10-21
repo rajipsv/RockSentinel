@@ -195,6 +195,26 @@ All read-only toward GitHub; local only.
 
 **Interview talking point:** "The Console reads the same deterministic tools the agents use. What a reviewer sees is exactly the evidence an agent gets."
 
+## Step 8b: Console design pass with a vetted third-party skill (this commit)
+**Built:** installed **UI UX Pro Max** (nextlevelbuilder, MIT) as a project skill ([.claude/skills/ui-ux-pro-max](../.claude/skills/ui-ux-pro-max/ATTRIBUTION.md)) and used it to generate the Console's design system: a dark developer-tool palette, IBM Plex Sans + JetBrains Mono, dense layout and minimal motion. The Console was restyled to it.
+
+**Supply-chain hygiene:** the repo was downloaded to a scratch folder and reviewed before anything was installed:
+- the scripts use only the standard library (no network, no subprocess), and the only file writes are its optional output and its own temp file;
+- the skill text was checked for injected instructions;
+- only the skill folder was copied (no upstream tests), its plugin paths were made project-relative, and the licence plus an attribution file with the commit hash were kept.
+
+**Judgment over the tool's output:**
+- Its suggested "FAQ landing" pattern and GSAP animations don't fit a triage tool, so they were dropped.
+- Google Fonts imports were skipped, so the local Console makes no external requests.
+
+**Checklist results:**
+- Contrast measured for every text/background pair (WCAG): dark mode worst case 4.83. Light mode had one failure (green links on grey, 4.07), fixed by darkening the accent (now 5.78).
+- Visible keyboard focus, pointer cursors, 150 ms transitions, `prefers-reduced-motion` respected.
+- Category badges use text plus an outline, not colour alone.
+- No horizontal scroll at 375 px.
+
+**Interview talking point:** "I treat agent skills like any dependency. I read the code and the prompt before installing, vendor it with attribution, and still apply judgment to its output."
+
 ---
 
 ## Engineering practices (apply to every step)
