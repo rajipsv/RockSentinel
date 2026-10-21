@@ -166,6 +166,7 @@ def get_job_log_windows(
         "failing_test": result.failing_test,
         "faulting_kernel": result.faulting_kernel,
         "ctest_failed": result.ctest_failed,
+        "suite_failed": result.suite_failed,
         "exit_code": result.exit_code,
         "step_timeout_minutes": result.step_timeout_minutes,
     }
@@ -199,6 +200,7 @@ def extract_errors(log_text: str, max_candidates: int = 20) -> dict:
         "failing_test": result.failing_test,
         "faulting_kernel": result.faulting_kernel,
         "ctest_failed": result.ctest_failed,
+        "suite_failed": result.suite_failed,
         "exit_code": result.exit_code,
         "step_timeout_minutes": result.step_timeout_minutes,
     }

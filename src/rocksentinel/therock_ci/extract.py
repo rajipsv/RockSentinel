@@ -56,6 +56,10 @@ PATTERNS: tuple[Pattern, ...] = (
     _p("python_error", 75, r"Traceback \(most recent call last\)|FileNotFoundError"),
     _p("gtest_failed", 75, r"^\[\s+FAILED\s+\]"),
     _p("ctest_failed_list", 70, r"The following tests FAILED:"),
+    # Summary printed by some suites' runners (e.g. rocgdb):
+    #   "[X] Unexpected Failures (2):" / "[X] Total Failed Tests: 2" / "[X] OVERALL STATUS: FAIL"
+    _p("test_suite_failed", 72,
+       r"\[X\] Unexpected Failures \(\d+\)|\[X\] Total Failed Tests: [1-9]|OVERALL STATUS: FAIL"),
     _p("ctest_summary", 60, r"\d+% tests passed, [1-9]\d* tests? failed out of \d+"),
     _p("step_timeout", 60, r"The action '.+' has timed out after \d+ minutes"),
     _p("build_stopped", 50, r"ninja: build stopped|subcommand failed"),
@@ -67,6 +71,9 @@ _CTEST_TEST_NAME = re.compile(r"Test\s+#\d+:\s+(\S+)")
 _GTEST_FAILED_NAME = re.compile(r"^\[\s+FAILED\s+\] (\S+)")
 _KERNEL = re.compile(r"kernel: (?:void )?([^(\]]+)\(")
 _CTEST_FAILED_ENTRY = re.compile(r"^\s+(\d+ - .+?)\s*$")
+_SUITE_FAILED_HEADER = re.compile(r"\[X\] Unexpected Failures \(\d+\):")
+# Entries under the header, possibly behind a logging prefix: "... - INFO:        gdb.rocm/x.exp"
+_SUITE_FAILED_ENTRY = re.compile(r"^(?:.*? - [A-Z]+:)?\s{2,}(\S+)\s*$")
 _EXIT_CODE = re.compile(r"Process completed with exit code (\d+)")
 _STEP_TIMEOUT = re.compile(r"timed out after (\d+) minutes")
 
@@ -133,6 +140,8 @@ class Extraction:
     failing_test: str | None = None
     faulting_kernel: str | None = None
     ctest_failed: list[str] = field(default_factory=list)
+    # Tests a suite runner reported as unexpected failures (all of them, not just the first)
+    suite_failed: list[str] = field(default_factory=list)
     exit_code: int | None = None
     step_timeout_minutes: int | None = None
     lines: list[str] = field(default_factory=list, repr=False)
@@ -254,6 +263,14 @@ def _fill_facts(result: Extraction, lines: list[str], found: list[ErrorCandidate
                 if not m:
                     break
                 result.ctest_failed.append(m.group(1))
+        elif _SUITE_FAILED_HEADER.search(line):
+            for follow in lines[idx + 1 :]:
+                m = _SUITE_FAILED_ENTRY.match(follow)
+                if not m or m.group(1).startswith("["):  # next "[!] ..." section
+                    break
+                result.suite_failed.append(m.group(1))
+    if result.failing_test is None and result.suite_failed:
+        result.failing_test = result.suite_failed[0]
 
     for line in reversed(lines):
         if result.exit_code is None and (m := _EXIT_CODE.search(line)):

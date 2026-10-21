@@ -1,0 +1,1504 @@
+# Source: ROCm/TheRock Actions run 39502549002 attempt 1, job 118953708623
+# Job: Windows::release / Test gfx110X-all / Test hipdnn-cudnn-samples / Test hipdnn-cudnn-samples (shard 1/1) (gfx110X-all) (multi_arch_ci.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+2026-10-20T23:54:16.5438489Z [48/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.obj
+2026-10-20T23:54:16.5709363Z [49/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.obj
+2026-10-20T23:54:16.6098684Z [50/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.obj
+2026-10-20T23:54:16.6227189Z [51/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.obj
+2026-10-20T23:54:16.8124209Z [52/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.obj
+2026-10-20T23:54:16.8226234Z [53/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.obj
+2026-10-20T23:54:16.8632031Z [54/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.obj
+2026-10-20T23:54:16.9171762Z [55/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_getenv.cpp.obj
+2026-10-20T23:54:16.9478325Z [56/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.obj
+2026-10-20T23:54:16.9873143Z [57/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.obj
+2026-10-20T23:54:16.9927740Z [58/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.obj
+2026-10-20T23:54:17.0112050Z [59/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.obj
+2026-10-20T23:54:17.0875110Z [60/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.obj
+2026-10-20T23:54:17.2511549Z [61/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.obj
+2026-10-20T23:54:17.2919878Z [62/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.obj
+2026-10-20T23:54:17.3039408Z [63/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.obj
+2026-10-20T23:54:17.3277909Z [64/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.obj
+2026-10-20T23:54:17.3678598Z [65/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.obj
+2026-10-20T23:54:17.3763141Z [66/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.obj
+2026-10-20T23:54:17.4056792Z [67/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_parse_numbers.cpp.obj
+2026-10-20T23:54:17.4204190Z [68/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_jsonwriter.cpp.obj
+2026-10-20T23:54:17.4461412Z [69/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.obj
+2026-10-20T23:54:17.4517799Z [70/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.obj
+2026-10-20T23:54:17.5114787Z [71/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.obj
+2026-10-20T23:54:17.5247932Z [72/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.obj
+2026-10-20T23:54:17.7205447Z [73/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.obj
+2026-10-20T23:54:17.7846273Z [74/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.obj
+2026-10-20T23:54:17.8082082Z [75/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.obj
+2026-10-20T23:54:17.8248416Z [76/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.obj
+2026-10-20T23:54:17.8446474Z [77/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.obj
+2026-10-20T23:54:17.8752951Z [78/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.obj
+2026-10-20T23:54:17.9246321Z [79/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.obj
+2026-10-20T23:54:17.9928051Z [80/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.obj
+2026-10-20T23:54:18.0040415Z [81/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.obj
+2026-10-20T23:54:18.1750302Z [82/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.obj
+2026-10-20T23:54:18.2866072Z [83/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.obj
+2026-10-20T23:54:18.2903992Z [84/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.obj
+2026-10-20T23:54:18.3347268Z [85/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.obj
+2026-10-20T23:54:18.3475683Z [86/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.obj
+2026-10-20T23:54:18.3592071Z [87/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_failure_exception.cpp.obj
+2026-10-20T23:54:18.4245757Z [88/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.obj
+2026-10-20T23:54:18.4357638Z [89/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.obj
+2026-10-20T23:54:18.4485874Z [90/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.obj
+2026-10-20T23:54:18.4891535Z [91/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.obj
+2026-10-20T23:54:18.4982259Z [92/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.obj
+2026-10-20T23:54:18.6548944Z [93/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.obj
+2026-10-20T23:54:18.7959115Z [94/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.obj
+2026-10-20T23:54:18.8702384Z [95/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.obj
+2026-10-20T23:54:18.8703194Z [96/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.obj
+2026-10-20T23:54:18.9499891Z [97/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.obj
+2026-10-20T23:54:18.9636567Z [98/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.obj
+2026-10-20T23:54:18.9700212Z [99/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.obj
+2026-10-20T23:54:19.0104447Z [100/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.obj
+2026-10-20T23:54:19.0383584Z [101/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.obj
+2026-10-20T23:54:19.0926916Z [102/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.obj
+2026-10-20T23:54:19.2121186Z [103/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.obj
+2026-10-20T23:54:19.2334633Z [104/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.obj
+2026-10-20T23:54:19.3038940Z [105/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.obj
+2026-10-20T23:54:19.3965246Z [106/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.obj
+2026-10-20T23:54:20.0270388Z [107/223] Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.obj
+2026-10-20T23:54:20.1538818Z [108/223] Linking CXX static library _deps\catch2-build\src\Catch2.lib
+2026-10-20T23:54:24.4526402Z [109/223] Building CXX object CMakeFiles/tu_convolution_fprop_cpp.dir/staged/cpp/convolution/fprop.cpp.obj
+2026-10-20T23:54:24.4555956Z FAILED: [code=1] CMakeFiles/tu_convolution_fprop_cpp.dir/staged/cpp/convolution/fprop.cpp.obj 
+2026-10-20T23:54:24.4822485Z C:\actions-runner\_work\TheRock\TheRock\build\lib\llvm\bin\clang++.exe -DHIPDNN_ENABLE_SDPA -DUSE_PROF_API=1 -D__HIP_PLATFORM_AMD__ -D__HIP_PLATFORM_AMD__=1 -IC:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay -IC:/actions-runner/_work/_temp/cdnns/staged/cpp -IC:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/.. -IC:/actions-runner/_work/_temp/cdnns/_deps/catch2-build/generated-includes -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/frontend -isystem C:/actions-runner/_work/TheRock/TheRock/build/include -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/data_sdk -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/backend -O3 -DNDEBUG -std=gnu++17 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -MD -MT CMakeFiles/tu_convolution_fprop_cpp.dir/staged/cpp/convolution/fprop.cpp.obj -MF CMakeFiles\tu_convolution_fprop_cpp.dir\staged\cpp\convolution\fprop.cpp.obj.d -o CMakeFiles/tu_convolution_fprop_cpp.dir/staged/cpp/convolution/fprop.cpp.obj -c C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/fprop.cpp
+2026-10-20T23:54:24.4826258Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/fprop.cpp:267:27: error: no member named 'key' in 'hipdnn_frontend::compatibility::cudnn_frontend::graph::Graph'
+2026-10-20T23:54:24.4845925Z   267 |         auto key = graph->key();
+2026-10-20T23:54:24.5159436Z       |                    ~~~~~~~^
+2026-10-20T23:54:24.5160208Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/fprop.cpp:612:27: error: no member named 'key' in 'hipdnn_frontend::compatibility::cudnn_frontend::graph::Graph'
+2026-10-20T23:54:24.5196420Z   612 |         auto key = graph->key();
+2026-10-20T23:54:24.5364086Z       |                    ~~~~~~~^
+2026-10-20T23:54:24.5364648Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/fprop.cpp:24:
+2026-10-20T23:54:24.5365615Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:24.5366298Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:24.5385572Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5386077Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:24.5386555Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:24.5386731Z       |                  ^
+2026-10-20T23:54:24.5387239Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/fprop.cpp:76:19: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:54:24.5387744Z    76 |     Surface<half> x_tensor(n * c * h * w);
+2026-10-20T23:54:24.5387949Z       |                   ^
+2026-10-20T23:54:24.5388254Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/fprop.cpp:24:
+2026-10-20T23:54:24.5388953Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:24.5389512Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:24.5389689Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5390122Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:24.5390578Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:24.5390751Z       |                  ^
+2026-10-20T23:54:24.5391237Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/fprop.cpp:85:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:24.5392106Z    85 |     Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:24.5392315Z       |                     ^
+2026-10-20T23:54:24.5392633Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/fprop.cpp:24:
+2026-10-20T23:54:24.5393332Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:24.5394148Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:24.5394323Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5394755Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:24.5395219Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:24.5395388Z       |                  ^
+2026-10-20T23:54:24.5395860Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/fprop.cpp:537:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:24.5396369Z   537 |     Surface<float> sum_tensor(k);
+2026-10-20T23:54:24.5396838Z       |                    ^
+2026-10-20T23:54:24.5397027Z 3 warnings and 2 errors generated.
+2026-10-20T23:54:24.5698883Z [110/223] Building CXX object CMakeFiles/tu_matmul_blackwell_nvfp4_mxfp8_block_scale_matmul_cpp.dir/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp.obj
+2026-10-20T23:54:24.5699814Z FAILED: [code=1] CMakeFiles/tu_matmul_blackwell_nvfp4_mxfp8_block_scale_matmul_cpp.dir/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp.obj 
+2026-10-20T23:54:24.5703788Z C:\actions-runner\_work\TheRock\TheRock\build\lib\llvm\bin\clang++.exe -DHIPDNN_ENABLE_SDPA -DUSE_PROF_API=1 -D__HIP_PLATFORM_AMD__ -D__HIP_PLATFORM_AMD__=1 -IC:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay -IC:/actions-runner/_work/_temp/cdnns/staged/cpp -IC:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/.. -IC:/actions-runner/_work/_temp/cdnns/_deps/catch2-build/generated-includes -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/frontend -isystem C:/actions-runner/_work/TheRock/TheRock/build/include -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/data_sdk -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/backend -O3 -DNDEBUG -std=gnu++17 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -MD -MT CMakeFiles/tu_matmul_blackwell_nvfp4_mxfp8_block_scale_matmul_cpp.dir/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp.obj -MF CMakeFiles\tu_matmul_blackwell_nvfp4_mxfp8_block_scale_matmul_cpp.dir\staged\cpp\matmul\blackwell_nvfp4_mxfp8_block_scale_matmul.cpp.obj.d -o CMakeFiles/tu_matmul_blackwell_nvfp4_mxfp8_block_scale_matmul_cpp.dir/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp.obj -c C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp
+2026-10-20T23:54:24.5708030Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp:360:46: error: no member named 'set_reordering_type' in 'hipdnn_frontend::graph::TensorAttributes'
+2026-10-20T23:54:24.5708710Z   355 |     auto block_descale_a = graph.tensor(fe::graph::Tensor_attributes()
+2026-10-20T23:54:24.5709019Z       |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5709276Z   356 |                                             .set_name("block_descale_a")
+2026-10-20T23:54:24.5709517Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5709769Z   357 |                                             .set_data_type(datatype_block_scale)
+2026-10-20T23:54:24.5710033Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5710318Z   358 |                                             .set_dim({b, block_scale_dim_m, block_scale_dim_k})
+2026-10-20T23:54:24.5711024Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5711396Z   359 |                                             .set_stride({block_scale_dim_m * block_scale_dim_k, block_scale_dim_k, 1})
+2026-10-20T23:54:24.5711774Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5712169Z   360 |                                             .set_reordering_type(cudnn_frontend::TensorReordering_t::F8_128x4));
+2026-10-20T23:54:24.5712478Z       |                                              ^
+2026-10-20T23:54:24.5713061Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp:367:46: error: no member named 'set_reordering_type' in 'hipdnn_frontend::graph::TensorAttributes'
+2026-10-20T23:54:24.5713717Z   362 |     auto block_descale_b = graph.tensor(fe::graph::Tensor_attributes()
+2026-10-20T23:54:24.5714022Z       |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5714569Z   363 |                                             .set_name("block_descale_b")
+2026-10-20T23:54:24.5714824Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5715077Z   364 |                                             .set_data_type(datatype_block_scale)
+2026-10-20T23:54:24.5715335Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5715627Z   365 |                                             .set_dim({b, block_scale_dim_k, block_scale_dim_n})
+2026-10-20T23:54:24.5715919Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5716280Z   366 |                                             .set_stride({block_scale_dim_n * block_scale_dim_k, 1, block_scale_dim_k})
+2026-10-20T23:54:24.5716674Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5717066Z   367 |                                             .set_reordering_type(cudnn_frontend::TensorReordering_t::F8_128x4));
+2026-10-20T23:54:24.5717388Z       |                                              ^
+2026-10-20T23:54:24.5717965Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp:497:46: error: no member named 'set_reordering_type' in 'hipdnn_frontend::graph::TensorAttributes'
+2026-10-20T23:54:24.5718608Z   492 |     auto block_descale_a = graph.tensor(fe::graph::Tensor_attributes()
+2026-10-20T23:54:24.5718891Z       |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5719144Z   493 |                                             .set_name("block_descale_a")
+2026-10-20T23:54:24.5719416Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5719716Z   494 |                                             .set_data_type(datatype_block_scale)
+2026-10-20T23:54:24.5719983Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5720264Z   495 |                                             .set_dim({b, block_scale_dim_m, block_scale_dim_k})
+2026-10-20T23:54:24.5720562Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5720925Z   496 |                                             .set_stride({block_scale_dim_m * block_scale_dim_k, block_scale_dim_k, 1})
+2026-10-20T23:54:24.5721322Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5721695Z   497 |                                             .set_reordering_type(cudnn_frontend::TensorReordering_t::F8_128x4));
+2026-10-20T23:54:24.5722270Z       |                                              ^
+2026-10-20T23:54:24.5722865Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp:504:46: error: no member named 'set_reordering_type' in 'hipdnn_frontend::graph::TensorAttributes'
+2026-10-20T23:54:24.5723525Z   499 |     auto block_descale_b = graph.tensor(fe::graph::Tensor_attributes()
+2026-10-20T23:54:24.5723806Z       |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5724056Z   500 |                                             .set_name("block_descale_b")
+2026-10-20T23:54:24.5724302Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5724548Z   501 |                                             .set_data_type(datatype_block_scale)
+2026-10-20T23:54:24.5724806Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5725097Z   502 |                                             .set_dim({b, block_scale_dim_k, block_scale_dim_n})
+2026-10-20T23:54:24.5726370Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5726776Z   503 |                                             .set_stride({block_scale_dim_n * block_scale_dim_k, 1, block_scale_dim_k})
+2026-10-20T23:54:24.5727167Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5727571Z   504 |                                             .set_reordering_type(cudnn_frontend::TensorReordering_t::F8_128x4));
+2026-10-20T23:54:24.5727877Z       |                                              ^
+2026-10-20T23:54:24.5728460Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp:649:46: error: no member named 'set_reordering_type' in 'hipdnn_frontend::graph::TensorAttributes'
+2026-10-20T23:54:24.5729131Z   644 |     auto block_descale_a = graph.tensor(fe::graph::Tensor_attributes()
+2026-10-20T23:54:24.5729420Z       |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5729678Z   645 |                                             .set_name("block_descale_a")
+2026-10-20T23:54:24.5729934Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5730183Z   646 |                                             .set_data_type(datatype_block_scale)
+2026-10-20T23:54:24.5730448Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5730739Z   647 |                                             .set_dim({b, block_scale_dim_m, block_scale_dim_k})
+2026-10-20T23:54:24.5731057Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5731427Z   648 |                                             .set_stride({block_scale_dim_m * block_scale_dim_k, block_scale_dim_k, 1})
+2026-10-20T23:54:24.5731838Z       |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5732240Z   649 |                                             .set_reordering_type(cudnn_frontend::TensorReordering_t::F8_128x4));
+2026-10-20T23:54:24.5732564Z       |                                              ^
+2026-10-20T23:54:24.5733159Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp:656:47: error: no member named 'set_reordering_type' in 'hipdnn_frontend::graph::TensorAttributes'
+2026-10-20T23:54:24.5733830Z   651 |     auto block_descale_b0 = graph.tensor(fe::graph::Tensor_attributes()
+2026-10-20T23:54:24.5734133Z       |                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5734384Z   652 |                                              .set_name("block_descale_b")
+2026-10-20T23:54:24.5734847Z       |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5735124Z   653 |                                              .set_data_type(datatype_block_scale)
+2026-10-20T23:54:24.5735390Z       |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5735684Z   654 |                                              .set_dim({b, block_scale_dim_k, block_scale_dim_n})
+2026-10-20T23:54:24.5735995Z       |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5736364Z   655 |                                              .set_stride({block_scale_dim_n * block_scale_dim_k, 1, block_scale_dim_k})
+2026-10-20T23:54:24.5736771Z       |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5737176Z   656 |                                              .set_reordering_type(cudnn_frontend::TensorReordering_t::F8_128x4));
+2026-10-20T23:54:24.5737485Z       |                                               ^
+2026-10-20T23:54:24.5738263Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp:663:47: error: no member named 'set_reordering_type' in 'hipdnn_frontend::graph::TensorAttributes'
+2026-10-20T23:54:24.5738935Z   658 |     auto block_descale_b1 = graph.tensor(fe::graph::Tensor_attributes()
+2026-10-20T23:54:24.5739227Z       |                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5739480Z   659 |                                              .set_name("block_descale_b")
+2026-10-20T23:54:24.5739752Z       |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5740013Z   660 |                                              .set_data_type(datatype_block_scale)
+2026-10-20T23:54:24.5740272Z       |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5740559Z   661 |                                              .set_dim({b, block_scale_dim_k, block_scale_dim_n})
+2026-10-20T23:54:24.5740870Z       |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5741218Z   662 |                                              .set_stride({block_scale_dim_n * block_scale_dim_k, 1, block_scale_dim_k})
+2026-10-20T23:54:24.5741604Z       |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5741998Z   663 |                                              .set_reordering_type(cudnn_frontend::TensorReordering_t::F8_128x4));
+2026-10-20T23:54:24.5742317Z       |                                               ^
+2026-10-20T23:54:24.5742894Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp:800:28: error: no member named 'set_reordering_type' in 'hipdnn_frontend::graph::TensorAttributes'
+2026-10-20T23:54:24.5743510Z   794 |         graph->tensor(fe::graph::Tensor_attributes()
+2026-10-20T23:54:24.5743746Z       |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5743953Z   795 |                           .set_name("SF_A")
+2026-10-20T23:54:24.5744158Z       |                           ~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5744369Z   796 |                           .set_uid(SF_A_UID)
+2026-10-20T23:54:24.5744570Z       |                           ~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5744889Z   797 |                           .set_dim({matmul_cache_shape.b, block_scale_dim_m_cache, block_scale_dim_k_cache})
+2026-10-20T23:54:24.5745286Z       |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5745691Z   798 |                           .set_stride({block_scale_dim_m_cache * block_scale_dim_k_cache, block_scale_dim_k_cache, 1})
+2026-10-20T23:54:24.5746350Z       |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5746675Z   799 |                           .set_data_type(fe::DataType_t::FP8_E4M3)
+2026-10-20T23:54:24.5746932Z       |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5748134Z   800 |                           .set_reordering_type(cudnn_frontend::TensorReordering_t::F8_128x4));
+2026-10-20T23:54:24.5748439Z       |                            ^
+2026-10-20T23:54:24.5749005Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp:819:28: error: no member named 'set_reordering_type' in 'hipdnn_frontend::graph::TensorAttributes'
+2026-10-20T23:54:24.5749631Z   813 |         graph->tensor(fe::graph::Tensor_attributes()
+2026-10-20T23:54:24.5749862Z       |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5750081Z   814 |                           .set_name("SF_B")
+2026-10-20T23:54:24.5750289Z       |                           ~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5750501Z   815 |                           .set_uid(SF_B_UID)
+2026-10-20T23:54:24.5750901Z       |                           ~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5751230Z   816 |                           .set_dim({matmul_cache_shape.b, block_scale_dim_k_cache, block_scale_dim_n_cache})
+2026-10-20T23:54:24.5751632Z       |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5752051Z   817 |                           .set_stride({block_scale_dim_n_cache * block_scale_dim_k_cache, 1, block_scale_dim_k_cache})
+2026-10-20T23:54:24.5752477Z       |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5752790Z   818 |                           .set_data_type(fe::DataType_t::FP8_E4M3)
+2026-10-20T23:54:24.5753067Z       |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5753394Z   819 |                           .set_reordering_type(cudnn_frontend::TensorReordering_t::F8_128x4));
+2026-10-20T23:54:24.5753691Z       |                            ^
+2026-10-20T23:54:24.5754071Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp:27:
+2026-10-20T23:54:24.5754810Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:24.5755356Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:24.5755540Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:24.5755971Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:24.5756428Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:24.5756605Z       |                  ^
+2026-10-20T23:54:24.5757142Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp:316:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:24.5757936Z   316 |     Surface<int8_t> tensor_a_gpu(div_up(b * m * k * cudnn_frontend::detail::get_element_size_in_bits(datatype_a), 8));
+2026-10-20T23:54:24.5758310Z       |                     ^
+2026-10-20T23:54:24.5758488Z 1 warning and 9 errors generated.
+2026-10-20T23:54:25.0646939Z [111/223] Building CXX object CMakeFiles/tu_causal_conv1d_causal_conv1d_cpp.dir/staged/cpp/causal_conv1d/causal_conv1d.cpp.obj
+2026-10-20T23:54:25.7525107Z [112/223] Building CXX object CMakeFiles/tu_matmul_matmuls_cpp.dir/staged/cpp/matmul/matmuls.cpp.obj
+2026-10-20T23:54:25.7525564Z FAILED: [code=1] CMakeFiles/tu_matmul_matmuls_cpp.dir/staged/cpp/matmul/matmuls.cpp.obj 
+2026-10-20T23:54:25.7528700Z C:\actions-runner\_work\TheRock\TheRock\build\lib\llvm\bin\clang++.exe -DHIPDNN_ENABLE_SDPA -DUSE_PROF_API=1 -D__HIP_PLATFORM_AMD__ -D__HIP_PLATFORM_AMD__=1 -IC:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay -IC:/actions-runner/_work/_temp/cdnns/staged/cpp -IC:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/.. -IC:/actions-runner/_work/_temp/cdnns/_deps/catch2-build/generated-includes -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/frontend -isystem C:/actions-runner/_work/TheRock/TheRock/build/include -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/data_sdk -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/backend -O3 -DNDEBUG -std=gnu++17 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -MD -MT CMakeFiles/tu_matmul_matmuls_cpp.dir/staged/cpp/matmul/matmuls.cpp.obj -MF CMakeFiles\tu_matmul_matmuls_cpp.dir\staged\cpp\matmul\matmuls.cpp.obj.d -o CMakeFiles/tu_matmul_matmuls_cpp.dir/staged/cpp/matmul/matmuls.cpp.obj -c C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/matmuls.cpp
+2026-10-20T23:54:25.7532051Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/matmuls.cpp:499:31: error: no member named 'key' in 'hipdnn_frontend::compatibility::cudnn_frontend::graph::Graph'
+2026-10-20T23:54:25.7532516Z   499 |             auto key = graph->key();
+2026-10-20T23:54:25.7532689Z       |                        ~~~~~~~^
+2026-10-20T23:54:25.7532957Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/matmuls.cpp:27:
+2026-10-20T23:54:25.7533556Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:25.7534049Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:25.7534208Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:25.7534594Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:25.7535007Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:25.7535165Z       |                  ^
+2026-10-20T23:54:25.7535577Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/matmuls.cpp:160:23: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:54:25.7536018Z   160 |         Surface<half> A_gpu(max_a_volume);
+2026-10-20T23:54:25.7536197Z       |                       ^
+2026-10-20T23:54:25.7536453Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/matmuls.cpp:27:
+2026-10-20T23:54:25.7537047Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:25.7537524Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:25.7537679Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:25.7538070Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:25.7538474Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:25.7538622Z       |                  ^
+2026-10-20T23:54:25.7539016Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/matmuls.cpp:162:24: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:25.7539450Z   162 |         Surface<float> C_gpu(max_c_volume);
+2026-10-20T23:54:25.7539631Z       |                        ^
+2026-10-20T23:54:25.7539884Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/matmuls.cpp:27:
+2026-10-20T23:54:25.7540468Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:25.7540947Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:25.7541103Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:25.7541876Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:25.7542287Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:25.7542441Z       |                  ^
+2026-10-20T23:54:25.7542844Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/matmuls.cpp:164:25: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:25.7543324Z   164 |         Surface<int8_t> workspace(graph.get_workspace_size());
+2026-10-20T23:54:25.7543550Z       |                         ^
+2026-10-20T23:54:25.7543706Z 3 warnings and 1 error generated.
+2026-10-20T23:54:29.3826597Z [113/223] Building CXX object CMakeFiles/tu_matmul_complex_fp32_matmul_cpp.dir/staged/cpp/matmul/complex_fp32_matmul.cpp.obj
+2026-10-20T23:54:29.3852380Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/complex_fp32_matmul.cpp:27:
+2026-10-20T23:54:29.3920391Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:29.3921545Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:29.3961464Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:29.3961996Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:29.3962492Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:29.3962668Z       |                  ^
+2026-10-20T23:54:29.3963184Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/complex_fp32_matmul.cpp:45:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:29.3963747Z    45 |     Surface<int8_t> A_gpu(2 * sizeof(float) * b * m * k);
+2026-10-20T23:54:29.3963977Z       |                     ^
+2026-10-20T23:54:29.3964312Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/complex_fp32_matmul.cpp:27:
+2026-10-20T23:54:29.3964998Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:29.3965533Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:29.3965709Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:29.3966138Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:29.3966586Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:29.3966774Z       |                  ^
+2026-10-20T23:54:29.3967239Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/complex_fp32_matmul.cpp:95:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:29.3967784Z    95 |     Surface<float> C_gpu(2 * sizeof(float) * b * m * n);
+2026-10-20T23:54:29.3968015Z       |                    ^
+2026-10-20T23:54:29.3968174Z 2 warnings generated.
+2026-10-20T23:54:29.4368100Z [114/223] Building CXX object CMakeFiles/tu_matmul_fp8_matmul_cpp.dir/staged/cpp/matmul/fp8_matmul.cpp.obj
+2026-10-20T23:54:29.4368654Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/fp8_matmul.cpp:27:
+2026-10-20T23:54:29.4369331Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:29.4369898Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:29.4370089Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:29.4370536Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:29.4371006Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:29.4371470Z       |                  ^
+2026-10-20T23:54:29.4371978Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/fp8_matmul.cpp:48:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:29.4372481Z    48 |     Surface<int8_t> A_gpu(b * m * k);
+2026-10-20T23:54:29.4372672Z       |                     ^
+2026-10-20T23:54:29.4372954Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/fp8_matmul.cpp:27:
+2026-10-20T23:54:29.4373616Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:29.4374630Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:29.4374814Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:29.4375258Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:29.4375721Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:29.4375883Z       |                  ^
+2026-10-20T23:54:29.4376602Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/fp8_matmul.cpp:51:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:29.4377091Z    51 |     Surface<float> A_descale_gpu(1);
+2026-10-20T23:54:29.4377274Z       |                    ^
+2026-10-20T23:54:29.4377427Z 2 warnings generated.
+2026-10-20T23:54:30.1727531Z [115/223] Building CXX object CMakeFiles/tu_matmul_general_block_scale_matmul_cpp.dir/staged/cpp/matmul/general_block_scale_matmul.cpp.obj
+2026-10-20T23:54:30.1728304Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/general_block_scale_matmul.cpp:27:
+2026-10-20T23:54:30.1767336Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:30.1767964Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:30.1768141Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:30.1768588Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:30.1769013Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:30.1769175Z       |                  ^
+2026-10-20T23:54:30.1769682Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/general_block_scale_matmul.cpp:182:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:30.1770341Z   182 |     Surface<int8_t> tensor_a_gpu(div_up(b * m * k * cudnn_frontend::detail::get_element_size_in_bits(datatype_a), 8));
+2026-10-20T23:54:30.1770684Z       |                     ^
+2026-10-20T23:54:30.1770837Z 1 warning generated.
+2026-10-20T23:54:30.1991716Z [116/223] Building CXX object CMakeFiles/tu_convolution_int8_fprop_cpp.dir/staged/cpp/convolution/int8_fprop.cpp.obj
+2026-10-20T23:54:30.2006795Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/int8_fprop.cpp:24:
+2026-10-20T23:54:30.2007560Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:30.2008221Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:30.2008454Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:30.2172108Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:30.2172660Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:30.2172842Z       |                  ^
+2026-10-20T23:54:30.2173381Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/int8_fprop.cpp:90:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:30.2174993Z    90 |     Surface<int8_t> x_tensor(n * c * h * w);
+2026-10-20T23:54:30.2175198Z       |                     ^
+2026-10-20T23:54:30.2175520Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/int8_fprop.cpp:24:
+2026-10-20T23:54:30.2176220Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:30.2176783Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:30.2176961Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:30.2177397Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:30.2177833Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:30.2178002Z       |                  ^
+2026-10-20T23:54:30.2178460Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/int8_fprop.cpp:92:22: note: in instantiation of member function 'Surface<int>::~Surface' requested here
+2026-10-20T23:54:30.2179030Z    92 |     Surface<int32_t> y_tensor(n * k * h * w);  // Should be p, q.
+2026-10-20T23:54:30.2179278Z       |                      ^
+2026-10-20T23:54:30.2179715Z 2 warnings generated.
+2026-10-20T23:54:30.2515026Z [117/223] Building CXX object CMakeFiles/tu_convolution_wgrads_cpp.dir/staged/cpp/convolution/wgrads.cpp.obj
+2026-10-20T23:54:30.2523485Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/wgrads.cpp:24:
+2026-10-20T23:54:30.2555692Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:30.2557186Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:30.2560674Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:30.2572054Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:30.2572706Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:30.2572964Z       |                  ^
+2026-10-20T23:54:30.2573527Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/wgrads.cpp:64:19: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:54:30.2850925Z    64 |     Surface<half> x_tensor(4 * 64 * 16 * 16);
+2026-10-20T23:54:30.2851221Z       |                   ^
+2026-10-20T23:54:30.2851521Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/wgrads.cpp:24:
+2026-10-20T23:54:30.2852231Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:30.2852829Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:30.2853005Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:30.2853486Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:30.2853958Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:30.2854140Z       |                  ^
+2026-10-20T23:54:30.2854665Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/wgrads.cpp:70:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:30.2855210Z    70 |     Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:30.2855421Z       |                     ^
+2026-10-20T23:54:30.2855591Z 2 warnings generated.
+2026-10-20T23:54:30.3676565Z [118/223] Building CXX object CMakeFiles/tu_matmul_int8_matmul_cpp.dir/staged/cpp/matmul/int8_matmul.cpp.obj
+2026-10-20T23:54:30.3693363Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/int8_matmul.cpp:27:
+2026-10-20T23:54:30.3694257Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:30.3695215Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:30.3695453Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:30.3695931Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:30.3906512Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:30.3906882Z       |                  ^
+2026-10-20T23:54:30.3960733Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/int8_matmul.cpp:44:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:30.4174785Z    44 |     Surface<int8_t> A_gpu(b * m * k);
+2026-10-20T23:54:30.4253502Z       |                     ^
+2026-10-20T23:54:30.4259034Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/int8_matmul.cpp:27:
+2026-10-20T23:54:30.4575648Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:30.4576758Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:30.4576969Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:30.4577430Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:30.4717137Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:30.4820490Z       |                  ^
+2026-10-20T23:54:30.4892823Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/int8_matmul.cpp:106:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:30.4894333Z   106 |     Surface<float> C_gpu(b * m * n);
+2026-10-20T23:54:30.4991548Z       |                    ^
+2026-10-20T23:54:30.5060649Z 2 warnings generated.
+2026-10-20T23:54:30.7987191Z [119/223] Building CXX object CMakeFiles/tu_convolution_dgrads_cpp.dir/staged/cpp/convolution/dgrads.cpp.obj
+2026-10-20T23:54:30.8005884Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/dgrads.cpp:24:
+2026-10-20T23:54:30.8031706Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:30.8039594Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:30.8094270Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:30.8113898Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:30.8292062Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:30.8292987Z       |                  ^
+2026-10-20T23:54:30.8293680Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/dgrads.cpp:65:19: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:54:30.8294347Z    65 |     Surface<half> dy_tensor(4 * 64 * 16 * 16);
+2026-10-20T23:54:30.8294638Z       |                   ^
+2026-10-20T23:54:30.8295006Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/dgrads.cpp:24:
+2026-10-20T23:54:30.8295778Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:30.8328316Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:30.8328565Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:30.8430548Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:30.8572581Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:30.8750777Z       |                  ^
+2026-10-20T23:54:30.8893077Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/dgrads.cpp:72:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:30.9071337Z    72 |     Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:30.9214740Z       |                     ^
+2026-10-20T23:54:30.9302666Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/dgrads.cpp:24:
+2026-10-20T23:54:30.9303414Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:30.9303987Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:30.9304169Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:30.9304612Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:30.9305063Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:30.9305264Z       |                  ^
+2026-10-20T23:54:30.9306922Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/dgrads.cpp:228:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:30.9307530Z   228 |     Surface<float> mean_tensor(1 * 32 * 1 * 1);
+2026-10-20T23:54:30.9307742Z       |                    ^
+2026-10-20T23:54:30.9307910Z 3 warnings generated.
+2026-10-20T23:54:30.9714086Z [120/223] Building CXX object CMakeFiles/tu_convolution_fp8_fprop_cpp.dir/staged/cpp/convolution/fp8_fprop.cpp.obj
+2026-10-20T23:54:30.9747814Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/fp8_fprop.cpp:24:
+2026-10-20T23:54:30.9748577Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:30.9749170Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:30.9749386Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:30.9749843Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:30.9750316Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:30.9750485Z       |                  ^
+2026-10-20T23:54:30.9750994Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/fp8_fprop.cpp:111:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:30.9751532Z   111 |     Surface<int8_t> X_gpu(n * c * h * w);
+2026-10-20T23:54:30.9751731Z       |                     ^
+2026-10-20T23:54:30.9752027Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/fp8_fprop.cpp:24:
+2026-10-20T23:54:30.9752712Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:30.9753273Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:30.9753449Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:30.9753897Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:30.9754375Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:30.9754547Z       |                  ^
+2026-10-20T23:54:30.9755026Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/fp8_fprop.cpp:115:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:30.9755543Z   115 |     Surface<float> X_descale_gpu(1);
+2026-10-20T23:54:30.9755729Z       |                    ^
+2026-10-20T23:54:30.9755882Z 2 warnings generated.
+2026-10-20T23:54:31.0192839Z [121/223] Building CXX object CMakeFiles/tu_membound_boolean_fusion_cpp.dir/staged/cpp/membound/boolean_fusion.cpp.obj
+2026-10-20T23:54:31.0193484Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/boolean_fusion.cpp:24:
+2026-10-20T23:54:31.0197012Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:31.0197629Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:31.0197816Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:31.0198283Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:31.0198768Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:31.0198945Z       |                  ^
+2026-10-20T23:54:31.0199477Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/boolean_fusion.cpp:100:19: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:54:31.0200013Z   100 |     Surface<half> X_gpu(numel);
+2026-10-20T23:54:31.0200198Z       |                   ^
+2026-10-20T23:54:31.0200521Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/boolean_fusion.cpp:24:
+2026-10-20T23:54:31.0201975Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:31.0202567Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:31.0202749Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:31.0203198Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:31.0203664Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:31.0203832Z       |                  ^
+2026-10-20T23:54:31.0204343Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/boolean_fusion.cpp:101:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:31.0204896Z   101 |     Surface<float> threshold_gpu(numel);
+2026-10-20T23:54:31.0205102Z       |                    ^
+2026-10-20T23:54:31.0205429Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/boolean_fusion.cpp:24:
+2026-10-20T23:54:31.0206155Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:31.0206730Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:31.0206913Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:31.0207360Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:31.0207870Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:31.0208031Z       |                  ^
+2026-10-20T23:54:31.0208578Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/boolean_fusion.cpp:102:22: note: in instantiation of member function 'Surface<unsigned char>::~Surface' requested here
+2026-10-20T23:54:31.0209127Z   102 |     Surface<uint8_t> B_gpu(numel);
+2026-10-20T23:54:31.0209312Z       |                      ^
+2026-10-20T23:54:31.0209624Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/boolean_fusion.cpp:24:
+2026-10-20T23:54:31.0210330Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:31.0210892Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:31.0211160Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:31.0211579Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:31.0212007Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:31.0212172Z       |                  ^
+2026-10-20T23:54:31.0212619Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/boolean_fusion.cpp:110:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:31.0213414Z   110 |     Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:31.0213641Z       |                     ^
+2026-10-20T23:54:31.0213815Z 4 warnings generated.
+2026-10-20T23:54:31.6276806Z [122/223] Building CXX object CMakeFiles/tu_membound_concat_cpp.dir/staged/cpp/membound/concat.cpp.obj
+2026-10-20T23:54:31.6277372Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/concat.cpp:24:
+2026-10-20T23:54:31.6278077Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:31.6278658Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:31.6278837Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:31.6279297Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:31.6279793Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:31.6279969Z       |                  ^
+2026-10-20T23:54:31.6280807Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/concat.cpp:88:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:31.6281541Z    88 |     Surface<float> X0_gpu(n * c * h * w);
+2026-10-20T23:54:31.6281748Z       |                    ^
+2026-10-20T23:54:31.6282034Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/concat.cpp:24:
+2026-10-20T23:54:31.6282704Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:31.6283254Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:31.6283426Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:31.6283875Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:31.6284346Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:31.6284518Z       |                  ^
+2026-10-20T23:54:31.6285024Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/concat.cpp:95:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:31.6285565Z    95 |     Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:31.6285782Z       |                     ^
+2026-10-20T23:54:31.6285943Z 2 warnings generated.
+2026-10-20T23:54:32.1248655Z [123/223] Building CXX object CMakeFiles/tu_membound_membound_fusion_cpp.dir/staged/cpp/membound/membound_fusion.cpp.obj
+2026-10-20T23:54:32.1283533Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/membound_fusion.cpp:24:
+2026-10-20T23:54:32.1284293Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:32.1284923Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:32.1285111Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:32.1285571Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:32.1286051Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:32.1286225Z       |                  ^
+2026-10-20T23:54:32.1286736Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/membound_fusion.cpp:70:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:32.1287265Z    70 |     Surface<float> X_gpu(2 * 8);
+2026-10-20T23:54:32.1287455Z       |                    ^
+2026-10-20T23:54:32.1287779Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/membound_fusion.cpp:24:
+2026-10-20T23:54:32.1288872Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:32.1289427Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:32.1289609Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:32.1290053Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:32.1290537Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:32.1290716Z       |                  ^
+2026-10-20T23:54:32.1291200Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/membound_fusion.cpp:76:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:32.1291797Z    76 |     Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:32.1292014Z       |                     ^
+2026-10-20T23:54:32.1300488Z 2 warnings generated.
+2026-10-20T23:54:35.6837067Z [124/223] Building CXX object CMakeFiles/tu_membound_slice_cpp.dir/staged/cpp/membound/slice.cpp.obj
+2026-10-20T23:54:35.6924757Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/slice.cpp:24:
+2026-10-20T23:54:35.7121137Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:35.7454261Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:35.7774785Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:35.7795983Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:35.8095193Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:35.8182254Z       |                  ^
+2026-10-20T23:54:35.8390403Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/slice.cpp:71:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:35.8433900Z    71 |     Surface<float> X_gpu(4 * 16 * 8);
+2026-10-20T23:54:35.8503647Z       |                    ^
+2026-10-20T23:54:35.8720717Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/slice.cpp:24:
+2026-10-20T23:54:35.8753506Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:35.8823284Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:35.8932475Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:35.8933210Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:35.8933834Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:35.8934151Z       |                  ^
+2026-10-20T23:54:35.8934852Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/slice.cpp:78:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:35.8935519Z    78 |     Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:35.8935839Z       |                     ^
+2026-10-20T23:54:35.8936101Z 2 warnings generated.
+2026-10-20T23:54:35.8936760Z [125/223] Building CXX object CMakeFiles/tu_misc_autotuning_cpp.dir/staged/cpp/misc/autotuning.cpp.obj
+2026-10-20T23:54:35.8937359Z FAILED: [code=1] CMakeFiles/tu_misc_autotuning_cpp.dir/staged/cpp/misc/autotuning.cpp.obj 
+2026-10-20T23:54:35.8940671Z C:\actions-runner\_work\TheRock\TheRock\build\lib\llvm\bin\clang++.exe -DHIPDNN_ENABLE_SDPA -DUSE_PROF_API=1 -D__HIP_PLATFORM_AMD__ -D__HIP_PLATFORM_AMD__=1 -IC:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay -IC:/actions-runner/_work/_temp/cdnns/staged/cpp -IC:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/.. -IC:/actions-runner/_work/_temp/cdnns/_deps/catch2-build/generated-includes -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/frontend -isystem C:/actions-runner/_work/TheRock/TheRock/build/include -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/data_sdk -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/backend -O3 -DNDEBUG -std=gnu++17 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -MD -MT CMakeFiles/tu_misc_autotuning_cpp.dir/staged/cpp/misc/autotuning.cpp.obj -MF CMakeFiles\tu_misc_autotuning_cpp.dir\staged\cpp\misc\autotuning.cpp.obj.d -o CMakeFiles/tu_misc_autotuning_cpp.dir/staged/cpp/misc/autotuning.cpp.obj -c C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/autotuning.cpp
+2026-10-20T23:54:35.8945836Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/autotuning.cpp:104:9: error: unknown type name 'cudaEvent_t'
+2026-10-20T23:54:35.8946384Z   104 |         cudaEvent_t start, stop;
+2026-10-20T23:54:35.8946658Z       |         ^
+2026-10-20T23:54:35.8947097Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/autotuning.cpp:106:26: error: use of undeclared identifier 'stop'
+2026-10-20T23:54:35.8947599Z   106 |         cudaEventCreate(&stop);
+2026-10-20T23:54:35.8948167Z       |                          ^~~~
+2026-10-20T23:54:35.8948829Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/autotuning.cpp:107:9: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:35.8949517Z   107 |         cudaDeviceSynchronize();
+2026-10-20T23:54:35.8949805Z       |         ^~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:35.8950379Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:33:31: note: expanded from macro 'cudaDeviceSynchronize'
+2026-10-20T23:54:35.8951023Z    33 | #define cudaDeviceSynchronize hipDeviceSynchronize
+2026-10-20T23:54:35.8951356Z       |                               ^
+2026-10-20T23:54:35.8952002Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/autotuning.cpp:131:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:35.8952687Z   131 |             cudaDeviceSynchronize();
+2026-10-20T23:54:35.8952979Z       |             ^~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:54:35.8953560Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:33:31: note: expanded from macro 'cudaDeviceSynchronize'
+2026-10-20T23:54:35.8954245Z    33 | #define cudaDeviceSynchronize hipDeviceSynchronize
+2026-10-20T23:54:35.8954579Z       |                               ^
+2026-10-20T23:54:35.8955059Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/autotuning.cpp:138:29: error: use of undeclared identifier 'stop'
+2026-10-20T23:54:35.8955590Z   138 |             cudaEventRecord(stop, stream);
+2026-10-20T23:54:35.8955886Z       |                             ^~~~
+2026-10-20T23:54:35.8956414Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/autotuning.cpp:139:34: error: use of undeclared identifier 'stop'
+2026-10-20T23:54:35.8956942Z   139 |             cudaEventSynchronize(stop);
+2026-10-20T23:54:35.8957268Z       |                                  ^~~~
+2026-10-20T23:54:35.8957761Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/autotuning.cpp:140:51: error: use of undeclared identifier 'stop'
+2026-10-20T23:54:35.8958301Z   140 |             cudaEventElapsedTime(&time_ms, start, stop);
+2026-10-20T23:54:35.8958650Z       |                                                   ^~~~
+2026-10-20T23:54:35.8959091Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/autotuning.cpp:24:
+2026-10-20T23:54:35.8959873Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:35.8960553Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:35.8960847Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:35.8961658Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:35.8962247Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:35.8962513Z       |                  ^
+2026-10-20T23:54:35.8963167Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/autotuning.cpp:41:19: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:54:35.8963785Z    41 |     Surface<half> A_gpu(b * m * k);
+2026-10-20T23:54:35.8964079Z       |                   ^
+2026-10-20T23:54:35.8964474Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/autotuning.cpp:24:
+2026-10-20T23:54:35.8965265Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:35.8965912Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:35.8966193Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:35.8966943Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:35.8967528Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:35.8967794Z       |                  ^
+2026-10-20T23:54:35.8968369Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/autotuning.cpp:120:25: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:35.8969036Z   120 |         Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:35.8969361Z       |                         ^
+2026-10-20T23:54:35.8969659Z 4 warnings and 5 errors generated.
+2026-10-20T23:54:36.0316947Z [126/223] Building CXX object CMakeFiles/tu_membound_reshape_cpp.dir/staged/cpp/membound/reshape.cpp.obj
+2026-10-20T23:54:36.0474386Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/reshape.cpp:24:
+2026-10-20T23:54:36.0720848Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:36.1063373Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:36.1299162Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:36.1386498Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:36.1434342Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:36.1624178Z       |                  ^
+2026-10-20T23:54:36.1624868Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/reshape.cpp:76:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:36.1688861Z    76 |     Surface<float> X_gpu(3 * 4 * 5);
+2026-10-20T23:54:36.1689111Z       |                    ^
+2026-10-20T23:54:36.1689457Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/reshape.cpp:24:
+2026-10-20T23:54:36.1690194Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:36.1690784Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:36.1690962Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:36.1691419Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:36.1691904Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:36.1692075Z       |                  ^
+2026-10-20T23:54:36.1692589Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/reshape.cpp:82:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:36.1693130Z    82 |     Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:36.1693739Z       |                     ^
+2026-10-20T23:54:36.1693895Z 2 warnings generated.
+2026-10-20T23:54:36.1993155Z [127/223] Building CXX object CMakeFiles/tu_misc_deviceless_aot_compilation_cpp.dir/staged/cpp/misc/deviceless_aot_compilation.cpp.obj
+2026-10-20T23:54:36.1993804Z FAILED: [code=1] CMakeFiles/tu_misc_deviceless_aot_compilation_cpp.dir/staged/cpp/misc/deviceless_aot_compilation.cpp.obj 
+2026-10-20T23:54:36.1997348Z C:\actions-runner\_work\TheRock\TheRock\build\lib\llvm\bin\clang++.exe -DHIPDNN_ENABLE_SDPA -DUSE_PROF_API=1 -D__HIP_PLATFORM_AMD__ -D__HIP_PLATFORM_AMD__=1 -IC:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay -IC:/actions-runner/_work/_temp/cdnns/staged/cpp -IC:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/.. -IC:/actions-runner/_work/_temp/cdnns/_deps/catch2-build/generated-includes -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/frontend -isystem C:/actions-runner/_work/TheRock/TheRock/build/include -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/data_sdk -isystem C:/actions-runner/_work/TheRock/TheRock/build/include/hipdnn/backend -O3 -DNDEBUG -std=gnu++17 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -MD -MT CMakeFiles/tu_misc_deviceless_aot_compilation_cpp.dir/staged/cpp/misc/deviceless_aot_compilation.cpp.obj -MF CMakeFiles\tu_misc_deviceless_aot_compilation_cpp.dir\staged\cpp\misc\deviceless_aot_compilation.cpp.obj.d -o CMakeFiles/tu_misc_deviceless_aot_compilation_cpp.dir/staged/cpp/misc/deviceless_aot_compilation.cpp.obj -c C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/deviceless_aot_compilation.cpp
+2026-10-20T23:54:36.2000858Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/deviceless_aot_compilation.cpp:43:26: error: no member named 'set_device_id' in 'hipdnn_frontend::compatibility::cudnn_frontend::DeviceProperties'
+2026-10-20T23:54:36.2001426Z    43 |     REQUIRE(device_prop->set_device_id(0).build().is_good());
+2026-10-20T23:54:36.2001652Z       |             ~~~~~~~~~~~~~^
+2026-10-20T23:54:36.2002030Z C:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/..\catch2/catch_test_macros.hpp:134:92: note: expanded from macro 'REQUIRE'
+2026-10-20T23:54:36.2002572Z   134 |   #define REQUIRE( ... ) INTERNAL_CATCH_TEST( "REQUIRE", Catch::ResultDisposition::Normal, __VA_ARGS__  )
+2026-10-20T23:54:36.2002928Z       |                                                                                            ^~~~~~~~~~~
+2026-10-20T23:54:36.2003413Z C:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/..\catch2/internal/catch_test_macro_impl.hpp:50:70: note: expanded from macro 'INTERNAL_CATCH_TEST'
+2026-10-20T23:54:36.2004051Z    50 |             catchAssertionHandler.handleExpr( Catch::Decomposer() <= __VA_ARGS__ ); /* NOLINT(bugprone-chained-comparison) */ \
+2026-10-20T23:54:36.2004445Z       |                                                                      ^~~~~~~~~~~
+2026-10-20T23:54:36.2005012Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/deviceless_aot_compilation.cpp:43:26: error: no member named 'set_device_id' in 'hipdnn_frontend::compatibility::cudnn_frontend::DeviceProperties'
+2026-10-20T23:54:36.2005593Z    43 |     REQUIRE(device_prop->set_device_id(0).build().is_good());
+2026-10-20T23:54:36.2005811Z       |             ~~~~~~~~~~~~~^
+2026-10-20T23:54:36.2006180Z C:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/..\catch2/catch_test_macros.hpp:134:92: note: expanded from macro 'REQUIRE'
+2026-10-20T23:54:36.2006708Z   134 |   #define REQUIRE( ... ) INTERNAL_CATCH_TEST( "REQUIRE", Catch::ResultDisposition::Normal, __VA_ARGS__  )
+2026-10-20T23:54:36.2007062Z       |                                                                                            ^~~~~~~~~~~
+2026-10-20T23:54:36.2007554Z C:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/..\catch2/internal/catch_test_macro_impl.hpp:54:63: note: expanded from macro 'INTERNAL_CATCH_TEST'
+2026-10-20T23:54:36.2008292Z    54 |     } while( (void)0, (false) && static_cast<const bool&>( !!(__VA_ARGS__) ) ) // the expression here is never evaluated at runtime but it forces the compiler to give it a look
+2026-10-20T23:54:36.2008966Z       |                                                               ^~~~~~~~~~~
+2026-10-20T23:54:36.2009520Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/deviceless_aot_compilation.cpp:46:26: error: no member named 'serialize' in 'hipdnn_frontend::compatibility::cudnn_frontend::DeviceProperties'
+2026-10-20T23:54:36.2010260Z    46 |     REQUIRE(device_prop->serialize(data_device_prop).is_good());
+2026-10-20T23:54:36.2010487Z       |             ~~~~~~~~~~~~~^
+2026-10-20T23:54:36.2010857Z C:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/..\catch2/catch_test_macros.hpp:134:92: note: expanded from macro 'REQUIRE'
+2026-10-20T23:54:36.2011404Z   134 |   #define REQUIRE( ... ) INTERNAL_CATCH_TEST( "REQUIRE", Catch::ResultDisposition::Normal, __VA_ARGS__  )
+2026-10-20T23:54:36.2011766Z       |                                                                                            ^~~~~~~~~~~
+2026-10-20T23:54:36.2012406Z C:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/..\catch2/internal/catch_test_macro_impl.hpp:50:70: note: expanded from macro 'INTERNAL_CATCH_TEST'
+2026-10-20T23:54:36.2013039Z    50 |             catchAssertionHandler.handleExpr( Catch::Decomposer() <= __VA_ARGS__ ); /* NOLINT(bugprone-chained-comparison) */ \
+2026-10-20T23:54:36.2013430Z       |                                                                      ^~~~~~~~~~~
+2026-10-20T23:54:36.2014007Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/deviceless_aot_compilation.cpp:46:26: error: no member named 'serialize' in 'hipdnn_frontend::compatibility::cudnn_frontend::DeviceProperties'
+2026-10-20T23:54:36.2014609Z    46 |     REQUIRE(device_prop->serialize(data_device_prop).is_good());
+2026-10-20T23:54:36.2014868Z       |             ~~~~~~~~~~~~~^
+2026-10-20T23:54:36.2015279Z C:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/..\catch2/catch_test_macros.hpp:134:92: note: expanded from macro 'REQUIRE'
+2026-10-20T23:54:36.2015897Z   134 |   #define REQUIRE( ... ) INTERNAL_CATCH_TEST( "REQUIRE", Catch::ResultDisposition::Normal, __VA_ARGS__  )
+2026-10-20T23:54:36.2016305Z       |                                                                                            ^~~~~~~~~~~
+2026-10-20T23:54:36.2016888Z C:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/..\catch2/internal/catch_test_macro_impl.hpp:54:63: note: expanded from macro 'INTERNAL_CATCH_TEST'
+2026-10-20T23:54:36.2017732Z    54 |     } while( (void)0, (false) && static_cast<const bool&>( !!(__VA_ARGS__) ) ) // the expression here is never evaluated at runtime but it forces the compiler to give it a look
+2026-10-20T23:54:36.2018281Z       |                                                               ^~~~~~~~~~~
+2026-10-20T23:54:36.2018922Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/deviceless_aot_compilation.cpp:55:39: error: no member named 'deserialize' in 'hipdnn_frontend::compatibility::cudnn_frontend::DeviceProperties'
+2026-10-20T23:54:36.2019653Z    55 |     REQUIRE(device_prop_deserialized->deserialize(data_device_prop).is_good());
+2026-10-20T23:54:36.2019978Z       |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+2026-10-20T23:54:36.2020441Z C:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/..\catch2/catch_test_macros.hpp:134:92: note: expanded from macro 'REQUIRE'
+2026-10-20T23:54:36.2021081Z   134 |   #define REQUIRE( ... ) INTERNAL_CATCH_TEST( "REQUIRE", Catch::ResultDisposition::Normal, __VA_ARGS__  )
+2026-10-20T23:54:36.2021497Z       |                                                                                            ^~~~~~~~~~~
+2026-10-20T23:54:36.2022090Z C:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/..\catch2/internal/catch_test_macro_impl.hpp:50:70: note: expanded from macro 'INTERNAL_CATCH_TEST'
+2026-10-20T23:54:36.2022864Z    50 |             catchAssertionHandler.handleExpr( Catch::Decomposer() <= __VA_ARGS__ ); /* NOLINT(bugprone-chained-comparison) */ \
+2026-10-20T23:54:36.2023499Z       |                                                                      ^~~~~~~~~~~
+2026-10-20T23:54:36.2024155Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/deviceless_aot_compilation.cpp:55:39: error: no member named 'deserialize' in 'hipdnn_frontend::compatibility::cudnn_frontend::DeviceProperties'
+2026-10-20T23:54:36.2024919Z    55 |     REQUIRE(device_prop_deserialized->deserialize(data_device_prop).is_good());
+2026-10-20T23:54:36.2025244Z       |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+2026-10-20T23:54:36.2025725Z C:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/..\catch2/catch_test_macros.hpp:134:92: note: expanded from macro 'REQUIRE'
+2026-10-20T23:54:36.2026388Z   134 |   #define REQUIRE( ... ) INTERNAL_CATCH_TEST( "REQUIRE", Catch::ResultDisposition::Normal, __VA_ARGS__  )
+2026-10-20T23:54:36.2026830Z       |                                                                                            ^~~~~~~~~~~
+2026-10-20T23:54:36.2027596Z C:/actions-runner/_work/_temp/cdnns/_deps/catch2-src/src/catch2/..\catch2/internal/catch_test_macro_impl.hpp:54:63: note: expanded from macro 'INTERNAL_CATCH_TEST'
+2026-10-20T23:54:36.2028504Z    54 |     } while( (void)0, (false) && static_cast<const bool&>( !!(__VA_ARGS__) ) ) // the expression here is never evaluated at runtime but it forces the compiler to give it a look
+2026-10-20T23:54:36.2029077Z       |                                                               ^~~~~~~~~~~
+2026-10-20T23:54:36.2029503Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/deviceless_aot_compilation.cpp:24:
+2026-10-20T23:54:36.2030319Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:36.2030910Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:36.2031094Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:36.2031588Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:36.2032104Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:36.2032284Z       |                  ^
+2026-10-20T23:54:36.2032827Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/deviceless_aot_compilation.cpp:86:19: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:54:36.2033415Z    86 |     Surface<half> x_tensor(n * c * h * w);
+2026-10-20T23:54:36.2033622Z       |                   ^
+2026-10-20T23:54:36.2033969Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/deviceless_aot_compilation.cpp:24:
+2026-10-20T23:54:36.2034750Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:36.2035313Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:36.2035503Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:36.2035987Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:36.2036460Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:36.2036630Z       |                  ^
+2026-10-20T23:54:36.2037144Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/deviceless_aot_compilation.cpp:95:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:36.2037764Z    95 |     Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:36.2037986Z       |                     ^
+2026-10-20T23:54:36.2038168Z 2 warnings and 6 errors generated.
+2026-10-20T23:54:36.3532836Z [128/223] Building CXX object CMakeFiles/tu_matmul_mixed_matmul_cpp.dir/staged/cpp/matmul/mixed_matmul.cpp.obj
+2026-10-20T23:54:36.3533901Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/mixed_matmul.cpp:27:
+2026-10-20T23:54:36.3534752Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:36.3535399Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:36.3535657Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:36.3536171Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:36.3536746Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:36.3537017Z       |                  ^
+2026-10-20T23:54:36.3537601Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/mixed_matmul.cpp:44:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:36.3538220Z    44 |     Surface<int8_t> A_gpu(b * m * k);
+2026-10-20T23:54:36.3538510Z       |                     ^
+2026-10-20T23:54:36.3538886Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/mixed_matmul.cpp:27:
+2026-10-20T23:54:36.3539922Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:36.3540612Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:36.3540882Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:36.3541424Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:36.3542000Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:36.3542261Z       |                  ^
+2026-10-20T23:54:36.3542809Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/matmul/mixed_matmul.cpp:46:19: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:54:36.3543439Z    46 |     Surface<half> B_gpu(b * k * n);
+2026-10-20T23:54:36.3543733Z       |                   ^
+2026-10-20T23:54:36.3543978Z 2 warnings generated.
+2026-10-20T23:54:36.5050267Z [129/223] Building CXX object CMakeFiles/tu_membound_transpose_cpp.dir/staged/cpp/membound/transpose.cpp.obj
+2026-10-20T23:54:36.5055209Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/transpose.cpp:24:
+2026-10-20T23:54:36.5070826Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:36.5105019Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:36.5225012Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:36.5318509Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:36.5402838Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:36.5403191Z       |                  ^
+2026-10-20T23:54:36.5436338Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/transpose.cpp:71:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:36.5436927Z    71 |     Surface<float> X_gpu(2 * 3 * 4);
+2026-10-20T23:54:36.5437132Z       |                    ^
+2026-10-20T23:54:36.5437450Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/transpose.cpp:24:
+2026-10-20T23:54:36.5438184Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:36.5438786Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:36.5438973Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:36.5439446Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:36.5440298Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:36.5440476Z       |                  ^
+2026-10-20T23:54:36.5441208Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/membound/transpose.cpp:77:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:36.5441826Z    77 |     Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:36.5442059Z       |                     ^
+2026-10-20T23:54:36.5442232Z 2 warnings generated.
+2026-10-20T23:54:36.5442664Z [130/223] Building CXX object CMakeFiles/tu_misc_compile_time_constant_example_cpp.dir/staged/cpp/misc/compile_time_constant_example.cpp.obj
+2026-10-20T23:54:36.5443303Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/compile_time_constant_example.cpp:24:
+2026-10-20T23:54:36.5444018Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:36.5444569Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:36.5444745Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:36.5445415Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:36.5445865Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:36.5446032Z       |                  ^
+2026-10-20T23:54:36.5446526Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/compile_time_constant_example.cpp:90:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:36.5447073Z    90 |     Surface<float> X_gpu(N, false);
+2026-10-20T23:54:36.5447259Z       |                    ^
+2026-10-20T23:54:36.5447622Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/compile_time_constant_example.cpp:24:
+2026-10-20T23:54:36.5448362Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:36.5448935Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:36.5449128Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:36.5449579Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:36.5450054Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:36.5450224Z       |                  ^
+2026-10-20T23:54:36.5450754Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/compile_time_constant_example.cpp:98:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:36.5451362Z    98 |     Surface<int8_t> workspace(workspace_size, false);
+2026-10-20T23:54:36.5451602Z       |                     ^
+2026-10-20T23:54:36.5451765Z 2 warnings generated.
+2026-10-20T23:54:41.9366686Z [131/223] Building CXX object CMakeFiles/tu_misc_resample_cpp.dir/staged/cpp/misc/resample.cpp.obj
+2026-10-20T23:54:41.9685800Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/resample.cpp:24:
+2026-10-20T23:54:42.0007797Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:42.0158196Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:42.0368187Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:42.0474299Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:42.0474888Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:42.0586770Z       |                  ^
+2026-10-20T23:54:42.0615126Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/resample.cpp:69:19: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:54:42.0793902Z    69 |     Surface<half> X_gpu(N * H * W * C);
+2026-10-20T23:54:42.0907260Z       |                   ^
+2026-10-20T23:54:42.0935422Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/resample.cpp:24:
+2026-10-20T23:54:42.1114754Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:42.1247876Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:42.1432220Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:42.1462582Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:42.1463057Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:42.1463220Z       |                  ^
+2026-10-20T23:54:42.1463685Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/resample.cpp:75:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:42.1464184Z    75 |     Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:42.1464667Z       |                     ^
+2026-10-20T23:54:42.1464819Z 2 warnings generated.
+2026-10-20T23:54:42.1697525Z [132/223] Building CXX object CMakeFiles/tu_misc_custom_plan_cpp.dir/staged/cpp/misc/custom_plan.cpp.obj
+2026-10-20T23:54:42.1698174Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/custom_plan.cpp:24:
+2026-10-20T23:54:42.1721496Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:42.1722110Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:42.1748318Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:42.1748826Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:42.1789230Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:42.1789486Z       |                  ^
+2026-10-20T23:54:42.1859955Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/custom_plan.cpp:47:19: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:54:42.1921614Z    47 |     Surface<half> A_gpu(b * m * k);
+2026-10-20T23:54:42.1921916Z       |                   ^
+2026-10-20T23:54:42.1922240Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/custom_plan.cpp:24:
+2026-10-20T23:54:42.1993226Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:42.1993860Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:42.2020033Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:42.2198186Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:42.2233699Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:42.2234007Z       |                  ^
+2026-10-20T23:54:42.2530399Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/custom_plan.cpp:126:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:42.2850680Z   126 |     Surface<int8_t> workspace1(graph.get_workspace_size_plan_at_index(0));
+2026-10-20T23:54:42.3171040Z       |                     ^
+2026-10-20T23:54:42.3491638Z 2 warnings generated.
+2026-10-20T23:54:42.3802651Z [133/223] Building CXX object CMakeFiles/tu_misc_pointwise_cpp.dir/staged/cpp/misc/pointwise.cpp.obj
+2026-10-20T23:54:42.3811698Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/pointwise.cpp:24:
+2026-10-20T23:54:42.4029130Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:42.4112930Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:42.4282107Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:42.4370254Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:42.4393573Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:42.4500967Z       |                  ^
+2026-10-20T23:54:42.4602929Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/pointwise.cpp:34:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:42.4713435Z    34 |     Surface<float> A_gpu(n * n * n * n);
+2026-10-20T23:54:42.4821511Z       |                    ^
+2026-10-20T23:54:42.4921523Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/pointwise.cpp:24:
+2026-10-20T23:54:42.5023919Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:42.5142510Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:42.5242951Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:42.5344620Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:42.5462531Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:42.5565302Z       |                  ^
+2026-10-20T23:54:42.5675577Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/pointwise.cpp:59:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:42.5751929Z    59 |     Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:42.5782918Z       |                     ^
+2026-10-20T23:54:42.6003761Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/pointwise.cpp:24:
+2026-10-20T23:54:42.6072979Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:42.6205151Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:42.6310194Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:42.6310742Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:42.6311209Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:42.6311381Z       |                  ^
+2026-10-20T23:54:42.6311865Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/pointwise.cpp:89:19: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:54:42.6312355Z    89 |     Surface<half> C_gpu(n * n * n);
+2026-10-20T23:54:42.6312977Z       |                   ^
+2026-10-20T23:54:42.6316369Z 3 warnings generated.
+2026-10-20T23:54:45.4863361Z [134/223] Building CXX object CMakeFiles/tu_norm_adaptive_layernorm_cpp.dir/staged/cpp/norm/adaptive_layernorm.cpp.obj
+2026-10-20T23:54:45.4903957Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/norm/adaptive_layernorm.cpp:24:
+2026-10-20T23:54:45.4904751Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/norm\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:45.4997236Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:45.4997591Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:45.5137827Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:45.5287276Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:45.5287619Z       |                  ^
+2026-10-20T23:54:45.5503845Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/norm/adaptive_layernorm.cpp:130:23: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:54:45.5542504Z   130 |         Surface<half> X_tensor(max_x_volume);
+2026-10-20T23:54:45.5830501Z       |                       ^
+2026-10-20T23:54:45.5863305Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/norm/adaptive_layernorm.cpp:24:
+2026-10-20T23:54:45.6151290Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/norm\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:45.6180791Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:45.6483898Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:45.6501516Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:45.6531130Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:45.6822172Z       |                  ^
+2026-10-20T23:54:45.6852551Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/norm/adaptive_layernorm.cpp:131:24: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:54:45.7142909Z   131 |         Surface<float> Scale_tensor(max_weights_volume);
+2026-10-20T23:54:45.7172152Z       |                        ^
+2026-10-20T23:54:45.7463554Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/norm/adaptive_layernorm.cpp:24:
+2026-10-20T23:54:45.7493116Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/norm\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:45.7783890Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:45.7808583Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:45.7809107Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:45.8104373Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:45.8126144Z       |                  ^
+2026-10-20T23:54:45.8133960Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/norm/adaptive_layernorm.cpp:140:25: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:54:45.8425067Z   140 |         Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:54:45.8446678Z       |                         ^
+2026-10-20T23:54:45.8453993Z 3 warnings generated.
+2026-10-20T23:54:47.0005506Z [135/223] Building CXX object CMakeFiles/tu_misc_sm_carveout_cpp.dir/staged/cpp/misc/sm_carveout.cpp.obj
+2026-10-20T23:54:47.0006794Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/sm_carveout.cpp:24:
+2026-10-20T23:54:47.0141841Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:47.0142601Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:47.0283486Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:47.0315654Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:47.0604050Z    29 | #define cudaFree hipFree
+2026-10-20T23:54:47.0677437Z       |                  ^
+2026-10-20T23:54:47.0715230Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/sm_carveout.cpp:112:19: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:54:47.0924512Z   112 |     Surface<half> X_tensor(n * c * h * w);
+2026-10-20T23:54:47.1035490Z       |                   ^
+2026-10-20T23:54:47.1261133Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc/sm_carveout.cpp:24:
+2026-10-20T23:54:47.1330788Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/misc\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:54:47.1579221Z   412 |             cudaFree(devPtr);
+2026-10-20T23:54:47.1579560Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:54:47.1674041Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:54:47.1899266Z    29 | #define cudaFree hipFree
+... [middle trimmed by labeler] ...
+2026-10-20T23:55:06.1007642Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp16_fwd_with_sink_token.cpp:249:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:55:06.1007952Z   249 |     Surface<int8_t> workspace(workspace_size);
+2026-10-20T23:55:06.1008083Z       |                     ^
+2026-10-20T23:55:06.1008185Z 4 warnings generated.
+2026-10-20T23:55:06.1804141Z [201/223] Linking CXX executable tu_sdpa_fp16_fwd_with_sink_token_cpp.exe
+2026-10-20T23:55:06.2962014Z [202/223] Building CXX object CMakeFiles/tu_sdpa_fp8_bwd_with_current_scaling_cpp.dir/staged/cpp/sdpa/fp8_bwd_with_current_scaling.cpp.obj
+2026-10-20T23:55:06.2962704Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_bwd_with_current_scaling.cpp:24:
+2026-10-20T23:55:06.2963435Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:55:06.2963980Z   412 |             cudaFree(devPtr);
+2026-10-20T23:55:06.2964163Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:55:06.2964961Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:55:06.2965412Z    29 | #define cudaFree hipFree
+2026-10-20T23:55:06.2965596Z       |                  ^
+2026-10-20T23:55:06.2966184Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_bwd_with_current_scaling.cpp:169:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:55:06.2966735Z   169 |     Surface<int8_t> qkvTensor(Q_K_V_dQ_dK_dV_bulk_dims);
+2026-10-20T23:55:06.2966969Z       |                     ^
+2026-10-20T23:55:06.2967297Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_bwd_with_current_scaling.cpp:24:
+2026-10-20T23:55:06.2967994Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:55:06.2968519Z   412 |             cudaFree(devPtr);
+2026-10-20T23:55:06.2968691Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:55:06.2969358Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:55:06.2969816Z    29 | #define cudaFree hipFree
+2026-10-20T23:55:06.2969991Z       |                  ^
+2026-10-20T23:55:06.2970487Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_bwd_with_current_scaling.cpp:175:19: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:55:06.2971035Z   175 |     Surface<half> dQdKdVTensor(Q_K_V_dQ_dK_dV_bulk_dims);
+2026-10-20T23:55:06.2971261Z       |                   ^
+2026-10-20T23:55:06.2971589Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_bwd_with_current_scaling.cpp:24:
+2026-10-20T23:55:06.2972262Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:55:06.2972781Z   412 |             cudaFree(devPtr);
+2026-10-20T23:55:06.2972948Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:55:06.2973379Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:55:06.2973831Z    29 | #define cudaFree hipFree
+2026-10-20T23:55:06.2974001Z       |                  ^
+2026-10-20T23:55:06.2974477Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_bwd_with_current_scaling.cpp:183:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:55:06.2975015Z   183 |     Surface<float> descale_Q_Tensor{1};
+2026-10-20T23:55:06.2975218Z       |                    ^
+2026-10-20T23:55:06.2975374Z 3 warnings generated.
+2026-10-20T23:55:06.3790122Z [203/223] Building CXX object CMakeFiles/tu_sdpa_fp8_bwd_bottom_right_causal_mask_cpp.dir/staged/cpp/sdpa/fp8_bwd_bottom_right_causal_mask.cpp.obj
+2026-10-20T23:55:06.3790845Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_bwd_bottom_right_causal_mask.cpp:24:
+2026-10-20T23:55:06.3791566Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:55:06.3792086Z   412 |             cudaFree(devPtr);
+2026-10-20T23:55:06.3792261Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:55:06.3792697Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:55:06.3793132Z    29 | #define cudaFree hipFree
+2026-10-20T23:55:06.3793299Z       |                  ^
+2026-10-20T23:55:06.3793823Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_bwd_bottom_right_causal_mask.cpp:159:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:55:06.3794688Z   159 |     Surface<int8_t> qkvTensor(Q_K_V_dQ_dK_dV_bulk_dims);
+2026-10-20T23:55:06.3794910Z       |                     ^
+2026-10-20T23:55:06.3795246Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_bwd_bottom_right_causal_mask.cpp:24:
+2026-10-20T23:55:06.3795928Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:55:06.3796444Z   412 |             cudaFree(devPtr);
+2026-10-20T23:55:06.3796618Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:55:06.3797043Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:55:06.3797484Z    29 | #define cudaFree hipFree
+2026-10-20T23:55:06.3797641Z       |                  ^
+2026-10-20T23:55:06.3798125Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_bwd_bottom_right_causal_mask.cpp:172:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:55:06.3798899Z   172 |     Surface<float> descale_Q_Tensor{1};
+2026-10-20T23:55:06.3799093Z       |                    ^
+2026-10-20T23:55:06.3799242Z 2 warnings generated.
+2026-10-20T23:55:06.3857489Z [204/223] Linking CXX executable tu_sdpa_fp8_bwd_with_current_scaling_cpp.exe
+2026-10-20T23:55:06.4535397Z [205/223] Linking CXX executable tu_sdpa_fp8_bwd_bottom_right_causal_mask_cpp.exe
+2026-10-20T23:55:06.6479292Z [206/223] Building CXX object CMakeFiles/tu_sdpa_fp8_fwd_cpp.dir/staged/cpp/sdpa/fp8_fwd.cpp.obj
+2026-10-20T23:55:06.6479820Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd.cpp:24:
+2026-10-20T23:55:06.6480506Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:55:06.6481067Z   412 |             cudaFree(devPtr);
+2026-10-20T23:55:06.6481239Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:55:06.6481696Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:55:06.6482158Z    29 | #define cudaFree hipFree
+2026-10-20T23:55:06.6482315Z       |                  ^
+2026-10-20T23:55:06.6482758Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd.cpp:116:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:55:06.6483223Z   116 |     Surface<int8_t> qkvTensor(b * s * 3 * h * d);
+2026-10-20T23:55:06.6483430Z       |                     ^
+2026-10-20T23:55:06.6483682Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd.cpp:24:
+2026-10-20T23:55:06.6484275Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:55:06.6484782Z   412 |             cudaFree(devPtr);
+2026-10-20T23:55:06.6484948Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:55:06.6485351Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:55:06.6485779Z    29 | #define cudaFree hipFree
+2026-10-20T23:55:06.6485941Z       |                  ^
+2026-10-20T23:55:06.6486351Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd.cpp:123:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:55:06.6486815Z   123 |     Surface<float> descale_Q_Tensor(1);
+2026-10-20T23:55:06.6487008Z       |                    ^
+2026-10-20T23:55:06.6487160Z 2 warnings generated.
+2026-10-20T23:55:06.6670540Z [207/223] Building CXX object CMakeFiles/tu_sdpa_fp8_fwd_bottom_right_causal_mask_cpp.dir/staged/cpp/sdpa/fp8_fwd_bottom_right_causal_mask.cpp.obj
+2026-10-20T23:55:06.6671563Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd_bottom_right_causal_mask.cpp:24:
+2026-10-20T23:55:06.6672296Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:55:06.6672830Z   412 |             cudaFree(devPtr);
+2026-10-20T23:55:06.6672999Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:55:06.6673412Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:55:06.6673842Z    29 | #define cudaFree hipFree
+2026-10-20T23:55:06.6674006Z       |                  ^
+2026-10-20T23:55:06.6674526Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd_bottom_right_causal_mask.cpp:118:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:55:06.6675089Z   118 |     Surface<int8_t> qTensor(b * s_q * h * d);
+2026-10-20T23:55:06.6675286Z       |                     ^
+2026-10-20T23:55:06.6675868Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd_bottom_right_causal_mask.cpp:24:
+2026-10-20T23:55:06.6676566Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:55:06.6677100Z   412 |             cudaFree(devPtr);
+2026-10-20T23:55:06.6677282Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:55:06.6677718Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:55:06.6678153Z    29 | #define cudaFree hipFree
+2026-10-20T23:55:06.6678317Z       |                  ^
+2026-10-20T23:55:06.6678794Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd_bottom_right_causal_mask.cpp:127:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:55:06.6679342Z   127 |     Surface<float> descale_Q_Tensor(1);
+2026-10-20T23:55:06.6679536Z       |                    ^
+2026-10-20T23:55:06.6679692Z 2 warnings generated.
+2026-10-20T23:55:06.7183918Z [208/223] Linking CXX executable tu_sdpa_fp8_fwd_cpp.exe
+2026-10-20T23:55:06.7363192Z [209/223] Linking CXX executable tu_sdpa_fp8_fwd_bottom_right_causal_mask_cpp.exe
+2026-10-20T23:55:07.2509181Z [210/223] Building CXX object CMakeFiles/tu_sdpa_fp8_fwd_current_scaling_cpp.dir/staged/cpp/sdpa/fp8_fwd_current_scaling.cpp.obj
+2026-10-20T23:55:07.2509901Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd_current_scaling.cpp:24:
+2026-10-20T23:55:07.2510686Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:55:07.2511321Z   412 |             cudaFree(devPtr);
+2026-10-20T23:55:07.2511532Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:55:07.2512037Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:55:07.2512551Z    29 | #define cudaFree hipFree
+2026-10-20T23:55:07.2512755Z       |                  ^
+2026-10-20T23:55:07.2513328Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd_current_scaling.cpp:128:21: note: in instantiation of member function 'Surface<signed char>::~Surface' requested here
+2026-10-20T23:55:07.2513933Z   128 |     Surface<int8_t> qkvTensor(b * s * 3 * h * d);
+2026-10-20T23:55:07.2514187Z       |                     ^
+2026-10-20T23:55:07.2514550Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd_current_scaling.cpp:24:
+2026-10-20T23:55:07.2515321Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:55:07.2516109Z   412 |             cudaFree(devPtr);
+2026-10-20T23:55:07.2516222Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:55:07.2516467Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:55:07.2516721Z    29 | #define cudaFree hipFree
+2026-10-20T23:55:07.2516822Z       |                  ^
+2026-10-20T23:55:07.2517090Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd_current_scaling.cpp:131:19: note: in instantiation of member function 'Surface<__half>::~Surface' requested here
+2026-10-20T23:55:07.2517379Z   131 |     Surface<half> oTensor(b * s * h * d);
+2026-10-20T23:55:07.2517498Z       |                   ^
+2026-10-20T23:55:07.2517682Z In file included from C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd_current_scaling.cpp:24:
+2026-10-20T23:55:07.2518203Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa\../utils/helpers.h:412:13: warning: ignoring return value of type 'hipError_t' declared with 'nodiscard' attribute [-Wunused-value]
+2026-10-20T23:55:07.2518498Z   412 |             cudaFree(devPtr);
+2026-10-20T23:55:07.2518605Z       |             ^~~~~~~~~~~~~~~~
+2026-10-20T23:55:07.2518846Z C:/actions-runner/_work/TheRock/TheRock/build/share/hipdnn/cudnn_samples/overlay\cuda_runtime_api.h:29:18: note: expanded from macro 'cudaFree'
+2026-10-20T23:55:07.2519097Z    29 | #define cudaFree hipFree
+2026-10-20T23:55:07.2519197Z       |                  ^
+2026-10-20T23:55:07.2519457Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/sdpa/fp8_fwd_current_scaling.cpp:138:20: note: in instantiation of member function 'Surface<float>::~Surface' requested here
+2026-10-20T23:55:07.2519749Z   138 |     Surface<float> descale_Q_Tensor(1);
+2026-10-20T23:55:07.2519872Z       |                    ^
+2026-10-20T23:55:07.2519969Z 3 warnings generated.
+2026-10-20T23:55:07.3167498Z [211/223] Linking CXX executable tu_sdpa_fp8_fwd_current_scaling_cpp.exe
+2026-10-20T23:55:07.3168573Z ninja: build stopped: cannot make progress due to previous errors.
+2026-10-20T23:55:07.3227952Z INFO:root:++ Build exited with 1; status ignored on purpose (compilation is reported as a ctest case, not as a driver failure)
+2026-10-20T23:55:07.3228298Z INFO:root:++ Test: ctest --test-dir 'C:\actions-runner\_work\_temp\cdnns' --output-on-failure --parallel 12
+2026-10-20T23:55:07.3351563Z Internal ctest changing into directory: C:/actions-runner/_work/_temp/cdnns
+2026-10-20T23:55:07.3354837Z Test project C:/actions-runner/_work/_temp/cdnns
+2026-10-20T23:55:07.3522271Z         Start   1: compile_causal_conv1d_causal_conv1d_cpp
+2026-10-20T23:55:07.3600456Z         Start   3: compile_convolution_dgrads_cpp
+2026-10-20T23:55:07.3658866Z         Start   5: compile_convolution_fp8_fprop_cpp
+2026-10-20T23:55:07.3709962Z         Start   8: compile_convolution_int8_fprop_cpp
+2026-10-20T23:55:07.3761340Z         Start  10: compile_convolution_wgrads_cpp
+2026-10-20T23:55:07.3818562Z         Start  13: compile_matmul_complex_fp32_matmul_cpp
+2026-10-20T23:55:07.3874573Z         Start  15: compile_matmul_fp8_matmul_cpp
+2026-10-20T23:55:07.3944835Z         Start  17: compile_matmul_general_block_scale_matmul_cpp
+2026-10-20T23:55:07.4029451Z         Start  19: compile_matmul_int8_matmul_cpp
+2026-10-20T23:55:07.4120479Z         Start  22: compile_matmul_mixed_matmul_cpp
+2026-10-20T23:55:07.4234102Z         Start  24: compile_membound_boolean_fusion_cpp
+2026-10-20T23:55:07.4318956Z         Start  26: compile_membound_concat_cpp
+2026-10-20T23:55:07.5358303Z   1/100 Test   #8: compile_convolution_int8_fprop_cpp ............................   Passed    0.16 sec
+2026-10-20T23:55:07.5402281Z   2/100 Test   #3: compile_convolution_dgrads_cpp ................................   Passed    0.18 sec
+2026-10-20T23:55:07.5409006Z   3/100 Test   #5: compile_convolution_fp8_fprop_cpp .............................   Passed    0.17 sec
+2026-10-20T23:55:07.5409702Z         Start  28: compile_membound_membound_fusion_cpp
+2026-10-20T23:55:07.5465056Z         Start  30: compile_membound_reshape_cpp
+2026-10-20T23:55:07.5557334Z         Start  32: compile_membound_slice_cpp
+2026-10-20T23:55:07.5646374Z   4/100 Test  #10: compile_convolution_wgrads_cpp ................................   Passed    0.19 sec
+2026-10-20T23:55:07.5652394Z   5/100 Test   #1: compile_causal_conv1d_causal_conv1d_cpp .......................   Passed    0.21 sec
+2026-10-20T23:55:07.5653160Z   6/100 Test  #13: compile_matmul_complex_fp32_matmul_cpp ........................   Passed    0.18 sec
+2026-10-20T23:55:07.5659531Z         Start  34: compile_membound_transpose_cpp
+2026-10-20T23:55:07.5754663Z         Start  37: compile_misc_compile_time_constant_example_cpp
+2026-10-20T23:55:07.5848268Z         Start  39: compile_misc_custom_plan_cpp
+2026-10-20T23:55:07.5938772Z   7/100 Test  #15: compile_matmul_fp8_matmul_cpp .................................   Passed    0.21 sec
+2026-10-20T23:55:07.5942170Z   8/100 Test  #17: compile_matmul_general_block_scale_matmul_cpp .................   Passed    0.20 sec
+2026-10-20T23:55:07.5948729Z         Start  42: compile_misc_pointwise_cpp
+2026-10-20T23:55:07.6044947Z         Start  44: compile_misc_resample_cpp
+2026-10-20T23:55:07.6140422Z   9/100 Test  #22: compile_matmul_mixed_matmul_cpp ...............................   Passed    0.20 sec
+2026-10-20T23:55:07.6145793Z  10/100 Test  #19: compile_matmul_int8_matmul_cpp ................................   Passed    0.21 sec
+2026-10-20T23:55:07.6146289Z  11/100 Test  #24: compile_membound_boolean_fusion_cpp ...........................   Passed    0.19 sec
+2026-10-20T23:55:07.6153848Z         Start  46: compile_misc_serialization_cpp
+2026-10-20T23:55:07.6249139Z         Start  48: compile_misc_slice_cpp
+2026-10-20T23:55:07.6352100Z         Start  50: compile_misc_sm_carveout_cpp
+2026-10-20T23:55:07.6454739Z  12/100 Test  #26: compile_membound_concat_cpp ...................................   Passed    0.21 sec
+2026-10-20T23:55:07.6455219Z         Start  52: compile_norm_adaptive_layernorm_cpp
+2026-10-20T23:55:07.6845585Z  13/100 Test  #28: compile_membound_membound_fusion_cpp ..........................   Passed    0.15 sec
+2026-10-20T23:55:07.6849684Z         Start  54: compile_norm_batchnorm_cpp
+2026-10-20T23:55:07.7010148Z  14/100 Test  #30: compile_membound_reshape_cpp ..................................   Passed    0.15 sec
+2026-10-20T23:55:07.7010547Z         Start  56: compile_norm_layernorm_cpp
+2026-10-20T23:55:07.7195860Z  15/100 Test  #32: compile_membound_slice_cpp ....................................   Passed    0.16 sec
+2026-10-20T23:55:07.7214713Z         Start  58: compile_norm_layernorm_bitmask_relu_cpp
+2026-10-20T23:55:07.7302602Z  16/100 Test  #34: compile_membound_transpose_cpp ................................   Passed    0.16 sec
+2026-10-20T23:55:07.7303162Z         Start  60: compile_norm_norm_block_scale_cpp
+2026-10-20T23:55:07.7399087Z  17/100 Test  #37: compile_misc_compile_time_constant_example_cpp ................   Passed    0.16 sec
+2026-10-20T23:55:07.7417876Z         Start  62: compile_norm_norm_zero_centered_gamma_cpp
+2026-10-20T23:55:07.7571845Z  18/100 Test  #39: compile_misc_custom_plan_cpp ..................................   Passed    0.17 sec
+2026-10-20T23:55:07.7576589Z         Start  65: compile_sdpa_fp16_bwd_cpp
+2026-10-20T23:55:07.7916518Z  19/100 Test  #44: compile_misc_resample_cpp .....................................   Passed    0.19 sec
+2026-10-20T23:55:07.7918636Z         Start  68: compile_sdpa_fp16_bwd_with_sink_token_cpp
+2026-10-20T23:55:07.8056388Z  20/100 Test  #50: compile_misc_sm_carveout_cpp ..................................   Passed    0.17 sec
+2026-10-20T23:55:07.8069329Z  21/100 Test  #48: compile_misc_slice_cpp ........................................   Passed    0.18 sec
+2026-10-20T23:55:07.8069747Z         Start  71: compile_sdpa_fp16_dynamic_shapes_cpp
+2026-10-20T23:55:07.8162275Z         Start  73: compile_sdpa_fp16_fwd_cpp
+2026-10-20T23:55:07.8279424Z  22/100 Test  #42: compile_misc_pointwise_cpp ....................................   Passed    0.23 sec
+2026-10-20T23:55:07.8280452Z         Start  75: compile_sdpa_fp16_fwd_paged_decode_and_prefill_cpp
+2026-10-20T23:55:07.8374969Z  23/100 Test  #46: compile_misc_serialization_cpp ................................   Passed    0.22 sec
+2026-10-20T23:55:07.8387720Z         Start  77: compile_sdpa_fp16_fwd_with_block_mask_cpp
+2026-10-20T23:55:07.8564170Z  24/100 Test  #54: compile_norm_batchnorm_cpp ....................................   Passed    0.17 sec
+2026-10-20T23:55:07.8564640Z         Start  79: compile_sdpa_fp16_fwd_with_custom_dropout_cpp
+2026-10-20T23:55:07.8668868Z  25/100 Test  #52: compile_norm_adaptive_layernorm_cpp ...........................   Passed    0.22 sec
+2026-10-20T23:55:07.8684863Z         Start  82: compile_sdpa_fp16_fwd_with_max_and_sum_exp_cpp
+2026-10-20T23:55:07.9043506Z  26/100 Test  #58: compile_norm_layernorm_bitmask_relu_cpp .......................   Passed    0.19 sec
+2026-10-20T23:55:07.9078549Z         Start  85: compile_sdpa_fp16_fwd_with_sink_token_cpp
+2026-10-20T23:55:07.9154224Z  27/100 Test  #56: compile_norm_layernorm_cpp ....................................   Passed    0.22 sec
+2026-10-20T23:55:07.9166280Z         Start  87: compile_sdpa_fp8_bwd_cpp
+2026-10-20T23:55:07.9326872Z  28/100 Test  #62: compile_norm_norm_zero_centered_gamma_cpp .....................   Passed    0.19 sec
+2026-10-20T23:55:07.9333610Z         Start  89: compile_sdpa_fp8_bwd_bottom_right_causal_mask_cpp
+2026-10-20T23:55:07.9535202Z  29/100 Test  #65: compile_sdpa_fp16_bwd_cpp .....................................   Passed    0.20 sec
+2026-10-20T23:55:07.9540662Z         Start  91: compile_sdpa_fp8_bwd_with_current_scaling_cpp
+2026-10-20T23:55:07.9658892Z  30/100 Test  #60: compile_norm_norm_block_scale_cpp .............................   Passed    0.24 sec
+2026-10-20T23:55:07.9659360Z         Start  93: compile_sdpa_fp8_fwd_cpp
+2026-10-20T23:55:07.9878944Z  31/100 Test  #68: compile_sdpa_fp16_bwd_with_sink_token_cpp .....................   Passed    0.20 sec
+2026-10-20T23:55:07.9879535Z         Start  95: compile_sdpa_fp8_fwd_bottom_right_causal_mask_cpp
+2026-10-20T23:55:08.0014559Z  32/100 Test  #75: compile_sdpa_fp16_fwd_paged_decode_and_prefill_cpp ............   Passed    0.17 sec
+2026-10-20T23:55:08.0030841Z         Start  97: compile_sdpa_fp8_fwd_current_scaling_cpp
+2026-10-20T23:55:08.0130871Z  33/100 Test  #71: compile_sdpa_fp16_dynamic_shapes_cpp ..........................   Passed    0.21 sec
+2026-10-20T23:55:08.0144730Z  34/100 Test  #77: compile_sdpa_fp16_fwd_with_block_mask_cpp .....................   Passed    0.17 sec
+2026-10-20T23:55:08.0145144Z         Start   2: run_causal_conv1d_causal_conv1d_cpp
+2026-10-20T23:55:08.0238683Z         Start   4: run_convolution_dgrads_cpp
+2026-10-20T23:55:08.0375056Z  35/100 Test  #82: compile_sdpa_fp16_fwd_with_max_and_sum_exp_cpp ................   Passed    0.17 sec
+2026-10-20T23:55:08.0391789Z  36/100 Test  #79: compile_sdpa_fp16_fwd_with_custom_dropout_cpp .................   Passed    0.18 sec
+2026-10-20T23:55:08.0392236Z         Start   6: run_convolution_fp8_fprop_cpp
+2026-10-20T23:55:08.0482717Z         Start   7: compile_convolution_fprop_cpp
+2026-10-20T23:55:08.0678017Z  37/100 Test  #73: compile_sdpa_fp16_fwd_cpp .....................................   Passed    0.25 sec
+2026-10-20T23:55:08.0687823Z         Start   9: run_convolution_int8_fprop_cpp
+2026-10-20T23:55:08.1016302Z  38/100 Test  #85: compile_sdpa_fp16_fwd_with_sink_token_cpp .....................   Passed    0.20 sec
+2026-10-20T23:55:08.1020685Z         Start  11: run_convolution_wgrads_cpp
+2026-10-20T23:55:08.1134477Z  39/100 Test  #89: compile_sdpa_fp8_bwd_bottom_right_causal_mask_cpp .............   Passed    0.18 sec
+2026-10-20T23:55:08.1144550Z         Start  12: compile_matmul_blackwell_nvfp4_mxfp8_block_scale_matmul_cpp
+2026-10-20T23:55:08.1415680Z  40/100 Test  #93: compile_sdpa_fp8_fwd_cpp ......................................   Passed    0.18 sec
+2026-10-20T23:55:08.1448817Z         Start  14: run_matmul_complex_fp32_matmul_cpp
+2026-10-20T23:55:08.1542699Z  41/100 Test  #91: compile_sdpa_fp8_bwd_with_current_scaling_cpp .................   Passed    0.20 sec
+2026-10-20T23:55:08.1543480Z         Start  16: run_matmul_fp8_matmul_cpp
+2026-10-20T23:55:08.1640762Z  42/100 Test  #95: compile_sdpa_fp8_fwd_bottom_right_causal_mask_cpp .............   Passed    0.18 sec
+2026-10-20T23:55:08.1654671Z         Start  18: run_matmul_general_block_scale_matmul_cpp
+2026-10-20T23:55:08.1841996Z  43/100 Test  #97: compile_sdpa_fp8_fwd_current_scaling_cpp ......................   Passed    0.18 sec
+2026-10-20T23:55:08.1842470Z         Start  20: run_matmul_int8_matmul_cpp
+2026-10-20T23:55:08.1947497Z  44/100 Test  #87: compile_sdpa_fp8_bwd_cpp ......................................   Passed    0.28 sec
+2026-10-20T23:55:08.1952353Z         Start  21: compile_matmul_matmuls_cpp
+2026-10-20T23:55:08.2053544Z  45/100 Test   #2: run_causal_conv1d_causal_conv1d_cpp ...........................   Passed    0.19 sec
+2026-10-20T23:55:08.2064867Z         Start  23: run_matmul_mixed_matmul_cpp
+2026-10-20T23:55:08.2348528Z  46/100 Test   #6: run_convolution_fp8_fprop_cpp .................................   Passed    0.20 sec
+2026-10-20T23:55:08.2362501Z         Start  25: run_membound_boolean_fusion_cpp
+2026-10-20T23:55:08.2972232Z  47/100 Test  #16: run_matmul_fp8_matmul_cpp .....................................   Passed    0.14 sec
+2026-10-20T23:55:08.2978450Z         Start  27: run_membound_concat_cpp
+2026-10-20T23:55:08.3727127Z  48/100 Test  #25: run_membound_boolean_fusion_cpp ...............................   Passed    0.14 sec
+2026-10-20T23:55:08.3732048Z         Start  29: run_membound_membound_fusion_cpp
+2026-10-20T23:55:08.4206408Z  49/100 Test  #27: run_membound_concat_cpp .......................................   Passed    0.12 sec
+2026-10-20T23:55:08.4211224Z         Start  31: run_membound_reshape_cpp
+2026-10-20T23:55:08.4991441Z  50/100 Test  #29: run_membound_membound_fusion_cpp ..............................   Passed    0.13 sec
+2026-10-20T23:55:08.4998131Z         Start  33: run_membound_slice_cpp
+2026-10-20T23:55:08.5520162Z  51/100 Test  #31: run_membound_reshape_cpp ......................................   Passed    0.13 sec
+2026-10-20T23:55:08.5525562Z         Start  35: run_membound_transpose_cpp
+2026-10-20T23:55:08.6387908Z  52/100 Test  #33: run_membound_slice_cpp ........................................   Passed    0.14 sec
+2026-10-20T23:55:08.6392649Z         Start  36: compile_misc_autotuning_cpp
+2026-10-20T23:55:08.6918583Z  53/100 Test  #35: run_membound_transpose_cpp ....................................   Passed    0.14 sec
+2026-10-20T23:55:08.6923249Z         Start  38: run_misc_compile_time_constant_example_cpp
+2026-10-20T23:55:08.8811880Z  54/100 Test  #38: run_misc_compile_time_constant_example_cpp ....................   Passed    0.18 sec
+2026-10-20T23:55:08.8847368Z         Start  40: run_misc_custom_plan_cpp
+2026-10-20T23:55:14.9127274Z  55/100 Test  #12: compile_matmul_blackwell_nvfp4_mxfp8_block_scale_matmul_cpp ...   Passed    6.80 sec
+2026-10-20T23:55:14.9178176Z         Start  41: compile_misc_deviceless_aot_compilation_cpp
+2026-10-20T23:55:14.9732513Z  56/100 Test   #7: compile_convolution_fprop_cpp .................................   Passed    6.92 sec
+2026-10-20T23:55:14.9768815Z         Start  43: run_misc_pointwise_cpp
+2026-10-20T23:55:15.0984462Z  57/100 Test  #21: compile_matmul_matmuls_cpp ....................................   Passed    6.90 sec
+2026-10-20T23:55:15.0998546Z         Start  45: run_misc_resample_cpp
+2026-10-20T23:55:15.7969369Z  58/100 Test  #36: compile_misc_autotuning_cpp ...................................   Passed    7.16 sec
+2026-10-20T23:55:15.7973583Z         Start  47: run_misc_serialization_cpp
+2026-10-20T23:55:23.6771610Z  59/100 Test  #41: compile_misc_deviceless_aot_compilation_cpp ...................   Passed    8.76 sec
+2026-10-20T23:55:23.6780905Z         Start  49: run_misc_slice_cpp
+2026-10-20T23:55:25.3361958Z  60/100 Test  #23: run_matmul_mixed_matmul_cpp ...................................   Passed   17.13 sec
+2026-10-20T23:55:25.3397200Z         Start  51: run_misc_sm_carveout_cpp
+2026-10-20T23:55:25.3558560Z  61/100 Test  #20: run_matmul_int8_matmul_cpp ....................................   Passed   17.17 sec
+2026-10-20T23:55:25.3559009Z         Start  53: run_norm_adaptive_layernorm_cpp
+2026-10-20T23:55:25.3738049Z  62/100 Test   #9: run_convolution_int8_fprop_cpp ................................   Passed   17.30 sec
+2026-10-20T23:55:25.3738542Z         Start  55: run_norm_batchnorm_cpp
+2026-10-20T23:55:25.3825900Z  63/100 Test   #4: run_convolution_dgrads_cpp ....................................***Failed   17.36 sec
+2026-10-20T23:55:25.3837434Z Randomness seeded to: 978117051
+2026-10-20T23:55:25.3865299Z 
+2026-10-20T23:55:25.3867454Z ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:55:25.3868039Z tu_convolution_dgrads_cpp.exe is a Catch2 v3.13.0 host application.
+2026-10-20T23:55:25.3869262Z Run with -? for options
+2026-10-20T23:55:25.3870870Z 
+2026-10-20T23:55:25.3871442Z -------------------------------------------------------------------------------
+2026-10-20T23:55:25.3872810Z Dgrad Drelu DBNweight Graph
+2026-10-20T23:55:25.3873411Z -------------------------------------------------------------------------------
+2026-10-20T23:55:25.3873839Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/dgrads.cpp(135)
+2026-10-20T23:55:25.3874232Z ...............................................................................
+2026-10-20T23:55:25.3874484Z 
+2026-10-20T23:55:25.3874752Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/dgrads.cpp(208): SKIPPED:
+2026-10-20T23:55:25.3875166Z explicitly with message:
+2026-10-20T23:55:25.3875819Z   DgradDreluBNBwdWeight requires ampere or hopper architecture.
+2026-10-20T23:55:25.3876162Z 
+2026-10-20T23:55:25.3876561Z MIOpen: Warning [ParseAndLoadDb] File is unreadable: "C:\\actions-runner\\_work\\TheRock\\TheRock\\build\\bin\\gfx110220.HIP.fdb.txt"
+2026-10-20T23:55:25.3903243Z ##[error]convolution/dgrads.cpp died with code 3221225477
+2026-10-20T23:55:25.3909061Z 
+2026-10-20T23:55:25.3909361Z         Start  57: run_norm_layernorm_cpp
+2026-10-20T23:55:25.3997310Z  64/100 Test  #14: run_matmul_complex_fp32_matmul_cpp ............................   Passed   17.26 sec
+2026-10-20T23:55:25.4003350Z         Start  59: run_norm_layernorm_bitmask_relu_cpp
+2026-10-20T23:55:25.4509853Z  65/100 Test  #18: run_matmul_general_block_scale_matmul_cpp .....................   Passed   17.29 sec
+2026-10-20T23:55:25.4517552Z         Start  61: run_norm_norm_block_scale_cpp
+2026-10-20T23:55:25.5464227Z  66/100 Test  #40: run_misc_custom_plan_cpp ......................................   Passed   16.66 sec
+2026-10-20T23:55:25.5554134Z         Start  63: run_norm_norm_zero_centered_gamma_cpp
+2026-10-20T23:55:25.5879993Z  67/100 Test  #61: run_norm_norm_block_scale_cpp .................................   Passed    0.14 sec
+2026-10-20T23:55:25.5892300Z         Start  64: compile_norm_rmsnorm_cpp
+2026-10-20T23:55:25.6198273Z  68/100 Test  #11: run_convolution_wgrads_cpp ....................................***Failed   17.51 sec
+2026-10-20T23:55:25.6200570Z Randomness seeded to: 1033660408
+2026-10-20T23:55:25.6251326Z 
+2026-10-20T23:55:25.6258053Z ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T23:55:25.6309009Z tu_convolution_wgrads_cpp.exe is a Catch2 v3.13.0 host application.
+2026-10-20T23:55:25.6313622Z Run with -? for options
+2026-10-20T23:55:25.6349073Z 
+2026-10-20T23:55:25.6366481Z -------------------------------------------------------------------------------
+2026-10-20T23:55:25.6381856Z scale-bias-relu-wgrad Graph
+2026-10-20T23:55:25.6382163Z -------------------------------------------------------------------------------
+2026-10-20T23:55:25.6383122Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/wgrads.cpp(77)
+2026-10-20T23:55:25.6383464Z ...............................................................................
+2026-10-20T23:55:25.6383643Z 
+2026-10-20T23:55:25.6383830Z C:/actions-runner/_work/_temp/cdnns/staged/cpp/convolution/wgrads.cpp(79): SKIPPED:
+2026-10-20T23:55:25.6384159Z explicitly with message:
+2026-10-20T23:55:25.6384358Z   scale-bias-relu-wgrad requires Ampere or Hopper
+2026-10-20T23:55:25.6384520Z 
+2026-10-20T23:55:25.6384803Z MIOpen: Warning [ParseAndLoadDb] File is unreadable: "C:\\actions-runner\\_work\\TheRock\\TheRock\\build\\bin\\gfx110220.HIP.fdb.txt"
+2026-10-20T23:55:25.6386575Z ##[error]convolution/wgrads.cpp died with code 3221225477
+2026-10-20T23:55:25.6387362Z 
+2026-10-20T23:55:25.6387439Z         Start  66: run_sdpa_fp16_bwd_cpp
+2026-10-20T23:55:28.2208674Z  69/100 Test  #43: run_misc_pointwise_cpp ........................................   Passed   13.24 sec
+2026-10-20T23:55:28.2209189Z         Start  67: compile_sdpa_fp16_bwd_with_flexible_graphs_cpp
+2026-10-20T23:55:28.8768276Z  70/100 Test  #47: run_misc_serialization_cpp ....................................   Passed   13.08 sec
+2026-10-20T23:55:28.8769012Z         Start  69: run_sdpa_fp16_bwd_with_sink_token_cpp
+2026-10-20T23:55:29.1219560Z  71/100 Test  #45: run_misc_resample_cpp .........................................   Passed   14.02 sec
+2026-10-20T23:55:29.1220167Z         Start  70: compile_sdpa_fp16_cached_cpp
+2026-10-20T23:55:33.4515486Z  72/100 Test  #64: compile_norm_rmsnorm_cpp ......................................   Passed    7.86 sec
+2026-10-20T23:55:33.4530093Z         Start  72: run_sdpa_fp16_dynamic_shapes_cpp
+2026-10-20T23:55:35.5490248Z  73/100 Test  #67: compile_sdpa_fp16_bwd_with_flexible_graphs_cpp ................   Passed    7.33 sec
+2026-10-20T23:55:35.5492584Z         Start  74: run_sdpa_fp16_fwd_cpp
+2026-10-20T23:55:36.3128788Z  74/100 Test  #49: run_misc_slice_cpp ............................................   Passed   12.63 sec
+2026-10-20T23:55:36.3151482Z         Start  76: run_sdpa_fp16_fwd_paged_decode_and_prefill_cpp
+2026-10-20T23:55:36.7750617Z  75/100 Test  #70: compile_sdpa_fp16_cached_cpp ..................................   Passed    7.65 sec
+2026-10-20T23:55:36.7759227Z         Start  78: run_sdpa_fp16_fwd_with_block_mask_cpp
+2026-10-20T23:55:36.8940439Z  76/100 Test  #78: run_sdpa_fp16_fwd_with_block_mask_cpp .........................   Passed    0.12 sec
+2026-10-20T23:55:36.8985590Z         Start  80: run_sdpa_fp16_fwd_with_custom_dropout_cpp
+2026-10-20T23:55:37.8905195Z  77/100 Test  #53: run_norm_adaptive_layernorm_cpp ...............................   Passed   12.53 sec
+2026-10-20T23:55:37.8908967Z         Start  81: compile_sdpa_fp16_fwd_with_flexible_graphs_cpp
+2026-10-20T23:55:37.9484789Z  78/100 Test  #55: run_norm_batchnorm_cpp ........................................   Passed   12.58 sec
+2026-10-20T23:55:37.9485662Z         Start  83: run_sdpa_fp16_fwd_with_max_and_sum_exp_cpp
+2026-10-20T23:55:37.9756009Z  79/100 Test  #59: run_norm_layernorm_bitmask_relu_cpp ...........................   Passed   12.57 sec
+2026-10-20T23:55:37.9769736Z         Start  84: compile_sdpa_fp16_fwd_with_paged_caches_cpp
+2026-10-20T23:55:38.0161940Z  80/100 Test  #51: run_misc_sm_carveout_cpp ......................................   Passed   12.68 sec
+2026-10-20T23:55:38.0162982Z         Start  86: run_sdpa_fp16_fwd_with_sink_token_cpp
+2026-10-20T23:55:38.1590275Z  81/100 Test  #63: run_norm_norm_zero_centered_gamma_cpp .........................   Passed   12.61 sec
+2026-10-20T23:55:38.1590709Z         Start  88: run_sdpa_fp8_bwd_cpp
+2026-10-20T23:55:38.2167217Z  82/100 Test  #66: run_sdpa_fp16_bwd_cpp .........................................   Passed   12.60 sec
+2026-10-20T23:55:38.2178571Z         Start  90: run_sdpa_fp8_bwd_bottom_right_causal_mask_cpp
+2026-10-20T23:55:38.3365697Z  83/100 Test  #88: run_sdpa_fp8_bwd_cpp ..........................................   Passed    0.18 sec
+2026-10-20T23:55:38.3380792Z         Start  92: run_sdpa_fp8_bwd_with_current_scaling_cpp
+2026-10-20T23:55:38.4035844Z  84/100 Test  #90: run_sdpa_fp8_bwd_bottom_right_causal_mask_cpp .................   Passed    0.18 sec
+2026-10-20T23:55:38.4036415Z         Start  94: run_sdpa_fp8_fwd_cpp
+2026-10-20T23:55:38.5279223Z  85/100 Test  #92: run_sdpa_fp8_bwd_with_current_scaling_cpp .....................   Passed    0.19 sec
+2026-10-20T23:55:38.5290653Z         Start  96: run_sdpa_fp8_fwd_bottom_right_causal_mask_cpp
+2026-10-20T23:55:38.5780010Z  86/100 Test  #94: run_sdpa_fp8_fwd_cpp ..........................................   Passed    0.17 sec
+2026-10-20T23:55:38.5781202Z         Start  98: run_sdpa_fp8_fwd_current_scaling_cpp
+2026-10-20T23:55:38.7027293Z  87/100 Test  #96: run_sdpa_fp8_fwd_bottom_right_causal_mask_cpp .................   Passed    0.17 sec
+2026-10-20T23:55:38.7106094Z         Start  99: compile_sdpa_mxfp8_bwd_cpp
+2026-10-20T23:55:38.7514684Z  88/100 Test  #98: run_sdpa_fp8_fwd_current_scaling_cpp ..........................   Passed    0.17 sec
+2026-10-20T23:55:38.7555040Z         Start 100: compile_sdpa_mxfp8_fwd_cpp
+2026-10-20T23:55:41.2072282Z  89/100 Test  #69: run_sdpa_fp16_bwd_with_sink_token_cpp .........................   Passed   12.33 sec
+2026-10-20T23:55:42.7044430Z  90/100 Test  #99: compile_sdpa_mxfp8_bwd_cpp ....................................   Passed    4.00 sec
+2026-10-20T23:55:43.3213773Z  91/100 Test  #57: run_norm_layernorm_cpp ........................................   Passed   17.94 sec
+2026-10-20T23:55:44.7412509Z  92/100 Test  #72: run_sdpa_fp16_dynamic_shapes_cpp ..............................   Passed   11.29 sec
+2026-10-20T23:55:44.8456744Z  93/100 Test  #81: compile_sdpa_fp16_fwd_with_flexible_graphs_cpp ................   Passed    6.96 sec
+2026-10-20T23:55:45.0661221Z  94/100 Test  #84: compile_sdpa_fp16_fwd_with_paged_caches_cpp ...................   Passed    7.09 sec
+2026-10-20T23:55:45.3551662Z  95/100 Test #100: compile_sdpa_mxfp8_fwd_cpp ....................................   Passed    6.60 sec
+2026-10-20T23:55:45.9977720Z  96/100 Test  #74: run_sdpa_fp16_fwd_cpp .........................................   Passed   10.45 sec
+2026-10-20T23:55:46.4220398Z  97/100 Test  #76: run_sdpa_fp16_fwd_paged_decode_and_prefill_cpp ................   Passed   10.11 sec
+2026-10-20T23:55:46.7100122Z  98/100 Test  #80: run_sdpa_fp16_fwd_with_custom_dropout_cpp .....................   Passed    9.81 sec
+2026-10-20T23:55:47.3064555Z  99/100 Test  #83: run_sdpa_fp16_fwd_with_max_and_sum_exp_cpp ....................   Passed    9.36 sec
+2026-10-20T23:55:47.4270965Z 100/100 Test  #86: run_sdpa_fp16_fwd_with_sink_token_cpp .........................   Passed    9.41 sec
+2026-10-20T23:55:47.4283136Z 
+2026-10-20T23:55:47.4283259Z 98% tests passed, 2 tests failed out of 100
+2026-10-20T23:55:47.4283366Z 
+2026-10-20T23:55:47.4283453Z Total Test time (real) =  40.09 sec
+2026-10-20T23:55:47.4283539Z 
+2026-10-20T23:55:47.4283614Z The following tests FAILED:
+2026-10-20T23:55:47.4287797Z 	  4 - run_convolution_dgrads_cpp (Failed)
+2026-10-20T23:55:47.4287955Z 	 11 - run_convolution_wgrads_cpp (Failed)
+2026-10-20T23:55:47.4295602Z Errors while running CTest
+2026-10-20T23:55:47.4330626Z INFO:root:++ Test exited with 8
+2026-10-20T23:55:47.6445890Z ## hipDNN cuDNN sample corpus
+2026-10-20T23:55:47.6446106Z 
+2026-10-20T23:55:47.6446439Z Counts: compiled 44, ran 44, ran-clean 2, ran-no-assertions 17, ran-with-assertion-failures 23, xfail-still-failing 12
+2026-10-20T23:55:47.6446810Z 
+2026-10-20T23:55:47.6446933Z | TU | Tier | Outcome | Assertion failures / reason |
+2026-10-20T23:55:47.6447219Z | --- | --- | --- | --- |
+2026-10-20T23:55:47.6447490Z | causal_conv1d/causal_conv1d.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6448014Z | convolution/conv_dynamic_shape_benchmark.cpp | EXCLUDED | excluded | Catch2 benchmark TU; performance is out of scope |
+2026-10-20T23:55:47.6448486Z | convolution/dgrads.cpp | RUN | crashed | 0 |
+2026-10-20T23:55:47.6450254Z | convolution/fp8_fprop.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6450616Z | convolution/fprop.cpp | XFAIL_COMPILE | xfail-still-failing | - |
+2026-10-20T23:55:47.6451012Z | convolution/int8_fprop.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6451348Z | convolution/wgrads.cpp | RUN | crashed | 0 |
+2026-10-20T23:55:47.6451742Z | matmul/blackwell_nvfp4_mxfp8_block_scale_matmul.cpp | XFAIL_COMPILE | xfail-still-failing | - |
+2026-10-20T23:55:47.6452222Z | matmul/complex_fp32_matmul.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6452585Z | matmul/fp8_matmul.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6452956Z | matmul/general_block_scale_matmul.cpp | RUN | ran-with-assertion-failures | 3 |
+2026-10-20T23:55:47.6453368Z | matmul/int8_matmul.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6453730Z | matmul/matmuls.cpp | XFAIL_COMPILE | xfail-still-failing | - |
+2026-10-20T23:55:47.6454090Z | matmul/mixed_matmul.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6454444Z | membound/boolean_fusion.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6455477Z | membound/concat.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6455791Z | membound/membound_fusion.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6456108Z | membound/reshape.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6456392Z | membound/slice.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6456684Z | membound/transpose.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6457019Z | misc/autotuning.cpp | XFAIL_COMPILE | xfail-still-failing | - |
+2026-10-20T23:55:47.6457391Z | misc/compile_time_constant_example.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6457919Z | misc/cudagraphs.cpp | EXCLUDED | excluded | Needs the real CUDA-graph runtime API; the shim declines graph capture |
+2026-10-20T23:55:47.6458255Z | misc/custom_plan.cpp | RUN | ran-clean | 0 |
+2026-10-20T23:55:47.6458439Z | misc/deviceless_aot_compilation.cpp | XFAIL_COMPILE | xfail-still-failing | - |
+2026-10-20T23:55:47.6458791Z | misc/parallel_compilation.cpp | EXCLUDED | excluded | Catch2 benchmark TU; performance is out of scope. Not named *benchmark* -- excluding by filename would miss it |
+2026-10-20T23:55:47.6459116Z | misc/pointwise.cpp | RUN | ran-with-assertion-failures | 2 |
+2026-10-20T23:55:47.6459295Z | misc/resample.cpp | RUN | ran-with-assertion-failures | 2 |
+2026-10-20T23:55:47.6459482Z | misc/serialization.cpp | RUN | ran-with-assertion-failures | 4 |
+2026-10-20T23:55:47.6459659Z | misc/slice.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6459833Z | misc/sm_carveout.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6460111Z | moe_grouped_matmul/moe_grouped_matmul.cpp | EXCLUDED | excluded | Sole <cublasLt.h> consumer; no hipBLASLt-side equivalent is provided |
+2026-10-20T23:55:47.6460404Z | norm/adaptive_layernorm.cpp | RUN | ran-with-assertion-failures | 3 |
+2026-10-20T23:55:47.6460600Z | norm/batchnorm.cpp | RUN | ran-with-assertion-failures | 4 |
+2026-10-20T23:55:47.6460783Z | norm/layernorm.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6460978Z | norm/layernorm_bitmask_relu.cpp | RUN | ran-with-assertion-failures | 2 |
+2026-10-20T23:55:47.6461159Z | norm/norm_block_scale.cpp | RUN | ran-clean | 0 |
+2026-10-20T23:55:47.6461343Z | norm/norm_zero_centered_gamma.cpp | RUN | ran-with-assertion-failures | 3 |
+2026-10-20T23:55:47.6461541Z | norm/rmsnorm.cpp | XFAIL_COMPILE | xfail-still-failing | - |
+2026-10-20T23:55:47.6461764Z | sdpa/fp16_benchmark.cpp | EXCLUDED | excluded | Catch2 benchmark TU; performance is out of scope |
+2026-10-20T23:55:47.6461987Z | sdpa/fp16_bwd.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6462252Z | sdpa/fp16_bwd_with_cudagraphs.cpp | EXCLUDED | excluded | Needs the real CUDA-graph runtime API; the shim declines graph capture |
+2026-10-20T23:55:47.6462554Z | sdpa/fp16_bwd_with_flexible_graphs.cpp | XFAIL_COMPILE | xfail-still-failing | - |
+2026-10-20T23:55:47.6463440Z | sdpa/fp16_bwd_with_sink_token.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6463672Z | sdpa/fp16_cached.cpp | XFAIL_COMPILE | xfail-still-failing | - |
+2026-10-20T23:55:47.6463879Z | sdpa/fp16_dynamic_shapes.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6464082Z | sdpa/fp16_fwd.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6464294Z | sdpa/fp16_fwd_paged_decode_and_prefill.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6464519Z | sdpa/fp16_fwd_with_block_mask.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6464802Z | sdpa/fp16_fwd_with_cudagraphs.cpp | EXCLUDED | excluded | Needs the real CUDA-graph runtime API; the shim declines graph capture |
+2026-10-20T23:55:47.6465103Z | sdpa/fp16_fwd_with_custom_dropout.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6465355Z | sdpa/fp16_fwd_with_flexible_graphs.cpp | XFAIL_COMPILE | xfail-still-failing | - |
+2026-10-20T23:55:47.6465593Z | sdpa/fp16_fwd_with_max_and_sum_exp.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6465885Z | sdpa/fp16_fwd_with_paged_caches.cpp | XFAIL_COMPILE | xfail-still-failing | - |
+2026-10-20T23:55:47.6466108Z | sdpa/fp16_fwd_with_sink_token.cpp | RUN | ran-with-assertion-failures | 1 |
+2026-10-20T23:55:47.6466296Z | sdpa/fp8_bwd.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6466473Z | sdpa/fp8_bwd_bottom_right_causal_mask.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6466686Z | sdpa/fp8_bwd_with_current_scaling.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6466862Z | sdpa/fp8_fwd.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6467033Z | sdpa/fp8_fwd_bottom_right_causal_mask.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6467230Z | sdpa/fp8_fwd_current_scaling.cpp | RUN | ran-no-assertions | 0 |
+2026-10-20T23:55:47.6467411Z | sdpa/mxfp8_bwd.cpp | XFAIL_COMPILE | xfail-still-failing | - |
+2026-10-20T23:55:47.6467598Z | sdpa/mxfp8_fwd.cpp | XFAIL_COMPILE | xfail-still-failing | - |
+2026-10-20T23:55:47.6467886Z | sdpa/prefill_oss_engine.cpp | EXCLUDED | excluded | Includes the sm90/sm100 experimental prefill engines unguarded; the shim ships neither |
+2026-10-20T23:55:47.6468105Z 
+2026-10-20T23:55:47.6552802Z ##[error]Process completed with exit code 8.
+2026-10-20T23:55:47.6719829Z ##[group]Run python ./build_tools/github_actions/reproduce_test_failure.py \
+2026-10-20T23:55:47.6720104Z [36;1mpython ./build_tools/github_actions/reproduce_test_failure.py \[0m
+2026-10-20T23:55:47.6720288Z [36;1m  --run-id "${ARTIFACT_RUN_ID}" \[0m
+2026-10-20T23:55:47.6720423Z [36;1m  --repository "ROCm/TheRock" \[0m
+2026-10-20T23:55:47.6720566Z [36;1m  --amdgpu-family "${AMDGPU_FAMILIES}" \[0m
+2026-10-20T23:55:47.6720713Z [36;1m  --amdgpu-targets "${AMDGPU_TARGETS}" \[0m
+2026-10-20T23:55:47.6720864Z [36;1m  --test-script "${COMPONENT_TEST_SCRIPT}" \[0m
+2026-10-20T23:55:47.6721025Z [36;1m  --shard-index "${MATRIX_SHARD}" \[0m
+2026-10-20T23:55:47.6721171Z [36;1m  --total-shards "${COMPONENT_TOTAL_SHARDS}" \[0m
+2026-10-20T23:55:47.6721320Z [36;1m  --test-type "${COMPONENT_TEST_TYPE}" \[0m
+2026-10-20T23:55:47.6721451Z [36;1m  --print-cmd \[0m
+2026-10-20T23:55:47.6721598Z [36;1m  --fetch-artifact-args="${COMPONENT_FETCH_ARTIFACT_ARGS}" \[0m
+2026-10-20T23:55:47.6721821Z [36;1m  --additional-requirements-files="${REQUIREMENTS_FILES}"[0m
+2026-10-20T23:55:47.6764306Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-20T23:55:47.6764483Z env:
+2026-10-20T23:55:47.6764593Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T23:55:47.6764766Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T23:55:47.6764924Z   VENV_DIR: C:\actions-runner\_work\TheRock\TheRock/.venv
+2026-10-20T23:55:47.6765078Z   ARTIFACT_RUN_ID: 39502549002
+2026-10-20T23:55:47.6765206Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T23:55:47.6765466Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T23:55:47.6765579Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-20T23:55:47.6765713Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-20T23:55:47.6765853Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-20T23:55:47.6765964Z   BUILD_VARIANT: release
+2026-10-20T23:55:47.6766108Z   pythonLocation: C:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:55:47.6766327Z   PKG_CONFIG_PATH: C:\actions-runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-20T23:55:47.6766542Z   Python_ROOT_DIR: C:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:55:47.6766732Z   Python2_ROOT_DIR: C:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:55:47.6766921Z   Python3_ROOT_DIR: C:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:55:47.6767103Z   VIRTUAL_ENV: C:\actions-runner\_work\TheRock\TheRock\.venv
+2026-10-20T23:55:47.6767249Z   MATRIX_SHARD: 1
+2026-10-20T23:55:47.6767445Z   COMPONENT_TEST_SCRIPT: python build_tools/github_actions/test_executable_scripts/test_hipdnn_cudnn_samples.py
+2026-10-20T23:55:47.6767671Z   COMPONENT_TOTAL_SHARDS: 1
+2026-10-20T23:55:47.6767782Z   COMPONENT_TEST_TYPE: quick
+2026-10-20T23:55:47.6767895Z   REQUIREMENTS_FILES: 
+2026-10-20T23:55:47.6767997Z   COMPONENT_FETCH_ARTIFACT_ARGS: 
+2026-10-20T23:55:47.6768110Z ##[endgroup]
+2026-10-20T23:55:47.8307221Z To reproduce this failure, run:
+2026-10-20T23:55:47.8307471Z   git clone https://github.com/ROCm/TheRock.git && cd TheRock
+2026-10-20T23:55:47.8308187Z   python build_tools/github_actions/reproduce_test_failure.py --run-id 39502549002 --repository ROCm/TheRock --amdgpu-family gfx110X-all --test-script "python build_tools/github_actions/test_executable_scripts/test_hipdnn_cudnn_samples.py" --amdgpu-targets gfx1100,gfx1101,gfx1102,gfx1103 --output-dir "./build" --test-type quick
+2026-10-20T23:55:47.8502165Z ##[group]Run . 'C:\actions-runner\_work\TheRock\TheRock\build_tools\github_actions\cleanup_processes.ps1'
+2026-10-20T23:55:47.8502526Z [36;1m. 'C:\actions-runner\_work\TheRock\TheRock\build_tools\github_actions\cleanup_processes.ps1'[0m
+2026-10-20T23:55:47.8539757Z shell: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+2026-10-20T23:55:47.8539945Z env:
+2026-10-20T23:55:47.8540056Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T23:55:47.8540207Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T23:55:47.8540366Z   VENV_DIR: C:\actions-runner\_work\TheRock\TheRock/.venv
+2026-10-20T23:55:47.8540512Z   ARTIFACT_RUN_ID: 39502549002
+2026-10-20T23:55:47.8540627Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T23:55:47.8540739Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T23:55:47.8540853Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-20T23:55:47.8540972Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-20T23:55:47.8541126Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-20T23:55:47.8541243Z   BUILD_VARIANT: release
+2026-10-20T23:55:47.8541386Z   pythonLocation: C:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:55:47.8541599Z   PKG_CONFIG_PATH: C:\actions-runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-20T23:55:47.8541805Z   Python_ROOT_DIR: C:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:55:47.8541991Z   Python2_ROOT_DIR: C:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:55:47.8542172Z   Python3_ROOT_DIR: C:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:55:47.8542349Z   VIRTUAL_ENV: C:\actions-runner\_work\TheRock\TheRock\.venv
+2026-10-20T23:55:47.8542488Z ##[endgroup]
+2026-10-20T23:55:48.0119218Z [*] ==== Starting cleanup_processes.ps1 ====
+2026-10-20T23:55:48.0196878Z [*] Checking if elevated: True | current user: NT AUTHORITY\SYSTEM
+2026-10-20T23:55:48.0214556Z [*] Running as a Windows Service (NT AUTHORITY\*) - Cleaning up system environment...
+2026-10-20T23:55:48.0420903Z [*] > Checking for "~/.gitconfig" file at: C:\WINDOWS\system32\config\systemprofile\.gitconfig
+2026-10-20T23:55:48.0436135Z [*] >> .gitconfig file found, removing after logging contents:
+2026-10-20T23:55:48.0651215Z safe.directory=C:/actions-runner/_work/TheRock/TheRock
+2026-10-20T23:55:48.0695776Z [+] >> Successfully removed .gitconfig
+2026-10-20T23:55:48.0704318Z [*] > Checking for uv.zip archives under: C:\WINDOWS\SystemTemp\
+2026-10-20T23:55:48.1824855Z [*] >> Found 0 uv.zip file(s), total size: 0 MB
+2026-10-20T23:55:48.1828925Z [*] > Checking for empty GUID directories under: C:\WINDOWS\SystemTemp\
+2026-10-20T23:55:48.2335400Z [*] >> Found 0 empty GUID folder(s)
+2026-10-20T23:55:48.2350497Z [*] > Checking pip http-v2 cache under: C:\WINDOWS\system32\config\systemprofile\AppData\Local\pip\cache\http-v2
+2026-10-20T23:55:48.2430461Z [*] >> Found 0 file(s) older than 1 day, total size: 0 MB
+2026-10-20T23:55:48.2445524Z [*] Clearing stale git submodule working trees in workspace: C:\actions-runner\_work\TheRock\TheRock
+2026-10-20T23:55:48.2680411Z       removing base/half
+2026-10-20T23:55:48.2695731Z       removing compiler/hipify
+2026-10-20T23:55:48.2704250Z       removing compiler/amd-llvm
+2026-10-20T23:55:48.2713911Z       removing base/rocm-cmake
+2026-10-20T23:55:48.2722573Z       removing rocm-libraries
+2026-10-20T23:55:48.2730668Z       removing rocm-systems
+2026-10-20T23:55:48.2738930Z       removing compiler/spirv-llvm-translator
+2026-10-20T23:55:48.2747659Z       removing third-party/sysdeps/common/mesa-fork
+2026-10-20T23:55:48.2756621Z       removing math-libs/libhipcxx
+2026-10-20T23:55:48.2765113Z       removing debug-tools/rocgdb/source
+2026-10-20T23:55:48.2773676Z       removing rocm-docs
+2026-10-20T23:55:48.2779940Z [*] >> Submodule working-tree cleanup finished
+2026-10-20T23:55:48.2780531Z [*] Cleaning up processes...
+2026-10-20T23:55:48.2785118Z [*] GITHUB_WORKSPACE env var defined: C:\actions-runner\_work\TheRock\TheRock
+2026-10-20T23:55:48.2795734Z [*] Checking for running build executables filtered by .exe regex: C:\\actions-runner\\_work\\TheRock\\TheRock\\build\\.*[.]exe
+2026-10-20T23:55:48.3079909Z [+] No executables to clean up.
+2026-10-20T23:55:48.3342470Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-20T23:55:48.3342721Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-20T23:55:48.3382935Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-20T23:55:48.3383121Z env:
+2026-10-20T23:55:48.3383232Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T23:55:48.3383371Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T23:55:48.3383521Z   VENV_DIR: C:\actions-runner\_work\TheRock\TheRock/.venv
+2026-10-20T23:55:48.3383659Z   ARTIFACT_RUN_ID: 39502549002
+2026-10-20T23:55:48.3383768Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T23:55:48.3383872Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T23:55:48.3383976Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-20T23:55:48.3384090Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-20T23:55:48.3384221Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-20T23:55:48.3384344Z   BUILD_VARIANT: release
+2026-10-20T23:55:48.3384493Z   pythonLocation: C:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:55:48.3384695Z   PKG_CONFIG_PATH: C:\actions-runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-20T23:55:48.3384895Z   Python_ROOT_DIR: C:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:55:48.3385075Z   Python2_ROOT_DIR: C:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:55:48.3385254Z   Python3_ROOT_DIR: C:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:55:48.3385425Z   VIRTUAL_ENV: C:\actions-runner\_work\TheRock\TheRock\.venv
+2026-10-20T23:55:48.3385561Z ##[endgroup]
+2026-10-20T23:55:48.4444520Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-20T23:55:48.4679471Z Post job cleanup.
+2026-10-20T23:55:48.4681488Z ##[start-action display=Setting up Python;id=__3f76f076-8c98-4c29-ae1e-643a4bb3eea3.__actions_setup-python]
+2026-10-20T23:55:48.4683465Z ##[end-action id=__3f76f076-8c98-4c29-ae1e-643a4bb3eea3.__actions_setup-python;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-20T23:55:48.4790145Z Post job cleanup.
+2026-10-20T23:55:48.5486451Z [command]"C:\Program Files\Git\cmd\git.exe" version
+2026-10-20T23:55:48.5676557Z git version 2.46.0.windows.1
+2026-10-20T23:55:48.5709018Z Temporarily overriding HOME='C:\actions-runner\_work\_temp\d8c2c74c-b524-47f8-8fd0-8ca28630b0d6' before making global git config changes
+2026-10-20T23:55:48.5709432Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T23:55:48.5713158Z [command]"C:\Program Files\Git\cmd\git.exe" config --global --add safe.directory C:\actions-runner\_work\TheRock\TheRock
+2026-10-20T23:55:48.5927903Z Removing SSH command configuration
+2026-10-20T23:55:48.5936388Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T23:55:48.6144922Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-20T23:55:49.6549868Z Removing HTTP extra header
+2026-10-20T23:55:49.6554942Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T23:55:49.6776688Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-20T23:55:50.6264395Z Removing includeIf entries pointing to credentials config files
+2026-10-20T23:55:50.6270573Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T23:55:50.6478754Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-20T23:55:51.6478322Z Post job cleanup.
+2026-10-20T23:55:51.7201783Z Evaluate and set job outputs
+2026-10-20T23:55:51.7205251Z Cleaning up orphan processes

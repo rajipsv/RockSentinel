@@ -1,0 +1,1504 @@
+# Source: ROCm/TheRock Actions run 39399444568 attempt 1, job 118550362510
+# Job: Build | py 3.13 | torch release/2.15 / Build | py 3.13 | torch release/2.15 (multi_arch_release_windows_pytorch_wheels.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+2026-10-20T09:28:40.0556491Z   FP16 is only cmake-2.8 compatible
+2026-10-20T09:28:40.0556646Z Call Stack (most recent call first):
+2026-10-20T09:28:40.0556787Z   CMakeLists.txt:1136 (include)
+2026-10-20T09:28:40.0556877Z 
+2026-10-20T09:28:40.0556880Z 
+2026-10-20T09:28:40.0607773Z CMake Warning (deprecated) at third_party/FP16/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+2026-10-20T09:28:40.0608071Z   Compatibility with CMake < 3.10 will be removed from a future version of
+2026-10-20T09:28:40.0608259Z   CMake.
+2026-10-20T09:28:40.0608319Z 
+2026-10-20T09:28:40.0608423Z   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+2026-10-20T09:28:40.0608672Z   to tell CMake that the project requires at least <min> but has been updated
+2026-10-20T09:28:40.0608891Z   to work with policies introduced by <max> or earlier.
+2026-10-20T09:28:40.0609115Z This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+2026-10-20T09:28:40.0609312Z to suppress it.
+2026-10-20T09:28:40.0609378Z 
+2026-10-20T09:28:40.0676325Z CMake Warning (deprecated) at third_party/psimd/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+2026-10-20T09:28:40.0676803Z   Compatibility with CMake < 3.10 will be removed from a future version of
+2026-10-20T09:28:40.0676998Z   CMake.
+2026-10-20T09:28:40.0677055Z 
+2026-10-20T09:28:40.0677161Z   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+2026-10-20T09:28:40.0677407Z   to tell CMake that the project requires at least <min> but has been updated
+2026-10-20T09:28:40.0677633Z   to work with policies introduced by <max> or earlier.
+2026-10-20T09:28:40.0677855Z This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+2026-10-20T09:28:40.0678053Z to suppress it.
+2026-10-20T09:28:40.0678115Z 
+2026-10-20T09:28:40.0695725Z -- Using third party subdirectory Eigen.
+2026-10-20T09:28:40.3857500Z -- Found Python: C:/home/runner/_work/_tool/Python/3.13.16/x64/python.exe (found version "3.13.16") found components: Interpreter Development.Module NumPy
+2026-10-20T09:28:40.3857948Z -- Using third_party/pybind11.
+2026-10-20T09:28:40.3858688Z -- pybind11 include dirs: B:/src/pytorch/cmake/../third_party/pybind11/include
+2026-10-20T09:28:40.4073197Z -- Check OMP with lib C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/lib/x64/libomp.lib and flags -Xclang -fopenmp=libomp
+2026-10-20T09:28:40.5850915Z CMake Warning at cmake/Modules/FindOpenMP.cmake:351 (message):
+2026-10-20T09:28:40.5851215Z   Detecting C OpenMP compiler ABI info compiled with the following output:
+2026-10-20T09:28:40.5851370Z 
+2026-10-20T09:28:40.5851456Z   Change Dir: 'B:/src/pytorch/build/CMakeFiles/CMakeTmp'
+2026-10-20T09:28:40.5851577Z 
+2026-10-20T09:28:40.5851580Z 
+2026-10-20T09:28:40.5851582Z 
+2026-10-20T09:28:40.5851632Z   Run Build Command(s):
+2026-10-20T09:28:40.5851810Z   C:\home\runner\_work\_tool\Python\3.13.16\x64\Scripts\ninja -v cmTC_c3e25
+2026-10-20T09:28:40.5851969Z 
+2026-10-20T09:28:40.5852036Z   [1/2] C:\ProgramData\chocolatey\bin\sccache.EXE
+2026-10-20T09:28:40.5852296Z   C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\llvm\bin\clang-cl.exe
+2026-10-20T09:28:40.5852597Z   /nologo -D_MBCS /DWIN32 /D_WINDOWS /bigobj -Xclang -fopenmp=libomp /Ob0 /Od
+2026-10-20T09:28:40.5852800Z   /RTC1 /bigobj -MDd -Z7 -clang:-MD
+2026-10-20T09:28:40.5852979Z   -clang:-MTCMakeFiles\cmTC_c3e25.dir\OpenMPTryFlag.c.obj
+2026-10-20T09:28:40.5853183Z   -clang:-MFCMakeFiles\cmTC_c3e25.dir\OpenMPTryFlag.c.obj.d
+2026-10-20T09:28:40.5853374Z   /FoCMakeFiles\cmTC_c3e25.dir\OpenMPTryFlag.c.obj
+2026-10-20T09:28:40.5853534Z   /FdCMakeFiles\cmTC_c3e25.dir\ -c --
+2026-10-20T09:28:40.5853706Z   B:\src\pytorch\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.c
+2026-10-20T09:28:40.5853832Z 
+2026-10-20T09:28:40.5853923Z   FAILED: [code=1] CMakeFiles/cmTC_c3e25.dir/OpenMPTryFlag.c.obj 
+2026-10-20T09:28:40.5854057Z 
+2026-10-20T09:28:40.5854164Z   C:\ProgramData\chocolatey\bin\sccache.EXE
+2026-10-20T09:28:40.5854604Z   C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\llvm\bin\clang-cl.exe
+2026-10-20T09:28:40.5854891Z   /nologo -D_MBCS /DWIN32 /D_WINDOWS /bigobj -Xclang -fopenmp=libomp /Ob0 /Od
+2026-10-20T09:28:40.5855090Z   /RTC1 /bigobj -MDd -Z7 -clang:-MD
+2026-10-20T09:28:40.5855280Z   -clang:-MTCMakeFiles\cmTC_c3e25.dir\OpenMPTryFlag.c.obj
+2026-10-20T09:28:40.5855488Z   -clang:-MFCMakeFiles\cmTC_c3e25.dir\OpenMPTryFlag.c.obj.d
+2026-10-20T09:28:40.5855679Z   /FoCMakeFiles\cmTC_c3e25.dir\OpenMPTryFlag.c.obj
+2026-10-20T09:28:40.5855837Z   /FdCMakeFiles\cmTC_c3e25.dir\ -c --
+2026-10-20T09:28:40.5856005Z   B:\src\pytorch\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.c
+2026-10-20T09:28:40.5856125Z 
+2026-10-20T09:28:40.5856230Z   B:\src\pytorch\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.c(8,3): error: use
+2026-10-20T09:28:40.5856443Z   of undeclared identifier 'breaks_on_purpose'
+2026-10-20T09:28:40.5856546Z 
+2026-10-20T09:28:40.5856603Z       8 |   breaks_on_purpose
+2026-10-20T09:28:40.5856725Z         |   ^~~~~~~~~~~~~~~~~
+2026-10-20T09:28:40.5856802Z 
+2026-10-20T09:28:40.5856849Z   1 error generated.
+2026-10-20T09:28:40.5856915Z 
+2026-10-20T09:28:40.5857440Z   ninja: build stopped: subcommand failed.
+2026-10-20T09:28:40.5857543Z 
+2026-10-20T09:28:40.5857545Z 
+2026-10-20T09:28:40.5857547Z 
+2026-10-20T09:28:40.5857604Z Call Stack (most recent call first):
+2026-10-20T09:28:40.5857771Z   cmake/Modules/FindOpenMP.cmake:567 (_OPENMP_GET_FLAGS)
+2026-10-20T09:28:40.5857944Z   cmake/Dependencies.cmake:966 (include)
+2026-10-20T09:28:40.5858091Z   CMakeLists.txt:1136 (include)
+2026-10-20T09:28:40.5858171Z 
+2026-10-20T09:28:40.5858176Z 
+2026-10-20T09:28:40.7562425Z -- Check OMP with lib C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/lib/x64/libomp.lib and flags -Xclang -fopenmp=libiomp5
+2026-10-20T09:28:40.9277732Z CMake Warning at cmake/Modules/FindOpenMP.cmake:351 (message):
+2026-10-20T09:28:40.9278055Z   Detecting C OpenMP compiler ABI info compiled with the following output:
+2026-10-20T09:28:40.9278212Z 
+2026-10-20T09:28:40.9278296Z   Change Dir: 'B:/src/pytorch/build/CMakeFiles/CMakeTmp'
+2026-10-20T09:28:40.9278412Z 
+2026-10-20T09:28:40.9278415Z 
+2026-10-20T09:28:40.9278428Z 
+2026-10-20T09:28:40.9278474Z   Run Build Command(s):
+2026-10-20T09:28:40.9278658Z   C:\home\runner\_work\_tool\Python\3.13.16\x64\Scripts\ninja -v cmTC_6927d
+2026-10-20T09:28:40.9278803Z 
+2026-10-20T09:28:40.9278874Z   [1/2] C:\ProgramData\chocolatey\bin\sccache.EXE
+2026-10-20T09:28:40.9279129Z   C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\llvm\bin\clang-cl.exe
+2026-10-20T09:28:40.9279427Z   /nologo -D_MBCS /DWIN32 /D_WINDOWS /bigobj -Xclang -fopenmp=libiomp5 /Ob0
+2026-10-20T09:28:40.9279625Z   /Od /RTC1 /bigobj -MDd -Z7 -clang:-MD
+2026-10-20T09:28:40.9279801Z   -clang:-MTCMakeFiles\cmTC_6927d.dir\OpenMPTryFlag.c.obj
+2026-10-20T09:28:40.9280003Z   -clang:-MFCMakeFiles\cmTC_6927d.dir\OpenMPTryFlag.c.obj.d
+2026-10-20T09:28:40.9280201Z   /FoCMakeFiles\cmTC_6927d.dir\OpenMPTryFlag.c.obj
+2026-10-20T09:28:40.9280367Z   /FdCMakeFiles\cmTC_6927d.dir\ -c --
+2026-10-20T09:28:40.9280540Z   B:\src\pytorch\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.c
+2026-10-20T09:28:40.9280664Z 
+2026-10-20T09:28:40.9280755Z   FAILED: [code=1] CMakeFiles/cmTC_6927d.dir/OpenMPTryFlag.c.obj 
+2026-10-20T09:28:40.9280886Z 
+2026-10-20T09:28:40.9280946Z   C:\ProgramData\chocolatey\bin\sccache.EXE
+2026-10-20T09:28:40.9281188Z   C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\llvm\bin\clang-cl.exe
+2026-10-20T09:28:40.9281477Z   /nologo -D_MBCS /DWIN32 /D_WINDOWS /bigobj -Xclang -fopenmp=libiomp5 /Ob0
+2026-10-20T09:28:40.9281669Z   /Od /RTC1 /bigobj -MDd -Z7 -clang:-MD
+2026-10-20T09:28:40.9281833Z   -clang:-MTCMakeFiles\cmTC_6927d.dir\OpenMPTryFlag.c.obj
+2026-10-20T09:28:40.9282032Z   -clang:-MFCMakeFiles\cmTC_6927d.dir\OpenMPTryFlag.c.obj.d
+2026-10-20T09:28:40.9282420Z   /FoCMakeFiles\cmTC_6927d.dir\OpenMPTryFlag.c.obj
+2026-10-20T09:28:40.9282578Z   /FdCMakeFiles\cmTC_6927d.dir\ -c --
+2026-10-20T09:28:40.9282744Z   B:\src\pytorch\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.c
+2026-10-20T09:28:40.9282868Z 
+2026-10-20T09:28:40.9282977Z   B:\src\pytorch\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.c(8,3): error: use
+2026-10-20T09:28:40.9283230Z   of undeclared identifier 'breaks_on_purpose'
+2026-10-20T09:28:40.9283336Z 
+2026-10-20T09:28:40.9283386Z       8 |   breaks_on_purpose
+2026-10-20T09:28:40.9283509Z         |   ^~~~~~~~~~~~~~~~~
+2026-10-20T09:28:40.9283581Z 
+2026-10-20T09:28:40.9283628Z   1 error generated.
+2026-10-20T09:28:40.9283698Z 
+2026-10-20T09:28:40.9283755Z   ninja: build stopped: subcommand failed.
+2026-10-20T09:28:40.9283851Z 
+2026-10-20T09:28:40.9283853Z 
+2026-10-20T09:28:40.9283855Z 
+2026-10-20T09:28:40.9283910Z Call Stack (most recent call first):
+2026-10-20T09:28:40.9284076Z   cmake/Modules/FindOpenMP.cmake:567 (_OPENMP_GET_FLAGS)
+2026-10-20T09:28:40.9284252Z   cmake/Dependencies.cmake:966 (include)
+2026-10-20T09:28:40.9284394Z   CMakeLists.txt:1136 (include)
+2026-10-20T09:28:40.9284477Z 
+2026-10-20T09:28:40.9284479Z 
+2026-10-20T09:28:41.0963432Z -- Check OMP with lib C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/lib/x64/libomp.lib and flags -Xclang -fopenmp
+2026-10-20T09:28:41.4926275Z -- Check OMP with lib C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/lib/x64/libomp.lib and flags -Xclang -fopenmp=libomp
+2026-10-20T09:28:41.6604031Z CMake Warning at cmake/Modules/FindOpenMP.cmake:351 (message):
+2026-10-20T09:28:41.6604323Z   Detecting CXX OpenMP compiler ABI info compiled with the following output:
+2026-10-20T09:28:41.6604490Z 
+2026-10-20T09:28:41.6604575Z   Change Dir: 'B:/src/pytorch/build/CMakeFiles/CMakeTmp'
+2026-10-20T09:28:41.6604693Z 
+2026-10-20T09:28:41.6604695Z 
+2026-10-20T09:28:41.6604698Z 
+2026-10-20T09:28:41.6604748Z   Run Build Command(s):
+2026-10-20T09:28:41.6604952Z   C:\home\runner\_work\_tool\Python\3.13.16\x64\Scripts\ninja -v cmTC_06823
+2026-10-20T09:28:41.6605097Z 
+2026-10-20T09:28:41.6605163Z   [1/2] C:\ProgramData\chocolatey\bin\sccache.EXE
+2026-10-20T09:28:41.6605430Z   C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\llvm\bin\clang-cl.exe
+2026-10-20T09:28:41.6605720Z   /nologo -TP -D_MBCS /DWIN32 /D_WINDOWS /EHsc /Zc:__cplusplus
+2026-10-20T09:28:41.6605959Z   /D_DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR /bigobj /FS /utf-8 -DUSE_PTHREADPOOL
+2026-10-20T09:28:41.6606214Z   -Xclang -fopenmp=libomp /Ob0 /Od /RTC1 /bigobj -std:c++20 -MDd -Z7
+2026-10-20T09:28:41.6606450Z   -clang:-MD -clang:-MTCMakeFiles\cmTC_06823.dir\OpenMPTryFlag.cpp.obj
+2026-10-20T09:28:41.6606678Z   -clang:-MFCMakeFiles\cmTC_06823.dir\OpenMPTryFlag.cpp.obj.d
+2026-10-20T09:28:41.6606880Z   /FoCMakeFiles\cmTC_06823.dir\OpenMPTryFlag.cpp.obj
+2026-10-20T09:28:41.6607048Z   /FdCMakeFiles\cmTC_06823.dir\ -c --
+2026-10-20T09:28:41.6607224Z   B:\src\pytorch\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp
+2026-10-20T09:28:41.6607352Z 
+2026-10-20T09:28:41.6607448Z   FAILED: [code=1] CMakeFiles/cmTC_06823.dir/OpenMPTryFlag.cpp.obj 
+2026-10-20T09:28:41.6607586Z 
+2026-10-20T09:28:41.6607647Z   C:\ProgramData\chocolatey\bin\sccache.EXE
+2026-10-20T09:28:41.6607894Z   C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\llvm\bin\clang-cl.exe
+2026-10-20T09:28:41.6608164Z   /nologo -TP -D_MBCS /DWIN32 /D_WINDOWS /EHsc /Zc:__cplusplus
+2026-10-20T09:28:41.6608394Z   /D_DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR /bigobj /FS /utf-8 -DUSE_PTHREADPOOL
+2026-10-20T09:28:41.6608638Z   -Xclang -fopenmp=libomp /Ob0 /Od /RTC1 /bigobj -std:c++20 -MDd -Z7
+2026-10-20T09:28:41.6608863Z   -clang:-MD -clang:-MTCMakeFiles\cmTC_06823.dir\OpenMPTryFlag.cpp.obj
+2026-10-20T09:28:41.6609089Z   -clang:-MFCMakeFiles\cmTC_06823.dir\OpenMPTryFlag.cpp.obj.d
+2026-10-20T09:28:41.6609283Z   /FoCMakeFiles\cmTC_06823.dir\OpenMPTryFlag.cpp.obj
+2026-10-20T09:28:41.6609650Z   /FdCMakeFiles\cmTC_06823.dir\ -c --
+2026-10-20T09:28:41.6609822Z   B:\src\pytorch\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp
+2026-10-20T09:28:41.6609949Z 
+2026-10-20T09:28:41.6610058Z   B:\src\pytorch\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp(8,3): error:
+2026-10-20T09:28:41.6610276Z   use of undeclared identifier 'breaks_on_purpose'
+2026-10-20T09:28:41.6610386Z 
+2026-10-20T09:28:41.6610440Z       8 |   breaks_on_purpose
+2026-10-20T09:28:41.6610559Z         |   ^~~~~~~~~~~~~~~~~
+2026-10-20T09:28:41.6610636Z 
+2026-10-20T09:28:41.6610682Z   1 error generated.
+2026-10-20T09:28:41.6610750Z 
+2026-10-20T09:28:41.6610812Z   ninja: build stopped: subcommand failed.
+2026-10-20T09:28:41.6610910Z 
+2026-10-20T09:28:41.6610913Z 
+2026-10-20T09:28:41.6610915Z 
+2026-10-20T09:28:41.6610969Z Call Stack (most recent call first):
+2026-10-20T09:28:41.6611135Z   cmake/Modules/FindOpenMP.cmake:567 (_OPENMP_GET_FLAGS)
+2026-10-20T09:28:41.6611305Z   cmake/Dependencies.cmake:966 (include)
+2026-10-20T09:28:41.6611456Z   CMakeLists.txt:1136 (include)
+2026-10-20T09:28:41.6611540Z 
+2026-10-20T09:28:41.6611542Z 
+2026-10-20T09:28:41.8297263Z -- Check OMP with lib C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/lib/x64/libomp.lib and flags -Xclang -fopenmp=libiomp5
+2026-10-20T09:28:42.0005810Z CMake Warning at cmake/Modules/FindOpenMP.cmake:351 (message):
+2026-10-20T09:28:42.0006085Z   Detecting CXX OpenMP compiler ABI info compiled with the following output:
+2026-10-20T09:28:42.0006252Z 
+2026-10-20T09:28:42.0006341Z   Change Dir: 'B:/src/pytorch/build/CMakeFiles/CMakeTmp'
+2026-10-20T09:28:42.0006475Z 
+2026-10-20T09:28:42.0006478Z 
+2026-10-20T09:28:42.0006480Z 
+2026-10-20T09:28:42.0006531Z   Run Build Command(s):
+2026-10-20T09:28:42.0006712Z   C:\home\runner\_work\_tool\Python\3.13.16\x64\Scripts\ninja -v cmTC_a6132
+2026-10-20T09:28:42.0006861Z 
+2026-10-20T09:28:42.0006927Z   [1/2] C:\ProgramData\chocolatey\bin\sccache.EXE
+2026-10-20T09:28:42.0007206Z   C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\llvm\bin\clang-cl.exe
+2026-10-20T09:28:42.0007489Z   /nologo -TP -D_MBCS /DWIN32 /D_WINDOWS /EHsc /Zc:__cplusplus
+2026-10-20T09:28:42.0007734Z   /D_DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR /bigobj /FS /utf-8 -DUSE_PTHREADPOOL
+2026-10-20T09:28:42.0007985Z   -Xclang -fopenmp=libiomp5 /Ob0 /Od /RTC1 /bigobj -std:c++20 -MDd -Z7
+2026-10-20T09:28:42.0008224Z   -clang:-MD -clang:-MTCMakeFiles\cmTC_a6132.dir\OpenMPTryFlag.cpp.obj
+2026-10-20T09:28:42.0008452Z   -clang:-MFCMakeFiles\cmTC_a6132.dir\OpenMPTryFlag.cpp.obj.d
+2026-10-20T09:28:42.0008652Z   /FoCMakeFiles\cmTC_a6132.dir\OpenMPTryFlag.cpp.obj
+2026-10-20T09:28:42.0008822Z   /FdCMakeFiles\cmTC_a6132.dir\ -c --
+2026-10-20T09:28:42.0009004Z   B:\src\pytorch\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp
+2026-10-20T09:28:42.0009133Z 
+2026-10-20T09:28:42.0009227Z   FAILED: [code=1] CMakeFiles/cmTC_a6132.dir/OpenMPTryFlag.cpp.obj 
+2026-10-20T09:28:42.0009363Z 
+2026-10-20T09:28:42.0009426Z   C:\ProgramData\chocolatey\bin\sccache.EXE
+2026-10-20T09:28:42.0009670Z   C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\llvm\bin\clang-cl.exe
+2026-10-20T09:28:42.0009941Z   /nologo -TP -D_MBCS /DWIN32 /D_WINDOWS /EHsc /Zc:__cplusplus
+2026-10-20T09:28:42.0010170Z   /D_DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR /bigobj /FS /utf-8 -DUSE_PTHREADPOOL
+2026-10-20T09:28:42.0010412Z   -Xclang -fopenmp=libiomp5 /Ob0 /Od /RTC1 /bigobj -std:c++20 -MDd -Z7
+2026-10-20T09:28:42.0010642Z   -clang:-MD -clang:-MTCMakeFiles\cmTC_a6132.dir\OpenMPTryFlag.cpp.obj
+2026-10-20T09:28:42.0010861Z   -clang:-MFCMakeFiles\cmTC_a6132.dir\OpenMPTryFlag.cpp.obj.d
+2026-10-20T09:28:42.0011057Z   /FoCMakeFiles\cmTC_a6132.dir\OpenMPTryFlag.cpp.obj
+2026-10-20T09:28:42.0011221Z   /FdCMakeFiles\cmTC_a6132.dir\ -c --
+2026-10-20T09:28:42.0011388Z   B:\src\pytorch\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp
+2026-10-20T09:28:42.0011516Z 
+2026-10-20T09:28:42.0011622Z   B:\src\pytorch\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp(8,3): error:
+2026-10-20T09:28:42.0012037Z   use of undeclared identifier 'breaks_on_purpose'
+2026-10-20T09:28:42.0012150Z 
+2026-10-20T09:28:42.0012201Z       8 |   breaks_on_purpose
+2026-10-20T09:28:42.0012328Z         |   ^~~~~~~~~~~~~~~~~
+2026-10-20T09:28:42.0012402Z 
+2026-10-20T09:28:42.0012448Z   1 error generated.
+2026-10-20T09:28:42.0012515Z 
+2026-10-20T09:28:42.0012576Z   ninja: build stopped: subcommand failed.
+2026-10-20T09:28:42.0012672Z 
+2026-10-20T09:28:42.0012674Z 
+2026-10-20T09:28:42.0012677Z 
+2026-10-20T09:28:42.0012731Z Call Stack (most recent call first):
+2026-10-20T09:28:42.0012896Z   cmake/Modules/FindOpenMP.cmake:567 (_OPENMP_GET_FLAGS)
+2026-10-20T09:28:42.0013073Z   cmake/Dependencies.cmake:966 (include)
+2026-10-20T09:28:42.0013217Z   CMakeLists.txt:1136 (include)
+2026-10-20T09:28:42.0013299Z 
+2026-10-20T09:28:42.0013302Z 
+2026-10-20T09:28:42.1675825Z -- Check OMP with lib C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/lib/x64/libomp.lib and flags -Xclang -fopenmp
+2026-10-20T09:28:42.9724740Z -- Found OpenMP_C: -Xclang -fopenmp
+2026-10-20T09:28:43.3864041Z -- Found OpenMP_CXX: -Xclang -fopenmp
+2026-10-20T09:28:43.3866000Z -- Found OpenMP: TRUE
+2026-10-20T09:28:43.3866774Z -- Adding OpenMP CXX_FLAGS: -Xclang -fopenmp
+2026-10-20T09:28:43.3867129Z -- Will link against OpenMP libraries: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/lib/x64/libomp.lib
+2026-10-20T09:28:43.3869571Z -- Found nvtx3: B:/src/pytorch/third_party/NVTX/c/include
+2026-10-20T09:28:43.3932516Z Building PyTorch for GPU arch: gfx1100;gfx1101;gfx1102;gfx1103;gfx1151;gfx1200;gfx1201;gfx90a;gfx900;gfx906;gfx908;gfx1010;gfx1011;gfx1012;gfx1030;gfx1031;gfx1032;gfx1033;gfx1034;gfx1035;gfx1036;gfx1150;gfx1152;gfx1153
+2026-10-20T09:28:45.2630734Z -- The HIP compiler identification is Clang 24.0.0 with GNU-like command-line
+2026-10-20T09:28:45.4934992Z -- HIP language enabled with compiler: C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/lib/llvm/bin/clang++.exe
+2026-10-20T09:28:45.4935630Z -- HIP architectures: gfx1100;gfx1101;gfx1102;gfx1103;gfx1151;gfx1200;gfx1201;gfx90a;gfx900;gfx906;gfx908;gfx1010;gfx1011;gfx1012;gfx1030;gfx1031;gfx1032;gfx1033;gfx1034;gfx1035;gfx1036;gfx1150;gfx1152;gfx1153
+2026-10-20T09:28:45.5226931Z -- HIP: Using hipcc from relative path: C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/bin/hipcc.exe
+2026-10-20T09:28:45.5879654Z -- HIP_PLATFORM using hip_HIPCONFIG_EXECUTABLE: amd
+2026-10-20T09:28:45.6026700Z -- Performing Test HIP_CLANG_SUPPORTS_PARALLEL_JOBS
+2026-10-20T09:28:45.9859987Z -- Performing Test HIP_CLANG_SUPPORTS_PARALLEL_JOBS - Success
+2026-10-20T09:28:46.0143373Z hip VERSION: 7.17.26416
+2026-10-20T09:28:46.0143531Z HIP version: 7.17.26416
+2026-10-20T09:28:46.0350741Z -- Reading ROCM version from: C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include/rocm-core/rocm_version.h
+2026-10-20T09:28:46.0351076Z -- Content: 
+2026-10-20T09:28:46.0389255Z 
+2026-10-20T09:28:46.0389615Z ***** ROCm version from rocm_version.h ****
+2026-10-20T09:28:46.0389741Z 
+2026-10-20T09:28:46.0389794Z ROCM_VERSION_DEV: 10.2.0
+2026-10-20T09:28:46.0389941Z ROCM_VERSION_DEV_MAJOR: 10
+2026-10-20T09:28:46.0390068Z ROCM_VERSION_DEV_MINOR: 2
+2026-10-20T09:28:46.0390192Z ROCM_VERSION_DEV_PATCH: 0
+2026-10-20T09:28:46.0390317Z ROCM_VERSION_DEV_INT:   100200
+2026-10-20T09:28:46.0390444Z HIP_VERSION_MAJOR: 7
+2026-10-20T09:28:46.0390557Z HIP_VERSION_MINOR: 17
+2026-10-20T09:28:46.0390674Z TORCH_HIP_VERSION: 717
+2026-10-20T09:28:46.0390743Z 
+2026-10-20T09:28:46.0390816Z ***** Library versions from cmake find_package *****
+2026-10-20T09:28:46.0390930Z 
+2026-10-20T09:28:46.0580697Z amd_comgr VERSION: 3.5.0
+2026-10-20T09:28:46.0729631Z -- HIP: Using hipcc from relative path: C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/bin/hipcc.exe
+2026-10-20T09:28:46.1138144Z rocrand VERSION: 5.2.0
+2026-10-20T09:28:46.1447275Z hiprand VERSION: 3.4.0
+2026-10-20T09:28:46.1684334Z rocblas VERSION: 5.8.0
+2026-10-20T09:28:46.2146634Z hipblas VERSION: 3.8.0
+2026-10-20T09:28:46.2355241Z miopen VERSION: 3.6.2
+2026-10-20T09:28:46.2585438Z hipfft VERSION: 1.0.27
+2026-10-20T09:28:46.2810202Z hipsparse VERSION: 4.8.0
+2026-10-20T09:28:46.2959423Z rocprim VERSION: 4.8.0
+2026-10-20T09:28:46.3163010Z hipcub VERSION: 4.7.1
+2026-10-20T09:28:46.3323115Z rocthrust VERSION: 4.7.1
+2026-10-20T09:28:46.3503874Z hipsolver VERSION: 3.8.0
+2026-10-20T09:28:46.3767955Z rocsolver VERSION: 3.38.0
+2026-10-20T09:28:46.5511219Z CMake Warning at cmake/public/LoadHIP.cmake:79 (find_package):
+2026-10-20T09:28:46.5511506Z   By not providing "Findrocshmem.cmake" in CMAKE_MODULE_PATH this project has
+2026-10-20T09:28:46.5511773Z   asked CMake to find a package configuration file provided by "rocshmem",
+2026-10-20T09:28:46.5511975Z   but CMake did not find one.
+2026-10-20T09:28:46.5512072Z 
+2026-10-20T09:28:46.5512213Z   Could not find a package configuration file provided by "rocshmem" with any
+2026-10-20T09:28:46.5512420Z   of the following names:
+2026-10-20T09:28:46.5512501Z 
+2026-10-20T09:28:46.5512545Z     rocshmem.cps
+2026-10-20T09:28:46.5512850Z     rocshmemConfig.cmake
+2026-10-20T09:28:46.5512975Z     rocshmem-config.cmake
+2026-10-20T09:28:46.5513053Z 
+2026-10-20T09:28:46.5513152Z   Add the installation prefix of "rocshmem" to CMAKE_PREFIX_PATH or set
+2026-10-20T09:28:46.5513398Z   "rocshmem_DIR" to a directory containing one of the above files.  If
+2026-10-20T09:28:46.5513639Z   "rocshmem" provides a separate development package or SDK, be sure it has
+2026-10-20T09:28:46.5513833Z   been installed.
+2026-10-20T09:28:46.5513952Z Call Stack (most recent call first):
+2026-10-20T09:28:46.5514135Z   cmake/public/LoadHIP.cmake:351 (find_package_and_print_version)
+2026-10-20T09:28:46.5514333Z   cmake/Dependencies.cmake:1038 (include)
+2026-10-20T09:28:46.5514481Z   CMakeLists.txt:1136 (include)
+2026-10-20T09:28:46.5514570Z 
+2026-10-20T09:28:46.5514573Z 
+2026-10-20T09:28:46.5516209Z Optional package rocshmem not found
+2026-10-20T09:28:46.5516506Z CMake Warning at cmake/public/LoadHIP.cmake:354 (message):
+2026-10-20T09:28:46.5516711Z   Work around hiprtc cmake failure for cmake >= 4
+2026-10-20T09:28:46.5516881Z Call Stack (most recent call first):
+2026-10-20T09:28:46.5517030Z   cmake/Dependencies.cmake:1038 (include)
+2026-10-20T09:28:46.5517177Z   CMakeLists.txt:1136 (include)
+2026-10-20T09:28:46.5517264Z 
+2026-10-20T09:28:46.5517268Z 
+2026-10-20T09:28:46.5698276Z hiprtc VERSION: 7.17.26416
+2026-10-20T09:28:46.6288740Z hipblaslt VERSION: 1.5.0
+2026-10-20T09:28:46.8010655Z CMake Warning at cmake/public/LoadHIP.cmake:79 (find_package):
+2026-10-20T09:28:46.8010956Z   By not providing "Findhipsparselt.cmake" in CMAKE_MODULE_PATH this project
+2026-10-20T09:28:46.8011222Z   has asked CMake to find a package configuration file provided by
+2026-10-20T09:28:46.8011421Z   "hipsparselt", but CMake did not find one.
+2026-10-20T09:28:46.8011557Z 
+2026-10-20T09:28:46.8011663Z   Could not find a package configuration file provided by "hipsparselt" with
+2026-10-20T09:28:46.8011868Z   any of the following names:
+2026-10-20T09:28:46.8011953Z 
+2026-10-20T09:28:46.8012018Z     hipsparselt.cps
+2026-10-20T09:28:46.8012149Z     hipsparseltConfig.cmake
+2026-10-20T09:28:46.8012286Z     hipsparselt-config.cmake
+2026-10-20T09:28:46.8012372Z 
+2026-10-20T09:28:46.8012475Z   Add the installation prefix of "hipsparselt" to CMAKE_PREFIX_PATH or set
+2026-10-20T09:28:46.8012727Z   "hipsparselt_DIR" to a directory containing one of the above files.  If
+2026-10-20T09:28:46.8012971Z   "hipsparselt" provides a separate development package or SDK, be sure it
+2026-10-20T09:28:46.8013159Z   has been installed.
+2026-10-20T09:28:46.8013285Z Call Stack (most recent call first):
+2026-10-20T09:28:46.8013473Z   cmake/public/LoadHIP.cmake:375 (find_package_and_print_version)
+2026-10-20T09:28:46.8013671Z   cmake/Dependencies.cmake:1038 (include)
+2026-10-20T09:28:46.8014106Z   CMakeLists.txt:1136 (include)
+2026-10-20T09:28:46.8014191Z 
+2026-10-20T09:28:46.8014193Z 
+2026-10-20T09:28:46.8014325Z Optional package hipsparselt not found
+2026-10-20T09:28:46.8241553Z -- Found libhipcxx: C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/lib/cmake/libhipcxx/libhipcxx-config.cmake (found version "3.0.2.0")
+2026-10-20T09:28:46.8242739Z libhipcxx VERSION: 3.0.2.0
+2026-10-20T09:28:46.8243750Z INFOCompiling with HIP for AMD.
+2026-10-20T09:28:46.8244320Z TORCH_HIP_VERSION=717 is added as a compiler defines
+2026-10-20T09:28:46.8245122Z -- Disabling Kernel Assert for ROCm
+2026-10-20T09:28:46.8310520Z -- MSVC detected
+2026-10-20T09:28:46.8310658Z -- Set USE_REDIS OFF
+2026-10-20T09:28:46.8310784Z -- Set USE_IBVERBS OFF
+2026-10-20T09:28:46.8310897Z -- Set USE_NCCL OFF
+2026-10-20T09:28:46.8311001Z -- Set USE_RCCL OFF
+2026-10-20T09:28:46.8311111Z -- Set USE_LIBUV ON
+2026-10-20T09:28:46.8311232Z -- Only USE_LIBUV is supported on Windows
+2026-10-20T09:28:46.8348249Z -- Gloo build as SHARED library
+2026-10-20T09:28:46.8483980Z -- HIP: Using hipcc from relative path: C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/bin/hipcc.exe
+2026-10-20T09:28:46.8768927Z -- Found HIP: 7.17.26416
+2026-10-20T09:28:46.8769343Z -- GLOO_ROCM_ARCH: gfx1100;gfx1101;gfx1102;gfx1103;gfx1151;gfx1200;gfx1201;gfx90a;gfx900;gfx906;gfx908;gfx1010;gfx1011;gfx1012;gfx1030;gfx1031;gfx1032;gfx1033;gfx1034;gfx1035;gfx1036;gfx1150;gfx1152;gfx1153
+2026-10-20T09:28:47.0557925Z -- Found Python3: C:/home/runner/_work/_tool/Python/3.13.16/x64/python.exe (found version "3.13.16") found components: Interpreter
+2026-10-20T09:28:47.4013873Z Successfully preprocessed all matching files.
+2026-10-20T09:28:47.4443217Z -- GLOO_USE_TORCH_DTYPES : 1 B:/src/pytorch;B:/src/pytorch/build
+2026-10-20T09:28:47.6405730Z -- ONNX_PROTOC_EXECUTABLE: $<TARGET_FILE:protobuf::protoc>
+2026-10-20T09:28:47.6405965Z -- Protobuf_VERSION: Protobuf_VERSION_NOTFOUND
+2026-10-20T09:28:47.6413164Z Generated: B:/src/pytorch/build/third_party/onnx/onnx/onnx_onnx_torch-ml.proto
+2026-10-20T09:28:47.6414859Z Generated: B:/src/pytorch/build/third_party/onnx/onnx/onnx-operators_onnx_torch-ml.proto
+2026-10-20T09:28:47.6416131Z Generated: B:/src/pytorch/build/third_party/onnx/onnx/onnx-data_onnx_torch.proto
+2026-10-20T09:28:47.9529166Z -- 
+2026-10-20T09:28:47.9529371Z -- ******** Summary ********
+2026-10-20T09:28:47.9529559Z --   CMake version                     : 4.4.4
+2026-10-20T09:28:47.9529862Z --   CMake command                     : C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/cmake/data/bin/cmake.exe
+2026-10-20T09:28:47.9530138Z --   System                            : Windows
+2026-10-20T09:28:47.9530433Z --   C++ compiler                      : C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/lib/llvm/bin/clang-cl.exe
+2026-10-20T09:28:47.9530727Z --   C++ compiler version              : 24.0.0
+2026-10-20T09:28:47.9531071Z --   CXX flags                         : /DWIN32 /D_WINDOWS /EHsc /Zc:__cplusplus /D_DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR /bigobj /FS /utf-8 -DUSE_PTHREADPOOL /EHsc /wd26812
+2026-10-20T09:28:47.9531416Z --   Build type                        : Release
+2026-10-20T09:28:47.9531767Z --   Compile definitions               : ROCM_ON_WINDOWS;ROCM_VERSION=100200;TORCH_HIP_VERSION=717;USE_LAYERNORM_FAST_RECIPROCAL;CAFFE2_USE_GLOO;ONNX_ML=1;ONNXIFI_ENABLE_EXT=1
+2026-10-20T09:28:47.9532524Z --   CMAKE_PREFIX_PATH                 : C:\home\runner\_work\_tool\Python\3.13.16\x64;C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages;C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\cmake;C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel
+2026-10-20T09:28:47.9533233Z --   CMAKE_INSTALL_PREFIX              : C:/Users/ContainerAdministrator/AppData/Local/Temp/tmp6vau31c1/wheel/platlib/torch
+2026-10-20T09:28:47.9534086Z --   CMAKE_MODULE_PATH                 : B:/src/pytorch/cmake/Modules;C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/lib/cmake/tensilelite;C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/lib/cmake/hipblaslt
+2026-10-20T09:28:47.9534574Z -- 
+2026-10-20T09:28:47.9534684Z --   ONNX version                      : 1.18.0
+2026-10-20T09:28:47.9534849Z --   ONNX NAMESPACE                    : onnx_torch
+2026-10-20T09:28:47.9535012Z --   ONNX_USE_LITE_PROTO               : OFF
+2026-10-20T09:28:47.9535170Z --   USE_PROTOBUF_SHARED_LIBS          : OFF
+2026-10-20T09:28:47.9535323Z --   ONNX_DISABLE_EXCEPTIONS           : OFF
+2026-10-20T09:28:47.9535472Z --   ONNX_DISABLE_STATIC_REGISTRATION  : OFF
+2026-10-20T09:28:47.9535619Z --   ONNX_WERROR                       : OFF
+2026-10-20T09:28:47.9535765Z --   ONNX_BUILD_TESTS                  : OFF
+2026-10-20T09:28:47.9535908Z --   BUILD_SHARED_LIBS                 : OFF
+2026-10-20T09:28:47.9536046Z -- 
+2026-10-20T09:28:47.9536233Z --   Protobuf compiler                 : $<TARGET_FILE:protobuf::protoc>
+2026-10-20T09:28:47.9536426Z --   Protobuf includes                 : 
+2026-10-20T09:28:47.9536573Z --   Protobuf libraries                : 
+2026-10-20T09:28:47.9536824Z --   ONNX_BUILD_PYTHON                 : OFF
+2026-10-20T09:28:47.9537017Z -- Found CUDA with FP16 support, compiling with torch.cuda.HalfTensor
+2026-10-20T09:28:47.9537219Z -- Adding -DNDEBUG to compile flags
+2026-10-20T09:28:47.9776291Z -- Checking prototype magma_get_sgeqrf_nb for MAGMA_V2
+2026-10-20T09:28:48.1267097Z -- Checking prototype magma_get_sgeqrf_nb for MAGMA_V2 - False
+2026-10-20T09:28:48.1267341Z -- MAGMA not found. Compiling without MAGMA support
+2026-10-20T09:28:48.1441114Z -- Looking for sbgemm_
+2026-10-20T09:28:48.4355161Z -- Looking for sbgemm_ - not found
+2026-10-20T09:28:48.4358586Z -- Looking for shgemm_
+2026-10-20T09:28:48.7519319Z -- Looking for shgemm_ - not found
+2026-10-20T09:28:48.7607754Z -- Looking for cheev_
+2026-10-20T09:28:49.1588420Z -- Looking for cheev_ - found
+2026-10-20T09:28:49.1588612Z -- Looking for cgesdd_
+2026-10-20T09:28:49.5465161Z -- Looking for cgesdd_ - found
+2026-10-20T09:28:49.5465614Z -- Found a library with LAPACK API (open).
+2026-10-20T09:28:49.5558256Z -- Will build oneDNN UKERNEL
+2026-10-20T09:28:49.5652421Z -- MKLDNN_CPU_RUNTIME = OMP
+2026-10-20T09:28:49.5716267Z CMake Warning (deprecated) at third_party/ideep/mkl-dnn/CMakeLists.txt:36 (cmake_policy):
+2026-10-20T09:28:49.5716569Z   The OLD behavior for policy CMP0146 will be removed from a future version
+2026-10-20T09:28:49.5716760Z   of CMake.
+2026-10-20T09:28:49.5716824Z 
+2026-10-20T09:28:49.5716924Z   The cmake-policies(7) manual explains that the OLD behaviors of all
+2026-10-20T09:28:49.5717171Z   policies are deprecated and that a policy should be set to OLD only under
+2026-10-20T09:28:49.5717424Z   specific short-term circumstances.  Projects should be ported to the NEW
+2026-10-20T09:28:49.5717642Z   behavior and not rely on setting a policy to OLD.
+2026-10-20T09:28:49.5717869Z This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+2026-10-20T09:28:49.5718060Z to suppress it.
+2026-10-20T09:28:49.5718127Z 
+2026-10-20T09:28:49.5718240Z -- DNNL_TARGET_ARCH: X64
+2026-10-20T09:28:49.5829558Z -- Setting ONEDNN_LIBRARY_TYPE from legacy DNNL_LIBRARY_TYPE
+2026-10-20T09:28:49.5829777Z -- ONEDNN_LIBRARY_TYPE: STATIC (default: SHARED)
+2026-10-20T09:28:49.5830123Z -- Setting ONEDNN_ARCH_OPT_FLAGS from legacy DNNL_ARCH_OPT_FLAGS
+2026-10-20T09:28:49.5830324Z -- ONEDNN_ARCH_OPT_FLAGS:  (default: HostOpts)
+2026-10-20T09:28:49.5832624Z -- Setting ONEDNN_ENABLE_PRIMITIVE_CACHE from legacy DNNL_ENABLE_PRIMITIVE_CACHE
+2026-10-20T09:28:49.5833813Z -- Setting ONEDNN_EXPERIMENTAL_UKERNEL from legacy DNNL_EXPERIMENTAL_UKERNEL
+2026-10-20T09:28:49.5834046Z -- ONEDNN_EXPERIMENTAL_UKERNEL: ON (default: OFF)
+2026-10-20T09:28:49.5838102Z -- Setting ONEDNN_BUILD_EXAMPLES from legacy DNNL_BUILD_EXAMPLES
+2026-10-20T09:28:49.5838533Z -- Setting ONEDNN_BUILD_TESTS from legacy DNNL_BUILD_TESTS
+2026-10-20T09:28:49.6083924Z CMake Warning (author) at C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/FindPackageHandleStandardArgs.cmake:493 (message):
+2026-10-20T09:28:49.6084372Z   The package name passed to find_package_handle_standard_args() (OpenMP_C)
+2026-10-20T09:28:49.6084637Z   does not match the name of the calling package (OpenMP).  This can lead to
+2026-10-20T09:28:49.6084887Z   problems in calling code that expects find_package() result variables
+2026-10-20T09:28:49.6085099Z   (e.g., `_FOUND`) to follow a certain pattern.
+2026-10-20T09:28:49.6085257Z Call Stack (most recent call first):
+2026-10-20T09:28:49.6085450Z   cmake/Modules/FindOpenMP.cmake:651 (find_package_handle_standard_args)
+2026-10-20T09:28:49.6085687Z   third_party/ideep/mkl-dnn/cmake/OpenMP.cmake:50 (find_package)
+2026-10-20T09:28:49.6085891Z   third_party/ideep/mkl-dnn/CMakeLists.txt:92 (include)
+2026-10-20T09:28:49.6086111Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T09:28:49.6086253Z 
+2026-10-20T09:28:49.6086711Z CMake Warning (author) at C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/FindPackageHandleStandardArgs.cmake:493 (message):
+2026-10-20T09:28:49.6087134Z   The package name passed to find_package_handle_standard_args() (OpenMP_CXX)
+2026-10-20T09:28:49.6087381Z   does not match the name of the calling package (OpenMP).  This can lead to
+2026-10-20T09:28:49.6087618Z   problems in calling code that expects find_package() result variables
+2026-10-20T09:28:49.6087818Z   (e.g., `_FOUND`) to follow a certain pattern.
+2026-10-20T09:28:49.6087971Z Call Stack (most recent call first):
+2026-10-20T09:28:49.6088157Z   cmake/Modules/FindOpenMP.cmake:651 (find_package_handle_standard_args)
+2026-10-20T09:28:49.6088387Z   third_party/ideep/mkl-dnn/cmake/OpenMP.cmake:50 (find_package)
+2026-10-20T09:28:49.6088589Z   third_party/ideep/mkl-dnn/CMakeLists.txt:92 (include)
+2026-10-20T09:28:49.6088799Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T09:28:49.6088938Z 
+2026-10-20T09:28:49.6088998Z -- Found OpenMP_C: -Xclang -fopenmp
+2026-10-20T09:28:49.6089149Z -- Found OpenMP_CXX: -Xclang -fopenmp
+2026-10-20T09:28:49.6219166Z -- Found OpenCL headers: B:/src/pytorch/third_party/ideep/mkl-dnn/third_party/opencl
+2026-10-20T09:28:49.6551144Z -- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.55.0.windows.5")
+2026-10-20T09:28:49.7158128Z -- Enabled testing coverage: CI
+2026-10-20T09:28:49.7249220Z -- Enabled workload: TRAINING
+2026-10-20T09:28:49.7249380Z -- Enabled primitives: ALL
+2026-10-20T09:28:49.7249520Z -- Enabled primitive CPU ISA: ALL
+2026-10-20T09:28:49.7249657Z -- Enabled primitive GPU ISA: ALL
+2026-10-20T09:28:49.7249794Z -- Enabled GeMM kernels ISA: ALL
+2026-10-20T09:28:49.7454450Z -- Primitive cache is enabled
+2026-10-20T09:28:49.7454643Z -- Experimental functionality for ukernels is enabled
+2026-10-20T09:28:49.8261853Z -- The ASM_MASM compiler identification is MSVC
+2026-10-20T09:28:49.8272303Z -- Found assembler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/ml64.exe
+2026-10-20T09:28:49.8933766Z -- Graph component is enabled
+2026-10-20T09:28:49.9501284Z -- Found MKL-DNN: TRUE
+2026-10-20T09:28:49.9726922Z -- {fmt} version: 12.2.1
+2026-10-20T09:28:49.9727072Z -- Build type: Release
+2026-10-20T09:28:49.9781200Z -- Performing Test HAS_NULLPTR_WARNING
+2026-10-20T09:28:50.3739435Z -- Performing Test HAS_NULLPTR_WARNING - Success
+2026-10-20T09:28:50.3993149Z -- Cannot find AOTriton runtime for ROCM 7.17.       Build runtime from source
+2026-10-20T09:28:50.3993386Z -- Building AOTriton Windows dependencies
+2026-10-20T09:28:50.4729985Z -- PYTORCH_ROCM_ARCH gfx1100;gfx1101;gfx1102;gfx1103;gfx1151;gfx1200;gfx1201;gfx90a;gfx900;gfx906;gfx908;gfx1010;gfx1011;gfx1012;gfx1030;gfx1031;gfx1032;gfx1033;gfx1034;gfx1035;gfx1036;gfx1150;gfx1152;gfx1153
+2026-10-20T09:28:50.5238017Z -- Download AOTriton pre-compiled GPU images from https://github.com/ROCm/aotriton/releases/download/0.14.2b/aotriton-0.14.2b-images-amd-gfx90a.tar.gz.
+2026-10-20T09:28:50.5580707Z -- Download AOTriton pre-compiled GPU images from https://github.com/ROCm/aotriton/releases/download/0.14.2b/aotriton-0.14.2b-images-amd-gfx110x.tar.gz.
+2026-10-20T09:28:50.5807304Z -- Download AOTriton pre-compiled GPU images from https://github.com/ROCm/aotriton/releases/download/0.14.2b/aotriton-0.14.2b-images-amd-gfx115x.tar.gz.
+2026-10-20T09:28:50.6029917Z -- Download AOTriton pre-compiled GPU images from https://github.com/ROCm/aotriton/releases/download/0.14.2b/aotriton-0.14.2b-images-amd-gfx120x.tar.gz.
+2026-10-20T09:28:50.6092306Z -- Performing Test HAS_CXX/WD4624
+2026-10-20T09:28:50.9900912Z -- Performing Test HAS_CXX/WD4624 - Success
+2026-10-20T09:28:50.9910035Z -- Performing Test HAS_CXX/WD4068
+2026-10-20T09:28:51.3802793Z -- Performing Test HAS_CXX/WD4068 - Success
+2026-10-20T09:28:51.3812199Z -- Performing Test HAS_CXX/WD4067
+2026-10-20T09:28:51.7583315Z -- Performing Test HAS_CXX/WD4067 - Success
+2026-10-20T09:28:51.7592784Z -- Performing Test HAS_CXX/WD4267
+2026-10-20T09:28:52.1471771Z -- Performing Test HAS_CXX/WD4267 - Success
+2026-10-20T09:28:52.1480993Z -- Performing Test HAS_CXX/WD4661
+2026-10-20T09:28:52.5330715Z -- Performing Test HAS_CXX/WD4661 - Success
+2026-10-20T09:28:52.5340375Z -- Performing Test HAS_CXX/WD4717
+2026-10-20T09:28:52.9225850Z -- Performing Test HAS_CXX/WD4717 - Success
+2026-10-20T09:28:52.9235026Z -- Performing Test HAS_CXX/WD4244
+2026-10-20T09:28:53.3100533Z -- Performing Test HAS_CXX/WD4244 - Success
+2026-10-20T09:28:53.3109951Z -- Performing Test HAS_CXX/WD4804
+2026-10-20T09:28:53.6924624Z -- Performing Test HAS_CXX/WD4804 - Success
+2026-10-20T09:28:53.6934032Z -- Performing Test HAS_CXX/WD4273
+2026-10-20T09:28:54.0787962Z -- Performing Test HAS_CXX/WD4273 - Success
+2026-10-20T09:28:54.0797707Z -- Performing Test HAS_CXX_WNO_STRINGOP_OVERFLOW
+2026-10-20T09:28:54.4686593Z -- Performing Test HAS_CXX_WNO_STRINGOP_OVERFLOW - Failed
+2026-10-20T09:28:54.5508869Z -- 
+2026-10-20T09:28:54.5509126Z -- Architecture: x64
+2026-10-20T09:28:54.5510794Z -- Use the C++ compiler to compile (MI_USE_CXX=ON)
+2026-10-20T09:28:54.5513641Z -- 
+2026-10-20T09:28:54.5513891Z -- Library name     : mimalloc
+2026-10-20T09:28:54.5514057Z -- Version          : 2.5.2
+2026-10-20T09:28:54.5514188Z -- Build type       : release
+2026-10-20T09:28:54.5514479Z -- C++ Compiler     : C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/lib/llvm/bin/clang-cl.exe
+2026-10-20T09:28:54.5514833Z -- Compiler flags   : -W;-Wno-deprecated;/Zc:__cplusplus
+2026-10-20T09:28:54.5515043Z -- Compiler defines : MI_CMAKE_BUILD_TYPE=release;MI_BUILD_RELEASE
+2026-10-20T09:28:54.5515255Z -- Link libraries   : psapi;shell32;user32;advapi32;bcrypt
+2026-10-20T09:28:54.5515423Z -- Build targets    : static
+2026-10-20T09:28:54.5515553Z -- 
+2026-10-20T09:28:54.5740728Z -- don't use NUMA
+2026-10-20T09:28:54.5874656Z -- Looking for backtrace
+2026-10-20T09:28:54.7322870Z -- Looking for backtrace - not found
+2026-10-20T09:28:54.7376195Z -- Could NOT find Backtrace (missing: Backtrace_LIBRARY Backtrace_INCLUDE_DIR) 
+2026-10-20T09:28:56.4995375Z -- headers outputs: 
+2026-10-20T09:28:57.2183028Z -- sources outputs: 
+2026-10-20T09:28:57.8180472Z -- declarations_yaml outputs: 
+2026-10-20T09:28:57.8208895Z CMake Warning (author) in cmake/Codegen.cmake:
+2026-10-20T09:28:57.8209088Z   A logical block opening on the line
+2026-10-20T09:28:57.8209187Z 
+2026-10-20T09:28:57.8209261Z     B:/src/pytorch/cmake/Codegen.cmake:389 (if)
+2026-10-20T09:28:57.8209369Z 
+2026-10-20T09:28:57.8209413Z   closes on the line
+2026-10-20T09:28:57.8209485Z 
+2026-10-20T09:28:57.8209554Z     B:/src/pytorch/cmake/Codegen.cmake:401 (endif)
+2026-10-20T09:28:57.8209660Z 
+2026-10-20T09:28:57.8209719Z   with mis-matching arguments.
+2026-10-20T09:28:57.8210109Z Call Stack (most recent call first):
+2026-10-20T09:28:57.8210252Z   caffe2/CMakeLists.txt:11 (include)
+2026-10-20T09:28:57.8210443Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T09:28:57.8210597Z 
+2026-10-20T09:28:57.8210674Z CMake Warning (author) in cmake/Codegen.cmake:
+2026-10-20T09:28:57.8210829Z   A logical block opening on the line
+2026-10-20T09:28:57.8210922Z 
+2026-10-20T09:28:57.8210988Z     B:/src/pytorch/cmake/Codegen.cmake:403 (if)
+2026-10-20T09:28:57.8211096Z 
+2026-10-20T09:28:57.8211142Z   closes on the line
+2026-10-20T09:28:57.8211215Z 
+2026-10-20T09:28:57.8211275Z     B:/src/pytorch/cmake/Codegen.cmake:437 (endif)
+2026-10-20T09:28:57.8211385Z 
+2026-10-20T09:28:57.8211440Z   with mis-matching arguments.
+2026-10-20T09:28:57.8211572Z Call Stack (most recent call first):
+2026-10-20T09:28:57.8211707Z   caffe2/CMakeLists.txt:11 (include)
+2026-10-20T09:28:57.8211889Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T09:28:57.8212034Z 
+2026-10-20T09:28:57.8217487Z -- Performing Test COMPILER_SUPPORTS_NO_AVX256_SPLIT
+2026-10-20T09:28:58.2182341Z -- Performing Test COMPILER_SUPPORTS_NO_AVX256_SPLIT - Failed
+2026-10-20T09:28:58.2185233Z CMake Warning (author) in cmake/Codegen.cmake:
+2026-10-20T09:28:58.2185433Z   A logical block opening on the line
+2026-10-20T09:28:58.2185534Z 
+2026-10-20T09:28:58.2185611Z     B:/src/pytorch/cmake/Codegen.cmake:439 (if)
+2026-10-20T09:28:58.2185720Z 
+2026-10-20T09:28:58.2185768Z   closes on the line
+2026-10-20T09:28:58.2185841Z 
+2026-10-20T09:28:58.2185904Z     B:/src/pytorch/cmake/Codegen.cmake:443 (endif)
+2026-10-20T09:28:58.2186014Z 
+2026-10-20T09:28:58.2186070Z   with mis-matching arguments.
+2026-10-20T09:28:58.2186207Z Call Stack (most recent call first):
+2026-10-20T09:28:58.2186352Z   caffe2/CMakeLists.txt:11 (include)
+2026-10-20T09:28:58.2186544Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T09:28:58.2186709Z 
+2026-10-20T09:28:58.2186774Z CMake Warning (author) in cmake/Codegen.cmake:
+2026-10-20T09:28:58.2186929Z   A logical block opening on the line
+2026-10-20T09:28:58.2187020Z 
+2026-10-20T09:28:58.2187081Z     B:/src/pytorch/cmake/Codegen.cmake:445 (if)
+2026-10-20T09:28:58.2187186Z 
+2026-10-20T09:28:58.2187233Z   closes on the line
+2026-10-20T09:28:58.2187300Z 
+2026-10-20T09:28:58.2187363Z     B:/src/pytorch/cmake/Codegen.cmake:449 (endif)
+2026-10-20T09:28:58.2187470Z 
+2026-10-20T09:28:58.2187524Z   with mis-matching arguments.
+2026-10-20T09:28:58.2187657Z Call Stack (most recent call first):
+2026-10-20T09:28:58.2187793Z   caffe2/CMakeLists.txt:11 (include)
+2026-10-20T09:28:58.2187976Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T09:28:58.2188120Z 
+2026-10-20T09:28:58.4003325Z -- Using ATen parallel backend: OMP
+2026-10-20T09:28:58.4073073Z Building PyTorch for GPU arch: gfx1100;gfx1101;gfx1102;gfx1103;gfx1151;gfx1200;gfx1201;gfx90a;gfx900;gfx906;gfx908;gfx1010;gfx1011;gfx1012;gfx1030;gfx1031;gfx1032;gfx1033;gfx1034;gfx1035;gfx1036;gfx1150;gfx1152;gfx1153
+2026-10-20T09:28:58.4074558Z -- HIP language enabled with compiler: C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/lib/llvm/bin/clang++.exe
+2026-10-20T09:28:58.4075158Z -- HIP architectures: gfx1100;gfx1101;gfx1102;gfx1103;gfx1151;gfx1200;gfx1201;gfx90a;gfx900;gfx906;gfx908;gfx1010;gfx1011;gfx1012;gfx1030;gfx1031;gfx1032;gfx1033;gfx1034;gfx1035;gfx1036;gfx1150;gfx1152;gfx1153
+2026-10-20T09:28:58.4094916Z -- HIP: Using hipcc from relative path: C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/bin/hipcc.exe
+2026-10-20T09:28:58.4372968Z hip VERSION: 7.17.26416
+2026-10-20T09:28:58.4373278Z HIP version: 7.17.26416
+2026-10-20T09:28:58.4386715Z -- Reading ROCM version from: C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include/rocm-core/rocm_version.h
+2026-10-20T09:28:58.4387347Z -- Content: //Copyright © Advanced Micro Devices, Inc., or its affiliates.
+2026-10-20T09:28:58.4387814Z //SPDX-License-Identifier: MIT
+2026-10-20T09:28:58.4387907Z 
+2026-10-20T09:28:58.4387962Z #ifndef _ROCM_VERSION_H_
+2026-10-20T09:28:58.4388083Z #define _ROCM_VERSION_H_
+2026-10-20T09:28:58.4388159Z 
+2026-10-20T09:28:58.4388169Z 
+2026-10-20T09:28:58.4388217Z #ifdef __cplusplus
+2026-10-20T09:28:58.4388320Z extern "C" {
+2026-10-20T09:28:58.4388425Z #endif  // __cplusplus
+2026-10-20T09:28:58.4388492Z 
+2026-10-20T09:28:58.4388495Z 
+2026-10-20T09:28:58.4388554Z #if defined(_WIN32) || defined(__CYGWIN__)
+2026-10-20T09:28:58.4388712Z #define LIB_API_PUBLIC __declspec(dllexport)
+2026-10-20T09:28:58.4388863Z #define ATTRIBUTE_NON_NULL
+2026-10-20T09:28:58.4388973Z #else
+2026-10-20T09:28:58.4389105Z #define LIB_API_PUBLIC __attribute__((visibility("default")))
+2026-10-20T09:28:58.4389300Z #define ATTRIBUTE_NON_NULL __attribute__((nonnull))
+2026-10-20T09:28:58.4389444Z #endif
+2026-10-20T09:28:58.4389498Z 
+2026-10-20T09:28:58.4389554Z #define ROCM_VERSION_MAJOR   10
+2026-10-20T09:28:58.4389690Z #define ROCM_VERSION_MINOR   2
+2026-10-20T09:28:58.4389813Z #define ROCM_VERSION_PATCH   0
+2026-10-20T09:28:58.4389895Z 
+2026-10-20T09:28:58.4389993Z #define ROCM_BUILD_INFO	     "10.2.0.0-9999-c4b7035f"
+2026-10-20T09:28:58.4390230Z 
+2026-10-20T09:28:58.4390275Z typedef enum {
+2026-10-20T09:28:58.4390377Z 	VerSuccess=0,
+2026-10-20T09:28:58.4390488Z 	VerIncorrectParameters,
+2026-10-20T09:28:58.4390614Z 	VerMemoryAllocationFailed,
+2026-10-20T09:28:58.4390740Z 	VerValuesNotDefined,
+2026-10-20T09:28:58.4390916Z 	VerErrorMAX		//This should always be last value in the enumerations
+2026-10-20T09:28:58.4391096Z } VerErrors;
+2026-10-20T09:28:58.4391156Z 
+2026-10-20T09:28:58.4391158Z 
+2026-10-20T09:28:58.4391208Z //  API for getting the version
+2026-10-20T09:28:58.4391468Z //  Return val :  VerErros : API execution status.  The parameters are valid only when the execution status is SUCCESS==0
+2026-10-20T09:28:58.4391877Z LIB_API_PUBLIC VerErrors getROCmVersion(unsigned int* Major, unsigned int* Minor, unsigned int* Patch) ATTRIBUTE_NON_NULL ;
+2026-10-20T09:28:58.4392142Z //  Usage :
+2026-10-20T09:28:58.4392249Z //  int mj=0,mn=0,p=0,ret=0;
+2026-10-20T09:28:58.4392386Z //  ret=getROCMVersion(&mj,&mn,&p);
+2026-10-20T09:28:58.4392530Z //  if(ret !=VerSuccess )  // error occured
+2026-10-20T09:28:58.4392663Z //
+2026-10-20T09:28:58.4392762Z //  check for the values and
+2026-10-20T09:28:58.4392873Z //
+2026-10-20T09:28:58.4392922Z 
+2026-10-20T09:28:58.4392925Z 
+2026-10-20T09:28:58.4392927Z 
+2026-10-20T09:28:58.4392985Z //API for building build info on console
+2026-10-20T09:28:58.4393137Z LIB_API_PUBLIC VerErrors printBuildInfo();
+2026-10-20T09:28:58.4393236Z 
+2026-10-20T09:28:58.4393239Z 
+2026-10-20T09:28:58.4393278Z #ifdef __cplusplus
+2026-10-20T09:28:58.4393390Z }  // end extern "C" block
+2026-10-20T09:28:58.4393499Z #endif
+2026-10-20T09:28:58.4393553Z 
+2026-10-20T09:28:58.4393604Z #endif  //_ROCM_VERSION_H_  header guard
+2026-10-20T09:28:58.4393699Z 
+2026-10-20T09:28:58.4393701Z 
+2026-10-20T09:28:58.4393710Z 
+2026-10-20T09:28:58.4393766Z ***** ROCm version from rocm_version.h ****
+2026-10-20T09:28:58.4393863Z 
+2026-10-20T09:28:58.4393906Z ROCM_VERSION_DEV: 10.2.0
+2026-10-20T09:28:58.4394033Z ROCM_VERSION_DEV_MAJOR: 10
+2026-10-20T09:28:58.4394152Z ROCM_VERSION_DEV_MINOR: 2
+2026-10-20T09:28:58.4394273Z ROCM_VERSION_DEV_PATCH: 0
+2026-10-20T09:28:58.4394390Z ROCM_VERSION_DEV_INT:   100200
+2026-10-20T09:28:58.4394511Z HIP_VERSION_MAJOR: 7
+2026-10-20T09:28:58.4394622Z HIP_VERSION_MINOR: 17
+2026-10-20T09:28:58.4394732Z TORCH_HIP_VERSION: 717
+2026-10-20T09:28:58.4394802Z 
+2026-10-20T09:28:58.4394867Z ***** Library versions from cmake find_package *****
+2026-10-20T09:28:58.4394982Z 
+2026-10-20T09:28:58.4397041Z amd_comgr VERSION: 3.5.0
+2026-10-20T09:28:58.4425205Z rocrand VERSION: 5.2.0
+2026-10-20T09:28:58.4453913Z hiprand VERSION: 3.4.0
+2026-10-20T09:28:58.4477016Z rocblas VERSION: 5.8.0
+2026-10-20T09:28:58.4500121Z hipblas VERSION: 3.8.0
+2026-10-20T09:28:58.4569074Z miopen VERSION: 3.6.2
+2026-10-20T09:28:58.4592391Z hipfft VERSION: 1.0.27
+2026-10-20T09:28:58.4615265Z hipsparse VERSION: 4.8.0
+2026-10-20T09:28:58.4638224Z rocprim VERSION: 4.8.0
+2026-10-20T09:28:58.4661081Z hipcub VERSION: 4.7.1
+2026-10-20T09:28:58.4684052Z rocthrust VERSION: 4.7.1
+2026-10-20T09:28:58.4707063Z hipsolver VERSION: 3.8.0
+2026-10-20T09:28:58.4729885Z rocsolver VERSION: 3.38.0
+2026-10-20T09:28:58.6467613Z CMake Warning at cmake/public/LoadHIP.cmake:79 (find_package):
+2026-10-20T09:28:58.6467908Z   By not providing "Findrocshmem.cmake" in CMAKE_MODULE_PATH this project has
+2026-10-20T09:28:58.6468172Z   asked CMake to find a package configuration file provided by "rocshmem",
+2026-10-20T09:28:58.6468374Z   but CMake did not find one.
+2026-10-20T09:28:58.6468464Z 
+2026-10-20T09:28:58.6468571Z   Could not find a package configuration file provided by "rocshmem" with any
+2026-10-20T09:28:58.6468776Z   of the following names:
+2026-10-20T09:28:58.6468881Z 
+2026-10-20T09:28:58.6468928Z     rocshmem.cps
+2026-10-20T09:28:58.6469042Z     rocshmemConfig.cmake
+2026-10-20T09:28:58.6469176Z     rocshmem-config.cmake
+2026-10-20T09:28:58.6469251Z 
+2026-10-20T09:28:58.6469592Z   Add the installation prefix of "rocshmem" to CMAKE_PREFIX_PATH or set
+2026-10-20T09:28:58.6469834Z   "rocshmem_DIR" to a directory containing one of the above files.  If
+2026-10-20T09:28:58.6470072Z   "rocshmem" provides a separate development package or SDK, be sure it has
+2026-10-20T09:28:58.6470258Z   been installed.
+2026-10-20T09:28:58.6470379Z Call Stack (most recent call first):
+2026-10-20T09:28:58.6470561Z   cmake/public/LoadHIP.cmake:351 (find_package_and_print_version)
+2026-10-20T09:28:58.6470747Z   aten/CMakeLists.txt:61 (include)
+2026-10-20T09:28:58.6470838Z 
+2026-10-20T09:28:58.6470840Z 
+2026-10-20T09:28:58.6470897Z Optional package rocshmem not found
+2026-10-20T09:28:58.6471067Z CMake Warning at cmake/public/LoadHIP.cmake:354 (message):
+2026-10-20T09:28:58.6471261Z   Work around hiprtc cmake failure for cmake >= 4
+2026-10-20T09:28:58.6471419Z Call Stack (most recent call first):
+2026-10-20T09:28:58.6471557Z   aten/CMakeLists.txt:61 (include)
+2026-10-20T09:28:58.6471643Z 
+2026-10-20T09:28:58.6471646Z 
+2026-10-20T09:28:58.6489291Z hiprtc VERSION: 7.17.26416
+2026-10-20T09:28:58.6515226Z hipblaslt VERSION: 1.5.0
+2026-10-20T09:28:58.8231385Z CMake Warning at cmake/public/LoadHIP.cmake:79 (find_package):
+2026-10-20T09:28:58.8231679Z   By not providing "Findhipsparselt.cmake" in CMAKE_MODULE_PATH this project
+2026-10-20T09:28:58.8231937Z   has asked CMake to find a package configuration file provided by
+2026-10-20T09:28:58.8232136Z   "hipsparselt", but CMake did not find one.
+2026-10-20T09:28:58.8232242Z 
+2026-10-20T09:28:58.8232346Z   Could not find a package configuration file provided by "hipsparselt" with
+2026-10-20T09:28:58.8232555Z   any of the following names:
+2026-10-20T09:28:58.8232638Z 
+2026-10-20T09:28:58.8232687Z     hipsparselt.cps
+2026-10-20T09:28:58.8232821Z     hipsparseltConfig.cmake
+2026-10-20T09:28:58.8232960Z     hipsparselt-config.cmake
+2026-10-20T09:28:58.8233044Z 
+2026-10-20T09:28:58.8233146Z   Add the installation prefix of "hipsparselt" to CMAKE_PREFIX_PATH or set
+2026-10-20T09:28:58.8233401Z   "hipsparselt_DIR" to a directory containing one of the above files.  If
+2026-10-20T09:28:58.8233644Z   "hipsparselt" provides a separate development package or SDK, be sure it
+2026-10-20T09:28:58.8233831Z   has been installed.
+2026-10-20T09:28:58.8233959Z Call Stack (most recent call first):
+2026-10-20T09:28:58.8234141Z   cmake/public/LoadHIP.cmake:375 (find_package_and_print_version)
+2026-10-20T09:28:58.8234332Z   aten/CMakeLists.txt:61 (include)
+2026-10-20T09:28:58.8234418Z 
+2026-10-20T09:28:58.8234421Z 
+2026-10-20T09:28:58.8234480Z Optional package hipsparselt not found
+2026-10-20T09:28:58.8245841Z libhipcxx VERSION: 3.0.2.0
+2026-10-20T09:28:58.8318098Z ROCm is enabled.
+2026-10-20T09:28:58.9644010Z -- Building with Clang on Windows
+2026-10-20T09:28:59.8047124Z -- Could NOT find OpenSSL, try to set the path to OpenSSL root folder in the system variable OPENSSL_ROOT_DIR (missing: OPENSSL_CRYPTO_LIBRARY OPENSSL_INCLUDE_DIR) 
+2026-10-20T09:28:59.8184920Z -- Looking for sys/types.h
+2026-10-20T09:29:00.2642596Z -- Looking for sys/types.h - found
+2026-10-20T09:29:00.2643748Z -- Looking for stdint.h
+2026-10-20T09:29:00.6448232Z -- Looking for stdint.h - found
+2026-10-20T09:29:00.6449437Z -- Looking for stddef.h
+2026-10-20T09:29:01.0387391Z -- Looking for stddef.h - found
+2026-10-20T09:29:01.0387601Z -- Check size of long double
+2026-10-20T09:29:01.5176685Z -- Check size of long double - done
+2026-10-20T09:29:01.5178705Z -- Performing Test COMPILER_SUPPORTS_FLOAT128
+2026-10-20T09:29:01.6954213Z -- Performing Test COMPILER_SUPPORTS_FLOAT128 - Failed
+2026-10-20T09:29:01.6955715Z -- Performing Test COMPILER_SUPPORTS_SSE2
+2026-10-20T09:29:02.3183110Z -- Performing Test COMPILER_SUPPORTS_SSE2 - Success
+2026-10-20T09:29:02.3184320Z -- Performing Test COMPILER_SUPPORTS_SSE4
+2026-10-20T09:29:02.9278763Z -- Performing Test COMPILER_SUPPORTS_SSE4 - Success
+2026-10-20T09:29:02.9280173Z -- Performing Test COMPILER_SUPPORTS_AVX
+2026-10-20T09:29:03.5642186Z -- Performing Test COMPILER_SUPPORTS_AVX - Success
+2026-10-20T09:29:03.5643096Z -- Performing Test COMPILER_SUPPORTS_FMA4
+2026-10-20T09:29:04.1959612Z -- Performing Test COMPILER_SUPPORTS_FMA4 - Success
+2026-10-20T09:29:04.1960966Z -- Performing Test COMPILER_SUPPORTS_AVX2
+2026-10-20T09:29:04.8383147Z -- Performing Test COMPILER_SUPPORTS_AVX2 - Success
+2026-10-20T09:29:04.8384623Z -- Performing Test COMPILER_SUPPORTS_AVX512F
+2026-10-20T09:29:05.4653984Z -- Performing Test COMPILER_SUPPORTS_AVX512F - Success
+2026-10-20T09:29:05.4654669Z -- Support for OpenMP disabled by CMake option
+2026-10-20T09:29:05.4656492Z -- Performing Test COMPILER_SUPPORTS_WEAK_ALIASES
+2026-10-20T09:29:05.8689069Z -- Performing Test COMPILER_SUPPORTS_WEAK_ALIASES - Success
+2026-10-20T09:29:05.8690172Z -- Performing Test COMPILER_SUPPORTS_BUILTIN_MATH
+2026-10-20T09:29:06.2610726Z -- Performing Test COMPILER_SUPPORTS_BUILTIN_MATH - Success
+2026-10-20T09:29:06.2612024Z -- Performing Test COMPILER_SUPPORTS_SYS_GETRANDOM
+2026-10-20T09:29:06.4034607Z -- Performing Test COMPILER_SUPPORTS_SYS_GETRANDOM - Failed
+2026-10-20T09:29:06.5192322Z    Target system: Windows-10.0.20348
+2026-10-20T09:29:06.5192490Z    Target processor: AMD64
+2026-10-20T09:29:06.5192628Z    Host system: Windows-10.0.20348
+2026-10-20T09:29:06.5192763Z    Host processor: AMD64
+2026-10-20T09:29:06.5193057Z    Detected C compiler: Clang @ C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/lib/llvm/bin/clang-cl.exe
+2026-10-20T09:29:06.5193343Z    CMake: 4.4.4
+2026-10-20T09:29:06.5193464Z -- Configuring build for SLEEF-v3.8.0
+2026-10-20T09:29:06.5193679Z    Make program: C:\home\runner\_work\_tool\Python\3.13.16\x64\Scripts\ninja
+2026-10-20T09:29:06.5194264Z -- Using option `-Wall -Wno-unused-function -Wno-attributes -Wno-unused-result -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -Wno-deprecated-declarations -ffp-contract=off -fno-math-errno -fno-trapping-math` to compile libsleef
+2026-10-20T09:29:06.5194790Z -- Building shared libs : OFF
+2026-10-20T09:29:06.5194928Z -- Building static test bins: OFF
+2026-10-20T09:29:06.5195064Z -- MPFR : LIB_MPFR-NOTFOUND
+2026-10-20T09:29:06.5195193Z -- GMP : LIBGMP-NOTFOUND
+2026-10-20T09:29:06.5195309Z -- RT : 
+2026-10-20T09:29:06.5195415Z -- FFTW3 : LIBFFTW3-NOTFOUND
+2026-10-20T09:29:06.5195537Z -- OPENSSL : 
+2026-10-20T09:29:06.5195643Z -- SDE : SDE_COMMAND-NOTFOUND
+2026-10-20T09:29:06.5195775Z -- COMPILER_SUPPORTS_OPENMP : FALSE
+2026-10-20T09:29:06.5483946Z AT_INSTALL_INCLUDE_DIR include/ATen/core
+2026-10-20T09:29:06.5484193Z core header install: B:/src/pytorch/build/aten/src/ATen/core/aten_interned_strings.h
+2026-10-20T09:29:06.5484468Z core header install: B:/src/pytorch/build/aten/src/ATen/core/TensorBody.h
+2026-10-20T09:29:07.1687904Z -- Performing Test HAS_CXX_WMISSING_PROTOTYPES
+2026-10-20T09:29:07.5668583Z -- Performing Test HAS_CXX_WMISSING_PROTOTYPES - Success
+2026-10-20T09:29:07.5678302Z -- Performing Test HAS_CXX_WERROR_MISSING_PROTOTYPES
+2026-10-20T09:29:07.9646654Z -- Performing Test HAS_CXX_WERROR_MISSING_PROTOTYPES - Success
+2026-10-20T09:29:08.4506566Z INFOUSE_NVSHMEM=OFF USE_ROCM=ON rocshmem_FOUND=0 rocshmem_VERSION=
+2026-10-20T09:29:08.4568775Z CMake Warning at CMakeLists.txt:1535 (message):
+2026-10-20T09:29:08.4569011Z   Generated cmake files are only fully tested if one builds with system glog,
+2026-10-20T09:29:08.4569281Z   gflags, and protobuf.  Other settings may generate files that are not well
+2026-10-20T09:29:08.4569473Z   tested.
+2026-10-20T09:29:08.4569535Z 
+2026-10-20T09:29:08.4569537Z 
+2026-10-20T09:29:08.4809525Z -- 
+2026-10-20T09:29:08.4809736Z -- ******** Summary ********
+2026-10-20T09:29:08.4809876Z -- General:
+2026-10-20T09:29:08.4809998Z --   CMake version         : 4.4.4
+2026-10-20T09:29:08.4810277Z --   CMake command         : C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/cmake/data/bin/cmake.exe
+2026-10-20T09:29:08.4810541Z --   System                : Windows
+2026-10-20T09:29:08.4811031Z --   C++ compiler          : C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/lib/llvm/bin/clang-cl.exe
+2026-10-20T09:29:08.4811301Z --   C++ compiler id       : Clang
+2026-10-20T09:29:08.4811437Z --   C++ compiler version  : 24.0.0
+2026-10-20T09:29:08.4811572Z --   Using ccache if found : OFF
+2026-10-20T09:29:08.4812042Z --   CXX flags             : /DWIN32 /D_WINDOWS /EHsc /Zc:__cplusplus /D_DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR /bigobj /FS /utf-8 -DUSE_PTHREADPOOL -DNDEBUG -DSYMBOLICATE_MOBILE_DEBUG_HANDLE /wd4624 /wd4068 /wd4067 /wd4267 /wd4661 /wd4717 /wd4244 /wd4804 /wd4273
+2026-10-20T09:29:08.4812577Z --   Shared LD flags       : /machine:x64 /ignore:4049 /ignore:4217 /ignore:4099
+2026-10-20T09:29:08.4812860Z --   Static LD flags       : /machine:x64 /ignore:4049 /ignore:4217 /ignore:4099
+2026-10-20T09:29:08.4813085Z --   Module LD flags       : /machine:x64 /ignore:4049 /ignore:4217 /ignore:4099
+2026-10-20T09:29:08.4813268Z --   Build type            : Release
+2026-10-20T09:29:08.4813918Z --   Compile definitions   : ROCM_ON_WINDOWS;ROCM_VERSION=100200;TORCH_HIP_VERSION=717;USE_LAYERNORM_FAST_RECIPROCAL;CAFFE2_USE_GLOO;ONNX_ML=1;ONNXIFI_ENABLE_EXT=1;ONNX_NAMESPACE=onnx_torch;_CRT_SECURE_NO_DEPRECATE=1;USE_EXTERNAL_MZCRC;MINIZ_DISABLE_ZIP_READER_CRC32_CHECKS;EXPORT_AOTI_FUNCTIONS;WIN32_LEAN_AND_MEAN;_UCRT_LEGACY_INFINITY;NOMINMAX;USE_MIMALLOC
+2026-10-20T09:29:08.4814971Z --   CMAKE_PREFIX_PATH     : C:\home\runner\_work\_tool\Python\3.13.16\x64;C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages;C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\cmake;C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel
+2026-10-20T09:29:08.4815625Z --   CMAKE_INSTALL_PREFIX  : C:/Users/ContainerAdministrator/AppData/Local/Temp/tmp6vau31c1/wheel/platlib/torch
+2026-10-20T09:29:08.4815886Z --   USE_GOLD_LINKER       : OFF
+2026-10-20T09:29:08.4816063Z --   USE_CMAKE_INSTRUMENTATION: OFF
+2026-10-20T09:29:08.4816188Z -- 
+2026-10-20T09:29:08.4816288Z --   TORCH_VERSION         : 2.15.0
+2026-10-20T09:29:08.4816424Z --   BUILD_STATIC_RUNTIME_BENCHMARK: OFF
+2026-10-20T09:29:08.4816562Z --   BUILD_BINARY          : OFF
+2026-10-20T09:29:08.4816692Z --   BUILD_CUSTOM_PROTOBUF : ON
+2026-10-20T09:29:08.4816819Z --     Link local protobuf : ON
+2026-10-20T09:29:08.4816944Z --   BUILD_PYTHON          : ON
+2026-10-20T09:29:08.4817068Z --     Python version      : 3.13.16
+2026-10-20T09:29:08.4817262Z --     Python executable   : C:/home/runner/_work/_tool/Python/3.13.16/x64/python.exe
+2026-10-20T09:29:08.4817543Z --     Python library      : C:/home/runner/_work/_tool/Python/3.13.16/x64/libs/python313.lib
+2026-10-20T09:29:08.4817803Z --     Python includes     : C:/home/runner/_work/_tool/Python/3.13.16/x64/Include
+2026-10-20T09:29:08.4818203Z --     Python site-package : C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages
+2026-10-20T09:29:08.4818524Z --   SKBUILD_PLATLIB_DIR   : C:/Users/ContainerAdministrator/AppData/Local/Temp/tmp6vau31c1/wheel/platlib
+2026-10-20T09:29:08.4818770Z --   BUILD_SHARED_LIBS     : ON
+2026-10-20T09:29:08.4818912Z --   CAFFE2_USE_MSVC_STATIC_RUNTIME     : OFF
+2026-10-20T09:29:08.4819057Z --   BUILD_TEST            : 0
+2026-10-20T09:29:08.4819181Z --   BUILD_JNI             : OFF
+2026-10-20T09:29:08.4819309Z --   BUILD_MOBILE_AUTOGRAD : OFF
+2026-10-20T09:29:08.4819436Z --   BUILD_LITE_INTERPRETER: OFF
+2026-10-20T09:29:08.4819561Z --   INTERN_BUILD_MOBILE   : 
+2026-10-20T09:29:08.4819687Z --   TRACING_BASED         : OFF
+2026-10-20T09:29:08.4819809Z --   USE_BLAS              : 1
+2026-10-20T09:29:08.4819933Z --     BLAS                : open
+2026-10-20T09:29:08.4820058Z --     BLAS_HAS_SBGEMM     : 
+2026-10-20T09:29:08.4820179Z --     BLAS_HAS_SHGEMM     : 
+2026-10-20T09:29:08.4820304Z --   USE_LAPACK            : 1
+2026-10-20T09:29:08.4820424Z --     LAPACK              : open
+2026-10-20T09:29:08.4820548Z --   USE_ASAN              : OFF
+2026-10-20T09:29:08.4820667Z --   USE_LSAN              : OFF
+2026-10-20T09:29:08.4820850Z --   USE_TSAN              : OFF
+2026-10-20T09:29:08.4820972Z --   USE_CPP_CODE_COVERAGE : OFF
+2026-10-20T09:29:08.4821097Z --   USE_CUDA              : OFF
+2026-10-20T09:29:08.4821215Z --   USE_XPU               : OFF
+2026-10-20T09:29:08.4821331Z --   USE_ROCM              : ON
+2026-10-20T09:29:08.4821462Z --     ROCM_VERSION                  : 10.2.0
+2026-10-20T09:29:08.4821607Z --     USE_FLASH_ATTENTION           : ON
+2026-10-20T09:29:08.4821755Z --     USE_MEM_EFF_ATTENTION         : ON
+2026-10-20T09:29:08.4821897Z --     USE_ROCM_CK_SDPA              : OFF
+2026-10-20T09:29:08.4822040Z --     USE_ROCM_CK_SDPA_GFX12        : OFF
+2026-10-20T09:29:08.4822183Z --     USE_ROCM_CK_GEMM              : OFF
+2026-10-20T09:29:08.4822324Z --     USE_LAYERNORM_FAST_RECIPROCAL : ON
+2026-10-20T09:29:08.4822465Z --     USE_HIPSPARSELT               : OFF
+2026-10-20T09:29:08.4822607Z --     USE_CUFILE                    : OFF
+2026-10-20T09:29:08.4822737Z --   USE_EIGEN_FOR_BLAS    : 
+2026-10-20T09:29:08.4822868Z --   USE_EIGEN_FOR_SPARSE  : OFF
+2026-10-20T09:29:08.4822993Z --   USE_FBGEMM            : OFF
+2026-10-20T09:29:08.4823113Z --   USE_MSLK              : OFF
+2026-10-20T09:29:08.4823235Z --   USE_KINETO            : OFF
+2026-10-20T09:29:08.4823354Z --   USE_GFLAGS            : OFF
+2026-10-20T09:29:08.4823473Z --   USE_GLOG              : OFF
+2026-10-20T09:29:08.4823592Z --   USE_LITE_PROTO        : OFF
+2026-10-20T09:29:08.4823712Z --   USE_PYTORCH_METAL     : OFF
+2026-10-20T09:29:08.4823839Z --   USE_PYTORCH_METAL_EXPORT     : OFF
+2026-10-20T09:29:08.4823981Z --   USE_MPS               : OFF
+2026-10-20T09:29:08.4824100Z --   CAN_COMPILE_METAL     : 
+2026-10-20T09:29:08.4824227Z --   CAN_COMPILE_METAL_40  : 
+2026-10-20T09:29:08.4824351Z --   USE_MKL               : 
+2026-10-20T09:29:08.4824467Z --   USE_MKLDNN            : ON
+2026-10-20T09:29:08.4824589Z --   USE_MKLDNN_ACL        : OFF
+2026-10-20T09:29:08.4824717Z --   USE_PRIORITIZED_TEXT_FOR_LD : OFF
+2026-10-20T09:29:08.4824855Z --   USE_LLVM_BOLT         : OFF
+2026-10-20T09:29:08.4824979Z --   USE_UCC               : OFF
+2026-10-20T09:29:08.4825096Z --   USE_ITT               : ON
+2026-10-20T09:29:08.4825212Z --   USE_XCCL              : OFF
+2026-10-20T09:29:08.4825334Z --   USE_NCCL              : OFF
+2026-10-20T09:29:08.4825458Z --   Found ROCSHMEM         : 
+2026-10-20T09:29:08.4825576Z --   USE_NNPACK            : OFF
+2026-10-20T09:29:08.4825699Z --   USE_NUMPY             : ON
+2026-10-20T09:29:08.4825818Z --   USE_OPENMP            : ON
+2026-10-20T09:29:08.4825941Z --   USE_MIMALLOC          : ON
+2026-10-20T09:29:08.4826066Z --     USE_MIMALLOC_ON_MKL   : OFF
+2026-10-20T09:29:08.4826196Z --   USE_VULKAN            : OFF
+2026-10-20T09:29:08.4826321Z --   USE_PYTORCH_QNNPACK   : OFF
+2026-10-20T09:29:08.4827068Z --   USE_XNNPACK           : OFF
+2026-10-20T09:29:08.4827189Z --   USE_DISTRIBUTED       : ON
+2026-10-20T09:29:08.4827316Z --     USE_MPI               : OFF
+2026-10-20T09:29:08.4827445Z --     USE_GLOO              : ON
+2026-10-20T09:29:08.4827597Z --     USE_GLOO_WITH_OPENSSL : OFF
+2026-10-20T09:29:08.4832253Z --     USE_GLOO_IBVERBS      : OFF
+2026-10-20T09:29:08.4832394Z --     USE_TENSORPIPE        : OFF
+2026-10-20T09:29:08.4832531Z --   Public Dependencies  : 
+2026-10-20T09:29:08.4833028Z --   Private Dependencies : Threads::Threads;C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/lib/host-math/lib/rocm-openblas.lib;pthreadpool;ittnotify;fp16;caffe2::openmp;gloo;fmt::fmt-header-only
+2026-10-20T09:29:08.4833477Z --   Public CUDA Deps.    : 
+2026-10-20T09:29:08.4833612Z --   Private CUDA Deps.   : 
+2026-10-20T09:29:08.4833741Z --   USE_COREML_DELEGATE     : OFF
+2026-10-20T09:29:08.4833875Z --   BUILD_LAZY_TS_BACKEND   : ON
+2026-10-20T09:29:08.4834018Z --   USE_ROCM_KERNEL_ASSERT : OFF
+2026-10-20T09:29:08.4872074Z -- Configuring done (42.6s)
+2026-10-20T09:29:09.9338693Z -- Generating done (1.4s)
+2026-10-20T09:29:11.0730724Z -- Build files have been written to: B:/src/pytorch/build
+2026-10-20T09:29:11.5118871Z *** Building project with Ninja...
+2026-10-20T09:29:12.0205965Z [0/5] Re-checking globbed directories...
+2026-10-20T09:29:13.8938050Z [2/5] Generating ATen declarations_yaml
+... [middle trimmed by labeler] ...
+2026-10-20T12:00:21.5672358Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5672728Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5672891Z       |            ^
+2026-10-20T12:00:21.5673293Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5673742Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5673907Z       | ^
+2026-10-20T12:00:21.5674237Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5674686Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5674886Z       |                                        ^
+2026-10-20T12:00:21.5675059Z 1 warning generated when compiling for gfx1101.
+2026-10-20T12:00:21.5675304Z In file included from B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:16:
+2026-10-20T12:00:21.5675652Z In file included from B:/src/pytorch/aten/src\ATen/native/hip\SortingRadixSelect.cuh:6:
+2026-10-20T12:00:21.5675947Z In file included from B:/src/pytorch/aten/src\ATen/hip\Atomic.cuh:2:
+2026-10-20T12:00:21.5676356Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5676725Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5676891Z       |            ^
+2026-10-20T12:00:21.5677292Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5677772Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5677932Z       | ^
+2026-10-20T12:00:21.5678262Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5678681Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5678880Z       |                                        ^
+2026-10-20T12:00:21.5679086Z 1 warning generated when compiling for gfx1102.
+2026-10-20T12:00:21.5679330Z In file included from B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:16:
+2026-10-20T12:00:21.5679647Z In file included from B:/src/pytorch/aten/src\ATen/native/hip\SortingRadixSelect.cuh:6:
+2026-10-20T12:00:21.5679946Z In file included from B:/src/pytorch/aten/src\ATen/hip\Atomic.cuh:2:
+2026-10-20T12:00:21.5680343Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5680706Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5680871Z       |            ^
+2026-10-20T12:00:21.5681262Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5681705Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5681862Z       | ^
+2026-10-20T12:00:21.5682184Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5682590Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5682785Z       |                                        ^
+2026-10-20T12:00:21.5682957Z 1 warning generated when compiling for gfx1103.
+2026-10-20T12:00:21.5683192Z In file included from B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:16:
+2026-10-20T12:00:21.5683499Z In file included from B:/src/pytorch/aten/src\ATen/native/hip\SortingRadixSelect.cuh:6:
+2026-10-20T12:00:21.5683789Z In file included from B:/src/pytorch/aten/src\ATen/hip\Atomic.cuh:2:
+2026-10-20T12:00:21.5684184Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5684544Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5690369Z       |            ^
+2026-10-20T12:00:21.5690800Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5691304Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5691464Z       | ^
+2026-10-20T12:00:21.5691783Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5692191Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5692384Z       |                                        ^
+2026-10-20T12:00:21.5692561Z 1 warning generated when compiling for gfx1150.
+2026-10-20T12:00:21.5692834Z In file included from B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:16:
+2026-10-20T12:00:21.5693144Z In file included from B:/src/pytorch/aten/src\ATen/native/hip\SortingRadixSelect.cuh:6:
+2026-10-20T12:00:21.5693436Z In file included from B:/src/pytorch/aten/src\ATen/hip\Atomic.cuh:2:
+2026-10-20T12:00:21.5693827Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5694186Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5694380Z       |            ^
+2026-10-20T12:00:21.5694766Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5695199Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5695352Z       | ^
+2026-10-20T12:00:21.5695673Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5696100Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5696289Z       |                                        ^
+2026-10-20T12:00:21.5696460Z 1 warning generated when compiling for gfx1151.
+2026-10-20T12:00:21.5696688Z In file included from B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:16:
+2026-10-20T12:00:21.5696992Z In file included from B:/src/pytorch/aten/src\ATen/native/hip\SortingRadixSelect.cuh:6:
+2026-10-20T12:00:21.5697277Z In file included from B:/src/pytorch/aten/src\ATen/hip\Atomic.cuh:2:
+2026-10-20T12:00:21.5697668Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5698025Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5698180Z       |            ^
+2026-10-20T12:00:21.5698566Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5698997Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5699148Z       | ^
+2026-10-20T12:00:21.5699463Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5699865Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5700059Z       |                                        ^
+2026-10-20T12:00:21.5700229Z 1 warning generated when compiling for gfx1152.
+2026-10-20T12:00:21.5700454Z In file included from B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:16:
+2026-10-20T12:00:21.5700755Z In file included from B:/src/pytorch/aten/src\ATen/native/hip\SortingRadixSelect.cuh:6:
+2026-10-20T12:00:21.5701034Z In file included from B:/src/pytorch/aten/src\ATen/hip\Atomic.cuh:2:
+2026-10-20T12:00:21.5701414Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5701763Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5701915Z       |            ^
+2026-10-20T12:00:21.5702292Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5702764Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5702914Z       | ^
+2026-10-20T12:00:21.5703226Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5703612Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5703844Z       |                                        ^
+2026-10-20T12:00:21.5704011Z 1 warning generated when compiling for gfx1153.
+2026-10-20T12:00:21.5704239Z In file included from B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:16:
+2026-10-20T12:00:21.5704539Z In file included from B:/src/pytorch/aten/src\ATen/native/hip\SortingRadixSelect.cuh:6:
+2026-10-20T12:00:21.5704814Z In file included from B:/src/pytorch/aten/src\ATen/hip\Atomic.cuh:2:
+2026-10-20T12:00:21.5705197Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5705580Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5705733Z       |            ^
+2026-10-20T12:00:21.5706111Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5706528Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5706682Z       | ^
+2026-10-20T12:00:21.5707023Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5707410Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5707600Z       |                                        ^
+2026-10-20T12:00:21.5707813Z 1 warning generated when compiling for gfx1200.
+2026-10-20T12:00:21.5708040Z In file included from B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:16:
+2026-10-20T12:00:21.5708339Z In file included from B:/src/pytorch/aten/src\ATen/native/hip\SortingRadixSelect.cuh:6:
+2026-10-20T12:00:21.5708613Z In file included from B:/src/pytorch/aten/src\ATen/hip\Atomic.cuh:2:
+2026-10-20T12:00:21.5708996Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5709341Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5709494Z       |            ^
+2026-10-20T12:00:21.5709872Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5710279Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5710429Z       | ^
+2026-10-20T12:00:21.5710728Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5711105Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5711292Z       |                                        ^
+2026-10-20T12:00:21.5711452Z 1 warning generated when compiling for gfx1201.
+2026-10-20T12:00:21.5711678Z In file included from B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:16:
+2026-10-20T12:00:21.5711970Z In file included from B:/src/pytorch/aten/src\ATen/native/hip\SortingRadixSelect.cuh:6:
+2026-10-20T12:00:21.5712240Z In file included from B:/src/pytorch/aten/src\ATen/hip\Atomic.cuh:2:
+2026-10-20T12:00:21.5712613Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5712950Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5713144Z       |            ^
+2026-10-20T12:00:21.5713512Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5713919Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5714070Z       | ^
+2026-10-20T12:00:21.5714405Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5714786Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5714971Z       |                                        ^
+2026-10-20T12:00:21.5715135Z 1 warning generated when compiling for gfx900.
+2026-10-20T12:00:21.5715363Z In file included from B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:16:
+2026-10-20T12:00:21.5715653Z In file included from B:/src/pytorch/aten/src\ATen/native/hip\SortingRadixSelect.cuh:6:
+2026-10-20T12:00:21.5715924Z In file included from B:/src/pytorch/aten/src\ATen/hip\Atomic.cuh:2:
+2026-10-20T12:00:21.5716328Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5716665Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5716818Z       |            ^
+2026-10-20T12:00:21.5717182Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5717631Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5717778Z       | ^
+2026-10-20T12:00:21.5718080Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5718461Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5718641Z       |                                        ^
+2026-10-20T12:00:21.5718802Z 1 warning generated when compiling for gfx906.
+2026-10-20T12:00:21.5719025Z In file included from B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:16:
+2026-10-20T12:00:21.5719314Z In file included from B:/src/pytorch/aten/src\ATen/native/hip\SortingRadixSelect.cuh:6:
+2026-10-20T12:00:21.5719585Z In file included from B:/src/pytorch/aten/src\ATen/hip\Atomic.cuh:2:
+2026-10-20T12:00:21.5719955Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5720286Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5720434Z       |            ^
+2026-10-20T12:00:21.5720788Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5721193Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5721337Z       | ^
+2026-10-20T12:00:21.5721628Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5721999Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5722176Z       |                                        ^
+2026-10-20T12:00:21.5722339Z 1 warning generated when compiling for gfx908.
+2026-10-20T12:00:21.5722554Z In file included from B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:16:
+2026-10-20T12:00:21.5722840Z In file included from B:/src/pytorch/aten/src\ATen/native/hip\SortingRadixSelect.cuh:6:
+2026-10-20T12:00:21.5723105Z In file included from B:/src/pytorch/aten/src\ATen/hip\Atomic.cuh:2:
+2026-10-20T12:00:21.5723468Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5723846Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5723992Z       |            ^
+2026-10-20T12:00:21.5724351Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5724753Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5724932Z       | ^
+2026-10-20T12:00:21.5725232Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5725600Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5725780Z       |                                        ^
+2026-10-20T12:00:21.5726366Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5727106Z   255 | __global__ void gatherTopK(at::cuda::detail::TensorInfo<const T, IndexType> input,
+2026-10-20T12:00:21.5727331Z       |                 ^
+2026-10-20T12:00:21.5727883Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5728904Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5729887Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5730857Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5731817Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5732780Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5733748Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5734710Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5735670Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5736665Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5737669Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5738628Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5739630Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5740609Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5741562Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5742516Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5743468Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5744417Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5745373Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5746314Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5747258Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5748284Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5749269Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5750219Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5751161Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5752136Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5753109Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5754048Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5754991Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5755936Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5756878Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5757822Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5758765Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5759712Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5760694Z B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:255:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T12:00:21.5761252Z 37 warnings generated when compiling for gfx90a.
+2026-10-20T12:00:21.5761770Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5762515Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5763206Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5763939Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5764634Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5765366Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5766059Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5766748Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5767438Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5768132Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5768820Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5769514Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5770204Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5770895Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5771585Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5772316Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5773005Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5773730Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5774423Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5775120Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5775845Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5776571Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5777263Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5777953Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5778641Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5779331Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5780017Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5780705Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5781393Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5782079Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5782767Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5783459Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5784190Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5784915Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5785606Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5786291Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T12:00:21.5786795Z In file included from B:/src/pytorch/aten/src/ATen/native/hip/TensorTopK.hip:16:
+2026-10-20T12:00:21.5787068Z In file included from B:/src/pytorch/aten/src\ATen/native/hip\SortingRadixSelect.cuh:6:
+2026-10-20T12:00:21.5787322Z In file included from B:/src/pytorch/aten/src\ATen/hip\Atomic.cuh:2:
+2026-10-20T12:00:21.5787671Z B:/src/pytorch\torch/headeronly/cuda/Atomic.h:370:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T12:00:21.5788030Z   370 |     return atomicAddNoRet(address, val);
+2026-10-20T12:00:21.5788195Z       |            ^
+2026-10-20T12:00:21.5788545Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T12:00:21.5788930Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T12:00:21.5789067Z       | ^
+2026-10-20T12:00:21.5789353Z C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/include\hip/hip_runtime_api.h:725:40: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T12:00:21.5789710Z   725 | #define HIP_DEPRECATED(msg) __declspec(deprecated(msg))
+2026-10-20T12:00:21.5789884Z       |                                        ^
+2026-10-20T12:00:21.5790032Z 1 warning generated when compiling for host.
+2026-10-20T12:00:22.2304321Z [2946/2955] Linking CXX shared library bin\torch_hip.dll
+2026-10-20T12:00:22.3434303Z [2947/2955] Linking CXX shared library bin\torch.dll
+2026-10-20T12:00:22.4538930Z [2948/2955] Linking CXX shared library bin\shm.dll
+2026-10-20T12:00:22.8975746Z [2949/2955] Linking CXX shared library bin\torch_python.dll
+2026-10-20T12:00:22.9684524Z [2950/2955] Linking C shared module torch\_C.cp313-win_amd64.pyd
+2026-10-20T12:00:23.0245109Z [2951/2955] Linking CXX shared library bin\nnapi_backend.dll
+2026-10-20T12:00:23.0359838Z *** Installing project into wheel...
+2026-10-20T12:00:23.0621075Z -- Install configuration: "Release"
+2026-10-20T12:01:05.9947047Z *** Making wheel...
+2026-10-20T12:02:39.8664007Z *** Created torch-2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a-cp313-cp313-win_amd64.whl
+2026-10-20T12:02:39.9108642Z Successfully built torch-2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a-cp313-cp313-win_amd64.whl
+2026-10-20T12:02:40.7789909Z Processing B:\src\pytorch\dist\torch-2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a-cp313-cp313-win_amd64.whl
+2026-10-20T12:02:41.7691665Z Requirement already satisfied: filelock in C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages (from torch==2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a) (4.2.0)
+2026-10-20T12:02:41.7693717Z Requirement already satisfied: typing-extensions>=4.13.0 in C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages (from torch==2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a) (4.16.0)
+2026-10-20T12:02:41.7695779Z Requirement already satisfied: setuptools>=77.0.3 in C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages (from torch==2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a) (81.0.0)
+2026-10-20T12:02:41.7697781Z Requirement already satisfied: sympy>=1.13.3 in C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages (from torch==2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a) (1.14.0)
+2026-10-20T12:02:41.7699488Z Requirement already satisfied: networkx>=2.5.1 in C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages (from torch==2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a) (3.7)
+2026-10-20T12:02:41.7701157Z Requirement already satisfied: jinja2 in C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages (from torch==2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a) (3.1.6)
+2026-10-20T12:02:41.7703011Z Requirement already satisfied: fsspec>=0.8.5 in C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages (from torch==2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a) (2026.9.0)
+2026-10-20T12:02:41.7707843Z Requirement already satisfied: rocm==10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a in C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages (from rocm[libraries]==10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a->torch==2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a) (10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a)
+2026-10-20T12:02:41.7716340Z Requirement already satisfied: rocm-sdk-core==10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a in C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages (from rocm==10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a->rocm[libraries]==10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a->torch==2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a) (10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a)
+2026-10-20T12:02:41.7739417Z Requirement already satisfied: rocm-sdk-libraries==10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a in C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages (from rocm[libraries]==10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a->torch==2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a) (10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a)
+2026-10-20T12:02:41.7808391Z Requirement already satisfied: mpmath<1.4,>=1.1.0 in C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages (from sympy>=1.13.3->torch==2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a) (1.3.0)
+2026-10-20T12:02:41.7828531Z Requirement already satisfied: MarkupSafe>=2.0 in C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages (from jinja2->torch==2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a) (3.0.4)
+2026-10-20T12:02:41.8414196Z Installing collected packages: torch
+2026-10-20T12:03:09.5147249Z Successfully installed torch-2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a
+2026-10-20T12:03:09.5163244Z 
+2026-10-20T12:03:09.5163834Z [notice] A new release of pip is available: 26.1.2 -> 26.2.1
+2026-10-20T12:03:09.5164215Z [notice] To update, run: python.exe -m pip install --upgrade pip
+2026-10-20T12:03:10.9118617Z 
+2026-10-20T12:03:10.9118720Z   USE_GLOO=ON
+2026-10-20T12:03:10.9118997Z   HIP_CLANG_PATH=C:/home/runner/_work/_tool/Python/3.13.16/x64/Lib/site-packages/_rocm_sdk_devel/lib/llvm/bin
+2026-10-20T12:03:10.9119369Z   CC=C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\llvm\bin\clang-cl.exe
+2026-10-20T12:03:10.9119724Z   CXX=C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\llvm\bin\clang-cl.exe
+2026-10-20T12:03:10.9120251Z   HIP_DEVICE_LIB_PATH=C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\llvm\amdgcn\bitcode
+2026-10-20T12:03:10.9120525Z   BLAS=OpenBLAS
+2026-10-20T12:03:10.9120745Z   OpenBLAS_HOME=C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\_rocm_sdk_devel\lib\host-math
+2026-10-20T12:03:10.9120996Z   OpenBLAS_LIB_NAME=rocm-openblas
+2026-10-20T12:03:10.9121180Z   CMAKE_C_COMPILER_LAUNCHER=C:\ProgramData\chocolatey\bin\sccache.EXE
+2026-10-20T12:03:10.9121497Z   CMAKE_CXX_COMPILER_LAUNCHER=C:\ProgramData\chocolatey\bin\sccache.EXE
+2026-10-20T12:03:10.9121681Z   USE_ROCM=ON
+2026-10-20T12:03:10.9121778Z   USE_CUDA=OFF
+2026-10-20T12:03:10.9121875Z   USE_MPI=OFF
+2026-10-20T12:03:10.9121971Z   USE_NUMA=OFF
+2026-10-20T12:03:10.9122191Z   PYTORCH_BUILD_VERSION=2.15.0+gitabdb192f.devrocm10.2.0.dev0-6e8ae44738ab3d7891df7fda58debca799610e7a
+2026-10-20T12:03:10.9122444Z   PYTORCH_BUILD_NUMBER=1
+2026-10-20T12:03:10.9122690Z   PYTORCH_EXTRA_INSTALL_REQUIREMENTS=rocm[libraries]==10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a
+2026-10-20T12:03:10.9123010Z   USE_FLASH_ATTENTION=ON
+2026-10-20T12:03:10.9123135Z   USE_MEM_EFF_ATTENTION=ON
+2026-10-20T12:03:10.9123256Z   DISTUTILS_USE_SDK=1
+2026-10-20T12:03:10.9123364Z   BUILD_TEST=0
+2026-10-20T12:03:10.9123677Z Found built wheel: B:\src\pytorch\dist\torch-2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a-cp313-cp313-win_amd64.whl
+2026-10-20T12:03:10.9124309Z ++ Copy B:\src\pytorch\dist\torch-2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a-cp313-cp313-win_amd64.whl -> C:\home\runner\_work\TheRock\TheRock\output\packages\dist
+2026-10-20T12:03:10.9124803Z +++ Installing built torch:
+2026-10-20T12:03:10.9125319Z ++ Exec [C:\Users\ContainerAdministrator\AppData\Local\Temp]$ 'C:\home\runner\_work\_tool\Python\3.13.16\x64\python.exe' -m pip install 'B:\src\pytorch\dist\torch-2.15.0+gitabdb192f.devrocm10.2.0.dev0.6e8ae44738ab3d7891df7fda58debca799610e7a-cp313-cp313-win_amd64.whl'
+2026-10-20T12:03:10.9125913Z +++ Sanity checking installed torch (unavailable is okay on CPU machines):
+2026-10-20T12:03:10.9126327Z ++ Capture [C:\Users\ContainerAdministrator\AppData\Local\Temp]$ 'C:\home\runner\_work\_tool\Python\3.13.16\x64\python.exe' -c 'import torch; print(torch.cuda.is_available())'
+2026-10-20T12:03:10.9126918Z Error capturing output: Command '['C:\\home\\runner\\_work\\_tool\\Python\\3.13.16\\x64\\python.exe', '-c', 'import torch; print(torch.cuda.is_available())']' returned non-zero exit status 1.
+2026-10-20T12:03:10.9127305Z Output from the failed command:
+2026-10-20T12:03:10.9127443Z Traceback (most recent call last):
+2026-10-20T12:03:10.9131840Z   File "<string>", line 1, in <module>
+2026-10-20T12:03:10.9132038Z     import torch; print(torch.cuda.is_available())
+2026-10-20T12:03:10.9132198Z     ^^^^^^^^^^^^
+2026-10-20T12:03:10.9132440Z   File "C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\torch\__init__.py", line 319, in <module>
+2026-10-20T12:03:10.9132703Z     _load_dll_libraries()
+2026-10-20T12:03:10.9132825Z     ~~~~~~~~~~~~~~~~~~~^^
+2026-10-20T12:03:10.9133085Z   File "C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\torch\__init__.py", line 315, in _load_dll_libraries
+2026-10-20T12:03:10.9133350Z     raise err
+2026-10-20T12:03:10.9133707Z OSError: [WinError 126] The specified module could not be found. Error loading "C:\home\runner\_work\_tool\Python\3.13.16\x64\Lib\site-packages\torch\lib\torch_hip.dll" or one of its dependencies.
+2026-10-20T12:03:10.9134050Z 
+2026-10-20T12:03:10.9134243Z ++ Capture [C:\Users\ContainerAdministrator\AppData\Local\Temp]$ 'C:\ProgramData\chocolatey\bin\sccache.EXE' --show-stats
+2026-10-20T12:03:10.9134524Z sccache --show-stats output:
+2026-10-20T12:03:10.9134661Z Compile requests                  24660
+2026-10-20T12:03:10.9134809Z Compile requests executed         24659
+2026-10-20T12:03:10.9134945Z Cache hits                         6282
+2026-10-20T12:03:10.9135167Z Cache hits (C/C++)                 6282
+2026-10-20T12:03:10.9135301Z Cache misses                      18347
+2026-10-20T12:03:10.9135431Z Cache misses (C/C++)              18347
+2026-10-20T12:03:10.9135574Z Cache hits rate                   25.51 %
+2026-10-20T12:03:10.9135717Z Cache hits rate (C/C++)           25.51 %
+2026-10-20T12:03:10.9135853Z Cache timeouts                        0
+2026-10-20T12:03:10.9135988Z Cache read errors                     0
+2026-10-20T12:03:10.9136155Z Forced recaches                       0
+2026-10-20T12:03:10.9136289Z Cache write errors                    3
+2026-10-20T12:03:10.9136424Z Cache errors                         11
+2026-10-20T12:03:10.9136555Z Cache errors (C/C++)                 11
+2026-10-20T12:03:10.9136690Z Compilations                      18348
+2026-10-20T12:03:10.9136825Z Compilation failures                 18
+2026-10-20T12:03:10.9136965Z Non-cacheable compilations            1
+2026-10-20T12:03:10.9137105Z Non-cacheable calls                   1
+2026-10-20T12:03:10.9137243Z Non-compilation calls                 0
+2026-10-20T12:03:10.9137417Z Unsupported compiler calls            0
+2026-10-20T12:03:10.9137558Z Average cache write               0.034 s
+2026-10-20T12:03:10.9137701Z Average compiler                  4.402 s
+2026-10-20T12:03:10.9137845Z Average cache read hit            0.030 s
+2026-10-20T12:03:10.9137987Z Failed distributed compilations       0
+2026-10-20T12:03:10.9138081Z 
+2026-10-20T12:03:10.9138127Z Non-cacheable reasons:
+2026-10-20T12:03:10.9138254Z multiple input files                  1
+2026-10-20T12:03:10.9138343Z 
+2026-10-20T12:03:10.9138527Z Cache location                  s3, name: therock-pytorch-sccache-dev, prefix: /windows/multiarch/v1/
+2026-10-20T12:03:10.9138761Z Base directories                (none)
+2026-10-20T12:03:10.9138902Z Version (client)                0.17.0
+2026-10-20T12:03:10.9152196Z Traceback (most recent call last):
+2026-10-20T12:03:10.9156961Z   File "C:\home\runner\_work\TheRock\TheRock\external-builds\pytorch\build_prod_wheels.py", line 1648, in <module>
+2026-10-20T12:03:10.9157224Z     main(sys.argv[1:])
+2026-10-20T12:03:10.9157340Z     ~~~~^^^^^^^^^^^^^^
+2026-10-20T12:03:10.9157578Z   File "C:\home\runner\_work\TheRock\TheRock\external-builds\pytorch\build_prod_wheels.py", line 1644, in main
+2026-10-20T12:03:10.9157829Z     args.func(args)
+2026-10-20T12:03:10.9157933Z     ~~~~~~~~~^^^^^^
+2026-10-20T12:03:10.9158163Z   File "C:\home\runner\_work\TheRock\TheRock\external-builds\pytorch\build_prod_wheels.py", line 901, in do_build
+2026-10-20T12:03:10.9158420Z     _do_build_wheels_core(
+2026-10-20T12:03:10.9158537Z     ~~~~~~~~~~~~~~~~~~~~~^
+2026-10-20T12:03:10.9158649Z         args,
+2026-10-20T12:03:10.9158744Z         ^^^^^
+2026-10-20T12:03:10.9158840Z     ...<5 lines>...
+2026-10-20T12:03:10.9158943Z         apex_dir,
+2026-10-20T12:03:10.9159041Z         ^^^^^^^^^
+2026-10-20T12:03:10.9159136Z     )
+2026-10-20T12:03:10.9159228Z     ^
+2026-10-20T12:03:10.9159476Z   File "C:\home\runner\_work\TheRock\TheRock\external-builds\pytorch\build_prod_wheels.py", line 771, in _do_build_wheels_core
+2026-10-20T12:03:10.9159756Z     do_build_pytorch(
+2026-10-20T12:03:10.9159865Z     ~~~~~~~~~~~~~~~~^
+2026-10-20T12:03:10.9160027Z         args, pytorch_dir, dict(env), triton_requirement=triton_requirement
+2026-10-20T12:03:10.9160239Z         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T12:03:10.9160384Z     )
+2026-10-20T12:03:10.9160470Z     ^
+2026-10-20T12:03:10.9160710Z   File "C:\home\runner\_work\TheRock\TheRock\external-builds\pytorch\build_prod_wheels.py", line 1327, in do_build_pytorch
+2026-10-20T12:03:10.9161058Z     raise RuntimeError("torch package sanity check failed (see output above)")
+2026-10-20T12:03:10.9161306Z RuntimeError: torch package sanity check failed (see output above)
+2026-10-20T12:03:10.9290064Z ##[error]Process completed with exit code 1.
+2026-10-20T12:03:10.9471145Z ##[group]Run if [ "${CACHE_TYPE}" = "sccache" ]; then
+2026-10-20T12:03:10.9471433Z [36;1mif [ "${CACHE_TYPE}" = "sccache" ]; then[0m
+2026-10-20T12:03:10.9471605Z [36;1m  echo "sccache stats:"[0m
+2026-10-20T12:03:10.9471773Z [36;1m  echo "--------------"[0m
+2026-10-20T12:03:10.9471927Z [36;1m  sccache --show-stats || true[0m
+2026-10-20T12:03:10.9472093Z [36;1melif [ "${CACHE_TYPE}" = "ccache" ]; then[0m
+2026-10-20T12:03:10.9472255Z [36;1m  echo "ccache stats:"[0m
+2026-10-20T12:03:10.9472393Z [36;1m  echo "-------------"[0m
+2026-10-20T12:03:10.9472549Z [36;1m  ccache -s -v || true[0m
+2026-10-20T12:03:10.9472678Z [36;1mfi[0m
+2026-10-20T12:03:10.9599795Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-20T12:03:10.9600030Z env:
+2026-10-20T12:03:10.9600149Z   PYTHON_VERSION: 3.13
+2026-10-20T12:03:10.9600283Z   PYTORCH_GITREPO_ORIGIN: 
+2026-10-20T12:03:10.9600423Z   PYTORCH_GIT_REF: release/2.15
+2026-10-20T12:03:10.9600641Z   ROCM_VERSION: 10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a
+2026-10-20T12:03:10.9601018Z   AMDGPU_FAMILIES: gfx110X-all;gfx1151;gfx120X-all;gfx90a;gfx900;gfx906;gfx908;gfx101X-dgpu;gfx103X-all;gfx1150;gfx1152;gfx1153
+2026-10-20T12:03:10.9601621Z   CACHE_TYPE: sccache
+2026-10-20T12:03:10.9601752Z   BUILD_RELEASE_TYPE: dev
+2026-10-20T12:03:10.9601885Z   CHECKOUT_ROOT: B:/src
+2026-10-20T12:03:10.9602078Z   PACKAGE_DIST_DIR: C:\home\runner\_work\TheRock\TheRock\output\packages\dist
+2026-10-20T12:03:10.9602600Z   optional_build_prod_arguments: --rocm-sdk-version ==10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a --version-suffix +devrocm10.2.0.dev0-6e8ae44738ab3d7891df7fda58debca799610e7a
+2026-10-20T12:03:10.9603073Z   SCCACHE_BUCKET: therock-pytorch-sccache-dev
+2026-10-20T12:03:10.9603248Z   SCCACHE_REGION: us-east-1
+2026-10-20T12:03:10.9603404Z   SCCACHE_S3_KEY_PREFIX: windows/multiarch/v1/
+2026-10-20T12:03:10.9603568Z   SCCACHE_S3_USE_SSL: true
+2026-10-20T12:03:10.9603717Z   SCCACHE_S3_SERVER_SIDE_ENCRYPTION: true
+2026-10-20T12:03:10.9603873Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-20T12:03:10.9604002Z   SCCACHE_LOG: warn
+2026-10-20T12:03:10.9604168Z   pythonLocation: C:\home\runner\_work\_tool\Python\3.13.16\x64
+2026-10-20T12:03:10.9604426Z   PKG_CONFIG_PATH: C:\home\runner\_work\_tool\Python\3.13.16\x64/lib/pkgconfig
+2026-10-20T12:03:10.9604686Z   Python_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.13.16\x64
+2026-10-20T12:03:10.9604920Z   Python2_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.13.16\x64
+2026-10-20T12:03:10.9605148Z   Python3_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.13.16\x64
+2026-10-20T12:03:10.9605338Z   cp_version: cp313-cp313
+2026-10-20T12:03:10.9605510Z   libuv_ROOT: C:\home\runner\_work\TheRock\TheRock/libuv-install
+2026-10-20T12:03:10.9605705Z   CommandPromptType: Native
+2026-10-20T12:03:10.9605913Z   DevEnvDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\
+2026-10-20T12:03:10.9606219Z   ExtensionSdkDir: C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs
+2026-10-20T12:03:10.9607558Z   EXTERNAL_INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-20T12:03:10.9608784Z   Framework40Version: v4.0
+2026-10-20T12:03:10.9608943Z   FrameworkDir: C:\Windows\Microsoft.NET\Framework64\
+2026-10-20T12:03:10.9609146Z   FrameworkDir64: C:\Windows\Microsoft.NET\Framework64\
+2026-10-20T12:03:10.9610061Z   FrameworkVersion: v4.0.30319
+2026-10-20T12:03:10.9610256Z   FrameworkVersion64: v4.0.30319
+2026-10-20T12:03:10.9611492Z   INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-20T12:03:10.9613284Z   LIB: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.26100.0\\um\x64
+2026-10-20T12:03:10.9614760Z   LIBPATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+2026-10-20T12:03:10.9615684Z   NETFXSDKDir: C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\
+2026-10-20T12:03:10.9620255Z   PATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\Roslyn;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\DiagnosticsHub\Collector;C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python313\Scripts;C:\home\runner\_work\_tool\Python\3.13.16\x64\Scripts;C:\home\runner\_work\_tool\Python\3.13.16\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files (x86)\DVC (Data Version Control);C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;C:\Program Files (x86)\Microsoft Visual Studio\Installer;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-20T12:03:10.9624433Z   Platform: x64
+2026-10-20T12:03:10.9624549Z   UCRTVersion: 10.0.26100.0
+2026-10-20T12:03:10.9624719Z   UniversalCRTSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-20T12:03:10.9624994Z   VCIDEInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\
+2026-10-20T12:03:10.9625284Z   VCINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\
+2026-10-20T12:03:10.9625550Z   VCPKG_ROOT: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-20T12:03:10.9625867Z   VCToolsInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\
+2026-10-20T12:03:10.9626225Z   VCToolsRedistDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.44.35112\
+2026-10-20T12:03:10.9626482Z   VCToolsVersion: 14.44.35207
+2026-10-20T12:03:10.9626619Z   VisualStudioVersion: 17.0
+2026-10-20T12:03:10.9626833Z   VS170COMNTOOLS: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\
+2026-10-20T12:03:10.9627067Z   VSCMD_ARG_app_plat: Desktop
+2026-10-20T12:03:10.9627229Z   VSCMD_ARG_HOST_ARCH: x64
+2026-10-20T12:03:10.9627357Z   VSCMD_ARG_TGT_ARCH: x64
+2026-10-20T12:03:10.9627476Z   VSCMD_VER: 17.14.41
+2026-10-20T12:03:10.9627648Z   VSINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\
+2026-10-20T12:03:10.9628018Z   WindowsLibPath: C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0
+2026-10-20T12:03:10.9628370Z   WindowsSdkBinPath: C:\Program Files (x86)\Windows Kits\10\bin\
+2026-10-20T12:03:10.9628585Z   WindowsSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-20T12:03:10.9628760Z   WindowsSDKLibVersion: 10.0.26100.0\
+2026-10-20T12:03:10.9628966Z   WindowsSdkVerBinPath: C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\
+2026-10-20T12:03:10.9629186Z   WindowsSDKVersion: 10.0.26100.0\
+2026-10-20T12:03:10.9629437Z   WindowsSDK_ExecutablePath_x64: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\
+2026-10-20T12:03:10.9629804Z   WindowsSDK_ExecutablePath_x86: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\
+2026-10-20T12:03:10.9630050Z   __DOTNET_ADD_64BIT: 1
+2026-10-20T12:03:10.9630174Z   __DOTNET_PREFERRED_BITNESS: 64
+2026-10-20T12:03:10.9631862Z   __VSCMD_PREINIT_PATH: C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python313\Scripts;C:\home\runner\_work\_tool\Python\3.13.16\x64\Scripts;C:\home\runner\_work\_tool\Python\3.13.16\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files (x86)\DVC (Data Version Control);;C:\Program Files (x86)\DVC (Data Version Control);C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;;C:\Program Files (x86)\Microsoft Visual Studio\Installer
+2026-10-20T12:03:10.9633621Z   version_suffix: +devrocm10.2.0.dev0-6e8ae44738ab3d7891df7fda58debca799610e7a
+2026-10-20T12:03:10.9633839Z   AWS_DEFAULT_REGION: us-east-1
+2026-10-20T12:03:10.9633972Z   AWS_REGION: us-east-1
+2026-10-20T12:03:10.9634179Z   AWS_ACCESS_KEY_ID: ***
+2026-10-20T12:03:10.9634405Z   AWS_SECRET_ACCESS_KEY: ***
+2026-10-20T12:03:10.9636822Z   AWS_SESSION_TOKEN: ***
+2026-10-20T12:03:10.9636948Z ##[endgroup]
+2026-10-20T12:03:11.0051147Z sccache stats:
+2026-10-20T12:03:11.0051277Z --------------
+2026-10-20T12:03:11.0611737Z Compile requests                  24660
+2026-10-20T12:03:11.0612201Z Compile requests executed         24659
+2026-10-20T12:03:11.0612422Z Cache hits                         6282
+2026-10-20T12:03:11.0612729Z Cache hits (C/C++)                 6282
+2026-10-20T12:03:11.0612925Z Cache misses                      18347
+2026-10-20T12:03:11.0619647Z Cache misses (C/C++)              18347
+2026-10-20T12:03:11.0619803Z Cache hits rate                   25.51 %
+2026-10-20T12:03:11.0619953Z Cache hits rate (C/C++)           25.51 %
+2026-10-20T12:03:11.0620097Z Cache timeouts                        0
+2026-10-20T12:03:11.0620240Z Cache read errors                     0
+2026-10-20T12:03:11.0620378Z Forced recaches                       0
+2026-10-20T12:03:11.0620509Z Cache write errors                    3
+2026-10-20T12:03:11.0620642Z Cache errors                         11
+2026-10-20T12:03:11.0620775Z Cache errors (C/C++)                 11
+2026-10-20T12:03:11.0620908Z Compilations                      18348
+2026-10-20T12:03:11.0621051Z Compilation failures                 18
+2026-10-20T12:03:11.0621193Z Non-cacheable compilations            1
+2026-10-20T12:03:11.0621339Z Non-cacheable calls                   1
+2026-10-20T12:03:11.0621476Z Non-compilation calls                 0
+2026-10-20T12:03:11.0621719Z Unsupported compiler calls            0
+2026-10-20T12:03:11.0621863Z Average cache write               0.034 s
+2026-10-20T12:03:11.0621999Z Average compiler                  4.402 s
+2026-10-20T12:03:11.0622152Z Average cache read hit            0.030 s
+2026-10-20T12:03:11.0622308Z Failed distributed compilations       0
+2026-10-20T12:03:11.0622407Z 
+2026-10-20T12:03:11.0622456Z Non-cacheable reasons:
+2026-10-20T12:03:11.0622588Z multiple input files                  1
+2026-10-20T12:03:11.0622684Z 
+2026-10-20T12:03:11.0622843Z Cache location                  s3, name: therock-pytorch-sccache-dev, prefix: /windows/multiarch/v1/
+2026-10-20T12:03:11.0623092Z Base directories                (none)
+2026-10-20T12:03:11.0623234Z Version (client)                0.17.0
+2026-10-20T12:03:11.0816728Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-20T12:03:11.0817000Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-20T12:03:11.0912499Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-20T12:03:11.0912706Z env:
+2026-10-20T12:03:11.0912807Z   PYTHON_VERSION: 3.13
+2026-10-20T12:03:11.0912931Z   PYTORCH_GITREPO_ORIGIN: 
+2026-10-20T12:03:11.0913054Z   PYTORCH_GIT_REF: release/2.15
+2026-10-20T12:03:11.0913236Z   ROCM_VERSION: 10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a
+2026-10-20T12:03:11.0913570Z   AMDGPU_FAMILIES: gfx110X-all;gfx1151;gfx120X-all;gfx90a;gfx900;gfx906;gfx908;gfx101X-dgpu;gfx103X-all;gfx1150;gfx1152;gfx1153
+2026-10-20T12:03:11.0913847Z   CACHE_TYPE: sccache
+2026-10-20T12:03:11.0913963Z   BUILD_RELEASE_TYPE: dev
+2026-10-20T12:03:11.0914079Z   CHECKOUT_ROOT: B:/src
+2026-10-20T12:03:11.0914270Z   PACKAGE_DIST_DIR: C:\home\runner\_work\TheRock\TheRock\output\packages\dist
+2026-10-20T12:03:11.0914795Z   optional_build_prod_arguments: --rocm-sdk-version ==10.2.0.dev0+6e8ae44738ab3d7891df7fda58debca799610e7a --version-suffix +devrocm10.2.0.dev0-6e8ae44738ab3d7891df7fda58debca799610e7a
+2026-10-20T12:03:11.0915226Z   SCCACHE_BUCKET: therock-pytorch-sccache-dev
+2026-10-20T12:03:11.0915381Z   SCCACHE_REGION: us-east-1
+2026-10-20T12:03:11.0915521Z   SCCACHE_S3_KEY_PREFIX: windows/multiarch/v1/
+2026-10-20T12:03:11.0915668Z   SCCACHE_S3_USE_SSL: true
+2026-10-20T12:03:11.0915794Z   SCCACHE_S3_SERVER_SIDE_ENCRYPTION: true
+2026-10-20T12:03:11.0915936Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-20T12:03:11.0916045Z   SCCACHE_LOG: warn
+2026-10-20T12:03:11.0916191Z   pythonLocation: C:\home\runner\_work\_tool\Python\3.13.16\x64
+2026-10-20T12:03:11.0916429Z   PKG_CONFIG_PATH: C:\home\runner\_work\_tool\Python\3.13.16\x64/lib/pkgconfig
+2026-10-20T12:03:11.0916659Z   Python_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.13.16\x64
+2026-10-20T12:03:11.0916871Z   Python2_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.13.16\x64
+2026-10-20T12:03:11.0917075Z   Python3_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.13.16\x64
+2026-10-20T12:03:11.0917309Z   cp_version: cp313-cp313
+2026-10-20T12:03:11.0917467Z   libuv_ROOT: C:\home\runner\_work\TheRock\TheRock/libuv-install
+2026-10-20T12:03:11.0917643Z   CommandPromptType: Native
+2026-10-20T12:03:11.0917832Z   DevEnvDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\
+2026-10-20T12:03:11.0918106Z   ExtensionSdkDir: C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs
+2026-10-20T12:03:11.0919310Z   EXTERNAL_INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-20T12:03:11.0920473Z   Framework40Version: v4.0
+2026-10-20T12:03:11.0920626Z   FrameworkDir: C:\Windows\Microsoft.NET\Framework64\
+2026-10-20T12:03:11.0920814Z   FrameworkDir64: C:\Windows\Microsoft.NET\Framework64\
+2026-10-20T12:03:11.0920977Z   FrameworkVersion: v4.0.30319
+2026-10-20T12:03:11.0921111Z   FrameworkVersion64: v4.0.30319
+2026-10-20T12:03:11.0922924Z   INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-20T12:03:11.0924556Z   LIB: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.26100.0\\um\x64
+2026-10-20T12:03:11.0925903Z   LIBPATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+2026-10-20T12:03:11.0926769Z   NETFXSDKDir: C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\
+2026-10-20T12:03:11.0930716Z   PATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\Roslyn;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\DiagnosticsHub\Collector;C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python313\Scripts;C:\home\runner\_work\_tool\Python\3.13.16\x64\Scripts;C:\home\runner\_work\_tool\Python\3.13.16\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files (x86)\DVC (Data Version Control);C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;C:\Program Files (x86)\Microsoft Visual Studio\Installer;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-20T12:03:11.0934720Z   Platform: x64
+2026-10-20T12:03:11.0934831Z   UCRTVersion: 10.0.26100.0
+2026-10-20T12:03:11.0934988Z   UniversalCRTSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-20T12:03:11.0935246Z   VCIDEInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\
+2026-10-20T12:03:11.0935866Z   VCINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\
+2026-10-20T12:03:11.0936118Z   VCPKG_ROOT: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-20T12:03:11.0936418Z   VCToolsInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\
+2026-10-20T12:03:11.0936758Z   VCToolsRedistDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.44.35112\
+2026-10-20T12:03:11.0936999Z   VCToolsVersion: 14.44.35207
+2026-10-20T12:03:11.0937126Z   VisualStudioVersion: 17.0
+2026-10-20T12:03:11.0937325Z   VS170COMNTOOLS: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\
+2026-10-20T12:03:11.0937541Z   VSCMD_ARG_app_plat: Desktop
+2026-10-20T12:03:11.0937664Z   VSCMD_ARG_HOST_ARCH: x64
+2026-10-20T12:03:11.0937782Z   VSCMD_ARG_TGT_ARCH: x64
+2026-10-20T12:03:11.0937893Z   VSCMD_VER: 17.14.41
+2026-10-20T12:03:11.0938053Z   VSINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\
+2026-10-20T12:03:11.0938406Z   WindowsLibPath: C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0
+2026-10-20T12:03:11.0938747Z   WindowsSdkBinPath: C:\Program Files (x86)\Windows Kits\10\bin\
+2026-10-20T12:03:11.0938957Z   WindowsSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-20T12:03:11.0939126Z   WindowsSDKLibVersion: 10.0.26100.0\
+2026-10-20T12:03:11.0939325Z   WindowsSdkVerBinPath: C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\
+2026-10-20T12:03:11.0939535Z   WindowsSDKVersion: 10.0.26100.0\
+2026-10-20T12:03:11.0939776Z   WindowsSDK_ExecutablePath_x64: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\
+2026-10-20T12:03:11.0940130Z   WindowsSDK_ExecutablePath_x86: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\
+2026-10-20T12:03:11.0940364Z   __DOTNET_ADD_64BIT: 1
+2026-10-20T12:03:11.0940483Z   __DOTNET_PREFERRED_BITNESS: 64
+2026-10-20T12:03:11.0942100Z   __VSCMD_PREINIT_PATH: C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python313\Scripts;C:\home\runner\_work\_tool\Python\3.13.16\x64\Scripts;C:\home\runner\_work\_tool\Python\3.13.16\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files (x86)\DVC (Data Version Control);;C:\Program Files (x86)\DVC (Data Version Control);C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;;C:\Program Files (x86)\Microsoft Visual Studio\Installer
+2026-10-20T12:03:11.0943830Z   version_suffix: +devrocm10.2.0.dev0-6e8ae44738ab3d7891df7fda58debca799610e7a
+2026-10-20T12:03:11.0944044Z   AWS_DEFAULT_REGION: us-east-1
+2026-10-20T12:03:11.0944173Z   AWS_REGION: us-east-1
+2026-10-20T12:03:11.0944353Z   AWS_ACCESS_KEY_ID: ***
+2026-10-20T12:03:11.0944527Z   AWS_SECRET_ACCESS_KEY: ***
+2026-10-20T12:03:11.0946894Z   AWS_SESSION_TOKEN: ***
+2026-10-20T12:03:11.0947013Z ##[endgroup]
+2026-10-20T12:03:11.2336862Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-20T12:03:11.2570992Z Post job cleanup.
+2026-10-20T12:03:11.5362607Z Post job cleanup.
+2026-10-20T12:03:11.6437639Z [command]"C:\Program Files\Git\cmd\git.exe" version
+2026-10-20T12:03:11.6753858Z git version 2.55.0.windows.5
+2026-10-20T12:03:11.6776293Z Copying 'C:\Users\ContainerAdministrator\.gitconfig' to 'C:\home\runner\_work\_temp\1b711f8f-044d-4a42-b0e6-1b806cb8c796\.gitconfig'
+2026-10-20T12:03:11.6795534Z Temporarily overriding HOME='C:\home\runner\_work\_temp\1b711f8f-044d-4a42-b0e6-1b806cb8c796' before making global git config changes
+2026-10-20T12:03:11.6795933Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T12:03:11.6803044Z [command]"C:\Program Files\Git\cmd\git.exe" config --global --add safe.directory C:\home\runner\_work\TheRock\TheRock
+2026-10-20T12:03:11.7147575Z Removing SSH command configuration
+2026-10-20T12:03:11.7154738Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T12:03:11.7500834Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-20T12:03:12.3126671Z Removing HTTP extra header
+2026-10-20T12:03:12.3134722Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T12:03:12.3444999Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-20T12:03:12.7623256Z Removing includeIf entries pointing to credentials config files
+2026-10-20T12:03:12.7632695Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T12:03:12.7934077Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-20T12:03:13.5746535Z Evaluate and set job outputs
+2026-10-20T12:03:13.5751310Z Cleaning up orphan processes
+2026-10-20T12:03:13.6011345Z Terminate orphan process: pid (1664) (sccache)
+2026-10-20T12:03:13.6152827Z Terminate orphan process: pid (25548) (conhost)
+2026-10-20T12:03:13.6217164Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

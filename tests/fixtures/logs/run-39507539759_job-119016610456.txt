@@ -1,0 +1,225 @@
+# Source: ROCm/TheRock Actions run 39507539759 attempt 1, job 119016610456
+# Job: CI Summary (multi_arch_ci.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+﻿2026-10-21T03:12:17.9185971Z Current runner version: '2.338.0'
+2026-10-21T03:12:17.9234206Z ##[group]Runner Image Provisioner
+2026-10-21T03:12:17.9235222Z Hosted Compute Agent
+2026-10-21T03:12:17.9235704Z Version: 20261012.601
+2026-10-21T03:12:17.9236266Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-21T03:12:17.9236854Z Build Date: 2026-10-12T17:48:21Z
+2026-10-21T03:12:17.9237388Z Worker ID: {ebe3ee3a-3c37-4ca0-a7cf-3d8ca2a81ffa}
+2026-10-21T03:12:17.9238083Z Region: northcentralus
+2026-10-21T03:12:17.9238561Z Cloud: Azure
+2026-10-21T03:12:17.9239020Z ##[endgroup]
+2026-10-21T03:12:17.9240234Z ##[group]Operating System
+2026-10-21T03:12:17.9240740Z Ubuntu
+2026-10-21T03:12:17.9241285Z 26.04.1
+2026-10-21T03:12:17.9241702Z LTS
+2026-10-21T03:12:17.9242140Z ##[endgroup]
+2026-10-21T03:12:17.9242603Z ##[group]Runner Image
+2026-10-21T03:12:17.9243079Z Image: ubuntu-26.04
+2026-10-21T03:12:17.9243599Z Version: 20261012.163.1
+2026-10-21T03:12:17.9244782Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261012.163/images/ubuntu/Ubuntu2604-Readme.md
+2026-10-21T03:12:17.9246036Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261012.163
+2026-10-21T03:12:17.9246803Z ##[endgroup]
+2026-10-21T03:12:17.9247820Z ##[group]GITHUB_TOKEN Permissions
+2026-10-21T03:12:17.9249499Z Actions: read
+2026-10-21T03:12:17.9250044Z Contents: read
+2026-10-21T03:12:17.9250501Z Metadata: read
+2026-10-21T03:12:17.9250966Z ##[endgroup]
+2026-10-21T03:12:17.9252654Z Secret source: Actions
+2026-10-21T03:12:17.9253367Z Cache mode: write
+2026-10-21T03:12:17.9254015Z Prepare workflow directory
+2026-10-21T03:12:17.9565562Z Prepare all required actions
+2026-10-21T03:12:17.9620888Z Getting action download info
+2026-10-21T03:12:18.1306165Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-21T03:12:18.2902609Z Complete job name: CI Summary
+2026-10-21T03:12:18.3576244Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-21T03:12:18.3577073Z with:
+2026-10-21T03:12:18.3577424Z   persist-credentials: false
+2026-10-21T03:12:18.3577845Z   repository: ROCm/TheRock
+2026-10-21T03:12:18.3581028Z   token: ***
+2026-10-21T03:12:18.3581389Z   ssh-strict: true
+2026-10-21T03:12:18.3581747Z   ssh-user: git
+2026-10-21T03:12:18.3582086Z   clean: true
+2026-10-21T03:12:18.3582442Z   sparse-checkout-cone-mode: true
+2026-10-21T03:12:18.3582857Z   fetch-depth: 1
+2026-10-21T03:12:18.3583203Z   fetch-tags: false
+2026-10-21T03:12:18.3583560Z   show-progress: true
+2026-10-21T03:12:18.3583925Z   lfs: false
+2026-10-21T03:12:18.3584254Z   submodules: false
+2026-10-21T03:12:18.3584844Z   set-safe-directory: true
+2026-10-21T03:12:18.3585248Z   allow-unsafe-pr-checkout: false
+2026-10-21T03:12:18.3585868Z ##[endgroup]
+2026-10-21T03:12:18.4345314Z Syncing repository: ROCm/TheRock
+2026-10-21T03:12:18.4346707Z ##[group]Getting Git version info
+2026-10-21T03:12:18.4347339Z Working directory is '/home/runner/work/TheRock/TheRock'
+2026-10-21T03:12:18.4348132Z [command]/usr/bin/git version
+2026-10-21T03:12:18.4357171Z git version 2.55.0
+2026-10-21T03:12:18.4371961Z ##[endgroup]
+2026-10-21T03:12:18.4379725Z Temporarily overriding HOME='/home/runner/work/_temp/65762951-7e5b-426e-975e-8791ba97cb71' before making global git config changes
+2026-10-21T03:12:18.4380872Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-21T03:12:18.4383668Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TheRock/TheRock
+2026-10-21T03:12:18.4430329Z Deleting the contents of '/home/runner/work/TheRock/TheRock'
+2026-10-21T03:12:18.4432863Z ##[group]Determining repository object format
+2026-10-21T03:12:18.4434246Z ##[endgroup]
+2026-10-21T03:12:18.4435515Z ##[group]Initializing the repository
+2026-10-21T03:12:18.4437731Z [command]/usr/bin/git init /home/runner/work/TheRock/TheRock
+2026-10-21T03:12:18.4516669Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-21T03:12:18.4517813Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-21T03:12:18.4518576Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-21T03:12:18.4519164Z hint: call:
+2026-10-21T03:12:18.4519499Z hint:
+2026-10-21T03:12:18.4519904Z hint: 	git config --global init.defaultBranch <name>
+2026-10-21T03:12:18.4520405Z hint:
+2026-10-21T03:12:18.4520873Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-21T03:12:18.4521615Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-21T03:12:18.4522209Z hint:
+2026-10-21T03:12:18.4522552Z hint: 	git branch -m <name>
+2026-10-21T03:12:18.4522939Z hint:
+2026-10-21T03:12:18.4523447Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-21T03:12:18.4528936Z Initialized empty Git repository in /home/runner/work/TheRock/TheRock/.git/
+2026-10-21T03:12:18.4535752Z [command]/usr/bin/git remote add origin https://github.com/ROCm/TheRock
+2026-10-21T03:12:18.4572917Z ##[endgroup]
+2026-10-21T03:12:18.4573916Z ##[group]Disabling automatic garbage collection
+2026-10-21T03:12:18.4575693Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-21T03:12:18.4602016Z ##[endgroup]
+2026-10-21T03:12:18.4603479Z ##[group]Setting up auth
+2026-10-21T03:12:18.4604230Z Removing SSH command configuration
+2026-10-21T03:12:18.4606511Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-21T03:12:18.4633652Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-21T03:12:18.4939063Z Removing HTTP extra header
+2026-10-21T03:12:18.4943293Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-21T03:12:18.4970310Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-21T03:12:18.5184336Z Removing includeIf entries pointing to credentials config files
+2026-10-21T03:12:18.5188483Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-21T03:12:18.5217110Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-21T03:12:18.5444203Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-3a1f7afd-fa9b-434d-ae88-5af687480828.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-21T03:12:18.5474994Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/TheRock/TheRock/.git.path /home/runner/work/_temp/git-credentials-3a1f7afd-fa9b-434d-ae88-5af687480828.config
+2026-10-21T03:12:18.5501836Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/TheRock/TheRock/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-3a1f7afd-fa9b-434d-ae88-5af687480828.config
+2026-10-21T03:12:18.5530220Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-3a1f7afd-fa9b-434d-ae88-5af687480828.config
+2026-10-21T03:12:18.5556106Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-3a1f7afd-fa9b-434d-ae88-5af687480828.config
+2026-10-21T03:12:18.5580592Z ##[endgroup]
+2026-10-21T03:12:18.5581198Z ##[group]Fetching the repository
+2026-10-21T03:12:18.5585552Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4a53a6402294393b4d37aab91595a85237c13f29:refs/remotes/origin/main
+2026-10-21T03:12:19.3135423Z From https://github.com/ROCm/TheRock
+2026-10-21T03:12:19.3136985Z  * [new ref]         4a53a6402294393b4d37aab91595a85237c13f29 -> origin/main
+2026-10-21T03:12:19.3145438Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-21T03:12:19.3166863Z   origin/main
+2026-10-21T03:12:19.3172700Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-21T03:12:19.3192909Z 4a53a6402294393b4d37aab91595a85237c13f29
+2026-10-21T03:12:19.3196918Z ##[endgroup]
+2026-10-21T03:12:19.3197920Z ##[group]Determining the checkout info
+2026-10-21T03:12:19.3198902Z ##[endgroup]
+2026-10-21T03:12:19.3199750Z [command]/usr/bin/git sparse-checkout disable
+2026-10-21T03:12:19.3240620Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-21T03:12:19.3266635Z ##[group]Checking out the ref
+2026-10-21T03:12:19.3268828Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-21T03:12:19.3965790Z Switched to a new branch 'main'
+2026-10-21T03:12:19.3967077Z branch 'main' set up to track 'origin/main'.
+2026-10-21T03:12:19.3975981Z ##[endgroup]
+2026-10-21T03:12:19.4016439Z [command]/usr/bin/git log -1 --format=%H
+2026-10-21T03:12:19.4038019Z 4a53a6402294393b4d37aab91595a85237c13f29
+2026-10-21T03:12:19.4046440Z ##[group]Removing auth
+2026-10-21T03:12:19.4047719Z Removing SSH command configuration
+2026-10-21T03:12:19.4049523Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-21T03:12:19.4076146Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-21T03:12:19.4300899Z Removing HTTP extra header
+2026-10-21T03:12:19.4303260Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-21T03:12:19.4330263Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-21T03:12:19.4551786Z Removing includeIf entries pointing to credentials config files
+2026-10-21T03:12:19.4554001Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-21T03:12:19.4575051Z includeif.gitdir:/home/runner/work/TheRock/TheRock/.git.path
+2026-10-21T03:12:19.4577227Z includeif.gitdir:/home/runner/work/TheRock/TheRock/.git/worktrees/*.path
+2026-10-21T03:12:19.4578744Z includeif.gitdir:/github/workspace/.git.path
+2026-10-21T03:12:19.4580049Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-21T03:12:19.4588621Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/TheRock/TheRock/.git.path
+2026-10-21T03:12:19.4601874Z /home/runner/work/_temp/git-credentials-3a1f7afd-fa9b-434d-ae88-5af687480828.config
+2026-10-21T03:12:19.4609841Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/TheRock/TheRock/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-3a1f7afd\-fa9b\-434d\-ae88\-5af687480828\.config
+2026-10-21T03:12:19.4639373Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/TheRock/TheRock/.git/worktrees/*.path
+2026-10-21T03:12:19.4658166Z /home/runner/work/_temp/git-credentials-3a1f7afd-fa9b-434d-ae88-5af687480828.config
+2026-10-21T03:12:19.4671595Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/TheRock/TheRock/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-3a1f7afd\-fa9b\-434d\-ae88\-5af687480828\.config
+2026-10-21T03:12:19.4700495Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-21T03:12:19.4719824Z /github/runner_temp/git-credentials-3a1f7afd-fa9b-434d-ae88-5af687480828.config
+2026-10-21T03:12:19.4728068Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-3a1f7afd\-fa9b\-434d\-ae88\-5af687480828\.config
+2026-10-21T03:12:19.4755455Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-21T03:12:19.4773856Z /github/runner_temp/git-credentials-3a1f7afd-fa9b-434d-ae88-5af687480828.config
+2026-10-21T03:12:19.4782087Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-3a1f7afd\-fa9b\-434d\-ae88\-5af687480828\.config
+2026-10-21T03:12:19.4809718Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-21T03:12:19.5036677Z Removing credentials config '/home/runner/work/_temp/git-credentials-3a1f7afd-fa9b-434d-ae88-5af687480828.config'
+2026-10-21T03:12:19.5039745Z ##[endgroup]
+2026-10-21T03:12:19.5306799Z ##[group]Run python build_tools/github_actions/workflow_summary.py \
+2026-10-21T03:12:19.5308363Z [36;1mpython build_tools/github_actions/workflow_summary.py \[0m
+2026-10-21T03:12:19.5309566Z [36;1m  --needs-json "${NEEDS_JSON}"[0m
+2026-10-21T03:12:19.5446002Z shell: /usr/bin/bash -e {0}
+2026-10-21T03:12:19.5446818Z env:
+2026-10-21T03:12:19.5454962Z   GITHUB_TOKEN: ***
+2026-10-21T03:12:19.5530593Z   NEEDS_JSON: {
+  "setup": {
+    "result": "success",
+    "outputs": {
+      "enable_build_jobs": "true",
+      "external_repo_config": "",
+      "linux_build_config": "{\"per_family_info\": [{\"amdgpu_family\": \"gfx94X-dcgpu\", \"amdgpu_targets\": \"gfx942\", \"test-runs-on\": \"linux-gfx942-1gpu-ccs-csp-ossci-rocm\", \"test-runs-on-cpu\": \"aws-linux-scale-rocm-prod\", \"tests_enabled\": true, \"sanity_check_only_for_family\": false, \"test-runs-on-labels\": [{\"label\": \"linux-gfx942-1gpu-ccs-csp-ossci-rocm\", \"weight\": 0.85, \"count\": 28}, {\"label\": \"linux-gfx942-1gpu-ccs-ossci-rocm\", \"weight\": 0.15, \"count\": 5}], \"test-runs-on-multi-gpu\": \"linux-gfx942-8gpu-ossci-rocm\", \"test-runs-on-multi-gpu-labels\": [{\"label\": \"linux-gfx942-8gpu-ossci-rocm\", \"weight\": 1.0, \"count\": 10}]}, {\"amdgpu_family\": \"gfx110X-all\", \"amdgpu_targets\": \"gfx1100,gfx1101,gfx1102,gfx1103\", \"test-runs-on\": \"\", \"test-runs-on-cpu\": \"aws-linux-scale-rocm-prod\", \"tests_enabled\": true, \"sanity_check_only_for_family\": false}, {\"amdgpu_family\": \"gfx1151\", \"amdgpu_targets\": \"gfx1151\", \"test-runs-on\": \"\", \"test-runs-on-cpu\": \"aws-linux-scale-rocm-prod\", \"tests_enabled\": true, \"sanity_check_only_for_family\": false}, {\"amdgpu_family\": \"gfx120X-all\", \"amdgpu_targets\": \"gfx1200,gfx1201\", \"test-runs-on\": \"\", \"test-runs-on-cpu\": \"aws-linux-scale-rocm-prod\", \"tests_enabled\": true, \"sanity_check_only_for_family\": false}, {\"amdgpu_family\": \"gfx125X-dcgpu\", \"amdgpu_targets\": \"gfx1250\", \"test-runs-on\": \"\", \"test-runs-on-cpu\": \"aws-linux-scale-rocm-prod\", \"tests_enabled\": true, \"sanity_check_only_for_family\": false}, {\"amdgpu_family\": \"gfx90a\", \"amdgpu_targets\": \"gfx90a\", \"test-runs-on\": \"\", \"test-runs-on-cpu\": \"aws-linux-scale-rocm-prod\", \"tests_enabled\": true, \"sanity_check_only_for_family\": false}, {\"amdgpu_family\": \"gfx950-dcgpu\", \"amdgpu_targets\": \"gfx950\", \"test-runs-on\": \"\", \"test-runs-on-cpu\": \"aws-linux-scale-rocm-prod\", \"tests_enabled\": true, \"sanity_check_only_for_family\": false}], \"dist_amdgpu_families\": \"gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx125X-dcgpu;gfx90a;gfx950-dcgpu\", \"artifact_group\": \"multi-arch-release\", \"build_variant_label\": \"release\", \"build_variant_suffix\": \"\", \"build_variant_cmake_preset\": \"\", \"build_native_linux\": true, \"build_python_packages\": true, \"build_pytorch\": true, \"build_jax\": true, \"test_python_packages_matrix\": [{\"amdgpu_family\": \"gfx94X-dcgpu\", \"test_runs_on\": \"linux-gfx942-1gpu-ccs-csp-ossci-rocm\", \"python_version\": \"3.10\", \"container_image_name\": \"ubuntu24.04\", \"container_image_url\": \"ghcr.io/rocm/no_rocm_image_ubuntu24_04@sha256:405945a40deaff9db90b9839c0f41d4cba4a383c1a7459b28627047bf6302a26\"}, {\"amdgpu_family\": \"gfx94X-dcgpu\", \"test_runs_on\": \"linux-gfx942-1gpu-ccs-csp-ossci-rocm\", \"python_version\": \"3.10\", \"container_image_name\": \"ubi10\", \"container_image_url\": \"ghcr.io/rocm/no_rocm_image_ubi10@sha256:a10f34d6006a20d02cf688982de9dea147710927ed405a3b0d5c73b58a6030c0\"}, {\"amdgpu_family\": \"gfx94X-dcgpu\", \"test_runs_on\": \"linux-gfx942-1gpu-ccs-csp-ossci-rocm\", \"python_version\": \"3.11\", \"container_image_name\": \"ubuntu24.04\", \"container_image_url\": \"ghcr.io/rocm/no_rocm_image_ubuntu24_04@sha256:405945a40deaff9db90b9839c0f41d4cba4a383c1a7459b28627047bf6302a26\"}, {\"amdgpu_family\": \"gfx94X-dcgpu\", \"test_runs_on\": \"linux-gfx942-1gpu-ccs-csp-ossci-rocm\", \"python_version\": \"3.11\", \"container_image_name\": \"ubi10\", \"container_image_url\": \"ghcr.io/rocm/no_rocm_image_ubi10@sha256:a10f34d6006a20d02cf688982de9dea147710927ed405a3b0d5c73b58a6030c0\"}, {\"amdgpu_family\": \"gfx94X-dcgpu\", \"test_runs_on\": \"linux-gfx942-1gpu-ccs-csp-ossci-rocm\", \"python_version\": \"3.12\", \"container_image_name\": \"ubuntu24.04\", \"container_image_url\": \"ghcr.io/rocm/no_rocm_image_ubuntu24_04@sha256:405945a40deaff9db90b9839c0f41d4cba4a383c1a7459b28627047bf6302a26\"}, {\"amdgpu_family\": \"gfx94X-dcgpu\", \"test_runs_on\": \"linux-gfx942-1gpu-ccs-csp-ossci-rocm\", \"python_version\": \"3.12\", \"container_image_name\": \"ubi10\", \"container_image_url\": \"ghcr.io/rocm/no_rocm_image_ubi10@sha256:a10f34d6006a20d02cf688982de9dea147710927ed405a3b0d5c73b58a6030c0\"}], \"pytorch_build_matrix\": [{\"python_version\": \"3.12\", \"pytorch_git_ref\": \"release/2.13\", \"amdgpu_families\": \"gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx125X-dcgpu;gfx90a;gfx950-dcgpu\", \"test_level\": \"standard\", \"test_amdgpu_families\": \"auto\"}], \"jax_build_matrix\": [{\"python_version\": \"3.12\", \"jax_ref\": \"rocm-jaxlib-v0.11.2\", \"jax_label\": \"0.11.2\", \"jax_repository\": \"ROCm/jax\", \"rocm_jax_ref\": \"rocm-jaxlib-v0.11.2\", \"gfx_arch\": \"device-all\", \"wheel_type\": \"release\", \"publish\": true}], \"build_runs_on_large\": \"aws-linux-scale-rocm-prod\", \"build_runs_on_small\": \"aws-linux-scale-rocm-small\", \"build_runs_on_medium\": \"aws-linux-scale-rocm-medium\", \"prebuilt_stages\": \"\", \"skip_stages\": \"\", \"baseline_run_id\": \"\", \"baseline_repository\": \"ROCm/TheRock\", \"rebuild_artifacts\": \"\", \"reusable_artifacts\": \"\", \"linux_amdgpu_families\": \"gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx125X-dcgpu;gfx90a;gfx950-dcgpu\", \"windows_amdgpu_families\": \"gfx110X-all;gfx1151;gfx120X-all;gfx90a\"}",
+      "linux_test_labels": "[]",
+      "ref": "4a53a6402294393b4d37aab91595a85237c13f29",
+      "rocm_deb_package_version": "10.2.0~dev20261020",
+      "rocm_package_version": "10.2.0.dev0+4a53a6402294393b4d37aab91595a85237c13f29",
+      "rocm_rpm_package_version": "10.2.0~20261020g4a53a640",
+      "test_type": "quick",
+      "windows_build_config": "{\"per_family_info\": [{\"amdgpu_family\": \"gfx110X-all\", \"amdgpu_targets\": \"gfx1100,gfx1101,gfx1102,gfx1103\", \"test-runs-on\": \"windows-gfx110X-gpu-rocm\", \"test-runs-on-cpu\": \"aws-windows-scale-rocm-prod-mix\", \"tests_enabled\": true, \"sanity_check_only_for_family\": false}, {\"amdgpu_family\": \"gfx1151\", \"amdgpu_targets\": \"gfx1151\", \"test-runs-on\": \"\", \"test-runs-on-cpu\": \"aws-windows-scale-rocm-prod-mix\", \"tests_enabled\": true, \"sanity_check_only_for_family\": false}, {\"amdgpu_family\": \"gfx120X-all\", \"amdgpu_targets\": \"gfx1200,gfx1201\", \"test-runs-on\": \"\", \"test-runs-on-cpu\": \"aws-windows-scale-rocm-prod-mix\", \"tests_enabled\": true, \"sanity_check_only_for_family\": false}, {\"amdgpu_family\": \"gfx90a\", \"amdgpu_targets\": \"\", \"test-runs-on\": \"\", \"test-runs-on-cpu\": \"aws-windows-scale-rocm-prod-mix\", \"tests_enabled\": true, \"sanity_check_only_for_family\": false}], \"dist_amdgpu_families\": \"gfx110X-all;gfx1151;gfx120X-all;gfx90a\", \"artifact_group\": \"multi-arch-release\", \"build_variant_label\": \"release\", \"build_variant_suffix\": \"\", \"build_variant_cmake_preset\": \"windows-release\", \"build_native_linux\": true, \"build_python_packages\": true, \"build_pytorch\": true, \"build_jax\": false, \"test_python_packages_matrix\": [{\"amdgpu_family\": \"gfx110X-all\", \"test_runs_on\": \"windows-gfx110X-gpu-rocm\", \"python_version\": \"3.12\", \"container_image_name\": \"native\", \"container_image_url\": \"\"}], \"pytorch_build_matrix\": [{\"python_version\": \"3.12\", \"pytorch_git_ref\": \"release/2.13\", \"amdgpu_families\": \"gfx110X-all;gfx1151;gfx120X-all;gfx90a\", \"test_level\": \"standard\", \"test_amdgpu_families\": \"auto\"}], \"jax_build_matrix\": [], \"build_runs_on_large\": \"aws-windows-scale-rocm-prod-mix\", \"build_runs_on_small\": \"aws-windows-scale-rocm-prod-mix\", \"build_runs_on_medium\": \"aws-windows-scale-rocm-prod-mix\", \"prebuilt_stages\": \"\", \"skip_stages\": \"\", \"baseline_run_id\": \"\", \"baseline_repository\": \"ROCm/TheRock\", \"rebuild_artifacts\": \"\", \"reusable_artifacts\": \"\", \"linux_amdgpu_families\": \"gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx125X-dcgpu;gfx90a;gfx950-dcgpu\", \"windows_amdgpu_families\": \"gfx110X-all;gfx1151;gfx120X-all;gfx90a\"}",
+      "windows_test_labels": "[]"
+    }
+  },
+  "linux_build_and_test": {
+    "result": "failure",
+    "outputs": {}
+  },
+  "windows_build_and_test": {
+    "result": "failure",
+    "outputs": {}
+  },
+  "manifest_diff": {
+    "result": "success",
+    "outputs": {}
+  }
+}
+2026-10-21T03:12:19.5609209Z ##[endgroup]
+2026-10-21T03:12:28.3617745Z Checking status for 4 job(s):
+2026-10-21T03:12:28.3618446Z   [32msetup: success[0m
+2026-10-21T03:12:28.3618750Z   [31mlinux_build_and_test: failure[0m
+2026-10-21T03:12:28.3619086Z   [31mwindows_build_and_test: failure[0m
+2026-10-21T03:12:28.3619397Z   [32mmanifest_diff: success[0m
+2026-10-21T03:12:28.3619623Z 
+2026-10-21T03:12:28.3619796Z [31mThe following job(s) failed:[0m
+2026-10-21T03:12:28.3620102Z   [31mlinux_build_and_test[0m
+2026-10-21T03:12:28.3620394Z   [31mwindows_build_and_test[0m
+2026-10-21T03:12:28.3620551Z 
+2026-10-21T03:12:28.3620691Z [31mFailed sub-jobs:[0m
+2026-10-21T03:12:28.3625480Z   [31mWindows::release / Test gfx110X-all / Test rocfft / Test rocfft (shard 1/1) (gfx110X-all)[0m
+2026-10-21T03:12:28.3626226Z     https://github.com/ROCm/TheRock/actions/runs/39507539759/job/118965295605
+2026-10-21T03:12:28.3626909Z   [31mWindows::release / Test gfx110X-all / Test rocsparse / Test rocsparse (shard 1/1) (gfx110X-all)[0m
+2026-10-21T03:12:28.3627457Z     https://github.com/ROCm/TheRock/actions/runs/39507539759/job/118965295625
+2026-10-21T03:12:28.3628157Z   [31mLinux::release / Test gfx94X-dcgpu / Test tensilelite / Test tensilelite (shard 1/1) (gfx94X-dcgpu)[0m
+2026-10-21T03:12:28.3628692Z     https://github.com/ROCm/TheRock/actions/runs/39507539759/job/118977382616
+2026-10-21T03:12:28.3629342Z   [31mLinux::release / Test gfx94X-dcgpu / Test rocprofiler-sdk / Test rocprofiler-sdk (shard 1/1) (gfx94X-dcgpu)[0m
+2026-10-21T03:12:28.3629877Z     https://github.com/ROCm/TheRock/actions/runs/39507539759/job/118977382804
+2026-10-21T03:12:28.3630718Z   [31mLinux::release / Build JAX Wheels (3.12, rocm-jaxlib-v0.11.2, 0.11.2, ROCm/jax, rocm-jaxlib-v0.11.2, device-all, r... / Test | gfx94X-dcgpu | small | all / Test JAX | small | all | gfx94X-dcgpu[0m
+2026-10-21T03:12:28.3631437Z     https://github.com/ROCm/TheRock/actions/runs/39507539759/job/119001506616
+2026-10-21T03:12:28.3741077Z ##[error]Process completed with exit code 1.
+2026-10-21T03:12:28.3935736Z Post job cleanup.
+2026-10-21T03:12:28.4577102Z [command]/usr/bin/git version
+2026-10-21T03:12:28.4613760Z git version 2.55.0
+2026-10-21T03:12:28.4639926Z Temporarily overriding HOME='/home/runner/work/_temp/c0a88201-722c-49bf-85a9-521cefba7139' before making global git config changes
+2026-10-21T03:12:28.4641079Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-21T03:12:28.4643723Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TheRock/TheRock
+2026-10-21T03:12:28.4668759Z Removing SSH command configuration
+2026-10-21T03:12:28.4672914Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-21T03:12:28.4700289Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-21T03:12:28.4923722Z Removing HTTP extra header
+2026-10-21T03:12:28.4927671Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-21T03:12:28.4955041Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-21T03:12:28.5175881Z Removing includeIf entries pointing to credentials config files
+2026-10-21T03:12:28.5180329Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-21T03:12:28.5207519Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-21T03:12:28.5559135Z Cleaning up orphan processes

@@ -1,0 +1,68 @@
+# Source: ROCm/TheRock run 39314226932, job 118285601270 (Test rocgdb-gpu, gfx110X-all), lines 1-66 of the labeler excerpt
+# Kept as a permanent fixture for the rocgdb suite-summary format
+# Source: ROCm/TheRock Actions run 39314226932 attempt 1, job 118285601270
+# Job: Test rocgdb-gpu / Test rocgdb-gpu (shard 1/1) (gfx110X-all) (test_artifacts.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+2026-10-19T20:29:42.0710292Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/runtime-core.exp: output_type=pipe: core_type=lightweight: Could not generate a core file
+2026-10-19T20:29:42.0710568Z 2026-10-19 20:29:42,056 - INFO:   [!] UNSUPPORTED: 12
+2026-10-19T20:29:42.0710767Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: denorm, precise=on
+2026-10-19T20:29:42.0711011Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: float_div0, precise=on
+2026-10-19T20:29:42.0711326Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: inexact, precise=on
+2026-10-19T20:29:42.0711634Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: int_div0, precise=on
+2026-10-19T20:29:42.0711904Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: invalid, precise=on
+2026-10-19T20:29:42.0712143Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: overflow, precise=on
+2026-10-19T20:29:42.0712386Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: underflow, precise=on
+2026-10-19T20:29:42.0712673Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/cluster-barrier.exp: not testing clusters on device older than gfx1250
+2026-10-19T20:29:42.0712986Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/cluster.exp: not testing clusters on device older than gfx1250
+2026-10-19T20:29:42.0713303Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/coop-group-grid-sync.exp: require failed: supports_cooperative_groups
+2026-10-19T20:29:42.0713638Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/runtime-core-attached.exp: single GPU core file must exist (found 0)
+2026-10-19T20:29:42.0714009Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/watchpoint-at-end-of-shader.exp: precise_memory=on: target does not support precise memory
+2026-10-19T20:29:42.0714284Z 2026-10-19 20:29:42,056 - INFO:   [!] XFAIL: 4
+2026-10-19T20:29:42.0714471Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/finish.exp: bitfield: unpacked: finish
+2026-10-19T20:29:42.0714714Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/finish.exp: reference: private address: finish
+2026-10-19T20:29:42.0714966Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/show-info.exp: dbgapi properly configured
+2026-10-19T20:29:42.0715273Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/watchpoint-at-end-of-shader.exp: precise_memory=off: continue (the program exited)
+2026-10-19T20:29:42.0715536Z 2026-10-19 20:29:42,056 - INFO:   [!] KFAIL: 7
+2026-10-19T20:29:42.0715784Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/deref-scoped-pointer.exp: continue until exit at continue to end (PRMS: xxxx)
+2026-10-19T20:29:42.0716176Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/deref-scoped-pointer.exp: global pointer set by gdb: print global_ptr2 = &local_var (PRMS: xxxx)
+2026-10-19T20:29:42.0716591Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/deref-scoped-pointer.exp: global pointer set by program: lane 0: print *global_ptr (PRMS: xxxx)
+2026-10-19T20:29:42.0716995Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/deref-scoped-pointer.exp: global pointer set by program: lane 1: print *global_ptr (PRMS: xxxx)
+2026-10-19T20:29:42.0717414Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/deref-scoped-pointer.exp: global pointer set by program: print global_ptr (PRMS: xxxx)
+2026-10-19T20:29:42.0717803Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/device-interrupt.exp: schedlock=on: interrupt_how=ctrl-c: interrupt (timeout) (PRMS: xxxx)
+2026-10-19T20:29:42.0718198Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/device-interrupt.exp: schedlock=on: interrupt_how=interrupt: interrupt (timeout) (PRMS: xxxx)
+2026-10-19T20:29:42.0718470Z 2026-10-19 20:29:42,057 - INFO:   [~] FLAKY: 2
+2026-10-19T20:29:42.0718691Z 2026-10-19 20:29:42,057 - INFO:           gdb.rocm/register-watchpoint.exp: initially failed, passed on retry
+2026-10-19T20:29:42.0718993Z 2026-10-19 20:29:42,057 - INFO:           gdb.rocm/omp-target-multi-kernel.exp: initially failed, passed on retry
+2026-10-19T20:29:42.0719214Z 2026-10-19 20:29:42,057 - INFO: 
+2026-10-19T20:29:42.0719386Z 2026-10-19 20:29:42,057 - INFO: ================================================================================
+2026-10-19T20:29:42.0719637Z 2026-10-19 20:29:42,057 - INFO:                                FINAL TEST STATUS                                
+2026-10-19T20:29:42.0719877Z 2026-10-19 20:29:42,057 - INFO: ================================================================================
+2026-10-19T20:29:42.0720066Z 2026-10-19 20:29:42,057 - INFO: [X] LLVM: FAIL
+2026-10-19T20:29:42.0720226Z 2026-10-19 20:29:42,057 - INFO: [X] Total Failed Tests: 2
+2026-10-19T20:29:42.0720412Z 2026-10-19 20:29:42,057 - INFO: [~] Flaky Tests (passed after retry) (2):
+2026-10-19T20:29:42.0720653Z 2026-10-19 20:29:42,057 - INFO:        gdb.rocm/omp-target-multi-kernel.exp
+2026-10-19T20:29:42.0720861Z 2026-10-19 20:29:42,057 - INFO:        gdb.rocm/register-watchpoint.exp
+2026-10-19T20:29:42.0721053Z 2026-10-19 20:29:42,057 - INFO: [X] Unexpected Failures (2):
+2026-10-19T20:29:42.0721420Z 2026-10-19 20:29:42,057 - INFO:        gdb.rocm/multi-inferior-fork.exp
+2026-10-19T20:29:42.0721650Z 2026-10-19 20:29:42,057 - INFO:        gdb.rocm/multi-inferior-gpu.exp
+2026-10-19T20:29:42.0721842Z 2026-10-19 20:29:42,057 - INFO: [!] Unused Ignored Failures (11):
+2026-10-19T20:29:42.0722037Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-case-insensitive.exp
+2026-10-19T20:29:42.0722250Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-cp-infcall-ref-static.exp
+2026-10-19T20:29:42.0722451Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-entry-value.exp
+2026-10-19T20:29:42.0722639Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-inline-param.exp
+2026-10-19T20:29:42.0722831Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-param-error.exp
+2026-10-19T20:29:42.0723024Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-skip-prologue.exp
+2026-10-19T20:29:42.0723207Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-unresolved.exp
+2026-10-19T20:29:42.0723394Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/fission-dw-form-strx.exp
+2026-10-19T20:29:42.0723582Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/pr13961.exp
+2026-10-19T20:29:42.0723782Z 2026-10-19 20:29:42,057 - INFO:        gdb.rocm/multi-inferior-run-spurious-waves.exp
+2026-10-19T20:29:42.0724010Z 2026-10-19 20:29:42,057 - INFO:        gdb.rocm/step-schedlock-spurious-waves.exp
+2026-10-19T20:29:42.0724185Z 2026-10-19 20:29:42,057 - INFO: 
+2026-10-19T20:29:42.0724298Z 2026-10-19 20:29:42,057 - INFO: 
+2026-10-19T20:29:42.0724464Z 2026-10-19 20:29:42,057 - INFO: ================================================================================
+2026-10-19T20:29:42.0724707Z 2026-10-19 20:29:42,057 - INFO:                             [X] OVERALL STATUS: FAIL                            
+2026-10-19T20:29:42.0724935Z 2026-10-19 20:29:42,057 - INFO: ================================================================================
+2026-10-19T20:29:42.0725104Z 2026-10-19 20:29:42,057 - INFO: 
+2026-10-19T20:29:42.0725212Z 2026-10-19 20:29:42,057 - INFO: 
+2026-10-19T20:29:42.0725453Z 2026-10-19 20:29:42,057 - INFO: Total test run duration: 424.6181 seconds.
+2026-10-19T20:29:42.0730414Z ##[error]Process completed with exit code 1.

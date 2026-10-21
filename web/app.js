@@ -98,6 +98,11 @@ async function select(caseId) {
     const ev = await api(`/api/cases/${encodeURIComponent(caseId)}/evidence`);
     if (state.selected?.case_id !== caseId) return;
     const log = $("#log"); log.replaceChildren();
+    if (ev.fallback) {
+      log.append(el("p", { class: "fallback" },
+        "No error lines recognised in this log, so this is just the end of the log (not evidence). " +
+        "Open the full log on GitHub; if it shows a real failure, the extractor needs a new pattern."));
+    }
     for (const seg of ev.segments) {
       log.append(el("div", { class: "seg" }, seg.lines.map((l) =>
         el("div", { class: `ln${l.cite ? " cite" : ""}` }, el("span", { class: "n" }, l.n),

@@ -1,0 +1,200 @@
+# Source: ROCm/TheRock Actions run 39314226932 attempt 1, job 118285600254
+# Job: Test rocblas / Test rocblas (shard 1/1) (gfx110X-all) (test_artifacts.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+2026-10-19T20:45:37.2736389Z 
+2026-10-19T20:45:37.2736500Z [0;32m[----------] [m8 tests from _/rotg_strided_batched
+2026-10-19T20:45:37.2736765Z [0;32m[----------] [m8 tests from _/rotg_strided_batched (8063 ms total)
+2026-10-19T20:45:37.2736925Z 
+2026-10-19T20:45:37.2737013Z [0;32m[----------] [m8 tests from _/rotm
+2026-10-19T20:45:37.2737244Z [0;32m[----------] [m8 tests from _/rotm (8568 ms total)
+2026-10-19T20:45:37.2737393Z 
+2026-10-19T20:45:37.2737496Z [0;32m[----------] [m8 tests from _/rotm_batched
+2026-10-19T20:45:37.2737744Z [0;32m[----------] [m8 tests from _/rotm_batched (8063 ms total)
+2026-10-19T20:45:37.2737895Z 
+2026-10-19T20:45:37.2738005Z [0;32m[----------] [m8 tests from _/rotm_strided_batched
+2026-10-19T20:45:37.2738275Z [0;32m[----------] [m8 tests from _/rotm_strided_batched (8064 ms total)
+2026-10-19T20:45:37.2738435Z 
+2026-10-19T20:45:37.2738528Z [0;32m[----------] [m4 tests from _/rotmg
+2026-10-19T20:45:37.2738756Z [0;32m[----------] [m4 tests from _/rotmg (4567 ms total)
+2026-10-19T20:45:37.2738978Z 
+2026-10-19T20:45:37.2739083Z [0;32m[----------] [m4 tests from _/rotmg_batched
+2026-10-19T20:45:37.2739304Z SIGNAL raised in: blas1/quick_blas1_batched_f32_r_2_I64
+2026-10-19T20:45:37.2739522Z rocblas-test(+0x42c5b18)[0x6401755c2b18]
+2026-10-19T20:45:37.2739750Z rocblas-test(rocblas_test_signal_handler+0x121)[0x6401755c2a61]
+2026-10-19T20:45:37.2740012Z /lib/x86_64-linux-gnu/libc.so.6(+0x45330)[0x7cdb5d897330]
+2026-10-19T20:45:37.2740265Z /lib/x86_64-linux-gnu/libc.so.6(__sched_yield+0xb)[0x7cdb5d9607db]
+2026-10-19T20:45:37.2740570Z /__w/TheRock/TheRock/build/bin/../lib/libamdhip64.so.7(+0x5d01d5)[0x7cdb5e5d01d5]
+2026-10-19T20:45:37.2740900Z /__w/TheRock/TheRock/build/bin/../lib/libamdhip64.so.7(+0x5d404f)[0x7cdb5e5d404f]
+2026-10-19T20:45:37.2741326Z /__w/TheRock/TheRock/build/bin/../lib/libamdhip64.so.7(+0x16abcd)[0x7cdb5e16abcd]
+2026-10-19T20:45:37.2741645Z /__w/TheRock/TheRock/build/bin/../lib/libamdhip64.so.7(+0x2b02a9)[0x7cdb5e2b02a9]
+2026-10-19T20:45:37.2742071Z /__w/TheRock/TheRock/build/bin/../lib/libamdhip64.so.7(+0x2c0761)[0x7cdb5e2c0761]
+2026-10-19T20:45:37.2742471Z /__w/TheRock/TheRock/build/bin/../lib/libamdhip64.so.7(hipFree+0x1b)[0x7cdb5e4ab04b]
+2026-10-19T20:45:37.2742819Z rocblas-test(_ZN8d_vectorIfE22device_vector_teardownEPf+0x45)[0x640172ffd595]
+2026-10-19T20:45:37.2743152Z rocblas-test(_ZN19device_batch_vectorIfE11free_memoryEv+0x32)[0x640173006a32]
+2026-10-19T20:45:37.2743487Z rocblas-test(_Z21testing_rotmg_batchedIfEvRK9Arguments+0x6342)[0x640173540382]
+2026-10-19T20:45:37.2743947Z rocblas-test(_Z40catch_signals_and_exceptions_as_failuresSt8functionIFvvEEb+0x132)[0x6401755c2ef2]
+2026-10-19T20:45:37.2744366Z rocblas-test(_Z22launch_test_on_streamsSt8functionIFvvEEmm+0x2be)[0x6401756add8e]
+2026-10-19T20:45:37.2744741Z rocblas-test(+0x45c3e51)[0x6401758c0e51]
+2026-10-19T20:45:37.2745133Z rocblas-test(_ZN7testing8internal35HandleExceptionsInMethodIfSupportedINS_4TestEvEET0_PT_MS4_FS3_vEPKc+0x3d)[0x640175bcd62d]
+2026-10-19T20:45:37.2745555Z rocblas-test(_ZN7testing4Test3RunEv+0xce)[0x640175bb56be]
+2026-10-19T20:45:37.2745826Z rocblas-test(_ZN7testing8TestInfo3RunEv+0x165)[0x640175bb5845]
+2026-10-19T20:45:37.2746110Z rocblas-test(_ZN7testing9TestSuite3RunEv+0x1ef)[0x640175bb5a3f]
+2026-10-19T20:45:37.2746456Z rocblas-test(_ZN7testing8internal12UnitTestImpl11RunAllTestsEv+0x6bc)[0x640175bc14ac]
+2026-10-19T20:45:37.2746793Z rocblas-test(_ZN7testing8UnitTest3RunEv+0x6b)[0x640175bb5beb]
+2026-10-19T20:45:37.2747023Z rocblas-test(main+0xdce)[0x6401756abaee]
+2026-10-19T20:45:37.2747235Z /lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca)[0x7cdb5d87c1ca]
+2026-10-19T20:45:37.2747502Z /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b)[0x7cdb5d87c28b]
+2026-10-19T20:45:37.2747747Z rocblas-test(_start+0x2e)[0x640172fde91e]
+2026-10-19T20:45:37.2747874Z 
+2026-10-19T20:45:37.2747944Z Aborting tests due to an alarm timeout.
+2026-10-19T20:45:37.2748063Z 
+2026-10-19T20:45:37.2748178Z This could be due to a deadlock caused by mutexes being left locked
+2026-10-19T20:45:37.2748478Z after a previous test's signal was caught and partially recovered from.
+2026-10-19T20:45:37.2748723Z Aborted (core dumped)
+2026-10-19T20:45:37.2748873Z FAILED xml test suite!
+2026-10-19T20:45:37.2748961Z 
+2026-10-19T20:45:37.2749053Z Errors while running CTest
+2026-10-19T20:45:37.2749154Z 
+2026-10-19T20:45:37.2749228Z 0% tests passed, 1 tests failed out of 1
+2026-10-19T20:45:37.2749354Z 
+2026-10-19T20:45:37.2749412Z Label Time Summary:
+2026-10-19T20:45:37.2749569Z quick    = 1005.91 sec*proc (1 test)
+2026-10-19T20:45:37.2749748Z smoke    = 1005.91 sec*proc (1 test)
+2026-10-19T20:45:37.2749857Z 
+2026-10-19T20:45:37.2749925Z Total Test time (real) = 1005.91 sec
+2026-10-19T20:45:37.2750029Z 
+2026-10-19T20:45:37.2750098Z The following tests FAILED:
+2026-10-19T20:45:37.2750273Z 	  3 - rocblas-test_quick_suite (Failed)
+2026-10-19T20:45:37.2750500Z # TEST_COMPONENT: rocblas -> Test Directory: build/bin/rocblas
+2026-10-19T20:45:37.2750731Z # TEST_TYPE: quick -> Category: quick
+2026-10-19T20:45:37.2750947Z # AMDGPU_FAMILIES: gfx110X-all -> GPU Architecture: gfx110X
+2026-10-19T20:45:37.2751281Z 
+2026-10-19T20:45:37.2751353Z # Discovering available test labels...
+2026-10-19T20:45:37.2751554Z # Warning: No GPU specific test suites available
+2026-10-19T20:45:37.2751691Z 
+2026-10-19T20:45:37.2751795Z # No GPU suite found for gfx110X, excluding all ex_gpu tests
+2026-10-19T20:45:37.2752231Z # Running: ctest -L ^quick$ -LE ex_gpu --output-on-failure --parallel 1 --timeout 7200 --test-dir build/bin/rocblas -V --tests-information 1,,1
+2026-10-19T20:45:37.2752548Z 
+2026-10-19T20:45:37.2811318Z ##[error]Process completed with exit code 8.
+2026-10-19T20:45:37.2850475Z ##[group]Run python ./build_tools/github_actions/reproduce_test_failure.py \
+2026-10-19T20:45:37.2850869Z [36;1mpython ./build_tools/github_actions/reproduce_test_failure.py \[0m
+2026-10-19T20:45:37.2851341Z [36;1m  --run-id "${ARTIFACT_RUN_ID}" \[0m
+2026-10-19T20:45:37.2851557Z [36;1m  --repository "ROCm/TheRock" \[0m
+2026-10-19T20:45:37.2851764Z [36;1m  --amdgpu-family "${AMDGPU_FAMILIES}" \[0m
+2026-10-19T20:45:37.2851992Z [36;1m  --amdgpu-targets "${AMDGPU_TARGETS}" \[0m
+2026-10-19T20:45:37.2852214Z [36;1m  --test-script "${COMPONENT_TEST_SCRIPT}" \[0m
+2026-10-19T20:45:37.2852426Z [36;1m  --shard-index "${MATRIX_SHARD}" \[0m
+2026-10-19T20:45:37.2852643Z [36;1m  --total-shards "${COMPONENT_TOTAL_SHARDS}" \[0m
+2026-10-19T20:45:37.2852864Z [36;1m  --test-type "${COMPONENT_TEST_TYPE}" \[0m
+2026-10-19T20:45:37.2853063Z [36;1m  --print-cmd \[0m
+2026-10-19T20:45:37.2853276Z [36;1m  --fetch-artifact-args="${COMPONENT_FETCH_ARTIFACT_ARGS}" \[0m
+2026-10-19T20:45:37.2853587Z [36;1m  --additional-requirements-files="${REQUIREMENTS_FILES}"[0m
+2026-10-19T20:45:37.2853943Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T20:45:37.2854146Z env:
+2026-10-19T20:45:37.2854304Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-19T20:45:37.2854520Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-19T20:45:37.2854777Z   VENV_DIR: /mnt/tmpnvmedrv/actions-runner/_work/TheRock/TheRock/.venv
+2026-10-19T20:45:37.2855022Z   ARTIFACT_RUN_ID: 39283341141
+2026-10-19T20:45:37.2855189Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-19T20:45:37.2855353Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-19T20:45:37.2855518Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-19T20:45:37.2855697Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-19T20:45:37.2855894Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-19T20:45:37.2856056Z   BUILD_VARIANT: release
+2026-10-19T20:45:37.2856233Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:45:37.2856469Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T20:45:37.2856701Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:45:37.2856907Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:45:37.2857115Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:45:37.2857327Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-19T20:45:37.2857536Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-19T20:45:37.2857719Z   MATRIX_SHARD: 1
+2026-10-19T20:45:37.2857979Z   COMPONENT_TEST_SCRIPT: python build_tools/github_actions/test_executable_scripts/test_runner.py
+2026-10-19T20:45:37.2858284Z   COMPONENT_TOTAL_SHARDS: 1
+2026-10-19T20:45:37.2858446Z   COMPONENT_TEST_TYPE: quick
+2026-10-19T20:45:37.2858608Z   REQUIREMENTS_FILES: 
+2026-10-19T20:45:37.2858779Z   COMPONENT_FETCH_ARTIFACT_ARGS: --blas --tests
+2026-10-19T20:45:37.2858971Z ##[endgroup]
+2026-10-19T20:45:37.3468414Z To reproduce this failure, run:
+2026-10-19T20:45:37.3468740Z   git clone https://github.com/ROCm/TheRock.git && cd TheRock
+2026-10-19T20:45:37.3469699Z   python build_tools/github_actions/reproduce_test_failure.py --run-id 39283341141 --repository ROCm/TheRock --amdgpu-family gfx110X-all --test-script "python build_tools/github_actions/test_executable_scripts/test_runner.py" --amdgpu-targets gfx1100,gfx1101,gfx1102,gfx1103 --output-dir "./build" --test-type quick --fetch-artifact-args="--blas --tests"
+2026-10-19T20:45:37.3548195Z ##[group]Run bash ./build_tools/github_actions/cleanup_processes.sh
+2026-10-19T20:45:37.3548635Z [36;1mbash ./build_tools/github_actions/cleanup_processes.sh[0m
+2026-10-19T20:45:37.3548971Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T20:45:37.3549182Z env:
+2026-10-19T20:45:37.3549340Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-19T20:45:37.3549560Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-19T20:45:37.3549821Z   VENV_DIR: /mnt/tmpnvmedrv/actions-runner/_work/TheRock/TheRock/.venv
+2026-10-19T20:45:37.3550061Z   ARTIFACT_RUN_ID: 39283341141
+2026-10-19T20:45:37.3550226Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-19T20:45:37.3550390Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-19T20:45:37.3550550Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-19T20:45:37.3550735Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-19T20:45:37.3550944Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-19T20:45:37.3551251Z   BUILD_VARIANT: release
+2026-10-19T20:45:37.3551446Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:45:37.3551681Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T20:45:37.3551912Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:45:37.3552119Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:45:37.3552322Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:45:37.3552529Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-19T20:45:37.3552734Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-19T20:45:37.3552915Z ##[endgroup]
+2026-10-19T20:45:37.3908650Z [*] ==== Starting cleanup_processes.sh ====
+2026-10-19T20:45:37.3972805Z [*] Not running in a container (or container ID not detected)
+2026-10-19T20:45:37.3973095Z [*] Build directory: /__w/TheRock/TheRock/build
+2026-10-19T20:45:37.3973380Z [*] Searching for GPU processes from this container's build directory...
+2026-10-19T20:45:37.4193218Z [+] No GPU processes found
+2026-10-19T20:45:37.4238509Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-19T20:45:37.4238857Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-19T20:45:37.4239183Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T20:45:37.4239392Z env:
+2026-10-19T20:45:37.4239553Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-19T20:45:37.4239775Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-19T20:45:37.4240038Z   VENV_DIR: /mnt/tmpnvmedrv/actions-runner/_work/TheRock/TheRock/.venv
+2026-10-19T20:45:37.4240279Z   ARTIFACT_RUN_ID: 39283341141
+2026-10-19T20:45:37.4240446Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-19T20:45:37.4240612Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-19T20:45:37.4240769Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-19T20:45:37.4240946Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-19T20:45:37.4241321Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-19T20:45:37.4241482Z   BUILD_VARIANT: release
+2026-10-19T20:45:37.4241678Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:45:37.4241912Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T20:45:37.4242147Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:45:37.4242351Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:45:37.4242552Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:45:37.4242759Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-19T20:45:37.4242966Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-19T20:45:37.4243149Z ##[endgroup]
+2026-10-19T20:45:37.5045897Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-19T20:45:37.5204558Z Post job cleanup.
+2026-10-19T20:45:37.5206856Z ##[start-action display=Setting up Python;id=__d35ef12b-03fe-451a-8452-5f20665e31d8.__actions_setup-python]
+2026-10-19T20:45:37.5208210Z ##[end-action id=__d35ef12b-03fe-451a-8452-5f20665e31d8.__actions_setup-python;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-19T20:45:37.5246978Z Post job cleanup.
+2026-10-19T20:45:37.5252300Z ##[command]/usr/bin/docker exec  64370fac3d0b7b2bdd2959c9f20a6246b957045f020a1c8bd726a39c3f06789f sh -c "cat /etc/*release | grep ^ID"
+2026-10-19T20:45:37.6483089Z [command]/usr/bin/git version
+2026-10-19T20:45:37.6513598Z git version 2.51.0
+2026-10-19T20:45:37.6533282Z Copying '/github/home/.gitconfig' to '/__w/_temp/cebc2413-b56e-481a-88f6-869e00f61c9e/.gitconfig'
+2026-10-19T20:45:37.6540188Z Temporarily overriding HOME='/__w/_temp/cebc2413-b56e-481a-88f6-869e00f61c9e' before making global git config changes
+2026-10-19T20:45:37.6540673Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T20:45:37.6543792Z [command]/usr/bin/git config --global --add safe.directory /__w/TheRock/TheRock
+2026-10-19T20:45:37.6570413Z Removing SSH command configuration
+2026-10-19T20:45:37.6573927Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T20:45:37.6600071Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T20:45:37.6787137Z Removing HTTP extra header
+2026-10-19T20:45:37.6789875Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T20:45:37.6814343Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T20:45:37.6993469Z Removing includeIf entries pointing to credentials config files
+2026-10-19T20:45:37.6996483Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T20:45:37.7019475Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T20:45:37.7334146Z Post job cleanup.
+2026-10-19T20:45:37.7339408Z ##[command]/usr/bin/docker exec  64370fac3d0b7b2bdd2959c9f20a6246b957045f020a1c8bd726a39c3f06789f sh -c "cat /etc/*release | grep ^ID"
+2026-10-19T20:45:37.8678788Z Stop and remove container: e15575347af140cc82ad83f70b4cb9da_ghcriorocmno_rocm_image_ubuntu24_04sha2564150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98_073d7e
+2026-10-19T20:45:37.8682485Z ##[command]/usr/bin/docker rm --force 64370fac3d0b7b2bdd2959c9f20a6246b957045f020a1c8bd726a39c3f06789f
+2026-10-19T20:45:38.0413904Z 64370fac3d0b7b2bdd2959c9f20a6246b957045f020a1c8bd726a39c3f06789f
+2026-10-19T20:45:38.0437001Z Remove container network: github_network_69fe7afa9ed74a558c971449232d1c93
+2026-10-19T20:45:38.0439873Z ##[command]/usr/bin/docker network rm github_network_69fe7afa9ed74a558c971449232d1c93
+2026-10-19T20:45:38.1802344Z github_network_69fe7afa9ed74a558c971449232d1c93
+2026-10-19T20:45:38.1864720Z Evaluate and set job outputs
+2026-10-19T20:45:38.1868796Z Cleaning up orphan processes

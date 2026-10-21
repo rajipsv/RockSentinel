@@ -1,0 +1,1504 @@
+# Source: ROCm/TheRock Actions run 39339496964 attempt 1, job 118395581263
+# Job: Windows::release / Test gfx110X-all / Test miopen / Test miopen (shard 1/1) (gfx110X-all) (multi_arch_ci.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+2026-10-20T01:33:13.2128061Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/58 (3 ms)
+2026-10-20T01:33:13.2128514Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/59
+2026-10-20T01:33:13.2147894Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/59 (1 ms)
+2026-10-20T01:33:13.2148243Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/60
+2026-10-20T01:33:13.2165944Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/60 (1 ms)
+2026-10-20T01:33:13.2166488Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/61
+2026-10-20T01:33:13.2184380Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/61 (1 ms)
+2026-10-20T01:33:13.2184741Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/62
+2026-10-20T01:33:13.2201952Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/62 (1 ms)
+2026-10-20T01:33:13.2202282Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/63
+2026-10-20T01:33:13.2218533Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/63 (1 ms)
+2026-10-20T01:33:13.2218875Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/64
+2026-10-20T01:33:14.2035188Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/64 (981 ms)
+2026-10-20T01:33:14.2035884Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/65
+2026-10-20T01:33:14.2053570Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/65 (1 ms)
+2026-10-20T01:33:14.2053920Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/66
+2026-10-20T01:33:14.2072451Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/66 (1 ms)
+2026-10-20T01:33:14.2072855Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/67
+2026-10-20T01:33:14.2090403Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/67 (1 ms)
+2026-10-20T01:33:14.2090783Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/68
+2026-10-20T01:33:14.2110752Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/68 (2 ms)
+2026-10-20T01:33:14.2111123Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/69
+2026-10-20T01:33:14.2128893Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/69 (1 ms)
+2026-10-20T01:33:14.2129268Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/70
+2026-10-20T01:33:15.1812434Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/70 (967 ms)
+2026-10-20T01:33:15.1812912Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/71
+2026-10-20T01:33:15.1829856Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/71 (2 ms)
+2026-10-20T01:33:15.1830268Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/72
+2026-10-20T01:33:15.1848155Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/72 (1 ms)
+2026-10-20T01:33:15.1848494Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/73
+2026-10-20T01:33:15.1868448Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/73 (1 ms)
+2026-10-20T01:33:15.1868860Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/74
+2026-10-20T01:33:15.1888674Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/74 (2 ms)
+2026-10-20T01:33:15.1889059Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/75
+2026-10-20T01:33:16.6658543Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/75 (1476 ms)
+2026-10-20T01:33:16.6659029Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/76
+2026-10-20T01:33:17.6216348Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/76 (955 ms)
+2026-10-20T01:33:17.6216763Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/77
+2026-10-20T01:33:19.1017154Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/77 (1480 ms)
+2026-10-20T01:33:19.1017573Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/78
+2026-10-20T01:33:19.1051475Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/78 (3 ms)
+2026-10-20T01:33:19.1051855Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/79
+2026-10-20T01:33:19.1069900Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/79 (1 ms)
+2026-10-20T01:33:19.1070918Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/80
+2026-10-20T01:33:19.1089967Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/80 (1 ms)
+2026-10-20T01:33:19.1090318Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/81
+2026-10-20T01:33:19.1110218Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/81 (1 ms)
+2026-10-20T01:33:19.1110707Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/82
+2026-10-20T01:33:19.1130408Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/82 (2 ms)
+2026-10-20T01:33:19.1131141Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/83
+2026-10-20T01:33:19.1148743Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/83 (1 ms)
+2026-10-20T01:33:19.1149092Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/84
+2026-10-20T01:33:19.1166971Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/84 (1 ms)
+2026-10-20T01:33:19.1167297Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/85
+2026-10-20T01:33:19.1185014Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/85 (1 ms)
+2026-10-20T01:33:19.1185528Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/86
+2026-10-20T01:33:19.1201740Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/86 (1 ms)
+2026-10-20T01:33:19.1202094Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/87
+2026-10-20T01:33:19.1218302Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/87 (1 ms)
+2026-10-20T01:33:19.1218630Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/88
+2026-10-20T01:33:19.1235348Z 6: [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/88 (1 ms)
+2026-10-20T01:33:19.1235719Z 6: [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/89
+2026-10-20T01:33:20.2603468Z 1/1 Test #6: miopen_gtest_quick_gfx110X_suite ...***Timeout 600.36 sec
+2026-10-20T01:33:20.2656566Z PRNG seed: 12345678
+2026-10-20T01:33:20.2659844Z Note: Google Test filter = Smoke/*:CPU_*-*/GPU_MIOpenDriver*:CPU_PerfDb_NONE.*:Full/GPU_BNFWDTrainLargeFusedActivation2D_FP32.BnV2LargeFWD_TrainCKfp32Activation/NCHW_BNSpatial_testBNAPIV1_Dim_2_test_id_32:Full/GPU_BNFWDTrainLarge2D_FP32.BnV2LargeFWD_TrainCKfp32/NCHW_BNSpatial_testBNAPIV2_Dim_2_test_id_64:*SerialRun3D*:*gfx942*:*GPU_UnitTestConvSolverFFTFwd_FP32*:*GPU_UnitTestConvSolverFFTBwd_FP32*:*GPU_TernaryTensorOps_FP64*:*GPU_TernaryTensorOps_FP16*:*GPU_TernaryTensorOps_FP32*:*GPU_Op4dTensorGenericTest_FP32*:*GPU_UnitTestActivationDescriptor_FP16*:*GPU_UnitTestActivationDescriptor_FP32*:*CPU_TuningPolicy_NONE*:*GPU_Dropout_FP32*:*GPU_Dropout_FP16*:*GPU_GroupConv3D_BackwardData_FP16.GroupConv3D_BackwardData_half_Test*:*GPU_GroupConv3D_BackwardData_BFP16.GroupConv3D_BackwardData_bfloat16_Test*:*GPU_UnitTestConvSolverImplicitGemmGroup*:Smoke/GPU_MultiMarginLoss*:*CPU_UnitTestConvSolverImplicitGemmGroupWrwXdlopsDevApplicability_FP16.ConvHipImplicitGemmGroupWrwXdlops*:Full/GPU_Softmax_FP32*:Full/GPU_Softmax_BFP16*:Full/GPU_Softmax_FP16*:*GPU_GemmWrwUniversal_LargeMemory_*:*/GPU_MIOpenDriver*:Smoke/CPU_Handle_NONE*:Full/GPU_reduce_custom_fp32*
+2026-10-20T01:33:20.2662953Z [==========] Running 13210 tests from 743 test suites.
+2026-10-20T01:33:20.2663173Z [----------] Global test environment set-up.
+2026-10-20T01:33:20.2663369Z [----------] 7 tests from CPU_Cache_NONE
+2026-10-20T01:33:20.2663598Z [ RUN      ] CPU_Cache_NONE.check_bz2_compress
+2026-10-20T01:33:20.2663805Z [       OK ] CPU_Cache_NONE.check_bz2_compress (0 ms)
+2026-10-20T01:33:20.2664009Z [ RUN      ] CPU_Cache_NONE.check_bz2_decompress
+2026-10-20T01:33:20.2664209Z [       OK ] CPU_Cache_NONE.check_bz2_decompress (0 ms)
+2026-10-20T01:33:20.2664403Z [ RUN      ] CPU_Cache_NONE.check_kern_db
+2026-10-20T01:33:20.2664592Z [       OK ] CPU_Cache_NONE.check_kern_db (78 ms)
+2026-10-20T01:33:20.2664798Z [ RUN      ] CPU_Cache_NONE.check_kern_db_cached_reuse
+2026-10-20T01:33:20.2665021Z [       OK ] CPU_Cache_NONE.check_kern_db_cached_reuse (26 ms)
+2026-10-20T01:33:20.2665255Z [ RUN      ] CPU_Cache_NONE.check_kern_db_cached_distinct_paths
+2026-10-20T01:33:20.2665502Z [       OK ] CPU_Cache_NONE.check_kern_db_cached_distinct_paths (56 ms)
+2026-10-20T01:33:20.2665753Z [ RUN      ] CPU_Cache_NONE.check_kern_db_cached_thread_safety
+2026-10-20T01:33:20.2666005Z [       OK ] CPU_Cache_NONE.check_kern_db_cached_thread_safety (47 ms)
+2026-10-20T01:33:20.2666310Z [ RUN      ] CPU_Cache_NONE.check_cache_file
+2026-10-20T01:33:20.2666498Z [       OK ] CPU_Cache_NONE.check_cache_file (1 ms)
+2026-10-20T01:33:20.2666702Z [----------] 7 tests from CPU_Cache_NONE (211 ms total)
+2026-10-20T01:33:20.2666830Z 
+2026-10-20T01:33:20.2666932Z [----------] 1 test from CPU_ConvAiEngineeredConvFeatures_NONE
+2026-10-20T01:33:20.2667174Z [ RUN      ] CPU_ConvAiEngineeredConvFeatures_NONE.Golden
+2026-10-20T01:33:20.2667411Z [       OK ] CPU_ConvAiEngineeredConvFeatures_NONE.Golden (0 ms)
+2026-10-20T01:33:20.2667680Z [----------] 1 test from CPU_ConvAiEngineeredConvFeatures_NONE (0 ms total)
+2026-10-20T01:33:20.2667857Z 
+2026-10-20T01:33:20.2667955Z [----------] 1 test from CPU_ConvAiEngineeredConv3dFeatures_NONE
+2026-10-20T01:33:20.2668242Z [ RUN      ] CPU_ConvAiEngineeredConv3dFeatures_NONE.Golden
+2026-10-20T01:33:20.2668480Z [       OK ] CPU_ConvAiEngineeredConv3dFeatures_NONE.Golden (0 ms)
+2026-10-20T01:33:20.2668751Z [----------] 1 test from CPU_ConvAiEngineeredConv3dFeatures_NONE (0 ms total)
+2026-10-20T01:33:20.2668932Z 
+2026-10-20T01:33:20.2669015Z [----------] 7 tests from CPU_SolverHeuristicConfig_NONE
+2026-10-20T01:33:20.2669252Z [ RUN      ] CPU_SolverHeuristicConfig_NONE.IsValidSplitK_PowerOfTwo
+2026-10-20T01:33:20.2669527Z [       OK ] CPU_SolverHeuristicConfig_NONE.IsValidSplitK_PowerOfTwo (0 ms)
+2026-10-20T01:33:20.2669810Z [ RUN      ] CPU_SolverHeuristicConfig_NONE.IsValidSplitK_NonPowerOfTwo
+2026-10-20T01:33:20.2670100Z [       OK ] CPU_SolverHeuristicConfig_NONE.IsValidSplitK_NonPowerOfTwo (0 ms)
+2026-10-20T01:33:20.2670374Z [ RUN      ] CPU_SolverHeuristicConfig_NONE.IsValidSplitK_OutOfRange
+2026-10-20T01:33:20.2670636Z [       OK ] CPU_SolverHeuristicConfig_NONE.IsValidSplitK_OutOfRange (0 ms)
+2026-10-20T01:33:20.2670904Z [ RUN      ] CPU_SolverHeuristicConfig_NONE.IsValidSplitK_AutoDeduce
+2026-10-20T01:33:20.2671166Z [       OK ] CPU_SolverHeuristicConfig_NONE.IsValidSplitK_AutoDeduce (0 ms)
+2026-10-20T01:33:20.2671446Z [ RUN      ] CPU_SolverHeuristicConfig_NONE.IsValidSplitK_NoSplitKSolver
+2026-10-20T01:33:20.2671735Z [       OK ] CPU_SolverHeuristicConfig_NONE.IsValidSplitK_NoSplitKSolver (0 ms)
+2026-10-20T01:33:20.2672024Z [ RUN      ] CPU_SolverHeuristicConfig_NONE.GetSolverNameForArch_gfx90a
+2026-10-20T01:33:20.2672309Z [       OK ] CPU_SolverHeuristicConfig_NONE.GetSolverNameForArch_gfx90a (0 ms)
+2026-10-20T01:33:20.2672636Z [ RUN      ] CPU_SolverHeuristicConfig_NONE.SolverConfigs_Consistency
+2026-10-20T01:33:20.2672956Z [       OK ] CPU_SolverHeuristicConfig_NONE.SolverConfigs_Consistency (0 ms)
+2026-10-20T01:33:20.2673246Z [----------] 7 tests from CPU_SolverHeuristicConfig_NONE (0 ms total)
+2026-10-20T01:33:20.2673410Z 
+2026-10-20T01:33:20.2673497Z [----------] 6 tests from CPU_HeuristicInitState_NONE
+2026-10-20T01:33:20.2673882Z [ RUN      ] CPU_HeuristicInitState_NONE.Reset_WithSplitK
+2026-10-20T01:33:20.2674139Z [       OK ] CPU_HeuristicInitState_NONE.Reset_WithSplitK (0 ms)
+2026-10-20T01:33:20.2674424Z [ RUN      ] CPU_HeuristicInitState_NONE.Reset_WithoutSplitK
+2026-10-20T01:33:20.2674671Z [       OK ] CPU_HeuristicInitState_NONE.Reset_WithoutSplitK (0 ms)
+2026-10-20T01:33:20.2674913Z [ RUN      ] CPU_HeuristicInitState_NONE.SetResult_WithSplitK
+2026-10-20T01:33:20.2675159Z [       OK ] CPU_HeuristicInitState_NONE.SetResult_WithSplitK (0 ms)
+2026-10-20T01:33:20.2675398Z [ RUN      ] CPU_HeuristicInitState_NONE.SetResult_WithoutSplitK
+2026-10-20T01:33:20.2675660Z [       OK ] CPU_HeuristicInitState_NONE.SetResult_WithoutSplitK (0 ms)
+2026-10-20T01:33:20.2675915Z [ RUN      ] CPU_HeuristicInitState_NONE.SetResult_InvalidIndex
+2026-10-20T01:33:20.2676165Z [       OK ] CPU_HeuristicInitState_NONE.SetResult_InvalidIndex (0 ms)
+2026-10-20T01:33:20.2676445Z [ RUN      ] CPU_HeuristicInitState_NONE.KernelIdFormatting
+2026-10-20T01:33:20.2676692Z [       OK ] CPU_HeuristicInitState_NONE.KernelIdFormatting (0 ms)
+2026-10-20T01:33:20.2676935Z [----------] 6 tests from CPU_HeuristicInitState_NONE (0 ms total)
+2026-10-20T01:33:20.2677136Z 
+2026-10-20T01:33:20.2677235Z [----------] 4 tests from CPU_ConvNDKernelTuningDiagnostic_NONE
+2026-10-20T01:33:20.2677525Z [ RUN      ] CPU_ConvNDKernelTuningDiagnostic_NONE.ArchitectureCompatibility_2D_Test
+2026-10-20T01:33:20.2677823Z === 2D Architecture Compatibility Report ===
+2026-10-20T01:33:20.2677999Z Current device: gfx1101
+2026-10-20T01:33:20.2678136Z gfx942: SUPPORTED
+2026-10-20T01:33:20.2678262Z gfx950: SUPPORTED
+2026-10-20T01:33:20.2678402Z gfx90a: NOT SUPPORTED
+2026-10-20T01:33:20.2678530Z gfx908: NOT SUPPORTED
+2026-10-20T01:33:20.2678767Z [       OK ] CPU_ConvNDKernelTuningDiagnostic_NONE.ArchitectureCompatibility_2D_Test (2 ms)
+2026-10-20T01:33:20.2679129Z [ RUN      ] CPU_ConvNDKernelTuningDiagnostic_NONE.ArchitectureCompatibility_3D_Test
+2026-10-20T01:33:20.2679399Z === 3D Architecture Compatibility Report ===
+2026-10-20T01:33:20.2679571Z Current device: gfx1101
+2026-10-20T01:33:20.2679703Z gfx942: SUPPORTED
+2026-10-20T01:33:20.2679822Z gfx950: SUPPORTED
+2026-10-20T01:33:20.2679944Z gfx90a: NOT SUPPORTED
+2026-10-20T01:33:20.2680073Z gfx908: NOT SUPPORTED
+2026-10-20T01:33:20.2680312Z [       OK ] CPU_ConvNDKernelTuningDiagnostic_NONE.ArchitectureCompatibility_3D_Test (0 ms)
+2026-10-20T01:33:20.2680671Z [ RUN      ] CPU_ConvNDKernelTuningDiagnostic_NONE.GetFeatures2D_CrossPlatform_Test
+2026-10-20T01:33:20.2681021Z [       OK ] CPU_ConvNDKernelTuningDiagnostic_NONE.GetFeatures2D_CrossPlatform_Test (0 ms)
+2026-10-20T01:33:20.2681377Z [ RUN      ] CPU_ConvNDKernelTuningDiagnostic_NONE.GetFeatures3D_CrossPlatform_Test
+2026-10-20T01:33:20.2681714Z [       OK ] CPU_ConvNDKernelTuningDiagnostic_NONE.GetFeatures3D_CrossPlatform_Test (0 ms)
+2026-10-20T01:33:20.2682041Z [----------] 4 tests from CPU_ConvNDKernelTuningDiagnostic_NONE (2 ms total)
+2026-10-20T01:33:20.2682227Z 
+2026-10-20T01:33:20.2682313Z [----------] 1 test from CPU_FillValidKernelsGeneric_NONE
+2026-10-20T01:33:20.2682568Z [ RUN      ] CPU_FillValidKernelsGeneric_NONE.Documentation_Test
+2026-10-20T01:33:20.2682829Z [       OK ] CPU_FillValidKernelsGeneric_NONE.Documentation_Test (0 ms)
+2026-10-20T01:33:20.2683101Z [----------] 1 test from CPU_FillValidKernelsGeneric_NONE (0 ms total)
+2026-10-20T01:33:20.2683258Z 
+2026-10-20T01:33:20.2683334Z [----------] 1 test from CPU_RunKTNGeneric_NONE
+2026-10-20T01:33:20.2683543Z [ RUN      ] CPU_RunKTNGeneric_NONE.Documentation_Test
+2026-10-20T01:33:20.2683815Z [       OK ] CPU_RunKTNGeneric_NONE.Documentation_Test (0 ms)
+2026-10-20T01:33:20.2691622Z [----------] 1 test from CPU_RunKTNGeneric_NONE (0 ms total)
+2026-10-20T01:33:20.2691778Z 
+2026-10-20T01:33:20.2691869Z [----------] 2 tests from CPU_DeterministicMode_NONE
+2026-10-20T01:33:20.2692115Z [ RUN      ] CPU_DeterministicMode_NONE.HeuristicInit_SetsSplitK1
+2026-10-20T01:33:20.2692460Z [       OK ] CPU_DeterministicMode_NONE.HeuristicInit_SetsSplitK1 (0 ms)
+2026-10-20T01:33:20.2692771Z [ RUN      ] CPU_DeterministicMode_NONE.AllBackwardSolvers_SupportDeterministic
+2026-10-20T01:33:20.2693113Z [       OK ] CPU_DeterministicMode_NONE.AllBackwardSolvers_SupportDeterministic (0 ms)
+2026-10-20T01:33:20.2693412Z [----------] 2 tests from CPU_DeterministicMode_NONE (0 ms total)
+2026-10-20T01:33:20.2693569Z 
+2026-10-20T01:33:20.2693641Z [----------] 1 test from CPU_ConvApi_NONE
+2026-10-20T01:33:20.2693942Z [ RUN      ] CPU_ConvApi_NONE.testGetConvolutionSpatialDim
+2026-10-20T01:33:20.2694200Z [       OK ] CPU_ConvApi_NONE.testGetConvolutionSpatialDim (0 ms)
+2026-10-20T01:33:20.2694439Z [----------] 1 test from CPU_ConvApi_NONE (0 ms total)
+2026-10-20T01:33:20.2694573Z 
+2026-10-20T01:33:20.2694662Z [----------] 1 test from CPU_ConvFindModeAPI_NONE
+2026-10-20T01:33:20.2694874Z [ RUN      ] CPU_ConvFindModeAPI_NONE.ConvFindModeAPI
+2026-10-20T01:33:20.2695323Z MIOpen Error: azw11g1101-ft30:C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/src/include\miopen/errors.hpp:125: Dereferencing nullptr
+2026-10-20T01:33:20.2696032Z MIOpen Error: azw11g1101-ft30:C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/src/include\miopen/errors.hpp:125: Dereferencing nullptr
+2026-10-20T01:33:20.2696685Z MIOpen Error: azw11g1101-ft30:C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/src/include\miopen/errors.hpp:125: Dereferencing nullptr
+2026-10-20T01:33:20.2697358Z MIOpen Error: azw11g1101-ft30:C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/src/convolution_api.cpp:206: Invalid enum value specified for findMode
+2026-10-20T01:33:20.2698060Z MIOpen Error: azw11g1101-ft30:C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/src/convolution_api.cpp:206: Invalid enum value specified for findMode
+2026-10-20T01:33:20.2698751Z MIOpen Error: azw11g1101-ft30:C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/src/convolution_api.cpp:206: Invalid enum value specified for findMode
+2026-10-20T01:33:20.2699258Z [       OK ] CPU_ConvFindModeAPI_NONE.ConvFindModeAPI (19 ms)
+2026-10-20T01:33:20.2699503Z [----------] 1 test from CPU_ConvFindModeAPI_NONE (19 ms total)
+2026-10-20T01:33:20.2699665Z 
+2026-10-20T01:33:20.2699761Z [----------] 25 tests from CPU_DbPaths_NONE
+2026-10-20T01:33:20.2699998Z [ RUN      ] CPU_DbPaths_NONE.UserDbPath_LocalFS_NoEnvVar
+2026-10-20T01:33:20.2700237Z [       OK ] CPU_DbPaths_NONE.UserDbPath_LocalFS_NoEnvVar (0 ms)
+2026-10-20T01:33:20.2700479Z [ RUN      ] CPU_DbPaths_NONE.UserDbPath_LocalFS_EnvVarSet
+2026-10-20T01:33:20.2700710Z [       OK ] CPU_DbPaths_NONE.UserDbPath_LocalFS_EnvVarSet (0 ms)
+2026-10-20T01:33:20.2700947Z [ RUN      ] CPU_DbPaths_NONE.UserDbPath_NetworkFS_NoEnvVar
+2026-10-20T01:33:20.2701199Z [       OK ] CPU_DbPaths_NONE.UserDbPath_NetworkFS_NoEnvVar (0 ms)
+2026-10-20T01:33:20.2701440Z [ RUN      ] CPU_DbPaths_NONE.UserDbPath_NetworkFS_EnvVarSet
+2026-10-20T01:33:20.2701687Z [       OK ] CPU_DbPaths_NONE.UserDbPath_NetworkFS_EnvVarSet (0 ms)
+2026-10-20T01:33:20.2701922Z [ RUN      ] CPU_DbPaths_NONE.CachePath_LocalFS_NoEnvVar
+2026-10-20T01:33:20.2702145Z [       OK ] CPU_DbPaths_NONE.CachePath_LocalFS_NoEnvVar (0 ms)
+2026-10-20T01:33:20.2702367Z [ RUN      ] CPU_DbPaths_NONE.CachePath_LocalFS_EnvVarSet
+2026-10-20T01:33:20.2702595Z [       OK ] CPU_DbPaths_NONE.CachePath_LocalFS_EnvVarSet (0 ms)
+2026-10-20T01:33:20.2702819Z [ RUN      ] CPU_DbPaths_NONE.CachePath_NetworkFS_NoEnvVar
+2026-10-20T01:33:20.2703052Z [       OK ] CPU_DbPaths_NONE.CachePath_NetworkFS_NoEnvVar (0 ms)
+2026-10-20T01:33:20.2703355Z [ RUN      ] CPU_DbPaths_NONE.CachePath_NetworkFS_EnvVarSet
+2026-10-20T01:33:20.2703614Z [       OK ] CPU_DbPaths_NONE.CachePath_NetworkFS_EnvVarSet (0 ms)
+2026-10-20T01:33:20.2703861Z [ RUN      ] CPU_DbPaths_NONE.UserDbSuffix_ContainsVersionInfo
+2026-10-20T01:33:20.2704114Z [       OK ] CPU_DbPaths_NONE.UserDbSuffix_ContainsVersionInfo (0 ms)
+2026-10-20T01:33:20.2704401Z [ RUN      ] CPU_DbPaths_NONE.UserAndSystemCachePaths_AreDifferent
+2026-10-20T01:33:20.2704671Z [       OK ] CPU_DbPaths_NONE.UserAndSystemCachePaths_AreDifferent (0 ms)
+2026-10-20T01:33:20.2704912Z [ RUN      ] CPU_DbPaths_NONE.Paths_AreValid
+2026-10-20T01:33:20.2705114Z [       OK ] CPU_DbPaths_NONE.Paths_AreValid (0 ms)
+2026-10-20T01:33:20.2705332Z [ RUN      ] CPU_DbPaths_NONE.CacheDisabled_ReturnsCorrectly
+2026-10-20T01:33:20.2705566Z [       OK ] CPU_DbPaths_NONE.CacheDisabled_ReturnsCorrectly (0 ms)
+2026-10-20T01:33:20.2705791Z [ RUN      ] CPU_DbPaths_NONE.SystemDbPath_EnvVarSet
+2026-10-20T01:33:20.2706005Z [       OK ] CPU_DbPaths_NONE.SystemDbPath_EnvVarSet (0 ms)
+2026-10-20T01:33:20.2706226Z [ RUN      ] CPU_DbPaths_NONE.SystemDbPath_NoEnvVar_IsAbsolute
+2026-10-20T01:33:20.2706465Z [       OK ] CPU_DbPaths_NONE.SystemDbPath_NoEnvVar_IsAbsolute (0 ms)
+2026-10-20T01:33:20.2706724Z [ RUN      ] CPU_DbPaths_NONE.SystemDbPath_NoEnvVar_FollowsMIOpenModule
+2026-10-20T01:33:20.2707019Z [       OK ] CPU_DbPaths_NONE.SystemDbPath_NoEnvVar_FollowsMIOpenModule (0 ms)
+2026-10-20T01:33:20.2707286Z [ RUN      ] CPU_DbPaths_NONE.SystemDbDisabled_UnsetEnvVar
+2026-10-20T01:33:20.2708263Z [       OK ] CPU_DbPaths_NONE.SystemDbDisabled_UnsetEnvVar (0 ms)
+2026-10-20T01:33:20.2708496Z [ RUN      ] CPU_DbPaths_NONE.SystemDbDisabled_EnvVarSet
+2026-10-20T01:33:20.2708720Z [       OK ] CPU_DbPaths_NONE.SystemDbDisabled_EnvVarSet (0 ms)
+2026-10-20T01:33:20.2708967Z [ RUN      ] CPU_DbPaths_NONE.SystemDbDisabled_EnvVarCleared
+2026-10-20T01:33:20.2709201Z [       OK ] CPU_DbPaths_NONE.SystemDbDisabled_EnvVarCleared (0 ms)
+2026-10-20T01:33:20.2709491Z [ RUN      ] CPU_DbPaths_NONE.SystemDbDisabled_DoesNotAffectUserDbOrSystemDbPath
+2026-10-20T01:33:20.2709832Z [       OK ] CPU_DbPaths_NONE.SystemDbDisabled_DoesNotAffectUserDbOrSystemDbPath (0 ms)
+2026-10-20T01:33:20.2710135Z [ RUN      ] CPU_DbPaths_NONE.UserDbDisabled_UnsetEnvVar
+2026-10-20T01:33:20.2710358Z [       OK ] CPU_DbPaths_NONE.UserDbDisabled_UnsetEnvVar (0 ms)
+2026-10-20T01:33:20.2710580Z [ RUN      ] CPU_DbPaths_NONE.UserDbDisabled_EnvVarSet
+2026-10-20T01:33:20.2710819Z [       OK ] CPU_DbPaths_NONE.UserDbDisabled_EnvVarSet (0 ms)
+2026-10-20T01:33:20.2711043Z [ RUN      ] CPU_DbPaths_NONE.UserDbDisabled_EnvVarCleared
+2026-10-20T01:33:20.2711281Z [       OK ] CPU_DbPaths_NONE.UserDbDisabled_EnvVarCleared (0 ms)
+2026-10-20T01:33:20.2711531Z [ RUN      ] CPU_DbPaths_NONE.UserAndSystemDbSwitches_AreIndependent
+2026-10-20T01:33:20.2711810Z [       OK ] CPU_DbPaths_NONE.UserAndSystemDbSwitches_AreIndependent (0 ms)
+2026-10-20T01:33:20.2712080Z [ RUN      ] CPU_DbPaths_NONE.UserDbDisabled_SuppressesWrites
+2026-10-20T01:33:20.2712329Z [       OK ] CPU_DbPaths_NONE.UserDbDisabled_SuppressesWrites (0 ms)
+2026-10-20T01:33:20.2712587Z [ RUN      ] CPU_DbPaths_NONE.UserDbDisabled_LatchedAtConstruction
+2026-10-20T01:33:20.2712849Z [       OK ] CPU_DbPaths_NONE.UserDbDisabled_LatchedAtConstruction (0 ms)
+2026-10-20T01:33:20.2713102Z [----------] 25 tests from CPU_DbPaths_NONE (3 ms total)
+2026-10-20T01:33:20.2713238Z 
+2026-10-20T01:33:20.2713300Z [----------] 1 test from CPU_DBSync_NONE
+2026-10-20T01:33:20.2713477Z [ RUN      ] CPU_DBSync_NONE.KDBTargetID
+2026-10-20T01:33:20.2713851Z C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/test/gtest/db_sync.cpp(561): Skipped
+2026-10-20T01:33:20.2714110Z 
+2026-10-20T01:33:20.2714113Z 
+2026-10-20T01:33:20.2714195Z [  SKIPPED ] CPU_DBSync_NONE.KDBTargetID (0 ms)
+2026-10-20T01:33:20.2714409Z [ DISABLED ] CPU_DBSync_NONE.DISABLED_DynamicFDBSync
+2026-10-20T01:33:20.2714673Z [----------] 1 test from CPU_DBSync_NONE (0 ms total)
+2026-10-20T01:33:20.2714833Z 
+2026-10-20T01:33:20.2714917Z [----------] 1 test from CPU_dropout_NONE
+2026-10-20T01:33:20.2715109Z [ RUN      ] CPU_dropout_NONE.test_dropout_miopen_throw
+2026-10-20T01:33:20.2715332Z [       OK ] CPU_dropout_NONE.test_dropout_miopen_throw (38 ms)
+2026-10-20T01:33:20.2715600Z [----------] 1 test from CPU_dropout_NONE (38 ms total)
+2026-10-20T01:33:20.2715737Z 
+2026-10-20T01:33:20.2715803Z [----------] 1 test from CPU_Dump_FP32
+2026-10-20T01:33:20.2715971Z [ RUN      ] CPU_Dump_FP32.testDump
+2026-10-20T01:33:20.2716146Z [       OK ] CPU_Dump_FP32.testDump (17 ms)
+2026-10-20T01:33:20.2716341Z [----------] 1 test from CPU_Dump_FP32 (17 ms total)
+2026-10-20T01:33:20.2716466Z 
+2026-10-20T01:33:20.2716533Z [----------] 1 test from CPU_Dump_NAN_FP32
+2026-10-20T01:33:20.2716706Z [ RUN      ] CPU_Dump_NAN_FP32.testDump
+2026-10-20T01:33:20.2716883Z [       OK ] CPU_Dump_NAN_FP32.testDump (2090 ms)
+2026-10-20T01:33:20.2717098Z [----------] 1 test from CPU_Dump_NAN_FP32 (2090 ms total)
+2026-10-20T01:33:20.2717238Z 
+2026-10-20T01:33:20.2717294Z [----------] 1 test from CPU_Dump_FP16
+2026-10-20T01:33:20.2717461Z [ RUN      ] CPU_Dump_FP16.testDump
+2026-10-20T01:33:20.2717624Z [       OK ] CPU_Dump_FP16.testDump (5 ms)
+2026-10-20T01:33:20.2717814Z [----------] 1 test from CPU_Dump_FP16 (5 ms total)
+2026-10-20T01:33:20.2717938Z 
+2026-10-20T01:33:20.2718007Z [----------] 1 test from CPU_Dump_NAN_FP16
+2026-10-20T01:33:20.2718174Z [ RUN      ] CPU_Dump_NAN_FP16.testDump
+2026-10-20T01:33:20.2718385Z [       OK ] CPU_Dump_NAN_FP16.testDump (4 ms)
+2026-10-20T01:33:20.2718583Z [----------] 1 test from CPU_Dump_NAN_FP16 (4 ms total)
+2026-10-20T01:33:20.2718716Z 
+2026-10-20T01:33:20.2718773Z [----------] 1 test from CPU_Dump_BFP16
+2026-10-20T01:33:20.2718946Z [ RUN      ] CPU_Dump_BFP16.testDump
+2026-10-20T01:33:20.2719117Z [       OK ] CPU_Dump_BFP16.testDump (4 ms)
+2026-10-20T01:33:20.2719307Z [----------] 1 test from CPU_Dump_BFP16 (4 ms total)
+2026-10-20T01:33:20.2719431Z 
+2026-10-20T01:33:20.2719498Z [----------] 1 test from CPU_Dump_NAN_BFP16
+2026-10-20T01:33:20.2719673Z [ RUN      ] CPU_Dump_NAN_BFP16.testDump
+2026-10-20T01:33:20.2719864Z [       OK ] CPU_Dump_NAN_BFP16.testDump (4 ms)
+2026-10-20T01:33:20.2720070Z [----------] 1 test from CPU_Dump_NAN_BFP16 (4 ms total)
+2026-10-20T01:33:20.2720212Z 
+2026-10-20T01:33:20.2720286Z [----------] 1 test from CPU_ExecutePrimitive_NONE
+2026-10-20T01:33:20.2720486Z [ RUN      ] CPU_ExecutePrimitive_NONE.NoParams
+2026-10-20T01:33:20.2720698Z [       OK ] CPU_ExecutePrimitive_NONE.NoParams (1 ms)
+2026-10-20T01:33:20.2720930Z [----------] 1 test from CPU_ExecutePrimitive_NONE (1 ms total)
+2026-10-20T01:33:20.2721075Z 
+2026-10-20T01:33:20.2721179Z [----------] 1 test from CPU_ExecutePrimitiveSearchUpdate_NONE
+2026-10-20T01:33:20.2721428Z [ RUN      ] CPU_ExecutePrimitiveSearchUpdate_NONE.SearchUpdate
+2026-10-20T01:33:20.2721976Z MIOpen: Warning [FindSolutionImpl] Perf Db: load skipped: TunableTestSolver, enforce: NONE(1)
+2026-10-20T01:33:20.2722314Z [       OK ] CPU_ExecutePrimitiveSearchUpdate_NONE.SearchUpdate (7 ms)
+2026-10-20T01:33:20.2722608Z [----------] 1 test from CPU_ExecutePrimitiveSearchUpdate_NONE (7 ms total)
+2026-10-20T01:33:20.2722786Z 
+2026-10-20T01:33:20.2722865Z [----------] 5 tests from CPU_FilesystemChecker_NONE
+2026-10-20T01:33:20.2723089Z [ RUN      ] CPU_FilesystemChecker_NONE.DefaultCheckerWorks
+2026-10-20T01:33:20.2723324Z [       OK ] CPU_FilesystemChecker_NONE.DefaultCheckerWorks (0 ms)
+2026-10-20T01:33:20.2723574Z [ RUN      ] CPU_FilesystemChecker_NONE.MockCheckerCanBeInjected
+2026-10-20T01:33:20.2723836Z [       OK ] CPU_FilesystemChecker_NONE.MockCheckerCanBeInjected (0 ms)
+2026-10-20T01:33:20.2724106Z [ RUN      ] CPU_FilesystemChecker_NONE.MockCheckerReturnsNonNetworked
+2026-10-20T01:33:20.2724391Z [       OK ] CPU_FilesystemChecker_NONE.MockCheckerReturnsNonNetworked (0 ms)
+2026-10-20T01:33:20.2724761Z [ RUN      ] CPU_FilesystemChecker_NONE.DefaultCheckerRestoredAfterTest
+2026-10-20T01:33:20.2725105Z [       OK ] CPU_FilesystemChecker_NONE.DefaultCheckerRestoredAfterTest (0 ms)
+2026-10-20T01:33:20.2725396Z [ RUN      ] CPU_FilesystemChecker_NONE.MultiplePathsCanBeChecked
+2026-10-20T01:33:20.2725663Z [       OK ] CPU_FilesystemChecker_NONE.MultiplePathsCanBeChecked (0 ms)
+2026-10-20T01:33:20.2725965Z [----------] 5 tests from CPU_FilesystemChecker_NONE (0 ms total)
+2026-10-20T01:33:20.2726129Z 
+2026-10-20T01:33:20.2726217Z [----------] 1 test from CPU_FusionCreateOpConvForward_FP32
+2026-10-20T01:33:20.2726469Z [ RUN      ] CPU_FusionCreateOpConvForward_FP32.TestInvalidConvLayout
+2026-10-20T01:33:20.2727017Z MIOpen Error: azw11g1101-ft30:C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/src/tensor.cpp:837: Non-vectorized tensor only support layout NCHW, NHWC, NCDHW and NDHWC
+2026-10-20T01:33:20.2727568Z [       OK ] CPU_FusionCreateOpConvForward_FP32.TestInvalidConvLayout (3 ms)
+2026-10-20T01:33:20.2727855Z [----------] 1 test from CPU_FusionCreateOpConvForward_FP32 (3 ms total)
+2026-10-20T01:33:20.2728016Z 
+2026-10-20T01:33:20.2728094Z [----------] 8 tests from CPU_HandleHipDevice_NONE
+2026-10-20T01:33:20.2728316Z [ RUN      ] CPU_HandleHipDevice_NONE.ValidDeviceSetSucceeds
+2026-10-20T01:33:20.2728566Z [       OK ] CPU_HandleHipDevice_NONE.ValidDeviceSetSucceeds (0 ms)
+2026-10-20T01:33:20.2728854Z [ RUN      ] CPU_HandleHipDevice_NONE.NegativeDeviceIdThrowsWithCorrectMessage
+2026-10-20T01:33:20.2729196Z [       OK ] CPU_HandleHipDevice_NONE.NegativeDeviceIdThrowsWithCorrectMessage (3 ms)
+2026-10-20T01:33:20.2729616Z [ RUN      ] CPU_HandleHipDevice_NONE.OutOfRangeDeviceIdThrowsWithCorrectMessage
+2026-10-20T01:33:20.2729969Z [       OK ] CPU_HandleHipDevice_NONE.OutOfRangeDeviceIdThrowsWithCorrectMessage (3 ms)
+2026-10-20T01:33:20.2730300Z [ RUN      ] CPU_HandleHipDevice_NONE.ErrorMessageContainsDeviceIdAndStatus
+2026-10-20T01:33:20.2730625Z [       OK ] CPU_HandleHipDevice_NONE.ErrorMessageContainsDeviceIdAndStatus (2 ms)
+2026-10-20T01:33:20.2730942Z [ RUN      ] CPU_HandleHipDevice_NONE.MultipleValidDevicesSwitchCorrectly
+2026-10-20T01:33:20.2731349Z C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/test/gtest/handle_hip_device.cpp(110): Skipped
+2026-10-20T01:33:20.2731696Z Need at least 2 devices for multi-device TEST_F
+2026-10-20T01:33:20.2731823Z 
+2026-10-20T01:33:20.2731972Z [  SKIPPED ] CPU_HandleHipDevice_NONE.MultipleValidDevicesSwitchCorrectly (0 ms)
+2026-10-20T01:33:20.2732292Z [ RUN      ] CPU_HandleHipDevice_NONE.BoundaryConditionLastValidDevice
+2026-10-20T01:33:20.2732580Z [       OK ] CPU_HandleHipDevice_NONE.BoundaryConditionLastValidDevice (0 ms)
+2026-10-20T01:33:20.2732878Z [ RUN      ] CPU_HandleHipDevice_NONE.BoundaryConditionFirstInvalidDevice
+2026-10-20T01:33:20.2733188Z [       OK ] CPU_HandleHipDevice_NONE.BoundaryConditionFirstInvalidDevice (3 ms)
+2026-10-20T01:33:20.2733473Z [ RUN      ] CPU_HandleHipDevice_NONE.GetDeviceIdReturnsValidValue
+2026-10-20T01:33:20.2733743Z [       OK ] CPU_HandleHipDevice_NONE.GetDeviceIdReturnsValidValue (0 ms)
+2026-10-20T01:33:20.2734097Z [----------] 8 tests from CPU_HandleHipDevice_NONE (12 ms total)
+2026-10-20T01:33:20.2734246Z 
+2026-10-20T01:33:20.2734322Z [----------] 1 test from CPU_kernel_inliner_NONE
+2026-10-20T01:33:20.2734517Z [ RUN      ] CPU_kernel_inliner_NONE.InlinerTest
+2026-10-20T01:33:20.2734854Z C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/test/gtest/include_inliner.cpp(45): Skipped
+2026-10-20T01:33:20.2735197Z Depends on addkernels and should be invoked by make
+2026-10-20T01:33:20.2735338Z 
+2026-10-20T01:33:20.2735422Z [  SKIPPED ] CPU_kernel_inliner_NONE.InlinerTest (0 ms)
+2026-10-20T01:33:20.2735653Z [----------] 1 test from CPU_kernel_inliner_NONE (0 ms total)
+2026-10-20T01:33:20.2735794Z 
+2026-10-20T01:33:20.2735898Z [----------] 1 test from CPU_InlineVectorSizeAndAccumulate_NONE
+2026-10-20T01:33:20.2736130Z [ RUN      ] CPU_InlineVectorSizeAndAccumulate_NONE.Test
+2026-10-20T01:33:20.2736402Z [       OK ] CPU_InlineVectorSizeAndAccumulate_NONE.Test (0 ms)
+2026-10-20T01:33:20.2736695Z [----------] 1 test from CPU_InlineVectorSizeAndAccumulate_NONE (0 ms total)
+2026-10-20T01:33:20.2736879Z 
+2026-10-20T01:33:20.2736970Z [----------] 1 test from CPU_InlineVectorFindIfAndDistance_NONE
+2026-10-20T01:33:20.2737193Z [ RUN      ] CPU_InlineVectorFindIfAndDistance_NONE.Test
+2026-10-20T01:33:20.2737455Z [       OK ] CPU_InlineVectorFindIfAndDistance_NONE.Test (0 ms)
+2026-10-20T01:33:20.2737725Z [----------] 1 test from CPU_InlineVectorFindIfAndDistance_NONE (0 ms total)
+2026-10-20T01:33:20.2737895Z 
+2026-10-20T01:33:20.2737973Z [----------] 1 test from CPU_InlineVecotrTie_NONE
+2026-10-20T01:33:20.2738164Z [ RUN      ] CPU_InlineVecotrTie_NONE.Test
+2026-10-20T01:33:20.2738346Z [       OK ] CPU_InlineVecotrTie_NONE.Test (0 ms)
+2026-10-20T01:33:20.2738554Z [----------] 1 test from CPU_InlineVecotrTie_NONE (0 ms total)
+2026-10-20T01:33:20.2738698Z 
+2026-10-20T01:33:20.2738786Z [----------] 1 test from CPU_InlineVectorCapacityAndEmpty_NONE
+2026-10-20T01:33:20.2739015Z [ RUN      ] CPU_InlineVectorCapacityAndEmpty_NONE.Test
+2026-10-20T01:33:20.2739238Z [       OK ] CPU_InlineVectorCapacityAndEmpty_NONE.Test (0 ms)
+2026-10-20T01:33:20.2739499Z [----------] 1 test from CPU_InlineVectorCapacityAndEmpty_NONE (0 ms total)
+2026-10-20T01:33:20.2739666Z 
+2026-10-20T01:33:20.2739773Z [----------] 1 test from CPU_InlineVectorIteratorsConstructor_NONE
+2026-10-20T01:33:20.2740017Z [ RUN      ] CPU_InlineVectorIteratorsConstructor_NONE.Test
+2026-10-20T01:33:20.2740302Z [       OK ] CPU_InlineVectorIteratorsConstructor_NONE.Test (0 ms)
+2026-10-20T01:33:20.2740574Z [----------] 1 test from CPU_InlineVectorIteratorsConstructor_NONE (0 ms total)
+2026-10-20T01:33:20.2740760Z 
+2026-10-20T01:33:20.2740856Z [----------] 1 test from CPU_InlineVectorConstructorException_NONE
+2026-10-20T01:33:20.2741108Z [ RUN      ] CPU_InlineVectorConstructorException_NONE.Test
+2026-10-20T01:33:20.2741347Z [       OK ] CPU_InlineVectorConstructorException_NONE.Test (5 ms)
+2026-10-20T01:33:20.2741615Z [----------] 1 test from CPU_InlineVectorConstructorException_NONE (5 ms total)
+2026-10-20T01:33:20.2741787Z 
+2026-10-20T01:33:20.2741866Z [----------] 1 test from CPU_InlineVectorAllOf_NONE
+2026-10-20T01:33:20.2742063Z [ RUN      ] CPU_InlineVectorAllOf_NONE.Test
+2026-10-20T01:33:20.2742246Z [       OK ] CPU_InlineVectorAllOf_NONE.Test (0 ms)
+2026-10-20T01:33:20.2742458Z [----------] 1 test from CPU_InlineVectorAllOf_NONE (0 ms total)
+2026-10-20T01:33:20.2742613Z 
+2026-10-20T01:33:20.2742685Z [----------] 1 test from CPU_InlineVectorResize_NONE
+2026-10-20T01:33:20.2742879Z [ RUN      ] CPU_InlineVectorResize_NONE.Test
+2026-10-20T01:33:20.2743073Z [       OK ] CPU_InlineVectorResize_NONE.Test (0 ms)
+2026-10-20T01:33:20.2743293Z [----------] 1 test from CPU_InlineVectorResize_NONE (0 ms total)
+2026-10-20T01:33:20.2743439Z 
+2026-10-20T01:33:20.2743532Z [----------] 1 test from CPU_InlineVectorPushBackPopBack_NONE
+2026-10-20T01:33:20.2743759Z [ RUN      ] CPU_InlineVectorPushBackPopBack_NONE.Test
+2026-10-20T01:33:20.2743985Z [       OK ] CPU_InlineVectorPushBackPopBack_NONE.Test (2 ms)
+2026-10-20T01:33:20.2744234Z [----------] 1 test from CPU_InlineVectorPushBackPopBack_NONE (2 ms total)
+2026-10-20T01:33:20.2744413Z 
+2026-10-20T01:33:20.2744480Z [----------] 1 test from CPU_InlineVectorAt_NONE
+2026-10-20T01:33:20.2744657Z [ RUN      ] CPU_InlineVectorAt_NONE.Test
+2026-10-20T01:33:20.2744869Z [       OK ] CPU_InlineVectorAt_NONE.Test (5 ms)
+2026-10-20T01:33:20.2745069Z [----------] 1 test from CPU_InlineVectorAt_NONE (5 ms total)
+2026-10-20T01:33:20.2745217Z 
+2026-10-20T01:33:20.2745317Z [----------] 1 test from CPU_InlineVectorFrontBack_NONE
+2026-10-20T01:33:20.2745513Z [ RUN      ] CPU_InlineVectorFrontBack_NONE.Test
+2026-10-20T01:33:20.2745699Z [       OK ] CPU_InlineVectorFrontBack_NONE.Test (5 ms)
+2026-10-20T01:33:20.2745915Z [----------] 1 test from CPU_InlineVectorFrontBack_NONE (5 ms total)
+2026-10-20T01:33:20.2746067Z 
+2026-10-20T01:33:20.2746176Z [----------] 1 test from CPU_InlineVectorClear_NONE
+2026-10-20T01:33:20.2746410Z [ RUN      ] CPU_InlineVectorClear_NONE.Test
+2026-10-20T01:33:20.2746605Z [       OK ] CPU_InlineVectorClear_NONE.Test (0 ms)
+2026-10-20T01:33:20.2746804Z [----------] 1 test from CPU_InlineVectorClear_NONE (0 ms total)
+2026-10-20T01:33:20.2746944Z 
+2026-10-20T01:33:20.2747049Z [----------] 1 test from CPU_kernel_build_params_NONE
+2026-10-20T01:33:20.2747271Z [ RUN      ] CPU_kernel_build_params_NONE.check_kernel_build_params
+2026-10-20T01:33:20.2747518Z [       OK ] CPU_kernel_build_params_NONE.check_kernel_build_params (0 ms)
+2026-10-20T01:33:20.2747775Z [----------] 1 test from CPU_kernel_build_params_NONE (0 ms total)
+2026-10-20T01:33:20.2747918Z 
+2026-10-20T01:33:20.2747984Z [----------] 2 tests from CPU_LgbmPcfgPicker_NONE
+2026-10-20T01:33:20.2748241Z [ RUN      ] CPU_LgbmPcfgPicker_NONE.RanksRealCatalogCandidatesDeterministically
+2026-10-20T01:33:20.2748587Z [       OK ] CPU_LgbmPcfgPicker_NONE.RanksRealCatalogCandidatesDeterministically (1971 ms)
+2026-10-20T01:33:20.2748894Z [ RUN      ] CPU_LgbmPcfgPicker_NONE.GfxVocabCoversEveryBucketArch
+2026-10-20T01:33:20.2749154Z [       OK ] CPU_LgbmPcfgPicker_NONE.GfxVocabCoversEveryBucketArch (0 ms)
+2026-10-20T01:33:20.2749404Z [----------] 2 tests from CPU_LgbmPcfgPicker_NONE (1971 ms total)
+2026-10-20T01:33:20.2749551Z 
+2026-10-20T01:33:20.2749616Z [----------] 1 test from CPU_LgbmPcfgForest_NONE
+2026-10-20T01:33:20.2749809Z [ RUN      ] CPU_LgbmPcfgForest_NONE.MatchesGoldenVectors
+2026-10-20T01:33:20.2750200Z C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/test/gtest/lgbm_pcfg_picker.cpp(170): Skipped
+2026-10-20T01:33:20.2750615Z pcfg golden fixture not installed in B:\actions-runner\_work\TheRock\TheRock\build\bin
+2026-10-20T01:33:20.2750815Z 
+2026-10-20T01:33:20.2750915Z [  SKIPPED ] CPU_LgbmPcfgForest_NONE.MatchesGoldenVectors (0 ms)
+2026-10-20T01:33:20.2751154Z [----------] 1 test from CPU_LgbmPcfgForest_NONE (0 ms total)
+2026-10-20T01:33:20.2751292Z 
+2026-10-20T01:33:20.2751359Z [----------] 4 tests from CPU_LgbmMetadata_NONE
+2026-10-20T01:33:20.2751554Z [ RUN      ] CPU_LgbmMetadata_NONE.LoadsSolverVocab
+2026-10-20T01:33:20.2751752Z [       OK ] CPU_LgbmMetadata_NONE.LoadsSolverVocab (0 ms)
+2026-10-20T01:33:20.2751959Z [ RUN      ] CPU_LgbmMetadata_NONE.CategoricalCodesResolve
+2026-10-20T01:33:20.2752184Z [       OK ] CPU_LgbmMetadata_NONE.CategoricalCodesResolve (0 ms)
+2026-10-20T01:33:20.2752414Z [ RUN      ] CPU_LgbmMetadata_NONE.SolverCodeMatchesVocabIndex
+2026-10-20T01:33:20.2752653Z [       OK ] CPU_LgbmMetadata_NONE.SolverCodeMatchesVocabIndex (0 ms)
+2026-10-20T01:33:20.2752902Z [ RUN      ] CPU_LgbmMetadata_NONE.UnseenArchSupportIsConsistent
+2026-10-20T01:33:20.2753147Z [       OK ] CPU_LgbmMetadata_NONE.UnseenArchSupportIsConsistent (0 ms)
+2026-10-20T01:33:20.2753390Z [----------] 4 tests from CPU_LgbmMetadata_NONE (1 ms total)
+2026-10-20T01:33:20.2753530Z 
+2026-10-20T01:33:20.2753595Z [----------] 1 test from CPU_LgbmPicker_NONE
+2026-10-20T01:33:20.2753907Z [ RUN      ] CPU_LgbmPicker_NONE.ScoresCandidateMatrix
+2026-10-20T01:33:20.2754123Z [       OK ] CPU_LgbmPicker_NONE.ScoresCandidateMatrix (6 ms)
+2026-10-20T01:33:20.2754342Z [----------] 1 test from CPU_LgbmPicker_NONE (6 ms total)
+2026-10-20T01:33:20.2754470Z 
+2026-10-20T01:33:20.2754533Z [----------] 1 test from CPU_LgbmForest_NONE
+2026-10-20T01:33:20.2754729Z [ RUN      ] CPU_LgbmForest_NONE.MatchesGoldenVectors
+2026-10-20T01:33:20.2755127Z C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/test/gtest/lgbm_picker.cpp(161): Skipped
+2026-10-20T01:33:20.2755523Z golden fixture not installed in B:\actions-runner\_work\TheRock\TheRock\build\bin
+2026-10-20T01:33:20.2755716Z 
+2026-10-20T01:33:20.2755813Z [  SKIPPED ] CPU_LgbmForest_NONE.MatchesGoldenVectors (0 ms)
+2026-10-20T01:33:20.2756036Z [----------] 1 test from CPU_LgbmForest_NONE (0 ms total)
+2026-10-20T01:33:20.2756174Z 
+2026-10-20T01:33:20.2757537Z [----------] 5 tests from CPU_LOG_TEST_ASSERT_NONE
+2026-10-20T01:33:20.2758227Z [ RUN      ] CPU_LOG_TEST_ASSERT_NONE.AssertLogCmdOutput
+2026-10-20T01:33:20.2758444Z [       OK ] CPU_LOG_TEST_ASSERT_NONE.AssertLogCmdOutput (0 ms)
+2026-10-20T01:33:20.2758715Z [ RUN      ] CPU_LOG_TEST_ASSERT_NONE.AssertLogFindCmdOutput
+2026-10-20T01:33:20.2759179Z [       OK ] CPU_LOG_TEST_ASSERT_NONE.AssertLogFindCmdOutput (0 ms)
+2026-10-20T01:33:20.2759433Z [ RUN      ] CPU_LOG_TEST_ASSERT_NONE.AssertLogBufferOff
+2026-10-20T01:33:20.2759631Z MIOpen: Warning [TestLogBufferOff] warn
+2026-10-20T01:33:20.2759825Z MIOpen: Info [TestLogBufferOff] info
+2026-10-20T01:33:20.2759992Z MIOpen: Error [TestLogBufferOff] error
+2026-10-20T01:33:20.2760193Z [       OK ] CPU_LOG_TEST_ASSERT_NONE.AssertLogBufferOff (0 ms)
+2026-10-20T01:33:20.2760415Z [ RUN      ] CPU_LOG_TEST_ASSERT_NONE.AssertLogBufferEnvEnabled
+2026-10-20T01:33:20.2760628Z MIOpen: Warning [TestLogBufferEnvEnabled] warn
+2026-10-20T01:33:20.2760870Z MIOpen: Info [TestLogBufferEnvEnabled] info
+2026-10-20T01:33:20.2761064Z MIOpen: Error [TestLogBufferEnvEnabled] error
+2026-10-20T01:33:20.2761332Z Buffered 4 messages to file: azw11g1101-ft30:C:\Windows\SystemTemp\miopen_error_5952.log
+2026-10-20T01:33:20.2761616Z MIOpen: Warning [TestLogBufferEnvEnabled] warn 2nd
+2026-10-20T01:33:20.2761817Z MIOpen: Info [TestLogBufferEnvEnabled] info 2nd
+2026-10-20T01:33:20.2762015Z MIOpen: Error [TestLogBufferEnvEnabled] error 2nd
+2026-10-20T01:33:20.2762301Z Buffered 4 messages to file: azw11g1101-ft30:C:\Windows\SystemTemp\miopen_error_5952.log
+2026-10-20T01:33:20.2762659Z [       OK ] CPU_LOG_TEST_ASSERT_NONE.AssertLogBufferEnvEnabled (20 ms)
+2026-10-20T01:33:20.2762918Z [ RUN      ] CPU_LOG_TEST_ASSERT_NONE.AssertLogBufferOffAtHighLevel
+2026-10-20T01:33:20.2763150Z MIOpen: Warning [TestLogBufferOffAtHighLevel] warn
+2026-10-20T01:33:20.2763356Z MIOpen: Info [TestLogBufferOffAtHighLevel] info
+2026-10-20T01:33:20.2763555Z MIOpen: Info2 [TestLogBufferOffAtHighLevel] info2
+2026-10-20T01:33:20.2763761Z MIOpen: Error [TestLogBufferOffAtHighLevel] error
+2026-10-20T01:33:20.2763991Z [       OK ] CPU_LOG_TEST_ASSERT_NONE.AssertLogBufferOffAtHighLevel (0 ms)
+2026-10-20T01:33:20.2764251Z [----------] 5 tests from CPU_LOG_TEST_ASSERT_NONE (21 ms total)
+2026-10-20T01:33:20.2764397Z 
+2026-10-20T01:33:20.2764469Z [----------] 2 tests from CPU_LOG_TEST_FUSION_NONE
+2026-10-20T01:33:20.2764690Z [ RUN      ] CPU_LOG_TEST_FUSION_NONE.AssertTestLogCmdCBAFusionOutput
+2026-10-20T01:33:20.2764966Z [       OK ] CPU_LOG_TEST_FUSION_NONE.AssertTestLogCmdCBAFusionOutput (0 ms)
+2026-10-20T01:33:20.2765248Z [ RUN      ] CPU_LOG_TEST_FUSION_NONE.AssertTestLogCmdBNormFusionOutput
+2026-10-20T01:33:20.2765538Z [       OK ] CPU_LOG_TEST_FUSION_NONE.AssertTestLogCmdBNormFusionOutput (257 ms)
+2026-10-20T01:33:20.2765837Z [----------] 2 tests from CPU_LOG_TEST_FUSION_NONE (257 ms total)
+2026-10-20T01:33:20.2765982Z 
+2026-10-20T01:33:20.2766051Z [----------] 4 tests from CPU_LOG_TEST_NEG_NONE
+2026-10-20T01:33:20.2766281Z [ RUN      ] CPU_LOG_TEST_NEG_NONE.AssertLogCmdOutput_Neg
+2026-10-20T01:33:20.2766512Z [       OK ] CPU_LOG_TEST_NEG_NONE.AssertLogCmdOutput_Neg (0 ms)
+2026-10-20T01:33:20.2766740Z [ RUN      ] CPU_LOG_TEST_NEG_NONE.AssertLogFindCmdOutput_Neg
+2026-10-20T01:33:20.2766989Z [       OK ] CPU_LOG_TEST_NEG_NONE.AssertLogFindCmdOutput_Neg (0 ms)
+2026-10-20T01:33:20.2767249Z [ RUN      ] CPU_LOG_TEST_NEG_NONE.AssertTestLogCmdCBAFusionOutput_Neg
+2026-10-20T01:33:20.2767516Z [       OK ] CPU_LOG_TEST_NEG_NONE.AssertTestLogCmdCBAFusionOutput_Neg (0 ms)
+2026-10-20T01:33:20.2767806Z [ RUN      ] CPU_LOG_TEST_NEG_NONE.AssertTestLogCmdBNormFusionOutput_Neg
+2026-10-20T01:33:20.2768109Z [       OK ] CPU_LOG_TEST_NEG_NONE.AssertTestLogCmdBNormFusionOutput_Neg (250 ms)
+2026-10-20T01:33:20.2768368Z [----------] 4 tests from CPU_LOG_TEST_NEG_NONE (251 ms total)
+2026-10-20T01:33:20.2768511Z 
+2026-10-20T01:33:20.2768591Z [----------] 1 test from CPU_MiopenCstdintLP64_NONE
+2026-10-20T01:33:20.2768872Z [ RUN      ] CPU_MiopenCstdintLP64_NONE.JitCompileWithMiopenCstdint
+2026-10-20T01:33:20.2769197Z [       OK ] CPU_MiopenCstdintLP64_NONE.JitCompileWithMiopenCstdint (421 ms)
+2026-10-20T01:33:20.2769476Z [----------] 1 test from CPU_MiopenCstdintLP64_NONE (421 ms total)
+2026-10-20T01:33:20.2769630Z 
+2026-10-20T01:33:20.2769741Z [----------] 1 test from CPU_UtilMultiThreadQueue_NONE
+2026-10-20T01:33:20.2769953Z [ RUN      ] CPU_UtilMultiThreadQueue_NONE.Basic
+2026-10-20T01:33:20.2770188Z 0
+2026-10-20T01:33:20.2770292Z 1
+2026-10-20T01:33:20.2770392Z 21
+2026-10-20T01:33:20.2770494Z 3
+2026-10-20T01:33:20.2770599Z 5
+2026-10-20T01:33:20.2770695Z 7
+2026-10-20T01:33:20.2770789Z 4
+2026-10-20T01:33:20.2770887Z 9
+2026-10-20T01:33:20.2770985Z 6
+2026-10-20T01:33:20.2771083Z 8
+2026-10-20T01:33:20.2771180Z 10
+2026-10-20T01:33:20.2771286Z 11
+2026-10-20T01:33:20.2771385Z 12
+2026-10-20T01:33:20.2771490Z 13
+2026-10-20T01:33:20.2771587Z 14
+2026-10-20T01:33:20.2771683Z 15
+2026-10-20T01:33:20.2771779Z 16
+2026-10-20T01:33:20.2771903Z 17
+2026-10-20T01:33:20.2772003Z 18
+2026-10-20T01:33:20.2772100Z 19
+2026-10-20T01:33:20.2772198Z 20
+2026-10-20T01:33:20.2772294Z 2
+2026-10-20T01:33:20.2772396Z 22
+2026-10-20T01:33:20.2772501Z 23
+2026-10-20T01:33:20.2772599Z 24
+2026-10-20T01:33:20.2772702Z 41
+2026-10-20T01:33:20.2772806Z 31
+2026-10-20T01:33:20.2772901Z 32
+2026-10-20T01:33:20.2773000Z 48
+2026-10-20T01:33:20.2773095Z 42
+2026-10-20T01:33:20.2773206Z 65
+2026-10-20T01:33:20.2773304Z 40
+2026-10-20T01:33:20.2773410Z 39
+2026-10-20T01:33:20.2773558Z 56
+2026-10-20T01:33:20.2773656Z 29
+2026-10-20T01:33:20.2773754Z 47
+2026-10-20T01:33:20.2773855Z 38
+2026-10-20T01:33:20.2774026Z 37
+2026-10-20T01:33:20.2774121Z 80
+2026-10-20T01:33:20.2774227Z 30
+2026-10-20T01:33:20.2774324Z 64
+2026-10-20T01:33:20.2774453Z 45
+2026-10-20T01:33:20.2774551Z 28
+2026-10-20T01:33:20.2774652Z 27
+2026-10-20T01:33:20.2774749Z 46
+2026-10-20T01:33:20.2774850Z 69
+2026-10-20T01:33:20.2774950Z 61
+2026-10-20T01:33:20.2775054Z 35
+2026-10-20T01:33:20.2775158Z 52
+2026-10-20T01:33:20.2775258Z 25
+2026-10-20T01:33:20.2775359Z 43
+2026-10-20T01:33:20.2775455Z 72
+2026-10-20T01:33:20.2775576Z 36
+2026-10-20T01:33:20.2775673Z 44
+2026-10-20T01:33:20.2775770Z 66
+2026-10-20T01:33:20.2775866Z 33
+2026-10-20T01:33:20.2775965Z 34
+2026-10-20T01:33:20.2776069Z 26
+2026-10-20T01:33:20.2776166Z 60
+2026-10-20T01:33:20.2776268Z 71
+2026-10-20T01:33:20.2776367Z 53
+2026-10-20T01:33:20.2776466Z 68
+2026-10-20T01:33:20.2776564Z 54
+2026-10-20T01:33:20.2776665Z 62
+2026-10-20T01:33:20.2776764Z 89
+2026-10-20T01:33:20.2776878Z 63
+2026-10-20T01:33:20.2776986Z 76
+2026-10-20T01:33:20.2777083Z 88
+2026-10-20T01:33:20.2777179Z 55
+2026-10-20T01:33:20.2777275Z 70
+2026-10-20T01:33:20.2777377Z 57
+2026-10-20T01:33:20.2777477Z 86
+2026-10-20T01:33:20.2777580Z 77
+2026-10-20T01:33:20.2777678Z 49
+2026-10-20T01:33:20.2777776Z 96
+2026-10-20T01:33:20.2777878Z 93
+2026-10-20T01:33:20.2777976Z 92
+2026-10-20T01:33:20.2778075Z 87
+2026-10-20T01:33:20.2778171Z 50
+2026-10-20T01:33:20.2778281Z 59
+2026-10-20T01:33:20.2778386Z 58
+2026-10-20T01:33:20.2778484Z 67
+2026-10-20T01:33:20.2778581Z 51
+2026-10-20T01:33:20.2778680Z 81
+2026-10-20T01:33:20.2778778Z 90
+2026-10-20T01:33:20.2778875Z 85
+2026-10-20T01:33:20.2778970Z 84
+2026-10-20T01:33:20.2779068Z 95
+2026-10-20T01:33:20.2779173Z 91
+2026-10-20T01:33:20.2779271Z 75
+2026-10-20T01:33:20.2779374Z 78
+2026-10-20T01:33:20.2779474Z 82
+2026-10-20T01:33:20.2779578Z 99
+2026-10-20T01:33:20.2779674Z 94
+2026-10-20T01:33:20.2779771Z 79
+2026-10-20T01:33:20.2779872Z 83
+2026-10-20T01:33:20.2779977Z 73
+2026-10-20T01:33:20.2780075Z 74
+2026-10-20T01:33:20.2780172Z 98
+2026-10-20T01:33:20.2780266Z 97
+2026-10-20T01:33:20.2780368Z Stage 2
+2026-10-20T01:33:20.2780481Z 0
+2026-10-20T01:33:20.2780583Z 1
+2026-10-20T01:33:20.2780681Z 2
+2026-10-20T01:33:20.2780791Z 3
+2026-10-20T01:33:20.2780894Z 4
+2026-10-20T01:33:20.2780990Z 5
+2026-10-20T01:33:20.2781102Z 6
+2026-10-20T01:33:20.2781209Z 7
+2026-10-20T01:33:20.2781306Z 8
+2026-10-20T01:33:20.2781456Z 9
+2026-10-20T01:33:20.2781585Z 10
+2026-10-20T01:33:20.2781681Z 11
+2026-10-20T01:33:20.2781779Z 12
+2026-10-20T01:33:20.2781873Z 13
+2026-10-20T01:33:20.2781975Z 14
+2026-10-20T01:33:20.2782069Z 15
+2026-10-20T01:33:20.2782167Z 16
+2026-10-20T01:33:20.2782274Z 17
+2026-10-20T01:33:20.2782368Z 18
+2026-10-20T01:33:20.2782464Z 19
+2026-10-20T01:33:20.2782563Z 20
+2026-10-20T01:33:20.2782701Z 21
+2026-10-20T01:33:20.2782802Z 22
+2026-10-20T01:33:20.2782906Z 23
+2026-10-20T01:33:20.2783010Z 24
+2026-10-20T01:33:20.2783108Z 25
+2026-10-20T01:33:20.2783206Z 26
+2026-10-20T01:33:20.2783302Z 27
+2026-10-20T01:33:20.2783401Z 28
+2026-10-20T01:33:20.2783498Z 29
+2026-10-20T01:33:20.2783600Z 30
+2026-10-20T01:33:20.2783709Z 31
+2026-10-20T01:33:20.2783807Z 32
+2026-10-20T01:33:20.2783908Z 33
+2026-10-20T01:33:20.2784003Z 34
+2026-10-20T01:33:20.2784101Z 35
+2026-10-20T01:33:20.2784201Z 36
+2026-10-20T01:33:20.2784301Z 37
+2026-10-20T01:33:20.2784400Z 38
+2026-10-20T01:33:20.2784507Z 39
+2026-10-20T01:33:20.2784606Z 40
+2026-10-20T01:33:20.2784706Z 41
+2026-10-20T01:33:20.2784804Z 42
+2026-10-20T01:33:20.2784901Z 43
+2026-10-20T01:33:20.2785010Z 44
+2026-10-20T01:33:20.2785106Z 45
+2026-10-20T01:33:20.2785202Z 46
+2026-10-20T01:33:20.2785299Z 47
+2026-10-20T01:33:20.2785400Z 48
+2026-10-20T01:33:20.2785499Z 49
+2026-10-20T01:33:20.2785597Z 50
+2026-10-20T01:33:20.2785702Z 51
+2026-10-20T01:33:20.2785802Z 52
+2026-10-20T01:33:20.2785902Z 53
+2026-10-20T01:33:20.2786000Z 54
+2026-10-20T01:33:20.2786099Z 55
+2026-10-20T01:33:20.2786256Z 56
+2026-10-20T01:33:20.2786361Z 57
+2026-10-20T01:33:20.2786460Z 58
+2026-10-20T01:33:20.2786558Z 59
+2026-10-20T01:33:20.2786657Z 60
+2026-10-20T01:33:20.2786753Z 61
+2026-10-20T01:33:20.2786853Z 62
+2026-10-20T01:33:20.2786954Z 63
+2026-10-20T01:33:20.2787059Z 64
+2026-10-20T01:33:20.2787153Z 65
+2026-10-20T01:33:20.2787249Z 66
+2026-10-20T01:33:20.2787347Z 67
+2026-10-20T01:33:20.2787444Z 68
+2026-10-20T01:33:20.2787542Z 69
+2026-10-20T01:33:20.2787643Z 70
+2026-10-20T01:33:20.2787757Z 71
+2026-10-20T01:33:20.2787855Z 72
+2026-10-20T01:33:20.2787954Z 73
+2026-10-20T01:33:20.2788055Z 74
+2026-10-20T01:33:20.2788154Z 75
+2026-10-20T01:33:20.2788250Z 76
+2026-10-20T01:33:20.2788350Z 77
+2026-10-20T01:33:20.2788446Z 78
+2026-10-20T01:33:20.2788549Z 79
+2026-10-20T01:33:20.2788647Z 80
+2026-10-20T01:33:20.2788749Z 81
+2026-10-20T01:33:20.2788848Z 82
+2026-10-20T01:33:20.2788949Z 83
+2026-10-20T01:33:20.2789055Z 84
+2026-10-20T01:33:20.2789155Z 85
+2026-10-20T01:33:20.2789258Z 86
+2026-10-20T01:33:20.2789355Z 87
+2026-10-20T01:33:20.2789452Z 88
+2026-10-20T01:33:20.2789554Z 89
+2026-10-20T01:33:20.2789651Z 90
+2026-10-20T01:33:20.2789748Z 91
+2026-10-20T01:33:20.2789845Z 92
+2026-10-20T01:33:20.2789942Z 93
+2026-10-20T01:33:20.2790041Z 94
+2026-10-20T01:33:20.2790143Z 95
+2026-10-20T01:33:20.2790246Z 96
+2026-10-20T01:33:20.2790346Z 97
+2026-10-20T01:33:20.2790441Z 98
+2026-10-20T01:33:20.2790540Z 99
+2026-10-20T01:33:20.2790685Z [       OK ] CPU_UtilMultiThreadQueue_NONE.Basic (387 ms)
+2026-10-20T01:33:20.2790941Z [----------] 1 test from CPU_UtilMultiThreadQueue_NONE (387 ms total)
+2026-10-20T01:33:20.2791105Z 
+2026-10-20T01:33:20.2791179Z [----------] 1 test from CPU_NaiveTimeout_NONE
+2026-10-20T01:33:20.2791377Z [ RUN      ] CPU_NaiveTimeout_NONE.EnvVarRoundTrips
+2026-10-20T01:33:20.2791600Z [       OK ] CPU_NaiveTimeout_NONE.EnvVarRoundTrips (0 ms)
+2026-10-20T01:33:20.2791822Z [----------] 1 test from CPU_NaiveTimeout_NONE (0 ms total)
+2026-10-20T01:33:20.2791965Z 
+2026-10-20T01:33:20.2792051Z [----------] 1 test from CPU_PerfConfig_ConvHipConv_NONE
+2026-10-20T01:33:20.2792284Z [ RUN      ] CPU_PerfConfig_ConvHipConv_NONE.SerializeRoundTrip
+2026-10-20T01:33:20.2792540Z [       OK ] CPU_PerfConfig_ConvHipConv_NONE.SerializeRoundTrip (0 ms)
+2026-10-20T01:33:20.2792809Z [----------] 1 test from CPU_PerfConfig_ConvHipConv_NONE (0 ms total)
+2026-10-20T01:33:20.2792970Z 
+2026-10-20T01:33:20.2793074Z [----------] 2 tests from CPU_PerfConfigGroupBwdDeterministic_NONE
+2026-10-20T01:33:20.2793429Z [ RUN      ] CPU_PerfConfigGroupBwdDeterministic_NONE.HangRegressionSingleKernel
+2026-10-20T01:33:20.2794085Z [       OK ] CPU_PerfConfigGroupBwdDeterministic_NONE.HangRegressionSingleKernel (0 ms)
+2026-10-20T01:33:20.2794435Z [ RUN      ] CPU_PerfConfigGroupBwdDeterministic_NONE.UnderTuningThreeKernels
+2026-10-20T01:33:20.2794816Z [       OK ] CPU_PerfConfigGroupBwdDeterministic_NONE.UnderTuningThreeKernels (0 ms)
+2026-10-20T01:33:20.2795151Z [----------] 2 tests from CPU_PerfConfigGroupBwdDeterministic_NONE (0 ms total)
+2026-10-20T01:33:20.2795334Z 
+2026-10-20T01:33:20.2795446Z [----------] 2 tests from CPU_PerfConfigGroupWrwDeterministic_NONE
+2026-10-20T01:33:20.2795733Z [ RUN      ] CPU_PerfConfigGroupWrwDeterministic_NONE.HangRegressionSingleKernel
+2026-10-20T01:33:20.2796070Z [       OK ] CPU_PerfConfigGroupWrwDeterministic_NONE.HangRegressionSingleKernel (0 ms)
+2026-10-20T01:33:20.2796404Z [ RUN      ] CPU_PerfConfigGroupWrwDeterministic_NONE.UnderTuningThreeKernels
+2026-10-20T01:33:20.2796725Z [       OK ] CPU_PerfConfigGroupWrwDeterministic_NONE.UnderTuningThreeKernels (0 ms)
+2026-10-20T01:33:20.2797055Z [----------] 2 tests from CPU_PerfConfigGroupWrwDeterministic_NONE (0 ms total)
+2026-10-20T01:33:20.2797230Z 
+2026-10-20T01:33:20.2797339Z [----------] 1 test from CPU_PerfConfigGroupBwdNonDeterministic_NONE
+2026-10-20T01:33:20.2797659Z [ RUN      ] CPU_PerfConfigGroupBwdNonDeterministic_NONE.VisitsMultipleIndicesAndSplitKs
+2026-10-20T01:33:20.2798056Z [       OK ] CPU_PerfConfigGroupBwdNonDeterministic_NONE.VisitsMultipleIndicesAndSplitKs (0 ms)
+2026-10-20T01:33:20.2798458Z [----------] 1 test from CPU_PerfConfigGroupBwdNonDeterministic_NONE (0 ms total)
+2026-10-20T01:33:20.2798647Z 
+2026-10-20T01:33:20.2798748Z [----------] 1 test from CPU_PerfConfigGroupWrwNonDeterministic_NONE
+2026-10-20T01:33:20.2799079Z [ RUN      ] CPU_PerfConfigGroupWrwNonDeterministic_NONE.VisitsMultipleIndicesAndSplitKs
+2026-10-20T01:33:20.2799484Z [       OK ] CPU_PerfConfigGroupWrwNonDeterministic_NONE.VisitsMultipleIndicesAndSplitKs (0 ms)
+2026-10-20T01:33:20.2799845Z [----------] 1 test from CPU_PerfConfigGroupWrwNonDeterministic_NONE (0 ms total)
+2026-10-20T01:33:20.2800031Z 
+2026-10-20T01:33:20.2800136Z [----------] 2 tests from CPU_PerfConfigGroupFwdAdvance_NONE
+2026-10-20T01:33:20.2800415Z [ RUN      ] CPU_PerfConfigGroupFwdAdvance_NONE.WalksEveryKernelThenExhausts
+2026-10-20T01:33:20.2800738Z [       OK ] CPU_PerfConfigGroupFwdAdvance_NONE.WalksEveryKernelThenExhausts (0 ms)
+2026-10-20T01:33:20.2801086Z [ RUN      ] CPU_PerfConfigGroupFwdAdvance_NONE.SingleKernelExhaustsWithoutReemit
+2026-10-20T01:33:20.2801434Z [       OK ] CPU_PerfConfigGroupFwdAdvance_NONE.SingleKernelExhaustsWithoutReemit (0 ms)
+2026-10-20T01:33:20.2801773Z [----------] 2 tests from CPU_PerfConfigGroupFwdAdvance_NONE (0 ms total)
+2026-10-20T01:33:20.2801939Z 
+2026-10-20T01:33:20.2802036Z [----------] 1 test from CPU_PerfConfig3DGroupFwdAdvance_NONE
+2026-10-20T01:33:20.2802312Z [ RUN      ] CPU_PerfConfig3DGroupFwdAdvance_NONE.WalksEveryKernelThenExhausts
+2026-10-20T01:33:20.2802647Z [       OK ] CPU_PerfConfig3DGroupFwdAdvance_NONE.WalksEveryKernelThenExhausts (0 ms)
+2026-10-20T01:33:20.2802961Z [----------] 1 test from CPU_PerfConfig3DGroupFwdAdvance_NONE (0 ms total)
+2026-10-20T01:33:20.2803136Z 
+2026-10-20T01:33:20.2803238Z [----------] 1 test from CPU_PerfConfig3DGroupBwdAdvance_NONE
+2026-10-20T01:33:20.2803514Z [ RUN      ] CPU_PerfConfig3DGroupBwdAdvance_NONE.WalksEveryKernelThenExhausts
+2026-10-20T01:33:20.2803846Z [       OK ] CPU_PerfConfig3DGroupBwdAdvance_NONE.WalksEveryKernelThenExhausts (0 ms)
+2026-10-20T01:33:20.2804156Z [----------] 1 test from CPU_PerfConfig3DGroupBwdAdvance_NONE (0 ms total)
+2026-10-20T01:33:20.2804322Z 
+2026-10-20T01:33:20.2804400Z [----------] 1 test from CPU_PerfDb_ChildWorker_NONE
+2026-10-20T01:33:20.2804603Z [ RUN      ] CPU_PerfDb_ChildWorker_NONE.ProcessWork
+2026-10-20T01:33:20.2804974Z C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/test/gtest/perfdb.cpp(1476): Skipped
+2026-10-20T01:33:20.2805339Z Not in child process mode (no --mp-test-child arg)
+2026-10-20T01:33:20.2805488Z 
+2026-10-20T01:33:20.2805586Z [  SKIPPED ] CPU_PerfDb_ChildWorker_NONE.ProcessWork (0 ms)
+2026-10-20T01:33:20.2805848Z [----------] 1 test from CPU_PerfDb_ChildWorker_NONE (0 ms total)
+2026-10-20T01:33:20.2806004Z 
+2026-10-20T01:33:20.2806110Z [----------] 5 tests from CPU_sequence_NONE
+2026-10-20T01:33:20.2806308Z [ RUN      ] CPU_sequence_NONE.SimpleListTest
+2026-10-20T01:33:20.2806515Z [       OK ] CPU_sequence_NONE.SimpleListTest (0 ms)
+2026-10-20T01:33:20.2806712Z [ RUN      ] CPU_sequence_NONE.LinearListTest
+2026-10-20T01:33:20.2806904Z [       OK ] CPU_sequence_NONE.LinearListTest (0 ms)
+2026-10-20T01:33:20.2807098Z [ RUN      ] CPU_sequence_NONE.TwoPowersListTest
+2026-10-20T01:33:20.2807331Z [       OK ] CPU_sequence_NONE.TwoPowersListTest (0 ms)
+2026-10-20T01:33:20.2807536Z [ RUN      ] CPU_sequence_NONE.JoinTest
+2026-10-20T01:33:20.2807728Z [       OK ] CPU_sequence_NONE.JoinTest (0 ms)
+2026-10-20T01:33:20.2807911Z [ RUN      ] CPU_sequence_NONE.DividedTest
+2026-10-20T01:33:20.2808100Z [       OK ] CPU_sequence_NONE.DividedTest (0 ms)
+2026-10-20T01:33:20.2808302Z [----------] 5 tests from CPU_sequence_NONE (0 ms total)
+2026-10-20T01:33:20.2808432Z 
+2026-10-20T01:33:20.2808505Z [----------] 3 tests from CPU_sequenceRule_NONE
+2026-10-20T01:33:20.2808688Z [ RUN      ] CPU_sequenceRule_NONE.IsInTest
+2026-10-20T01:33:20.2808875Z [       OK ] CPU_sequenceRule_NONE.IsInTest (0 ms)
+2026-10-20T01:33:20.2809099Z [ RUN      ] CPU_sequenceRule_NONE.NextTest
+2026-10-20T01:33:20.2809279Z [       OK ] CPU_sequenceRule_NONE.NextTest (0 ms)
+2026-10-20T01:33:20.2809473Z [ RUN      ] CPU_sequenceRule_NONE.CompareTest
+2026-10-20T01:33:20.2809668Z [       OK ] CPU_sequenceRule_NONE.CompareTest (0 ms)
+2026-10-20T01:33:20.2809885Z [----------] 3 tests from CPU_sequenceRule_NONE (0 ms total)
+2026-10-20T01:33:20.2810026Z 
+2026-10-20T01:33:20.2810104Z [----------] 3 tests from CPU_sequenceRuleSet_NONE
+2026-10-20T01:33:20.2810292Z [ RUN      ] CPU_sequenceRuleSet_NONE.IsInTest
+2026-10-20T01:33:20.2810483Z [       OK ] CPU_sequenceRuleSet_NONE.IsInTest (0 ms)
+2026-10-20T01:33:20.2810669Z [ RUN      ] CPU_sequenceRuleSet_NONE.NextTest
+2026-10-20T01:33:20.2810854Z [       OK ] CPU_sequenceRuleSet_NONE.NextTest (0 ms)
+2026-10-20T01:33:20.2811053Z [ RUN      ] CPU_sequenceRuleSet_NONE.CompareTest
+2026-10-20T01:33:20.2811262Z [       OK ] CPU_sequenceRuleSet_NONE.CompareTest (0 ms)
+2026-10-20T01:33:20.2811484Z [----------] 3 tests from CPU_sequenceRuleSet_NONE (0 ms total)
+2026-10-20T01:33:20.2811632Z 
+2026-10-20T01:33:20.2811725Z [----------] 3 tests from CPU_SolutionLoadWorkDims_NONE
+2026-10-20T01:33:20.2811959Z [ RUN      ] CPU_SolutionLoadWorkDims_NONE.RejectsTooManyWorkDims
+2026-10-20T01:33:20.2812223Z [       OK ] CPU_SolutionLoadWorkDims_NONE.RejectsTooManyWorkDims (9 ms)
+2026-10-20T01:33:20.2812489Z [ RUN      ] CPU_SolutionLoadWorkDims_NONE.RejectsEmptyWorkDims
+2026-10-20T01:33:20.2812750Z [       OK ] CPU_SolutionLoadWorkDims_NONE.RejectsEmptyWorkDims (5 ms)
+2026-10-20T01:33:20.2813008Z [ RUN      ] CPU_SolutionLoadWorkDims_NONE.AcceptsValidWorkDims
+2026-10-20T01:33:20.2813249Z [       OK ] CPU_SolutionLoadWorkDims_NONE.AcceptsValidWorkDims (0 ms)
+2026-10-20T01:33:20.2813514Z [----------] 3 tests from CPU_SolutionLoadWorkDims_NONE (15 ms total)
+2026-10-20T01:33:20.2813671Z 
+2026-10-20T01:33:20.2813758Z [----------] 2 tests from CPU_SolverFindListRegistry_NONE
+2026-10-20T01:33:20.2814057Z [ RUN      ] CPU_SolverFindListRegistry_NONE.AllFindSolversAreRegistered
+2026-10-20T01:33:20.2814358Z [       OK ] CPU_SolverFindListRegistry_NONE.AllFindSolversAreRegistered (0 ms)
+2026-10-20T01:33:20.2814697Z [ RUN      ] CPU_SolverFindListRegistry_NONE.AllRegisteredConvSolversAreFindReachable
+2026-10-20T01:33:20.2815077Z [       OK ] CPU_SolverFindListRegistry_NONE.AllRegisteredConvSolversAreFindReachable (0 ms)
+2026-10-20T01:33:20.2815450Z [----------] 2 tests from CPU_SolverFindListRegistry_NONE (0 ms total)
+2026-10-20T01:33:20.2815646Z 
+2026-10-20T01:33:20.2815726Z [----------] 5 tests from CPU_SysDbSelectionCu_NONE
+2026-10-20T01:33:20.2815963Z [ RUN      ] CPU_SysDbSelectionCu_NONE.Gfx942LowCuRedirectsToHighCuDb
+2026-10-20T01:33:20.2816246Z [       OK ] CPU_SysDbSelectionCu_NONE.Gfx942LowCuRedirectsToHighCuDb (0 ms)
+2026-10-20T01:33:20.2816552Z [ RUN      ] CPU_SysDbSelectionCu_NONE.Gfx942ThresholdBoundary
+2026-10-20T01:33:20.2816799Z [       OK ] CPU_SysDbSelectionCu_NONE.Gfx942ThresholdBoundary (0 ms)
+2026-10-20T01:33:20.2817045Z [ RUN      ] CPU_SysDbSelectionCu_NONE.Gfx942HighCuUnchanged
+2026-10-20T01:33:20.2817303Z [       OK ] CPU_SysDbSelectionCu_NONE.Gfx942HighCuUnchanged (0 ms)
+2026-10-20T01:33:20.2817549Z [ RUN      ] CPU_SysDbSelectionCu_NONE.OtherArchesArePassthrough
+2026-10-20T01:33:20.2817807Z [       OK ] CPU_SysDbSelectionCu_NONE.OtherArchesArePassthrough (0 ms)
+2026-10-20T01:33:20.2827664Z [ RUN      ] CPU_SysDbSelectionCu_NONE.EmptyDbIdIsPassthrough
+2026-10-20T01:33:20.2827988Z [       OK ] CPU_SysDbSelectionCu_NONE.EmptyDbIdIsPassthrough (0 ms)
+2026-10-20T01:33:20.2828267Z [----------] 5 tests from CPU_SysDbSelectionCu_NONE (0 ms total)
+2026-10-20T01:33:20.2828422Z 
+2026-10-20T01:33:20.2828501Z [----------] 5 tests from CPU_test_errors_NONE
+2026-10-20T01:33:20.2828684Z [ RUN      ] CPU_test_errors_NONE.test_try
+2026-10-20T01:33:20.2829068Z MIOpen Error: azw11g1101-ft30:C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/test/gtest/test_errors.cpp:35: 
+2026-10-20T01:33:20.2829698Z MIOpen Error: azw11g1101-ft30:C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/miopen/test/gtest/test_errors.cpp:37: 
+2026-10-20T01:33:20.2830037Z MIOpen Error: 
+2026-10-20T01:33:20.2830179Z [       OK ] CPU_test_errors_NONE.test_try (5 ms)
+2026-10-20T01:33:20.2830371Z [ RUN      ] CPU_test_errors_NONE.test_error_string
+2026-10-20T01:33:20.2830574Z [       OK ] CPU_test_errors_NONE.test_error_string (0 ms)
+2026-10-20T01:33:20.2830793Z [ RUN      ] CPU_test_errors_NONE.test_miopen_throw
+2026-10-20T01:33:20.2831001Z [       OK ] CPU_test_errors_NONE.test_miopen_throw (14 ms)
+2026-10-20T01:33:20.2831210Z [ RUN      ] CPU_test_errors_NONE.test_miopen_throw_if
+2026-10-20T01:33:20.2831427Z [       OK ] CPU_test_errors_NONE.test_miopen_throw_if (11 ms)
+2026-10-20T01:33:20.2831668Z [ RUN      ] CPU_test_errors_NONE.test_exception_setcontext_directly
+2026-10-20T01:33:20.2831927Z [       OK ] CPU_test_errors_NONE.test_exception_setcontext_directly (5 ms)
+2026-10-20T01:33:20.2832187Z [----------] 5 tests from CPU_test_errors_NONE (38 ms total)
+2026-10-20T01:33:20.2832337Z 
+2026-10-20T01:33:20.2832402Z [----------] 1 test from CPU_type_name_NONE
+2026-10-20T01:33:20.2832584Z [ RUN      ] CPU_type_name_NONE.check_type_name
+2026-10-20T01:33:20.2832776Z [       OK ] CPU_type_name_NONE.check_type_name (0 ms)
+2026-10-20T01:33:20.2832975Z [----------] 1 test from CPU_type_name_NONE (0 ms total)
+2026-10-20T01:33:20.2833104Z 
+2026-10-20T01:33:20.2833170Z [----------] 5 tests from CPU_CkImplLoader_NONE
+2026-10-20T01:33:20.2833414Z [ RUN      ] CPU_CkImplLoader_NONE.LoaderFailsGracefullyForUnknownDevice
+2026-10-20T01:33:20.2833871Z MIOpen: Warning [OpenRuntimeLibraryForDevice] CK grouped conv library not found for device gfx_nonexistent: The specified module could not be found.
+2026-10-20T01:33:20.2834289Z 
+2026-10-20T01:33:20.2834427Z [       OK ] CPU_CkImplLoader_NONE.LoaderFailsGracefullyForUnknownDevice (0 ms)
+2026-10-20T01:33:20.2834727Z [ RUN      ] CPU_CkImplLoader_NONE.LoaderStripsDeviceSuffixWithoutGpu
+2026-10-20T01:33:20.2835212Z MIOpen: Warning [OpenRuntimeLibraryForDevice] CK grouped conv library not found for device gfx_ck_loader_suffix_unit_test: The specified module could not be found.
+2026-10-20T01:33:20.2835574Z 
+2026-10-20T01:33:20.2835706Z [       OK ] CPU_CkImplLoader_NONE.LoaderStripsDeviceSuffixWithoutGpu (0 ms)
+2026-10-20T01:33:20.2836065Z [ RUN      ] CPU_CkImplLoader_NONE.LoaderFailsGracefullyWithInvalidEnvPath
+2026-10-20T01:33:20.2836591Z MIOpen: Warning [OpenRuntimeLibraryForDevice] CK grouped conv library not found for device gfx_ck_loader_invalid_env: The specified module could not be found.
+2026-10-20T01:33:20.2836947Z 
+2026-10-20T01:33:20.2837085Z [       OK ] CPU_CkImplLoader_NONE.LoaderFailsGracefullyWithInvalidEnvPath (0 ms)
+2026-10-20T01:33:20.2837415Z [ RUN      ] CPU_CkImplLoader_NONE.LoaderReturnsEmptyOnFailure
+2026-10-20T01:33:20.2837828Z MIOpen: Warning [OpenRuntimeLibraryForDevice] CK grouped conv library not found for device gfx_bogus: The specified module could not be found.
+2026-10-20T01:33:20.2838154Z 
+2026-10-20T01:33:20.2838257Z [       OK ] CPU_CkImplLoader_NONE.LoaderReturnsEmptyOnFailure (0 ms)
+2026-10-20T01:33:20.2838510Z [ RUN      ] CPU_CkImplLoader_NONE.IsDeterministicSplitKValid
+2026-10-20T01:33:20.2838812Z MIOpen: Error [IsDeterministicSplitKValid] Failed to parse split_k from kernel_id: Kernel+abc
+2026-10-20T01:33:20.2839196Z MIOpen: Error [IsDeterministicSplitKValid] Failed to parse split_k from kernel_id: Kernel+
+2026-10-20T01:33:20.2839522Z [       OK ] CPU_CkImplLoader_NONE.IsDeterministicSplitKValid (0 ms)
+2026-10-20T01:33:20.2839757Z [----------] 5 tests from CPU_CkImplLoader_NONE (1 ms total)
+2026-10-20T01:33:20.2839897Z 
+2026-10-20T01:33:20.2839967Z [----------] 27 tests from CPU_CkImplError_NONE
+2026-10-20T01:33:20.2840158Z [ RUN      ] CPU_CkImplError_NONE.LastErrorSetAndGet
+2026-10-20T01:33:20.2840364Z [       OK ] CPU_CkImplError_NONE.LastErrorSetAndGet (0 ms)
+2026-10-20T01:33:20.2840642Z [ RUN      ] CPU_CkImplError_NONE.LastErrorThreadIsolation
+2026-10-20T01:33:20.2840881Z [       OK ] CPU_CkImplError_NONE.LastErrorThreadIsolation (0 ms)
+2026-10-20T01:33:20.2841095Z [ RUN      ] CPU_CkImplError_NONE.TryCatchSuccess
+2026-10-20T01:33:20.2841303Z [       OK ] CPU_CkImplError_NONE.TryCatchSuccess (0 ms)
+2026-10-20T01:33:20.2841514Z [ RUN      ] CPU_CkImplError_NONE.TryCatchCkImplException
+2026-10-20T01:33:20.2841735Z [       OK ] CPU_CkImplError_NONE.TryCatchCkImplException (0 ms)
+2026-10-20T01:33:20.2841974Z [ RUN      ] CPU_CkImplError_NONE.TryCatchStdException
+2026-10-20T01:33:20.2842182Z [       OK ] CPU_CkImplError_NONE.TryCatchStdException (0 ms)
+2026-10-20T01:33:20.2842405Z [ RUN      ] CPU_CkImplError_NONE.TryCatchUnknownException
+2026-10-20T01:33:20.2842641Z [       OK ] CPU_CkImplError_NONE.TryCatchUnknownException (0 ms)
+2026-10-20T01:33:20.2842855Z [ RUN      ] CPU_CkImplError_NONE.StatusToString
+2026-10-20T01:33:20.2843048Z [       OK ] CPU_CkImplError_NONE.StatusToString (0 ms)
+2026-10-20T01:33:20.2843301Z [ RUN      ] CPU_CkImplError_NONE.ExceptionStoresStatusAndMessage
+2026-10-20T01:33:20.2843574Z [       OK ] CPU_CkImplError_NONE.ExceptionStoresStatusAndMessage (0 ms)
+2026-10-20T01:33:20.2843831Z [ RUN      ] CPU_CkImplError_NONE.ExceptionIsStdException
+2026-10-20T01:33:20.2844055Z [       OK ] CPU_CkImplError_NONE.ExceptionIsStdException (0 ms)
+2026-10-20T01:33:20.2844311Z [ RUN      ] CPU_CkImplError_NONE.ExceptionCopyPreservesFields
+2026-10-20T01:33:20.2844561Z [       OK ] CPU_CkImplError_NONE.ExceptionCopyPreservesFields (0 ms)
+2026-10-20T01:33:20.2844790Z [ RUN      ] CPU_CkImplError_NONE.ThrowIfNullThrowsOnNull
+2026-10-20T01:33:20.2845013Z [       OK ] CPU_CkImplError_NONE.ThrowIfNullThrowsOnNull (0 ms)
+2026-10-20T01:33:20.2845260Z [ RUN      ] CPU_CkImplError_NONE.ThrowIfNullPassesOnNonNull
+2026-10-20T01:33:20.2845509Z [       OK ] CPU_CkImplError_NONE.ThrowIfNullPassesOnNonNull (0 ms)
+2026-10-20T01:33:20.2845738Z [ RUN      ] CPU_CkImplError_NONE.ThrowIfFalseThrowsOnFalse
+2026-10-20T01:33:20.2845980Z [       OK ] CPU_CkImplError_NONE.ThrowIfFalseThrowsOnFalse (0 ms)
+2026-10-20T01:33:20.2846212Z [ RUN      ] CPU_CkImplError_NONE.ThrowIfFalsePassesOnTrue
+2026-10-20T01:33:20.2846442Z [       OK ] CPU_CkImplError_NONE.ThrowIfFalsePassesOnTrue (0 ms)
+2026-10-20T01:33:20.2846669Z [ RUN      ] CPU_CkImplError_NONE.ThrowIfTrueThrowsOnTrue
+2026-10-20T01:33:20.2846949Z [       OK ] CPU_CkImplError_NONE.ThrowIfTrueThrowsOnTrue (0 ms)
+2026-10-20T01:33:20.2847217Z [ RUN      ] CPU_CkImplError_NONE.ThrowIfTruePassesOnFalse
+2026-10-20T01:33:20.2847454Z [       OK ] CPU_CkImplError_NONE.ThrowIfTruePassesOnFalse (0 ms)
+2026-10-20T01:33:20.2847691Z [ RUN      ] CPU_CkImplError_NONE.ThrowIfNeThrowsOnNotEqual
+2026-10-20T01:33:20.2847953Z [       OK ] CPU_CkImplError_NONE.ThrowIfNeThrowsOnNotEqual (0 ms)
+2026-10-20T01:33:20.2848190Z [ RUN      ] CPU_CkImplError_NONE.ThrowIfNePassesOnEqual
+2026-10-20T01:33:20.2848410Z [       OK ] CPU_CkImplError_NONE.ThrowIfNePassesOnEqual (0 ms)
+... [middle trimmed by labeler] ...
+2026-10-20T01:33:21.6105342Z [----------] 1 test from Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride1Bwd_FP32
+2026-10-20T01:33:21.6105490Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride1Bwd_FP32.GemmBwd1x1_stride1/0
+2026-10-20T01:33:21.6105650Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride1Bwd_FP32.GemmBwd1x1_stride1/0 (1 ms)
+2026-10-20T01:33:21.6105793Z [----------] 1 test from Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride1Bwd_FP32 (2 ms total)
+2026-10-20T01:33:21.6105796Z 
+2026-10-20T01:33:21.6105955Z [----------] 1 test from Smoke/CPU_UnitTestConvSolverGemmBwd1x1_Stride1DevApplicabilityBwd_NONE
+2026-10-20T01:33:21.6106146Z [ RUN      ] Smoke/CPU_UnitTestConvSolverGemmBwd1x1_Stride1DevApplicabilityBwd_NONE.GemmBwd1x1_stride1/0
+2026-10-20T01:33:21.6106345Z [       OK ] Smoke/CPU_UnitTestConvSolverGemmBwd1x1_Stride1DevApplicabilityBwd_NONE.GemmBwd1x1_stride1/0 (0 ms)
+2026-10-20T01:33:21.6106540Z [----------] 1 test from Smoke/CPU_UnitTestConvSolverGemmBwd1x1_Stride1DevApplicabilityBwd_NONE (0 ms total)
+2026-10-20T01:33:21.6106580Z 
+2026-10-20T01:33:21.6106700Z [----------] 1 test from Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride2Bwd_FP16
+2026-10-20T01:33:21.6106846Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride2Bwd_FP16.GemmBwd1x1_stride2/0
+2026-10-20T01:33:21.6107013Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride2Bwd_FP16.GemmBwd1x1_stride2/0 (1497 ms)
+2026-10-20T01:33:21.6107162Z [----------] 1 test from Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride2Bwd_FP16 (1497 ms total)
+2026-10-20T01:33:21.6107165Z 
+2026-10-20T01:33:21.6107290Z [----------] 1 test from Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride2Bwd_BFP16
+2026-10-20T01:33:21.6107431Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride2Bwd_BFP16.GemmBwd1x1_stride2/0
+2026-10-20T01:33:21.6107601Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride2Bwd_BFP16.GemmBwd1x1_stride2/0 (2089 ms)
+2026-10-20T01:33:21.6107818Z [----------] 1 test from Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride2Bwd_BFP16 (2089 ms total)
+2026-10-20T01:33:21.6107822Z 
+2026-10-20T01:33:21.6107937Z [----------] 1 test from Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride2Bwd_FP32
+2026-10-20T01:33:21.6108080Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride2Bwd_FP32.GemmBwd1x1_stride2/0
+2026-10-20T01:33:21.6108236Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride2Bwd_FP32.GemmBwd1x1_stride2/0 (1016 ms)
+2026-10-20T01:33:21.6108385Z [----------] 1 test from Smoke/GPU_UnitTestConvSolverGemmBwd1x1_Stride2Bwd_FP32 (1016 ms total)
+2026-10-20T01:33:21.6108388Z 
+2026-10-20T01:33:21.6108543Z [----------] 1 test from Smoke/CPU_UnitTestConvSolverGemmBwd1x1_Stride2DevApplicabilityBwd_NONE
+2026-10-20T01:33:21.6108725Z [ RUN      ] Smoke/CPU_UnitTestConvSolverGemmBwd1x1_Stride2DevApplicabilityBwd_NONE.GemmBwd1x1_stride2/0
+2026-10-20T01:33:21.6108921Z [       OK ] Smoke/CPU_UnitTestConvSolverGemmBwd1x1_Stride2DevApplicabilityBwd_NONE.GemmBwd1x1_stride2/0 (0 ms)
+2026-10-20T01:33:21.6109110Z [----------] 1 test from Smoke/CPU_UnitTestConvSolverGemmBwd1x1_Stride2DevApplicabilityBwd_NONE (0 ms total)
+2026-10-20T01:33:21.6109113Z 
+2026-10-20T01:33:21.6109233Z [----------] 113 tests from Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16
+2026-10-20T01:33:21.6109386Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/0
+2026-10-20T01:33:21.6109520Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/0 (1423 ms)
+2026-10-20T01:33:21.6109633Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/1
+2026-10-20T01:33:21.6109759Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/1 (2 ms)
+2026-10-20T01:33:21.6109870Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/2
+2026-10-20T01:33:21.6109991Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/2 (1 ms)
+2026-10-20T01:33:21.6110096Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/3
+2026-10-20T01:33:21.6110226Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/3 (1 ms)
+2026-10-20T01:33:21.6110334Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/4
+2026-10-20T01:33:21.6110455Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/4 (1 ms)
+2026-10-20T01:33:21.6110566Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/5
+2026-10-20T01:33:21.6110684Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/5 (1 ms)
+2026-10-20T01:33:21.6110788Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/6
+2026-10-20T01:33:21.6110907Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/6 (1 ms)
+2026-10-20T01:33:21.6111017Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/7
+2026-10-20T01:33:21.6111136Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/7 (1 ms)
+2026-10-20T01:33:21.6111246Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/8
+2026-10-20T01:33:21.6111403Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/8 (1 ms)
+2026-10-20T01:33:21.6111510Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/9
+2026-10-20T01:33:21.6111635Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/9 (1 ms)
+2026-10-20T01:33:21.6111746Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/10
+2026-10-20T01:33:21.6111875Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/10 (2 ms)
+2026-10-20T01:33:21.6111987Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/11
+2026-10-20T01:33:21.6112108Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/11 (1 ms)
+2026-10-20T01:33:21.6112220Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/12
+2026-10-20T01:33:21.6112339Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/12 (9 ms)
+2026-10-20T01:33:21.6112519Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/13
+2026-10-20T01:33:21.6112640Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/13 (2 ms)
+2026-10-20T01:33:21.6112755Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/14
+2026-10-20T01:33:21.6112877Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/14 (1 ms)
+2026-10-20T01:33:21.6112986Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/15
+2026-10-20T01:33:21.6113112Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/15 (1 ms)
+2026-10-20T01:33:21.6113220Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/16
+2026-10-20T01:33:21.6113342Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/16 (1 ms)
+2026-10-20T01:33:21.6113453Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/17
+2026-10-20T01:33:21.6113575Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/17 (1 ms)
+2026-10-20T01:33:21.6113686Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/18
+2026-10-20T01:33:21.6113808Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/18 (1 ms)
+2026-10-20T01:33:21.6114180Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/19
+2026-10-20T01:33:21.6114315Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/19 (970 ms)
+2026-10-20T01:33:21.6114422Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/20
+2026-10-20T01:33:21.6114545Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/20 (2 ms)
+2026-10-20T01:33:21.6114651Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/21
+2026-10-20T01:33:21.6114776Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/21 (1 ms)
+2026-10-20T01:33:21.6114884Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/22
+2026-10-20T01:33:21.6115010Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/22 (1 ms)
+2026-10-20T01:33:21.6115122Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/23
+2026-10-20T01:33:21.6115242Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/23 (1 ms)
+2026-10-20T01:33:21.6115353Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/24
+2026-10-20T01:33:21.6115472Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/24 (1 ms)
+2026-10-20T01:33:21.6115584Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/25
+2026-10-20T01:33:21.6115706Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/25 (2 ms)
+2026-10-20T01:33:21.6115813Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/26
+2026-10-20T01:33:21.6115940Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/26 (2 ms)
+2026-10-20T01:33:21.6116089Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/27
+2026-10-20T01:33:21.6116210Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/27 (1 ms)
+2026-10-20T01:33:21.6116320Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/28
+2026-10-20T01:33:21.6116441Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/28 (7 ms)
+2026-10-20T01:33:21.6116554Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/29
+2026-10-20T01:33:21.6116671Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/29 (1 ms)
+2026-10-20T01:33:21.6116782Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/30
+2026-10-20T01:33:21.6116903Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/30 (1 ms)
+2026-10-20T01:33:21.6117016Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/31
+2026-10-20T01:33:21.6117199Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/31 (1 ms)
+2026-10-20T01:33:21.6117309Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/32
+2026-10-20T01:33:21.6117434Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/32 (2 ms)
+2026-10-20T01:33:21.6117545Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/33
+2026-10-20T01:33:21.6117668Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/33 (4 ms)
+2026-10-20T01:33:21.6117781Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/34
+2026-10-20T01:33:21.6117901Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/34 (1 ms)
+2026-10-20T01:33:21.6118008Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/35
+2026-10-20T01:33:21.6118127Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/35 (1 ms)
+2026-10-20T01:33:21.6118237Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/36
+2026-10-20T01:33:21.6118364Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/36 (1 ms)
+2026-10-20T01:33:21.6118472Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/37
+2026-10-20T01:33:21.6118642Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/37 (1129 ms)
+2026-10-20T01:33:21.6118751Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/38
+2026-10-20T01:33:21.6118877Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/38 (2 ms)
+2026-10-20T01:33:21.6118983Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/39
+2026-10-20T01:33:21.6119107Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/39 (1 ms)
+2026-10-20T01:33:21.6119218Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/40
+2026-10-20T01:33:21.6119339Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/40 (1 ms)
+2026-10-20T01:33:21.6119457Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/41
+2026-10-20T01:33:21.6119577Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/41 (2 ms)
+2026-10-20T01:33:21.6119695Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/42
+2026-10-20T01:33:21.6119815Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/42 (1 ms)
+2026-10-20T01:33:21.6119922Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/43
+2026-10-20T01:33:21.6120052Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/43 (440 ms)
+2026-10-20T01:33:21.6120159Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/44
+2026-10-20T01:33:21.6120280Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/44 (2 ms)
+2026-10-20T01:33:21.6120389Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/45
+2026-10-20T01:33:21.6120512Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/45 (1 ms)
+2026-10-20T01:33:21.6120659Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/46
+2026-10-20T01:33:21.6120778Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/46 (2 ms)
+2026-10-20T01:33:21.6120889Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/47
+2026-10-20T01:33:21.6121008Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/47 (2 ms)
+2026-10-20T01:33:21.6121119Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/48
+2026-10-20T01:33:21.6121249Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/48 (949 ms)
+2026-10-20T01:33:21.6121356Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/49
+2026-10-20T01:33:21.6121482Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/49 (952 ms)
+2026-10-20T01:33:21.6121649Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/50
+2026-10-20T01:33:21.6121776Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/50 (2 ms)
+2026-10-20T01:33:21.6121885Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/51
+2026-10-20T01:33:21.6122007Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/51 (2 ms)
+2026-10-20T01:33:21.6122118Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/52
+2026-10-20T01:33:21.6122238Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/52 (1 ms)
+2026-10-20T01:33:21.6122349Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/53
+2026-10-20T01:33:21.6122471Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/53 (1 ms)
+2026-10-20T01:33:21.6122581Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/54
+2026-10-20T01:33:21.6122704Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/54 (1 ms)
+2026-10-20T01:33:21.6122812Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/55
+2026-10-20T01:33:21.6122940Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/55 (952 ms)
+2026-10-20T01:33:21.6123079Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/56
+2026-10-20T01:33:21.6123205Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/56 (3 ms)
+2026-10-20T01:33:21.6123313Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/57
+2026-10-20T01:33:21.6123432Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/57 (2 ms)
+2026-10-20T01:33:21.6123544Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/58
+2026-10-20T01:33:21.6123664Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/58 (3 ms)
+2026-10-20T01:33:21.6123774Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/59
+2026-10-20T01:33:21.6123896Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/59 (2 ms)
+2026-10-20T01:33:21.6124005Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/60
+2026-10-20T01:33:21.6124132Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/60 (1 ms)
+2026-10-20T01:33:21.6124243Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/61
+2026-10-20T01:33:21.6124365Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/61 (1 ms)
+2026-10-20T01:33:21.6124472Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/62
+2026-10-20T01:33:21.6124594Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/62 (1 ms)
+2026-10-20T01:33:21.6124707Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/63
+2026-10-20T01:33:21.6124827Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/63 (1 ms)
+2026-10-20T01:33:21.6124996Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/64
+2026-10-20T01:33:21.6125165Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/64 (2021 ms)
+2026-10-20T01:33:21.6125284Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/65
+2026-10-20T01:33:21.6125412Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/65 (2 ms)
+2026-10-20T01:33:21.6125522Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/66
+2026-10-20T01:33:21.6125646Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/66 (2 ms)
+2026-10-20T01:33:21.6125751Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/67
+2026-10-20T01:33:21.6125874Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/67 (2 ms)
+2026-10-20T01:33:21.6125985Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/68
+2026-10-20T01:33:21.6126105Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/68 (2 ms)
+2026-10-20T01:33:21.6126279Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/69
+2026-10-20T01:33:21.6126398Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/69 (1 ms)
+2026-10-20T01:33:21.6126510Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/70
+2026-10-20T01:33:21.6126639Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/70 (965 ms)
+2026-10-20T01:33:21.6126752Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/71
+2026-10-20T01:33:21.6126872Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/71 (2 ms)
+2026-10-20T01:33:21.6126979Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/72
+2026-10-20T01:33:21.6127101Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/72 (1 ms)
+2026-10-20T01:33:21.6127210Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/73
+2026-10-20T01:33:21.6127337Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/73 (2 ms)
+2026-10-20T01:33:21.6127446Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/74
+2026-10-20T01:33:21.6127568Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/74 (2 ms)
+2026-10-20T01:33:21.6127725Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/75
+2026-10-20T01:33:21.6127852Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/75 (945 ms)
+2026-10-20T01:33:21.6127967Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/76
+2026-10-20T01:33:21.6128098Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/76 (1480 ms)
+2026-10-20T01:33:21.6128208Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/77
+2026-10-20T01:33:21.6128336Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/77 (964 ms)
+2026-10-20T01:33:21.6128448Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/78
+2026-10-20T01:33:21.6128575Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/78 (3 ms)
+2026-10-20T01:33:21.6128679Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/79
+2026-10-20T01:33:21.6128805Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/79 (1 ms)
+2026-10-20T01:33:21.6128914Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/80
+2026-10-20T01:33:21.6129033Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/80 (1 ms)
+2026-10-20T01:33:21.6129145Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/81
+2026-10-20T01:33:21.6129264Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/81 (1 ms)
+2026-10-20T01:33:21.6129376Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/82
+2026-10-20T01:33:21.6129500Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/82 (1 ms)
+2026-10-20T01:33:21.6129802Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/83
+2026-10-20T01:33:21.6129925Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/83 (1 ms)
+2026-10-20T01:33:21.6130032Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/84
+2026-10-20T01:33:21.6130156Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/84 (1 ms)
+2026-10-20T01:33:21.6130265Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/85
+2026-10-20T01:33:21.6130391Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/85 (1 ms)
+2026-10-20T01:33:21.6130504Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/86
+2026-10-20T01:33:21.6130624Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/86 (1 ms)
+2026-10-20T01:33:21.6130734Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/87
+2026-10-20T01:33:21.6130927Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/87 (1 ms)
+2026-10-20T01:33:21.6131038Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/88
+2026-10-20T01:33:21.6131162Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/88 (1 ms)
+2026-10-20T01:33:21.6131270Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/89
+2026-10-20T01:33:21.6131396Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/89 (962 ms)
+2026-10-20T01:33:21.6131504Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/90
+2026-10-20T01:33:21.6131629Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/90 (3 ms)
+2026-10-20T01:33:21.6131737Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/91
+2026-10-20T01:33:21.6131855Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/91 (2 ms)
+2026-10-20T01:33:21.6131964Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/92
+2026-10-20T01:33:21.6132084Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/92 (2 ms)
+2026-10-20T01:33:21.6132198Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/93
+2026-10-20T01:33:21.6132364Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/93 (2 ms)
+2026-10-20T01:33:21.6132477Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/94
+2026-10-20T01:33:21.6132608Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/94 (2 ms)
+2026-10-20T01:33:21.6132716Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/95
+2026-10-20T01:33:21.6132838Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/95 (2 ms)
+2026-10-20T01:33:21.6132943Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/96
+2026-10-20T01:33:21.6133065Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/96 (2 ms)
+2026-10-20T01:33:21.6133178Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/97
+2026-10-20T01:33:21.6133297Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/97 (1 ms)
+2026-10-20T01:33:21.6133410Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/98
+2026-10-20T01:33:21.6133527Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/98 (1 ms)
+2026-10-20T01:33:21.6133639Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/99
+2026-10-20T01:33:21.6133764Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/99 (954 ms)
+2026-10-20T01:33:21.6133881Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/100
+2026-10-20T01:33:21.6134014Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/100 (2 ms)
+2026-10-20T01:33:21.6134127Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/101
+2026-10-20T01:33:21.6134257Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/101 (2 ms)
+2026-10-20T01:33:21.6134408Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/102
+2026-10-20T01:33:21.6134540Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/102 (963 ms)
+2026-10-20T01:33:21.6134656Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/103
+2026-10-20T01:33:21.6134788Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/103 (2004 ms)
+2026-10-20T01:33:21.6134899Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/104
+2026-10-20T01:33:21.6135023Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/104 (2 ms)
+2026-10-20T01:33:21.6135136Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/105
+2026-10-20T01:33:21.6135260Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/105 (2 ms)
+2026-10-20T01:33:21.6135436Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/106
+2026-10-20T01:33:21.6135568Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/106 (3 ms)
+2026-10-20T01:33:21.6135678Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/107
+2026-10-20T01:33:21.6135804Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/107 (2 ms)
+2026-10-20T01:33:21.6135922Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/108
+2026-10-20T01:33:21.6136043Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/108 (5 ms)
+2026-10-20T01:33:21.6136155Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/109
+2026-10-20T01:33:21.6136274Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/109 (2 ms)
+2026-10-20T01:33:21.6136389Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/110
+2026-10-20T01:33:21.6136515Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/110 (938 ms)
+2026-10-20T01:33:21.6136634Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/111
+2026-10-20T01:33:21.6136754Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/111 (2 ms)
+2026-10-20T01:33:21.6136900Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/112
+2026-10-20T01:33:21.6137029Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16.GemmBwdRest/112 (2 ms)
+2026-10-20T01:33:21.6137177Z [----------] 113 tests from Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_FP16 (19239 ms total)
+2026-10-20T01:33:21.6137181Z 
+2026-10-20T01:33:21.6137295Z [----------] 108 tests from Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16
+2026-10-20T01:33:21.6137409Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/0
+2026-10-20T01:33:21.6137536Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/0 (962 ms)
+2026-10-20T01:33:21.6137652Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/1
+2026-10-20T01:33:21.6137775Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/1 (1 ms)
+2026-10-20T01:33:21.6137887Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/2
+2026-10-20T01:33:21.6138017Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/2 (1 ms)
+2026-10-20T01:33:21.6138125Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/3
+2026-10-20T01:33:21.6138247Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/3 (1 ms)
+2026-10-20T01:33:21.6138353Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/4
+2026-10-20T01:33:21.6138477Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/4 (1 ms)
+2026-10-20T01:33:21.6138586Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/5
+2026-10-20T01:33:21.6138708Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/5 (1 ms)
+2026-10-20T01:33:21.6138857Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/6
+2026-10-20T01:33:21.6138977Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/6 (1 ms)
+2026-10-20T01:33:21.6139089Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/7
+2026-10-20T01:33:21.6139207Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/7 (1 ms)
+2026-10-20T01:33:21.6139320Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/8
+2026-10-20T01:33:21.6139442Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/8 (1 ms)
+2026-10-20T01:33:21.6139548Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/9
+2026-10-20T01:33:21.6139672Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/9 (2 ms)
+2026-10-20T01:33:21.6139784Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/10
+2026-10-20T01:33:21.6139969Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/10 (2 ms)
+2026-10-20T01:33:21.6140085Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/11
+2026-10-20T01:33:21.6140207Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/11 (1 ms)
+2026-10-20T01:33:21.6140319Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/12
+2026-10-20T01:33:21.6140440Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/12 (9 ms)
+2026-10-20T01:33:21.6142301Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/13
+2026-10-20T01:33:21.6142486Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/13 (1 ms)
+2026-10-20T01:33:21.6142605Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/14
+2026-10-20T01:33:21.6142734Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/14 (1 ms)
+2026-10-20T01:33:21.6142848Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/15
+2026-10-20T01:33:21.6142971Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/15 (1 ms)
+2026-10-20T01:33:21.6143083Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/16
+2026-10-20T01:33:21.6143254Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/16 (1 ms)
+2026-10-20T01:33:21.6143366Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/17
+2026-10-20T01:33:21.6143487Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/17 (1 ms)
+2026-10-20T01:33:21.6143597Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/18
+2026-10-20T01:33:21.6143717Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/18 (1 ms)
+2026-10-20T01:33:21.6143827Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/19
+2026-10-20T01:33:21.6143959Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/19 (1470 ms)
+2026-10-20T01:33:21.6144073Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/20
+2026-10-20T01:33:21.6144196Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/20 (2 ms)
+2026-10-20T01:33:21.6144306Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/21
+2026-10-20T01:33:21.6144428Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/21 (1 ms)
+2026-10-20T01:33:21.6144535Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/22
+2026-10-20T01:33:21.6144658Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/22 (1 ms)
+2026-10-20T01:33:21.6144768Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/23
+2026-10-20T01:33:21.6144888Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/23 (1 ms)
+2026-10-20T01:33:21.6145089Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/24
+2026-10-20T01:33:21.6145247Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/24 (1 ms)
+2026-10-20T01:33:21.6145358Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/25
+2026-10-20T01:33:21.6145481Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/25 (1 ms)
+2026-10-20T01:33:21.6145590Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/26
+2026-10-20T01:33:21.6145712Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/26 (2 ms)
+2026-10-20T01:33:21.6145823Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/27
+2026-10-20T01:33:21.6145946Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/27 (1 ms)
+2026-10-20T01:33:21.6146054Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/28
+2026-10-20T01:33:21.6146177Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/28 (8 ms)
+2026-10-20T01:33:21.6146347Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/29
+2026-10-20T01:33:21.6146470Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/29 (1 ms)
+2026-10-20T01:33:21.6146581Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/30
+2026-10-20T01:33:21.6146704Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/30 (1 ms)
+2026-10-20T01:33:21.6146814Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/31
+2026-10-20T01:33:21.6146936Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/31 (1 ms)
+2026-10-20T01:33:21.6147046Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/32
+2026-10-20T01:33:21.6147167Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/32 (3 ms)
+2026-10-20T01:33:21.6147276Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/33
+2026-10-20T01:33:21.6147400Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/33 (4 ms)
+2026-10-20T01:33:21.6147510Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/34
+2026-10-20T01:33:21.6147631Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/34 (1 ms)
+2026-10-20T01:33:21.6147773Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/35
+2026-10-20T01:33:21.6147895Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/35 (1 ms)
+2026-10-20T01:33:21.6148005Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/36
+2026-10-20T01:33:21.6148125Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/36 (1 ms)
+2026-10-20T01:33:21.6148235Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/37
+2026-10-20T01:33:21.6148367Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/37 (993 ms)
+2026-10-20T01:33:21.6148476Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/38
+2026-10-20T01:33:21.6148603Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/38 (2 ms)
+2026-10-20T01:33:21.6148710Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/39
+2026-10-20T01:33:21.6148835Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/39 (1 ms)
+2026-10-20T01:33:21.6148946Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/40
+2026-10-20T01:33:21.6149065Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/40 (2 ms)
+2026-10-20T01:33:21.6149174Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/41
+2026-10-20T01:33:21.6149294Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/41 (2 ms)
+2026-10-20T01:33:21.6149402Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/42
+2026-10-20T01:33:21.6149523Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/42 (1 ms)
+2026-10-20T01:33:21.6149671Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/43
+2026-10-20T01:33:21.6149801Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/43 (1464 ms)
+2026-10-20T01:33:21.6149910Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/44
+2026-10-20T01:33:21.6150032Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/44 (1 ms)
+2026-10-20T01:33:21.6150141Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/45
+2026-10-20T01:33:21.6150264Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/45 (1 ms)
+2026-10-20T01:33:21.6150374Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/46
+2026-10-20T01:33:21.6150495Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/46 (1 ms)
+2026-10-20T01:33:21.6150607Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/47
+2026-10-20T01:33:21.6150789Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/47 (2 ms)
+2026-10-20T01:33:21.6150901Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/48
+2026-10-20T01:33:21.6151029Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/48 (955 ms)
+2026-10-20T01:33:21.6151140Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/49
+2026-10-20T01:33:21.6151268Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/49 (599 ms)
+2026-10-20T01:33:21.6151377Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/50
+2026-10-20T01:33:21.6151500Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/50 (2 ms)
+2026-10-20T01:33:21.6151608Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/51
+2026-10-20T01:33:21.6151730Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/51 (2 ms)
+2026-10-20T01:33:21.6151841Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/52
+2026-10-20T01:33:21.6151963Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/52 (1 ms)
+2026-10-20T01:33:21.6152072Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/53
+2026-10-20T01:33:21.6152229Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/53 (1 ms)
+2026-10-20T01:33:21.6152339Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/54
+2026-10-20T01:33:21.6152462Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/54 (1 ms)
+2026-10-20T01:33:21.6152570Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/55
+2026-10-20T01:33:21.6152701Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/55 (1441 ms)
+2026-10-20T01:33:21.6152808Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/56
+2026-10-20T01:33:21.6152929Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/56 (3 ms)
+2026-10-20T01:33:21.6153041Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/57
+2026-10-20T01:33:21.6153162Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/57 (2 ms)
+2026-10-20T01:33:21.6153273Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/58
+2026-10-20T01:33:21.6153393Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/58 (3 ms)
+2026-10-20T01:33:21.6153502Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/59
+2026-10-20T01:33:21.6153622Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/59 (1 ms)
+2026-10-20T01:33:21.6153732Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/60
+2026-10-20T01:33:21.6153853Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/60 (1 ms)
+2026-10-20T01:33:21.6153961Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/61
+2026-10-20T01:33:21.6154119Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/61 (1 ms)
+2026-10-20T01:33:21.6154228Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/62
+2026-10-20T01:33:21.6154352Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/62 (1 ms)
+2026-10-20T01:33:21.6154461Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/63
+2026-10-20T01:33:21.6154581Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/63 (1 ms)
+2026-10-20T01:33:21.6154690Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/64
+2026-10-20T01:33:21.6154815Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/64 (981 ms)
+2026-10-20T01:33:21.6154924Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/65
+2026-10-20T01:33:21.6155045Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/65 (1 ms)
+2026-10-20T01:33:21.6155348Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/66
+2026-10-20T01:33:21.6155473Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/66 (1 ms)
+2026-10-20T01:33:21.6155581Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/67
+2026-10-20T01:33:21.6155706Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/67 (1 ms)
+2026-10-20T01:33:21.6155813Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/68
+2026-10-20T01:33:21.6155935Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/68 (2 ms)
+2026-10-20T01:33:21.6156045Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/69
+2026-10-20T01:33:21.6156165Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/69 (1 ms)
+2026-10-20T01:33:21.6156274Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/70
+2026-10-20T01:33:21.6156402Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/70 (967 ms)
+2026-10-20T01:33:21.6156512Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/71
+2026-10-20T01:33:21.6156635Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/71 (2 ms)
+2026-10-20T01:33:21.6156788Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/72
+2026-10-20T01:33:21.6156910Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/72 (1 ms)
+2026-10-20T01:33:21.6157019Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/73
+2026-10-20T01:33:21.6157141Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/73 (1 ms)
+2026-10-20T01:33:21.6157251Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/74
+2026-10-20T01:33:21.6157371Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/74 (2 ms)
+2026-10-20T01:33:21.6157481Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/75
+2026-10-20T01:33:21.6157612Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/75 (1476 ms)
+2026-10-20T01:33:21.6157722Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/76
+2026-10-20T01:33:21.6157847Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/76 (955 ms)
+2026-10-20T01:33:21.6157956Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/77
+2026-10-20T01:33:21.6158084Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/77 (1480 ms)
+2026-10-20T01:33:21.6158191Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/78
+2026-10-20T01:33:21.6158314Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/78 (3 ms)
+2026-10-20T01:33:21.6158420Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/79
+2026-10-20T01:33:21.6158542Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/79 (1 ms)
+2026-10-20T01:33:21.6158709Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/80
+2026-10-20T01:33:21.6158830Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/80 (1 ms)
+2026-10-20T01:33:21.6158940Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/81
+2026-10-20T01:33:21.6159060Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/81 (1 ms)
+2026-10-20T01:33:21.6159169Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/82
+2026-10-20T01:33:21.6159290Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/82 (2 ms)
+2026-10-20T01:33:21.6159398Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/83
+2026-10-20T01:33:21.6159519Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/83 (1 ms)
+2026-10-20T01:33:21.6159629Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/84
+2026-10-20T01:33:21.6159826Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/84 (1 ms)
+2026-10-20T01:33:21.6159935Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/85
+2026-10-20T01:33:21.6160057Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/85 (1 ms)
+2026-10-20T01:33:21.6160167Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/86
+2026-10-20T01:33:21.6160287Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/86 (1 ms)
+2026-10-20T01:33:21.6160396Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/87
+2026-10-20T01:33:21.6160516Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/87 (1 ms)
+2026-10-20T01:33:21.6160628Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/88
+2026-10-20T01:33:21.6160752Z [       OK ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/88 (1 ms)
+2026-10-20T01:33:21.6160860Z [ RUN      ] Smoke/GPU_UnitTestConvSolverGemmBwdRestBwd_BFP16.GemmBwdRest/89
+2026-10-20T01:33:21.6160867Z 
+2026-10-20T01:33:21.6160870Z 
+2026-10-20T01:33:21.6160944Z 0% tests passed, 1 tests failed out of 1
+2026-10-20T01:33:21.6160947Z 
+2026-10-20T01:33:21.6160995Z Label Time Summary:
+2026-10-20T01:33:21.6161106Z ex_gpu_gfx110X    = 600.36 sec*proc (1 test)
+2026-10-20T01:33:21.6161172Z pre-commit        = 600.36 sec*proc (1 test)
+2026-10-20T01:33:21.6161229Z quick             = 600.36 sec*proc (1 test)
+2026-10-20T01:33:21.6161283Z smoke             = 600.36 sec*proc (1 test)
+2026-10-20T01:33:21.6161287Z 
+2026-10-20T01:33:21.6161344Z Total Test time (real) = 600.55 sec
+2026-10-20T01:33:21.6161347Z 
+2026-10-20T01:33:21.6161404Z The following tests FAILED:
+2026-10-20T01:33:21.6161562Z 	  6 - miopen_gtest_quick_gfx110X_suite (Timeout)        ex_gpu_gfx110X pre-commit quick smoke
+2026-10-20T01:33:21.6161662Z # TEST_COMPONENT: miopen -> Test Directory: build\bin\MIOpen
+2026-10-20T01:33:21.6161725Z # TEST_TYPE: quick -> Category: quick
+2026-10-20T01:33:21.6161819Z # AMDGPU_FAMILIES: gfx110X-all -> GPU Architecture: gfx110X
+2026-10-20T01:33:21.6161823Z 
+2026-10-20T01:33:21.6161883Z # Discovering available test labels...
+2026-10-20T01:33:21.6161937Z # Found 4 GPU suite test(s)
+2026-10-20T01:33:21.6162056Z # Available GPU architectures: ['gfx110X', 'gfx115X', 'gfx120X', 'gfx950']
+2026-10-20T01:33:21.6162060Z 
+2026-10-20T01:33:21.6162118Z # Using GPU suite label: ex_gpu_gfx110X
+2026-10-20T01:33:21.6162528Z # Running: ctest -L ^quick$ -L ^ex_gpu_gfx110X$ --output-on-failure --parallel 1 --timeout 7200 --test-dir build\bin\MIOpen -V --tests-information 1,,1
+2026-10-20T01:33:21.6162531Z 
+2026-10-20T01:33:21.6175552Z ##[error]Process completed with exit code 8.
+2026-10-20T01:33:21.6312229Z ##[group]Run python ./build_tools/github_actions/reproduce_test_failure.py \
+2026-10-20T01:33:21.6312464Z [36;1mpython ./build_tools/github_actions/reproduce_test_failure.py \[0m
+2026-10-20T01:33:21.6312547Z [36;1m  --run-id "${ARTIFACT_RUN_ID}" \[0m
+2026-10-20T01:33:21.6312711Z [36;1m  --repository "ROCm/TheRock" \[0m
+2026-10-20T01:33:21.6312795Z [36;1m  --amdgpu-family "${AMDGPU_FAMILIES}" \[0m
+2026-10-20T01:33:21.6312881Z [36;1m  --amdgpu-targets "${AMDGPU_TARGETS}" \[0m
+2026-10-20T01:33:21.6312964Z [36;1m  --test-script "${COMPONENT_TEST_SCRIPT}" \[0m
+2026-10-20T01:33:21.6313036Z [36;1m  --shard-index "${MATRIX_SHARD}" \[0m
+2026-10-20T01:33:21.6313126Z [36;1m  --total-shards "${COMPONENT_TOTAL_SHARDS}" \[0m
+2026-10-20T01:33:21.6313200Z [36;1m  --test-type "${COMPONENT_TEST_TYPE}" \[0m
+2026-10-20T01:33:21.6313260Z [36;1m  --print-cmd \[0m
+2026-10-20T01:33:21.6313378Z [36;1m  --fetch-artifact-args="${COMPONENT_FETCH_ARTIFACT_ARGS}" \[0m
+2026-10-20T01:33:21.6313521Z [36;1m  --additional-requirements-files="${REQUIREMENTS_FILES}"[0m
+2026-10-20T01:33:21.6336182Z shell: C:\Program Files\Git\usr\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-20T01:33:21.6336300Z env:
+2026-10-20T01:33:21.6336395Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T01:33:21.6336475Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T01:33:21.6336571Z   VENV_DIR: B:\actions-runner\_work\TheRock\TheRock/.venv
+2026-10-20T01:33:21.6336630Z   ARTIFACT_RUN_ID: 39339496964
+2026-10-20T01:33:21.6336694Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T01:33:21.6336756Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T01:33:21.6336814Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-20T01:33:21.6336893Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-20T01:33:21.6336951Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-20T01:33:21.6337007Z   BUILD_VARIANT: release
+2026-10-20T01:33:21.6337121Z   pythonLocation: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T01:33:21.6337268Z   PKG_CONFIG_PATH: B:\actions-runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-20T01:33:21.6337377Z   Python_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T01:33:21.6337486Z   Python2_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T01:33:21.6337595Z   Python3_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T01:33:21.6337688Z   VIRTUAL_ENV: B:\actions-runner\_work\TheRock\TheRock\.venv
+2026-10-20T01:33:21.6337742Z   MATRIX_SHARD: 1
+2026-10-20T01:33:21.6337924Z   COMPONENT_TEST_SCRIPT: python build_tools/github_actions/test_executable_scripts/test_runner.py
+2026-10-20T01:33:21.6337980Z   COMPONENT_TOTAL_SHARDS: 1
+2026-10-20T01:33:21.6338041Z   COMPONENT_TEST_TYPE: quick
+2026-10-20T01:33:21.6338089Z   REQUIREMENTS_FILES: 
+2026-10-20T01:33:21.6338202Z   COMPONENT_FETCH_ARTIFACT_ARGS: --blas --miopen --rand --tests
+2026-10-20T01:33:21.6338251Z ##[endgroup]
+2026-10-20T01:33:21.8995864Z To reproduce this failure, run:
+2026-10-20T01:33:21.8996177Z   git clone https://github.com/ROCm/TheRock.git && cd TheRock
+2026-10-20T01:33:21.8997162Z   python build_tools/github_actions/reproduce_test_failure.py --run-id 39339496964 --repository ROCm/TheRock --amdgpu-family gfx110X-all --test-script "python build_tools/github_actions/test_executable_scripts/test_runner.py" --amdgpu-targets gfx1100,gfx1101,gfx1102,gfx1103 --output-dir "./build" --test-type quick --fetch-artifact-args="--blas --miopen --rand --tests"
+2026-10-20T01:33:21.9201268Z ##[group]Run . 'B:\actions-runner\_work\TheRock\TheRock\build_tools\github_actions\cleanup_processes.ps1'
+2026-10-20T01:33:21.9201771Z [36;1m. 'B:\actions-runner\_work\TheRock\TheRock\build_tools\github_actions\cleanup_processes.ps1'[0m
+2026-10-20T01:33:21.9218981Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+2026-10-20T01:33:21.9219250Z env:
+2026-10-20T01:33:21.9219402Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T01:33:21.9219625Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T01:33:21.9219864Z   VENV_DIR: B:\actions-runner\_work\TheRock\TheRock/.venv
+2026-10-20T01:33:21.9220080Z   ARTIFACT_RUN_ID: 39339496964
+2026-10-20T01:33:21.9220248Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T01:33:21.9220498Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T01:33:21.9220649Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-20T01:33:21.9220914Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-20T01:33:21.9221130Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-20T01:33:21.9221285Z   BUILD_VARIANT: release
+2026-10-20T01:33:21.9221487Z   pythonLocation: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T01:33:21.9221781Z   PKG_CONFIG_PATH: B:\actions-runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-20T01:33:21.9222076Z   Python_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T01:33:21.9222342Z   Python2_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T01:33:21.9222609Z   Python3_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T01:33:21.9222855Z   VIRTUAL_ENV: B:\actions-runner\_work\TheRock\TheRock\.venv
+2026-10-20T01:33:21.9223053Z ##[endgroup]
+2026-10-20T01:33:22.0789439Z [*] ==== Starting cleanup_processes.ps1 ====
+2026-10-20T01:33:22.0882189Z [*] Checking if elevated: True | current user: NT AUTHORITY\SYSTEM
+2026-10-20T01:33:22.0902976Z [*] Running as a Windows Service (NT AUTHORITY\*) - Cleaning up system environment...
+2026-10-20T01:33:22.1133967Z [*] > Checking for "~/.gitconfig" file at: C:\Windows\system32\config\systemprofile\.gitconfig
+2026-10-20T01:33:22.1152525Z [*] >> .gitconfig file found, removing after logging contents:
+2026-10-20T01:33:22.1402390Z safe.directory=B:/actions-runner/_work/TheRock/TheRock
+2026-10-20T01:33:22.1454856Z [+] >> Successfully removed .gitconfig
+2026-10-20T01:33:22.1465198Z [*] > Checking for uv.zip archives under: C:\Windows\SystemTemp\
+2026-10-20T01:33:22.1733477Z [*] >> Found 0 uv.zip file(s), total size: 0 MB
+2026-10-20T01:33:22.1738483Z [*] > Checking for empty GUID directories under: C:\Windows\SystemTemp\
+2026-10-20T01:33:22.1863866Z [*] >> Found 0 empty GUID folder(s)
+2026-10-20T01:33:22.1881795Z [*] > Checking pip http-v2 cache under: C:\Windows\system32\config\systemprofile\AppData\Local\pip\cache\http-v2
+2026-10-20T01:33:22.2069454Z [*] >> Found 0 file(s) older than 1 day, total size: 0 MB
+2026-10-20T01:33:22.2087137Z [*] Clearing stale git submodule working trees in workspace: B:\actions-runner\_work\TheRock\TheRock
+2026-10-20T01:33:22.2420406Z       removing base/half
+2026-10-20T01:33:22.2437032Z       removing compiler/hipify
+2026-10-20T01:33:22.2446017Z       removing compiler/amd-llvm
+2026-10-20T01:33:22.2455400Z       removing base/rocm-cmake
+2026-10-20T01:33:22.2464056Z       removing rocm-libraries
+2026-10-20T01:33:22.2472538Z       removing rocm-systems
+2026-10-20T01:33:22.2481630Z       removing compiler/spirv-llvm-translator
+2026-10-20T01:33:22.2490655Z       removing third-party/sysdeps/common/mesa-fork
+2026-10-20T01:33:22.2499837Z       removing math-libs/libhipcxx
+2026-10-20T01:33:22.2508903Z       removing debug-tools/rocgdb/source
+2026-10-20T01:33:22.2517845Z       removing rocm-docs
+2026-10-20T01:33:22.2523881Z [*] >> Submodule working-tree cleanup finished
+2026-10-20T01:33:22.2525153Z [*] Cleaning up processes...
+2026-10-20T01:33:22.2530866Z [*] GITHUB_WORKSPACE env var defined: B:\actions-runner\_work\TheRock\TheRock
+2026-10-20T01:33:22.2544164Z [*] Checking for running build executables filtered by .exe regex: B:\\actions-runner\\_work\\TheRock\\TheRock\\build\\.*[.]exe
+2026-10-20T01:33:22.2713083Z [+] No executables to clean up.
+2026-10-20T01:33:22.2938398Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-20T01:33:22.2938741Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-20T01:33:22.2958761Z shell: C:\Program Files\Git\usr\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-20T01:33:22.2959024Z env:
+2026-10-20T01:33:22.2959173Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T01:33:22.2959404Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T01:33:22.2959726Z   VENV_DIR: B:\actions-runner\_work\TheRock\TheRock/.venv
+2026-10-20T01:33:22.2959935Z   ARTIFACT_RUN_ID: 39339496964
+2026-10-20T01:33:22.2960193Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T01:33:22.2960347Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T01:33:22.2960495Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-20T01:33:22.2960671Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-20T01:33:22.2960862Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-20T01:33:22.2961041Z   BUILD_VARIANT: release
+2026-10-20T01:33:22.2961249Z   pythonLocation: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T01:33:22.2961556Z   PKG_CONFIG_PATH: B:\actions-runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-20T01:33:22.2961866Z   Python_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T01:33:22.2962143Z   Python2_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T01:33:22.2962405Z   Python3_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T01:33:22.2962659Z   VIRTUAL_ENV: B:\actions-runner\_work\TheRock\TheRock\.venv
+2026-10-20T01:33:22.2962941Z ##[endgroup]
+2026-10-20T01:33:22.4304239Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-20T01:33:22.4595932Z Post job cleanup.
+2026-10-20T01:33:22.4607674Z ##[start-action display=Setting up Python;id=__8d49fe65-126d-461a-89f6-a4762dbde6c2.__actions_setup-python]
+2026-10-20T01:33:22.4609764Z ##[end-action id=__8d49fe65-126d-461a-89f6-a4762dbde6c2.__actions_setup-python;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-20T01:33:22.4755044Z Post job cleanup.
+2026-10-20T01:33:23.3989671Z [command]"C:\Program Files\Git\cmd\git.exe" version
+2026-10-20T01:33:23.4187406Z git version 2.55.0.windows.3
+2026-10-20T01:33:23.4227508Z Temporarily overriding HOME='B:\actions-runner\_work\_temp\ceca5e7e-c3f3-411a-8ab0-0397f4b74b23' before making global git config changes
+2026-10-20T01:33:23.4228028Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T01:33:23.4233447Z [command]"C:\Program Files\Git\cmd\git.exe" config --global --add safe.directory B:\actions-runner\_work\TheRock\TheRock
+2026-10-20T01:33:23.4461196Z Removing SSH command configuration
+2026-10-20T01:33:23.4470591Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T01:33:23.4686290Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-20T01:33:23.8773108Z Removing HTTP extra header
+2026-10-20T01:33:23.8779147Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T01:33:23.9010656Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-20T01:33:24.3201873Z Removing includeIf entries pointing to credentials config files
+2026-10-20T01:33:24.3209243Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T01:33:24.3437407Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-20T01:33:24.7685247Z Post job cleanup.
+2026-10-20T01:33:24.8566910Z Evaluate and set job outputs
+2026-10-20T01:33:24.8570618Z Cleaning up orphan processes

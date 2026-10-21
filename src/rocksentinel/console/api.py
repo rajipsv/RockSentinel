@@ -96,7 +96,8 @@ def evidence(case_id: str, paths: Paths) -> dict:
              _safe_fixture(case, paths).read_text(encoding="utf-8").splitlines()]
     cites = case.get("expected", {}).get("must_cite", [])
     hits = [i for i, line in enumerate(lines) if any(c and c in line for c in cites)]
-    if not hits:  # nothing to anchor on: show the tail, where errors usually are
+    fallback = not hits
+    if fallback:  # nothing to anchor on: show the tail, but say so (it is not evidence)
         hits = [len(lines) - 1] if lines else []
 
     ranges: list[list[int]] = []
@@ -108,7 +109,7 @@ def evidence(case_id: str, paths: Paths) -> dict:
             ranges.append([lo, hi])
 
     segments, shown = [], 0
-    hit_set = set(hits)
+    hit_set = set() if fallback else set(hits)
     for lo, hi in ranges:
         if shown >= MAX_EVIDENCE_LINES:
             break
@@ -117,7 +118,8 @@ def evidence(case_id: str, paths: Paths) -> dict:
             {"n": n + 1, "text": lines[n], "cite": n in hit_set} for n in range(lo, hi + 1)
         ]})
         shown += hi - lo + 1
-    return {"case_id": case_id, "total_lines": len(lines), "segments": segments}
+    return {"case_id": case_id, "total_lines": len(lines), "segments": segments,
+            "fallback": fallback}
 
 
 def accept(case_id: str, body: dict, paths: Paths) -> dict:

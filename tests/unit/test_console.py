@@ -62,6 +62,17 @@ def test_evidence_highlights_cite_lines_normalized(paths):
     assert len(lines) == 2 * api.EVIDENCE_CONTEXT + 1
 
 
+def test_evidence_without_cites_is_flagged_as_fallback(paths):
+    row = dict(PROPOSAL, case_id="cand-3")
+    row["expected"] = dict(PROPOSAL["expected"], must_cite=[])
+    with paths.proposals.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(row) + "\n")
+    ev = api.evidence("cand-3", paths)
+    assert ev["fallback"] is True
+    assert not any(ln["cite"] for s in ev["segments"] for ln in s["lines"])
+    assert api.evidence("cand-1", paths)["fallback"] is False
+
+
 def test_evidence_rejects_fixture_outside_fixtures_dir(paths):
     bad = dict(PROPOSAL, case_id="cand-2", log_fixture="../../etc/passwd")
     with paths.proposals.open("a", encoding="utf-8") as f:

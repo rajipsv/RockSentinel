@@ -1,0 +1,1055 @@
+# Source: ROCm/TheRock Actions run 39309629364 attempt 1, job 118272273410
+# Job: Build Windows Release / math-libs (gfx101X-dgpu, aws-windows-scale-rocm-prod-mix, true, false) / Stage - Math Libs (gfx101X-dgpu) (compiler_bump.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+2026-10-19T20:48:12.1502738Z [215/288] Stage installing sub-project rocWMMA
+2026-10-19T20:48:13.5019270Z [216/288] Populate artifact rocwmma
+2026-10-19T20:48:13.9947221Z [217/288] Splitting rocwmma_dbg into generic and arch-specific artifacts
+2026-10-19T20:48:13.9948029Z Splitting artifact: B:\build\artifacts-unsplit\rocwmma_dbg_gfx101X-dgpu
+2026-10-19T20:48:13.9956305Z Artifact prefix: rocwmma_dbg
+2026-10-19T20:48:13.9956652Z Output directory: B:\build\artifacts
+2026-10-19T20:48:13.9956924Z Splitting complete!
+2026-10-19T20:48:14.0405582Z [218/288] Splitting rocwmma_lib into generic and arch-specific artifacts
+2026-10-19T20:48:14.0406180Z Splitting artifact: B:\build\artifacts-unsplit\rocwmma_lib_gfx101X-dgpu
+2026-10-19T20:48:14.0406585Z Artifact prefix: rocwmma_lib
+2026-10-19T20:48:14.0406832Z Output directory: B:\build\artifacts
+2026-10-19T20:48:14.0407088Z Splitting complete!
+2026-10-19T20:48:15.7262905Z [219/288] Splitting rocwmma_dev into generic and arch-specific artifacts
+2026-10-19T20:48:15.7267383Z Splitting artifact: B:\build\artifacts-unsplit\rocwmma_dev_gfx101X-dgpu
+2026-10-19T20:48:15.7267835Z Artifact prefix: rocwmma_dev
+2026-10-19T20:48:15.7281986Z Output directory: B:\build\artifacts
+2026-10-19T20:48:15.7282384Z Splitting complete!
+2026-10-19T20:48:16.4450195Z [220/288] Flatten split artifacts for rocwmma to dist/rocm
+2026-10-19T20:50:38.8999963Z [221/288] Configure sub-project rocSPARSE (in background)
+2026-10-19T21:02:01.7371733Z [222/288] Building sub-project rocSOLVER (in background)
+2026-10-19T21:02:10.4499868Z [223/288] Stage installing sub-project rocSOLVER
+2026-10-19T21:02:21.7314174Z [224/288] Configure sub-project hipBLAS (in background)
+2026-10-19T21:02:27.3978184Z [225/288] Building sub-project hipBLAS (in background)
+2026-10-19T21:02:36.4594999Z [226/288] Stage installing sub-project hipBLAS
+2026-10-19T21:02:42.2996384Z [227/288] Populate artifact blas
+2026-10-19T21:02:42.5101467Z [228/288] Splitting blas_dbg into generic and arch-specific artifacts
+2026-10-19T21:02:42.5101902Z Splitting artifact: B:\build\artifacts-unsplit\blas_dbg_gfx101X-dgpu
+2026-10-19T21:02:42.5102210Z Artifact prefix: blas_dbg
+2026-10-19T21:02:42.5102413Z Output directory: B:\build\artifacts
+2026-10-19T21:02:42.5102628Z Splitting complete!
+2026-10-19T21:02:42.5501310Z [229/288] Splitting blas_run into generic and arch-specific artifacts
+2026-10-19T21:02:42.5501693Z Splitting artifact: B:\build\artifacts-unsplit\blas_run_gfx101X-dgpu
+2026-10-19T21:02:42.5501998Z Artifact prefix: blas_run
+2026-10-19T21:02:42.5502197Z Output directory: B:\build\artifacts
+2026-10-19T21:02:42.5503365Z Splitting complete!
+2026-10-19T21:02:42.6227308Z [230/288] Splitting blas_doc into generic and arch-specific artifacts
+2026-10-19T21:02:42.6228687Z Splitting artifact: B:\build\artifacts-unsplit\blas_doc_gfx101X-dgpu
+2026-10-19T21:02:42.6229006Z Artifact prefix: blas_doc
+2026-10-19T21:02:42.6229201Z Output directory: B:\build\artifacts
+2026-10-19T21:02:42.6229405Z Splitting complete!
+2026-10-19T21:02:43.4978256Z [231/288] Splitting blas_dev into generic and arch-specific artifacts
+2026-10-19T21:02:43.4978688Z Splitting artifact: B:\build\artifacts-unsplit\blas_dev_gfx101X-dgpu
+2026-10-19T21:02:43.4978987Z Artifact prefix: blas_dev
+2026-10-19T21:02:43.4979187Z Output directory: B:\build\artifacts
+2026-10-19T21:02:43.4979398Z Splitting complete!
+2026-10-19T21:02:46.3190537Z [232/288] Splitting blas_lib into generic and arch-specific artifacts
+2026-10-19T21:02:46.3190997Z Splitting artifact: B:\build\artifacts-unsplit\blas_lib_gfx101X-dgpu
+2026-10-19T21:02:46.3191301Z Artifact prefix: blas_lib
+2026-10-19T21:02:46.3191543Z Output directory: B:\build\artifacts
+2026-10-19T21:02:46.3191755Z Splitting complete!
+2026-10-19T21:02:47.2720019Z [233/288] Splitting blas_test into generic and arch-specific artifacts
+2026-10-19T21:02:47.2720515Z Splitting artifact: B:\build\artifacts-unsplit\blas_test_gfx101X-dgpu
+2026-10-19T21:02:47.2720832Z Artifact prefix: blas_test
+2026-10-19T21:02:47.2721036Z Output directory: B:\build\artifacts
+2026-10-19T21:02:47.2721247Z Splitting complete!
+2026-10-19T21:02:47.8663838Z [234/288] Flatten split artifacts for blas to dist/rocm
+2026-10-19T21:03:15.7336055Z [235/288] Configure sub-project MIOpen (in background)
+2026-10-19T21:04:11.8656934Z [236/288] Building sub-project rocSPARSE (in background)
+2026-10-19T21:04:36.8295534Z [237/288] Stage installing sub-project rocSPARSE
+2026-10-19T21:05:27.1982905Z [238/288] Configure sub-project hipSOLVER (in background)
+2026-10-19T21:05:52.2340021Z [239/288] Configure sub-project rocALUTION (in background)
+2026-10-19T21:05:56.4938953Z [240/288] Configure sub-project hipSPARSE (in background)
+2026-10-19T21:05:56.4940935Z FAILED: [code=1] math-libs/BLAS/hipSPARSE/stamp/configure.stamp math-libs/BLAS/hipSPARSE/build/CMakeCache.txt math-libs/BLAS/hipSPARSE/build/cmake_install.cmake compile_commands_fragment_hipSPARSE.json B:/build/math-libs/BLAS/hipSPARSE/stamp/configure.stamp B:/build/math-libs/BLAS/hipSPARSE/build/CMakeCache.txt B:/build/math-libs/BLAS/hipSPARSE/build/cmake_install.cmake B:/build/compile_commands_fragment_hipSPARSE.json 
+2026-10-19T21:05:56.4946623Z C:\Windows\system32\cmd.exe /C "cd /D B:\build\math-libs\BLAS\hipSPARSE\build && C:\home\runner\_work\_tool\Python\3.12.10\x64\python3.exe C:/home/runner/_work/TheRock/TheRock/build_tools/teatime.py --log-timestamps --label "hipSPARSE configure" --interactive B:/build/logs/hipSPARSE_configure.log -- "C:/Program Files/CMake/bin/cmake.exe" -E env --unset=ROCM_PATH --unset=ROCM_DIR --unset=HIP_PATH --unset=HIP_DIR -- "C:/Program Files/CMake/bin/cmake.exe" -GNinja -BB:/build/math-libs/BLAS/hipSPARSE/build -SC:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/hipsparse -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=B:/build/math-libs/BLAS/hipSPARSE/stage -DTHEROCK_STAGE_INSTALL_ROOT=B:/build/math-libs/BLAS/hipSPARSE/stage -DCMAKE_TOOLCHAIN_FILE=B:/build/math-libs/BLAS/hipSPARSE/_toolchain.cmake -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=B:/build/math-libs/BLAS/hipSPARSE/_init.cmake -DHIP_PLATFORM=amd -DROCM_PATH= -DROCM_DIR= -DBUILD_CLIENTS_TESTS=ON -DBUILD_CLIENTS_BENCHMARKS=ON -DBUILD_CLIENTS_SAMPLES=OFF && "C:\Program Files\CMake\bin\cmake.exe" -E touch B:/build/math-libs/BLAS/hipSPARSE/build/compile_commands.json && "C:\Program Files\CMake\bin\cmake.exe" -E touch B:/build/math-libs/BLAS/hipSPARSE/stamp/configure.stamp && "C:\Program Files\CMake\bin\cmake.exe" -E copy B:/build/math-libs/BLAS/hipSPARSE/build/compile_commands.json B:/build/compile_commands_fragment_hipSPARSE.json"
+2026-10-19T21:05:56.4975720Z [hipSPARSE configure] CMake Deprecation Warning at cmake/hipsparse_shim.cmake:34 (message):
+2026-10-19T21:05:56.4977912Z [hipSPARSE configure]   The option 'BUILD_CLIENTS_TESTS' is deprecated and will be removed in a
+2026-10-19T21:05:56.4978643Z [hipSPARSE configure]   future release.
+2026-10-19T21:05:56.4978907Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4979201Z [hipSPARSE configure]   Please use 'HIPSPARSE_BUILD_TESTING' instead.
+2026-10-19T21:05:56.4979533Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4979879Z [hipSPARSE configure]   To suppress these warnings: cmake -DCMAKE_WARN_DEPRECATED=OFF ...
+2026-10-19T21:05:56.4980310Z [hipSPARSE configure] Call Stack (most recent call first):
+2026-10-19T21:05:56.4980718Z [hipSPARSE configure]   cmake/hipsparse_shim.cmake:73 (_hipsparse_deprecation_warning)
+2026-10-19T21:05:56.4981163Z [hipSPARSE configure]   cmake/hipsparse_shim.cmake:92 (shim_mapping)
+2026-10-19T21:05:56.4981508Z [hipSPARSE configure]   CMakeLists.txt:7 (include)
+2026-10-19T21:05:56.4981775Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4981962Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4982329Z [hipSPARSE configure] CMake Deprecation Warning at cmake/hipsparse_shim.cmake:34 (message):
+2026-10-19T21:05:56.4982867Z [hipSPARSE configure]   The option 'BUILD_CLIENTS_BENCHMARKS' is deprecated and will be removed in
+2026-10-19T21:05:56.4983276Z [hipSPARSE configure]   a future release.
+2026-10-19T21:05:56.4983510Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4983801Z [hipSPARSE configure]   Please use 'HIPSPARSE_ENABLE_BENCHMARKS' instead.
+2026-10-19T21:05:56.4984122Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4984445Z [hipSPARSE configure]   To suppress these warnings: cmake -DCMAKE_WARN_DEPRECATED=OFF ...
+2026-10-19T21:05:56.4984861Z [hipSPARSE configure] Call Stack (most recent call first):
+2026-10-19T21:05:56.4985262Z [hipSPARSE configure]   cmake/hipsparse_shim.cmake:73 (_hipsparse_deprecation_warning)
+2026-10-19T21:05:56.4985706Z [hipSPARSE configure]   cmake/hipsparse_shim.cmake:93 (shim_mapping)
+2026-10-19T21:05:56.4986040Z [hipSPARSE configure]   CMakeLists.txt:7 (include)
+2026-10-19T21:05:56.4986309Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4986576Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4986926Z [hipSPARSE configure] CMake Deprecation Warning at cmake/hipsparse_shim.cmake:34 (message):
+2026-10-19T21:05:56.4987525Z [hipSPARSE configure]   The option 'BUILD_CLIENTS_SAMPLES' is deprecated and will be removed in a
+2026-10-19T21:05:56.4987928Z [hipSPARSE configure]   future release.
+2026-10-19T21:05:56.4988158Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4988431Z [hipSPARSE configure]   Please use 'HIPSPARSE_ENABLE_SAMPLES' instead.
+2026-10-19T21:05:56.4988742Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4989057Z [hipSPARSE configure]   To suppress these warnings: cmake -DCMAKE_WARN_DEPRECATED=OFF ...
+2026-10-19T21:05:56.4989474Z [hipSPARSE configure] Call Stack (most recent call first):
+2026-10-19T21:05:56.4989875Z [hipSPARSE configure]   cmake/hipsparse_shim.cmake:73 (_hipsparse_deprecation_warning)
+2026-10-19T21:05:56.4990334Z [hipSPARSE configure]   cmake/hipsparse_shim.cmake:94 (shim_mapping)
+2026-10-19T21:05:56.4990696Z [hipSPARSE configure]   CMakeLists.txt:7 (include)
+2026-10-19T21:05:56.4990960Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4991144Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4991475Z [hipSPARSE configure] CMake Deprecation Warning at cmake/hipsparse_shim.cmake:178 (message):
+2026-10-19T21:05:56.4991865Z [hipSPARSE configure]   
+2026-10-19T21:05:56.4992057Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4992291Z [hipSPARSE configure]     Legacy build options detected:
+2026-10-19T21:05:56.4992731Z [hipSPARSE configure]       BUILD_CLIENTS_TESTS=ON;BUILD_CLIENTS_BENCHMARKS=ON;BUILD_CLIENTS_SAMPLES=OFF
+2026-10-19T21:05:56.4993143Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4993336Z [hipSPARSE configure]   
+2026-10-19T21:05:56.4993525Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4993740Z [hipSPARSE configure]     To use current options, run:
+2026-10-19T21:05:56.4994260Z [hipSPARSE configure]       cmake -DHIPSPARSE_BUILD_TESTING=ON -DHIPSPARSE_ENABLE_BENCHMARKS=ON -DHIPSPARSE_ENABLE_SAMPLES=OFF ..
+2026-10-19T21:05:56.4995171Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4995366Z [hipSPARSE configure]   
+2026-10-19T21:05:56.4995607Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4995914Z [hipSPARSE configure]     To suppress warnings: cmake -DCMAKE_WARN_DEPRECATED=OFF ...
+2026-10-19T21:05:56.4996283Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4996517Z [hipSPARSE configure] Call Stack (most recent call first):
+2026-10-19T21:05:56.4996828Z [hipSPARSE configure]   CMakeLists.txt:7 (include)
+2026-10-19T21:05:56.4997080Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4997267Z [hipSPARSE configure] 
+2026-10-19T21:05:56.4998082Z [hipSPARSE configure] -- Sub-project pkg-config prefixes: B:/build/third-party/sysdeps/windows/zlib/build/stage/lib/rocm_sysdeps;B:/build/third-party/sysdeps/windows/zstd/build/stage/lib/rocm_sysdeps;B:/build/third-party/simde/build/stage
+2026-10-19T21:05:56.4999418Z [hipSPARSE configure] -- Resolving packages from super-project: ZLIB;zstd;AMDDeviceLibs;Clang;LLD;LLVM;amd_comgr;rocm-core;rocm-kpack;hip;HIP;hip-lang;hiprtc;ROCmCMakeBuildTools;ROCM;rocsparse;GTest
+2026-10-19T21:05:56.5000295Z [hipSPARSE configure] -- The CXX compiler identification is Clang 24.0.0 with GNU-like command-line
+2026-10-19T21:05:56.5000841Z [hipSPARSE configure] -- The C compiler identification is Clang 24.0.0 with GNU-like command-line
+2026-10-19T21:05:56.5001269Z [hipSPARSE configure] -- Detecting CXX compiler ABI info
+2026-10-19T21:05:56.5001673Z [hipSPARSE configure] -- Detecting CXX compiler ABI info - done
+2026-10-19T21:05:56.5002171Z [hipSPARSE configure] -- Check for working CXX compiler: B:/build/core/clr/dist/lib/llvm/bin/clang++.exe - skipped
+2026-10-19T21:05:56.5002659Z [hipSPARSE configure] -- Detecting CXX compile features
+2026-10-19T21:05:56.5002993Z [hipSPARSE configure] -- Detecting CXX compile features - done
+2026-10-19T21:05:56.5003384Z [hipSPARSE configure] -- Detecting C compiler ABI info
+2026-10-19T21:05:56.5003738Z [hipSPARSE configure] -- Detecting C compiler ABI info - done
+2026-10-19T21:05:56.5004228Z [hipSPARSE configure] -- Check for working C compiler: B:/build/core/clr/dist/lib/llvm/bin/clang.exe - skipped
+2026-10-19T21:05:56.5004682Z [hipSPARSE configure] -- Detecting C compile features
+2026-10-19T21:05:56.5005009Z [hipSPARSE configure] -- Detecting C compile features - done
+2026-10-19T21:05:56.5005783Z [hipSPARSE configure] -- Resolving super-project find_package(ROCmCMakeBuildTools 0.11.0 QUIET CONFIG BYPASS_PROVIDER NO_DEFAULT_PATH PATHS B:/build/base/rocm-cmake/dist/share/rocmcmakebuildtools/cmake)
+2026-10-19T21:05:56.5007035Z [hipSPARSE configure] -- Resolving system find_package(Python3) (not found in super-project ZLIB;zstd;AMDDeviceLibs;Clang;LLD;LLVM;amd_comgr;rocm-core;rocm-kpack;hip;HIP;hip-lang;hiprtc;ROCmCMakeBuildTools;ROCM;rocsparse;GTest)
+2026-10-19T21:05:56.5008231Z [hipSPARSE configure] -- Found Python3: C:/home/runner/_work/_tool/Python/3.12.10/x64/python3.exe (found suitable version "3.12.10", minimum required is "3.9") found components: Interpreter
+2026-10-19T21:05:56.5009214Z [hipSPARSE configure] -- Resolving super-project find_package(hip REQUIRED CONFIG BYPASS_PROVIDER NO_DEFAULT_PATH PATHS B:/build/core/clr/dist/lib/cmake/hip)
+2026-10-19T21:05:56.5009934Z [hipSPARSE configure] -- HIP: Using hipcc from relative path: B:/build/core/clr/dist/bin/hipcc.exe
+2026-10-19T21:05:56.5010421Z [hipSPARSE configure] -- Performing Test HIP_CLANG_SUPPORTS_PARALLEL_JOBS
+2026-10-19T21:05:56.5010873Z [hipSPARSE configure] -- Performing Test HIP_CLANG_SUPPORTS_PARALLEL_JOBS - Success
+2026-10-19T21:05:56.5011623Z [hipSPARSE configure] -- Resolving super-project find_package(rocsparse REQUIRED BYPASS_PROVIDER NO_DEFAULT_PATH PATHS B:/build/math-libs/BLAS/rocSPARSE/dist/lib/cmake/rocsparse)
+2026-10-19T21:05:56.5012578Z [hipSPARSE configure] -- Resolving super-project find_package(hip REQUIRED BYPASS_PROVIDER NO_DEFAULT_PATH PATHS B:/build/core/clr/dist/lib/cmake/hip)
+2026-10-19T21:05:56.5013423Z [hipSPARSE configure] -- HIP: Using hipcc from relative path: B:/build/core/clr/dist/bin/hipcc.exe
+2026-10-19T21:05:56.5014134Z [hipSPARSE configure] -- Found rocsparse shared library: B:/build/math-libs/BLAS/rocSPARSE/dist/bin/rocsparse.dll
+2026-10-19T21:05:56.5014779Z [hipSPARSE configure] -- Feature-flag guardrail: 1 flag(s) registered, all public headers include the config header.
+2026-10-19T21:05:56.5015299Z [hipSPARSE configure] -- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+2026-10-19T21:05:56.5015716Z [hipSPARSE configure] -- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+2026-10-19T21:05:56.5016064Z [hipSPARSE configure] -- OS: unknown 
+2026-10-19T21:05:56.5016671Z [hipSPARSE configure] -- Resolving super-project find_package(GTest REQUIRED BYPASS_PROVIDER NO_DEFAULT_PATH PATHS B:/build/third-party/googletest/dist/lib/cmake/GTest)
+2026-10-19T21:05:56.5017798Z [hipSPARSE configure] -- Resolving system find_package(Python3) (not found in super-project ZLIB;zstd;AMDDeviceLibs;Clang;LLD;LLVM;amd_comgr;rocm-core;rocm-kpack;hip;HIP;hip-lang;hiprtc;ROCmCMakeBuildTools;ROCM;rocsparse;GTest)
+2026-10-19T21:05:56.5018877Z [hipSPARSE configure] -- Found Python3: C:/home/runner/_work/_tool/Python/3.12.10/x64/python3.exe (found version "3.12.10") found components: Interpreter
+2026-10-19T21:05:56.5019764Z [hipSPARSE configure] -- Resolving super-project find_package(GTest REQUIRED BYPASS_PROVIDER NO_DEFAULT_PATH PATHS B:/build/third-party/googletest/dist/lib/cmake/GTest)
+2026-10-19T21:05:56.5021240Z [hipSPARSE configure] C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/hipsparse/deps/convert.cpp:40:15: warning: 'fopen' is deprecated: This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+2026-10-19T21:05:56.5022422Z [hipSPARSE configure]    40 |     FILE* f = fopen(filename, "r");
+2026-10-19T21:05:56.5022740Z [hipSPARSE configure]       |               ^
+2026-10-19T21:05:56.5023305Z [hipSPARSE configure] C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h:212:20: note: 'fopen' has been explicitly marked deprecated here
+2026-10-19T21:05:56.5023947Z [hipSPARSE configure]   212 |     _Check_return_ _CRT_INSECURE_DEPRECATE(fopen_s)
+2026-10-19T21:05:56.5024299Z [hipSPARSE configure]       |                    ^
+2026-10-19T21:05:56.5024945Z [hipSPARSE configure] C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+2026-10-19T21:05:56.5025750Z [hipSPARSE configure]   368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+2026-10-19T21:05:56.5026220Z [hipSPARSE configure]       |                                                       ^
+2026-10-19T21:05:56.5027050Z [hipSPARSE configure] C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+2026-10-19T21:05:56.5027811Z [hipSPARSE configure]   358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+2026-10-19T21:05:56.5028252Z [hipSPARSE configure]       |                                               ^
+2026-10-19T21:05:56.5029411Z [hipSPARSE configure] C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/hipsparse/deps/convert.cpp:61:8: warning: 'sscanf' is deprecated: This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+2026-10-19T21:05:56.5030650Z [hipSPARSE configure]    61 |     if(sscanf(line, "%s %s %s %s %s", banner, array, coord, data, type) != 5)
+2026-10-19T21:05:56.5031060Z [hipSPARSE configure]       |        ^
+2026-10-19T21:05:56.5031607Z [hipSPARSE configure] C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h:2239:20: note: 'sscanf' has been explicitly marked deprecated here
+2026-10-19T21:05:56.5032522Z [hipSPARSE configure]  2239 |     _Check_return_ _CRT_INSECURE_DEPRECATE(sscanf_s)
+2026-10-19T21:05:56.5032897Z [hipSPARSE configure]       |                    ^
+2026-10-19T21:05:56.5033528Z [hipSPARSE configure] C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+2026-10-19T21:05:56.5034328Z [hipSPARSE configure]   368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+2026-10-19T21:05:56.5035859Z [hipSPARSE configure]       |                                                       ^
+2026-10-19T21:05:56.5036550Z [hipSPARSE configure] C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+2026-10-19T21:05:56.5037299Z [hipSPARSE configure]   358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+2026-10-19T21:05:56.5037752Z [hipSPARSE configure]       |                                               ^
+2026-10-19T21:05:56.5038929Z [hipSPARSE configure] C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/hipsparse/deps/convert.cpp:121:5: warning: 'sscanf' is deprecated: This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+2026-10-19T21:05:56.5040128Z [hipSPARSE configure]   121 |     sscanf(line, "%d %d %d", &nrow, &ncol, &snnz);
+2026-10-19T21:05:56.5040803Z [hipSPARSE configure]       |     ^
+2026-10-19T21:05:56.5041413Z [hipSPARSE configure] C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h:2239:20: note: 'sscanf' has been explicitly marked deprecated here
+2026-10-19T21:05:56.5042071Z [hipSPARSE configure]  2239 |     _Check_return_ _CRT_INSECURE_DEPRECATE(sscanf_s)
+2026-10-19T21:05:56.5042450Z [hipSPARSE configure]       |                    ^
+2026-10-19T21:05:56.5043092Z [hipSPARSE configure] C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+2026-10-19T21:05:56.5043972Z [hipSPARSE configure]   368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+2026-10-19T21:05:56.5044449Z [hipSPARSE configure]       |                                                       ^
+2026-10-19T21:05:56.5045152Z [hipSPARSE configure] C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+2026-10-19T21:05:56.5045898Z [hipSPARSE configure]   358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+2026-10-19T21:05:56.5046337Z [hipSPARSE configure]       |                                               ^
+2026-10-19T21:05:56.5047509Z [hipSPARSE configure] C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/hipsparse/deps/convert.cpp:143:13: warning: 'sscanf' is deprecated: This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+2026-10-19T21:05:56.5048685Z [hipSPARSE configure]   143 |             sscanf(line, "%d %d", &irow, &icol);
+2026-10-19T21:05:56.5049013Z [hipSPARSE configure]       |             ^
+2026-10-19T21:05:56.5049585Z [hipSPARSE configure] C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h:2239:20: note: 'sscanf' has been explicitly marked deprecated here
+2026-10-19T21:05:56.5051937Z [hipSPARSE configure]  2239 |     _Check_return_ _CRT_INSECURE_DEPRECATE(sscanf_s)
+2026-10-19T21:05:56.5052919Z [hipSPARSE configure]       |                    ^
+2026-10-19T21:05:56.5053622Z [hipSPARSE configure] C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+2026-10-19T21:05:56.5055057Z [hipSPARSE configure]   368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+2026-10-19T21:05:56.5055581Z [hipSPARSE configure]       |                                                       ^
+2026-10-19T21:05:56.5056307Z [hipSPARSE configure] C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+2026-10-19T21:05:56.5057086Z [hipSPARSE configure]   358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+2026-10-19T21:05:56.5057534Z [hipSPARSE configure]       |                                               ^
+2026-10-19T21:05:56.5058721Z [hipSPARSE configure] C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/hipsparse/deps/convert.cpp:148:13: warning: 'sscanf' is deprecated: This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+2026-10-19T21:05:56.5059983Z [hipSPARSE configure]   148 |             sscanf(line, "%d %d %lg", &irow, &icol, &ival);
+2026-10-19T21:05:56.5060349Z [hipSPARSE configure]       |             ^
+2026-10-19T21:05:56.5060921Z [hipSPARSE configure] C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h:2239:20: note: 'sscanf' has been explicitly marked deprecated here
+2026-10-19T21:05:56.5061575Z [hipSPARSE configure]  2239 |     _Check_return_ _CRT_INSECURE_DEPRECATE(sscanf_s)
+2026-10-19T21:05:56.5061943Z [hipSPARSE configure]       |                    ^
+2026-10-19T21:05:56.5062587Z [hipSPARSE configure] C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+2026-10-19T21:05:56.5063383Z [hipSPARSE configure]   368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+2026-10-19T21:05:56.5063861Z [hipSPARSE configure]       |                                                       ^
+2026-10-19T21:05:56.5064555Z [hipSPARSE configure] C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+2026-10-19T21:05:56.5065325Z [hipSPARSE configure]   358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+2026-10-19T21:05:56.5065774Z [hipSPARSE configure]       |                                               ^
+2026-10-19T21:05:56.5066951Z [hipSPARSE configure] C:/home/runner/_work/TheRock/TheRock/rocm-libraries/projects/hipsparse/deps/convert.cpp:217:15: warning: 'fopen' is deprecated: This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+2026-10-19T21:05:56.5068103Z [hipSPARSE configure]   217 |     FILE* f = fopen(filename, "wb");
+2026-10-19T21:05:56.5068424Z [hipSPARSE configure]       |               ^
+2026-10-19T21:05:56.5068988Z [hipSPARSE configure] C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h:212:20: note: 'fopen' has been explicitly marked deprecated here
+2026-10-19T21:05:56.5069642Z [hipSPARSE configure]   212 |     _Check_return_ _CRT_INSECURE_DEPRECATE(fopen_s)
+2026-10-19T21:05:56.5070002Z [hipSPARSE configure]       |                    ^
+2026-10-19T21:05:56.5070643Z [hipSPARSE configure] C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+2026-10-19T21:05:56.5071433Z [hipSPARSE configure]   368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+2026-10-19T21:05:56.5071919Z [hipSPARSE configure]       |                                                       ^
+2026-10-19T21:05:56.5072605Z [hipSPARSE configure] C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+2026-10-19T21:05:56.5073638Z [hipSPARSE configure]   358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+2026-10-19T21:05:56.5074180Z [hipSPARSE configure]       |                                               ^
+2026-10-19T21:05:56.5074509Z [hipSPARSE configure] 6 warnings generated.
+2026-10-19T21:05:56.5074893Z [hipSPARSE configure] -- Downloading and extracting test matrix SNAP/amazon0312.tar.gz
+2026-10-19T21:05:56.5075334Z [hipSPARSE configure] -- Timeout has been reached, trying mirror ...
+2026-10-19T21:05:56.5075663Z [hipSPARSE configure] -- amazon0312 success.
+2026-10-19T21:05:56.5076035Z [hipSPARSE configure] -- Downloading and extracting test matrix Muite/Chebyshev4.tar.gz
+2026-10-19T21:05:56.5076482Z [hipSPARSE configure] -- Timeout has been reached, trying mirror ...
+2026-10-19T21:05:56.5076836Z [hipSPARSE configure] -- Chebyshev4 success.
+2026-10-19T21:05:56.5077201Z [hipSPARSE configure] -- Downloading and extracting test matrix FEMLAB/sme3Dc.tar.gz
+2026-10-19T21:05:56.5077642Z [hipSPARSE configure] -- Timeout has been reached, trying mirror ...
+2026-10-19T21:05:56.5077958Z [hipSPARSE configure] -- sme3Dc success.
+2026-10-19T21:05:56.5078335Z [hipSPARSE configure] -- Downloading and extracting test matrix Williams/webbase-1M.tar.gz
+2026-10-19T21:05:56.5078782Z [hipSPARSE configure] -- Timeout has been reached, trying mirror ...
+2026-10-19T21:05:56.5079105Z [hipSPARSE configure] -- webbase-1M success.
+2026-10-19T21:05:56.5079462Z [hipSPARSE configure] -- Downloading and extracting test matrix Bova/rma10.tar.gz
+2026-10-19T21:05:56.5079896Z [hipSPARSE configure] -- Timeout has been reached, trying mirror ...
+2026-10-19T21:05:56.5080211Z [hipSPARSE configure] -- rma10 success.
+2026-10-19T21:05:56.5080575Z [hipSPARSE configure] -- Downloading and extracting test matrix JGD_BIBD/bibd_22_8.tar.gz
+2026-10-19T21:05:56.5081005Z [hipSPARSE configure] -- Timeout has been reached, trying mirror ...
+2026-10-19T21:05:56.5081334Z [hipSPARSE configure] -- bibd_22_8 success.
+2026-10-19T21:05:56.5081735Z [hipSPARSE configure] -- Downloading and extracting test matrix Williams/mac_econ_fwd500.tar.gz
+2026-10-19T21:05:56.5082201Z [hipSPARSE configure] -- Timeout has been reached, trying mirror ...
+2026-10-19T21:05:56.5082547Z [hipSPARSE configure] -- mac_econ_fwd500 success.
+2026-10-19T21:05:56.5082926Z [hipSPARSE configure] -- Downloading and extracting test matrix Williams/mc2depi.tar.gz
+2026-10-19T21:05:56.5083459Z [hipSPARSE configure] -- Timeout has been reached, trying mirror ...
+2026-10-19T21:05:56.5083872Z [hipSPARSE configure] CMake Error at cmake/ClientMatrices.cmake:124 (message):
+2026-10-19T21:05:56.5084237Z [hipSPARSE configure]   "Timeout was reached"
+2026-10-19T21:05:56.5084540Z [hipSPARSE configure] Call Stack (most recent call first):
+2026-10-19T21:05:56.5084887Z [hipSPARSE configure]   clients/tests/CMakeLists.txt:20 (include)
+2026-10-19T21:05:56.5085188Z [hipSPARSE configure] 
+2026-10-19T21:05:56.5085388Z [hipSPARSE configure] 
+2026-10-19T21:05:56.5085669Z [hipSPARSE configure] -- Configuring incomplete, errors occurred!
+2026-10-19T21:06:05.0769067Z [241/288] Building sub-project rocALUTION (in background)
+2026-10-19T21:06:32.3079357Z [242/288] Stage installing sub-project rocALUTION
+2026-10-19T21:06:33.3847557Z [243/288] Populate artifact rocalution
+2026-10-19T21:06:33.9258833Z [244/288] Splitting rocalution_dbg into generic and arch-specific artifacts
+2026-10-19T21:06:33.9259620Z Splitting artifact: B:\build\artifacts-unsplit\rocalution_dbg_gfx101X-dgpu
+2026-10-19T21:06:33.9259991Z Artifact prefix: rocalution_dbg
+2026-10-19T21:06:33.9260246Z Output directory: B:\build\artifacts
+2026-10-19T21:06:33.9260496Z Splitting complete!
+2026-10-19T21:06:34.0162175Z [245/288] Splitting rocalution_test into generic and arch-specific artifacts
+2026-10-19T21:06:34.0162719Z Splitting artifact: B:\build\artifacts-unsplit\rocalution_test_gfx101X-dgpu
+2026-10-19T21:06:34.0163182Z Artifact prefix: rocalution_test
+2026-10-19T21:06:34.0163852Z Output directory: B:\build\artifacts
+2026-10-19T21:06:34.0165195Z Splitting complete!
+2026-10-19T21:06:34.0276184Z [246/288] Splitting rocalution_lib into generic and arch-specific artifacts
+2026-10-19T21:06:34.0276915Z Splitting artifact: B:\build\artifacts-unsplit\rocalution_lib_gfx101X-dgpu
+2026-10-19T21:06:34.0277316Z Artifact prefix: rocalution_lib
+2026-10-19T21:06:34.0279213Z Output directory: B:\build\artifacts
+2026-10-19T21:06:34.0279544Z Splitting complete!
+2026-10-19T21:06:34.5041921Z [247/288] Splitting rocalution_dev into generic and arch-specific artifacts
+2026-10-19T21:06:34.5042474Z Splitting artifact: B:\build\artifacts-unsplit\rocalution_dev_gfx101X-dgpu
+2026-10-19T21:06:34.5042827Z Artifact prefix: rocalution_dev
+2026-10-19T21:06:34.5043106Z Output directory: B:\build\artifacts
+2026-10-19T21:06:34.5043341Z Splitting complete!
+2026-10-19T21:06:35.2255814Z [248/288] Flatten split artifacts for rocalution to dist/rocm
+2026-10-19T21:10:47.4291905Z [249/288] Building sub-project hipSOLVER (in background)
+2026-10-19T21:11:04.8952653Z [250/288] Stage installing sub-project hipSOLVER
+2026-10-19T21:11:11.8236180Z [251/288] Populate artifact solver
+2026-10-19T21:11:12.1227492Z [252/288] Splitting solver_dbg into generic and arch-specific artifacts
+2026-10-19T21:11:12.1228048Z Splitting artifact: B:\build\artifacts-unsplit\solver_dbg_gfx101X-dgpu
+2026-10-19T21:11:12.1228426Z Artifact prefix: solver_dbg
+2026-10-19T21:11:12.1228673Z Output directory: B:\build\artifacts
+2026-10-19T21:11:12.1228917Z Splitting complete!
+2026-10-19T21:11:12.1728887Z [253/288] Splitting solver_doc into generic and arch-specific artifacts
+2026-10-19T21:11:12.1729396Z Splitting artifact: B:\build\artifacts-unsplit\solver_doc_gfx101X-dgpu
+2026-10-19T21:11:12.1729775Z Artifact prefix: solver_doc
+2026-10-19T21:11:12.1730028Z Output directory: B:\build\artifacts
+2026-10-19T21:11:12.1730286Z Splitting complete!
+2026-10-19T21:11:12.3613217Z [254/288] Splitting solver_dev into generic and arch-specific artifacts
+2026-10-19T21:11:12.3613836Z Splitting artifact: B:\build\artifacts-unsplit\solver_dev_gfx101X-dgpu
+2026-10-19T21:11:12.3614211Z Artifact prefix: solver_dev
+2026-10-19T21:11:12.3614497Z Output directory: B:\build\artifacts
+2026-10-19T21:11:12.3614753Z Splitting complete!
+2026-10-19T21:11:16.5803925Z [255/288] Splitting solver_test into generic and arch-specific artifacts
+2026-10-19T21:11:16.5804476Z Splitting artifact: B:\build\artifacts-unsplit\solver_test_gfx101X-dgpu
+2026-10-19T21:11:16.5804854Z Artifact prefix: solver_test
+2026-10-19T21:11:16.5805091Z Output directory: B:\build\artifacts
+2026-10-19T21:11:16.5805331Z Splitting complete!
+2026-10-19T21:11:22.5755477Z [256/288] Splitting solver_lib into generic and arch-specific artifacts
+2026-10-19T21:11:22.5756002Z Splitting artifact: B:\build\artifacts-unsplit\solver_lib_gfx101X-dgpu
+2026-10-19T21:11:22.5756362Z Artifact prefix: solver_lib
+2026-10-19T21:11:22.5756602Z Output directory: B:\build\artifacts
+2026-10-19T21:11:22.5756882Z Splitting complete!
+2026-10-19T21:11:23.6817618Z [257/288] Flatten split artifacts for solver to dist/rocm
+2026-10-19T21:13:55.0342538Z [258/288] Building sub-project MIOpen (in background)
+2026-10-19T21:14:05.6267899Z [259/288] Stage installing sub-project MIOpen
+2026-10-19T21:14:06.7947127Z [260/288] Populate artifact miopen
+2026-10-19T21:14:07.0064744Z [261/288] Splitting miopen_dbg into generic and arch-specific artifacts
+2026-10-19T21:14:07.0065214Z Splitting artifact: B:\build\artifacts-unsplit\miopen_dbg_gfx101X-dgpu
+2026-10-19T21:14:07.0065545Z Artifact prefix: miopen_dbg
+2026-10-19T21:14:07.0065755Z Output directory: B:\build\artifacts
+2026-10-19T21:14:07.0065968Z Splitting complete!
+2026-10-19T21:14:07.0073174Z [262/288] Splitting miopen_dev into generic and arch-specific artifacts
+2026-10-19T21:14:07.0073558Z Splitting artifact: B:\build\artifacts-unsplit\miopen_dev_gfx101X-dgpu
+2026-10-19T21:14:07.0073869Z Artifact prefix: miopen_dev
+2026-10-19T21:14:07.0074419Z Output directory: B:\build\artifacts
+2026-10-19T21:14:07.0074629Z Splitting complete!
+2026-10-19T21:14:07.0204855Z [263/288] Splitting miopen_doc into generic and arch-specific artifacts
+2026-10-19T21:14:07.0205279Z Splitting artifact: B:\build\artifacts-unsplit\miopen_doc_gfx101X-dgpu
+2026-10-19T21:14:07.0205589Z Artifact prefix: miopen_doc
+2026-10-19T21:14:07.0205794Z Output directory: B:\build\artifacts
+2026-10-19T21:14:07.0206000Z Splitting complete!
+2026-10-19T21:14:07.1081511Z [264/288] Splitting miopen_test into generic and arch-specific artifacts
+2026-10-19T21:14:07.1081934Z Splitting artifact: B:\build\artifacts-unsplit\miopen_test_gfx101X-dgpu
+2026-10-19T21:14:07.1082247Z Artifact prefix: miopen_test
+2026-10-19T21:14:07.1082458Z Output directory: B:\build\artifacts
+2026-10-19T21:14:07.1082665Z Splitting complete!
+2026-10-19T21:14:07.5514124Z [265/288] Splitting miopen_run into generic and arch-specific artifacts
+2026-10-19T21:14:07.5514557Z Splitting artifact: B:\build\artifacts-unsplit\miopen_run_gfx101X-dgpu
+2026-10-19T21:14:07.5514898Z Artifact prefix: miopen_run
+2026-10-19T21:14:07.5515122Z Output directory: B:\build\artifacts
+2026-10-19T21:14:07.5515333Z Splitting complete!
+2026-10-19T21:14:14.0311173Z [266/288] Configure sub-project miopenprovider (in background)
+2026-10-19T21:14:14.2402654Z [267/288] Splitting miopen_lib into generic and arch-specific artifacts
+2026-10-19T21:14:14.2403107Z Splitting artifact: B:\build\artifacts-unsplit\miopen_lib_gfx101X-dgpu
+2026-10-19T21:14:14.2403421Z Artifact prefix: miopen_lib
+2026-10-19T21:14:14.2403627Z Output directory: B:\build\artifacts
+2026-10-19T21:14:14.2403838Z Splitting complete!
+2026-10-19T21:14:14.5348307Z [268/288] Flatten split artifacts for miopen to dist/rocm
+2026-10-19T21:14:15.8220012Z [269/288] Building sub-project miopenprovider (in background)
+2026-10-19T21:14:26.0850132Z [270/288] Stage installing sub-project miopenprovider
+2026-10-19T21:14:26.4916587Z [271/288] Populate artifact miopenprovider
+2026-10-19T21:14:36.9722348Z [272/288] Configure sub-project hipDNN_samples (in background)
+2026-10-19T21:14:57.1252183Z [273/288] Building sub-project hipDNN_samples (in background)
+2026-10-19T21:15:07.6856449Z [274/288] Stage installing sub-project hipDNN_samples
+2026-10-19T21:15:08.1213581Z [275/288] Populate artifact hipdnn-samples
+2026-10-19T21:15:08.6165550Z [276/288] Splitting hipdnn-samples_test into generic and arch-specific artifacts
+2026-10-19T21:15:08.6166087Z Splitting artifact: B:\build\artifacts-unsplit\hipdnn-samples_test_gfx101X-dgpu
+2026-10-19T21:15:08.6166431Z Artifact prefix: hipdnn-samples_test
+2026-10-19T21:15:08.6166687Z Output directory: B:\build\artifacts
+2026-10-19T21:15:08.6166894Z Splitting complete!
+2026-10-19T21:15:08.8000758Z [277/288] Flatten split artifacts for hipdnn-samples to dist/rocm
+2026-10-19T21:15:08.8005118Z ninja: build stopped: cannot make progress due to previous errors.
+2026-10-19T21:15:08.8148076Z ##[error]Process completed with exit code 1.
+2026-10-19T21:15:08.8355691Z ##[group]Run echo "CCache Stats:"
+2026-10-19T21:15:08.8355961Z [36;1mecho "CCache Stats:"[0m
+2026-10-19T21:15:08.8356170Z [36;1mccache -s -v[0m
+2026-10-19T21:15:08.8356354Z [36;1mecho "Artifacts:"[0m
+2026-10-19T21:15:08.8356671Z [36;1mls -lh "${BUILD_DIR}"/artifacts/*.tar.xz 2>/dev/null || echo "No artifacts found"[0m
+2026-10-19T21:15:08.8511400Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-19T21:15:08.8511731Z env:
+2026-10-19T21:15:08.8511966Z   QUARTZ_REPORTING_WORKFLOW: multi_arch_build_windows_artifacts.yml
+2026-10-19T21:15:08.8512305Z   QUARTZ_WORKFLOW_POSTFIX: - build ROCm artifacts
+2026-10-19T21:15:08.8512812Z   DIST_AMDGPU_FAMILIES: gfx110X-all;gfx1151;gfx120X-all;gfx90a;gfx900;gfx90c;gfx906;gfx908;gfx101X-dgpu;gfx103X-all;gfx1150;gfx1152;gfx1153
+2026-10-19T21:15:08.8513280Z   AMDGPU_FAMILIES: gfx101X-dgpu
+2026-10-19T21:15:08.8513571Z   ROCM_PACKAGE_VERSION: 10.2.0.dev0+78f5b35cdeaba13c7cbcb5abef75267de93274a7
+2026-10-19T21:15:08.8514148Z   RELEASE_TYPE: dev
+2026-10-19T21:15:08.8514322Z   REBUILD_ARTIFACTS: 
+2026-10-19T21:15:08.8514496Z   STAGE_NAME: math-libs
+2026-10-19T21:15:08.8514762Z   CCACHE_CONFIGPATH: C:\home\runner\_work\TheRock\TheRock/.ccache/ccache.conf
+2026-10-19T21:15:08.8515068Z   TEATIME_FORCE_INTERACTIVE: 0
+2026-10-19T21:15:08.8515266Z   EXTERNAL_FETCH_SOURCES_ARGS: 
+2026-10-19T21:15:08.8515457Z   EXTERNAL_REPO_CONFIG: 
+2026-10-19T21:15:08.8515630Z   BUILD_DIR: B:\build
+2026-10-19T21:15:08.8515844Z   CACHE_DIR: C:\home\runner\_work\TheRock\TheRock/.cache
+2026-10-19T21:15:08.8516145Z   pythonLocation: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:08.8516496Z   PKG_CONFIG_PATH: C:\home\runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-19T21:15:08.8516844Z   Python_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:08.8517170Z   Python2_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:08.8517485Z   Python3_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:08.8517753Z   CommandPromptType: Native
+2026-10-19T21:15:08.8518036Z   DevEnvDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\
+2026-10-19T21:15:08.8518457Z   ExtensionSdkDir: C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs
+2026-10-19T21:15:08.8520342Z   EXTERNAL_INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-19T21:15:08.8522077Z   Framework40Version: v4.0
+2026-10-19T21:15:08.8522301Z   FrameworkDir: C:\Windows\Microsoft.NET\Framework64\
+2026-10-19T21:15:08.8522575Z   FrameworkDir64: C:\Windows\Microsoft.NET\Framework64\
+2026-10-19T21:15:08.8522818Z   FrameworkVersion: v4.0.30319
+2026-10-19T21:15:08.8523013Z   FrameworkVersion64: v4.0.30319
+2026-10-19T21:15:08.8525820Z   INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-19T21:15:08.8528356Z   LIB: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.26100.0\\um\x64
+2026-10-19T21:15:08.8530416Z   LIBPATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+2026-10-19T21:15:08.8531754Z   NETFXSDKDir: C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\
+2026-10-19T21:15:08.8540940Z   PATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\Roslyn;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\DiagnosticsHub\Collector;C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\;C:\Program Files (x86)\DVC (Data Version Control);/mingw64/bin:/usr/bin:/c/Users/ContainerAdministrator/bin:/c/Users/ContainerAdministrator/AppData/Roaming/Python/Python312/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64:/c/vcpkg:/c/Python313/Scripts:/c/Python313:/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Users/ContainerAdministrator/AppData/Local/Microsoft/WindowsApps:/c/home/runner:/c/ProgramData/chocolatey/bin:/cmd:/c/Program Files/GitHub CLI:/c/Program Files/PowerShell/7:/bin:/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files/CMake/bin:/c/Program Files/dotnet:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/c/Users/ContainerAdministrator/.dotnet/tools;C:\Strawberry\c\bin;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python312\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;C:\Program Files (x86)\Microsoft Visual Studio\Installer;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-19T21:15:08.8549670Z   Platform: x64
+2026-10-19T21:15:08.8549943Z   UCRTVersion: 10.0.26100.0
+2026-10-19T21:15:08.8550195Z   UniversalCRTSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-19T21:15:08.8550581Z   VCIDEInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\
+2026-10-19T21:15:08.8550998Z   VCINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\
+2026-10-19T21:15:08.8551379Z   VCPKG_ROOT: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-19T21:15:08.8551832Z   VCToolsInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\
+2026-10-19T21:15:08.8552353Z   VCToolsRedistDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.44.35112\
+2026-10-19T21:15:08.8552817Z   VCToolsVersion: 14.44.35207
+2026-10-19T21:15:08.8553018Z   VisualStudioVersion: 17.0
+2026-10-19T21:15:08.8553323Z   VS170COMNTOOLS: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\
+2026-10-19T21:15:08.8553653Z   VSCMD_ARG_app_plat: Desktop
+2026-10-19T21:15:08.8553841Z   VSCMD_ARG_HOST_ARCH: x64
+2026-10-19T21:15:08.8554020Z   VSCMD_ARG_TGT_ARCH: x64
+2026-10-19T21:15:08.8554193Z   VSCMD_VER: 17.14.41
+2026-10-19T21:15:08.8554435Z   VSINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\
+2026-10-19T21:15:08.8554970Z   WindowsLibPath: C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0
+2026-10-19T21:15:08.8555506Z   WindowsSdkBinPath: C:\Program Files (x86)\Windows Kits\10\bin\
+2026-10-19T21:15:08.8555813Z   WindowsSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-19T21:15:08.8556067Z   WindowsSDKLibVersion: 10.0.26100.0\
+2026-10-19T21:15:08.8556367Z   WindowsSdkVerBinPath: C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\
+2026-10-19T21:15:08.8556681Z   WindowsSDKVersion: 10.0.26100.0\
+2026-10-19T21:15:08.8557045Z   WindowsSDK_ExecutablePath_x64: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\
+2026-10-19T21:15:08.8557577Z   WindowsSDK_ExecutablePath_x86: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\
+2026-10-19T21:15:08.8557944Z   __DOTNET_ADD_64BIT: 1
+2026-10-19T21:15:08.8558135Z   __DOTNET_PREFERRED_BITNESS: 64
+2026-10-19T21:15:08.8563469Z   __VSCMD_PREINIT_PATH: C:\Program Files (x86)\DVC (Data Version Control);/mingw64/bin:/usr/bin:/c/Users/ContainerAdministrator/bin:/c/Users/ContainerAdministrator/AppData/Roaming/Python/Python312/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64:/c/vcpkg:/c/Python313/Scripts:/c/Python313:/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Users/ContainerAdministrator/AppData/Local/Microsoft/WindowsApps:/c/home/runner:/c/ProgramData/chocolatey/bin:/cmd:/c/Program Files/GitHub CLI:/c/Program Files/PowerShell/7:/bin:/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files/CMake/bin:/c/Program Files/dotnet:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/c/Users/ContainerAdministrator/.dotnet/tools;C:\Strawberry\c\bin;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python312\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files (x86)\DVC (Data Version Control);;C:\Program Files (x86)\DVC (Data Version Control);C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;;C:\Program Files (x86)\Microsoft Visual Studio\Installer
+2026-10-19T21:15:08.8568811Z ##[endgroup]
+2026-10-19T21:15:08.9116888Z CCache Stats:
+2026-10-19T21:15:09.0171710Z Cache directory:               C:\home\runner\_work\TheRock\TheRock\.cache\ccache
+2026-10-19T21:15:09.0172161Z Config file:                   C:\home\runner\_work\TheRock\TheRock\.ccache\ccache.conf
+2026-10-19T21:15:09.0172476Z Directory config file:
+2026-10-19T21:15:09.0172670Z System config file:
+2026-10-19T21:15:09.0172858Z Stats updated:                 10/19/26 21:14:37
+2026-10-19T21:15:09.0173144Z Cacheable calls:                6947 / 7019 (98.97%)
+2026-10-19T21:15:09.0173907Z   Hits:                         2228 / 6947 (32.07%)
+2026-10-19T21:15:09.0174139Z     Direct:                     1864 / 2228 (83.66%)
+2026-10-19T21:15:09.0174391Z     Preprocessed:                364 / 2228 (16.34%)
+2026-10-19T21:15:09.0174634Z   Misses:                       4719 / 6947 (67.93%)
+2026-10-19T21:15:09.0174875Z Uncacheable calls:                72 / 7019 ( 1.03%)
+2026-10-19T21:15:09.0175124Z   Preprocessing failed:           40 /   72 (55.56%)
+2026-10-19T21:15:09.0175388Z   Unsupported code directive:      1 /   72 ( 1.39%)
+2026-10-19T21:15:09.0175644Z   Unsupported compiler option:    31 /   72 (43.06%)
+2026-10-19T21:15:09.0175869Z Successful lookups:
+2026-10-19T21:15:09.0176054Z   Direct:                       1864 / 6988 (26.67%)
+2026-10-19T21:15:09.0176282Z   Preprocessed:                  364 / 5083 ( 7.16%)
+2026-10-19T21:15:09.0176500Z Local storage:
+2026-10-19T21:15:09.0176690Z   Cache size (GB):               1.3 / 10.0 (13.36%)
+2026-10-19T21:15:09.0176932Z   Files:                       13803
+2026-10-19T21:15:09.0177149Z   Hits:                           11 / 6947 ( 0.16%)
+2026-10-19T21:15:09.0177380Z   Misses:                       6936 / 6947 (99.84%)
+2026-10-19T21:15:09.0177605Z   Reads:                       13935
+2026-10-19T21:15:09.0177800Z   Writes:                      18496
+2026-10-19T21:15:09.0177989Z Remote storage:
+2026-10-19T21:15:09.0178165Z   Hits:                         2217 / 6936 (31.96%)
+2026-10-19T21:15:09.0178395Z   Misses:                       4719 / 6936 (68.04%)
+2026-10-19T21:15:09.0178608Z   Reads:                       13917
+2026-10-19T21:15:09.0178799Z   Writes:                       9800
+2026-10-19T21:15:09.0178988Z   Timeouts:                        1
+2026-10-19T21:15:09.0218409Z Artifacts:
+2026-10-19T21:15:09.0466490Z No artifacts found
+2026-10-19T21:15:09.0700009Z Prepare all required actions
+2026-10-19T21:15:09.0700697Z Getting action download info
+2026-10-19T21:15:09.1529137Z Download action repository 'aws-actions/configure-aws-credentials@e6de054238d6b7531b4efff3b6587d9aade6a06c' (SHA:e6de054238d6b7531b4efff3b6587d9aade6a06c)
+2026-10-19T21:15:09.6137720Z ##[group]Run ./.github/actions/configure_aws_artifacts_credentials
+2026-10-19T21:15:09.6137998Z with:
+2026-10-19T21:15:09.6138146Z   release_type: dev
+2026-10-19T21:15:09.6138307Z env:
+2026-10-19T21:15:09.6138517Z   QUARTZ_REPORTING_WORKFLOW: multi_arch_build_windows_artifacts.yml
+2026-10-19T21:15:09.6138812Z   QUARTZ_WORKFLOW_POSTFIX: - build ROCm artifacts
+2026-10-19T21:15:09.6139281Z   DIST_AMDGPU_FAMILIES: gfx110X-all;gfx1151;gfx120X-all;gfx90a;gfx900;gfx90c;gfx906;gfx908;gfx101X-dgpu;gfx103X-all;gfx1150;gfx1152;gfx1153
+2026-10-19T21:15:09.6139725Z   AMDGPU_FAMILIES: gfx101X-dgpu
+2026-10-19T21:15:09.6140045Z   ROCM_PACKAGE_VERSION: 10.2.0.dev0+78f5b35cdeaba13c7cbcb5abef75267de93274a7
+2026-10-19T21:15:09.6140334Z   RELEASE_TYPE: dev
+2026-10-19T21:15:09.6140492Z   REBUILD_ARTIFACTS: 
+2026-10-19T21:15:09.6140675Z   STAGE_NAME: math-libs
+2026-10-19T21:15:09.6140926Z   CCACHE_CONFIGPATH: C:\home\runner\_work\TheRock\TheRock/.ccache/ccache.conf
+2026-10-19T21:15:09.6141217Z   TEATIME_FORCE_INTERACTIVE: 0
+2026-10-19T21:15:09.6141403Z   EXTERNAL_FETCH_SOURCES_ARGS: 
+2026-10-19T21:15:09.6141587Z   EXTERNAL_REPO_CONFIG: 
+2026-10-19T21:15:09.6141758Z   BUILD_DIR: B:\build
+2026-10-19T21:15:09.6141951Z   CACHE_DIR: C:\home\runner\_work\TheRock\TheRock/.cache
+2026-10-19T21:15:09.6142236Z   pythonLocation: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:09.6142568Z   PKG_CONFIG_PATH: C:\home\runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-19T21:15:09.6142897Z   Python_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:09.6143199Z   Python2_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:09.6143499Z   Python3_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:09.6143755Z   CommandPromptType: Native
+2026-10-19T21:15:09.6144248Z   DevEnvDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\
+2026-10-19T21:15:09.6144648Z   ExtensionSdkDir: C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs
+2026-10-19T21:15:09.6146440Z   EXTERNAL_INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-19T21:15:09.6148135Z   Framework40Version: v4.0
+2026-10-19T21:15:09.6148351Z   FrameworkDir: C:\Windows\Microsoft.NET\Framework64\
+2026-10-19T21:15:09.6148649Z   FrameworkDir64: C:\Windows\Microsoft.NET\Framework64\
+2026-10-19T21:15:09.6148896Z   FrameworkVersion: v4.0.30319
+2026-10-19T21:15:09.6149096Z   FrameworkVersion64: v4.0.30319
+2026-10-19T21:15:09.6152024Z   INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-19T21:15:09.6154517Z   LIB: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.26100.0\\um\x64
+2026-10-19T21:15:09.6156541Z   LIBPATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+2026-10-19T21:15:09.6157878Z   NETFXSDKDir: C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\
+2026-10-19T21:15:09.6166579Z   PATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\Roslyn;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\DiagnosticsHub\Collector;C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\;C:\Program Files (x86)\DVC (Data Version Control);/mingw64/bin:/usr/bin:/c/Users/ContainerAdministrator/bin:/c/Users/ContainerAdministrator/AppData/Roaming/Python/Python312/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64:/c/vcpkg:/c/Python313/Scripts:/c/Python313:/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Users/ContainerAdministrator/AppData/Local/Microsoft/WindowsApps:/c/home/runner:/c/ProgramData/chocolatey/bin:/cmd:/c/Program Files/GitHub CLI:/c/Program Files/PowerShell/7:/bin:/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files/CMake/bin:/c/Program Files/dotnet:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/c/Users/ContainerAdministrator/.dotnet/tools;C:\Strawberry\c\bin;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python312\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;C:\Program Files (x86)\Microsoft Visual Studio\Installer;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-19T21:15:09.6174993Z   Platform: x64
+2026-10-19T21:15:09.6175156Z   UCRTVersion: 10.0.26100.0
+2026-10-19T21:15:09.6175406Z   UniversalCRTSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-19T21:15:09.6175787Z   VCIDEInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\
+2026-10-19T21:15:09.6176271Z   VCINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\
+2026-10-19T21:15:09.6176715Z   VCPKG_ROOT: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-19T21:15:09.6177260Z   VCToolsInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\
+2026-10-19T21:15:09.6177855Z   VCToolsRedistDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.44.35112\
+2026-10-19T21:15:09.6178283Z   VCToolsVersion: 14.44.35207
+2026-10-19T21:15:09.6178553Z   VisualStudioVersion: 17.0
+2026-10-19T21:15:09.6178946Z   VS170COMNTOOLS: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\
+2026-10-19T21:15:09.6179337Z   VSCMD_ARG_app_plat: Desktop
+2026-10-19T21:15:09.6179605Z   VSCMD_ARG_HOST_ARCH: x64
+2026-10-19T21:15:09.6179852Z   VSCMD_ARG_TGT_ARCH: x64
+2026-10-19T21:15:09.6180096Z   VSCMD_VER: 17.14.41
+2026-10-19T21:15:09.6180401Z   VSINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\
+2026-10-19T21:15:09.6180994Z   WindowsLibPath: C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0
+2026-10-19T21:15:09.6181620Z   WindowsSdkBinPath: C:\Program Files (x86)\Windows Kits\10\bin\
+2026-10-19T21:15:09.6181988Z   WindowsSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-19T21:15:09.6182319Z   WindowsSDKLibVersion: 10.0.26100.0\
+2026-10-19T21:15:09.6182692Z   WindowsSdkVerBinPath: C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\
+2026-10-19T21:15:09.6183152Z   WindowsSDKVersion: 10.0.26100.0\
+2026-10-19T21:15:09.6183601Z   WindowsSDK_ExecutablePath_x64: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\
+2026-10-19T21:15:09.6184202Z   WindowsSDK_ExecutablePath_x86: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\
+2026-10-19T21:15:09.6184663Z   __DOTNET_ADD_64BIT: 1
+2026-10-19T21:15:09.6184907Z   __DOTNET_PREFERRED_BITNESS: 64
+2026-10-19T21:15:09.6190289Z   __VSCMD_PREINIT_PATH: C:\Program Files (x86)\DVC (Data Version Control);/mingw64/bin:/usr/bin:/c/Users/ContainerAdministrator/bin:/c/Users/ContainerAdministrator/AppData/Roaming/Python/Python312/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64:/c/vcpkg:/c/Python313/Scripts:/c/Python313:/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Users/ContainerAdministrator/AppData/Local/Microsoft/WindowsApps:/c/home/runner:/c/ProgramData/chocolatey/bin:/cmd:/c/Program Files/GitHub CLI:/c/Program Files/PowerShell/7:/bin:/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files/CMake/bin:/c/Program Files/dotnet:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/c/Users/ContainerAdministrator/.dotnet/tools;C:\Strawberry\c\bin;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python312\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files (x86)\DVC (Data Version Control);;C:\Program Files (x86)\DVC (Data Version Control);C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;;C:\Program Files (x86)\Microsoft Visual Studio\Installer
+2026-10-19T21:15:09.6195520Z ##[endgroup]
+2026-10-19T21:15:09.6243449Z ##[start-action display=Determine IAM role;id=__self.iam]
+2026-10-19T21:15:09.6410956Z ##[group]Run python build_tools/github_actions/write_artifacts_bucket_info.py \
+2026-10-19T21:15:09.6411487Z [36;1mpython build_tools/github_actions/write_artifacts_bucket_info.py \[0m
+2026-10-19T21:15:09.6411900Z [36;1m  --release-type "${INPUTS_RELEASE_TYPE}"[0m
+2026-10-19T21:15:09.6565914Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-19T21:15:09.6566329Z env:
+2026-10-19T21:15:09.6566645Z   QUARTZ_REPORTING_WORKFLOW: multi_arch_build_windows_artifacts.yml
+2026-10-19T21:15:09.6567057Z   QUARTZ_WORKFLOW_POSTFIX: - build ROCm artifacts
+2026-10-19T21:15:09.6567623Z   DIST_AMDGPU_FAMILIES: gfx110X-all;gfx1151;gfx120X-all;gfx90a;gfx900;gfx90c;gfx906;gfx908;gfx101X-dgpu;gfx103X-all;gfx1150;gfx1152;gfx1153
+2026-10-19T21:15:09.6568187Z   AMDGPU_FAMILIES: gfx101X-dgpu
+2026-10-19T21:15:09.6568549Z   ROCM_PACKAGE_VERSION: 10.2.0.dev0+78f5b35cdeaba13c7cbcb5abef75267de93274a7
+2026-10-19T21:15:09.6568932Z   RELEASE_TYPE: dev
+2026-10-19T21:15:09.6569167Z   REBUILD_ARTIFACTS: 
+2026-10-19T21:15:09.6569414Z   STAGE_NAME: math-libs
+2026-10-19T21:15:09.6569741Z   CCACHE_CONFIGPATH: C:\home\runner\_work\TheRock\TheRock/.ccache/ccache.conf
+2026-10-19T21:15:09.6570098Z   TEATIME_FORCE_INTERACTIVE: 0
+2026-10-19T21:15:09.6570384Z   EXTERNAL_FETCH_SOURCES_ARGS: 
+2026-10-19T21:15:09.6570653Z   EXTERNAL_REPO_CONFIG: 
+2026-10-19T21:15:09.6570945Z   BUILD_DIR: B:\build
+2026-10-19T21:15:09.6571215Z   CACHE_DIR: C:\home\runner\_work\TheRock\TheRock/.cache
+2026-10-19T21:15:09.6571818Z   pythonLocation: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:09.6572276Z   PKG_CONFIG_PATH: C:\home\runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-19T21:15:09.6572692Z   Python_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:09.6573070Z   Python2_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:09.6573456Z   Python3_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:09.6573803Z   CommandPromptType: Native
+2026-10-19T21:15:09.6574174Z   DevEnvDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\
+2026-10-19T21:15:09.6574653Z   ExtensionSdkDir: C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs
+2026-10-19T21:15:09.6576508Z   EXTERNAL_INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-19T21:15:09.6578292Z   Framework40Version: v4.0
+2026-10-19T21:15:09.6578563Z   FrameworkDir: C:\Windows\Microsoft.NET\Framework64\
+2026-10-19T21:15:09.6578929Z   FrameworkDir64: C:\Windows\Microsoft.NET\Framework64\
+2026-10-19T21:15:09.6579243Z   FrameworkVersion: v4.0.30319
+2026-10-19T21:15:09.6579509Z   FrameworkVersion64: v4.0.30319
+2026-10-19T21:15:09.6581564Z   INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-19T21:15:09.6584109Z   LIB: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.26100.0\\um\x64
+2026-10-19T21:15:09.6586229Z   LIBPATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+2026-10-19T21:15:09.6587582Z   NETFXSDKDir: C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\
+2026-10-19T21:15:09.6596596Z   PATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\Roslyn;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\DiagnosticsHub\Collector;C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\;C:\Program Files (x86)\DVC (Data Version Control);/mingw64/bin:/usr/bin:/c/Users/ContainerAdministrator/bin:/c/Users/ContainerAdministrator/AppData/Roaming/Python/Python312/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64:/c/vcpkg:/c/Python313/Scripts:/c/Python313:/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Users/ContainerAdministrator/AppData/Local/Microsoft/WindowsApps:/c/home/runner:/c/ProgramData/chocolatey/bin:/cmd:/c/Program Files/GitHub CLI:/c/Program Files/PowerShell/7:/bin:/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files/CMake/bin:/c/Program Files/dotnet:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/c/Users/ContainerAdministrator/.dotnet/tools;C:\Strawberry\c\bin;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python312\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;C:\Program Files (x86)\Microsoft Visual Studio\Installer;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-19T21:15:09.6605159Z   Platform: x64
+2026-10-19T21:15:09.6605391Z   UCRTVersion: 10.0.26100.0
+2026-10-19T21:15:09.6605641Z   UniversalCRTSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-19T21:15:09.6606027Z   VCIDEInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\
+2026-10-19T21:15:09.6606442Z   VCINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\
+2026-10-19T21:15:09.6606808Z   VCPKG_ROOT: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-19T21:15:09.6607241Z   VCToolsInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\
+2026-10-19T21:15:09.6607741Z   VCToolsRedistDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.44.35112\
+2026-10-19T21:15:09.6608091Z   VCToolsVersion: 14.44.35207
+2026-10-19T21:15:09.6608273Z   VisualStudioVersion: 17.0
+2026-10-19T21:15:09.6608567Z   VS170COMNTOOLS: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\
+2026-10-19T21:15:09.6608881Z   VSCMD_ARG_app_plat: Desktop
+2026-10-19T21:15:09.6609058Z   VSCMD_ARG_HOST_ARCH: x64
+2026-10-19T21:15:09.6609226Z   VSCMD_ARG_TGT_ARCH: x64
+2026-10-19T21:15:09.6609387Z   VSCMD_VER: 17.14.41
+2026-10-19T21:15:09.6609622Z   VSINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\
+2026-10-19T21:15:09.6610243Z   WindowsLibPath: C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0
+2026-10-19T21:15:09.6610748Z   WindowsSdkBinPath: C:\Program Files (x86)\Windows Kits\10\bin\
+2026-10-19T21:15:09.6611055Z   WindowsSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-19T21:15:09.6611301Z   WindowsSDKLibVersion: 10.0.26100.0\
+2026-10-19T21:15:09.6611586Z   WindowsSdkVerBinPath: C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\
+2026-10-19T21:15:09.6611890Z   WindowsSDKVersion: 10.0.26100.0\
+2026-10-19T21:15:09.6612241Z   WindowsSDK_ExecutablePath_x64: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\
+2026-10-19T21:15:09.6612750Z   WindowsSDK_ExecutablePath_x86: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\
+2026-10-19T21:15:09.6613102Z   __DOTNET_ADD_64BIT: 1
+2026-10-19T21:15:09.6613274Z   __DOTNET_PREFERRED_BITNESS: 64
+2026-10-19T21:15:09.6618468Z   __VSCMD_PREINIT_PATH: C:\Program Files (x86)\DVC (Data Version Control);/mingw64/bin:/usr/bin:/c/Users/ContainerAdministrator/bin:/c/Users/ContainerAdministrator/AppData/Roaming/Python/Python312/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64:/c/vcpkg:/c/Python313/Scripts:/c/Python313:/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Users/ContainerAdministrator/AppData/Local/Microsoft/WindowsApps:/c/home/runner:/c/ProgramData/chocolatey/bin:/cmd:/c/Program Files/GitHub CLI:/c/Program Files/PowerShell/7:/bin:/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files/CMake/bin:/c/Program Files/dotnet:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/c/Users/ContainerAdministrator/.dotnet/tools;C:\Strawberry\c\bin;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python312\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files (x86)\DVC (Data Version Control);;C:\Program Files (x86)\DVC (Data Version Control);C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;;C:\Program Files (x86)\Microsoft Visual Studio\Installer
+2026-10-19T21:15:09.6623501Z   INPUTS_RELEASE_TYPE: dev
+2026-10-19T21:15:09.6623678Z ##[endgroup]
+2026-10-19T21:15:09.8532987Z Retrieving bucket info for workflow run...
+2026-10-19T21:15:09.8533291Z   github_repository: ROCm/TheRock
+2026-10-19T21:15:09.8533502Z   release_type: dev
+2026-10-19T21:15:09.8551887Z   is_pr_from_fork: False
+2026-10-19T21:15:09.8552092Z   bucket: therock-dev-artifacts
+2026-10-19T21:15:09.8552307Z Setting github output:
+2026-10-19T21:15:09.8552472Z {
+2026-10-19T21:15:09.8552635Z   "bucket": "therock-dev-artifacts",
+2026-10-19T21:15:09.8552931Z   "iam_role": "arn:aws:iam::692859939525:role/therock-dev",
+2026-10-19T21:15:09.8553183Z   "aws_region": "us-east-2"
+2026-10-19T21:15:09.8553346Z }
+2026-10-19T21:15:09.8556976Z OUTPUT bucket=therock-dev-artifacts
+2026-10-19T21:15:09.8557236Z OUTPUT iam_role=arn:aws:iam::692859939525:role/therock-dev
+2026-10-19T21:15:09.8557484Z OUTPUT aws_region=us-east-2
+2026-10-19T21:15:09.8779750Z ##[end-action id=__self.iam;outcome=success;conclusion=success;duration_ms=253]
+2026-10-19T21:15:09.8782218Z ##[start-action display=Configure AWS Credentials;id=__self.__aws-actions_configure-aws-credentials]
+2026-10-19T21:15:09.8982734Z ##[group]Run aws-actions/configure-aws-credentials@e6de054238d6b7531b4efff3b6587d9aade6a06c
+2026-10-19T21:15:09.8983083Z with:
+2026-10-19T21:15:09.8983234Z   aws-region: us-east-2
+2026-10-19T21:15:09.8983449Z   role-to-assume: arn:aws:iam::692859939525:role/therock-dev
+2026-10-19T21:15:09.8983711Z   special-characters-workaround: true
+2026-10-19T21:15:09.8983922Z   audience: sts.amazonaws.com
+2026-10-19T21:15:09.8984103Z env:
+2026-10-19T21:15:09.8984327Z   QUARTZ_REPORTING_WORKFLOW: multi_arch_build_windows_artifacts.yml
+2026-10-19T21:15:09.8984625Z   QUARTZ_WORKFLOW_POSTFIX: - build ROCm artifacts
+2026-10-19T21:15:09.8985092Z   DIST_AMDGPU_FAMILIES: gfx110X-all;gfx1151;gfx120X-all;gfx90a;gfx900;gfx90c;gfx906;gfx908;gfx101X-dgpu;gfx103X-all;gfx1150;gfx1152;gfx1153
+2026-10-19T21:15:09.8985557Z   AMDGPU_FAMILIES: gfx101X-dgpu
+2026-10-19T21:15:09.8985855Z   ROCM_PACKAGE_VERSION: 10.2.0.dev0+78f5b35cdeaba13c7cbcb5abef75267de93274a7
+2026-10-19T21:15:09.8986158Z   RELEASE_TYPE: dev
+2026-10-19T21:15:09.8986312Z   REBUILD_ARTIFACTS: 
+2026-10-19T21:15:09.8986472Z   STAGE_NAME: math-libs
+2026-10-19T21:15:09.8986735Z   CCACHE_CONFIGPATH: C:\home\runner\_work\TheRock\TheRock/.ccache/ccache.conf
+2026-10-19T21:15:09.8987031Z   TEATIME_FORCE_INTERACTIVE: 0
+2026-10-19T21:15:09.8987218Z   EXTERNAL_FETCH_SOURCES_ARGS: 
+2026-10-19T21:15:09.8987406Z   EXTERNAL_REPO_CONFIG: 
+2026-10-19T21:15:09.8987572Z   BUILD_DIR: B:\build
+2026-10-19T21:15:09.8987771Z   CACHE_DIR: C:\home\runner\_work\TheRock\TheRock/.cache
+2026-10-19T21:15:09.8988056Z   pythonLocation: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:09.8988394Z   PKG_CONFIG_PATH: C:\home\runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-19T21:15:09.8988938Z   Python_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:09.8989257Z   Python2_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:09.8989572Z   Python3_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:09.8989913Z   CommandPromptType: Native
+2026-10-19T21:15:09.8990188Z   DevEnvDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\
+2026-10-19T21:15:09.8990586Z   ExtensionSdkDir: C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs
+2026-10-19T21:15:09.8992374Z   EXTERNAL_INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-19T21:15:09.8994064Z   Framework40Version: v4.0
+2026-10-19T21:15:09.8994284Z   FrameworkDir: C:\Windows\Microsoft.NET\Framework64\
+2026-10-19T21:15:09.8994555Z   FrameworkDir64: C:\Windows\Microsoft.NET\Framework64\
+2026-10-19T21:15:09.8994794Z   FrameworkVersion: v4.0.30319
+2026-10-19T21:15:09.8994985Z   FrameworkVersion64: v4.0.30319
+2026-10-19T21:15:09.8996615Z   INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-19T21:15:09.8999280Z   LIB: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.26100.0\\um\x64
+2026-10-19T21:15:09.9001346Z   LIBPATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+2026-10-19T21:15:09.9002630Z   NETFXSDKDir: C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\
+2026-10-19T21:15:09.9010948Z   PATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\Roslyn;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\DiagnosticsHub\Collector;C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\;C:\Program Files (x86)\DVC (Data Version Control);/mingw64/bin:/usr/bin:/c/Users/ContainerAdministrator/bin:/c/Users/ContainerAdministrator/AppData/Roaming/Python/Python312/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64:/c/vcpkg:/c/Python313/Scripts:/c/Python313:/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Users/ContainerAdministrator/AppData/Local/Microsoft/WindowsApps:/c/home/runner:/c/ProgramData/chocolatey/bin:/cmd:/c/Program Files/GitHub CLI:/c/Program Files/PowerShell/7:/bin:/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files/CMake/bin:/c/Program Files/dotnet:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/c/Users/ContainerAdministrator/.dotnet/tools;C:\Strawberry\c\bin;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python312\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;C:\Program Files (x86)\Microsoft Visual Studio\Installer;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-19T21:15:09.9019387Z   Platform: x64
+2026-10-19T21:15:09.9019542Z   UCRTVersion: 10.0.26100.0
+2026-10-19T21:15:09.9019774Z   UniversalCRTSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-19T21:15:09.9020151Z   VCIDEInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\
+2026-10-19T21:15:09.9020560Z   VCINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\
+2026-10-19T21:15:09.9020938Z   VCPKG_ROOT: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-19T21:15:09.9021378Z   VCToolsInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\
+2026-10-19T21:15:09.9021886Z   VCToolsRedistDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.44.35112\
+2026-10-19T21:15:09.9022249Z   VCToolsVersion: 14.44.35207
+2026-10-19T21:15:09.9022438Z   VisualStudioVersion: 17.0
+2026-10-19T21:15:09.9022719Z   VS170COMNTOOLS: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\
+2026-10-19T21:15:09.9023039Z   VSCMD_ARG_app_plat: Desktop
+2026-10-19T21:15:09.9023219Z   VSCMD_ARG_HOST_ARCH: x64
+2026-10-19T21:15:09.9023396Z   VSCMD_ARG_TGT_ARCH: x64
+2026-10-19T21:15:09.9023564Z   VSCMD_VER: 17.14.41
+2026-10-19T21:15:09.9023804Z   VSINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\
+2026-10-19T21:15:09.9024344Z   WindowsLibPath: C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0
+2026-10-19T21:15:09.9024842Z   WindowsSdkBinPath: C:\Program Files (x86)\Windows Kits\10\bin\
+2026-10-19T21:15:09.9025764Z   WindowsSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-19T21:15:09.9026031Z   WindowsSDKLibVersion: 10.0.26100.0\
+2026-10-19T21:15:09.9026330Z   WindowsSdkVerBinPath: C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\
+2026-10-19T21:15:09.9026633Z   WindowsSDKVersion: 10.0.26100.0\
+2026-10-19T21:15:09.9026992Z   WindowsSDK_ExecutablePath_x64: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\
+2026-10-19T21:15:09.9027520Z   WindowsSDK_ExecutablePath_x86: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\
+2026-10-19T21:15:09.9027871Z   __DOTNET_ADD_64BIT: 1
+2026-10-19T21:15:09.9028044Z   __DOTNET_PREFERRED_BITNESS: 64
+2026-10-19T21:15:09.9033093Z   __VSCMD_PREINIT_PATH: C:\Program Files (x86)\DVC (Data Version Control);/mingw64/bin:/usr/bin:/c/Users/ContainerAdministrator/bin:/c/Users/ContainerAdministrator/AppData/Roaming/Python/Python312/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64:/c/vcpkg:/c/Python313/Scripts:/c/Python313:/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Users/ContainerAdministrator/AppData/Local/Microsoft/WindowsApps:/c/home/runner:/c/ProgramData/chocolatey/bin:/cmd:/c/Program Files/GitHub CLI:/c/Program Files/PowerShell/7:/bin:/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files/CMake/bin:/c/Program Files/dotnet:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/c/Users/ContainerAdministrator/.dotnet/tools;C:\Strawberry\c\bin;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python312\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files (x86)\DVC (Data Version Control);;C:\Program Files (x86)\DVC (Data Version Control);C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;;C:\Program Files (x86)\Microsoft Visual Studio\Installer
+2026-10-19T21:15:09.9038249Z ##[endgroup]
+2026-10-19T21:15:10.3848634Z Assuming role with OIDC
+2026-10-19T21:15:10.4560323Z Assuming role with OIDC
+2026-10-19T21:15:10.4789204Z Authenticated as assumedRoleId AROA2CUNLVLC2OKHDZ7AE:GitHubActions
+2026-10-19T21:15:10.5502104Z ##[end-action id=__self.__aws-actions_configure-aws-credentials;outcome=success;conclusion=success;duration_ms=671]
+2026-10-19T21:15:10.5672544Z ##[group]Run python build_tools/github_actions/post_stage_upload.py \
+2026-10-19T21:15:10.5672991Z [36;1mpython build_tools/github_actions/post_stage_upload.py \[0m
+2026-10-19T21:15:10.5673285Z [36;1m  --run-id=39309629364 \[0m
+2026-10-19T21:15:10.5673500Z [36;1m  --stage="${STAGE_NAME}" \[0m
+2026-10-19T21:15:10.5673708Z [36;1m  --build-dir="${BUILD_DIR}" \[0m
+2026-10-19T21:15:10.5673954Z [36;1m  --amdgpu-family="${AMDGPU_FAMILIES}"[0m
+2026-10-19T21:15:10.5819261Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-19T21:15:10.5819582Z env:
+2026-10-19T21:15:10.5819820Z   QUARTZ_REPORTING_WORKFLOW: multi_arch_build_windows_artifacts.yml
+2026-10-19T21:15:10.5820142Z   QUARTZ_WORKFLOW_POSTFIX: - build ROCm artifacts
+2026-10-19T21:15:10.5820629Z   DIST_AMDGPU_FAMILIES: gfx110X-all;gfx1151;gfx120X-all;gfx90a;gfx900;gfx90c;gfx906;gfx908;gfx101X-dgpu;gfx103X-all;gfx1150;gfx1152;gfx1153
+2026-10-19T21:15:10.5821132Z   AMDGPU_FAMILIES: gfx101X-dgpu
+2026-10-19T21:15:10.5821429Z   ROCM_PACKAGE_VERSION: 10.2.0.dev0+78f5b35cdeaba13c7cbcb5abef75267de93274a7
+2026-10-19T21:15:10.5821728Z   RELEASE_TYPE: dev
+2026-10-19T21:15:10.5821896Z   REBUILD_ARTIFACTS: 
+2026-10-19T21:15:10.5822068Z   STAGE_NAME: math-libs
+2026-10-19T21:15:10.5822328Z   CCACHE_CONFIGPATH: C:\home\runner\_work\TheRock\TheRock/.ccache/ccache.conf
+2026-10-19T21:15:10.5822633Z   TEATIME_FORCE_INTERACTIVE: 0
+2026-10-19T21:15:10.5822824Z   EXTERNAL_FETCH_SOURCES_ARGS: 
+2026-10-19T21:15:10.5823021Z   EXTERNAL_REPO_CONFIG: 
+2026-10-19T21:15:10.5823192Z   BUILD_DIR: B:\build
+2026-10-19T21:15:10.5823392Z   CACHE_DIR: C:\home\runner\_work\TheRock\TheRock/.cache
+2026-10-19T21:15:10.5823689Z   pythonLocation: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:10.5824035Z   PKG_CONFIG_PATH: C:\home\runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-19T21:15:10.5824376Z   Python_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:10.5824686Z   Python2_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:10.5824991Z   Python3_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:10.5825261Z   CommandPromptType: Native
+2026-10-19T21:15:10.5825568Z   DevEnvDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\
+2026-10-19T21:15:10.5825976Z   ExtensionSdkDir: C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs
+2026-10-19T21:15:10.5827778Z   EXTERNAL_INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-19T21:15:10.5830861Z   Framework40Version: v4.0
+2026-10-19T21:15:10.5831092Z   FrameworkDir: C:\Windows\Microsoft.NET\Framework64\
+2026-10-19T21:15:10.5831375Z   FrameworkDir64: C:\Windows\Microsoft.NET\Framework64\
+2026-10-19T21:15:10.5831629Z   FrameworkVersion: v4.0.30319
+2026-10-19T21:15:10.5831830Z   FrameworkVersion64: v4.0.30319
+2026-10-19T21:15:10.5834426Z   INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-19T21:15:10.5836871Z   LIB: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.26100.0\\um\x64
+2026-10-19T21:15:10.5838855Z   LIBPATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+2026-10-19T21:15:10.5840140Z   NETFXSDKDir: C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\
+2026-10-19T21:15:10.5848775Z   PATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\Roslyn;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\DiagnosticsHub\Collector;C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\;C:\Program Files (x86)\DVC (Data Version Control);/mingw64/bin:/usr/bin:/c/Users/ContainerAdministrator/bin:/c/Users/ContainerAdministrator/AppData/Roaming/Python/Python312/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64:/c/vcpkg:/c/Python313/Scripts:/c/Python313:/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Users/ContainerAdministrator/AppData/Local/Microsoft/WindowsApps:/c/home/runner:/c/ProgramData/chocolatey/bin:/cmd:/c/Program Files/GitHub CLI:/c/Program Files/PowerShell/7:/bin:/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files/CMake/bin:/c/Program Files/dotnet:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/c/Users/ContainerAdministrator/.dotnet/tools;C:\Strawberry\c\bin;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python312\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;C:\Program Files (x86)\Microsoft Visual Studio\Installer;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-19T21:15:10.5857113Z   Platform: x64
+2026-10-19T21:15:10.5857277Z   UCRTVersion: 10.0.26100.0
+2026-10-19T21:15:10.5857511Z   UniversalCRTSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-19T21:15:10.5857897Z   VCIDEInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\
+2026-10-19T21:15:10.5858303Z   VCINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\
+2026-10-19T21:15:10.5858753Z   VCPKG_ROOT: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-19T21:15:10.5859210Z   VCToolsInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\
+2026-10-19T21:15:10.5859730Z   VCToolsRedistDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.44.35112\
+2026-10-19T21:15:10.5860092Z   VCToolsVersion: 14.44.35207
+2026-10-19T21:15:10.5860284Z   VisualStudioVersion: 17.0
+2026-10-19T21:15:10.5860598Z   VS170COMNTOOLS: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\
+2026-10-19T21:15:10.5860938Z   VSCMD_ARG_app_plat: Desktop
+2026-10-19T21:15:10.5861135Z   VSCMD_ARG_HOST_ARCH: x64
+2026-10-19T21:15:10.5861329Z   VSCMD_ARG_TGT_ARCH: x64
+2026-10-19T21:15:10.5861507Z   VSCMD_VER: 17.14.41
+2026-10-19T21:15:10.5861764Z   VSINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\
+2026-10-19T21:15:10.5862294Z   WindowsLibPath: C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0
+2026-10-19T21:15:10.5862810Z   WindowsSdkBinPath: C:\Program Files (x86)\Windows Kits\10\bin\
+2026-10-19T21:15:10.5863142Z   WindowsSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-19T21:15:10.5863398Z   WindowsSDKLibVersion: 10.0.26100.0\
+2026-10-19T21:15:10.5863715Z   WindowsSdkVerBinPath: C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\
+2026-10-19T21:15:10.5864033Z   WindowsSDKVersion: 10.0.26100.0\
+2026-10-19T21:15:10.5864402Z   WindowsSDK_ExecutablePath_x64: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\
+2026-10-19T21:15:10.5864936Z   WindowsSDK_ExecutablePath_x86: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\
+2026-10-19T21:15:10.5865300Z   __DOTNET_ADD_64BIT: 1
+2026-10-19T21:15:10.5865499Z   __DOTNET_PREFERRED_BITNESS: 64
+2026-10-19T21:15:10.5870730Z   __VSCMD_PREINIT_PATH: C:\Program Files (x86)\DVC (Data Version Control);/mingw64/bin:/usr/bin:/c/Users/ContainerAdministrator/bin:/c/Users/ContainerAdministrator/AppData/Roaming/Python/Python312/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64:/c/vcpkg:/c/Python313/Scripts:/c/Python313:/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Users/ContainerAdministrator/AppData/Local/Microsoft/WindowsApps:/c/home/runner:/c/ProgramData/chocolatey/bin:/cmd:/c/Program Files/GitHub CLI:/c/Program Files/PowerShell/7:/bin:/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files/CMake/bin:/c/Program Files/dotnet:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/c/Users/ContainerAdministrator/.dotnet/tools;C:\Strawberry\c\bin;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python312\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files (x86)\DVC (Data Version Control);;C:\Program Files (x86)\DVC (Data Version Control);C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;;C:\Program Files (x86)\Microsoft Visual Studio\Installer
+2026-10-19T21:15:10.5875869Z   AWS_DEFAULT_REGION: us-east-2
+2026-10-19T21:15:10.5876078Z   AWS_REGION: us-east-2
+2026-10-19T21:15:10.5876420Z   AWS_ACCESS_KEY_ID: ***
+2026-10-19T21:15:10.5876716Z   AWS_SECRET_ACCESS_KEY: ***
+2026-10-19T21:15:10.5880317Z   AWS_SESSION_TOKEN: ***
+2026-10-19T21:15:10.5880510Z ##[endgroup]
+2026-10-19T21:15:10.8031739Z Creating log archives for stage 'math-libs'
+2026-10-19T21:15:16.8094659Z [+] Archived: .ninja_log
+2026-10-19T21:15:16.8161837Z [+] Archived: math-libs\BLAS\hipBLAS\build\.ninja_log
+2026-10-19T21:15:16.8206640Z [+] Archived: math-libs\BLAS\hipBLAS-common\build\.ninja_log
+2026-10-19T21:15:16.8303055Z [+] Archived: math-libs\BLAS\hipBLASLt\build\.ninja_log
+2026-10-19T21:15:16.8356463Z [+] Archived: math-libs\BLAS\hipBLASLt\build\_deps\nanobind-subbuild\.ninja_log
+2026-10-19T21:15:16.8414974Z [+] Archived: math-libs\BLAS\hipSOLVER\build\.ninja_log
+2026-10-19T21:15:16.8846314Z [+] Archived: math-libs\BLAS\hipSOLVER\build\lapack-bin\.ninja_log
+2026-10-19T21:15:16.8912335Z [+] Archived: math-libs\BLAS\origami\build\.ninja_log
+2026-10-19T21:15:16.9003688Z [+] Archived: math-libs\BLAS\rocBLAS\build\.ninja_log
+2026-10-19T21:15:16.9095191Z [+] Archived: math-libs\BLAS\rocSOLVER\build\.ninja_log
+2026-10-19T21:15:16.9230693Z [+] Archived: math-libs\BLAS\rocSPARSE\build\.ninja_log
+2026-10-19T21:15:16.9300949Z [+] Archived: math-libs\hipCUB\build\.ninja_log
+2026-10-19T21:15:16.9349292Z [+] Archived: math-libs\hipFFT\build\.ninja_log
+2026-10-19T21:15:16.9406465Z [+] Archived: math-libs\hipRAND\build\.ninja_log
+2026-10-19T21:15:16.9449739Z [+] Archived: math-libs\hipthreads\build\.ninja_log
+2026-10-19T21:15:16.9627999Z [+] Archived: math-libs\libhipcxx\build\.ninja_log
+2026-10-19T21:15:16.9683072Z [+] Archived: math-libs\rocALUTION\build\.ninja_log
+2026-10-19T21:15:16.9753565Z [+] Archived: math-libs\rocFFT\build\.ninja_log
+2026-10-19T21:15:16.9801620Z [+] Archived: math-libs\rocFFT\build\_deps\sqlite_local-subbuild\.ninja_log
+2026-10-19T21:15:16.9851018Z [+] Archived: math-libs\rocPRIM\build\.ninja_log
+2026-10-19T21:15:16.9923554Z [+] Archived: math-libs\rocPRIM_tests\build\.ninja_log
+2026-10-19T21:15:16.9980864Z [+] Archived: math-libs\rocRAND\build\.ninja_log
+2026-10-19T21:15:17.0025397Z [+] Archived: math-libs\rocRAND\build\have_asm_incbin_test\.ninja_log
+2026-10-19T21:15:17.0115952Z [+] Archived: math-libs\rocThrust\build\.ninja_log
+2026-10-19T21:15:17.0171909Z [+] Archived: math-libs\rocThrust\build\_deps\googlebench-subbuild\.ninja_log
+2026-10-19T21:15:17.0214470Z [+] Archived: math-libs\rocWMMA\build\.ninja_log
+2026-10-19T21:15:17.0263583Z [+] Archived: math-libs\support\mxDataGenerator\build\.ninja_log
+2026-10-19T21:15:17.0310725Z [+] Archived: ml-libs\hipblasltprovider\build\.ninja_log
+2026-10-19T21:15:17.0406366Z [+] Archived: ml-libs\hipDNN\build\.ninja_log
+2026-10-19T21:15:17.0467873Z [+] Archived: ml-libs\hipdnn_integration_tests\build\.ninja_log
+2026-10-19T21:15:17.0523717Z [+] Archived: ml-libs\hipdnn_samples\build\.ninja_log
+2026-10-19T21:15:17.0589221Z [+] Archived: ml-libs\hipdnn_samples\build\example_engine_plugin-prefix\src\example_engine_plugin-build\.ninja_log
+2026-10-19T21:15:17.0642549Z [+] Archived: ml-libs\hipkernelprovider\build\.ninja_log
+2026-10-19T21:15:17.0772170Z [+] Archived: ml-libs\MIOpen\build\.ninja_log
+2026-10-19T21:15:17.0830501Z [+] Archived: ml-libs\miopenprovider\build\.ninja_log
+2026-10-19T21:15:17.0891624Z [+] Archived: third-party\Catch2\build\.ninja_log
+2026-10-19T21:15:17.0939297Z [+] Archived: third-party\eigen\build\.ninja_log
+2026-10-19T21:15:17.1002861Z [+] Archived: third-party\flatbuffers\build\.ninja_log
+2026-10-19T21:15:17.1052859Z [+] Archived: third-party\fmt\build\.ninja_log
+2026-10-19T21:15:17.1096115Z [+] Archived: third-party\frugally-deep\build\.ninja_log
+2026-10-19T21:15:17.1153045Z [+] Archived: third-party\FunctionalPlus\build\.ninja_log
+2026-10-19T21:15:17.1198672Z [+] Archived: third-party\googletest\build\.ninja_log
+2026-10-19T21:15:17.1246867Z [+] Archived: third-party\msgpack-cxx\build\.ninja_log
+2026-10-19T21:15:17.1289316Z [+] Archived: third-party\nlohmann-json\build\.ninja_log
+2026-10-19T21:15:17.1337083Z [+] Archived: third-party\spdlog\build\.ninja_log
+2026-10-19T21:15:17.1347548Z [INFO] Created ninja log archive: B:\build\logs\ninja_logs.tar.gz (45 files)
+2026-10-19T21:15:17.4253873Z [+] Archived ccache log: ccache.log
+2026-10-19T21:15:17.4289876Z [+] Archived ccache log: ccache_stats.log
+2026-10-19T21:15:17.4294399Z [INFO] Created ccache_logs.tar.zst (9MB from 2 files)
+2026-10-19T21:15:17.4295622Z Retrieving bucket info for workflow run...
+2026-10-19T21:15:17.4295958Z   github_repository: ROCm/TheRock
+2026-10-19T21:15:17.4296193Z   release_type: dev
+2026-10-19T21:15:17.4630037Z   is_pr_from_fork: False
+2026-10-19T21:15:17.4630308Z   bucket: therock-dev-artifacts
+2026-10-19T21:15:17.4784614Z INFO:_therock_utils.storage_backend:upload_directory: B:\build\logs -> therock-dev-artifacts/39309629364-windows/logs/math-libs/gfx101X-dgpu (117 files)
+2026-10-19T21:15:17.4785189Z INFO:_therock_utils.storage_backend:  ccache_logs.tar.zst
+2026-10-19T21:15:17.4785981Z INFO:_therock_utils.storage_backend:  hipBLAS-common_build.log
+2026-10-19T21:15:17.4786377Z INFO:_therock_utils.storage_backend:  hipBLAS-common_configure.log
+2026-10-19T21:15:17.4786729Z INFO:_therock_utils.storage_backend:  hipBLAS-common_install.log
+2026-10-19T21:15:17.4787088Z INFO:_therock_utils.storage_backend:  hipBLAS_build.log
+2026-10-19T21:15:17.4787635Z INFO:_therock_utils.storage_backend:  hipBLAS_configure.log
+2026-10-19T21:15:17.4788026Z INFO:_therock_utils.storage_backend:  hipBLAS_install.log
+2026-10-19T21:15:17.4788340Z INFO:_therock_utils.storage_backend:  hipBLASLt_build.log
+2026-10-19T21:15:17.4788714Z INFO:_therock_utils.storage_backend:  hipBLASLt_configure.log
+2026-10-19T21:15:17.4789128Z INFO:_therock_utils.storage_backend:  hipBLASLt_install.log
+2026-10-19T21:15:17.4789588Z INFO:_therock_utils.storage_backend:  hipblasltprovider_build.log
+2026-10-19T21:15:17.4789961Z INFO:_therock_utils.storage_backend:  hipblasltprovider_configure.log
+2026-10-19T21:15:17.4790389Z INFO:_therock_utils.storage_backend:  hipblasltprovider_install.log
+2026-10-19T21:15:17.4790771Z INFO:_therock_utils.storage_backend:  hipCUB_build.log
+2026-10-19T21:15:17.4791182Z INFO:_therock_utils.storage_backend:  hipCUB_configure.log
+2026-10-19T21:15:17.4791605Z INFO:_therock_utils.storage_backend:  hipCUB_install.log
+2026-10-19T21:15:17.4791993Z INFO:_therock_utils.storage_backend:  hipDNN_build.log
+2026-10-19T21:15:17.4792395Z INFO:_therock_utils.storage_backend:  hipDNN_configure.log
+2026-10-19T21:15:17.4792975Z INFO:_therock_utils.storage_backend:  hipDNN_install.log
+2026-10-19T21:15:17.4793301Z INFO:_therock_utils.storage_backend:  hipdnn_integration_tests_build.log
+2026-10-19T21:15:17.4793701Z INFO:_therock_utils.storage_backend:  hipdnn_integration_tests_configure.log
+2026-10-19T21:15:17.4794081Z INFO:_therock_utils.storage_backend:  hipdnn_integration_tests_install.log
+2026-10-19T21:15:17.4794502Z INFO:_therock_utils.storage_backend:  hipDNN_samples_build.log
+2026-10-19T21:15:17.4794917Z INFO:_therock_utils.storage_backend:  hipDNN_samples_configure.log
+2026-10-19T21:15:17.4795291Z INFO:_therock_utils.storage_backend:  hipDNN_samples_install.log
+2026-10-19T21:15:17.4795637Z INFO:_therock_utils.storage_backend:  hipFFT_build.log
+2026-10-19T21:15:17.4796817Z INFO:_therock_utils.storage_backend:  hipFFT_configure.log
+2026-10-19T21:15:17.4797133Z INFO:_therock_utils.storage_backend:  hipFFT_install.log
+2026-10-19T21:15:17.4797450Z INFO:_therock_utils.storage_backend:  hipkernelprovider_build.log
+2026-10-19T21:15:17.4797805Z INFO:_therock_utils.storage_backend:  hipkernelprovider_configure.log
+2026-10-19T21:15:17.4798164Z INFO:_therock_utils.storage_backend:  hipkernelprovider_install.log
+2026-10-19T21:15:17.4798478Z INFO:_therock_utils.storage_backend:  hipRAND_build.log
+2026-10-19T21:15:17.4798775Z INFO:_therock_utils.storage_backend:  hipRAND_configure.log
+2026-10-19T21:15:17.4799073Z INFO:_therock_utils.storage_backend:  hipRAND_install.log
+2026-10-19T21:15:17.4799357Z INFO:_therock_utils.storage_backend:  hipSOLVER_build.log
+2026-10-19T21:15:17.4799662Z INFO:_therock_utils.storage_backend:  hipSOLVER_configure.log
+2026-10-19T21:15:17.4799981Z INFO:_therock_utils.storage_backend:  hipSOLVER_install.log
+2026-10-19T21:15:17.4800370Z INFO:_therock_utils.storage_backend:  hipSPARSE_configure.log
+2026-10-19T21:15:17.4800753Z INFO:_therock_utils.storage_backend:  hipthreads_build.log
+2026-10-19T21:15:17.4801121Z INFO:_therock_utils.storage_backend:  hipthreads_configure.log
+2026-10-19T21:15:17.4801514Z INFO:_therock_utils.storage_backend:  hipthreads_install.log
+2026-10-19T21:15:17.4801889Z INFO:_therock_utils.storage_backend:  libhipcxx_build.log
+2026-10-19T21:15:17.4802221Z INFO:_therock_utils.storage_backend:  libhipcxx_configure.log
+2026-10-19T21:15:17.4802612Z INFO:_therock_utils.storage_backend:  libhipcxx_install.log
+2026-10-19T21:15:17.4802985Z INFO:_therock_utils.storage_backend:  MIOpen_build.log
+2026-10-19T21:15:17.4803379Z INFO:_therock_utils.storage_backend:  MIOpen_configure.log
+2026-10-19T21:15:17.4803756Z INFO:_therock_utils.storage_backend:  MIOpen_install.log
+2026-10-19T21:15:17.4804139Z INFO:_therock_utils.storage_backend:  miopenprovider_build.log
+2026-10-19T21:15:17.4804533Z INFO:_therock_utils.storage_backend:  miopenprovider_configure.log
+2026-10-19T21:15:17.4804888Z INFO:_therock_utils.storage_backend:  miopenprovider_install.log
+2026-10-19T21:15:17.4805284Z INFO:_therock_utils.storage_backend:  mxDataGenerator_build.log
+2026-10-19T21:15:17.4805669Z INFO:_therock_utils.storage_backend:  mxDataGenerator_configure.log
+2026-10-19T21:15:17.4806024Z INFO:_therock_utils.storage_backend:  mxDataGenerator_install.log
+2026-10-19T21:15:17.4806422Z INFO:_therock_utils.storage_backend:  ninja_logs.tar.gz
+2026-10-19T21:15:17.4806788Z INFO:_therock_utils.storage_backend:  origami_build.log
+2026-10-19T21:15:17.4807195Z INFO:_therock_utils.storage_backend:  origami_configure.log
+2026-10-19T21:15:17.4807572Z INFO:_therock_utils.storage_backend:  origami_install.log
+2026-10-19T21:15:17.4807974Z INFO:_therock_utils.storage_backend:  rocALUTION_build.log
+2026-10-19T21:15:17.4808366Z INFO:_therock_utils.storage_backend:  rocALUTION_configure.log
+2026-10-19T21:15:17.4808738Z INFO:_therock_utils.storage_backend:  rocALUTION_install.log
+2026-10-19T21:15:17.4809128Z INFO:_therock_utils.storage_backend:  rocBLAS_build.log
+2026-10-19T21:15:17.4809519Z INFO:_therock_utils.storage_backend:  rocBLAS_configure.log
+2026-10-19T21:15:17.4810012Z INFO:_therock_utils.storage_backend:  rocBLAS_install.log
+2026-10-19T21:15:17.4810329Z INFO:_therock_utils.storage_backend:  rocFFT_build.log
+2026-10-19T21:15:17.4810705Z INFO:_therock_utils.storage_backend:  rocFFT_configure.log
+2026-10-19T21:15:17.4811104Z INFO:_therock_utils.storage_backend:  rocFFT_install.log
+2026-10-19T21:15:17.4811473Z INFO:_therock_utils.storage_backend:  rocPRIM_build.log
+2026-10-19T21:15:17.4811887Z INFO:_therock_utils.storage_backend:  rocPRIM_configure.log
+2026-10-19T21:15:17.4812239Z INFO:_therock_utils.storage_backend:  rocPRIM_install.log
+2026-10-19T21:15:17.4812625Z INFO:_therock_utils.storage_backend:  rocPRIM_tests_build.log
+2026-10-19T21:15:17.4813034Z INFO:_therock_utils.storage_backend:  rocPRIM_tests_configure.log
+2026-10-19T21:15:17.4813410Z INFO:_therock_utils.storage_backend:  rocPRIM_tests_install.log
+2026-10-19T21:15:17.4814133Z INFO:_therock_utils.storage_backend:  rocRAND_build.log
+2026-10-19T21:15:17.4814444Z INFO:_therock_utils.storage_backend:  rocRAND_configure.log
+2026-10-19T21:15:17.4814751Z INFO:_therock_utils.storage_backend:  rocRAND_install.log
+2026-10-19T21:15:17.4815056Z INFO:_therock_utils.storage_backend:  rocSOLVER_build.log
+2026-10-19T21:15:17.4815420Z INFO:_therock_utils.storage_backend:  rocSOLVER_configure.log
+2026-10-19T21:15:17.4815793Z INFO:_therock_utils.storage_backend:  rocSOLVER_install.log
+2026-10-19T21:15:17.4816157Z INFO:_therock_utils.storage_backend:  rocSPARSE_build.log
+2026-10-19T21:15:17.4816489Z INFO:_therock_utils.storage_backend:  rocSPARSE_configure.log
+2026-10-19T21:15:17.4816903Z INFO:_therock_utils.storage_backend:  rocSPARSE_install.log
+2026-10-19T21:15:17.4817300Z INFO:_therock_utils.storage_backend:  rocThrust_build.log
+2026-10-19T21:15:17.4817736Z INFO:_therock_utils.storage_backend:  rocThrust_configure.log
+2026-10-19T21:15:17.4818140Z INFO:_therock_utils.storage_backend:  rocThrust_install.log
+2026-10-19T21:15:17.4818525Z INFO:_therock_utils.storage_backend:  rocWMMA_build.log
+2026-10-19T21:15:17.4818944Z INFO:_therock_utils.storage_backend:  rocWMMA_configure.log
+2026-10-19T21:15:17.4819325Z INFO:_therock_utils.storage_backend:  rocWMMA_install.log
+2026-10-19T21:15:17.4819749Z INFO:_therock_utils.storage_backend:  therock-catch2_build.log
+2026-10-19T21:15:17.4820142Z INFO:_therock_utils.storage_backend:  therock-catch2_configure.log
+2026-10-19T21:15:17.4820499Z INFO:_therock_utils.storage_backend:  therock-catch2_install.log
+2026-10-19T21:15:17.4820912Z INFO:_therock_utils.storage_backend:  therock-eigen_build.log
+2026-10-19T21:15:17.4821301Z INFO:_therock_utils.storage_backend:  therock-eigen_configure.log
+2026-10-19T21:15:17.4821695Z INFO:_therock_utils.storage_backend:  therock-eigen_install.log
+2026-10-19T21:15:17.4822082Z INFO:_therock_utils.storage_backend:  therock-flatbuffers_build.log
+2026-10-19T21:15:17.4822465Z INFO:_therock_utils.storage_backend:  therock-flatbuffers_configure.log
+2026-10-19T21:15:17.4822842Z INFO:_therock_utils.storage_backend:  therock-flatbuffers_install.log
+2026-10-19T21:15:17.4823231Z INFO:_therock_utils.storage_backend:  therock-fmt_build.log
+2026-10-19T21:15:17.4823623Z INFO:_therock_utils.storage_backend:  therock-fmt_configure.log
+2026-10-19T21:15:17.4824007Z INFO:_therock_utils.storage_backend:  therock-fmt_install.log
+2026-10-19T21:15:17.4824423Z INFO:_therock_utils.storage_backend:  therock-frugally-deep_build.log
+2026-10-19T21:15:17.4824812Z INFO:_therock_utils.storage_backend:  therock-frugally-deep_configure.log
+2026-10-19T21:15:17.4825206Z INFO:_therock_utils.storage_backend:  therock-frugally-deep_install.log
+2026-10-19T21:15:17.4825568Z INFO:_therock_utils.storage_backend:  therock-FunctionalPlus_build.log
+2026-10-19T21:15:17.4825959Z INFO:_therock_utils.storage_backend:  therock-FunctionalPlus_configure.log
+2026-10-19T21:15:17.4826350Z INFO:_therock_utils.storage_backend:  therock-FunctionalPlus_install.log
+2026-10-19T21:15:17.4826772Z INFO:_therock_utils.storage_backend:  therock-googletest_build.log
+2026-10-19T21:15:17.4827288Z INFO:_therock_utils.storage_backend:  therock-googletest_configure.log
+2026-10-19T21:15:17.4827657Z INFO:_therock_utils.storage_backend:  therock-googletest_install.log
+2026-10-19T21:15:17.4828065Z INFO:_therock_utils.storage_backend:  therock-msgpack-cxx_build.log
+2026-10-19T21:15:17.4828467Z INFO:_therock_utils.storage_backend:  therock-msgpack-cxx_configure.log
+2026-10-19T21:15:17.4828838Z INFO:_therock_utils.storage_backend:  therock-msgpack-cxx_install.log
+2026-10-19T21:15:17.4829260Z INFO:_therock_utils.storage_backend:  therock-nlohmann-json_build.log
+2026-10-19T21:15:17.4829707Z INFO:_therock_utils.storage_backend:  therock-nlohmann-json_configure.log
+2026-10-19T21:15:17.4830165Z INFO:_therock_utils.storage_backend:  therock-nlohmann-json_install.log
+2026-10-19T21:15:17.4830538Z INFO:_therock_utils.storage_backend:  therock-spdlog_build.log
+2026-10-19T21:15:17.4830992Z INFO:_therock_utils.storage_backend:  therock-spdlog_configure.log
+2026-10-19T21:15:17.4831341Z INFO:_therock_utils.storage_backend:  therock-spdlog_install.log
+2026-10-19T21:15:17.7357850Z INFO:botocore.credentials:Found credentials in environment variables.
+2026-10-19T21:15:17.7375774Z INFO:botocore.credentials:Found credentials in environment variables.
+2026-10-19T21:15:17.7380931Z INFO:botocore.credentials:Found credentials in environment variables.
+2026-10-19T21:15:17.7382001Z INFO:botocore.credentials:Found credentials in environment variables.
+2026-10-19T21:15:17.7382633Z INFO:botocore.credentials:Found credentials in environment variables.
+2026-10-19T21:15:17.7384389Z INFO:botocore.credentials:Found credentials in environment variables.
+2026-10-19T21:15:17.7386089Z INFO:botocore.credentials:Found credentials in environment variables.
+2026-10-19T21:15:17.7387055Z INFO:botocore.credentials:Found credentials in environment variables.
+2026-10-19T21:15:17.7388858Z INFO:botocore.credentials:Found credentials in environment variables.
+2026-10-19T21:15:17.7389860Z INFO:botocore.credentials:Found credentials in environment variables.
+2026-10-19T21:15:22.2962584Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-19T21:15:22.2963040Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-19T21:15:22.3116276Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-19T21:15:22.3116616Z env:
+2026-10-19T21:15:22.3116863Z   QUARTZ_REPORTING_WORKFLOW: multi_arch_build_windows_artifacts.yml
+2026-10-19T21:15:22.3117187Z   QUARTZ_WORKFLOW_POSTFIX: - build ROCm artifacts
+2026-10-19T21:15:22.3117673Z   DIST_AMDGPU_FAMILIES: gfx110X-all;gfx1151;gfx120X-all;gfx90a;gfx900;gfx90c;gfx906;gfx908;gfx101X-dgpu;gfx103X-all;gfx1150;gfx1152;gfx1153
+2026-10-19T21:15:22.3118130Z   AMDGPU_FAMILIES: gfx101X-dgpu
+2026-10-19T21:15:22.3118429Z   ROCM_PACKAGE_VERSION: 10.2.0.dev0+78f5b35cdeaba13c7cbcb5abef75267de93274a7
+2026-10-19T21:15:22.3118725Z   RELEASE_TYPE: dev
+2026-10-19T21:15:22.3118886Z   REBUILD_ARTIFACTS: 
+2026-10-19T21:15:22.3119085Z   STAGE_NAME: math-libs
+2026-10-19T21:15:22.3119376Z   CCACHE_CONFIGPATH: C:\home\runner\_work\TheRock\TheRock/.ccache/ccache.conf
+2026-10-19T21:15:22.3119682Z   TEATIME_FORCE_INTERACTIVE: 0
+2026-10-19T21:15:22.3119875Z   EXTERNAL_FETCH_SOURCES_ARGS: 
+2026-10-19T21:15:22.3120068Z   EXTERNAL_REPO_CONFIG: 
+2026-10-19T21:15:22.3120247Z   BUILD_DIR: B:\build
+2026-10-19T21:15:22.3120443Z   CACHE_DIR: C:\home\runner\_work\TheRock\TheRock/.cache
+2026-10-19T21:15:22.3120748Z   pythonLocation: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:22.3121094Z   PKG_CONFIG_PATH: C:\home\runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-19T21:15:22.3121435Z   Python_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:22.3121751Z   Python2_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:22.3122059Z   Python3_ROOT_DIR: C:\home\runner\_work\_tool\Python\3.12.10\x64
+2026-10-19T21:15:22.3122324Z   CommandPromptType: Native
+2026-10-19T21:15:22.3122865Z   DevEnvDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\
+2026-10-19T21:15:22.3123274Z   ExtensionSdkDir: C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs
+2026-10-19T21:15:22.3125084Z   EXTERNAL_INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-19T21:15:22.3126772Z   Framework40Version: v4.0
+2026-10-19T21:15:22.3126997Z   FrameworkDir: C:\Windows\Microsoft.NET\Framework64\
+2026-10-19T21:15:22.3127280Z   FrameworkDir64: C:\Windows\Microsoft.NET\Framework64\
+2026-10-19T21:15:22.3127524Z   FrameworkVersion: v4.0.30319
+2026-10-19T21:15:22.3127719Z   FrameworkVersion64: v4.0.30319
+2026-10-19T21:15:22.3129360Z   INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+2026-10-19T21:15:22.3132886Z   LIB: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.26100.0\\um\x64
+2026-10-19T21:15:22.3134950Z   LIBPATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+2026-10-19T21:15:22.3136252Z   NETFXSDKDir: C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\
+2026-10-19T21:15:22.3144990Z   PATH: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\Roslyn;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\DiagnosticsHub\Collector;C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\;C:\Program Files (x86)\DVC (Data Version Control);/mingw64/bin:/usr/bin:/c/Users/ContainerAdministrator/bin:/c/Users/ContainerAdministrator/AppData/Roaming/Python/Python312/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64:/c/vcpkg:/c/Python313/Scripts:/c/Python313:/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Users/ContainerAdministrator/AppData/Local/Microsoft/WindowsApps:/c/home/runner:/c/ProgramData/chocolatey/bin:/cmd:/c/Program Files/GitHub CLI:/c/Program Files/PowerShell/7:/bin:/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files/CMake/bin:/c/Program Files/dotnet:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/c/Users/ContainerAdministrator/.dotnet/tools;C:\Strawberry\c\bin;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python312\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;C:\Program Files (x86)\Microsoft Visual Studio\Installer;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-19T21:15:22.3153499Z   Platform: x64
+2026-10-19T21:15:22.3153673Z   UCRTVersion: 10.0.26100.0
+2026-10-19T21:15:22.3153910Z   UniversalCRTSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-19T21:15:22.3154294Z   VCIDEInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\
+2026-10-19T21:15:22.3154720Z   VCINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\
+2026-10-19T21:15:22.3155095Z   VCPKG_ROOT: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg
+2026-10-19T21:15:22.3155547Z   VCToolsInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\
+2026-10-19T21:15:22.3156056Z   VCToolsRedistDir: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.44.35112\
+2026-10-19T21:15:22.3156416Z   VCToolsVersion: 14.44.35207
+2026-10-19T21:15:22.3156610Z   VisualStudioVersion: 17.0
+2026-10-19T21:15:22.3156917Z   VS170COMNTOOLS: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\
+2026-10-19T21:15:22.3157253Z   VSCMD_ARG_app_plat: Desktop
+2026-10-19T21:15:22.3157445Z   VSCMD_ARG_HOST_ARCH: x64
+2026-10-19T21:15:22.3157623Z   VSCMD_ARG_TGT_ARCH: x64
+2026-10-19T21:15:22.3157805Z   VSCMD_VER: 17.14.41
+2026-10-19T21:15:22.3158045Z   VSINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Community\
+2026-10-19T21:15:22.3158577Z   WindowsLibPath: C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0
+2026-10-19T21:15:22.3159084Z   WindowsSdkBinPath: C:\Program Files (x86)\Windows Kits\10\bin\
+2026-10-19T21:15:22.3159385Z   WindowsSdkDir: C:\Program Files (x86)\Windows Kits\10\
+2026-10-19T21:15:22.3159641Z   WindowsSDKLibVersion: 10.0.26100.0\
+2026-10-19T21:15:22.3159935Z   WindowsSdkVerBinPath: C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\
+2026-10-19T21:15:22.3160351Z   WindowsSDKVersion: 10.0.26100.0\
+2026-10-19T21:15:22.3160710Z   WindowsSDK_ExecutablePath_x64: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\
+2026-10-19T21:15:22.3161229Z   WindowsSDK_ExecutablePath_x86: C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\
+2026-10-19T21:15:22.3161589Z   __DOTNET_ADD_64BIT: 1
+2026-10-19T21:15:22.3161760Z   __DOTNET_PREFERRED_BITNESS: 64
+2026-10-19T21:15:22.3166729Z   __VSCMD_PREINIT_PATH: C:\Program Files (x86)\DVC (Data Version Control);/mingw64/bin:/usr/bin:/c/Users/ContainerAdministrator/bin:/c/Users/ContainerAdministrator/AppData/Roaming/Python/Python312/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64/Scripts:/c/home/runner/_work/_tool/Python/3.12.10/x64:/c/vcpkg:/c/Python313/Scripts:/c/Python313:/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Users/ContainerAdministrator/AppData/Local/Microsoft/WindowsApps:/c/home/runner:/c/ProgramData/chocolatey/bin:/cmd:/c/Program Files/GitHub CLI:/c/Program Files/PowerShell/7:/bin:/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files (x86)/DVC (Data Version Control):/c/Program Files/CMake/bin:/c/Program Files/dotnet:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/c/Users/ContainerAdministrator/.dotnet/tools;C:\Strawberry\c\bin;C:\Users\ContainerAdministrator\AppData\Roaming\Python\Python312\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64\Scripts;C:\home\runner\_work\_tool\Python\3.12.10\x64;C:\vcpkg;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\ContainerAdministrator\AppData\Local\Microsoft\WindowsApps;C:/home/runner;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;;C:\Program Files\Git\bin;C:\Program Files (x86)\DVC (Data Version Control);;C:\Program Files (x86)\DVC (Data Version Control);C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ContainerAdministrator\.dotnet\tools;;C:\Program Files (x86)\Microsoft Visual Studio\Installer
+2026-10-19T21:15:22.3171834Z   AWS_DEFAULT_REGION: us-east-2
+2026-10-19T21:15:22.3172028Z   AWS_REGION: us-east-2
+2026-10-19T21:15:22.3172370Z   AWS_ACCESS_KEY_ID: ***
+2026-10-19T21:15:22.3172811Z   AWS_SECRET_ACCESS_KEY: ***
+2026-10-19T21:15:22.3176452Z   AWS_SESSION_TOKEN: ***
+2026-10-19T21:15:22.3176631Z ##[endgroup]
+2026-10-19T21:15:22.4896196Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-19T21:15:22.5238108Z Post job cleanup.
+2026-10-19T21:15:22.5241338Z ##[start-action display=Configure AWS Credentials;id=__88d4b8c7-53dd-4942-a195-08e8e95dbfd1.__aws-actions_configure-aws-credentials]
+2026-10-19T21:15:22.5413243Z Post job cleanup.
+2026-10-19T21:15:22.9306831Z ##[end-action id=__88d4b8c7-53dd-4942-a195-08e8e95dbfd1.__aws-actions_configure-aws-credentials;outcome=success;conclusion=success;duration_ms=406]
+2026-10-19T21:15:22.9503196Z Post job cleanup.
+2026-10-19T21:15:23.0959617Z [command]"C:\Program Files\Git\cmd\git.exe" version
+2026-10-19T21:15:23.1341925Z git version 2.55.0.windows.5
+2026-10-19T21:15:23.1382843Z Copying 'C:\Users\ContainerAdministrator\.gitconfig' to 'C:\home\runner\_work\_temp\2e155a1a-6eaf-4032-89e7-a28ada9488f6\.gitconfig'
+2026-10-19T21:15:23.1409394Z Temporarily overriding HOME='C:\home\runner\_work\_temp\2e155a1a-6eaf-4032-89e7-a28ada9488f6' before making global git config changes
+2026-10-19T21:15:23.1409979Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T21:15:23.1420864Z [command]"C:\Program Files\Git\cmd\git.exe" config --global --add safe.directory C:\home\runner\_work\TheRock\TheRock
+2026-10-19T21:15:23.1898352Z Removing SSH command configuration
+2026-10-19T21:15:23.1909791Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T21:15:23.2394177Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-19T21:15:23.9505041Z Entering 'math-libs/libhipcxx'
+2026-10-19T21:15:24.0506523Z Entering 'rocm-libraries'
+2026-10-19T21:15:24.1591370Z Entering 'rocm-systems'
+2026-10-19T21:15:24.2891772Z Removing HTTP extra header
+2026-10-19T21:15:24.2930248Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T21:15:24.3324911Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-19T21:15:24.9556160Z Entering 'math-libs/libhipcxx'
+2026-10-19T21:15:25.0569365Z Entering 'rocm-libraries'
+2026-10-19T21:15:25.1695100Z Entering 'rocm-systems'
+2026-10-19T21:15:25.2878145Z Removing includeIf entries pointing to credentials config files
+2026-10-19T21:15:25.2890741Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T21:15:25.3303777Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-19T21:15:26.1643581Z Entering 'math-libs/libhipcxx'
+2026-10-19T21:15:26.2049699Z file:C:/home/runner/_work/TheRock/TheRock/.git/modules/libhipcxx/config	remote.origin.url
+2026-10-19T21:15:26.2279874Z Entering 'rocm-libraries'
+2026-10-19T21:15:26.2683497Z file:C:/home/runner/_work/TheRock/TheRock/.git/modules/rocm-libraries/config	remote.origin.url
+2026-10-19T21:15:26.2996604Z Entering 'rocm-systems'
+2026-10-19T21:15:26.3389665Z file:C:/home/runner/_work/TheRock/TheRock/.git/modules/rocm-systems/config	remote.origin.url
+2026-10-19T21:15:26.3793182Z [command]"C:\Program Files\Git\cmd\git.exe" config --file C:/home/runner/_work/TheRock/TheRock/.git/modules/libhipcxx/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T21:15:26.4197119Z [command]"C:\Program Files\Git\cmd\git.exe" config --file C:/home/runner/_work/TheRock/TheRock/.git/modules/rocm-libraries/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T21:15:26.4599871Z [command]"C:\Program Files\Git\cmd\git.exe" config --file C:/home/runner/_work/TheRock/TheRock/.git/modules/rocm-systems/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T21:15:26.5180197Z Evaluate and set job outputs
+2026-10-19T21:15:26.5185038Z Cleaning up orphan processes
+2026-10-19T21:15:26.5441742Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

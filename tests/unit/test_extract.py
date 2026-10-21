@@ -173,6 +173,32 @@ def test_ctest_segfault_line_gives_failing_test():
     assert r.failing_test == "tests.integration.execute.rocprofv3-test-hip-graph"
 
 
+def test_suite_summary_failures_are_extracted_in_full():
+    log = (
+        "2026-10-19 20:29:42,057 - INFO: [X] Total Failed Tests: 2\n"
+        "2026-10-19 20:29:42,057 - INFO: [~] Flaky Tests (passed after retry) (1):\n"
+        "2026-10-19 20:29:42,057 - INFO:        gdb.rocm/register-watchpoint.exp\n"
+        "2026-10-19 20:29:42,057 - INFO: [X] Unexpected Failures (2):\n"
+        "2026-10-19 20:29:42,057 - INFO:        gdb.rocm/multi-inferior-fork.exp\n"
+        "2026-10-19 20:29:42,057 - INFO:        gdb.rocm/multi-inferior-gpu.exp\n"
+        "2026-10-19 20:29:42,057 - INFO: [!] Unused Ignored Failures (1):\n"
+        "2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/pr13961.exp\n"
+        "Cleaning up orphan processes\n"
+    )
+    r = extract_errors(log)
+    assert r.first_error.kind == "test_suite_failed"
+    assert r.suite_failed == ["gdb.rocm/multi-inferior-fork.exp", "gdb.rocm/multi-inferior-gpu.exp"]
+    assert r.failing_test == "gdb.rocm/multi-inferior-fork.exp"
+    assert not any("Cleaning up" in c.text for c in r.candidates)
+
+
+def test_real_rocgdb_log():
+    log = (FIXTURES / "rocgdb_suite_summary_run-39314226932.txt").read_text(encoding="utf-8")
+    r = extract_errors(log)
+    assert r.first_error.kind == "test_suite_failed"
+    assert r.suite_failed == ["gdb.rocm/multi-inferior-fork.exp", "gdb.rocm/multi-inferior-gpu.exp"]
+
+
 def test_window_is_clamped_to_log_bounds():
     result = extract_errors("Segmentation fault\n")
     assert result.first_error.window == (1, 1)
