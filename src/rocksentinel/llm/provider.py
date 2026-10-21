@@ -3,7 +3,7 @@
 Agents depend on this interface, not on a vendor. Implementations:
 - ReplayProvider: returns recorded responses in order (deterministic, free, offline);
   used by tests and offline evals.
-- (later) an OpenAI-compatible provider for GitHub Models during development and
+- OpenAICompatibleProvider (openai_compat.py): Ollama locally or OpenAI during development, and
   Azure OpenAI with managed identity in Azure: same interface, config-only switch.
 """
 
@@ -64,8 +64,10 @@ class ReplayProvider:
     @classmethod
     def from_file(cls, path: str | Path) -> ReplayProvider:
         """Load a recording: a JSON list of {content?, tool_calls?: [{id,name,arguments}]}."""
-        rows = json.loads(Path(path).read_text(encoding="utf-8"))
-        return cls([
+        data = json.loads(Path(path).read_text(encoding="utf-8"))
+        rows = data["turns"] if isinstance(data, dict) else data   # RecordingProvider format
+        model = data.get("model", "replay") if isinstance(data, dict) else "replay"
+        return cls(model=f"replay:{model}", responses=[
             LLMResponse(
                 content=r.get("content"),
                 tool_calls=tuple(ToolCall(t["id"], t["name"], t.get("arguments", {}))

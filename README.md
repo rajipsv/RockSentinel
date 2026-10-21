@@ -23,6 +23,7 @@ src/rocksentinel/evals/runner.py         scores systems on the golden set
 src/rocksentinel/evals/labeler.py        proposes golden cases from real failures for human review
 src/rocksentinel/memory/                 memory MCP server: signatures, cases, instincts, feedback
 src/rocksentinel/llm/provider.py         LLMProvider interface + ReplayProvider (offline)
+src/rocksentinel/llm/openai_compat.py    live provider for Ollama / OpenAI / Azure OpenAI + recorder
 src/rocksentinel/harness/                agent loop, policy hooks, budgets, grounding
 src/rocksentinel/agents/triage.py        Triage agent (skill: skills/triage-therock/SKILL.md)
 src/rocksentinel/console/                Console API (framework-free) + local dev server
@@ -90,6 +91,15 @@ never writes to GitHub. In Azure, `web/` is served by Static Web Apps and
 ```
 Proposed labels come from B1's rules, so open each job's log and verify before accepting;
 accepting unchecked would grade B1 against itself. Only accepted cases are `confirmed`.
+
+## Live LLM configuration (agents)
+Agents use any OpenAI-compatible endpoint, configured in the git-ignored `.env`:
+```
+LLM_BASE_URL=http://localhost:11434/v1      # Ollama locally (no key needed)
+LLM_MODEL=qwen2.5:7b                         # a model that supports tool calling
+# LLM_API_KEY=...                            # for OpenAI or Azure OpenAI
+```
+Tests never call a model: they replay recorded turns.
 
 ## Run the tests
 ```bash

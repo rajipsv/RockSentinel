@@ -1,1 +1,1 @@
-"""LLM providers behind one interface (replay now; GitHub Models / Azure OpenAI later)."""
+"""LLM providers behind one interface (replay; OpenAI-compatible: Ollama, OpenAI, Azure)."""
