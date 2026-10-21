@@ -81,11 +81,14 @@ class OpenAICompatibleProvider:
         self.temperature = temperature
         self.max_retries = max_retries
 
-    def complete(self, messages: list[dict], tools: list[ToolSpec]) -> LLMResponse:
+    def complete(self, messages: list[dict], tools: list[ToolSpec],
+                 json_mode: bool = False) -> LLMResponse:
         body: dict = {"model": self.model, "messages": _to_openai_messages(messages),
                       "temperature": self.temperature}
         if tools:
             body["tools"] = _to_openai_tools(tools)
+        if json_mode:
+            body["response_format"] = {"type": "json_object"}
         for attempt in range(self.max_retries + 1):
             resp = self._http.post(f"{self.base_url}/chat/completions", json=body)
             if resp.status_code in (429, 500, 502, 503) and attempt < self.max_retries:
@@ -121,8 +124,9 @@ class RecordingProvider:
         self.model = getattr(inner, "model", "")
         self.turns: list[dict] = []
 
-    def complete(self, messages: list[dict], tools: list[ToolSpec]) -> LLMResponse:
-        r = self.inner.complete(messages, tools)
+    def complete(self, messages: list[dict], tools: list[ToolSpec],
+                 json_mode: bool = False) -> LLMResponse:
+        r = self.inner.complete(messages, tools, json_mode)
         self.turns.append({"content": r.content, "input_tokens": r.input_tokens,
                            "output_tokens": r.output_tokens,
                            "tool_calls": [asdict(c) for c in r.tool_calls]})

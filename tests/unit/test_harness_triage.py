@@ -118,6 +118,34 @@ def test_invalid_output_gets_one_repair(tools):
     assert triage(JOB, bad, tools).status == "invalid_output"
 
 
+def test_sloppy_arguments_are_coerced_or_rejected_clearly(tools):
+    # Recorded from a real llama3.2 run: string ids, invented and missing argument names.
+    provider = ReplayProvider([
+        call("get_job_log_windows", job_id=str(JOB_ID), max_candidates="3", verbose=True),
+        call("lookup_signature", error_line="x"),
+        call("map_job_to_family", job_name="Test x (gfx1151)"),
+        answer(),
+    ])
+    res = triage(JOB, provider, tools)
+    assert res.status == "ok"
+    assert res.tool_calls[0]["denied"] is None
+    dropped = {"type": "args_dropped", "tool": "get_job_log_windows", "names": ["verbose"]}
+    assert dropped in res.events
+    bad = [e for e in res.events if e["type"] == "invalid_arguments"]
+    assert [e["tool"] for e in bad] == ["lookup_signature", "map_job_to_family"]
+    assert "expected arguments: workflow, job_name, runner_label" in bad[1]["reason"]
+    assert provider.json_modes == [False, False, False, False]
+
+
+def test_repair_turn_uses_json_mode_without_tools(tools):
+    provider = ReplayProvider([call("get_job_log_windows", job_id=JOB_ID),
+                               LLMResponse(content='{"category": "regression", "evid'),
+                               answer()])
+    res = triage(JOB, provider, tools)
+    assert res.status == "ok"
+    assert provider.json_modes == [False, False, True]
+
+
 def test_tool_and_step_budgets(tools):
     spam = [call("get_job_log_windows", job_id=JOB_ID)] + [
         call("map_job_to_family", workflow="w", job_name="j") for _ in range(10)]

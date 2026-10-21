@@ -40,7 +40,8 @@ class ToolSpec:
 class LLMProvider(Protocol):
     model: str
 
-    def complete(self, messages: list[dict], tools: list[ToolSpec]) -> LLMResponse: ...
+    def complete(self, messages: list[dict], tools: list[ToolSpec],
+                 json_mode: bool = False) -> LLMResponse: ...
 
 
 class ReplayExhausted(RuntimeError):
@@ -54,9 +55,12 @@ class ReplayProvider:
         self.model = model
         self._responses = list(responses)
         self.calls: list[list[dict]] = []   # messages seen at each call, for assertions
+        self.json_modes: list[bool] = []
 
-    def complete(self, messages: list[dict], tools: list[ToolSpec]) -> LLMResponse:
+    def complete(self, messages: list[dict], tools: list[ToolSpec],
+                 json_mode: bool = False) -> LLMResponse:
         self.calls.append([dict(m) for m in messages])
+        self.json_modes.append(json_mode)
         if not self._responses:
             raise ReplayExhausted("no more recorded responses")
         return self._responses.pop(0)

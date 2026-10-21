@@ -7,6 +7,7 @@ schema validation with one repair attempt, and grounding of cited evidence.
 
 from __future__ import annotations
 
+import inspect
 import json
 import re
 from dataclasses import dataclass, field
@@ -47,6 +48,38 @@ def _pre_tool(spec: AgentSpec, call: ToolCall, used: list[str]) -> str | None:
     if len(used) >= spec.max_tool_calls:
         return f"tool-call budget ({spec.max_tool_calls}) exhausted; give your final answer"
     return None
+
+
+def _validate_args(spec: AgentSpec, call: ToolCall) -> tuple[dict, str | None, list[str]]:
+    """Coerce and check arguments against the tool's schema and Python signature.
+
+    Small models send numbers as strings or invent argument names; fixing obvious types
+    and dropping unknown names here keeps tool calls deterministic. Returns
+    (clean_args, error, dropped_names).
+    """
+    tool = spec.tools[call.name]
+    props = (tool.spec.parameters or {}).get("properties", {})
+    params = inspect.signature(tool.fn).parameters
+    accepts_any = any(p.kind is inspect.Parameter.VAR_KEYWORD for p in params.values())
+    clean, dropped = {}, []
+    for name, value in (call.arguments or {}).items():
+        if name not in params and not accepts_any:
+            dropped.append(name)
+            continue
+        if props.get(name, {}).get("type") == "integer" and isinstance(value, str):
+            try:
+                value = int(value.strip())
+            except ValueError:
+                return {}, f"argument '{name}' must be an integer", dropped
+        clean[name] = value
+    missing = [n for n, p in params.items()
+               if p.default is inspect.Parameter.empty
+               and p.kind in (p.POSITIONAL_OR_KEYWORD, p.KEYWORD_ONLY) and n not in clean]
+    if missing:
+        expected = ", ".join(params)
+        error = f"missing required argument(s) {missing}; expected arguments: {expected}"
+        return {}, error, dropped
+    return clean, None, dropped
 
 
 def _post_tool(spec: AgentSpec, result: Any) -> str:
@@ -94,7 +127,9 @@ def run_agent(spec: AgentSpec, provider: LLMProvider, task: str) -> AgentResult:
             res.events.append({"type": "token_budget", "limit": spec.max_input_tokens})
             return res
         res.steps += 1
-        reply = provider.complete(messages, spec.tool_specs())
+        # After an invalid final answer, the repair turn asks for strict JSON and offers no tools.
+        reply = (provider.complete(messages, [], json_mode=True) if repaired
+                 else provider.complete(messages, spec.tool_specs()))
         res.input_tokens += reply.input_tokens
         res.output_tokens += reply.output_tokens
 
@@ -103,15 +138,25 @@ def run_agent(spec: AgentSpec, provider: LLMProvider, task: str) -> AgentResult:
                              "tool_calls": [c.__dict__ for c in reply.tool_calls]})
             for call in reply.tool_calls:
                 denial = _pre_tool(spec, call, used)
+                args, arg_error, dropped = ({}, None, [])
+                if not denial:
+                    args, arg_error, dropped = _validate_args(spec, call)
+                    if dropped:
+                        res.events.append({"type": "args_dropped", "tool": call.name,
+                                           "names": dropped})
                 record = {"name": call.name, "arguments": call.arguments, "denied": denial}
                 if denial:
                     res.events.append({"type": "policy_denied", "tool": call.name,
                                        "reason": denial})
                     content = f"policy_denied: {denial}"
+                elif arg_error:
+                    res.events.append({"type": "invalid_arguments", "tool": call.name,
+                                       "reason": arg_error})
+                    content = f"invalid_arguments: {arg_error}"
                 else:
                     used.append(call.name)
                     try:
-                        text = _post_tool(spec, spec.tools[call.name].fn(**call.arguments))
+                        text = _post_tool(spec, spec.tools[call.name].fn(**args))
                     except Exception as exc:  # tool errors go back to the model as data
                         text = f"tool_error: {type(exc).__name__}: {exc}"
                     seen_outputs.append(text)

@@ -152,6 +152,16 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 
 **Found:** the plan was to use GitHub Models for free live development, but GitHub retired it on 2026-07-30 (verified in GitHub's docs before any token was created). Because agents depend on the `LLMProvider` interface, the fix was configuration only: point the same provider at a local Ollama model or at Azure.
 
+**First live runs (this commit):** Triage on golden-001 (rocsparse page fault) with `llama3.2` (3B) on a CPU-only laptop via Ollama. Recordings are in [evals/recordings/](../evals/recordings/).
+- **Run 1 (113 s):**
+  - the model called real tools within budget, but sent ids as strings, invented argument names, **hallucinated an error line** that isn't in the log, and twice produced truncated JSON;
+  - the harness rejected the output (`invalid_output`).
+- **Harness fixes from that run:**
+  - `pre_tool` now **validates and coerces arguments** against each tool's schema and signature: integer strings are converted, unknown names dropped, and missing arguments reported with the expected list;
+  - the **repair turn uses JSON mode with no tools**.
+- **Run 2 (203 s):** valid JSON this time, but the model **invented a category outside the allowed list** twice. The schema rejected it, and the run ended as `invalid_output` rather than a wrong answer.
+- **Conclusion:** the harness and live path work end to end and fail safe. A 3B CPU model isn't good enough for this task, so a fair Triage-vs-B1 eval needs a stronger model (Azure OpenAI in step 9; this laptop has about 7 GB of free disk, too little for a larger local model).
+
 **Interview talking point:** "A vendor sunset mid-project cost me no code changes. The agents talk to an interface, and one OpenAI-compatible provider covers a local model, OpenAI and Azure."
 
 **Interview talking point:** "I built and tested the harness before connecting any model. Every safety property (allowlist, budgets, redaction, grounding) is enforced in code and covered by replayed tests, including a prompt-injection attempt."

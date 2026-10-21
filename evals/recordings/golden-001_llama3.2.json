@@ -1,0 +1,91 @@
+{
+  "model": "llama3.2:latest",
+  "turns": [
+    {
+      "content": "",
+      "input_tokens": 1077,
+      "output_tokens": 30,
+      "tool_calls": [
+        {
+          "id": "call_z20uvdb7",
+          "name": "get_job_log_windows",
+          "arguments": {
+            "job_id": "118078343556",
+            "max_candidates": "1"
+          }
+        }
+      ]
+    },
+    {
+      "content": "",
+      "input_tokens": 841,
+      "output_tokens": 41,
+      "tool_calls": [
+        {
+          "id": "call_nyd3no31",
+          "name": "map_job_to_family",
+          "arguments": {
+            "job_name": "Test rocsparse / Test rocsparse (shard 2/3) (gfx1151)"
+          }
+        }
+      ]
+    },
+    {
+      "content": "",
+      "input_tokens": 929,
+      "output_tokens": 51,
+      "tool_calls": [
+        {
+          "id": "call_09ar3ls7",
+          "name": "lookup_signature",
+          "arguments": {
+            "error_line": "error: 1:1: error: invalid value for 'local memory' (expected a size in bytes, got a string)",
+            "component": "rocsparse"
+          }
+        }
+      ]
+    },
+    {
+      "content": "",
+      "input_tokens": 1021,
+      "output_tokens": 30,
+      "tool_calls": [
+        {
+          "id": "call_vsz86sw2",
+          "name": "job_history",
+          "arguments": {
+            "workflow": "test_artifacts.yml",
+            "job_id": "118078343556"
+          }
+        }
+      ]
+    },
+    {
+      "content": "{\"category\": \"regression\", \"component\": \"rocsparse\", \"gpu_family\": \"gfx1151\", \"platform\": \"linux\", \"failing_test\": \"Test rocsparse\", \"evidence\": [{\"line_no\": 1, \"text\": \"error: 1:1: error: invalid value for \"}}",
+      "input_tokens": 1090,
+      "output_tokens": 71,
+      "tool_calls": []
+    },
+    {
+      "content": "",
+      "input_tokens": 1512,
+      "output_tokens": 30,
+      "tool_calls": [
+        {
+          "id": "call_1reibykg",
+          "name": "get_job_log_windows",
+          "arguments": {
+            "job_id": "118078343556",
+            "max_candidates": "1"
+          }
+        }
+      ]
+    },
+    {
+      "content": "{\"category\": \"regression\", \"component\": \"rocsparse\", \"gpu_family\": \"gfx1151\", \"platform\": \"linux\", \"failing_test\": \"Test rocsparse\", \"evidence\": [{\"line_no\": 1, \"text\": \"error: 1:1: error: invalid value for \"}}",
+      "input_tokens": 1276,
+      "output_tokens": 71,
+      "tool_calls": []
+    }
+  ]
+}
