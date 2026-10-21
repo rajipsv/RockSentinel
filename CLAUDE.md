@@ -36,4 +36,9 @@ Design: `docs/ADLC-RockSentinel.md`. Keep code consistent with it; if a decision
 - **Agents vs components:** only LLM-driven decision makers are called agents; routing and formatting stay deterministic code.
 - **Build from scratch:** do not reuse code, data or knowledge bases from the ARVIL project.
 - **Usage:** check Claude plan usage about every 10 minutes during long work; stop and report at 80% of any limit.
+- **Trimming command output (to save usage) must never hide failures:**
+  1. use `set -o pipefail` and print `EXIT=$?` on any piped/trimmed command;
+  2. trim with `tail` (errors and tracebacks come last) or `grep -v` for known noise, never a positive `grep` that keeps only expected lines;
+  3. for long output, also save the full text to a scratchpad file so it can be read in full;
+  4. when a command fails or a result is surprising, rerun it unfiltered before concluding anything.
 - **Local first:** steps 1–8 need no Azure subscription.
