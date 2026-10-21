@@ -66,7 +66,21 @@ PATTERNS: tuple[Pattern, ...] = (
     _p("ctest_summary", 60, r"\d+% tests passed, [1-9]\d* tests? failed out of \d+"),
     _p("step_timeout", 60, r"The action '.+' has timed out after \d+ minutes"),
     _p("build_stopped", 50, r"ninja: build stopped|subcommand failed"),
+    # Safety net for formats no specific pattern knows: "something failed here". Ranked just
+    # above the exit code, so specific patterns always win; noisy lines are filtered below.
+    _p("generic_error", 20,
+       r"(?i)\b(?:error|errors|failed|failure|fatal|exception|aborted|panic|"
+       r"assertion failed|assert(?:ion)? error)\b"),
     _p("exit_code", 10, r"Process completed with exit code \d+"),
+)
+
+# Lines that contain failure words but are not failures (flags, counts, retries, setup).
+_GENERIC_NOISE = re.compile(
+    r"(?i)-W(?:no-)?error|\b0 (?:\w+ )?(?:errors?|failures?|failed)\b|\bno errors?\b|xfail|kfail|"
+    r"passed (?:after|on) retry|flaky|ignored failures?|expected failures?|"
+    r"if-no-files-found|continue-on-error|fail-fast|failfast|on-error|--fail\b|"
+    r"set -e|pipefail|errexit|ErrorAction|error_reporting|cleaning up|"
+    r"^\s*(?:shell:|##\[group\]|\+ |echo )"
 )
 
 _GTEST_RUN = re.compile(r"^\[ RUN\s+\] (\S+)")
@@ -171,11 +185,17 @@ def _is_noise(line: str) -> bool:
 
 
 def _classify(line: str) -> Pattern | None:
+    """Best specific pattern for the line; the generic safety net only if none matches."""
     best: Pattern | None = None
+    generic: Pattern | None = None
     for pattern in PATTERNS:
-        if pattern.regex.search(line) and (best is None or pattern.severity > best.severity):
+        if not pattern.regex.search(line):
+            continue
+        if pattern.kind == "generic_error":
+            generic = None if _GENERIC_NOISE.search(line) else pattern
+        elif best is None or pattern.severity > best.severity:
             best = pattern
-    return best
+    return best or generic
 
 
 def extract_errors(log_text: str, max_candidates: int = DEFAULT_MAX_CANDIDATES) -> Extraction:

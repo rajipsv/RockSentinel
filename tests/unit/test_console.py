@@ -102,6 +102,9 @@ def test_evals_endpoint_shape(paths):
     r = api.evals(paths)
     assert r["n_cases"] == 2 and set(r["systems"]) == {"B0", "B1"}
     assert api.evals(paths, confirmed_only=True)["n_cases"] == 0
+    assert api.evals(paths, split="test")["n_cases"] == sum(
+        json.loads(x).get("split") == "test"
+        for x in paths.dataset.read_text("utf-8").splitlines() if x)
 
 
 # --- HTTP ----------------------------------------------------------------------------------

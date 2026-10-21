@@ -22,10 +22,14 @@ ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_DATASET = ROOT / "evals" / "golden" / "dataset.jsonl"
 
 
-def load_cases(path: Path = DEFAULT_DATASET, confirmed_only: bool = False) -> list[dict]:
+def load_cases(path: Path = DEFAULT_DATASET, confirmed_only: bool = False,
+               split: str | None = None) -> list[dict]:
+    """`split`: None/"all", "dev" (may be inspected when tuning) or "test" (held out)."""
     cases = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line]
     if confirmed_only:
         cases = [c for c in cases if c.get("label_status") == "confirmed"]
+    if split and split != "all":
+        cases = [c for c in cases if c.get("split") == split]
     return cases
 
 
@@ -131,13 +135,21 @@ def main() -> None:
     parser.add_argument("--dataset", type=Path, default=DEFAULT_DATASET)
     parser.add_argument("--confirmed-only", action="store_true")
     parser.add_argument("--out", type=Path, default=None, help="write the JSON report here")
+    parser.add_argument("--split", choices=("all", "dev", "test"), default="all")
     args = parser.parse_args()
 
-    report = evaluate(load_cases(args.dataset, args.confirmed_only))
-    print(format_table(report))
+    reports = {}
+    for split in (["dev", "test", "all"] if args.split == "all" else [args.split]):
+        cases = load_cases(args.dataset, args.confirmed_only, split)
+        if not cases:
+            continue
+        reports[split] = evaluate(cases)
+        label = {"test": "TEST (held out: the honest number)",
+                 "dev": "DEV (may be tuned on)", "all": "ALL"}[split]
+        print(f"\n== {label} ==\n{format_table(reports[split])}")
     if args.out:
         args.out.parent.mkdir(parents=True, exist_ok=True)
-        args.out.write_text(json.dumps(report, indent=2), encoding="utf-8")
+        args.out.write_text(json.dumps(reports, indent=2), encoding="utf-8")
         print(f"report written to {args.out}")
 
 

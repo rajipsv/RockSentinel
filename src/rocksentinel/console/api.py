@@ -143,10 +143,12 @@ def reject(case_id: str, paths: Paths) -> dict:
     return {"case_id": case_id, "rejected": True}
 
 
-def evals(paths: Paths, confirmed_only: bool = False) -> dict:
+def evals(paths: Paths, confirmed_only: bool = False, split: str = "all") -> dict:
     cases = _read_jsonl(paths.dataset)
     if confirmed_only:
         cases = [c for c in cases if c.get("label_status") == "confirmed"]
+    if split in ("dev", "test"):
+        cases = [c for c in cases if c.get("split") == split]
     if not cases:
         return {"n_cases": 0, "n_confirmed": 0, "systems": {}, "cases": []}
     return evaluate(cases, root=paths.root)

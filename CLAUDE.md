@@ -8,9 +8,10 @@ Design: `docs/ADLC-RockSentinel.md`. Keep code consistent with it; if a decision
    - its code and tests are written,
    - `pytest` passes and `ruff check .` is clean (run with `.venv/Scripts/python -m ...`),
    - `README.md` / the design doc are updated if the step changed layout or decisions.
-3. **Commit locally after every step**, one commit per step, with a clear message (what + why) ending with the attribution line used in this repo.
-4. **Never push without asking the user first.** Ask once per step, after the commit.
-5. After committing, tick the step in the roadmap below and say what the next step is.
+3. **Update `docs/BUILD-LOG.md` with the `update-build-log` skill** (`.claude/skills/update-build-log/`) before committing, so the log ships with the step.
+4. **Commit locally after every step**, one commit per step, with a clear message (what + why) ending with the attribution line used in this repo.
+5. **Never push without asking the user first.** Ask once per step, after the commit.
+6. After committing, tick the step in the roadmap below and say what the next step is.
 
 ## Roadmap
 - [x] 0. Design doc, golden cases, log fixtures
@@ -32,6 +33,7 @@ Design: `docs/ADLC-RockSentinel.md`. Keep code consistent with it; if a decision
 ## Project rules
 - **Read-only toward GitHub.** No code path may write to GitHub (no comments, issues, pushes from the app).
 - **Secrets:** tokens live only in the git-ignored `.env` locally and in Key Vault in Azure. Never print, log, commit or paste them. Never log signed URLs.
+- **Eval hygiene:** when writing or changing patterns/rules, look only at `dev` golden cases (and non-golden logs). Never inspect `test` split cases. If a case's log is used for tuning, add its job id to `TUNED_ON_JOB_IDS` in `src/rocksentinel/evals/splits.py` so it is pinned to dev. Report headline numbers from the test split.
 - **Logs never go to an LLM whole:** always through `extract_errors` / `get_job_log_windows` evidence windows.
 - **Tests never hit the network:** use recorded fixtures (`tests/fixtures/`, `scripts/record_github_fixtures.py`).
 - **Agents vs components:** only LLM-driven decision makers are called agents; routing and formatting stay deterministic code.

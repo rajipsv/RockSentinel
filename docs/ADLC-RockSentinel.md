@@ -683,6 +683,8 @@ The set is split into **dev (70%)**, used freely while iterating, and **held-out
 | Cache hit rate | P4, cost | Shows learning is happening, since each hit skips the strong model |
 | **Lift over the non-AI baseline** | all, cost | The baseline is TheRock's `detect_failed_logs.py` excerpt plus a keyword rule classifier. The agents must beat it on first-error accuracy and category macro-F1, or they aren't worth their token cost |
 
+**Split in practice.** `src/rocksentinel/evals/splits.py` assigns ~30% of cases to `test` deterministically by job id, and pins every case whose log was used to tune patterns or rules to `dev`. Patterns may be tuned only on dev cases and on logs outside the golden set. `python -m rocksentinel.evals.coverage` measures pattern coverage on non-golden failures (first run: 92% of 25 hit a specific pattern). A low-severity generic safety-net pattern catches unknown formats, but only when no specific pattern matches.
+
 **Baselines.** Every L2 report shows these rows:
 1. **B0:** the `detect_failed_logs.py`-style keyword excerpt (last keyword match, 12 before / 20 after) with the rule-based classifier. No LLM.
 2. **B1:** RockSentinel's deterministic `extract_errors` (normalized lines, root cause ranked first) with the **same** rule classifier. No LLM. Because B0 and B1 share the rules, any difference between them comes only from evidence extraction.

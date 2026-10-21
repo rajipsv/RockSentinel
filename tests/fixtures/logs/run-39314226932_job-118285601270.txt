@@ -1,0 +1,1504 @@
+# Source: ROCm/TheRock Actions run 39314226932 attempt 1, job 118285601270
+# Job: Test rocgdb-gpu / Test rocgdb-gpu (shard 1/1) (gfx110X-all) (test_artifacts.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+2026-10-19T20:23:25.4419029Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:25.4419228Z 
+2026-10-19T20:23:25.4427837Z mkdir -p outputs/gdb.rocm/multi-inferior-fork
+2026-10-19T20:23:25.4518607Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:25.4552831Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:25.4557956Z Test run by root on Mon Oct 19 20:23:25 2026
+2026-10-19T20:23:25.4558144Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:25.4558241Z 
+2026-10-19T20:23:25.4558291Z 		=== gdb tests ===
+2026-10-19T20:23:25.4558356Z 
+2026-10-19T20:23:25.4561415Z Schedule of variations:
+2026-10-19T20:23:25.4561523Z     unix
+2026-10-19T20:23:25.4561577Z 
+2026-10-19T20:23:25.4562338Z Running target unix
+2026-10-19T20:23:25.4563096Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:25.4563612Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:25.4565361Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:25.4581802Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-fork.exp ...
+2026-10-19T20:23:25.5458288Z 
+2026-10-19T20:23:25.5458695Z 		=== gdb Summary ===
+2026-10-19T20:23:25.5458892Z 
+2026-10-19T20:23:25.5458980Z # of expected passes		41
+2026-10-19T20:23:25.5916615Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:25.5917014Z 
+2026-10-19T20:23:25.5921812Z mkdir -p outputs/gdb.rocm/multi-inferior-gpu
+2026-10-19T20:23:25.6011761Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:25.6046369Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:25.6051134Z Test run by root on Mon Oct 19 20:23:25 2026
+2026-10-19T20:23:25.6051601Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:25.6051704Z 
+2026-10-19T20:23:25.6051747Z 		=== gdb tests ===
+2026-10-19T20:23:25.6051811Z 
+2026-10-19T20:23:25.6054595Z Schedule of variations:
+2026-10-19T20:23:25.6054714Z     unix
+2026-10-19T20:23:25.6054774Z 
+2026-10-19T20:23:25.6055430Z Running target unix
+2026-10-19T20:23:25.6056165Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:25.6056446Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:25.6058186Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:25.6074678Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-gpu.exp ...
+2026-10-19T20:23:27.7399202Z 
+2026-10-19T20:23:27.7399671Z 		=== gdb Summary ===
+2026-10-19T20:23:27.7399911Z 
+2026-10-19T20:23:27.7400039Z # of expected passes		1
+2026-10-19T20:23:27.7986408Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:27.7986880Z 
+2026-10-19T20:23:27.7992662Z mkdir -p outputs/gdb.rocm/multi-inferior-run-spurious-waves
+2026-10-19T20:23:27.8100055Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:27.8134108Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:27.8138845Z Test run by root on Mon Oct 19 20:23:27 2026
+2026-10-19T20:23:27.8139205Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:27.8139334Z 
+2026-10-19T20:23:27.8139381Z 		=== gdb tests ===
+2026-10-19T20:23:27.8139446Z 
+2026-10-19T20:23:27.8143132Z Schedule of variations:
+2026-10-19T20:23:27.8143268Z     unix
+2026-10-19T20:23:27.8143322Z 
+2026-10-19T20:23:27.8144090Z Running target unix
+2026-10-19T20:23:27.8145063Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:27.8145675Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:27.8148019Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:27.8167807Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-run-spurious-waves.exp ...
+2026-10-19T20:23:37.9224912Z FAIL: gdb.rocm/multi-inferior-gpu.exp: wait for gpu stops (timeout)
+2026-10-19T20:23:37.9552758Z 
+2026-10-19T20:23:37.9553188Z 		=== gdb Summary ===
+2026-10-19T20:23:37.9553394Z 
+2026-10-19T20:23:37.9553494Z # of expected passes		9
+2026-10-19T20:23:37.9553730Z # of unexpected failures	1
+2026-10-19T20:23:38.0142403Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:38.0142677Z 
+2026-10-19T20:23:38.0148149Z make[2]: *** [Makefile:322: check/gdb.rocm/multi-inferior-gpu.exp] Error 1
+2026-10-19T20:23:38.0148396Z mkdir -p outputs/gdb.rocm/names
+2026-10-19T20:23:38.0272939Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:38.0316013Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:38.0322108Z Test run by root on Mon Oct 19 20:23:38 2026
+2026-10-19T20:23:38.0322478Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:38.0322690Z 
+2026-10-19T20:23:38.0322784Z 		=== gdb tests ===
+2026-10-19T20:23:38.0322909Z 
+2026-10-19T20:23:38.0326630Z Schedule of variations:
+2026-10-19T20:23:38.0326866Z     unix
+2026-10-19T20:23:38.0326971Z 
+2026-10-19T20:23:38.0327850Z Running target unix
+2026-10-19T20:23:38.0328994Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:38.0329653Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:38.0332537Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:38.0352909Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/names.exp ...
+2026-10-19T20:23:38.2318256Z 
+2026-10-19T20:23:38.2318594Z 		=== gdb Summary ===
+2026-10-19T20:23:38.2318719Z 
+2026-10-19T20:23:38.2318770Z # of expected passes		4
+2026-10-19T20:23:38.2805166Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:38.2805386Z 
+2026-10-19T20:23:38.2809131Z mkdir -p outputs/gdb.rocm/nonstop-displaced
+2026-10-19T20:23:38.2920975Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:38.2952831Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:38.2957594Z Test run by root on Mon Oct 19 20:23:38 2026
+2026-10-19T20:23:38.2957881Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:38.2957999Z 
+2026-10-19T20:23:38.2958045Z 		=== gdb tests ===
+2026-10-19T20:23:38.2958110Z 
+2026-10-19T20:23:38.2960905Z Schedule of variations:
+2026-10-19T20:23:38.2961008Z     unix
+2026-10-19T20:23:38.2961058Z 
+2026-10-19T20:23:38.2962166Z Running target unix
+2026-10-19T20:23:38.2963058Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:38.2963680Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:38.2965432Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:38.2982904Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/nonstop-displaced.exp ...
+2026-10-19T20:23:38.4871009Z 
+2026-10-19T20:23:38.4871516Z 		=== gdb Summary ===
+2026-10-19T20:23:38.4871686Z 
+2026-10-19T20:23:38.4871764Z # of expected passes		41
+2026-10-19T20:23:38.5325722Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:38.5326127Z 
+2026-10-19T20:23:38.5334833Z mkdir -p outputs/gdb.rocm/nonstop-mode
+2026-10-19T20:23:38.5433028Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:38.5466593Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:38.5471108Z Test run by root on Mon Oct 19 20:23:38 2026
+2026-10-19T20:23:38.5471399Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:38.5471519Z 
+2026-10-19T20:23:38.5471563Z 		=== gdb tests ===
+2026-10-19T20:23:38.5471627Z 
+2026-10-19T20:23:38.5474563Z Schedule of variations:
+2026-10-19T20:23:38.5474665Z     unix
+2026-10-19T20:23:38.5474717Z 
+2026-10-19T20:23:38.5475442Z Running target unix
+2026-10-19T20:23:38.5476190Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:38.5476643Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:38.5478478Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:38.5495453Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/nonstop-mode.exp ...
+2026-10-19T20:23:38.7204617Z 
+2026-10-19T20:23:38.7204963Z 		=== gdb Summary ===
+2026-10-19T20:23:38.7205091Z 
+2026-10-19T20:23:38.7205175Z # of expected passes		13
+2026-10-19T20:23:38.7674295Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:38.7674512Z 
+2026-10-19T20:23:38.7679650Z mkdir -p outputs/gdb.rocm/ocp_mx
+2026-10-19T20:23:38.7772957Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:38.7806788Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:38.7811510Z Test run by root on Mon Oct 19 20:23:38 2026
+2026-10-19T20:23:38.7812059Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:38.7812159Z 
+2026-10-19T20:23:38.7812204Z 		=== gdb tests ===
+2026-10-19T20:23:38.7812561Z 
+2026-10-19T20:23:38.7815725Z Schedule of variations:
+2026-10-19T20:23:38.7815834Z     unix
+2026-10-19T20:23:38.7815882Z 
+2026-10-19T20:23:38.7816625Z Running target unix
+2026-10-19T20:23:38.7817294Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:38.7817722Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:38.7819558Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:38.7836144Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/ocp_mx.exp ...
+2026-10-19T20:23:39.0980233Z 
+2026-10-19T20:23:39.0980658Z 		=== gdb Summary ===
+2026-10-19T20:23:39.0980822Z 
+2026-10-19T20:23:39.0980897Z # of expected passes		4
+2026-10-19T20:23:39.1464610Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:39.1464944Z 
+2026-10-19T20:23:39.1473075Z mkdir -p outputs/gdb.rocm/omp-target-basic
+2026-10-19T20:23:39.1573612Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:39.1607410Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:39.1612733Z Test run by root on Mon Oct 19 20:23:39 2026
+2026-10-19T20:23:39.1613086Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:39.1613281Z 
+2026-10-19T20:23:39.1613363Z 		=== gdb tests ===
+2026-10-19T20:23:39.1613486Z 
+2026-10-19T20:23:39.1615946Z Schedule of variations:
+2026-10-19T20:23:39.1616182Z     unix
+2026-10-19T20:23:39.1616283Z 
+2026-10-19T20:23:39.1616406Z Running target unix
+2026-10-19T20:23:39.1617149Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:39.1617650Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:39.1619441Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:39.1640928Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/omp-target-basic.exp ...
+2026-10-19T20:23:41.2097843Z 
+2026-10-19T20:23:41.2098229Z 		=== gdb Summary ===
+2026-10-19T20:23:41.2098350Z 
+2026-10-19T20:23:41.2098637Z # of expected passes		17
+2026-10-19T20:23:41.2578131Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:41.2578513Z 
+2026-10-19T20:23:41.2582177Z mkdir -p outputs/gdb.rocm/omp-target-cpp
+2026-10-19T20:23:41.2686151Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:41.2719358Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:41.2724089Z Test run by root on Mon Oct 19 20:23:41 2026
+2026-10-19T20:23:41.2724287Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:41.2724387Z 
+2026-10-19T20:23:41.2724462Z 		=== gdb tests ===
+2026-10-19T20:23:41.2724527Z 
+2026-10-19T20:23:41.2727458Z Schedule of variations:
+2026-10-19T20:23:41.2727572Z     unix
+2026-10-19T20:23:41.2727626Z 
+2026-10-19T20:23:41.2728352Z Running target unix
+2026-10-19T20:23:41.2729076Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:41.2729530Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:41.2731346Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:41.2747831Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/omp-target-cpp.exp ...
+2026-10-19T20:23:42.8221107Z 
+2026-10-19T20:23:42.8221519Z 		=== gdb Summary ===
+2026-10-19T20:23:42.8221725Z 
+2026-10-19T20:23:42.8221829Z # of expected passes		36
+2026-10-19T20:23:42.8698632Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:42.8699108Z 
+2026-10-19T20:23:42.8707681Z mkdir -p outputs/gdb.rocm/omp-target-data
+2026-10-19T20:23:42.8807642Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:42.8840553Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:42.8845380Z Test run by root on Mon Oct 19 20:23:42 2026
+2026-10-19T20:23:42.8845649Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:42.8845816Z 
+2026-10-19T20:23:42.8845895Z 		=== gdb tests ===
+2026-10-19T20:23:42.8846000Z 
+2026-10-19T20:23:42.8848598Z Schedule of variations:
+2026-10-19T20:23:42.8848785Z     unix
+2026-10-19T20:23:42.8848875Z 
+2026-10-19T20:23:42.8849484Z Running target unix
+2026-10-19T20:23:42.8850191Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:42.8850661Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:42.8852465Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:42.8868308Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/omp-target-data.exp ...
+2026-10-19T20:23:43.2321429Z 
+2026-10-19T20:23:43.2321812Z 		=== gdb Summary ===
+2026-10-19T20:23:43.2321979Z 
+2026-10-19T20:23:43.2322029Z # of expected passes		6
+2026-10-19T20:23:43.2780034Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:43.2780248Z 
+2026-10-19T20:23:43.2785394Z mkdir -p outputs/gdb.rocm/omp-target-fortran
+2026-10-19T20:23:43.2884317Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:43.2922751Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:43.2927349Z Test run by root on Mon Oct 19 20:23:43 2026
+2026-10-19T20:23:43.2927607Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:43.2927702Z 
+2026-10-19T20:23:43.2927771Z 		=== gdb tests ===
+2026-10-19T20:23:43.2927834Z 
+2026-10-19T20:23:43.2931085Z Schedule of variations:
+2026-10-19T20:23:43.2931246Z     unix
+2026-10-19T20:23:43.2931299Z 
+2026-10-19T20:23:43.2931719Z Running target unix
+2026-10-19T20:23:43.2932379Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:43.2932821Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:43.2934494Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:43.2952013Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/omp-target-fortran.exp ...
+2026-10-19T20:23:43.5480583Z 
+2026-10-19T20:23:43.5480672Z 		=== gdb Summary ===
+2026-10-19T20:23:43.5480754Z 
+2026-10-19T20:23:43.5480807Z # of expected passes		9
+2026-10-19T20:23:43.5960366Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:43.5960578Z 
+2026-10-19T20:23:43.5966430Z mkdir -p outputs/gdb.rocm/omp-target-multi-kernel
+2026-10-19T20:23:43.6069851Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:43.6103420Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:43.6108101Z Test run by root on Mon Oct 19 20:23:43 2026
+2026-10-19T20:23:43.6108257Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:43.6108347Z 
+2026-10-19T20:23:43.6108394Z 		=== gdb tests ===
+2026-10-19T20:23:43.6108456Z 
+2026-10-19T20:23:43.6111563Z Schedule of variations:
+2026-10-19T20:23:43.6111665Z     unix
+2026-10-19T20:23:43.6111716Z 
+2026-10-19T20:23:43.6112285Z Running target unix
+2026-10-19T20:23:43.6112995Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:43.6113393Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:43.6115235Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:43.6131582Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/omp-target-multi-kernel.exp ...
+2026-10-19T20:23:43.7739933Z FAIL: gdb.rocm/multi-inferior-fork.exp: stop_at=kernel: run
+2026-10-19T20:23:44.0274516Z 
+2026-10-19T20:23:44.0275101Z 		=== gdb Summary ===
+2026-10-19T20:23:44.0275309Z 
+2026-10-19T20:23:44.0275411Z # of expected passes		33
+2026-10-19T20:23:44.0765168Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:44.0765561Z 
+2026-10-19T20:23:44.0770357Z mkdir -p outputs/gdb.rocm/omp-target-teams
+2026-10-19T20:23:44.0876318Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:44.0922374Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:44.0928786Z Test run by root on Mon Oct 19 20:23:44 2026
+2026-10-19T20:23:44.0928967Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:44.0929068Z 
+2026-10-19T20:23:44.0929111Z 		=== gdb tests ===
+2026-10-19T20:23:44.0929172Z 
+2026-10-19T20:23:44.0933343Z Schedule of variations:
+2026-10-19T20:23:44.0933454Z     unix
+2026-10-19T20:23:44.0933504Z 
+2026-10-19T20:23:44.0934394Z Running target unix
+2026-10-19T20:23:44.0935270Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:44.0935773Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:44.0938017Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:44.0959159Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/omp-target-teams.exp ...
+2026-10-19T20:23:44.2699304Z 
+2026-10-19T20:23:44.2699642Z 		=== gdb Summary ===
+2026-10-19T20:23:44.2699760Z 
+2026-10-19T20:23:44.2699844Z # of expected passes		9
+2026-10-19T20:23:44.3178067Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:44.3178471Z 
+2026-10-19T20:23:44.3184900Z mkdir -p outputs/gdb.rocm/precise-memory-exec
+2026-10-19T20:23:44.3287859Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:44.3322598Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:44.3327266Z Test run by root on Mon Oct 19 20:23:44 2026
+2026-10-19T20:23:44.3327891Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:44.3328045Z 
+2026-10-19T20:23:44.3328089Z 		=== gdb tests ===
+2026-10-19T20:23:44.3328155Z 
+2026-10-19T20:23:44.3330655Z Schedule of variations:
+2026-10-19T20:23:44.3330759Z     unix
+2026-10-19T20:23:44.3330810Z 
+2026-10-19T20:23:44.3335633Z Running target unix
+2026-10-19T20:23:44.3336430Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:44.3336816Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:44.3338675Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:44.3355142Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/precise-memory-exec.exp ...
+2026-10-19T20:23:44.5059484Z 
+2026-10-19T20:23:44.5059838Z 		=== gdb Summary ===
+2026-10-19T20:23:44.5059957Z 
+2026-10-19T20:23:44.5060017Z # of expected passes		8
+2026-10-19T20:23:44.5537688Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:44.5537885Z 
+2026-10-19T20:23:44.5543756Z mkdir -p outputs/gdb.rocm/precise-memory-fork
+2026-10-19T20:23:44.5648456Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:44.5680589Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:44.5684999Z Test run by root on Mon Oct 19 20:23:44 2026
+2026-10-19T20:23:44.5685267Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:44.5685383Z 
+2026-10-19T20:23:44.5685447Z 		=== gdb tests ===
+2026-10-19T20:23:44.5685511Z 
+2026-10-19T20:23:44.5688204Z Schedule of variations:
+2026-10-19T20:23:44.5688308Z     unix
+2026-10-19T20:23:44.5688364Z 
+2026-10-19T20:23:44.5688965Z Running target unix
+2026-10-19T20:23:44.5689702Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:44.5690109Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:44.5692051Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:44.5708142Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/precise-memory-fork.exp ...
+2026-10-19T20:23:45.1095972Z 
+2026-10-19T20:23:45.1096231Z 		=== gdb Summary ===
+2026-10-19T20:23:45.1096431Z 
+2026-10-19T20:23:45.1096536Z # of expected passes		256
+2026-10-19T20:23:45.1560622Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:45.1560837Z 
+2026-10-19T20:23:45.1568240Z mkdir -p outputs/gdb.rocm/precise-memory-multi-inferiors
+2026-10-19T20:23:45.1666802Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:45.1699605Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:45.1704591Z Test run by root on Mon Oct 19 20:23:45 2026
+2026-10-19T20:23:45.1704791Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:45.1704886Z 
+2026-10-19T20:23:45.1704928Z 		=== gdb tests ===
+2026-10-19T20:23:45.1704991Z 
+2026-10-19T20:23:45.1707780Z Schedule of variations:
+2026-10-19T20:23:45.1707884Z     unix
+2026-10-19T20:23:45.1707932Z 
+2026-10-19T20:23:45.1708598Z Running target unix
+2026-10-19T20:23:45.1709304Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:45.1709704Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:45.1711382Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:45.1727539Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/precise-memory-multi-inferiors.exp ...
+2026-10-19T20:23:45.1848557Z 
+2026-10-19T20:23:45.1848627Z 		=== gdb Summary ===
+2026-10-19T20:23:45.1848693Z 
+2026-10-19T20:23:45.1848743Z # of expected passes		7
+2026-10-19T20:23:45.2319433Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:45.2319646Z 
+2026-10-19T20:23:45.2325403Z mkdir -p outputs/gdb.rocm/precise-memory-warning-sigsegv
+2026-10-19T20:23:45.2427873Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:45.2460718Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:45.2465211Z Test run by root on Mon Oct 19 20:23:45 2026
+2026-10-19T20:23:45.2465522Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:45.2465619Z 
+2026-10-19T20:23:45.2465667Z 		=== gdb tests ===
+2026-10-19T20:23:45.2465731Z 
+2026-10-19T20:23:45.2468385Z Schedule of variations:
+2026-10-19T20:23:45.2468490Z     unix
+2026-10-19T20:23:45.2468543Z 
+2026-10-19T20:23:45.2469216Z Running target unix
+2026-10-19T20:23:45.2469980Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:45.2470515Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:45.2472349Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:45.2488798Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/precise-memory-warning-sigsegv.exp ...
+2026-10-19T20:23:45.3909736Z 
+2026-10-19T20:23:45.3910092Z 		=== gdb Summary ===
+2026-10-19T20:23:45.3910211Z 
+2026-10-19T20:23:45.3910266Z # of expected passes		25
+2026-10-19T20:23:45.4396337Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:45.4396573Z 
+2026-10-19T20:23:45.4402899Z mkdir -p outputs/gdb.rocm/precise-memory-warning-watchpoint
+2026-10-19T20:23:45.4501308Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:45.4536373Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:45.4541324Z Test run by root on Mon Oct 19 20:23:45 2026
+2026-10-19T20:23:45.4541685Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:45.4541874Z 
+2026-10-19T20:23:45.4541946Z 		=== gdb tests ===
+2026-10-19T20:23:45.4542048Z 
+2026-10-19T20:23:45.4547908Z Schedule of variations:
+2026-10-19T20:23:45.4548106Z     unix
+2026-10-19T20:23:45.4548213Z 
+2026-10-19T20:23:45.4548284Z Running target unix
+2026-10-19T20:23:45.4549114Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:45.4549676Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:45.4552145Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:45.4570629Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/precise-memory-warning-watchpoint.exp ...
+2026-10-19T20:23:45.6139273Z 
+2026-10-19T20:23:45.6139720Z 		=== gdb Summary ===
+2026-10-19T20:23:45.6139923Z 
+2026-10-19T20:23:45.6140012Z # of expected passes		6
+2026-10-19T20:23:45.6618879Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:45.6619237Z 
+2026-10-19T20:23:45.6624033Z mkdir -p outputs/gdb.rocm/precise-memory
+2026-10-19T20:23:45.6713197Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:45.6747122Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:45.6751528Z Test run by root on Mon Oct 19 20:23:45 2026
+2026-10-19T20:23:45.6751800Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:45.6752333Z 
+2026-10-19T20:23:45.6752400Z 		=== gdb tests ===
+2026-10-19T20:23:45.6752505Z 
+2026-10-19T20:23:45.6754811Z Schedule of variations:
+2026-10-19T20:23:45.6755000Z     unix
+2026-10-19T20:23:45.6755085Z 
+2026-10-19T20:23:45.6755545Z Running target unix
+2026-10-19T20:23:45.6756332Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:45.6756776Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:45.6758575Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:45.6779676Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/precise-memory.exp ...
+2026-10-19T20:23:46.3356174Z 
+2026-10-19T20:23:46.3356608Z 		=== gdb Summary ===
+2026-10-19T20:23:46.3356807Z 
+2026-10-19T20:23:46.3356912Z # of expected passes		95
+2026-10-19T20:23:46.3839176Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:46.3839427Z 
+2026-10-19T20:23:46.3843975Z mkdir -p outputs/gdb.rocm/program-execution
+2026-10-19T20:23:46.3950898Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:46.3986720Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:46.3987723Z Test run by root on Mon Oct 19 20:23:46 2026
+2026-10-19T20:23:46.3987924Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:46.3988051Z 
+2026-10-19T20:23:46.3988100Z 		=== gdb tests ===
+2026-10-19T20:23:46.3988164Z 
+2026-10-19T20:23:46.3990848Z Schedule of variations:
+2026-10-19T20:23:46.3991236Z     unix
+2026-10-19T20:23:46.3998670Z 
+2026-10-19T20:23:46.3998772Z Running target unix
+2026-10-19T20:23:46.3999041Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:46.3999415Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:46.3999745Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:46.4010984Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/program-execution.exp ...
+2026-10-19T20:23:46.4776107Z 
+2026-10-19T20:23:46.4776579Z 		=== gdb Summary ===
+2026-10-19T20:23:46.4776820Z 
+2026-10-19T20:23:46.4776919Z # of expected passes		14
+2026-10-19T20:23:46.5261135Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:46.5261556Z 
+2026-10-19T20:23:46.5267559Z mkdir -p outputs/gdb.rocm/register-watchpoint
+2026-10-19T20:23:46.5369505Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:46.5402483Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:46.5407452Z Test run by root on Mon Oct 19 20:23:46 2026
+2026-10-19T20:23:46.5407783Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:46.5407908Z 
+2026-10-19T20:23:46.5407951Z 		=== gdb tests ===
+2026-10-19T20:23:46.5408020Z 
+2026-10-19T20:23:46.5411062Z Schedule of variations:
+2026-10-19T20:23:46.5411227Z     unix
+2026-10-19T20:23:46.5411327Z 
+2026-10-19T20:23:46.5411864Z Running target unix
+2026-10-19T20:23:46.5412578Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:46.5413020Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:46.5414866Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:46.5432185Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/register-watchpoint.exp ...
+2026-10-19T20:23:46.8313836Z 
+2026-10-19T20:23:46.8314217Z 		=== gdb Summary ===
+2026-10-19T20:23:46.8314343Z 
+2026-10-19T20:23:46.8314400Z # of expected passes		2
+2026-10-19T20:23:46.8801446Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:46.8801672Z 
+2026-10-19T20:23:46.8805482Z mkdir -p outputs/gdb.rocm/resume-exception
+2026-10-19T20:23:46.8898085Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:46.8932686Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:46.8937446Z Test run by root on Mon Oct 19 20:23:46 2026
+2026-10-19T20:23:46.8937729Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:46.8937909Z 
+2026-10-19T20:23:46.8937988Z 		=== gdb tests ===
+2026-10-19T20:23:46.8938089Z 
+2026-10-19T20:23:46.8941045Z Schedule of variations:
+2026-10-19T20:23:46.8941288Z     unix
+2026-10-19T20:23:46.8941381Z 
+2026-10-19T20:23:46.8942098Z Running target unix
+2026-10-19T20:23:46.8943086Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:46.8943617Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:46.8945793Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:46.8963800Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/resume-exception.exp ...
+2026-10-19T20:23:47.0253359Z 
+2026-10-19T20:23:47.0253651Z 		=== gdb Summary ===
+2026-10-19T20:23:47.0253770Z 
+2026-10-19T20:23:47.0253828Z # of expected passes		4
+2026-10-19T20:23:47.0738593Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:47.0738797Z 
+2026-10-19T20:23:47.0745144Z mkdir -p outputs/gdb.rocm/rocm-arch-supported
+2026-10-19T20:23:47.0855294Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:47.0888882Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:47.0894477Z Test run by root on Mon Oct 19 20:23:47 2026
+2026-10-19T20:23:47.0894774Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:47.0894873Z 
+2026-10-19T20:23:47.0894923Z 		=== gdb tests ===
+2026-10-19T20:23:47.0894984Z 
+2026-10-19T20:23:47.0898716Z Schedule of variations:
+2026-10-19T20:23:47.0898886Z     unix
+2026-10-19T20:23:47.0898943Z 
+2026-10-19T20:23:47.0899130Z Running target unix
+2026-10-19T20:23:47.0899792Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:47.0900208Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:47.0902321Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:47.0919741Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/rocm-arch-supported.exp ...
+2026-10-19T20:23:47.0933840Z WARNING: failed to query BFD-supported amdgcn architectures
+2026-10-19T20:23:47.0953173Z 
+2026-10-19T20:23:47.0953382Z 		=== gdb Summary ===
+2026-10-19T20:23:47.0953473Z 
+2026-10-19T20:23:47.0953530Z # of expected passes		17
+2026-10-19T20:23:47.1431111Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:47.1431372Z 
+2026-10-19T20:23:47.1434114Z mkdir -p outputs/gdb.rocm/runtime-core-attached
+2026-10-19T20:23:47.1542319Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:47.1576660Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:47.1581690Z Test run by root on Mon Oct 19 20:23:47 2026
+2026-10-19T20:23:47.1582006Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:47.1582163Z 
+2026-10-19T20:23:47.1582233Z 		=== gdb tests ===
+2026-10-19T20:23:47.1582332Z 
+2026-10-19T20:23:47.1585369Z Schedule of variations:
+2026-10-19T20:23:47.1585560Z     unix
+2026-10-19T20:23:47.1585647Z 
+2026-10-19T20:23:47.1586358Z Running target unix
+2026-10-19T20:23:47.1587324Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:47.1587832Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:47.1589880Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:47.1606674Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/runtime-core-attached.exp ...
+2026-10-19T20:23:47.4686188Z 
+2026-10-19T20:23:47.4686578Z 		=== gdb Summary ===
+2026-10-19T20:23:47.4686763Z 
+2026-10-19T20:23:47.4686846Z # of expected passes		14
+2026-10-19T20:23:47.4687043Z # of unexpected failures	1
+2026-10-19T20:23:47.5145862Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:47.5146270Z 
+2026-10-19T20:23:47.5149978Z make[2]: *** [Makefile:322: check/gdb.rocm/multi-inferior-fork.exp] Error 1
+2026-10-19T20:23:47.5150391Z mkdir -p outputs/gdb.rocm/runtime-core
+2026-10-19T20:23:47.5262070Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:47.5308517Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:47.5314664Z Test run by root on Mon Oct 19 20:23:47 2026
+2026-10-19T20:23:47.5314992Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:47.5315180Z 
+2026-10-19T20:23:47.5315264Z 		=== gdb tests ===
+2026-10-19T20:23:47.5315382Z 
+2026-10-19T20:23:47.5318926Z Schedule of variations:
+2026-10-19T20:23:47.5319152Z     unix
+2026-10-19T20:23:47.5319259Z 
+2026-10-19T20:23:47.5319531Z Running target unix
+2026-10-19T20:23:47.5320534Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:47.5321085Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:47.5322598Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:47.5338910Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/runtime-core.exp ...
+2026-10-19T20:23:48.1019409Z 
+2026-10-19T20:23:48.1019903Z 		=== gdb Summary ===
+2026-10-19T20:23:48.1020180Z 
+2026-10-19T20:23:48.1020276Z # of expected passes		6
+2026-10-19T20:23:48.1484269Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:48.1484490Z 
+2026-10-19T20:23:48.1487963Z mkdir -p outputs/gdb.rocm/scheduler-locking
+2026-10-19T20:23:48.1591098Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:48.1625511Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:48.1630026Z Test run by root on Mon Oct 19 20:23:48 2026
+2026-10-19T20:23:48.1630252Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:48.1630394Z 
+2026-10-19T20:23:48.1630446Z 		=== gdb tests ===
+2026-10-19T20:23:48.1630513Z 
+2026-10-19T20:23:48.1633361Z Schedule of variations:
+2026-10-19T20:23:48.1633524Z     unix
+2026-10-19T20:23:48.1633600Z 
+2026-10-19T20:23:48.1634208Z Running target unix
+2026-10-19T20:23:48.1634921Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:48.1635355Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:48.1637081Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:48.1653387Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/scheduler-locking.exp ...
+2026-10-19T20:23:49.7544745Z 
+2026-10-19T20:23:49.7545179Z 		=== gdb Summary ===
+2026-10-19T20:23:49.7545326Z 
+2026-10-19T20:23:49.7545403Z # of expected passes		11
+2026-10-19T20:23:49.8138670Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:23:49.8139161Z 
+2026-10-19T20:23:49.8146495Z mkdir -p outputs/gdb.rocm/shared-memory
+2026-10-19T20:23:49.8269558Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:23:49.8312130Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:23:49.8317931Z Test run by root on Mon Oct 19 20:23:49 2026
+2026-10-19T20:23:49.8318200Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:23:49.8318373Z 
+2026-10-19T20:23:49.8318425Z 		=== gdb tests ===
+2026-10-19T20:23:49.8318504Z 
+2026-10-19T20:23:49.8322426Z Schedule of variations:
+2026-10-19T20:23:49.8322589Z     unix
+2026-10-19T20:23:49.8322657Z 
+2026-10-19T20:23:49.8323446Z Running target unix
+2026-10-19T20:23:49.8324377Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:23:49.8324913Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:23:49.8327177Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:23:49.8349030Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/shared-memory.exp ...
+2026-10-19T20:24:01.4615248Z 
+2026-10-19T20:24:01.4615605Z 		=== gdb Summary ===
+2026-10-19T20:24:01.4615730Z 
+2026-10-19T20:24:01.4615791Z # of expected passes		19
+2026-10-19T20:24:01.5087463Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:24:01.5087675Z 
+2026-10-19T20:24:01.5093968Z mkdir -p outputs/gdb.rocm/show-info
+2026-10-19T20:24:01.5193755Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:24:01.5226609Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:24:01.5231018Z Test run by root on Mon Oct 19 20:24:01 2026
+2026-10-19T20:24:01.5231345Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:24:01.5231458Z 
+2026-10-19T20:24:01.5231514Z 		=== gdb tests ===
+2026-10-19T20:24:01.5231586Z 
+2026-10-19T20:24:01.5234344Z Schedule of variations:
+2026-10-19T20:24:01.5234448Z     unix
+2026-10-19T20:24:01.5234500Z 
+2026-10-19T20:24:01.5235131Z Running target unix
+2026-10-19T20:24:01.5235998Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:24:01.5236301Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:24:01.5238002Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:24:01.5253942Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/show-info.exp ...
+2026-10-19T20:24:02.6604895Z 
+2026-10-19T20:24:02.6605294Z 		=== gdb Summary ===
+2026-10-19T20:24:02.6605477Z 
+2026-10-19T20:24:02.6605578Z # of expected passes		36
+2026-10-19T20:24:02.7079397Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:24:02.7079627Z 
+2026-10-19T20:24:02.7086486Z mkdir -p outputs/gdb.rocm/simple-outside-debugger
+2026-10-19T20:24:02.7185820Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:24:02.7220130Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:24:02.7224971Z Test run by root on Mon Oct 19 20:24:02 2026
+2026-10-19T20:24:02.7225133Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:24:02.7225226Z 
+2026-10-19T20:24:02.7225271Z 		=== gdb tests ===
+2026-10-19T20:24:02.7225329Z 
+2026-10-19T20:24:02.7228300Z Schedule of variations:
+2026-10-19T20:24:02.7228405Z     unix
+2026-10-19T20:24:02.7228469Z 
+2026-10-19T20:24:02.7229170Z Running target unix
+2026-10-19T20:24:02.7230026Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:24:02.7230334Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:24:02.7232249Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:24:02.7251436Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/simple-outside-debugger.exp ...
+2026-10-19T20:24:02.9623252Z FAIL: gdb.rocm/omp-target-multi-kernel.exp: square kernel: continue to breakpoint: square_dev (the program exited)
+2026-10-19T20:24:02.9747822Z FAIL: gdb.rocm/omp-target-multi-kernel.exp: square kernel: print x
+2026-10-19T20:24:02.9754470Z FAIL: gdb.rocm/omp-target-multi-kernel.exp: cube kernel: continue to breakpoint: cube_dev (the program is no longer running)
+2026-10-19T20:24:02.9771032Z FAIL: gdb.rocm/omp-target-multi-kernel.exp: cube kernel: print x
+2026-10-19T20:24:02.9775887Z FAIL: gdb.rocm/omp-target-multi-kernel.exp: continue until exit (the program is no longer running)
+2026-10-19T20:24:02.9949804Z 
+2026-10-19T20:24:02.9950144Z 		=== gdb Summary ===
+2026-10-19T20:24:02.9950318Z 
+2026-10-19T20:24:02.9950417Z # of unexpected failures	5
+2026-10-19T20:24:03.0434030Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:24:03.0434377Z 
+2026-10-19T20:24:03.0442739Z make[2]: *** [Makefile:322: check/gdb.rocm/omp-target-multi-kernel.exp] Error 1
+2026-10-19T20:24:03.0443166Z mkdir -p outputs/gdb.rocm/simple
+2026-10-19T20:24:03.0536317Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:24:03.0569872Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:24:03.0575042Z Test run by root on Mon Oct 19 20:24:03 2026
+2026-10-19T20:24:03.0575278Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:24:03.0575568Z 
+2026-10-19T20:24:03.0575614Z 		=== gdb tests ===
+2026-10-19T20:24:03.0575680Z 
+2026-10-19T20:24:03.0578461Z Schedule of variations:
+2026-10-19T20:24:03.0578640Z     unix
+2026-10-19T20:24:03.0578724Z 
+2026-10-19T20:24:03.0579323Z Running target unix
+2026-10-19T20:24:03.0580081Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:24:03.0580517Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:24:03.0582534Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:24:03.0598774Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/simple.exp ...
+2026-10-19T20:24:03.1285559Z FAIL: gdb.rocm/register-watchpoint.exp: continue to breakpoint: bit_extract_kernel (the program exited)
+2026-10-19T20:24:03.1292907Z FAIL: gdb.rocm/register-watchpoint.exp: watchpoint on a stack pointer of the first wave
+2026-10-19T20:24:03.1298602Z FAIL: gdb.rocm/register-watchpoint.exp: continue (the program is no longer running)
+2026-10-19T20:24:03.1311404Z FAIL: gdb.rocm/register-watchpoint.exp: enable scheduler locking
+2026-10-19T20:24:03.1315089Z FAIL: gdb.rocm/register-watchpoint.exp: watchpoint on a stack pointer of the second wave
+2026-10-19T20:24:03.1319285Z FAIL: gdb.rocm/register-watchpoint.exp: change stack pointer value (the program is no longer running)
+2026-10-19T20:24:03.1503055Z 
+2026-10-19T20:24:03.1503252Z 		=== gdb Summary ===
+2026-10-19T20:24:03.1503339Z 
+2026-10-19T20:24:03.1503399Z # of unexpected failures	6
+2026-10-19T20:24:03.1994561Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:24:03.1994940Z 
+2026-10-19T20:24:03.2001094Z make[2]: *** [Makefile:322: check/gdb.rocm/register-watchpoint.exp] Error 1
+2026-10-19T20:24:03.2001566Z mkdir -p outputs/gdb.rocm/snapshot-objfile-on-load
+2026-10-19T20:24:03.2102135Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:24:03.2135902Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:24:03.2140646Z Test run by root on Mon Oct 19 20:24:03 2026
+2026-10-19T20:24:03.2140962Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:24:03.2141565Z 
+2026-10-19T20:24:03.2141649Z 		=== gdb tests ===
+2026-10-19T20:24:03.2141765Z 
+2026-10-19T20:24:03.2144234Z Schedule of variations:
+2026-10-19T20:24:03.2144461Z     unix
+2026-10-19T20:24:03.2144563Z 
+2026-10-19T20:24:03.2144877Z Running target unix
+2026-10-19T20:24:03.2145748Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:24:03.2146246Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:24:03.2148101Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:24:03.2165122Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/snapshot-objfile-on-load.exp ...
+2026-10-19T20:24:03.3196177Z 
+2026-10-19T20:24:03.3196619Z 		=== gdb Summary ===
+2026-10-19T20:24:03.3196762Z 
+2026-10-19T20:24:03.3196817Z # of expected passes		1
+2026-10-19T20:24:03.3673973Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:24:03.3674245Z 
+2026-10-19T20:24:03.3677922Z mkdir -p outputs/gdb.rocm/static-global
+2026-10-19T20:24:03.3769657Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:24:03.3804113Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:24:03.3808774Z Test run by root on Mon Oct 19 20:24:03 2026
+2026-10-19T20:24:03.3809054Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:24:03.3809177Z 
+2026-10-19T20:24:03.3809257Z 		=== gdb tests ===
+2026-10-19T20:24:03.3809327Z 
+2026-10-19T20:24:03.3812653Z Schedule of variations:
+2026-10-19T20:24:03.3813042Z     unix
+2026-10-19T20:24:03.3813093Z 
+2026-10-19T20:24:03.3813610Z Running target unix
+2026-10-19T20:24:03.3814497Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:24:03.3814931Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:24:03.3816823Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:24:03.3833644Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/static-global.exp ...
+2026-10-19T20:24:06.2611796Z WARNING: can't generate a core file - core tests suppressed - check ulimit -c
+2026-10-19T20:24:09.3672138Z WARNING: can't generate a core file - core tests suppressed - check ulimit -c
+2026-10-19T20:24:12.4747511Z WARNING: can't generate a core file - core tests suppressed - check ulimit -c
+2026-10-19T20:24:15.5749330Z WARNING: can't generate a core file - core tests suppressed - check ulimit -c
+2026-10-19T20:24:18.6281037Z WARNING: can't generate a core file - core tests suppressed - check ulimit -c
+2026-10-19T20:24:21.6915058Z WARNING: can't generate a core file - core tests suppressed - check ulimit -c
+2026-10-19T20:24:21.6944561Z 
+2026-10-19T20:24:21.6944756Z 		=== gdb Summary ===
+2026-10-19T20:24:21.6944873Z 
+2026-10-19T20:24:21.6944926Z # of expected passes		2
+2026-10-19T20:24:21.6945040Z # of untested testcases		6
+2026-10-19T20:24:21.7431308Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:24:21.7431524Z 
+2026-10-19T20:24:21.7437768Z mkdir -p outputs/gdb.rocm/step-abort
+2026-10-19T20:24:21.7530957Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:24:21.7566870Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:24:21.7571704Z Test run by root on Mon Oct 19 20:24:21 2026
+2026-10-19T20:24:21.7571956Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:24:21.7572052Z 
+2026-10-19T20:24:21.7572099Z 		=== gdb tests ===
+2026-10-19T20:24:21.7572162Z 
+2026-10-19T20:24:21.7575007Z Schedule of variations:
+2026-10-19T20:24:21.7575115Z     unix
+2026-10-19T20:24:21.7575167Z 
+2026-10-19T20:24:21.7575885Z Running target unix
+2026-10-19T20:24:21.7576601Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:24:21.7577028Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:24:21.7578733Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:24:21.7596246Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/step-abort.exp ...
+2026-10-19T20:24:22.8616070Z 
+2026-10-19T20:24:22.8616499Z 		=== gdb Summary ===
+2026-10-19T20:24:22.8616697Z 
+2026-10-19T20:24:22.8616803Z # of expected passes		3
+2026-10-19T20:24:22.9104891Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:24:22.9105285Z 
+2026-10-19T20:24:22.9109674Z mkdir -p outputs/gdb.rocm/step-over-kernel-exit
+2026-10-19T20:24:22.9206962Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:24:22.9240439Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:24:22.9245426Z Test run by root on Mon Oct 19 20:24:22 2026
+2026-10-19T20:24:22.9245578Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:24:22.9245675Z 
+2026-10-19T20:24:22.9245714Z 		=== gdb tests ===
+2026-10-19T20:24:22.9245777Z 
+2026-10-19T20:24:22.9248951Z Schedule of variations:
+2026-10-19T20:24:22.9249056Z     unix
+2026-10-19T20:24:22.9249109Z 
+2026-10-19T20:24:22.9249594Z Running target unix
+2026-10-19T20:24:22.9250305Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:24:22.9251022Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:24:22.9252668Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:24:22.9269213Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/step-over-kernel-exit.exp ...
+2026-10-19T20:24:23.0669525Z 
+2026-10-19T20:24:23.0669622Z 		=== gdb Summary ===
+2026-10-19T20:24:23.0669711Z 
+2026-10-19T20:24:23.0669775Z # of expected passes		3
+2026-10-19T20:24:23.0669911Z # of unsupported tests		1
+2026-10-19T20:24:23.1129792Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:24:23.1130001Z 
+2026-10-19T20:24:23.1136285Z mkdir -p outputs/gdb.rocm/step-schedlock-spurious-waves
+2026-10-19T20:24:23.1235376Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:24:23.1270894Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:24:23.1275702Z Test run by root on Mon Oct 19 20:24:23 2026
+2026-10-19T20:24:23.1275885Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:24:23.1275986Z 
+2026-10-19T20:24:23.1276036Z 		=== gdb tests ===
+2026-10-19T20:24:23.1276098Z 
+2026-10-19T20:24:23.1278911Z Schedule of variations:
+2026-10-19T20:24:23.1279028Z     unix
+2026-10-19T20:24:23.1279081Z 
+2026-10-19T20:24:23.1279743Z Running target unix
+2026-10-19T20:24:23.1280438Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:24:23.1280857Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:24:23.1282646Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:24:23.1299148Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/step-schedlock-spurious-waves.exp ...
+2026-10-19T20:24:23.4979486Z 
+2026-10-19T20:24:23.4979838Z 		=== gdb Summary ===
+2026-10-19T20:24:23.4979966Z 
+2026-10-19T20:24:23.4980043Z # of expected passes		8
+2026-10-19T20:24:23.5469897Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:24:23.5470111Z 
+2026-10-19T20:24:23.5476082Z mkdir -p outputs/gdb.rocm/unaligned-memory-access
+2026-10-19T20:24:23.5574184Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:24:23.5607592Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:24:23.5612478Z Test run by root on Mon Oct 19 20:24:23 2026
+2026-10-19T20:24:23.5612743Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:24:23.5612917Z 
+2026-10-19T20:24:23.5612989Z 		=== gdb tests ===
+2026-10-19T20:24:23.5613100Z 
+2026-10-19T20:24:23.5615767Z Schedule of variations:
+2026-10-19T20:24:23.5615871Z     unix
+2026-10-19T20:24:23.5615921Z 
+2026-10-19T20:24:23.5616616Z Running target unix
+2026-10-19T20:24:23.5617402Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:24:23.5617848Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:24:23.5619596Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:24:23.5636367Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/unaligned-memory-access.exp ...
+2026-10-19T20:24:24.3072692Z 
+2026-10-19T20:24:24.3073148Z 		=== gdb Summary ===
+2026-10-19T20:24:24.3073326Z 
+2026-10-19T20:24:24.3073414Z # of expected passes		26
+2026-10-19T20:24:24.3528544Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:24:24.3528761Z 
+2026-10-19T20:24:24.3534313Z mkdir -p outputs/gdb.rocm/until-tests
+2026-10-19T20:24:24.3630226Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:24:24.3663239Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:24:24.3667585Z Test run by root on Mon Oct 19 20:24:24 2026
+2026-10-19T20:24:24.3668108Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:24:24.3668257Z 
+2026-10-19T20:24:24.3668300Z 		=== gdb tests ===
+2026-10-19T20:24:24.3668392Z 
+2026-10-19T20:24:24.3670883Z Schedule of variations:
+2026-10-19T20:24:24.3670995Z     unix
+2026-10-19T20:24:24.3671052Z 
+2026-10-19T20:24:24.3671804Z Running target unix
+2026-10-19T20:24:24.3672508Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:24:24.3672948Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:24:24.3674647Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:24:24.3691396Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/until-tests.exp ...
+2026-10-19T20:24:24.7282303Z 
+2026-10-19T20:24:24.7282665Z 		=== gdb Summary ===
+2026-10-19T20:24:24.7282777Z 
+2026-10-19T20:24:24.7282836Z # of expected passes		19
+2026-10-19T20:24:24.7282959Z # of expected failures		1
+2026-10-19T20:24:24.7758778Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:24:24.7759013Z 
+2026-10-19T20:24:24.7764327Z mkdir -p outputs/gdb.rocm/update-thread-list
+2026-10-19T20:24:24.7867923Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:24:24.7900627Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:24:24.7905403Z Test run by root on Mon Oct 19 20:24:24 2026
+2026-10-19T20:24:24.7905591Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:24:24.7905689Z 
+2026-10-19T20:24:24.7905731Z 		=== gdb tests ===
+2026-10-19T20:24:24.7905797Z 
+2026-10-19T20:24:24.7908720Z Schedule of variations:
+2026-10-19T20:24:24.7908823Z     unix
+2026-10-19T20:24:24.7908875Z 
+2026-10-19T20:24:24.7909633Z Running target unix
+2026-10-19T20:24:24.7910343Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:24:24.7910743Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:24:24.7912568Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:24:24.7928817Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/update-thread-list.exp ...
+2026-10-19T20:24:24.9032328Z 
+2026-10-19T20:24:24.9032686Z 		=== gdb Summary ===
+2026-10-19T20:24:24.9032812Z 
+2026-10-19T20:24:24.9032867Z # of expected passes		4
+2026-10-19T20:24:24.9512647Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:24:24.9512858Z 
+2026-10-19T20:24:24.9517784Z mkdir -p outputs/gdb.rocm/watch-gpu-global-from-host
+2026-10-19T20:24:24.9614246Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:24:24.9655243Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:24:24.9660030Z Test run by root on Mon Oct 19 20:24:24 2026
+2026-10-19T20:24:24.9660329Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:24:24.9660433Z 
+2026-10-19T20:24:24.9660478Z 		=== gdb tests ===
+2026-10-19T20:24:24.9660539Z 
+2026-10-19T20:24:24.9664217Z Schedule of variations:
+2026-10-19T20:24:24.9664323Z     unix
+2026-10-19T20:24:24.9664378Z 
+2026-10-19T20:24:24.9665049Z Running target unix
+2026-10-19T20:24:24.9665733Z Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+2026-10-19T20:24:24.9666325Z Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+2026-10-19T20:24:24.9668035Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/config/unix.exp as tool-and-target-specific interface file.
+2026-10-19T20:24:24.9684850Z Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/watch-gpu-global-from-host.exp ...
+2026-10-19T20:24:30.4155033Z 
+2026-10-19T20:24:30.4155412Z 		=== gdb Summary ===
+2026-10-19T20:24:30.4155559Z 
+2026-10-19T20:24:30.4155623Z # of expected passes		16
+2026-10-19T20:24:30.4752051Z /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:24:30.4752352Z 
+2026-10-19T20:24:30.4758476Z mkdir -p outputs/gdb.rocm/watchpoint-at-end-of-shader
+2026-10-19T20:24:30.4881895Z Using /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/lib/gdb.exp as tool init file.
+2026-10-19T20:24:30.4924496Z NOTE: Dejagnu's default_target_compile is missing support for HIP, using local override
+2026-10-19T20:24:30.4930394Z Test run by root on Mon Oct 19 20:24:30 2026
+2026-10-19T20:24:30.4930805Z Native configuration is x86_64-pc-linux-gnu
+2026-10-19T20:24:30.4930932Z 
+2026-10-19T20:24:30.4930984Z 		=== gdb tests ===
+2026-10-19T20:24:30.4931064Z 
+2026-10-19T20:24:30.4934847Z Schedule of variations:
+2026-10-19T20:24:30.4934994Z     unix
+2026-10-19T20:24:30.4935058Z 
+... [middle trimmed by labeler] ...
+2026-10-19T20:29:42.0560995Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1012
+2026-10-19T20:29:42.0561366Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1030
+2026-10-19T20:29:42.0561715Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1031
+2026-10-19T20:29:42.0562060Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1032
+2026-10-19T20:29:42.0562423Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx11-7-generic
+2026-10-19T20:29:42.0562803Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx11-generic
+2026-10-19T20:29:42.0563169Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1100
+2026-10-19T20:29:42.0563514Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1101
+2026-10-19T20:29:42.0563859Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1102
+2026-10-19T20:29:42.0564206Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1103
+2026-10-19T20:29:42.0564566Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1150
+2026-10-19T20:29:42.0564912Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1151
+2026-10-19T20:29:42.0565256Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1152
+2026-10-19T20:29:42.0565644Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1153
+2026-10-19T20:29:42.0565985Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1170
+2026-10-19T20:29:42.0566312Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1171
+2026-10-19T20:29:42.0566649Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1172
+2026-10-19T20:29:42.0567007Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx12-generic
+2026-10-19T20:29:42.0567374Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1200
+2026-10-19T20:29:42.0567721Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1201
+2026-10-19T20:29:42.0568064Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1250
+2026-10-19T20:29:42.0568429Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx1250-strict
+2026-10-19T20:29:42.0568811Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx9-4-generic
+2026-10-19T20:29:42.0569183Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx9-generic
+2026-10-19T20:29:42.0569547Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx900
+2026-10-19T20:29:42.0569892Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx906
+2026-10-19T20:29:42.0570238Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx908
+2026-10-19T20:29:42.0570572Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx90a
+2026-10-19T20:29:42.0570905Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx942
+2026-10-19T20:29:42.0571263Z 2026-10-19 20:29:42,052 - INFO: set architecture amdgcn:gfx950
+2026-10-19T20:29:42.0572884Z 2026-10-19 20:29:42,052 - INFO: Executing on host: amdclang++  -mllvm=-amdgpu-spill-cfi-saved-regs -Wno-unused-command-line-argument --offload-arch=gfx1102  -fdiagnostics-color=never -Wno-unknown-warning-option -c -g  -o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork0.o -x hip /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-fork.cpp    (timeout = 300)
+2026-10-19T20:29:42.0575450Z 2026-10-19 20:29:42,052 - INFO: builtin_spawn -ignore SIGHUP amdclang++ -mllvm=-amdgpu-spill-cfi-saved-regs -Wno-unused-command-line-argument --offload-arch=gfx1102 -fdiagnostics-color=never -Wno-unknown-warning-option -c -g -o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork0.o -x hip /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-fork.cpp
+2026-10-19T20:29:42.0578081Z 2026-10-19 20:29:42,052 - INFO: Executing on host: amdclang++  --hip-link -mllvm=-amdgpu-spill-cfi-saved-regs -Wno-unused-command-line-argument --offload-arch=gfx1102 -x none /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork0.o  -fdiagnostics-color=never -Wno-unknown-warning-option -g  -lm   -o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork    (timeout = 300)
+2026-10-19T20:29:42.0580876Z 2026-10-19 20:29:42,052 - INFO: builtin_spawn -ignore SIGHUP amdclang++ --hip-link -mllvm=-amdgpu-spill-cfi-saved-regs -Wno-unused-command-line-argument --offload-arch=gfx1102 -x none /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork0.o -fdiagnostics-color=never -Wno-unknown-warning-option -g -lm -o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork
+2026-10-19T20:29:42.0582556Z 2026-10-19 20:29:42,053 - INFO: builtin_spawn /__w/TheRock/TheRock/build/bin/rocgdb -nw -nx -q -iex set height 0 -iex set width 0
+2026-10-19T20:29:42.0583052Z 2026-10-19 20:29:42,053 - INFO: (gdb) set height 0
+2026-10-19T20:29:42.0583310Z 2026-10-19 20:29:42,053 - INFO: (gdb) set width 0
+2026-10-19T20:29:42.0583539Z 2026-10-19 20:29:42,053 - INFO: (gdb) dir
+2026-10-19T20:29:42.0583823Z 2026-10-19 20:29:42,053 - INFO: Reinitialize source path to empty? (y or n) y
+2026-10-19T20:29:42.0584172Z 2026-10-19 20:29:42,053 - INFO: Source directories searched: $cdir:$cwd
+2026-10-19T20:29:42.0584629Z 2026-10-19 20:29:42,053 - INFO: (gdb) dir /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm
+2026-10-19T20:29:42.0585195Z 2026-10-19 20:29:42,053 - INFO: Source directories searched: /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm:$cdir:$cwd
+2026-10-19T20:29:42.0585634Z 2026-10-19 20:29:42,053 - INFO: (gdb) kill
+2026-10-19T20:29:42.0585895Z 2026-10-19 20:29:42,053 - INFO: The program is not being run.
+2026-10-19T20:29:42.0586416Z 2026-10-19 20:29:42,053 - INFO: (gdb) file /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork
+2026-10-19T20:29:42.0587205Z 2026-10-19 20:29:42,053 - INFO: Reading symbols from /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork...
+2026-10-19T20:29:42.0587775Z 2026-10-19 20:29:42,053 - INFO: (gdb) set follow-fork-mode child
+2026-10-19T20:29:42.0588216Z 2026-10-19 20:29:42,053 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=kernel: set follow-fork-mode child
+2026-10-19T20:29:42.0588699Z 2026-10-19 20:29:42,053 - INFO: acquiring lock file: gdb.rocm/multi-inferior-fork.exp
+2026-10-19T20:29:42.0589097Z 2026-10-19 20:29:42,053 - INFO: lock file: locked by gdb.rocm/multi-inferior-fork.exp
+2026-10-19T20:29:42.0589427Z 2026-10-19 20:29:42,053 - INFO: delete breakpoints
+2026-10-19T20:29:42.0589712Z 2026-10-19 20:29:42,053 - INFO: (gdb) info breakpoints
+2026-10-19T20:29:42.0590083Z 2026-10-19 20:29:42,053 - INFO: No breakpoints, watchpoints, tracepoints, or catchpoints.
+2026-10-19T20:29:42.0590473Z 2026-10-19 20:29:42,053 - INFO: (gdb) break -qualified kernel
+2026-10-19T20:29:42.0590840Z 2026-10-19 20:29:42,053 - INFO: Function "kernel" not defined.
+2026-10-19T20:29:42.0591271Z 2026-10-19 20:29:42,053 - INFO: Make breakpoint pending on future shared library load? (y or [n]) y
+2026-10-19T20:29:42.0591709Z 2026-10-19 20:29:42,053 - INFO: Breakpoint 1 (-qualified kernel) pending.
+2026-10-19T20:29:42.0592244Z 2026-10-19 20:29:42,053 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=kernel: gdb_breakpoint: set breakpoint at kernel
+2026-10-19T20:29:42.0592710Z 2026-10-19 20:29:42,053 - INFO: run 
+2026-10-19T20:29:42.0593255Z 2026-10-19 20:29:42,053 - INFO: Starting program: /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork 
+2026-10-19T20:29:42.0593896Z 2026-10-19 20:29:42,053 - INFO: warning: Cannot locate the amdgpu.ids file.
+2026-10-19T20:29:42.0594377Z 2026-10-19 20:29:42,053 - INFO: warning: os_agent_id 42435 (`Device 1002:13c0.c9'): architecture gfx1036 not supported.
+2026-10-19T20:29:42.0594819Z 2026-10-19 20:29:42,053 - INFO: [Thread debugging using libthread_db enabled]
+2026-10-19T20:29:42.0595244Z 2026-10-19 20:29:42,053 - INFO: Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+2026-10-19T20:29:42.0595775Z 2026-10-19 20:29:42,053 - INFO: [Attaching after Thread 0x7ffff706e4c0 (LWP 27773) fork to child process 27776]
+2026-10-19T20:29:42.0596223Z 2026-10-19 20:29:42,053 - INFO: [New inferior 2 (process 27776)]
+2026-10-19T20:29:42.0596675Z 2026-10-19 20:29:42,053 - INFO: warning: os_agent_id 42435 (`Device 1002:13c0.c9'): architecture gfx1036 not supported.
+2026-10-19T20:29:42.0597168Z 2026-10-19 20:29:42,053 - INFO: [Detaching after fork from parent process 27773]
+2026-10-19T20:29:42.0597543Z 2026-10-19 20:29:42,053 - INFO: [Inferior 1 (process 27773) detached]
+2026-10-19T20:29:42.0597901Z 2026-10-19 20:29:42,053 - INFO: [Thread debugging using libthread_db enabled]
+2026-10-19T20:29:42.0598351Z 2026-10-19 20:29:42,053 - INFO: Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+2026-10-19T20:29:42.0598796Z 2026-10-19 20:29:42,053 - INFO: [New Thread 0x7fffec3ff6c0 (LWP 27777)]
+2026-10-19T20:29:42.0599141Z 2026-10-19 20:29:42,053 - INFO: [New Thread 0x7fffebbfe6c0 (LWP 27778)]
+2026-10-19T20:29:42.0599485Z 2026-10-19 20:29:42,053 - INFO: [New Thread 0x7fffeb0ff6c0 (LWP 27779)]
+2026-10-19T20:29:42.0599889Z 2026-10-19 20:29:42,053 - INFO: [Thread 0x7fffeb0ff6c0 (LWP 27779) exited]
+2026-10-19T20:29:42.0600243Z 2026-10-19 20:29:42,053 - INFO: [New Thread 0x7fffe2bff6c0 (LWP 27780)]
+2026-10-19T20:29:42.0600672Z 2026-10-19 20:29:42,053 - INFO: [Switching to thread 2.6, lane 0 (AMDGPU Lane 3:2:1:1/0 (0,0,0)[0,0,0])]
+2026-10-19T20:29:42.0601040Z 2026-10-19 20:29:42,053 - INFO: 
+2026-10-19T20:29:42.0601645Z 2026-10-19 20:29:42,053 - INFO: Thread 2.6 "kernel" hit Breakpoint 1.1, with lane 0, kernel () at /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-fork.cpp:37
+2026-10-19T20:29:42.0602248Z 2026-10-19 20:29:42,053 - INFO: 37	{}
+2026-10-19T20:29:42.0602639Z 2026-10-19 20:29:42,053 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=kernel: runto: run to kernel
+2026-10-19T20:29:42.0603030Z 2026-10-19 20:29:42,053 - INFO: inferior
+2026-10-19T20:29:42.0603622Z 2026-10-19 20:29:42,053 - INFO: [Current inferior is 2 [process 27776] (/__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork)]
+2026-10-19T20:29:42.0604312Z 2026-10-19 20:29:42,053 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=kernel: inferior
+2026-10-19T20:29:42.0604693Z 2026-10-19 20:29:42,053 - INFO: inferior 1
+2026-10-19T20:29:42.0605300Z 2026-10-19 20:29:42,053 - INFO: [Switching to inferior 1 [<null>] (/__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork)]
+2026-10-19T20:29:42.0606009Z 2026-10-19 20:29:42,053 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=kernel: inferior 1
+2026-10-19T20:29:42.0606361Z 2026-10-19 20:29:42,053 - INFO: run
+2026-10-19T20:29:42.0606920Z 2026-10-19 20:29:42,053 - INFO: Starting program: /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork 
+2026-10-19T20:29:42.0607613Z 2026-10-19 20:29:42,053 - INFO: warning: os_agent_id 42435 (`Device 1002:13c0.c9'): architecture gfx1036 not supported.
+2026-10-19T20:29:42.0608074Z 2026-10-19 20:29:42,053 - INFO: [Thread debugging using libthread_db enabled]
+2026-10-19T20:29:42.0608512Z 2026-10-19 20:29:42,053 - INFO: Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+2026-10-19T20:29:42.0609038Z 2026-10-19 20:29:42,053 - INFO: [Attaching after Thread 0x7ffff706e4c0 (LWP 27781) fork to child process 27782]
+2026-10-19T20:29:42.0609461Z 2026-10-19 20:29:42,053 - INFO: [New inferior 3 (process 27782)]
+2026-10-19T20:29:42.0609907Z 2026-10-19 20:29:42,053 - INFO: warning: os_agent_id 42435 (`Device 1002:13c0.c9'): architecture gfx1036 not supported.
+2026-10-19T20:29:42.0610379Z 2026-10-19 20:29:42,053 - INFO: [Detaching after fork from parent process 27781]
+2026-10-19T20:29:42.0610733Z 2026-10-19 20:29:42,053 - INFO: [Inferior 1 (process 27781) detached]
+2026-10-19T20:29:42.0611066Z 2026-10-19 20:29:42,053 - INFO: [Thread debugging using libthread_db enabled]
+2026-10-19T20:29:42.0611514Z 2026-10-19 20:29:42,053 - INFO: Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+2026-10-19T20:29:42.0612047Z 2026-10-19 20:29:42,053 - INFO: warning: At least one agent is busy (debugging may be enabled by another process)
+2026-10-19T20:29:42.0612585Z 2026-10-19 20:29:42,053 - INFO: warning: amd-dbgapi: unable to enable GPU debugging due to a restriction error
+2026-10-19T20:29:42.0613015Z 2026-10-19 20:29:42,053 - INFO: [New Thread 0x7fffec3ff6c0 (LWP 27783)]
+2026-10-19T20:29:42.0613357Z 2026-10-19 20:29:42,053 - INFO: [New Thread 0x7fffebbfe6c0 (LWP 27784)]
+2026-10-19T20:29:42.0613692Z 2026-10-19 20:29:42,053 - INFO: [New Thread 0x7fffeb0ff6c0 (LWP 27785)]
+2026-10-19T20:29:42.0614040Z 2026-10-19 20:29:42,053 - INFO: [Thread 0x7fffeb0ff6c0 (LWP 27785) exited]
+2026-10-19T20:29:42.0614381Z 2026-10-19 20:29:42,053 - INFO: [New Thread 0x7fffe2bff6c0 (LWP 27786)]
+2026-10-19T20:29:42.0614684Z 2026-10-19 20:29:42,053 - INFO: [LWP 27786 exited]
+2026-10-19T20:29:42.0614987Z 2026-10-19 20:29:42,053 - INFO: [Thread 0x7fffec3ff6c0 (LWP 27783) exited]
+2026-10-19T20:29:42.0615345Z 2026-10-19 20:29:42,053 - INFO: [LWP 27784 exited]
+2026-10-19T20:29:42.0615652Z 2026-10-19 20:29:42,053 - INFO: [Inferior 3 (process 27782) exited normally]
+2026-10-19T20:29:42.0616070Z 2026-10-19 20:29:42,053 - INFO: (gdb) FAIL: gdb.rocm/multi-inferior-fork.exp: stop_at=kernel: run
+2026-10-19T20:29:42.0616512Z 2026-10-19 20:29:42,053 - INFO: releasing lock file: gdb.rocm/multi-inferior-fork.exp
+2026-10-19T20:29:42.0617032Z 2026-10-19 20:29:42,053 - INFO: builtin_spawn /__w/TheRock/TheRock/build/bin/rocgdb -nw -nx -q -iex set height 0 -iex set width 0
+2026-10-19T20:29:42.0617494Z 2026-10-19 20:29:42,053 - INFO: (gdb) set height 0
+2026-10-19T20:29:42.0617761Z 2026-10-19 20:29:42,053 - INFO: (gdb) set width 0
+2026-10-19T20:29:42.0618007Z 2026-10-19 20:29:42,053 - INFO: (gdb) dir
+2026-10-19T20:29:42.0618300Z 2026-10-19 20:29:42,053 - INFO: Reinitialize source path to empty? (y or n) y
+2026-10-19T20:29:42.0618665Z 2026-10-19 20:29:42,053 - INFO: Source directories searched: $cdir:$cwd
+2026-10-19T20:29:42.0619076Z 2026-10-19 20:29:42,053 - INFO: (gdb) dir /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm
+2026-10-19T20:29:42.0619662Z 2026-10-19 20:29:42,053 - INFO: Source directories searched: /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm:$cdir:$cwd
+2026-10-19T20:29:42.0620107Z 2026-10-19 20:29:42,053 - INFO: (gdb) kill
+2026-10-19T20:29:42.0620365Z 2026-10-19 20:29:42,053 - INFO: The program is not being run.
+2026-10-19T20:29:42.0620893Z 2026-10-19 20:29:42,053 - INFO: (gdb) file /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork
+2026-10-19T20:29:42.0621799Z 2026-10-19 20:29:42,053 - INFO: Reading symbols from /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork...
+2026-10-19T20:29:42.0622392Z 2026-10-19 20:29:42,053 - INFO: (gdb) set follow-fork-mode child
+2026-10-19T20:29:42.0622869Z 2026-10-19 20:29:42,053 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=child_after_fork: set follow-fork-mode child
+2026-10-19T20:29:42.0623392Z 2026-10-19 20:29:42,053 - INFO: acquiring lock file: gdb.rocm/multi-inferior-fork.exp
+2026-10-19T20:29:42.0623791Z 2026-10-19 20:29:42,053 - INFO: lock file: locked by gdb.rocm/multi-inferior-fork.exp
+2026-10-19T20:29:42.0624125Z 2026-10-19 20:29:42,053 - INFO: delete breakpoints
+2026-10-19T20:29:42.0624395Z 2026-10-19 20:29:42,053 - INFO: (gdb) info breakpoints
+2026-10-19T20:29:42.0624727Z 2026-10-19 20:29:42,053 - INFO: No breakpoints, watchpoints, tracepoints, or catchpoints.
+2026-10-19T20:29:42.0625108Z 2026-10-19 20:29:42,053 - INFO: (gdb) break -qualified child_after_fork
+2026-10-19T20:29:42.0625701Z 2026-10-19 20:29:42,053 - INFO: Breakpoint 1 at 0xa29c: file /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-fork.cpp, line 43.
+2026-10-19T20:29:42.0626504Z 2026-10-19 20:29:42,053 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=child_after_fork: gdb_breakpoint: set breakpoint at child_after_fork
+2026-10-19T20:29:42.0627020Z 2026-10-19 20:29:42,054 - INFO: run 
+2026-10-19T20:29:42.0627548Z 2026-10-19 20:29:42,054 - INFO: Starting program: /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork 
+2026-10-19T20:29:42.0628140Z 2026-10-19 20:29:42,054 - INFO: warning: Cannot locate the amdgpu.ids file.
+2026-10-19T20:29:42.0628587Z 2026-10-19 20:29:42,054 - INFO: warning: os_agent_id 42435 (`Device 1002:13c0.c9'): architecture gfx1036 not supported.
+2026-10-19T20:29:42.0629038Z 2026-10-19 20:29:42,054 - INFO: [Thread debugging using libthread_db enabled]
+2026-10-19T20:29:42.0629463Z 2026-10-19 20:29:42,054 - INFO: Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+2026-10-19T20:29:42.0629981Z 2026-10-19 20:29:42,054 - INFO: [Attaching after Thread 0x7ffff706e4c0 (LWP 27836) fork to child process 27869]
+2026-10-19T20:29:42.0630405Z 2026-10-19 20:29:42,054 - INFO: [New inferior 2 (process 27869)]
+2026-10-19T20:29:42.0630885Z 2026-10-19 20:29:42,054 - INFO: warning: os_agent_id 42435 (`Device 1002:13c0.c9'): architecture gfx1036 not supported.
+2026-10-19T20:29:42.0631370Z 2026-10-19 20:29:42,054 - INFO: [Detaching after fork from parent process 27836]
+2026-10-19T20:29:42.0631709Z 2026-10-19 20:29:42,054 - INFO: [Inferior 1 (process 27836) detached]
+2026-10-19T20:29:42.0632039Z 2026-10-19 20:29:42,054 - INFO: [Thread debugging using libthread_db enabled]
+2026-10-19T20:29:42.0632455Z 2026-10-19 20:29:42,054 - INFO: Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+2026-10-19T20:29:42.0632930Z 2026-10-19 20:29:42,054 - INFO: [Switching to thread 2.1 (Thread 0x7ffff706e4c0 (LWP 27869))]
+2026-10-19T20:29:42.0633249Z 2026-10-19 20:29:42,054 - INFO: 
+2026-10-19T20:29:42.0633814Z 2026-10-19 20:29:42,054 - INFO: Thread 2.1 "multi-inferior-" hit Breakpoint 1, child_after_fork () at /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-fork.cpp:43
+2026-10-19T20:29:42.0634433Z 2026-10-19 20:29:42,054 - INFO: 43	}
+2026-10-19T20:29:42.0634833Z 2026-10-19 20:29:42,054 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=child_after_fork: runto: run to child_after_fork
+2026-10-19T20:29:42.0635237Z 2026-10-19 20:29:42,054 - INFO: inferior
+2026-10-19T20:29:42.0635803Z 2026-10-19 20:29:42,054 - INFO: [Current inferior is 2 [process 27869] (/__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork)]
+2026-10-19T20:29:42.0636517Z 2026-10-19 20:29:42,054 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=child_after_fork: inferior
+2026-10-19T20:29:42.0636943Z 2026-10-19 20:29:42,054 - INFO: inferior 1
+2026-10-19T20:29:42.0637502Z 2026-10-19 20:29:42,054 - INFO: [Switching to inferior 1 [<null>] (/__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork)]
+2026-10-19T20:29:42.0638228Z 2026-10-19 20:29:42,054 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=child_after_fork: inferior 1
+2026-10-19T20:29:42.0638612Z 2026-10-19 20:29:42,054 - INFO: run
+2026-10-19T20:29:42.0639129Z 2026-10-19 20:29:42,054 - INFO: Starting program: /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork 
+2026-10-19T20:29:42.0639817Z 2026-10-19 20:29:42,054 - INFO: warning: os_agent_id 42435 (`Device 1002:13c0.c9'): architecture gfx1036 not supported.
+2026-10-19T20:29:42.0640244Z 2026-10-19 20:29:42,054 - INFO: [Thread debugging using libthread_db enabled]
+2026-10-19T20:29:42.0640676Z 2026-10-19 20:29:42,054 - INFO: Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+2026-10-19T20:29:42.0641194Z 2026-10-19 20:29:42,054 - INFO: [Attaching after Thread 0x7ffff706e4c0 (LWP 27870) fork to child process 27871]
+2026-10-19T20:29:42.0641533Z 2026-10-19 20:29:42,054 - INFO: [New inferior 3 (process 27871)]
+2026-10-19T20:29:42.0641794Z 2026-10-19 20:29:42,054 - INFO: warning: os_agent_id 42435 (`Device 1002:13c0.c9'): architecture gfx1036 not supported.
+2026-10-19T20:29:42.0642070Z 2026-10-19 20:29:42,054 - INFO: [Detaching after fork from parent process 27870]
+2026-10-19T20:29:42.0642278Z 2026-10-19 20:29:42,054 - INFO: [Inferior 1 (process 27870) detached]
+2026-10-19T20:29:42.0642477Z 2026-10-19 20:29:42,054 - INFO: [Thread debugging using libthread_db enabled]
+2026-10-19T20:29:42.0642723Z 2026-10-19 20:29:42,054 - INFO: Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+2026-10-19T20:29:42.0642992Z 2026-10-19 20:29:42,054 - INFO: [Switching to thread 3.1 (Thread 0x7ffff706e4c0 (LWP 27871))]
+2026-10-19T20:29:42.0643184Z 2026-10-19 20:29:42,054 - INFO: 
+2026-10-19T20:29:42.0643508Z 2026-10-19 20:29:42,054 - INFO: Thread 3.1 "multi-inferior-" hit Breakpoint 1.2, child_after_fork () at /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-fork.cpp:43
+2026-10-19T20:29:42.0643843Z 2026-10-19 20:29:42,054 - INFO: 43	}
+2026-10-19T20:29:42.0644079Z 2026-10-19 20:29:42,054 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=child_after_fork: run
+2026-10-19T20:29:42.0644298Z 2026-10-19 20:29:42,054 - INFO: continue
+2026-10-19T20:29:42.0644429Z 2026-10-19 20:29:42,054 - INFO: Continuing.
+2026-10-19T20:29:42.0644593Z 2026-10-19 20:29:42,054 - INFO: [New Thread 0x7fffec3ff6c0 (LWP 27872)]
+2026-10-19T20:29:42.0644786Z 2026-10-19 20:29:42,054 - INFO: [New Thread 0x7fffe3fff6c0 (LWP 27873)]
+2026-10-19T20:29:42.0644973Z 2026-10-19 20:29:42,054 - INFO: [New Thread 0x7fffeb8ff6c0 (LWP 27874)]
+2026-10-19T20:29:42.0645161Z 2026-10-19 20:29:42,054 - INFO: [Thread 0x7fffeb8ff6c0 (LWP 27874) exited]
+2026-10-19T20:29:42.0645356Z 2026-10-19 20:29:42,054 - INFO: [New Thread 0x7fffe29ff6c0 (LWP 27875)]
+2026-10-19T20:29:42.0645526Z 2026-10-19 20:29:42,054 - INFO: [LWP 27875 exited]
+2026-10-19T20:29:42.0645680Z 2026-10-19 20:29:42,054 - INFO: [LWP 27872 exited]
+2026-10-19T20:29:42.0645848Z 2026-10-19 20:29:42,054 - INFO: [Thread 0x7fffe3fff6c0 (LWP 27873) exited]
+2026-10-19T20:29:42.0646051Z 2026-10-19 20:29:42,054 - INFO: [Inferior 3 (process 27871) exited normally]
+2026-10-19T20:29:42.0646370Z 2026-10-19 20:29:42,054 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=child_after_fork: continue until exit at continue inferior 3 to end
+2026-10-19T20:29:42.0646653Z 2026-10-19 20:29:42,054 - INFO: inferior 2
+2026-10-19T20:29:42.0646982Z 2026-10-19 20:29:42,054 - INFO: [Switching to inferior 2 [process 27869] (/__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-fork/multi-inferior-fork)]
+2026-10-19T20:29:42.0647369Z 2026-10-19 20:29:42,054 - INFO: [Switching to thread 2.1 (Thread 0x7ffff706e4c0 (LWP 27869))]
+2026-10-19T20:29:42.0647726Z 2026-10-19 20:29:42,054 - INFO: #0  child_after_fork () at /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-fork.cpp:43
+2026-10-19T20:29:42.0647996Z 2026-10-19 20:29:42,054 - INFO: 43	}
+2026-10-19T20:29:42.0648208Z 2026-10-19 20:29:42,054 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=child_after_fork: inferior 2
+2026-10-19T20:29:42.0648436Z 2026-10-19 20:29:42,054 - INFO: continue
+2026-10-19T20:29:42.0648565Z 2026-10-19 20:29:42,054 - INFO: Continuing.
+2026-10-19T20:29:42.0648723Z 2026-10-19 20:29:42,054 - INFO: [New Thread 0x7fffec3ff6c0 (LWP 27876)]
+2026-10-19T20:29:42.0648908Z 2026-10-19 20:29:42,054 - INFO: [New Thread 0x7fffebbfe6c0 (LWP 27877)]
+2026-10-19T20:29:42.0649093Z 2026-10-19 20:29:42,054 - INFO: [New Thread 0x7fffeb0ff6c0 (LWP 27878)]
+2026-10-19T20:29:42.0649284Z 2026-10-19 20:29:42,054 - INFO: [Thread 0x7fffeb0ff6c0 (LWP 27878) exited]
+2026-10-19T20:29:42.0649475Z 2026-10-19 20:29:42,054 - INFO: [New Thread 0x7fffe2bff6c0 (LWP 27879)]
+2026-10-19T20:29:42.0649664Z 2026-10-19 20:29:42,054 - INFO: [Thread 0x7fffe2bff6c0 (LWP 27879) exited]
+2026-10-19T20:29:42.0649855Z 2026-10-19 20:29:42,054 - INFO: [Thread 0x7fffec3ff6c0 (LWP 27876) exited]
+2026-10-19T20:29:42.0650045Z 2026-10-19 20:29:42,054 - INFO: [Thread 0x7fffebbfe6c0 (LWP 27877) exited]
+2026-10-19T20:29:42.0650242Z 2026-10-19 20:29:42,054 - INFO: [Inferior 2 (process 27869) exited normally]
+2026-10-19T20:29:42.0650561Z 2026-10-19 20:29:42,054 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-fork.exp: stop_at=child_after_fork: continue until exit at continue inferior 2 to end
+2026-10-19T20:29:42.0650893Z 2026-10-19 20:29:42,054 - INFO: releasing lock file: gdb.rocm/multi-inferior-fork.exp
+2026-10-19T20:29:42.0651279Z 2026-10-19 20:29:42,054 - INFO: testcase /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-fork.exp completed in 102 seconds
+2026-10-19T20:29:42.0651561Z 2026-10-19 20:29:42,054 - INFO: 
+2026-10-19T20:29:42.0651805Z 2026-10-19 20:29:42,054 - INFO: Running /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-gpu.exp ...
+2026-10-19T20:29:42.0652084Z 2026-10-19 20:29:42,054 - INFO: gdb_do_cache: allow_hip_tests (  )
+2026-10-19T20:29:42.0652411Z 2026-10-19 20:29:42,054 - INFO: Executing on host: /__w/TheRock/TheRock/build/bin/rocgdb -nw -nx -q -iex "set height 0" -iex "set width 0" --configuration   (timeout = 300)
+2026-10-19T20:29:42.0652903Z 2026-10-19 20:29:42,054 - INFO: builtin_spawn -ignore SIGHUP /__w/TheRock/TheRock/build/bin/rocgdb -nw -nx -q -iex set height 0 -iex set width 0 --configuration
+2026-10-19T20:29:42.0653224Z 2026-10-19 20:29:42,054 - INFO: This GDB was configured as follows:
+2026-10-19T20:29:42.0653453Z 2026-10-19 20:29:42,054 - INFO:    configure --host=x86_64-pc-linux-gnu --target=x86_64-pc-linux-gnu
+2026-10-19T20:29:42.0653710Z 2026-10-19 20:29:42,054 - INFO: 	     --enable-targets=x86_64-linux-gnu,amdgcn-amd-amdhsa
+2026-10-19T20:29:42.0653950Z 2026-10-19 20:29:42,054 - INFO: 	     --with-auto-load-dir=$debugdir:$datadir/auto-load
+2026-10-19T20:29:42.0654193Z 2026-10-19 20:29:42,054 - INFO: 	     --with-auto-load-safe-path=$debugdir:$datadir/auto-load
+2026-10-19T20:29:42.0654396Z 2026-10-19 20:29:42,054 - INFO: 	     --with-expat
+2026-10-19T20:29:42.0654709Z 2026-10-19 20:29:42,054 - INFO: 	     --with-gdb-datadir=/__w/TheRock/TheRock/build/debug-tools/rocgdb/build/rocgdb-build-py3.12-install/share/rocgdb (relocatable)
+2026-10-19T20:29:42.0655183Z 2026-10-19 20:29:42,054 - INFO: 	     --with-jit-reader-dir=/__w/TheRock/TheRock/build/debug-tools/rocgdb/build/rocgdb-build-py3.12-install/lib/gdb (relocatable)
+2026-10-19T20:29:42.0655501Z 2026-10-19 20:29:42,054 - INFO: 	     --without-libunwind-ia64
+2026-10-19T20:29:42.0655666Z 2026-10-19 20:29:42,054 - INFO: 	     --with-lzma
+2026-10-19T20:29:42.0655822Z 2026-10-19 20:29:42,054 - INFO: 	     --without-babeltrace
+2026-10-19T20:29:42.0655986Z 2026-10-19 20:29:42,054 - INFO: 	     --without-intel-pt
+2026-10-19T20:29:42.0656177Z 2026-10-19 20:29:42,054 - INFO: 	     --without-xxhash
+2026-10-19T20:29:42.0656364Z 2026-10-19 20:29:42,054 - INFO: 	     --with-python=/opt/python-shared/cp312-cp312
+2026-10-19T20:29:42.0656598Z 2026-10-19 20:29:42,054 - INFO: 	     --with-python-libdir=/opt/python-shared/cp312-cp312/lib
+2026-10-19T20:29:42.0656805Z 2026-10-19 20:29:42,054 - INFO: 	     --without-debuginfod
+2026-10-19T20:29:42.0656961Z 2026-10-19 20:29:42,054 - INFO: 	     --with-curses
+2026-10-19T20:29:42.0657120Z 2026-10-19 20:29:42,054 - INFO: 	     --without-guile
+2026-10-19T20:29:42.0657278Z 2026-10-19 20:29:42,054 - INFO: 	     --with-amd-dbgapi
+2026-10-19T20:29:42.0657448Z 2026-10-19 20:29:42,054 - INFO: 	     --disable-source-highlight
+2026-10-19T20:29:42.0657623Z 2026-10-19 20:29:42,054 - INFO: 	     --enable-threading
+2026-10-19T20:29:42.0657773Z 2026-10-19 20:29:42,054 - INFO: 	     --enable-tui
+2026-10-19T20:29:42.0657933Z 2026-10-19 20:29:42,054 - INFO: 	     --without-system-readline
+2026-10-19T20:29:42.0658346Z 2026-10-19 20:29:42,055 - INFO: 	     --with-separate-debug-dir=/__w/TheRock/TheRock/build/debug-tools/rocgdb/build/rocgdb-build-py3.12-install/lib/debug:/usr/lib/debug (relocatable)
+2026-10-19T20:29:42.0658750Z 2026-10-19 20:29:42,055 - INFO: 
+2026-10-19T20:29:42.0658947Z 2026-10-19 20:29:42,055 - INFO: ("Relocatable" means the directory can be moved with the GDB installation
+2026-10-19T20:29:42.0659231Z 2026-10-19 20:29:42,055 - INFO: tree, and GDB will still find it.)
+2026-10-19T20:29:42.0659410Z 2026-10-19 20:29:42,055 - INFO: 
+2026-10-19T20:29:42.0659564Z 2026-10-19 20:29:42,055 - INFO: GNU Readline library version: 8.2	(internal)
+2026-10-19T20:29:42.0659734Z 2026-10-19 20:29:42,055 - INFO: 
+2026-10-19T20:29:42.0659883Z 2026-10-19 20:29:42,055 - INFO: gdb_do_cache: find_amdgpu_devices (  )
+2026-10-19T20:29:42.0660093Z 2026-10-19 20:29:42,055 - INFO: gdb_do_cache: universal_compile_options_c (  )
+2026-10-19T20:29:42.0660597Z 2026-10-19 20:29:42,055 - INFO: Executing on host: clang    -fdiagnostics-color=never -c -o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/temp/27310/ccopts.o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/temp/27310/ccopts.c    (timeout = 300)
+2026-10-19T20:29:42.0661463Z 2026-10-19 20:29:42,055 - INFO: builtin_spawn -ignore SIGHUP clang -fdiagnostics-color=never -c -o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/temp/27310/ccopts.o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/temp/27310/ccopts.c
+2026-10-19T20:29:42.0661970Z 2026-10-19 20:29:42,055 - INFO: get_compiler_info: clang-24-0-0
+2026-10-19T20:29:42.0662703Z 2026-10-19 20:29:42,055 - INFO: Executing on host: amdclang++  --hip-link -mllvm=-amdgpu-spill-cfi-saved-regs -Wno-unused-command-line-argument -x hip /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/temp/27310/device_enumerator.cpp  -fdiagnostics-color=never -Wno-unknown-warning-option -w -g  -lm   -o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/temp/27310/device_enumerator.x    (timeout = 300)
+2026-10-19T20:29:42.0663950Z 2026-10-19 20:29:42,055 - INFO: builtin_spawn -ignore SIGHUP amdclang++ --hip-link -mllvm=-amdgpu-spill-cfi-saved-regs -Wno-unused-command-line-argument -x hip /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/temp/27310/device_enumerator.cpp -fdiagnostics-color=never -Wno-unknown-warning-option -w -g -lm -o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/temp/27310/device_enumerator.x
+2026-10-19T20:29:42.0664788Z 2026-10-19 20:29:42,055 - INFO: Executing on host: /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/temp/27310/device_enumerator.x    (timeout = 300)
+2026-10-19T20:29:42.0665224Z 2026-10-19 20:29:42,055 - INFO: builtin_spawn -ignore SIGHUP /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/temp/27310/device_enumerator.x
+2026-10-19T20:29:42.0665504Z 2026-10-19 20:29:42,055 - INFO: gfx1102
+2026-10-19T20:29:42.0665671Z 2026-10-19 20:29:42,055 - INFO: gdb_do_cache: rocm_bfd_amdgcn_archs (  )
+2026-10-19T20:29:42.0666111Z 2026-10-19 20:29:42,055 - INFO: Executing on host: /__w/TheRock/TheRock/build/bin/rocgdb -nw -nx -q -iex "set height 0" -iex "set width 0" -batch  -ex "complete set architecture amdgcn:"   (timeout = 300)
+2026-10-19T20:29:42.0666658Z 2026-10-19 20:29:42,055 - INFO: builtin_spawn -ignore SIGHUP /__w/TheRock/TheRock/build/bin/rocgdb -nw -nx -q -iex set height 0 -iex set width 0 -batch -ex complete set architecture amdgcn:
+2026-10-19T20:29:42.0667026Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx10-1-generic
+2026-10-19T20:29:42.0667223Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx10-3-generic
+2026-10-19T20:29:42.0667414Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1010
+2026-10-19T20:29:42.0667595Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1011
+2026-10-19T20:29:42.0667777Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1012
+2026-10-19T20:29:42.0667955Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1030
+2026-10-19T20:29:42.0668132Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1031
+2026-10-19T20:29:42.0668311Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1032
+2026-10-19T20:29:42.0668566Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx11-7-generic
+2026-10-19T20:29:42.0668833Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx11-generic
+2026-10-19T20:29:42.0669027Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1100
+2026-10-19T20:29:42.0669213Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1101
+2026-10-19T20:29:42.0669389Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1102
+2026-10-19T20:29:42.0669564Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1103
+2026-10-19T20:29:42.0669741Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1150
+2026-10-19T20:29:42.0669916Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1151
+2026-10-19T20:29:42.0670093Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1152
+2026-10-19T20:29:42.0670271Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1153
+2026-10-19T20:29:42.0670452Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1170
+2026-10-19T20:29:42.0670629Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1171
+2026-10-19T20:29:42.0670809Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1172
+2026-10-19T20:29:42.0670994Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx12-generic
+2026-10-19T20:29:42.0671275Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1200
+2026-10-19T20:29:42.0671532Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1201
+2026-10-19T20:29:42.0671706Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1250
+2026-10-19T20:29:42.0671890Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx1250-strict
+2026-10-19T20:29:42.0672088Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx9-4-generic
+2026-10-19T20:29:42.0672282Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx9-generic
+2026-10-19T20:29:42.0672470Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx900
+2026-10-19T20:29:42.0672649Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx906
+2026-10-19T20:29:42.0672832Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx908
+2026-10-19T20:29:42.0673008Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx90a
+2026-10-19T20:29:42.0673182Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx942
+2026-10-19T20:29:42.0673359Z 2026-10-19 20:29:42,055 - INFO: set architecture amdgcn:gfx950
+2026-10-19T20:29:42.0674150Z 2026-10-19 20:29:42,055 - INFO: Executing on host: amdclang++  -mllvm=-amdgpu-spill-cfi-saved-regs -Wno-unused-command-line-argument --offload-arch=gfx1102  -fdiagnostics-color=never -Wno-unknown-warning-option -c -g  -o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-gpu/multi-inferior-gpu0.o -x hip /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-gpu.cpp    (timeout = 300)
+2026-10-19T20:29:42.0675548Z 2026-10-19 20:29:42,055 - INFO: builtin_spawn -ignore SIGHUP amdclang++ -mllvm=-amdgpu-spill-cfi-saved-regs -Wno-unused-command-line-argument --offload-arch=gfx1102 -fdiagnostics-color=never -Wno-unknown-warning-option -c -g -o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-gpu/multi-inferior-gpu0.o -x hip /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-gpu.cpp
+2026-10-19T20:29:42.0676964Z 2026-10-19 20:29:42,055 - INFO: Executing on host: amdclang++  --hip-link -mllvm=-amdgpu-spill-cfi-saved-regs -Wno-unused-command-line-argument --offload-arch=gfx1102 -x none /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-gpu/multi-inferior-gpu0.o  -fdiagnostics-color=never -Wno-unknown-warning-option -g  -lm   -o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-gpu/multi-inferior-gpu    (timeout = 300)
+2026-10-19T20:29:42.0678448Z 2026-10-19 20:29:42,055 - INFO: builtin_spawn -ignore SIGHUP amdclang++ --hip-link -mllvm=-amdgpu-spill-cfi-saved-regs -Wno-unused-command-line-argument --offload-arch=gfx1102 -x none /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-gpu/multi-inferior-gpu0.o -fdiagnostics-color=never -Wno-unknown-warning-option -g -lm -o /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-gpu/multi-inferior-gpu
+2026-10-19T20:29:42.0679368Z 2026-10-19 20:29:42,055 - INFO: builtin_spawn /__w/TheRock/TheRock/build/bin/rocgdb -nw -nx -q -iex set height 0 -iex set width 0
+2026-10-19T20:29:42.0679636Z 2026-10-19 20:29:42,055 - INFO: (gdb) set height 0
+2026-10-19T20:29:42.0679790Z 2026-10-19 20:29:42,055 - INFO: (gdb) set width 0
+2026-10-19T20:29:42.0679936Z 2026-10-19 20:29:42,055 - INFO: (gdb) dir
+2026-10-19T20:29:42.0680115Z 2026-10-19 20:29:42,055 - INFO: Reinitialize source path to empty? (y or n) y
+2026-10-19T20:29:42.0680325Z 2026-10-19 20:29:42,055 - INFO: Source directories searched: $cdir:$cwd
+2026-10-19T20:29:42.0680575Z 2026-10-19 20:29:42,055 - INFO: (gdb) dir /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm
+2026-10-19T20:29:42.0680916Z 2026-10-19 20:29:42,055 - INFO: Source directories searched: /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm:$cdir:$cwd
+2026-10-19T20:29:42.0681197Z 2026-10-19 20:29:42,055 - INFO: (gdb) kill
+2026-10-19T20:29:42.0681394Z 2026-10-19 20:29:42,055 - INFO: The program is not being run.
+2026-10-19T20:29:42.0681713Z 2026-10-19 20:29:42,055 - INFO: (gdb) file /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-gpu/multi-inferior-gpu
+2026-10-19T20:29:42.0682187Z 2026-10-19 20:29:42,055 - INFO: Reading symbols from /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-gpu/multi-inferior-gpu...
+2026-10-19T20:29:42.0682524Z 2026-10-19 20:29:42,055 - INFO: (gdb) set non-stop on
+2026-10-19T20:29:42.0682736Z 2026-10-19 20:29:42,055 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-gpu.exp: set non-stop on
+2026-10-19T20:29:42.0682952Z 2026-10-19 20:29:42,055 - INFO: set detach-on-fork off
+2026-10-19T20:29:42.0683171Z 2026-10-19 20:29:42,055 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-gpu.exp: set detach-on-fork off
+2026-10-19T20:29:42.0683397Z 2026-10-19 20:29:42,055 - INFO: set follow-fork parent
+2026-10-19T20:29:42.0683612Z 2026-10-19 20:29:42,055 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-gpu.exp: set follow-fork parent
+2026-10-19T20:29:42.0683883Z 2026-10-19 20:29:42,055 - INFO: acquiring lock file: gdb.rocm/multi-inferior-gpu.exp
+2026-10-19T20:29:42.0684121Z 2026-10-19 20:29:42,055 - INFO: lock file: locked by gdb.rocm/multi-inferior-gpu.exp
+2026-10-19T20:29:42.0684308Z 2026-10-19 20:29:42,055 - INFO: break 42
+2026-10-19T20:29:42.0684606Z 2026-10-19 20:29:42,055 - INFO: Breakpoint 1 at 0xa288: file /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-gpu.cpp, line 44.
+2026-10-19T20:29:42.0684915Z 2026-10-19 20:29:42,055 - INFO: (gdb) break kern
+2026-10-19T20:29:42.0685079Z 2026-10-19 20:29:42,055 - INFO: Function "kern" not defined.
+2026-10-19T20:29:42.0685336Z 2026-10-19 20:29:42,055 - INFO: Make breakpoint pending on future shared library load? (y or [n]) y
+2026-10-19T20:29:42.0685567Z 2026-10-19 20:29:42,055 - INFO: Breakpoint 2 (kern) pending.
+2026-10-19T20:29:42.0685732Z 2026-10-19 20:29:42,055 - INFO: (gdb) break 75
+2026-10-19T20:29:42.0686037Z 2026-10-19 20:29:42,055 - INFO: Breakpoint 3 at 0xa363: file /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-gpu.cpp, line 76.
+2026-10-19T20:29:42.0686334Z 2026-10-19 20:29:42,055 - INFO: (gdb) run
+2026-10-19T20:29:42.0686638Z 2026-10-19 20:29:42,055 - INFO: Starting program: /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-gpu/multi-inferior-gpu 
+2026-10-19T20:29:42.0686983Z 2026-10-19 20:29:42,055 - INFO: warning: Cannot locate the amdgpu.ids file.
+2026-10-19T20:29:42.0687257Z 2026-10-19 20:29:42,055 - INFO: warning: os_agent_id 42435 (`Device 1002:13c0.c9'): architecture gfx1036 not supported.
+2026-10-19T20:29:42.0687530Z 2026-10-19 20:29:42,055 - INFO: [Thread debugging using libthread_db enabled]
+2026-10-19T20:29:42.0687790Z 2026-10-19 20:29:42,055 - INFO: Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+2026-10-19T20:29:42.0688040Z 2026-10-19 20:29:42,055 - INFO: [New Thread 0x7fffec3ff6c0 (LWP 27824)]
+2026-10-19T20:29:42.0688239Z 2026-10-19 20:29:42,055 - INFO: [New Thread 0x7fffebbfe6c0 (LWP 27825)]
+2026-10-19T20:29:42.0688435Z 2026-10-19 20:29:42,055 - INFO: [New Thread 0x7fffeb0ff6c0 (LWP 27826)]
+2026-10-19T20:29:42.0688630Z 2026-10-19 20:29:42,055 - INFO: [Thread 0x7fffeb0ff6c0 (LWP 27826) exited]
+2026-10-19T20:29:42.0688800Z 2026-10-19 20:29:42,055 - INFO: 
+2026-10-19T20:29:42.0689159Z 2026-10-19 20:29:42,055 - INFO: Thread 1 "multi-inferior-" hit Breakpoint 1, parent (argc=1, argv=0x7fffffffd318) at /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-gpu.cpp:44
+2026-10-19T20:29:42.0689563Z 2026-10-19 20:29:42,055 - INFO: 44	  for (int i = 0; i < num_devices; i++)
+2026-10-19T20:29:42.0689780Z 2026-10-19 20:29:42,055 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-gpu.exp: run
+2026-10-19T20:29:42.0689977Z 2026-10-19 20:29:42,055 - INFO: print /d num_devices
+2026-10-19T20:29:42.0690126Z 2026-10-19 20:29:42,055 - INFO: $1 = 1
+2026-10-19T20:29:42.0690345Z 2026-10-19 20:29:42,055 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-gpu.exp: get integer valueof "num_devices"
+2026-10-19T20:29:42.0690603Z 2026-10-19 20:29:42,055 - INFO: continue -a &
+2026-10-19T20:29:42.0690747Z 2026-10-19 20:29:42,056 - INFO: Continuing.
+2026-10-19T20:29:42.0690958Z 2026-10-19 20:29:42,056 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-gpu.exp: continue to gpu breakpoints
+2026-10-19T20:29:42.0691221Z 2026-10-19 20:29:42,056 - INFO: [New inferior 2 (process 27827)]
+2026-10-19T20:29:42.0691490Z 2026-10-19 20:29:42,056 - INFO: warning: os_agent_id 42435 (`Device 1002:13c0.c9'): architecture gfx1036 not supported.
+2026-10-19T20:29:42.0691760Z 2026-10-19 20:29:42,056 - INFO: [Thread debugging using libthread_db enabled]
+2026-10-19T20:29:42.0692014Z 2026-10-19 20:29:42,056 - INFO: Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+2026-10-19T20:29:42.0692434Z 2026-10-19 20:29:42,056 - INFO: process 27827 is executing new program: /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-gpu/multi-inferior-gpu
+2026-10-19T20:29:42.0692863Z 2026-10-19 20:29:42,056 - INFO: warning: os_agent_id 42435 (`Device 1002:13c0.c9'): architecture gfx1036 not supported.
+2026-10-19T20:29:42.0693130Z 2026-10-19 20:29:42,056 - INFO: [Thread debugging using libthread_db enabled]
+2026-10-19T20:29:42.0693386Z 2026-10-19 20:29:42,056 - INFO: Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+2026-10-19T20:29:42.0693688Z 2026-10-19 20:29:42,056 - INFO: warning: At least one agent is busy (debugging may be enabled by another process)
+2026-10-19T20:29:42.0694002Z 2026-10-19 20:29:42,056 - INFO: warning: amd-dbgapi: unable to enable GPU debugging due to a restriction error
+2026-10-19T20:29:42.0694287Z 2026-10-19 20:29:42,056 - INFO: [New Thread 0x7fffec3ff6c0 (LWP 27828)]
+2026-10-19T20:29:42.0694485Z 2026-10-19 20:29:42,056 - INFO: [New Thread 0x7fffebbfe6c0 (LWP 27829)]
+2026-10-19T20:29:42.0694677Z 2026-10-19 20:29:42,056 - INFO: [New Thread 0x7fffeb0ff6c0 (LWP 27830)]
+2026-10-19T20:29:42.0694853Z 2026-10-19 20:29:42,056 - INFO: [LWP 27830 exited]
+2026-10-19T20:29:42.0695028Z 2026-10-19 20:29:42,056 - INFO: [New Thread 0x7fffe2bff6c0 (LWP 27831)]
+2026-10-19T20:29:42.0695224Z 2026-10-19 20:29:42,056 - INFO: [Thread 0x7fffe2bff6c0 (LWP 27831) exited]
+2026-10-19T20:29:42.0695399Z 2026-10-19 20:29:42,056 - INFO: [LWP 27828 exited]
+2026-10-19T20:29:42.0695548Z 2026-10-19 20:29:42,056 - INFO: [LWP 27829 exited]
+2026-10-19T20:29:42.0695727Z 2026-10-19 20:29:42,056 - INFO: [Inferior 2 (process 27827) exited normally]
+2026-10-19T20:29:42.0695898Z 2026-10-19 20:29:42,056 - INFO: 
+2026-10-19T20:29:42.0696253Z 2026-10-19 20:29:42,056 - INFO: Thread 1 "multi-inferior-" hit Breakpoint 3, parent (argc=1, argv=0x7fffffffd318) at /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-gpu.cpp:76
+2026-10-19T20:29:42.0696625Z 2026-10-19 20:29:42,056 - INFO: 76	  int ret = 0;
+2026-10-19T20:29:42.0696843Z 2026-10-19 20:29:42,056 - INFO: FAIL: gdb.rocm/multi-inferior-gpu.exp: wait for gpu stops (timeout)
+2026-10-19T20:29:42.0697127Z 2026-10-19 20:29:42,056 - INFO: PASS: gdb.rocm/multi-inferior-gpu.exp: reach breakpoint in main
+2026-10-19T20:29:42.0697333Z 2026-10-19 20:29:42,056 - INFO: inferior 1
+2026-10-19T20:29:42.0697674Z 2026-10-19 20:29:42,056 - INFO: [Switching to inferior 1 [process 27791] (/__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/outputs/gdb.rocm/multi-inferior-gpu/multi-inferior-gpu)]
+2026-10-19T20:29:42.0698069Z 2026-10-19 20:29:42,056 - INFO: [Switching to thread 1 (Thread 0x7ffff706e4c0 (LWP 27791))]
+2026-10-19T20:29:42.0698434Z 2026-10-19 20:29:42,056 - INFO: #0  parent (argc=1, argv=0x7fffffffd318) at /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-gpu.cpp:76
+2026-10-19T20:29:42.0698741Z 2026-10-19 20:29:42,056 - INFO: 76	  int ret = 0;
+2026-10-19T20:29:42.0698938Z 2026-10-19 20:29:42,056 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-gpu.exp: inferior 1
+2026-10-19T20:29:42.0699132Z 2026-10-19 20:29:42,056 - INFO: continue -a
+2026-10-19T20:29:42.0699309Z 2026-10-19 20:29:42,056 - INFO: Continuing.
+2026-10-19T20:29:42.0699475Z 2026-10-19 20:29:42,056 - INFO: [Thread 0x7fffec3ff6c0 (LWP 27824) exited]
+2026-10-19T20:29:42.0699674Z 2026-10-19 20:29:42,056 - INFO: [Thread 0x7fffebbfe6c0 (LWP 27825) exited]
+2026-10-19T20:29:42.0699880Z 2026-10-19 20:29:42,056 - INFO: [Inferior 1 (process 27791) exited normally]
+2026-10-19T20:29:42.0700118Z 2026-10-19 20:29:42,056 - INFO: (gdb) PASS: gdb.rocm/multi-inferior-gpu.exp: continue until exit
+2026-10-19T20:29:42.0700373Z 2026-10-19 20:29:42,056 - INFO: releasing lock file: gdb.rocm/multi-inferior-gpu.exp
+2026-10-19T20:29:42.0700720Z 2026-10-19 20:29:42,056 - INFO: testcase /__w/TheRock/TheRock/build/tests/rocgdb/gdb/testsuite/gdb.rocm/multi-inferior-gpu.exp completed in 102 seconds
+2026-10-19T20:29:42.0701010Z 2026-10-19 20:29:42,056 - INFO: 
+2026-10-19T20:29:42.0701128Z 2026-10-19 20:29:42,056 - INFO: 
+2026-10-19T20:29:42.0701293Z 2026-10-19 20:29:42,056 - INFO: 		=== gdb Summary ===
+2026-10-19T20:29:42.0701436Z 2026-10-19 20:29:42,056 - INFO: 
+2026-10-19T20:29:42.0701575Z 2026-10-19 20:29:42,056 - INFO: # of expected passes		23
+2026-10-19T20:29:42.0701745Z 2026-10-19 20:29:42,056 - INFO: # of unexpected failures	2
+2026-10-19T20:29:42.0702062Z 2026-10-19 20:29:42,056 - INFO: Executing on host: /__w/TheRock/TheRock/build/bin/rocgdb -nw -nx -q -iex "set height 0" -iex "set width 0" --version    (timeout = 300)
+2026-10-19T20:29:42.0702520Z 2026-10-19 20:29:42,056 - INFO: builtin_spawn -ignore SIGHUP /__w/TheRock/TheRock/build/bin/rocgdb -nw -nx -q -iex set height 0 -iex set width 0 --version
+2026-10-19T20:29:42.0702825Z 2026-10-19 20:29:42,056 - INFO: GNU gdb (ROCm-10.2.0) 16.3
+2026-10-19T20:29:42.0703054Z 2026-10-19 20:29:42,056 - INFO: Copyright (C) 2024 Free Software Foundation, Inc.
+2026-10-19T20:29:42.0703334Z 2026-10-19 20:29:42,056 - INFO: License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+2026-10-19T20:29:42.0703623Z 2026-10-19 20:29:42,056 - INFO: This is free software: you are free to change and redistribute it.
+2026-10-19T20:29:42.0703882Z 2026-10-19 20:29:42,056 - INFO: There is NO WARRANTY, to the extent permitted by law.
+2026-10-19T20:29:42.0704194Z 2026-10-19 20:29:42,056 - INFO: /__w/TheRock/TheRock/build/bin/rocgdb version  16.3 -nw -nx -q -iex "set height 0" -iex "set width 0" 
+2026-10-19T20:29:42.0704450Z 2026-10-19 20:29:42,056 - INFO: 
+2026-10-19T20:29:42.0704610Z 2026-10-19 20:29:42,056 - INFO: runtest completed at Mon Oct 19 20:29:41 2026
+2026-10-19T20:29:42.0704780Z 2026-10-19 20:29:42,056 - INFO: 
+2026-10-19T20:29:42.0704948Z 2026-10-19 20:29:42,056 - INFO: ================================================================================
+2026-10-19T20:29:42.0705197Z 2026-10-19 20:29:42,056 - INFO:                         COMBINED GDB TESTSUITE ANALYSIS                         
+2026-10-19T20:29:42.0705444Z 2026-10-19 20:29:42,056 - INFO: ================================================================================
+2026-10-19T20:29:42.0705622Z 2026-10-19 20:29:42,056 - INFO: 
+2026-10-19T20:29:42.0705815Z 2026-10-19 20:29:42,056 - INFO: ------------------------------------- LLVM -------------------------------------
+2026-10-19T20:29:42.0706222Z 2026-10-19 20:29:42,056 - INFO:   [✓] PASS: 2369
+2026-10-19T20:29:42.0706374Z 2026-10-19 20:29:42,056 - INFO:   [X] FAIL: 2
+2026-10-19T20:29:42.0706574Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/multi-inferior-fork.exp: stop_at=kernel: run
+2026-10-19T20:29:42.0706843Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/multi-inferior-gpu.exp: wait for gpu stops (timeout)
+2026-10-19T20:29:42.0707056Z 2026-10-19 20:29:42,056 - INFO:   [!] TIMEOUT: 3
+2026-10-19T20:29:42.0707334Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/device-interrupt.exp: schedlock=on: interrupt_how=ctrl-c: interrupt (timeout) (PRMS: xxxx)
+2026-10-19T20:29:42.0707732Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/device-interrupt.exp: schedlock=on: interrupt_how=interrupt: interrupt (timeout) (PRMS: xxxx)
+2026-10-19T20:29:42.0708072Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/multi-inferior-gpu.exp: wait for gpu stops (timeout)
+2026-10-19T20:29:42.0708320Z 2026-10-19 20:29:42,056 - INFO:   [!] UNTESTED: 6
+2026-10-19T20:29:42.0708542Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/runtime-core.exp: fault=abort: Could not generate a core file
+2026-10-19T20:29:42.0708842Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/runtime-core.exp: fault=assert: Could not generate a core file
+2026-10-19T20:29:42.0709177Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/runtime-core.exp: output_type=file: core_type=full: Could not generate a core file
+2026-10-19T20:29:42.0709551Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/runtime-core.exp: output_type=file: core_type=lightweight: Could not generate a core file
+2026-10-19T20:29:42.0709922Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/runtime-core.exp: output_type=pipe: core_type=full: Could not generate a core file
+2026-10-19T20:29:42.0710292Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/runtime-core.exp: output_type=pipe: core_type=lightweight: Could not generate a core file
+2026-10-19T20:29:42.0710568Z 2026-10-19 20:29:42,056 - INFO:   [!] UNSUPPORTED: 12
+2026-10-19T20:29:42.0710767Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: denorm, precise=on
+2026-10-19T20:29:42.0711011Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: float_div0, precise=on
+2026-10-19T20:29:42.0711326Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: inexact, precise=on
+2026-10-19T20:29:42.0711634Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: int_div0, precise=on
+2026-10-19T20:29:42.0711904Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: invalid, precise=on
+2026-10-19T20:29:42.0712143Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: overflow, precise=on
+2026-10-19T20:29:42.0712386Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/alu-exceptions.exp: underflow, precise=on
+2026-10-19T20:29:42.0712673Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/cluster-barrier.exp: not testing clusters on device older than gfx1250
+2026-10-19T20:29:42.0712986Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/cluster.exp: not testing clusters on device older than gfx1250
+2026-10-19T20:29:42.0713303Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/coop-group-grid-sync.exp: require failed: supports_cooperative_groups
+2026-10-19T20:29:42.0713638Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/runtime-core-attached.exp: single GPU core file must exist (found 0)
+2026-10-19T20:29:42.0714009Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/watchpoint-at-end-of-shader.exp: precise_memory=on: target does not support precise memory
+2026-10-19T20:29:42.0714284Z 2026-10-19 20:29:42,056 - INFO:   [!] XFAIL: 4
+2026-10-19T20:29:42.0714471Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/finish.exp: bitfield: unpacked: finish
+2026-10-19T20:29:42.0714714Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/finish.exp: reference: private address: finish
+2026-10-19T20:29:42.0714966Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/show-info.exp: dbgapi properly configured
+2026-10-19T20:29:42.0715273Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/watchpoint-at-end-of-shader.exp: precise_memory=off: continue (the program exited)
+2026-10-19T20:29:42.0715536Z 2026-10-19 20:29:42,056 - INFO:   [!] KFAIL: 7
+2026-10-19T20:29:42.0715784Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/deref-scoped-pointer.exp: continue until exit at continue to end (PRMS: xxxx)
+2026-10-19T20:29:42.0716176Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/deref-scoped-pointer.exp: global pointer set by gdb: print global_ptr2 = &local_var (PRMS: xxxx)
+2026-10-19T20:29:42.0716591Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/deref-scoped-pointer.exp: global pointer set by program: lane 0: print *global_ptr (PRMS: xxxx)
+2026-10-19T20:29:42.0716995Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/deref-scoped-pointer.exp: global pointer set by program: lane 1: print *global_ptr (PRMS: xxxx)
+2026-10-19T20:29:42.0717414Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/deref-scoped-pointer.exp: global pointer set by program: print global_ptr (PRMS: xxxx)
+2026-10-19T20:29:42.0717803Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/device-interrupt.exp: schedlock=on: interrupt_how=ctrl-c: interrupt (timeout) (PRMS: xxxx)
+2026-10-19T20:29:42.0718198Z 2026-10-19 20:29:42,056 - INFO:           gdb.rocm/device-interrupt.exp: schedlock=on: interrupt_how=interrupt: interrupt (timeout) (PRMS: xxxx)
+2026-10-19T20:29:42.0718470Z 2026-10-19 20:29:42,057 - INFO:   [~] FLAKY: 2
+2026-10-19T20:29:42.0718691Z 2026-10-19 20:29:42,057 - INFO:           gdb.rocm/register-watchpoint.exp: initially failed, passed on retry
+2026-10-19T20:29:42.0718993Z 2026-10-19 20:29:42,057 - INFO:           gdb.rocm/omp-target-multi-kernel.exp: initially failed, passed on retry
+2026-10-19T20:29:42.0719214Z 2026-10-19 20:29:42,057 - INFO: 
+2026-10-19T20:29:42.0719386Z 2026-10-19 20:29:42,057 - INFO: ================================================================================
+2026-10-19T20:29:42.0719637Z 2026-10-19 20:29:42,057 - INFO:                                FINAL TEST STATUS                                
+2026-10-19T20:29:42.0719877Z 2026-10-19 20:29:42,057 - INFO: ================================================================================
+2026-10-19T20:29:42.0720066Z 2026-10-19 20:29:42,057 - INFO: [X] LLVM: FAIL
+2026-10-19T20:29:42.0720226Z 2026-10-19 20:29:42,057 - INFO: [X] Total Failed Tests: 2
+2026-10-19T20:29:42.0720412Z 2026-10-19 20:29:42,057 - INFO: [~] Flaky Tests (passed after retry) (2):
+2026-10-19T20:29:42.0720653Z 2026-10-19 20:29:42,057 - INFO:        gdb.rocm/omp-target-multi-kernel.exp
+2026-10-19T20:29:42.0720861Z 2026-10-19 20:29:42,057 - INFO:        gdb.rocm/register-watchpoint.exp
+2026-10-19T20:29:42.0721053Z 2026-10-19 20:29:42,057 - INFO: [X] Unexpected Failures (2):
+2026-10-19T20:29:42.0721420Z 2026-10-19 20:29:42,057 - INFO:        gdb.rocm/multi-inferior-fork.exp
+2026-10-19T20:29:42.0721650Z 2026-10-19 20:29:42,057 - INFO:        gdb.rocm/multi-inferior-gpu.exp
+2026-10-19T20:29:42.0721842Z 2026-10-19 20:29:42,057 - INFO: [!] Unused Ignored Failures (11):
+2026-10-19T20:29:42.0722037Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-case-insensitive.exp
+2026-10-19T20:29:42.0722250Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-cp-infcall-ref-static.exp
+2026-10-19T20:29:42.0722451Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-entry-value.exp
+2026-10-19T20:29:42.0722639Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-inline-param.exp
+2026-10-19T20:29:42.0722831Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-param-error.exp
+2026-10-19T20:29:42.0723024Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-skip-prologue.exp
+2026-10-19T20:29:42.0723207Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/dw2-unresolved.exp
+2026-10-19T20:29:42.0723394Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/fission-dw-form-strx.exp
+2026-10-19T20:29:42.0723582Z 2026-10-19 20:29:42,057 - INFO:        gdb.dwarf2/pr13961.exp
+2026-10-19T20:29:42.0723782Z 2026-10-19 20:29:42,057 - INFO:        gdb.rocm/multi-inferior-run-spurious-waves.exp
+2026-10-19T20:29:42.0724010Z 2026-10-19 20:29:42,057 - INFO:        gdb.rocm/step-schedlock-spurious-waves.exp
+2026-10-19T20:29:42.0724185Z 2026-10-19 20:29:42,057 - INFO: 
+2026-10-19T20:29:42.0724298Z 2026-10-19 20:29:42,057 - INFO: 
+2026-10-19T20:29:42.0724464Z 2026-10-19 20:29:42,057 - INFO: ================================================================================
+2026-10-19T20:29:42.0724707Z 2026-10-19 20:29:42,057 - INFO:                             [X] OVERALL STATUS: FAIL                            
+2026-10-19T20:29:42.0724935Z 2026-10-19 20:29:42,057 - INFO: ================================================================================
+2026-10-19T20:29:42.0725104Z 2026-10-19 20:29:42,057 - INFO: 
+2026-10-19T20:29:42.0725212Z 2026-10-19 20:29:42,057 - INFO: 
+2026-10-19T20:29:42.0725453Z 2026-10-19 20:29:42,057 - INFO: Total test run duration: 424.6181 seconds.
+2026-10-19T20:29:42.0730414Z ##[error]Process completed with exit code 1.
+2026-10-19T20:29:42.0756377Z ##[group]Run python ./build_tools/github_actions/reproduce_test_failure.py \
+2026-10-19T20:29:42.0756638Z [36;1mpython ./build_tools/github_actions/reproduce_test_failure.py \[0m
+2026-10-19T20:29:42.0756827Z [36;1m  --run-id "${ARTIFACT_RUN_ID}" \[0m
+2026-10-19T20:29:42.0756971Z [36;1m  --repository "ROCm/TheRock" \[0m
+2026-10-19T20:29:42.0757117Z [36;1m  --amdgpu-family "${AMDGPU_FAMILIES}" \[0m
+2026-10-19T20:29:42.0757272Z [36;1m  --amdgpu-targets "${AMDGPU_TARGETS}" \[0m
+2026-10-19T20:29:42.0757429Z [36;1m  --test-script "${COMPONENT_TEST_SCRIPT}" \[0m
+2026-10-19T20:29:42.0757580Z [36;1m  --shard-index "${MATRIX_SHARD}" \[0m
+2026-10-19T20:29:42.0757739Z [36;1m  --total-shards "${COMPONENT_TOTAL_SHARDS}" \[0m
+2026-10-19T20:29:42.0757897Z [36;1m  --test-type "${COMPONENT_TEST_TYPE}" \[0m
+2026-10-19T20:29:42.0758040Z [36;1m  --print-cmd \[0m
+2026-10-19T20:29:42.0758193Z [36;1m  --fetch-artifact-args="${COMPONENT_FETCH_ARTIFACT_ARGS}" \[0m
+2026-10-19T20:29:42.0758414Z [36;1m  --additional-requirements-files="${REQUIREMENTS_FILES}"[0m
+2026-10-19T20:29:42.0758680Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T20:29:42.0758820Z env:
+2026-10-19T20:29:42.0758933Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-19T20:29:42.0759085Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-19T20:29:42.0759260Z   VENV_DIR: /home/ubuntu/actions-runner/_work/TheRock/TheRock/.venv
+2026-10-19T20:29:42.0759423Z   ARTIFACT_RUN_ID: 39283341141
+2026-10-19T20:29:42.0759543Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-19T20:29:42.0759659Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-19T20:29:42.0759776Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-19T20:29:42.0759907Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-19T20:29:42.0760048Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-19T20:29:42.0760164Z   BUILD_VARIANT: release
+2026-10-19T20:29:42.0760287Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:29:42.0760454Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T20:29:42.0760616Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:29:42.0760763Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:29:42.0760908Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:29:42.0761057Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-19T20:29:42.0761257Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-19T20:29:42.0761381Z   MATRIX_SHARD: 1
+2026-10-19T20:29:42.0761604Z   COMPONENT_TEST_SCRIPT: python ./build/tests/rocgdb/test_rocgdb.py --parallel -f 0.25 --toolchain llvm --tests gdb.rocm
+2026-10-19T20:29:42.0761852Z   COMPONENT_TOTAL_SHARDS: 1
+2026-10-19T20:29:42.0761967Z   COMPONENT_TEST_TYPE: quick
+2026-10-19T20:29:42.0762080Z   REQUIREMENTS_FILES: 
+2026-10-19T20:29:42.0762209Z   COMPONENT_FETCH_ARTIFACT_ARGS: --debug-tools --tests
+2026-10-19T20:29:42.0762353Z ##[endgroup]
+2026-10-19T20:29:42.1098259Z To reproduce this failure, run:
+2026-10-19T20:29:42.1098637Z   git clone https://github.com/ROCm/TheRock.git && cd TheRock
+2026-10-19T20:29:42.1099993Z   python build_tools/github_actions/reproduce_test_failure.py --run-id 39283341141 --repository ROCm/TheRock --amdgpu-family gfx110X-all --test-script "python ./build/tests/rocgdb/test_rocgdb.py --parallel -f 0.25 --toolchain llvm --tests gdb.rocm" --amdgpu-targets gfx1100,gfx1101,gfx1102,gfx1103 --output-dir "./build" --test-type quick --fetch-artifact-args="--debug-tools --tests"
+2026-10-19T20:29:42.1145280Z ##[group]Run bash ./build_tools/github_actions/cleanup_processes.sh
+2026-10-19T20:29:42.1145502Z [36;1mbash ./build_tools/github_actions/cleanup_processes.sh[0m
+2026-10-19T20:29:42.1145737Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T20:29:42.1145873Z env:
+2026-10-19T20:29:42.1145978Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-19T20:29:42.1146193Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-19T20:29:42.1146360Z   VENV_DIR: /home/ubuntu/actions-runner/_work/TheRock/TheRock/.venv
+2026-10-19T20:29:42.1146516Z   ARTIFACT_RUN_ID: 39283341141
+2026-10-19T20:29:42.1146629Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-19T20:29:42.1146740Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-19T20:29:42.1146850Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-19T20:29:42.1146971Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-19T20:29:42.1147105Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-19T20:29:42.1147213Z   BUILD_VARIANT: release
+2026-10-19T20:29:42.1147346Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:29:42.1147503Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T20:29:42.1147658Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:29:42.1147795Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:29:42.1147934Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:29:42.1148078Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-19T20:29:42.1148220Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-19T20:29:42.1148337Z ##[endgroup]
+2026-10-19T20:29:42.1298869Z [*] ==== Starting cleanup_processes.sh ====
+2026-10-19T20:29:42.1331600Z [*] Not running in a container (or container ID not detected)
+2026-10-19T20:29:42.1331801Z [*] Build directory: /__w/TheRock/TheRock/build
+2026-10-19T20:29:42.2832927Z [*] Searching for GPU processes from this container's build directory...
+2026-10-19T20:29:42.2833128Z [+] No GPU processes found
+2026-10-19T20:29:42.2864320Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-19T20:29:42.2864546Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-19T20:29:42.2864770Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T20:29:42.2864908Z env:
+2026-10-19T20:29:42.2865015Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-19T20:29:42.2865169Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-19T20:29:42.2865350Z   VENV_DIR: /home/ubuntu/actions-runner/_work/TheRock/TheRock/.venv
+2026-10-19T20:29:42.2865509Z   ARTIFACT_RUN_ID: 39283341141
+2026-10-19T20:29:42.2865625Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-19T20:29:42.2865741Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-19T20:29:42.2865858Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-19T20:29:42.2865994Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-19T20:29:42.2866134Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-19T20:29:42.2866244Z   BUILD_VARIANT: release
+2026-10-19T20:29:42.2866376Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:29:42.2866538Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T20:29:42.2866700Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:29:42.2866843Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:29:42.2866986Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T20:29:42.2867133Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-19T20:29:42.2867280Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-19T20:29:42.2867407Z ##[endgroup]
+2026-10-19T20:29:42.3293627Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-19T20:29:42.3424561Z Post job cleanup.
+2026-10-19T20:29:42.3426470Z ##[start-action display=Setting up Python;id=__dd0c7d88-7eb6-471d-b129-0459c87b61e9.__actions_setup-python]
+2026-10-19T20:29:42.3427434Z ##[end-action id=__dd0c7d88-7eb6-471d-b129-0459c87b61e9.__actions_setup-python;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-19T20:29:42.3452787Z Post job cleanup.
+2026-10-19T20:29:42.3456227Z ##[command]/usr/bin/docker exec  996b043df321284a3698bbaec917a792630bb36bd242d617ab38cd06da246aa6 sh -c "cat /etc/*release | grep ^ID"
+2026-10-19T20:29:42.4140558Z [command]/usr/bin/git version
+2026-10-19T20:29:42.4157854Z git version 2.54.0
+2026-10-19T20:29:42.4172079Z Copying '/github/home/.gitconfig' to '/__w/_temp/c7f17648-a712-4dff-b088-184090630df5/.gitconfig'
+2026-10-19T20:29:42.4176117Z Temporarily overriding HOME='/__w/_temp/c7f17648-a712-4dff-b088-184090630df5' before making global git config changes
+2026-10-19T20:29:42.4176461Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T20:29:42.4177579Z [command]/usr/bin/git config --global --add safe.directory /__w/TheRock/TheRock
+2026-10-19T20:29:42.4190649Z Removing SSH command configuration
+2026-10-19T20:29:42.4192708Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T20:29:42.4206863Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T20:29:42.4304354Z Removing HTTP extra header
+2026-10-19T20:29:42.4305781Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T20:29:42.4318754Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T20:29:42.4408018Z Removing includeIf entries pointing to credentials config files
+2026-10-19T20:29:42.4408251Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T20:29:42.4420291Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T20:29:42.4587967Z Post job cleanup.
+2026-10-19T20:29:42.4591664Z ##[command]/usr/bin/docker exec  996b043df321284a3698bbaec917a792630bb36bd242d617ab38cd06da246aa6 sh -c "cat /etc/*release | grep ^ID"
+2026-10-19T20:29:42.5273451Z Stop and remove container: 96a8d84cb77847848c9ce6ed7f24c3c9_ghcriorocmno_rocm_image_ubuntu24_04_rocgdbsha256aa3f8966fcdefca04d4c04fb10ae7f8b654d1bb1cc6a894ea7089e5a01953197_94f5b3
+2026-10-19T20:29:42.5275986Z ##[command]/usr/bin/docker rm --force 996b043df321284a3698bbaec917a792630bb36bd242d617ab38cd06da246aa6
+2026-10-19T20:29:42.6730374Z 996b043df321284a3698bbaec917a792630bb36bd242d617ab38cd06da246aa6
+2026-10-19T20:29:42.6748399Z Remove container network: github_network_8a9280c30d424bc4a5c5b4d5be44780d
+2026-10-19T20:29:42.6750333Z ##[command]/usr/bin/docker network rm github_network_8a9280c30d424bc4a5c5b4d5be44780d
+2026-10-19T20:29:42.7861928Z github_network_8a9280c30d424bc4a5c5b4d5be44780d
+2026-10-19T20:29:42.7906208Z Evaluate and set job outputs
+2026-10-19T20:29:42.7908832Z Cleaning up orphan processes

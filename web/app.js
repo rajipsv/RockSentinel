@@ -166,10 +166,12 @@ async function loadGolden() {
 
 // --- evals ----------------------------------------------------------------------------------
 $("#confirmed-only").addEventListener("change", loadEvals);
+$("#split").addEventListener("change", loadEvals);
 async function loadEvals() {
   $("#evals-summary").textContent = "Running…";
-  const confirmed = $("#confirmed-only").checked ? "?confirmed=1" : "";
-  const r = await api(`/api/evals${confirmed}`);
+  const params = new URLSearchParams({ split: $("#split").value });
+  if ($("#confirmed-only").checked) params.set("confirmed", "1");
+  const r = await api(`/api/evals?${params}`);
   $("#evals-summary").textContent = `${r.n_cases} cases (${r.n_confirmed} confirmed)` +
     (r.n_cases < 30 ? " · small set: treat numbers as indicative only" : "");
   const systems = Object.keys(r.systems);

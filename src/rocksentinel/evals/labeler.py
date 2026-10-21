@@ -22,6 +22,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from rocksentinel.baseline.rules import CATEGORIES, classify
+from rocksentinel.evals.splits import assign_split, is_tuned_on
 from rocksentinel.github.client import GitHubClient, GitHubError
 from rocksentinel.store.base import JobResult, JobStore
 from rocksentinel.therock_ci.extract import extract_errors
@@ -287,7 +288,8 @@ def accept(case_id: str, *, category: str | None = None, note: str | None = None
     dataset = _read_jsonl(paths.dataset)
     case = {k: v for k, v in match.items() if k not in ("status",)}
     case["case_id"] = _next_golden_id(dataset)
-    case["split"] = "dev"
+    case["split"] = assign_split(case)  # ~30% held out as test, deterministic by job id
+    case["tuned_on"] = is_tuned_on(case)
     case["label_status"] = "confirmed"
     case["labelled_by"] = f"{reviewer} via labeler"
     case["labelled_on"] = f"{datetime.now(UTC):%Y-%m-%d}"

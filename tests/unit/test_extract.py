@@ -46,8 +46,29 @@ def test_rocsparse_ignores_kpack_noise(rocsparse):
     assert not any(c.text.lstrip().startswith("kpack:") for c in rocsparse.candidates)
 
 
-def test_rocsparse_exit_code_ranks_last(rocsparse):
-    assert rocsparse.candidates[-1].kind == "exit_code"
+def test_rocsparse_exit_code_ranks_last():
+    log = _load("run-39249671429_rocsparse_shard2_gfx1151.txt")
+    full = extract_errors(log, max_candidates=1000).candidates
+    assert full[-1].kind == "exit_code"
+    # the generic safety net never outranks a specific pattern
+    kinds = [c.kind for c in full]
+    assert kinds.index("gpu_memory_fault") < min(
+        (i for i, k in enumerate(kinds) if k == "generic_error"), default=len(kinds))
+
+
+def test_generic_safety_net_catches_unknown_formats_and_skips_noise():
+    log = (
+        "shell: bash --noprofile --norc -e -o pipefail {0}\n"
+        "cmake -DCMAKE_CXX_FLAGS=-Werror ..\n"
+        "100% tests passed, 0 tests failed out of 10\n"
+        "XFAIL: gdb.base/x.exp\n"
+        "Some new tool: Fatal: device lost while running kernel foo\n"
+        "Cleaning up orphan processes\n"
+        "Process completed with exit code 1.\n"
+    )
+    r = extract_errors(log)
+    assert [c.kind for c in r.candidates] == ["generic_error", "exit_code"]
+    assert r.first_error.text.startswith("Some new tool: Fatal")
 
 
 # --- golden-002: hip-tests timeout --------------------------------------------------------

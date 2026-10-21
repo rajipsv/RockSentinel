@@ -55,7 +55,14 @@ lookback before its saved cursor to catch runs that finished late.
 .venv/Scripts/python -m rocksentinel.evals.runner --out evals/reports/latest.json
 ```
 It prints category accuracy and macro-F1, component/family/platform match, failing-test and
-kernel match, and the grounding rate for each system. The LLM agents must beat B0 and B1.
+kernel match, and the grounding rate for each system, separately for the **dev** split (may be
+tuned on) and the held-out **test** split (headline numbers). The LLM agents must beat B0 and B1.
+
+Pattern coverage on failures *outside* the golden set (which unknown log formats still need a pattern):
+```bash
+.venv/Scripts/python -m rocksentinel.evals.coverage --sample 25
+```
+The build story for interviews, updated after each step: [docs/BUILD-LOG.md](docs/BUILD-LOG.md).
 
 ## Console (local)
 ```bash

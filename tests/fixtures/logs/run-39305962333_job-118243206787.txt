@@ -1,0 +1,218 @@
+# Source: ROCm/TheRock Actions run 39305962333 attempt 1, job 118243206787
+# Job: Test Sanity Check / Test sanity (shard 1/1) (gfx125X-dcgpu) (test_artifacts.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+2026-10-19T18:55:54.6562004Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-19T18:55:54.6562089Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T18:55:54.6562154Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T18:55:54.6562224Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T18:55:54.6562286Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T18:55:54.6562356Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-19T18:55:54.6562417Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-19T18:55:54.6562467Z ##[endgroup]
+2026-10-19T18:55:54.6914568Z Thread limits set: OPENBLAS_NUM_THREADS=64, OMP_NUM_THREADS=64 (from KUBE_CPU_REQUEST=64)
+2026-10-19T18:55:54.7247240Z ##[group]Run python build_tools/github_actions/test_executable_scripts/test_sanity.py
+2026-10-19T18:55:54.7247409Z [36;1mpython build_tools/github_actions/test_executable_scripts/test_sanity.py[0m
+2026-10-19T18:55:54.7247571Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T18:55:54.7247622Z env:
+2026-10-19T18:55:54.7247704Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-19T18:55:54.7247777Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-19T18:55:54.7247853Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-19T18:55:54.7247926Z   ARTIFACT_RUN_ID: 39270404010
+2026-10-19T18:55:54.7247987Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-19T18:55:54.7248040Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-19T18:55:54.7248103Z   AMDGPU_FAMILIES: gfx125X-dcgpu
+2026-10-19T18:55:54.7248157Z   AMDGPU_TARGETS: 
+2026-10-19T18:55:54.7248213Z   ARTIFACT_GROUP: gfx125X-dcgpu
+2026-10-19T18:55:54.7248272Z   BUILD_VARIANT: release
+2026-10-19T18:55:54.7248372Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-19T18:55:54.7248460Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T18:55:54.7248551Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T18:55:54.7248622Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T18:55:54.7248688Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T18:55:54.7248762Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-19T18:55:54.7248826Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-19T18:55:54.7248884Z   OPENBLAS_NUM_THREADS: 64
+2026-10-19T18:55:54.7248938Z   OMP_NUM_THREADS: 64
+2026-10-19T18:55:54.7248986Z   SHARD_INDEX: 1
+2026-10-19T18:55:54.7249039Z   TOTAL_SHARDS: 1
+2026-10-19T18:55:54.7249087Z   TEST_TYPE: quick
+2026-10-19T18:55:54.7249143Z   TEST_COMPONENT: sanity
+2026-10-19T18:55:54.7249202Z   THEROCK_CI_DEBUG: 0
+2026-10-19T18:55:54.7249250Z   ROCM_KPACK_DEBUG: 1
+2026-10-19T18:55:54.7249304Z   GPU_ENABLE_PAL: 0
+2026-10-19T18:55:54.7249356Z   RETRY_THIS_STEP: true
+2026-10-19T18:55:54.7249411Z   RETRY_COUNT: 1
+2026-10-19T18:55:54.7249459Z   RETRY_DELAY: 7
+2026-10-19T18:55:54.7249515Z   STEP_TIMEOUT_MINUTES: 5
+2026-10-19T18:55:54.7249590Z   STEP_NAME: Test sanity (shard 1/1) (gfx125X-dcgpu) 
+2026-10-19T18:55:54.7249644Z ##[endgroup]
+2026-10-19T18:55:54.8095671Z INFO:root:++ Exec [/__w/TheRock/TheRock]$ /__w/TheRock/TheRock/.venv/bin/python -m pytest tests/ --log-cli-level=info --timeout=300
+2026-10-19T18:55:56.3790940Z ============================= test session starts ==============================
+2026-10-19T18:55:56.3791453Z platform linux -- Python 3.12.15, pytest-9.0.3, pluggy-1.7.0
+2026-10-19T18:55:56.3791715Z rootdir: /__w/TheRock/TheRock/tests
+2026-10-19T18:55:56.3791970Z configfile: pyproject.toml
+2026-10-19T18:55:56.3792171Z plugins: check-2.5.3, timeout-2.4.0, cov-6.0.0
+2026-10-19T18:55:56.3792379Z timeout: 300.0s
+2026-10-19T18:55:56.3792536Z timeout method: signal
+2026-10-19T18:55:56.3792696Z timeout func_only: False
+2026-10-19T18:55:56.3792872Z collected 12 items
+2026-10-19T18:55:56.3792957Z 
+2026-10-19T18:55:56.3796461Z tests/test_artifact_structure.py::TestArtifactStructure::test_no_cross_artifact_overlaps SKIPPED [  8%]
+2026-10-19T18:55:56.3801295Z tests/test_artifact_structure.py::TestArtifactStructure::test_no_within_artifact_component_overlaps SKIPPED [ 16%]
+2026-10-19T18:55:56.3806204Z tests/test_artifact_structure.py::TestArtifactStructure::test_artifacts_covered_by_packages SKIPPED [ 25%]
+2026-10-19T18:55:56.3836907Z tests/test_rocm_sanity.py::TestROCmSanity::test_clinfo_output[clinfo - AMD Platform Search] 
+2026-10-19T18:55:56.3837351Z -------------------------------- live log setup --------------------------------
+2026-10-19T18:55:56.3837755Z INFO     test_rocm_sanity:test_rocm_sanity.py:35 ++ Run [None]$ /__w/TheRock/TheRock/build/bin/clinfo
+2026-10-19T19:00:54.7194919Z ##[error]The action 'Test' has timed out after 5 minutes.
+2026-10-19T19:00:54.7464749Z ##[group]Run python ./build_tools/github_actions/reproduce_test_failure.py \
+2026-10-19T19:00:54.7465074Z [36;1mpython ./build_tools/github_actions/reproduce_test_failure.py \[0m
+2026-10-19T19:00:54.7465300Z [36;1m  --run-id "${ARTIFACT_RUN_ID}" \[0m
+2026-10-19T19:00:54.7465467Z [36;1m  --repository "ROCm/TheRock" \[0m
+2026-10-19T19:00:54.7465639Z [36;1m  --amdgpu-family "${AMDGPU_FAMILIES}" \[0m
+2026-10-19T19:00:54.7465825Z [36;1m  --amdgpu-targets "${AMDGPU_TARGETS}" \[0m
+2026-10-19T19:00:54.7466020Z [36;1m  --test-script "${COMPONENT_TEST_SCRIPT}" \[0m
+2026-10-19T19:00:54.7466202Z [36;1m  --shard-index "${MATRIX_SHARD}" \[0m
+2026-10-19T19:00:54.7466396Z [36;1m  --total-shards "${COMPONENT_TOTAL_SHARDS}" \[0m
+2026-10-19T19:00:54.7466583Z [36;1m  --test-type "${COMPONENT_TEST_TYPE}" \[0m
+2026-10-19T19:00:54.7466746Z [36;1m  --print-cmd \[0m
+2026-10-19T19:00:54.7466929Z [36;1m  --fetch-artifact-args="${COMPONENT_FETCH_ARTIFACT_ARGS}" \[0m
+2026-10-19T19:00:54.7467201Z [36;1m  --additional-requirements-files="${REQUIREMENTS_FILES}"[0m
+2026-10-19T19:00:54.7467528Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T19:00:54.7467693Z env:
+2026-10-19T19:00:54.7467823Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-19T19:00:54.7468004Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-19T19:00:54.7468188Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-19T19:00:54.7468358Z   ARTIFACT_RUN_ID: 39270404010
+2026-10-19T19:00:54.7468499Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-19T19:00:54.7468640Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-19T19:00:54.7468779Z   AMDGPU_FAMILIES: gfx125X-dcgpu
+2026-10-19T19:00:54.7468921Z   AMDGPU_TARGETS: 
+2026-10-19T19:00:54.7469043Z   ARTIFACT_GROUP: gfx125X-dcgpu
+2026-10-19T19:00:54.7469181Z   BUILD_VARIANT: release
+2026-10-19T19:00:54.7469329Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-19T19:00:54.7469526Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T19:00:54.7469727Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T19:00:54.7469901Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T19:00:54.7470074Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T19:00:54.7470247Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-19T19:00:54.7470419Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-19T19:00:54.7470569Z   OPENBLAS_NUM_THREADS: 64
+2026-10-19T19:00:54.7470698Z   OMP_NUM_THREADS: 64
+2026-10-19T19:00:54.7470817Z   MATRIX_SHARD: 1
+2026-10-19T19:00:54.7471032Z   COMPONENT_TEST_SCRIPT: python build_tools/github_actions/test_executable_scripts/test_sanity.py
+2026-10-19T19:00:54.7471380Z   COMPONENT_TOTAL_SHARDS: 1
+2026-10-19T19:00:54.7471518Z   COMPONENT_TEST_TYPE: quick
+2026-10-19T19:00:54.7471651Z   REQUIREMENTS_FILES: 
+2026-10-19T19:00:54.7471785Z   COMPONENT_FETCH_ARTIFACT_ARGS: --sanity
+2026-10-19T19:00:54.7471936Z ##[endgroup]
+2026-10-19T19:00:54.8541613Z To reproduce this failure, run:
+2026-10-19T19:00:54.8541954Z   git clone https://github.com/ROCm/TheRock.git && cd TheRock
+2026-10-19T19:00:54.8542826Z   python build_tools/github_actions/reproduce_test_failure.py --run-id 39270404010 --repository ROCm/TheRock --amdgpu-family gfx125X-dcgpu --test-script "python build_tools/github_actions/test_executable_scripts/test_sanity.py" --output-dir "./build" --test-type quick --fetch-artifact-args="--sanity"
+2026-10-19T19:00:54.8917911Z ##[group]Run bash ./build_tools/github_actions/cleanup_processes.sh
+2026-10-19T19:00:54.8918198Z [36;1mbash ./build_tools/github_actions/cleanup_processes.sh[0m
+2026-10-19T19:00:54.8918489Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T19:00:54.8918672Z env:
+2026-10-19T19:00:54.8918804Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-19T19:00:54.8918985Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-19T19:00:54.8919170Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-19T19:00:54.8919339Z   ARTIFACT_RUN_ID: 39270404010
+2026-10-19T19:00:54.8919476Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-19T19:00:54.8919612Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-19T19:00:54.8919751Z   AMDGPU_FAMILIES: gfx125X-dcgpu
+2026-10-19T19:00:54.8919887Z   AMDGPU_TARGETS: 
+2026-10-19T19:00:54.8920004Z   ARTIFACT_GROUP: gfx125X-dcgpu
+2026-10-19T19:00:54.8920138Z   BUILD_VARIANT: release
+2026-10-19T19:00:54.8920311Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-19T19:00:54.8920506Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T19:00:54.8920700Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T19:00:54.8920869Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T19:00:54.8921044Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T19:00:54.8921223Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-19T19:00:54.8921393Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-19T19:00:54.8921543Z   OPENBLAS_NUM_THREADS: 64
+2026-10-19T19:00:54.8921670Z   OMP_NUM_THREADS: 64
+2026-10-19T19:00:54.8921790Z ##[endgroup]
+2026-10-19T19:00:54.9272759Z [*] ==== Starting cleanup_processes.sh ====
+2026-10-19T19:00:54.9323332Z [*] Not running in a container (or container ID not detected)
+2026-10-19T19:00:54.9323565Z [*] Build directory: /__w/TheRock/TheRock/build
+2026-10-19T19:00:54.9324680Z [*] Searching for GPU processes from this container's build directory...
+2026-10-19T19:00:54.9634619Z [*] Found 1 GPU process(es) to clean up:
+2026-10-19T19:00:54.9675966Z     > [pid:937][state:R] clinfo (/__w/TheRock/TheRock/build/bin/clinfo)
+2026-10-19T19:00:54.9685946Z [*] Sending SIGTERM to 1 process(es)...
+2026-10-19T19:00:54.9708705Z     > Terminating [pid:937][state:R] clinfo (/__w/TheRock/TheRock/build/bin/clinfo)
+2026-10-19T19:00:54.9708970Z     > Waiting for 1 process(es)...
+2026-10-19T19:00:55.9722740Z     > Waiting for 1 process(es)...
+2026-10-19T19:00:56.9728580Z     > Waiting for 1 process(es)...
+2026-10-19T19:00:57.9735613Z     > Waiting for 1 process(es)...
+2026-10-19T19:00:58.9740582Z     > Waiting for 1 process(es)...
+2026-10-19T19:00:59.9745987Z     > Waiting for 1 process(es)...
+2026-10-19T19:01:00.9753384Z     > Waiting for 1 process(es)...
+2026-10-19T19:01:01.9760846Z     > Waiting for 1 process(es)...
+2026-10-19T19:01:02.9767251Z     > Waiting for 1 process(es)...
+2026-10-19T19:01:03.9772895Z     > Waiting for 1 process(es)...
+2026-10-19T19:01:04.9778513Z [-] 1 process(es) still running after 10 seconds
+2026-10-19T19:01:04.9778839Z [*] Some processes did not terminate, sending SIGKILL...
+2026-10-19T19:01:04.9808546Z     > Force killing [pid:937][state:Z] clinfo (<unknown>)
+2026-10-19T19:01:06.9844542Z [-] Failed to kill process: [pid:937][state:Z] clinfo (<unknown>)
+2026-10-19T19:01:06.9845086Z [-] ==== Container cleanup completed with 1 process(es) still running ====
+2026-10-19T19:01:06.9871339Z     > [pid:937][state:Z] clinfo (<unknown>)
+2026-10-19T19:01:06.9871507Z 
+2026-10-19T19:01:06.9871609Z [*] ==== Starting machine-wide orphan cleanup ====
+2026-10-19T19:01:06.9871832Z [*] Max process age: 360 minutes
+2026-10-19T19:01:07.0119739Z [+] No orphaned GPU processes found
+2026-10-19T19:01:07.0153358Z ##[error]Process completed with exit code 1.
+2026-10-19T19:01:07.0498402Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-19T19:01:07.0498699Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-19T19:01:07.0498978Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T19:01:07.0499143Z env:
+2026-10-19T19:01:07.0499273Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-19T19:01:07.0499454Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-19T19:01:07.0499638Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-19T19:01:07.0499816Z   ARTIFACT_RUN_ID: 39270404010
+2026-10-19T19:01:07.0499956Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-19T19:01:07.0500093Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-19T19:01:07.0500232Z   AMDGPU_FAMILIES: gfx125X-dcgpu
+2026-10-19T19:01:07.0500367Z   AMDGPU_TARGETS: 
+2026-10-19T19:01:07.0500485Z   ARTIFACT_GROUP: gfx125X-dcgpu
+2026-10-19T19:01:07.0500620Z   BUILD_VARIANT: release
+2026-10-19T19:01:07.0500787Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-19T19:01:07.0500980Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T19:01:07.0501174Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T19:01:07.0501344Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T19:01:07.0501516Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-19T19:01:07.0501689Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-19T19:01:07.0501858Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-19T19:01:07.0502009Z   OPENBLAS_NUM_THREADS: 64
+2026-10-19T19:01:07.0502142Z   OMP_NUM_THREADS: 64
+2026-10-19T19:01:07.0502261Z ##[endgroup]
+2026-10-19T19:01:14.7180910Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-19T19:01:14.7645814Z Post job cleanup.
+2026-10-19T19:01:14.7647838Z ##[start-action display=Setting up Python;id=__284cef8e-625d-4be4-9e24-423369304669.__actions_setup-python]
+2026-10-19T19:01:14.7648897Z ##[end-action id=__284cef8e-625d-4be4-9e24-423369304669.__actions_setup-python;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-19T19:01:14.7988961Z Post job cleanup.
+2026-10-19T19:01:14.7998159Z ##[command]/home/runner/bin/docker exec  d5b4378c9d5639ce355493a0b09e372815fbf9f221ee43a49834f7262675ea81 sh -c "cat /etc/*release | grep ^ID"
+2026-10-19T19:01:36.8787261Z [command]/usr/bin/git version
+2026-10-19T19:01:36.8830596Z git version 2.53.0
+2026-10-19T19:01:36.8864827Z Copying '/github/home/.gitconfig' to '/__w/_temp/a81ffb30-c6fd-4fe1-ba44-6dacb94061d8/.gitconfig'
+2026-10-19T19:01:36.8925067Z Temporarily overriding HOME='/__w/_temp/a81ffb30-c6fd-4fe1-ba44-6dacb94061d8' before making global git config changes
+2026-10-19T19:01:36.8925492Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T19:01:36.8927378Z [command]/usr/bin/git config --global --add safe.directory /__w/TheRock/TheRock
+2026-10-19T19:01:36.9038443Z Removing SSH command configuration
+2026-10-19T19:01:36.9041389Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T19:01:36.9110295Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T19:01:36.9576832Z Removing HTTP extra header
+2026-10-19T19:01:36.9578943Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T19:01:36.9623714Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T19:01:36.9964963Z Removing includeIf entries pointing to credentials config files
+2026-10-19T19:01:36.9967117Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T19:01:37.0020799Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T19:01:37.0796642Z Post job cleanup.
+2026-10-19T19:01:37.0800930Z ##[command]/home/runner/bin/docker exec  d5b4378c9d5639ce355493a0b09e372815fbf9f221ee43a49834f7262675ea81 sh -c "cat /etc/*release | grep ^ID"
+2026-10-19T19:01:37.1982037Z Stop and remove container: 90b9ff57e76f4923869fd58172ac865b_ghcriorocmno_rocm_image_ubuntu24_04_ocl_rtsha256b4966196b9cec5742776504fd76e7deb4d3765471da687354be9edcaf689c151_ac8b25
+2026-10-19T19:01:37.1985319Z ##[command]/home/runner/bin/docker rm --force d5b4378c9d5639ce355493a0b09e372815fbf9f221ee43a49834f7262675ea81
+2026-10-19T19:01:37.3863522Z d5b4378c9d5639ce355493a0b09e372815fbf9f221ee43a49834f7262675ea81
+2026-10-19T19:01:37.3883177Z Remove container network: github_network_84c771a8a5a14f6b9c914c216e2a3436
+2026-10-19T19:01:37.3885839Z ##[command]/home/runner/bin/docker network rm github_network_84c771a8a5a14f6b9c914c216e2a3436
+2026-10-19T19:01:37.5909347Z github_network_84c771a8a5a14f6b9c914c216e2a3436
+2026-10-19T19:01:37.5963124Z Evaluate and set job outputs
+2026-10-19T19:01:37.5967487Z Cleaning up orphan processes
