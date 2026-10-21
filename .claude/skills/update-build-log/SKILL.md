@@ -15,7 +15,7 @@ description: Update docs/BUILD-LOG.md (the interview-oriented build log) after a
 1. **Collect the facts:**
    - what changed: `git diff --stat` and the step's files; the roadmap in `CLAUDE.md`;
    - fresh numbers: `.venv/Scripts/python -m rocksentinel.evals.runner` (use the **test** split as the headline number) and, if extraction changed, `.venv/Scripts/python -m rocksentinel.evals.coverage --sample 25`;
-   - test count: `.venv/Scripts/python -m pytest --collect-only -q | awk -F': ' '/^tests\// {s+=$2} END {print s}'`.
+   - test count: `.venv/Scripts/python -c "import subprocess,sys; out=subprocess.run([sys.executable,'-m','pytest','--collect-only','-q'],capture_output=True,text=True).stdout; print(sum(int(l.rsplit(': ',1)[1]) for l in out.splitlines() if l.startswith('tests/') and ': ' in l))"` (avoid `$`-placeholders here: skill arguments are substituted into them).
 2. **Update the "Current numbers" table** and the golden set, coverage and test counts. Never round in the system's favour, and keep the known caveats (e.g. B1's home advantage on B1-proposed labels).
 3. **Add or extend the step's section,** using this shape:
    ```

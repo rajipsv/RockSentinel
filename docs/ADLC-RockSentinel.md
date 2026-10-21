@@ -478,7 +478,11 @@ Each agent is specified with the same template: **goal, inputs, outputs, skills,
 | `job_history` | job pattern, family, window | pass/fail sequence, first-failing time, rerun outcomes, same-run co-failures | KQL over the ADX `job_results` table. Supplies "failing since", flake evidence and run-wide correlation (e.g. run #3351) |
 | `find_introducing_change` | symbol (kernel, function, test name), submodule repo, window | candidate commits + the TheRock bump PR that brought each one in | GitHub commit search for the symbol, then the compare API (`ahead`/`behind`) against each bump's old and new SHAs. This automates the manual trace in App. B |
 
-`memory` (custom):
+`memory` (custom; implemented in `src/rocksentinel/memory/`, SQLite locally, Cosmos DB in Azure behind the same methods):
+- **Signature:** SHA-1 (16 hex chars) of the component plus the normalized first error line, with paths, hex addresses, numbers and gfx targets masked. The same failure on another run, shard or GPU family gets the same signature.
+- **Similarity v1:** an exact signature match first, then Jaccard similarity of normalized tokens. AI Search vectors replace this only if recall@3 is too low.
+- **Instinct confidence:** starts at 0.5. Each confirmation raises it (`c ← c + 0.2(1−c)`), each contradiction lowers it (`c ← 0.7c`), and it decays `0.98×` per week without new evidence. It's **trusted** at ≥ 0.8 (Triage may skip the strong model) and **archived** below 0.3.
+- **Eval hygiene:** memory is never seeded with held-out test cases before an eval run.
 
 | Tool | Purpose |
 |---|---|
