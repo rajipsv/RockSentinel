@@ -28,7 +28,8 @@ Design: `docs/ADLC-RockSentinel.md`. Keep code consistent with it; if a decision
   - [x] 6a. Harness + Triage agent in replay mode (no live LLM)
   - [ ] 6b. Live OpenAI-compatible provider (built) + first live Triage run + Triage as an eval system row vs B0/B1
 - [x] 7. RCA agent + `find_introducing_change` (replay mode; live evals once Azure is set up)
-- [ ] 8. Console UI (local via SWA CLI)
+- [x] 8. Console UI: Review, Golden, Evals, Runs, Case, Signatures (local; SWA in step 9)
+- [ ] 8a. Adapt real ECC skills (read ECC SKILL.md files, adapt with MIT attribution into skills/, wire into agents)
 - [ ] 9. Azure deployment (Bicep + azd; switch `LLMProvider` to Azure OpenAI; rerun evals)
 - [ ] 10. Eval gate in CI + runbook, threat model, interview guide
 

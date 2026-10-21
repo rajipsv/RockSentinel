@@ -152,3 +152,79 @@ def evals(paths: Paths, confirmed_only: bool = False, split: str = "all") -> dic
     if not cases:
         return {"n_cases": 0, "n_confirmed": 0, "systems": {}, "cases": []}
     return evaluate(cases, root=paths.root)
+
+
+# --- Runs, Case and Signature views (step 8) ------------------------------------------------
+# These read the job store (poller) and memory; case evidence is fetched live through the
+# same therock-ci functions the agents use (read-only GitHub), then cached per job.
+
+_EVIDENCE_CACHE: dict[int, dict] = {}
+
+
+def list_runs(jobs, limit: int = 50) -> dict:
+    runs = jobs.recent_runs(limit=max(1, min(limit, 200)))
+    return {"count": len(runs), "items": runs}
+
+
+def run_detail(jobs, run_id: int) -> dict:
+    from collections import defaultdict
+
+    all_jobs = jobs.jobs_for_run(run_id)
+    if not all_jobs:
+        raise ApiError(404, f"run {run_id} not in the job store")
+    failed = [j for j in all_jobs if j.failed]
+    groups: dict = defaultdict(list)
+    for j in failed:
+        groups[j.runner_label or "?"].append({
+            "job_id": j.job_id, "job_name": j.job_name, "component": j.component,
+            "gpu_family": j.gpu_family, "platform": j.platform, "conclusion": j.conclusion,
+            "attempt": j.attempt})
+    by_pool = sorted(({"runner_label": k, "failed": v,
+                       "components": sorted({x["component"] for x in v if x["component"]})}
+                      for k, v in groups.items()), key=lambda g: -len(g["failed"]))
+    first = all_jobs[0]
+    return {"run_id": run_id, "workflow": first.workflow, "head_sha": first.head_sha,
+            "branch": first.branch, "jobs": len(all_jobs), "failed": len(failed),
+            "by_runner_pool": by_pool,
+            "platform_event_hint": any(len(g["components"]) >= 3 for g in by_pool),
+            "run_url": f"https://github.com/{first.repo}/actions/runs/{run_id}"}
+
+
+def case_detail(jobs, memory, job_id: int, fetch_evidence: bool = True) -> dict:
+    """One failed job: history, deterministic (B1) verdict, evidence and memory match."""
+    from rocksentinel.baseline.rules import classify
+    from rocksentinel.memory.signatures import make_signature
+    from rocksentinel.therock_ci import server as therock
+    from rocksentinel.therock_ci.history import job_history
+
+    job = jobs.get_job(job_id)
+    if job is None:
+        raise ApiError(404, f"job {job_id} not in the job store")
+    history = job_history(jobs, job_id)
+    out = {"job": history["job"], "history": history,
+           "job_url": f"https://github.com/{job.repo}/actions/runs/{job.run_id}/job/{job_id}",
+           "evidence": None, "b1": None, "memory": None}
+    if not (fetch_evidence and job.failed):
+        return out
+    if job_id not in _EVIDENCE_CACHE:
+        try:
+            _EVIDENCE_CACHE[job_id] = therock.get_job_log_windows(job_id, repo=job.repo)
+        except Exception as exc:  # e.g. log expired (404) or no token
+            raise ApiError(502, f"could not fetch log: {exc}") from exc
+    ev = _EVIDENCE_CACHE[job_id]
+    kinds = [w["anchor"]["kind"] for w in ev["windows"]]
+    category, reason = classify(kinds, workflow=job.workflow,
+                                likely_flaky=history["flake_evidence"]["likely_flaky"])
+    first_text = next((w["anchor"]["text"] for w in ev["windows"]
+                       if w["anchor"]["kind"] not in ("exit_code", "generic_error")), None)
+    out.update(evidence=ev, b1={"category": category, "reason": reason})
+    if first_text:
+        sig = make_signature(first_text, job.component)
+        out["memory"] = {"signature": sig, "match": memory.lookup_signature(sig),
+                         "similar": memory.search_similar(first_text, k=3)}
+    return out
+
+
+def list_signatures(memory, limit: int = 100) -> dict:
+    items = memory.list_signatures(limit=max(1, min(limit, 500)))
+    return {"count": len(items), "items": items}

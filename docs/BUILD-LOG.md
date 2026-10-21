@@ -17,7 +17,7 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 
 - Golden set: 35 real TheRock failures, 33 confirmed by a human; 24 dev / 11 held-out test.
 - Pattern coverage on 25 failures *outside* the golden set: 92% hit a specific pattern.
-- Tests: 214 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
+- Tests: 219 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
 
 ---
 
@@ -181,6 +181,19 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 **Not yet:** live RCA evals need a capable model (Azure, step 9).
 
 **Interview talking point:** "The RCA agent's key move, tracing a GPU fault to the exact submodule commit and the TheRock bump PR that shipped it, is a deterministic tool I first did by hand and then automated."
+
+## Step 8: Console: Runs, Case and Signature views (this commit)
+**Built:** the Console now covers the design's views beyond review and evals:
+- **Runs:** recent runs from the job store.
+- **Run detail:** failed jobs grouped by runner pool, with a platform-event flag when ≥3 components fail on one pool.
+- **Case:** one failed job with failing-since, flake evidence, co-failures, the B1 (no-LLM) verdict, the top error lines (repeats shown as ×N), and the memory match for its signature. The log is fetched live through the same `therock-ci` functions the agents use, then cached.
+- **Signatures:** memory's signatures with instinct confidence.
+
+All read-only toward GitHub; local only.
+
+**Found:** browsing a real `bump_submodules` failure showed a log chunk starting with an invisible byte-order mark, so its timestamp wasn't stripped. `normalize_line` now drops it (with a test).
+
+**Interview talking point:** "The Console reads the same deterministic tools the agents use. What a reviewer sees is exactly the evidence an agent gets."
 
 ---
 

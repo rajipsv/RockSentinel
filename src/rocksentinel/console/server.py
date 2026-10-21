@@ -36,12 +36,32 @@ ROUTES = [
      lambda h, m, q: api.accept(m["case"], h.json_body(), h.paths)),
     ("POST", re.compile(rf"^/api/proposals/{_CASE}/reject$"),
      lambda h, m, q: api.reject(m["case"], h.paths)),
+    ("GET", re.compile(r"^/api/runs$"), lambda h, m, q: api.list_runs(h.jobs())),
+    ("GET", re.compile(r"^/api/runs/(?P<run>\d+)$"),
+     lambda h, m, q: api.run_detail(h.jobs(), int(m["run"]))),
+    ("GET", re.compile(r"^/api/jobs/(?P<job>\d+)$"),
+     lambda h, m, q: api.case_detail(h.jobs(), h.memory(), int(m["job"]),
+                                     fetch_evidence=q.get("evidence") != ["0"])),
+    ("GET", re.compile(r"^/api/signatures$"), lambda h, m, q: api.list_signatures(h.memory())),
 ]
 
 
 class ConsoleHandler(BaseHTTPRequestHandler):
     paths: Paths = Paths()
     web_dir: Path = WEB_DIR
+    stores: dict = {}   # lazily opened job store / memory store (shared, thread-safe)
+
+    def jobs(self):
+        if "jobs" not in self.stores:
+            from rocksentinel.store.sqlite_store import SQLiteStore
+            self.stores["jobs"] = SQLiteStore(self.paths.root / ".data" / "rocksentinel.db")
+        return self.stores["jobs"]
+
+    def memory(self):
+        if "memory" not in self.stores:
+            from rocksentinel.memory.store import MemoryStore
+            self.stores["memory"] = MemoryStore(self.paths.root / ".data" / "rocksentinel.db")
+        return self.stores["memory"]
 
     def log_message(self, fmt: str, *args: object) -> None:  # keep test output quiet
         pass
@@ -112,9 +132,9 @@ class ConsoleHandler(BaseHTTPRequestHandler):
 
 
 def make_server(port: int = 8765, paths: Paths | None = None,
-                web_dir: Path | None = None) -> ThreadingHTTPServer:
+                web_dir: Path | None = None, stores: dict | None = None) -> ThreadingHTTPServer:
     handler = type("BoundConsoleHandler", (ConsoleHandler,), {
-        "paths": paths or Paths(), "web_dir": web_dir or WEB_DIR,
+        "paths": paths or Paths(), "web_dir": web_dir or WEB_DIR, "stores": stores or {},
     })
     return ThreadingHTTPServer(("127.0.0.1", port), handler)
 

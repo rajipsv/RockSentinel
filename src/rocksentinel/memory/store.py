@@ -125,6 +125,13 @@ class MemoryStore:
                 "instinct": self._instinct(signature)}
 
     @_locked
+    def list_signatures(self, limit: int = 100) -> list[dict]:
+        rows = self._db.execute(
+            "SELECT * FROM mem_signatures ORDER BY last_seen DESC LIMIT ?", (limit,)).fetchall()
+        return [{**dict(r), "families": json.loads(r["families"]),
+                 "instinct": self._instinct(r["signature"])} for r in rows]
+
+    @_locked
     def search_similar(self, text: str, k: int = 3, component: str | None = None,
                        min_score: float = 0.3) -> list[dict]:
         """v1: exact signature first, then token similarity over known signatures."""

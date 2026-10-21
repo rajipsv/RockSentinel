@@ -13,6 +13,8 @@
       <button class="tab active" data-view="review" role="tab">Review <span id="count-review" class="pill">0</span></button>
       <button class="tab" data-view="golden" role="tab">Golden set <span id="count-golden" class="pill">0</span></button>
       <button class="tab" data-view="evals" role="tab">Evals</button>
+      <button class="tab" data-view="runs" role="tab">Runs</button>
+      <button class="tab" data-view="signatures" role="tab">Signatures</button>
     </nav>
     <div class="hint">read-only toward GitHub · local only</div>
   </header>
@@ -55,6 +57,20 @@
         <div class="table-wrap"><table id="evals-table"></table></div>
         <h3>Per case</h3>
         <div class="table-wrap"><table id="evals-cases"></table></div>
+      </div>
+    </section>
+    <!-- Runs + Case -->
+    <section id="view-runs" class="view">
+      <aside class="list" id="run-list" aria-label="Runs"></aside>
+      <article class="detail" id="run-detail"><p class="empty">Select a run.</p></article>
+    </section>
+
+    <!-- Signatures -->
+    <section id="view-signatures" class="view">
+      <div class="panel">
+        <h2>Failure signatures (memory)</h2>
+        <p class="muted" id="sig-summary"></p>
+        <div class="table-wrap"><table id="sig-table"></table></div>
       </div>
     </section>
   </main>

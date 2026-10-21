@@ -127,7 +127,7 @@ _ANSI = re.compile(r"\x1b\[[0-9;]*[A-Za-z]")
 
 def normalize_line(line: str) -> str:
     """Strip GitHub log timestamps, workflow-command markers, ctest -V prefixes and ANSI codes."""
-    line = _ANSI.sub("", line)
+    line = _ANSI.sub("", line).lstrip("﻿")   # some GitHub log chunks start with a BOM
     line = _TIMESTAMP.sub("", line, count=1)
     line = _GHA_COMMAND.sub("", line, count=1)
     return _CTEST_PREFIX.sub("", line, count=1)

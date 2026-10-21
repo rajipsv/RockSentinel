@@ -245,3 +245,9 @@ def test_real_rocgdb_log():
 def test_window_is_clamped_to_log_bounds():
     result = extract_errors("Segmentation fault\n")
     assert result.first_error.window == (1, 1)
+
+
+def test_byte_order_mark_before_timestamp_is_stripped():
+    from rocksentinel.therock_ci.extract import normalize_line
+    assert normalize_line("﻿2026-10-20T23:24:28.9432368Z error: unable to write file x") == (
+        "error: unable to write file x")

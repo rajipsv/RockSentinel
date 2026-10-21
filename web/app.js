@@ -38,6 +38,8 @@ document.querySelectorAll(".tab").forEach((tab) => tab.addEventListener("click",
     v.classList.toggle("active", v.id === `view-${tab.dataset.view}`));
   if (tab.dataset.view === "golden") loadGolden();
   if (tab.dataset.view === "evals") loadEvals();
+  if (tab.dataset.view === "runs") loadRuns();
+  if (tab.dataset.view === "signatures") loadSignatures();
 }));
 
 // --- review -------------------------------------------------------------------------------
@@ -189,6 +191,86 @@ async function loadEvals() {
   const crows = r.cases.map((c) => el("tr", {}, el("td", {}, c.case_id), el("td", {}, badge(c.expected_category)),
     systems.map((s) => el("td", {}, badge(c[s].category), ` ${c[s].grounding.toFixed(2)}`))));
   $("#evals-cases").replaceChildren(el("thead", {}, chead), el("tbody", {}, crows));
+}
+
+// --- runs + case ----------------------------------------------------------------------------
+async function loadRuns() {
+  const r = await api("/api/runs");
+  const list = $("#run-list"); list.replaceChildren();
+  if (!r.items.length) {
+    list.append(el("p", { class: "empty", style: "padding:12px" },
+      "No runs yet. Run: python -m rocksentinel.ingest.poller"));
+    return;
+  }
+  for (const run of r.items) {
+    list.append(el("div", { class: "item", "data-id": run.run_id, onclick: () => showRun(run.run_id) },
+      el("div", { class: "title" }, run.failed ? badge("regression") : badge("ok"), " ", run.workflow),
+      el("div", { class: "sub" }, `run ${run.run_id} · ${run.failed}/${run.jobs} failed · ${(run.started_at || "").slice(0, 16)}`)));
+  }
+}
+
+async function showRun(runId) {
+  document.querySelectorAll("#run-list .item").forEach((i) =>
+    i.classList.toggle("selected", i.dataset.id === String(runId)));
+  const r = await api(`/api/runs/${runId}`);
+  const d = $("#run-detail");
+  d.replaceChildren(
+    el("h2", {}, `${r.workflow} · run ${r.run_id}`),
+    el("div", { class: "meta" }, `${r.failed}/${r.jobs} jobs failed · ${r.branch} @ ${(r.head_sha || "").slice(0, 8)} · `,
+      el("a", { href: r.run_url, target: "_blank", rel: "noopener" }, "run on GitHub ↗")),
+    r.platform_event_hint ? el("span", { class: "chip weak" },
+      "platform-event hint: ≥3 components failed on one runner pool") : null,
+    ...r.by_runner_pool.map((g) => el("div", {},
+      el("h3", {}, `${g.runner_label} — ${g.failed.length} failed`),
+      el("table", {}, el("tbody", {}, g.failed.map((j) => el("tr", {},
+        el("td", {}, el("a", { href: "#", onclick: (e) => { e.preventDefault(); showCase(j.job_id); } },
+          j.component || j.job_name)),
+        el("td", {}, j.gpu_family || "?"), el("td", {}, j.platform || "?"),
+        el("td", {}, j.conclusion), el("td", { class: "muted" }, `attempt ${j.attempt}`))))))),
+    el("div", { id: "case-panel" }));
+}
+
+async function showCase(jobId) {
+  const panel = $("#case-panel");
+  panel.replaceChildren(el("p", { class: "empty" }, "Loading case (fetching the log)…"));
+  try {
+    const c = await api(`/api/jobs/${jobId}`);
+    const h = c.history, f = h.flake_evidence, co = h.same_run_co_failures;
+    const lines = (c.evidence?.windows || []).flatMap((w) =>
+      [el("div", { class: "ln cite" }, el("span", { class: "n" }, w.anchor.line_no),
+        el("span", {}, `${w.anchor.text}${w.anchor.count > 1 ? `   (×${w.anchor.count})` : ""}`))]);
+    panel.replaceChildren(
+      el("h2", {}, "Case: ", c.b1 ? badge(c.b1.category) : "", " ", c.job.component || c.job.job_name),
+      el("div", { class: "meta" }, `${c.job.job_name} · `,
+        el("a", { href: c.job_url, target: "_blank", rel: "noopener" }, "full log ↗")),
+      el("dl", { class: "facts" },
+        el("dt", {}, "B1 verdict (no LLM)"), el("dd", {}, c.b1 ? `${c.b1.category}: ${c.b1.reason}` : "—"),
+        el("dt", {}, "Failing test"), el("dd", {}, el("code", {}, c.evidence?.failing_test || "—")),
+        el("dt", {}, "Faulting kernel"), el("dd", {}, el("code", {}, c.evidence?.faulting_kernel || "—")),
+        el("dt", {}, "Failing since"), el("dd", {}, h.failing_since ? `${h.failing_since.finished_at} (${h.failing_since.streak_runs} runs)` : "—"),
+        el("dt", {}, "Flaky?"), el("dd", {}, f.likely_flaky ? "likely (passed on rerun / same commit passed)" : "no evidence"),
+        el("dt", {}, "Same-run co-failures"), el("dd", {}, `${co.count}${co.platform_event_hint ? " · platform-event hint" : ""}`),
+        el("dt", {}, "Memory"), el("dd", {}, c.memory?.match
+          ? `seen ${c.memory.match.count}× · instinct: ${c.memory.match.instinct?.cause || "none yet"}`
+          : "new signature (not seen before)")),
+      el("h3", {}, "Top error lines (grouped repeats shown as ×N)"),
+      el("div", { class: "log" }, lines.length ? lines : el("p", { class: "empty", style: "padding:8px" }, "No error lines.")));
+  } catch (e) { panel.replaceChildren(el("p", { class: "empty" }, e.message)); }
+}
+
+// --- signatures -----------------------------------------------------------------------------
+async function loadSignatures() {
+  const r = await api("/api/signatures");
+  $("#sig-summary").textContent = r.count
+    ? `${r.count} signatures` : "Memory is empty: the Memory Curator fills it once agents run.";
+  const head = el("tr", {}, ["Signature", "Component", "Seen", "GPU families", "Instinct", "Confidence", "Example"]
+    .map((x) => el("th", {}, x)));
+  const rows = r.items.map((s) => el("tr", {}, el("td", {}, el("code", {}, s.signature)),
+    el("td", {}, s.component || "—"), el("td", { class: "num" }, s.count),
+    el("td", {}, s.families.join(", ")), el("td", {}, s.instinct?.cause || "—"),
+    el("td", { class: "num" }, s.instinct ? s.instinct.confidence.toFixed(2) : "—"),
+    el("td", { class: "muted" }, s.example.slice(0, 120))));
+  $("#sig-table").replaceChildren(el("thead", {}, head), el("tbody", {}, rows));
 }
 
 loadProposals().catch((e) => toast(`Error: ${e.message}`));

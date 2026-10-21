@@ -27,7 +27,7 @@ a { color: var(--accent); }
 .hint { margin-left: auto; color: var(--muted); font-size: 12px; }
 main { padding: 16px; }
 .view { display: none; } .view.active { display: block; }
-#view-review.active { display: grid; grid-template-columns: 340px 1fr; gap: 16px; align-items: start; }
+#view-review.active, #view-runs.active { display: grid; grid-template-columns: 340px 1fr; gap: 16px; align-items: start; }
 .list { background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
   max-height: calc(100vh - 100px); overflow: auto; }
 .item { padding: 10px 12px; border-bottom: 1px solid var(--border); cursor: pointer; }

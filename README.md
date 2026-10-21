@@ -78,7 +78,9 @@ The build story for interviews, updated after each step: [docs/BUILD-LOG.md](doc
 - **Review:** each pending proposal with its highlighted evidence lines, failing-since and
   co-failure context, a category picker and Accept/Reject (keys A / R, J / K to move).
 - **Golden set:** all labelled cases and who confirmed them.
-- **Evals:** B0 vs B1 metrics and per-case results.
+- **Evals:** B0 vs B1 metrics and per-case results, by dev/test split.
+- **Runs / Case:** recent runs, failures grouped by runner pool, and a per-job case view (history, flake evidence, B1 verdict, top error lines, memory match).
+- **Signatures:** memory's failure signatures and learned instincts.
 
 Local only (binds to 127.0.0.1, same-origin writes); it edits only the golden-set files and
 never writes to GitHub. In Azure, `web/` is served by Static Web Apps and

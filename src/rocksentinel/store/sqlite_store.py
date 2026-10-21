@@ -107,6 +107,19 @@ class SQLiteStore:
     # --- TriageQueue --------------------------------------------------------------------
 
     @_locked
+    def recent_runs(self, limit: int = 50) -> list[dict]:
+        """Runs newest first, with job and failure counts (for the Console Runs view)."""
+        rows = self._db.execute(
+            "SELECT run_id, workflow, head_sha, branch, MIN(started_at), MAX(finished_at), "
+            "COUNT(*), SUM(conclusion IN ('failure','timed_out')), MAX(attempt) "
+            "FROM job_results GROUP BY run_id ORDER BY MIN(started_at) DESC LIMIT ?",
+            (limit,),
+        ).fetchall()
+        keys = ("run_id", "workflow", "head_sha", "branch", "started_at", "finished_at",
+                "jobs", "failed", "attempts")
+        return [dict(zip(keys, r, strict=True)) for r in rows]
+
+    @_locked
     def failed_jobs(self, limit: int = 200) -> list[JobResult]:
         rows = self._db.execute(
             f"SELECT {', '.join(_COLUMNS)} FROM job_results "
