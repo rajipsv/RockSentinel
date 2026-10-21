@@ -11,6 +11,7 @@ from collections.abc import Iterable
 CATEGORIES = (
     "infra",
     "flaky",
+    "timeout",
     "regression",
     "submodule-bump",
     "packaging",
@@ -29,6 +30,8 @@ _CODE_KINDS = frozenset({
     "gpu_memory_fault", "crash", "build_error", "gtest_failed", "python_error",
     "ctest_failed_list", "ctest_summary",
 })
+# A fault or crash is the root cause; any timeout/hang next to it is a consequence.
+_ROOT_CAUSE_KINDS = frozenset({"gpu_memory_fault", "crash", "asan"})
 
 
 def classify(
@@ -39,20 +42,20 @@ def classify(
     likely_flaky: bool = False,
 ) -> tuple[str, str]:
     """Return (category, reason). Tie-breaks follow Appendix A:
-    asan > infra > hang(infra) > flaky > submodule-bump > packaging > regression > unknown."""
+    asan > infra > flaky > timeout > submodule-bump > packaging > regression > unknown."""
     found = set(kinds)
-    if "gpu_memory_fault" in found:
-        # The ROCm runtime prints "*** GPU HANG ANALYSIS" as part of a memory-fault dump;
-        # with a fault present it is not an independent hang (found by golden-001).
-        found.discard("gpu_hang")
+    if found & _ROOT_CAUSE_KINDS:
+        # e.g. the ROCm runtime prints "*** GPU HANG ANALYSIS" inside a memory-fault dump
+        # (found by golden-001); a hang/timeout next to a fault or crash is its consequence.
+        found -= _HANG_KINDS
     if "asan" in found or (variant == "asan" and found & _CODE_KINDS):
         return "asan", "AddressSanitizer report or ASan workflow failure"
     if found & _INFRA_KINDS:
         return "infra", f"infrastructure signal: {sorted(found & _INFRA_KINDS)}"
-    if found & _HANG_KINDS:
-        return "infra", f"hang/timeout signal: {sorted(found & _HANG_KINDS)}"
     if likely_flaky:
         return "flaky", "passed on rerun or same commit passed elsewhere"
+    if found & _HANG_KINDS:
+        return "timeout", f"time limit exceeded: {sorted(found & _HANG_KINDS)}"
     if workflow in BUMP_WORKFLOWS and found:
         return "submodule-bump", f"failure in bump workflow {workflow}"
     if any(h in workflow for h in _PACKAGING_HINTS) and found:

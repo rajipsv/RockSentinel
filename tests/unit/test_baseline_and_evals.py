@@ -23,7 +23,12 @@ from rocksentinel.evals.runner import (
         (["asan"], "multi_arch_ci_asan.yml", "asan", False, "asan"),
         (["infra", "crash"], "test_artifacts.yml", None, False, "infra"),
         (["killed"], "test_artifacts.yml", None, False, "infra"),
-        (["test_timeout"], "test_artifacts.yml", None, False, "infra"),
+        (["test_timeout"], "test_artifacts.yml", None, False, "timeout"),
+        (["step_timeout"], "test_artifacts.yml", None, False, "timeout"),
+        (["infra", "step_timeout"], "test_artifacts.yml", None, False, "infra"),  # runner died
+        (["test_timeout"], "test_artifacts.yml", None, True, "flaky"),  # passed on rerun
+        (["crash", "test_timeout"], "test_artifacts.yml", None, False, "regression"),
+        (["test_timeout"], "compiler_bump.yml", None, False, "timeout"),
         (["crash"], "test_artifacts.yml", None, True, "flaky"),
         (["infra"], "test_artifacts.yml", None, True, "infra"),  # infra beats flaky
         (["build_error"], "compiler_bump.yml", None, False, "submodule-bump"),
@@ -39,8 +44,8 @@ def test_classify_rules(kinds, workflow, variant, flaky, expected):
     assert category == expected and reason
 
 
-def test_gpu_hang_alone_is_infra():
-    assert classify(["gpu_hang"], workflow="test_artifacts.yml")[0] == "infra"
+def test_gpu_hang_alone_is_timeout():
+    assert classify(["gpu_hang"], workflow="test_artifacts.yml")[0] == "timeout"
 
 
 # --- B0 excerpt (TheRock detect_failed_logs.py behaviour) -----------------------------------

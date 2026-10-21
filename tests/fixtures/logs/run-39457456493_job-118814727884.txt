@@ -1,0 +1,1504 @@
+# Source: ROCm/TheRock Actions run 39457456493 attempt 1, job 118814727884
+# Job: Linux::release / Build PyTorch (fat + split) (3.12, release/2.13, gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx... / Build PyTorch | multi-arch-release | torch release/2.13 | py3.12 (multi_arch_ci.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-20
+2026-10-20T19:10:50.7560733Z   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+2026-10-20T19:10:50.7560988Z   to tell CMake that the project requires at least <min> but has been updated
+2026-10-20T19:10:50.7561211Z   to work with policies introduced by <max> or earlier.
+2026-10-20T19:10:50.7561435Z This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+2026-10-20T19:10:50.7561629Z to suppress it.
+2026-10-20T19:10:50.7561697Z 
+2026-10-20T19:10:50.7672629Z -- The ASM compiler identification is GNU
+2026-10-20T19:10:50.7686718Z -- Found assembler: /opt/rh/gcc-toolset-13/root/usr/bin/cc
+2026-10-20T19:10:50.7722849Z CMake Warning at aten/src/ATen/native/quantized/cpu/qnnpack/CMakeLists.txt:399 (message):
+2026-10-20T19:10:50.7723119Z   Ancient psimd/FP16 forces CMake compatibility
+2026-10-20T19:10:50.7723275Z 
+2026-10-20T19:10:50.7723278Z 
+2026-10-20T19:10:50.7725432Z CMake Warning (deprecated) at third_party/psimd/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+2026-10-20T19:10:50.7725717Z   Compatibility with CMake < 3.10 will be removed from a future version of
+2026-10-20T19:10:50.7725920Z   CMake.
+2026-10-20T19:10:50.7725978Z 
+2026-10-20T19:10:50.7726088Z   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+2026-10-20T19:10:50.7726349Z   to tell CMake that the project requires at least <min> but has been updated
+2026-10-20T19:10:50.7726572Z   to work with policies introduced by <max> or earlier.
+2026-10-20T19:10:50.7726800Z This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+2026-10-20T19:10:50.7727031Z to suppress it.
+2026-10-20T19:10:50.7727099Z 
+2026-10-20T19:10:50.7742018Z CMake Warning (deprecated) at third_party/FP16/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+2026-10-20T19:10:50.7742297Z   Compatibility with CMake < 3.10 will be removed from a future version of
+2026-10-20T19:10:50.7742488Z   CMake.
+2026-10-20T19:10:50.7742549Z 
+2026-10-20T19:10:50.7742651Z   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+2026-10-20T19:10:50.7742902Z   to tell CMake that the project requires at least <min> but has been updated
+2026-10-20T19:10:50.7743124Z   to work with policies introduced by <max> or earlier.
+2026-10-20T19:10:50.7743348Z This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+2026-10-20T19:10:50.7743544Z to suppress it.
+2026-10-20T19:10:50.7743611Z 
+2026-10-20T19:10:50.7759101Z -- Brace yourself, we are building NNPACK
+2026-10-20T19:10:50.7760302Z CMake Warning at cmake/External/nnpack.cmake:66 (message):
+2026-10-20T19:10:50.7760496Z   Ancient nnpack forces CMake compatibility
+2026-10-20T19:10:50.7760657Z Call Stack (most recent call first):
+2026-10-20T19:10:50.7760809Z   cmake/Dependencies.cmake:535 (include)
+2026-10-20T19:10:50.7760960Z   CMakeLists.txt:945 (include)
+2026-10-20T19:10:50.7761047Z 
+2026-10-20T19:10:50.7761049Z 
+2026-10-20T19:10:50.7766036Z CMake Warning (deprecated) at third_party/NNPACK/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+2026-10-20T19:10:50.7766319Z   Compatibility with CMake < 3.10 will be removed from a future version of
+2026-10-20T19:10:50.7766509Z   CMake.
+2026-10-20T19:10:50.7766565Z 
+2026-10-20T19:10:50.7766667Z   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+2026-10-20T19:10:50.7766977Z   to tell CMake that the project requires at least <min> but has been updated
+2026-10-20T19:10:50.7767198Z   to work with policies introduced by <max> or earlier.
+2026-10-20T19:10:50.7767417Z This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+2026-10-20T19:10:50.7767615Z to suppress it.
+2026-10-20T19:10:50.7767682Z 
+2026-10-20T19:10:50.7785865Z -- Performing Test NNPACK_ARCH_IS_X86_32
+2026-10-20T19:10:50.8018092Z -- Performing Test NNPACK_ARCH_IS_X86_32 - Failed
+2026-10-20T19:10:50.8019115Z CMake Warning (policy) at third_party/NNPACK/CMakeLists.txt:110 (FIND_PACKAGE):
+2026-10-20T19:10:50.8019389Z   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+2026-10-20T19:10:50.8019652Z   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+2026-10-20T19:10:50.8019901Z   the cmake_policy command to set the policy and suppress this warning.
+2026-10-20T19:10:50.8020157Z This warning is for project developers.  Use -Wno-author or -Wno-policy to
+2026-10-20T19:10:50.8020360Z suppress it.
+2026-10-20T19:10:50.8020431Z 
+2026-10-20T19:10:50.8112576Z -- Found PythonInterp: /opt/python/cp312-cp312/bin/python (found version "3.12.10")
+2026-10-20T19:10:50.8113371Z -- NNPACK backend is x86-64
+2026-10-20T19:10:50.8113896Z -- Downloading six (Python package) to /__w/TheRock/TheRock/external-builds/pytorch/pytorch/build/confu-srcs/six (define PYTHON_SIX_SOURCE_DIR to avoid it)
+2026-10-20T19:10:50.8309969Z CMake Error at CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+2026-10-20T19:10:50.8310177Z -- Configuring incomplete, errors occurred!
+2026-10-20T19:10:50.8310385Z   Compatibility with CMake < 3.5 has been removed from CMake.
+2026-10-20T19:10:50.8310519Z 
+2026-10-20T19:10:50.8310628Z   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+2026-10-20T19:10:50.8310888Z   to tell CMake that the project requires at least <min> but has been updated
+2026-10-20T19:10:50.8311112Z   to work with policies introduced by <max> or earlier.
+2026-10-20T19:10:50.8311240Z 
+2026-10-20T19:10:50.8311337Z   Or, add -DCMAKE_POLICY_VERSION_MINIMUM=3.5 to try configuring anyway.
+2026-10-20T19:10:50.8311482Z 
+2026-10-20T19:10:50.8311484Z 
+2026-10-20T19:10:50.8338845Z Error: could not find CMAKE_PROJECT_NAME in Cache
+2026-10-20T19:10:50.8420631Z -- Failed to find LLVM FileCheck
+2026-10-20T19:10:50.8427017Z -- Found Git: /usr/local/bin/git (found version "2.49.0")
+2026-10-20T19:10:50.8467816Z -- Google Benchmark version: v1.9.3, normalized to 1.9.3
+2026-10-20T19:10:50.8470861Z -- Looking for shm_open in rt
+2026-10-20T19:10:50.8998707Z -- Looking for shm_open in rt - found
+2026-10-20T19:10:50.9003275Z -- Performing Test HAVE_CXX_FLAG_WALL
+2026-10-20T19:10:50.9724050Z -- Performing Test HAVE_CXX_FLAG_WALL - Success
+2026-10-20T19:10:50.9727396Z -- Performing Test HAVE_CXX_FLAG_WEXTRA
+2026-10-20T19:10:51.0457154Z -- Performing Test HAVE_CXX_FLAG_WEXTRA - Success
+2026-10-20T19:10:51.0460763Z -- Performing Test HAVE_CXX_FLAG_WSHADOW
+2026-10-20T19:10:51.1351105Z -- Performing Test HAVE_CXX_FLAG_WSHADOW - Success
+2026-10-20T19:10:51.1355521Z -- Performing Test HAVE_CXX_FLAG_WFLOAT_EQUAL
+2026-10-20T19:10:51.2079807Z -- Performing Test HAVE_CXX_FLAG_WFLOAT_EQUAL - Success
+2026-10-20T19:10:51.2084220Z -- Performing Test HAVE_CXX_FLAG_WOLD_STYLE_CAST
+2026-10-20T19:10:51.2816297Z -- Performing Test HAVE_CXX_FLAG_WOLD_STYLE_CAST - Success
+2026-10-20T19:10:51.2820408Z -- Performing Test HAVE_CXX_FLAG_WCONVERSION
+2026-10-20T19:10:51.3563494Z -- Performing Test HAVE_CXX_FLAG_WCONVERSION - Success
+2026-10-20T19:10:51.3566955Z -- Performing Test HAVE_CXX_FLAG_WERROR
+2026-10-20T19:10:51.4354963Z -- Performing Test HAVE_CXX_FLAG_WERROR - Success
+2026-10-20T19:10:51.4359443Z -- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE
+2026-10-20T19:10:51.5060223Z -- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE - Success
+2026-10-20T19:10:51.5064788Z -- Performing Test HAVE_CXX_FLAG_PEDANTIC
+2026-10-20T19:10:51.5805954Z -- Performing Test HAVE_CXX_FLAG_PEDANTIC - Success
+2026-10-20T19:10:51.5809899Z -- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS
+2026-10-20T19:10:51.6557998Z -- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS - Success
+2026-10-20T19:10:51.6562104Z -- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32
+2026-10-20T19:10:51.6857256Z -- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 - Failed
+2026-10-20T19:10:51.6861978Z -- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING
+2026-10-20T19:10:51.7589949Z -- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING - Success
+2026-10-20T19:10:51.7594558Z -- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS
+2026-10-20T19:10:51.8475141Z -- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS - Success
+2026-10-20T19:10:51.8479464Z -- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED
+2026-10-20T19:10:51.9218803Z -- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED - Success
+2026-10-20T19:10:51.9222442Z -- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING
+2026-10-20T19:10:51.9982465Z -- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING - Success
+2026-10-20T19:10:51.9986252Z -- Performing Test HAVE_CXX_FLAG_WD654
+2026-10-20T19:10:52.0198057Z -- Performing Test HAVE_CXX_FLAG_WD654 - Failed
+2026-10-20T19:10:52.0203405Z -- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY
+2026-10-20T19:10:52.0482641Z -- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY - Failed
+2026-10-20T19:10:52.0487551Z -- Performing Test HAVE_CXX_FLAG_COVERAGE
+2026-10-20T19:10:52.1689233Z -- Performing Test HAVE_CXX_FLAG_COVERAGE - Success
+2026-10-20T19:10:52.1689761Z -- Compiling and running to test HAVE_STD_REGEX
+2026-10-20T19:10:52.3313989Z -- Performing Test HAVE_STD_REGEX -- success
+2026-10-20T19:10:52.3314214Z -- Compiling and running to test HAVE_GNU_POSIX_REGEX
+2026-10-20T19:10:52.3549396Z -- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+2026-10-20T19:10:52.3549625Z -- Compiling and running to test HAVE_POSIX_REGEX
+2026-10-20T19:10:52.4453220Z -- Performing Test HAVE_POSIX_REGEX -- success
+2026-10-20T19:10:52.4453433Z -- Compiling and running to test HAVE_STEADY_CLOCK
+2026-10-20T19:10:52.5266034Z -- Performing Test HAVE_STEADY_CLOCK -- success
+2026-10-20T19:10:52.5278595Z -- Compiling and running to test HAVE_PTHREAD_AFFINITY
+2026-10-20T19:10:52.5992325Z -- Performing Test HAVE_PTHREAD_AFFINITY -- failed to compile
+2026-10-20T19:10:52.6031743Z 
+2026-10-20T19:10:52.6031778Z 
+2026-10-20T19:10:52.6031890Z ================================================================================
+2026-10-20T19:10:52.6032090Z Default C++ compiler flags
+2026-10-20T19:10:52.6032278Z (values may be overridden by CMAKE_CXX_STANDARD and CXX_STANDARD):
+2026-10-20T19:10:52.6032420Z 
+2026-10-20T19:10:52.6032981Z CMAKE_CXX_FLAGS: -Wno-error=maybe-uninitialized -Wno-error=uninitialized -Wno-error=restrict -I/opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/rocm_sysdeps/include -I/opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/include/roctracer -fvisibility-inlines-hidden -DUSE_PTHREADPOOL
+2026-10-20T19:10:52.6033699Z 
+2026-10-20T19:10:52.6033754Z CMAKE_CXX_FLAGS_DEBUG: -g
+2026-10-20T19:10:52.6033845Z 
+2026-10-20T19:10:52.6033909Z CMAKE_CXX_FLAGS_RELEASE: -O3 -DNDEBUG
+2026-10-20T19:10:52.6034077Z ================================================================================
+2026-10-20T19:10:52.6034199Z 
+2026-10-20T19:10:52.6052524Z -- CXX_AVX_FLAGS: -mavx
+2026-10-20T19:10:52.6052688Z -- CXX_AVX2_FLAGS: -mavx2 -mfma -mf16c
+2026-10-20T19:10:52.6052893Z -- CXX_AVX512_FLAGS: -mavx512f -mavx512dq -mavx512vl -mavx512bw -mfma
+2026-10-20T19:10:52.6711934Z -- Performing Test HAVE_GNU_F2H_IEEE
+2026-10-20T19:10:52.6946495Z -- Performing Test HAVE_GNU_F2H_IEEE - Failed
+2026-10-20T19:10:52.6967547Z -- Check OMP with lib /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/libgomp.so and flags -fopenmp -v
+2026-10-20T19:10:52.7677342Z -- Check OMP with lib /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/libgomp.so and flags -fopenmp -v
+2026-10-20T19:10:52.9085837Z CMake Warning (author) at /opt/_internal/cpython-3.12.10/lib/python3.12/site-packages/cmake/data/share/cmake-4.4/Modules/FindPackageHandleStandardArgs.cmake:493 (message):
+2026-10-20T19:10:52.9086455Z   The package name passed to find_package_handle_standard_args() (OpenMP_C)
+2026-10-20T19:10:52.9086722Z   does not match the name of the calling package (OpenMP).  This can lead to
+2026-10-20T19:10:52.9086978Z   problems in calling code that expects find_package() result variables
+2026-10-20T19:10:52.9087192Z   (e.g., `_FOUND`) to follow a certain pattern.
+2026-10-20T19:10:52.9087362Z Call Stack (most recent call first):
+2026-10-20T19:10:52.9087560Z   cmake/Modules/FindOpenMP.cmake:635 (find_package_handle_standard_args)
+2026-10-20T19:10:52.9087784Z   third_party/fbgemm/CMakeLists.txt:139 (find_package)
+2026-10-20T19:10:52.9088007Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T19:10:52.9088159Z 
+2026-10-20T19:10:52.9088232Z -- Found OpenMP_C: -fopenmp (found version "4.5")
+2026-10-20T19:10:52.9956129Z CMake Warning (author) at /opt/_internal/cpython-3.12.10/lib/python3.12/site-packages/cmake/data/share/cmake-4.4/Modules/FindPackageHandleStandardArgs.cmake:493 (message):
+2026-10-20T19:10:52.9956589Z   The package name passed to find_package_handle_standard_args() (OpenMP_CXX)
+2026-10-20T19:10:52.9956855Z   does not match the name of the calling package (OpenMP).  This can lead to
+2026-10-20T19:10:52.9957253Z   problems in calling code that expects find_package() result variables
+2026-10-20T19:10:52.9957469Z   (e.g., `_FOUND`) to follow a certain pattern.
+2026-10-20T19:10:52.9957640Z Call Stack (most recent call first):
+2026-10-20T19:10:52.9957838Z   cmake/Modules/FindOpenMP.cmake:635 (find_package_handle_standard_args)
+2026-10-20T19:10:52.9958068Z   third_party/fbgemm/CMakeLists.txt:139 (find_package)
+2026-10-20T19:10:52.9958287Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T19:10:52.9958437Z 
+2026-10-20T19:10:52.9958510Z -- Found OpenMP_CXX: -fopenmp (found version "4.5")
+2026-10-20T19:10:52.9958692Z -- Found OpenMP: TRUE (found version "4.5")
+2026-10-20T19:10:52.9958976Z -- OpenMP found: OpenMP_C_INCLUDE_DIRS = 
+2026-10-20T19:10:53.0046660Z 
+2026-10-20T19:10:53.0046716Z 
+2026-10-20T19:10:53.0046823Z ================================================================================
+2026-10-20T19:10:53.0047040Z CPP Library Target: fbgemm_generic (OBJECT)
+2026-10-20T19:10:53.0047207Z  
+2026-10-20T19:10:53.0047309Z SRCS:
+2026-10-20T19:10:53.0047422Z src/EmbeddingSpMDM.cc
+2026-10-20T19:10:53.0047552Z src/EmbeddingSpMDMNBit.cc
+2026-10-20T19:10:53.0047682Z src/ExecuteKernel.cc
+2026-10-20T19:10:53.0047812Z src/ExecuteKernelU8S8.cc
+2026-10-20T19:10:53.0047937Z src/Fbgemm.cc
+2026-10-20T19:10:53.0048068Z src/FbgemmBfloat16Convert.cc
+2026-10-20T19:10:53.0048206Z src/FbgemmConv.cc
+2026-10-20T19:10:53.0048319Z src/FbgemmFPCommon.cc
+2026-10-20T19:10:53.0048459Z src/FbgemmFP16.cc
+2026-10-20T19:10:53.0048577Z src/FbgemmFloat16Convert.cc
+2026-10-20T19:10:53.0048706Z src/FbgemmI64.cc
+2026-10-20T19:10:53.0048826Z src/FbgemmSparseDense.cc
+2026-10-20T19:10:53.0048953Z src/FbgemmI8Spmdm.cc
+2026-10-20T19:10:53.0049079Z src/FbgemmPackMatrixB.cc
+2026-10-20T19:10:53.0049227Z src/GenerateKernelDirectConvU8S8S32ACC32.cc
+2026-10-20T19:10:53.0049384Z src/GenerateKernel.cc
+2026-10-20T19:10:53.0049516Z src/GenerateKernelU8S8S32ACC16.cc
+2026-10-20T19:10:53.0049670Z src/GenerateKernelU8S8S32ACC16Avx512.cc
+2026-10-20T19:10:53.0049841Z src/GenerateKernelU8S8S32ACC16Avx512VNNI.cc
+2026-10-20T19:10:53.0050006Z src/GenerateKernelU8S8S32ACC32.cc
+2026-10-20T19:10:53.0050162Z src/GenerateKernelU8S8S32ACC32Avx512VNNI.cc
+2026-10-20T19:10:53.0050312Z src/GroupwiseConv.cc
+2026-10-20T19:10:53.0050442Z src/GroupwiseConvAcc32Avx2.cc
+2026-10-20T19:10:53.0050585Z src/GroupwiseConvAcc32Avx512.cc
+2026-10-20T19:10:53.0050724Z src/PackAMatrix.cc
+2026-10-20T19:10:53.0050840Z src/PackAWithIm2Col.cc
+2026-10-20T19:10:53.0050972Z src/PackAWithQuantRowOffset.cc
+2026-10-20T19:10:53.0051114Z src/PackAWithRowOffset.cc
+2026-10-20T19:10:53.0051241Z src/PackBMatrix.cc
+2026-10-20T19:10:53.0051371Z src/PackMatrix.cc
+2026-10-20T19:10:53.0051559Z src/PackWeightMatrixForGConv.cc
+2026-10-20T19:10:53.0051699Z src/PackWeightsForConv.cc
+2026-10-20T19:10:53.0051835Z src/PackWeightsForDirectConv.cc
+2026-10-20T19:10:53.0051966Z src/QuantUtils.cc
+2026-10-20T19:10:53.0052088Z src/RowWiseSparseAdagradFused.cc
+2026-10-20T19:10:53.0052227Z src/SparseAdagrad.cc
+2026-10-20T19:10:53.0052345Z src/spmmUtils.cc
+2026-10-20T19:10:53.0052459Z src/TransposeUtils.cc
+2026-10-20T19:10:53.0052583Z src/GenerateI8Depthwise.cc
+2026-10-20T19:10:53.0052714Z src/RefImplementations.cc
+2026-10-20T19:10:53.0052838Z src/Utils.cc
+2026-10-20T19:10:53.0052945Z src/fp32/FbgemmFP32.cc
+2026-10-20T19:10:53.0053059Z  
+2026-10-20T19:10:53.0053157Z CC_FLAGS:
+2026-10-20T19:10:53.0053215Z 
+2026-10-20T19:10:53.0053257Z  
+2026-10-20T19:10:53.0053350Z MSVC_FLAGS:
+2026-10-20T19:10:53.0053454Z /wd4717
+2026-10-20T19:10:53.0053551Z /bigobj
+2026-10-20T19:10:53.0053647Z  
+2026-10-20T19:10:53.0053744Z DEFINITIONS:
+2026-10-20T19:10:53.0053848Z FBGEMM_STATIC
+2026-10-20T19:10:53.0053950Z  
+2026-10-20T19:10:53.0054049Z ENABLE_IPO: 
+2026-10-20T19:10:53.0054112Z 
+2026-10-20T19:10:53.0054151Z  
+2026-10-20T19:10:53.0054246Z INCLUDE_DIRS:
+2026-10-20T19:10:53.0054449Z $<BUILD_INTERFACE:/__w/TheRock/TheRock/external-builds/pytorch/pytorch/third_party/fbgemm>
+2026-10-20T19:10:53.0054810Z $<BUILD_INTERFACE:/__w/TheRock/TheRock/external-builds/pytorch/pytorch/third_party/fbgemm/include>
+2026-10-20T19:10:53.0055143Z $<BUILD_INTERFACE:/__w/TheRock/TheRock/external-builds/pytorch/pytorch/third_party/fbgemm/bench>
+2026-10-20T19:10:53.0055367Z  
+2026-10-20T19:10:53.0055468Z Library Dependencies:
+2026-10-20T19:10:53.0055593Z $<BUILD_INTERFACE:cpuinfo>
+2026-10-20T19:10:53.0055721Z $<BUILD_INTERFACE:asmjit>
+2026-10-20T19:10:53.0055840Z  
+2026-10-20T19:10:53.0055934Z Output Library:
+2026-10-20T19:10:53.0056042Z fbgemm_generic
+2026-10-20T19:10:53.0056147Z  
+2026-10-20T19:10:53.0056243Z Install Destination:
+2026-10-20T19:10:53.0056357Z lib64
+2026-10-20T19:10:53.0056483Z ================================================================================
+2026-10-20T19:10:53.0056608Z 
+2026-10-20T19:10:53.0056674Z -- Processor is x86_64; will build AVX2 target
+2026-10-20T19:10:53.0224828Z 
+2026-10-20T19:10:53.0224859Z 
+2026-10-20T19:10:53.0224958Z ================================================================================
+2026-10-20T19:10:53.0225168Z CPP Library Target: fbgemm_avx2 (OBJECT)
+2026-10-20T19:10:53.0225319Z  
+2026-10-20T19:10:53.0225423Z SRCS:
+2026-10-20T19:10:53.0225538Z src/EmbeddingSpMDMAvx2.cc
+2026-10-20T19:10:53.0225685Z src/FbgemmBfloat16ConvertAvx2.cc
+2026-10-20T19:10:53.0225832Z src/FbgemmFloat16ConvertAvx2.cc
+2026-10-20T19:10:53.0225982Z src/FbgemmI8Depthwise3DAvx2.cc
+2026-10-20T19:10:53.0226126Z src/FbgemmI8DepthwiseAvx2.cc
+2026-10-20T19:10:53.0226285Z src/FbgemmI8DepthwisePerChannelQuantAvx2.cc
+2026-10-20T19:10:53.0226454Z src/FbgemmSparseDenseAvx2.cc
+2026-10-20T19:10:53.0226595Z src/FbgemmSparseDenseInt8Avx2.cc
+2026-10-20T19:10:53.0226742Z src/OptimizedKernelsAvx2.cc
+2026-10-20T19:10:53.0226885Z src/PackDepthwiseConvMatrixAvx2.cc
+2026-10-20T19:10:53.0227033Z src/QuantUtilsAvx2.cc
+2026-10-20T19:10:53.0227158Z src/spmmUtilsAvx2.cc
+2026-10-20T19:10:53.0227275Z src/UtilsAvx2.cc
+2026-10-20T19:10:53.0227398Z src/fp32/FbgemmFP32UKernelsAvx2.cc
+2026-10-20T19:10:53.0227549Z src/FbgemmFP16UKernelsAvx2.cc
+2026-10-20T19:10:53.0227675Z  
+2026-10-20T19:10:53.0227772Z CC_FLAGS:
+2026-10-20T19:10:53.0227872Z -m64
+2026-10-20T19:10:53.0227968Z -mf16c
+2026-10-20T19:10:53.0228066Z -mfma
+2026-10-20T19:10:53.0228160Z -mavx2
+2026-10-20T19:10:53.0228253Z -mfma
+2026-10-20T19:10:53.0228348Z -mf16c
+2026-10-20T19:10:53.0228439Z  
+2026-10-20T19:10:53.0228533Z MSVC_FLAGS:
+2026-10-20T19:10:53.0228635Z -mavx2
+2026-10-20T19:10:53.0228727Z -mfma
+2026-10-20T19:10:53.0228819Z -mf16c
+2026-10-20T19:10:53.0228913Z  
+2026-10-20T19:10:53.0229007Z DEFINITIONS:
+2026-10-20T19:10:53.0229073Z 
+2026-10-20T19:10:53.0229112Z  
+2026-10-20T19:10:53.0229209Z ENABLE_IPO: 
+2026-10-20T19:10:53.0229273Z 
+2026-10-20T19:10:53.0229312Z  
+2026-10-20T19:10:53.0229409Z INCLUDE_DIRS:
+2026-10-20T19:10:53.0229531Z 
+2026-10-20T19:10:53.0229572Z  
+2026-10-20T19:10:53.0229669Z Library Dependencies:
+2026-10-20T19:10:53.0229800Z $<BUILD_INTERFACE:cpuinfo>
+2026-10-20T19:10:53.0229933Z $<BUILD_INTERFACE:asmjit>
+2026-10-20T19:10:53.0230054Z fbgemm_generic
+2026-10-20T19:10:53.0230159Z  
+2026-10-20T19:10:53.0230257Z Output Library:
+2026-10-20T19:10:53.0230366Z fbgemm_avx2
+2026-10-20T19:10:53.0230463Z  
+2026-10-20T19:10:53.0230558Z Install Destination:
+2026-10-20T19:10:53.0230671Z lib64
+2026-10-20T19:10:53.0230799Z ================================================================================
+2026-10-20T19:10:53.0230921Z 
+2026-10-20T19:10:53.0230989Z -- Processor is x86_64; will build AVX512 target
+2026-10-20T19:10:53.0399990Z 
+2026-10-20T19:10:53.0400231Z 
+2026-10-20T19:10:53.0400351Z ================================================================================
+2026-10-20T19:10:53.0400567Z CPP Library Target: fbgemm_avx512 (OBJECT)
+2026-10-20T19:10:53.0400715Z  
+2026-10-20T19:10:53.0400815Z SRCS:
+2026-10-20T19:10:53.0400936Z src/FbgemmBfloat16ConvertAvx512.cc
+2026-10-20T19:10:53.0401089Z src/EmbeddingSpMDMAvx512.cc
+2026-10-20T19:10:53.0401233Z src/FbgemmFloat16ConvertAvx512.cc
+2026-10-20T19:10:53.0401384Z src/FbgemmSparseDenseAvx512.cc
+2026-10-20T19:10:53.0401531Z src/FbgemmSparseDenseInt8Avx512.cc
+2026-10-20T19:10:53.0401740Z src/FbgemmSparseDenseVectorInt8Avx512.cc
+2026-10-20T19:10:53.0401900Z src/QuantUtilsAvx512.cc
+2026-10-20T19:10:53.0402024Z src/UtilsAvx512.cc
+2026-10-20T19:10:53.0402150Z src/FbgemmFP16UKernelsAvx512.cc
+2026-10-20T19:10:53.0402296Z src/FbgemmFP16UKernelsAvx512_256.cc
+2026-10-20T19:10:53.0402447Z src/fp32/FbgemmFP32UKernelsAvx512.cc
+2026-10-20T19:10:53.0402604Z src/fp32/FbgemmFP32UKernelsAvx512_256.cc
+2026-10-20T19:10:53.0402744Z  
+2026-10-20T19:10:53.0402839Z CC_FLAGS:
+2026-10-20T19:10:53.0402939Z -m64
+2026-10-20T19:10:53.0403035Z -mfma
+2026-10-20T19:10:53.0403135Z -mavx512f
+2026-10-20T19:10:53.0403265Z -mavx512dq
+2026-10-20T19:10:53.0403364Z -mavx512vl
+2026-10-20T19:10:53.0403468Z -mavx512bw
+2026-10-20T19:10:53.0403566Z -mfma
+2026-10-20T19:10:53.0403659Z -mavx2
+2026-10-20T19:10:53.0403758Z -mfma
+2026-10-20T19:10:53.0403851Z -mf16c
+2026-10-20T19:10:53.0403943Z  
+2026-10-20T19:10:53.0404039Z MSVC_FLAGS:
+2026-10-20T19:10:53.0404139Z -mavx512f
+2026-10-20T19:10:53.0404235Z -mavx512dq
+2026-10-20T19:10:53.0404339Z -mavx512vl
+2026-10-20T19:10:53.0404436Z -mavx512bw
+2026-10-20T19:10:53.0404532Z -mfma
+2026-10-20T19:10:53.0404625Z -mavx2
+2026-10-20T19:10:53.0404719Z -mfma
+2026-10-20T19:10:53.0404820Z -mf16c
+2026-10-20T19:10:53.0404911Z  
+2026-10-20T19:10:53.0405009Z DEFINITIONS:
+2026-10-20T19:10:53.0405077Z 
+2026-10-20T19:10:53.0405119Z  
+2026-10-20T19:10:53.0405214Z ENABLE_IPO: 
+2026-10-20T19:10:53.0405278Z 
+2026-10-20T19:10:53.0405317Z  
+2026-10-20T19:10:53.0405413Z INCLUDE_DIRS:
+2026-10-20T19:10:53.0405475Z 
+2026-10-20T19:10:53.0405516Z  
+2026-10-20T19:10:53.0405617Z Library Dependencies:
+2026-10-20T19:10:53.0405744Z $<BUILD_INTERFACE:cpuinfo>
+2026-10-20T19:10:53.0405875Z $<BUILD_INTERFACE:asmjit>
+2026-10-20T19:10:53.0406001Z fbgemm_generic
+2026-10-20T19:10:53.0406103Z  
+2026-10-20T19:10:53.0406198Z Output Library:
+2026-10-20T19:10:53.0406308Z fbgemm_avx512
+2026-10-20T19:10:53.0406408Z  
+2026-10-20T19:10:53.0406504Z Install Destination:
+2026-10-20T19:10:53.0406620Z lib64
+2026-10-20T19:10:53.0406747Z ================================================================================
+2026-10-20T19:10:53.0406868Z 
+2026-10-20T19:10:53.0406948Z -- Processor is x86_64; will NOT build Neon target
+2026-10-20T19:10:53.0407128Z -- Processor is x86_64; will NOT build SVE target
+2026-10-20T19:10:53.0407291Z -- Will build autovec target
+2026-10-20T19:10:53.0485345Z 
+2026-10-20T19:10:53.0485393Z 
+2026-10-20T19:10:53.0485510Z ================================================================================
+2026-10-20T19:10:53.0485725Z CPP Library Target: fbgemm_autovec (OBJECT)
+2026-10-20T19:10:53.0485881Z  
+2026-10-20T19:10:53.0485979Z SRCS:
+2026-10-20T19:10:53.0486096Z src/EmbeddingSpMDMAutovec.cc
+2026-10-20T19:10:53.0486326Z src/EmbeddingStatsTracker.cc
+2026-10-20T19:10:53.0486451Z  
+2026-10-20T19:10:53.0486551Z CC_FLAGS:
+2026-10-20T19:10:53.0486609Z 
+2026-10-20T19:10:53.0486652Z  
+2026-10-20T19:10:53.0486748Z MSVC_FLAGS:
+2026-10-20T19:10:53.0486810Z 
+2026-10-20T19:10:53.0486851Z  
+2026-10-20T19:10:53.0486948Z DEFINITIONS:
+2026-10-20T19:10:53.0487018Z 
+2026-10-20T19:10:53.0487059Z  
+2026-10-20T19:10:53.0487158Z ENABLE_IPO: 
+2026-10-20T19:10:53.0487260Z OFF
+2026-10-20T19:10:53.0487357Z  
+2026-10-20T19:10:53.0487448Z INCLUDE_DIRS:
+2026-10-20T19:10:53.0487512Z 
+2026-10-20T19:10:53.0487554Z  
+2026-10-20T19:10:53.0487651Z Library Dependencies:
+2026-10-20T19:10:53.0487779Z $<BUILD_INTERFACE:cpuinfo>
+2026-10-20T19:10:53.0487909Z $<BUILD_INTERFACE:asmjit>
+2026-10-20T19:10:53.0488029Z fbgemm_generic
+2026-10-20T19:10:53.0488133Z  
+2026-10-20T19:10:53.0488227Z Output Library:
+2026-10-20T19:10:53.0488333Z fbgemm_autovec
+2026-10-20T19:10:53.0488436Z  
+2026-10-20T19:10:53.0488532Z Install Destination:
+2026-10-20T19:10:53.0488649Z lib64
+2026-10-20T19:10:53.0488778Z ================================================================================
+2026-10-20T19:10:53.0488898Z 
+2026-10-20T19:10:53.0488907Z 
+2026-10-20T19:10:53.0488909Z 
+2026-10-20T19:10:53.0488975Z ================================================================================
+2026-10-20T19:10:53.0489183Z CPP Library Target: fbgemm (STATIC)
+2026-10-20T19:10:53.0489319Z  
+2026-10-20T19:10:53.0489411Z SRCS:
+2026-10-20T19:10:53.0489466Z 
+2026-10-20T19:10:53.0489508Z  
+2026-10-20T19:10:53.0489598Z CC_FLAGS:
+2026-10-20T19:10:53.0489657Z 
+2026-10-20T19:10:53.0489698Z  
+2026-10-20T19:10:53.0489789Z MSVC_FLAGS:
+2026-10-20T19:10:53.0489850Z 
+2026-10-20T19:10:53.0489892Z  
+2026-10-20T19:10:53.0489983Z DEFINITIONS:
+2026-10-20T19:10:53.0490046Z 
+2026-10-20T19:10:53.0490084Z  
+2026-10-20T19:10:53.0490178Z ENABLE_IPO: 
+2026-10-20T19:10:53.0490238Z 
+2026-10-20T19:10:53.0490279Z  
+2026-10-20T19:10:53.0490371Z INCLUDE_DIRS:
+2026-10-20T19:10:53.0490434Z 
+2026-10-20T19:10:53.0490481Z  
+2026-10-20T19:10:53.0490578Z Library Dependencies:
+2026-10-20T19:10:53.0490693Z fbgemm_generic
+2026-10-20T19:10:53.0490799Z fbgemm_avx2
+2026-10-20T19:10:53.0490897Z fbgemm_avx512
+2026-10-20T19:10:53.0491001Z fbgemm_autovec
+2026-10-20T19:10:53.0491100Z  
+2026-10-20T19:10:53.0491193Z Output Library:
+2026-10-20T19:10:53.0491305Z fbgemm
+2026-10-20T19:10:53.0491399Z  
+2026-10-20T19:10:53.0491494Z Install Destination:
+2026-10-20T19:10:53.0491607Z lib64
+2026-10-20T19:10:53.0491725Z ================================================================================
+2026-10-20T19:10:53.0491842Z 
+2026-10-20T19:10:53.0601929Z -- Performing Test __CxxFlag__fno_threadsafe_statics
+2026-10-20T19:10:53.1318786Z -- Performing Test __CxxFlag__fno_threadsafe_statics - Success
+2026-10-20T19:10:53.1323094Z -- Performing Test __CxxFlag__fno_semantic_interposition
+2026-10-20T19:10:53.2095995Z -- Performing Test __CxxFlag__fno_semantic_interposition - Success
+2026-10-20T19:10:53.2100474Z -- Performing Test __CxxFlag__fmerge_all_constants
+2026-10-20T19:10:53.2827283Z -- Performing Test __CxxFlag__fmerge_all_constants - Success
+2026-10-20T19:10:53.2830575Z -- Performing Test __CxxFlag__fno_enforce_eh_specs
+2026-10-20T19:10:53.3574254Z -- Dependency: adding libc (Linux, BSD, or other UNIX/POSIX environment)
+2026-10-20T19:10:53.3574525Z -- Performing Test __CxxFlag__fno_enforce_eh_specs - Success
+2026-10-20T19:10:53.3574730Z -- Performing Test ASMJIT_LIBC_HAS_LIBPTHREAD
+2026-10-20T19:10:53.4395542Z -- Dependency: libpthread provided by libc (not linking to libpthread)
+2026-10-20T19:10:53.4395804Z -- Performing Test ASMJIT_LIBC_HAS_LIBPTHREAD - Success
+2026-10-20T19:10:53.4396203Z -- Performing Test ASMJIT_LIBC_HAS_LIBRT
+2026-10-20T19:10:53.5079439Z -- Dependency: shm_open not provided by libc, linking to librt
+2026-10-20T19:10:53.5079672Z -- Performing Test ASMJIT_LIBC_HAS_LIBRT - Failed
+2026-10-20T19:10:53.5089917Z ** AsmJit Summary **
+2026-10-20T19:10:53.5090146Z    ASMJIT_DIR=/__w/TheRock/TheRock/external-builds/pytorch/pytorch/third_party/fbgemm/external/asmjit
+2026-10-20T19:10:53.5090502Z    ASMJIT_TEST=FALSE
+2026-10-20T19:10:53.5090638Z    ASMJIT_TARGET_TYPE=STATIC
+2026-10-20T19:10:53.5090768Z    ASMJIT_DEPS=c;rt
+2026-10-20T19:10:53.5090888Z    ASMJIT_LIBS=asmjit;c;rt
+2026-10-20T19:10:53.5091048Z    ASMJIT_CFLAGS=-DASMJIT_STATIC
+2026-10-20T19:10:53.5091355Z    ASMJIT_PRIVATE_CFLAGS=-Wall;-Wextra;-Wconversion;-fno-math-errno;-fno-threadsafe-statics;-fno-semantic-interposition;-DASMJIT_STATIC
+2026-10-20T19:10:53.5091673Z    ASMJIT_PRIVATE_CFLAGS_DBG=
+2026-10-20T19:10:53.5091869Z    ASMJIT_PRIVATE_CFLAGS_REL=-O2;-fmerge-all-constants;-fno-enforce-eh-specs
+2026-10-20T19:10:53.5105687Z -- Performing Test HAS_WNO_UNUSED_BUT_SET_VARIABLE
+2026-10-20T19:10:53.6156259Z -- Performing Test HAS_WNO_UNUSED_BUT_SET_VARIABLE - Success
+2026-10-20T19:10:53.6160660Z -- Performing Test HAS_WNO_UNUSED_VARIABLE
+2026-10-20T19:10:53.6922750Z -- Performing Test HAS_WNO_UNUSED_VARIABLE - Success
+2026-10-20T19:10:53.6934722Z CMake Warning (deprecated) at third_party/ittapi/CMakeLists.txt:7 (cmake_minimum_required):
+2026-10-20T19:10:53.6935041Z   Compatibility with CMake < 3.10 will be removed from a future version of
+2026-10-20T19:10:53.6935240Z   CMake.
+2026-10-20T19:10:53.6935301Z 
+2026-10-20T19:10:53.6935411Z   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+2026-10-20T19:10:53.6935770Z   to tell CMake that the project requires at least <min> but has been updated
+2026-10-20T19:10:53.6935996Z   to work with policies introduced by <max> or earlier.
+2026-10-20T19:10:53.6936225Z This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+2026-10-20T19:10:53.6936428Z to suppress it.
+2026-10-20T19:10:53.6936495Z 
+2026-10-20T19:10:53.6997169Z -- Using third party subdirectory Eigen.
+2026-10-20T19:10:53.8289830Z -- Found Python: /opt/python/cp312-cp312/bin/python (found version "3.12.10") found components: Interpreter Development.Module NumPy
+2026-10-20T19:10:53.8290274Z -- Using third_party/pybind11.
+2026-10-20T19:10:53.8290573Z -- pybind11 include dirs: /__w/TheRock/TheRock/external-builds/pytorch/pytorch/cmake/../third_party/pybind11/include
+2026-10-20T19:10:53.8305194Z -- Found OpenMP_C: -fopenmp
+2026-10-20T19:10:53.8306456Z -- Found OpenMP_CXX: -fopenmp
+2026-10-20T19:10:53.8307873Z -- Found OpenMP: TRUE
+2026-10-20T19:10:53.8309200Z -- Adding OpenMP CXX_FLAGS: -fopenmp
+2026-10-20T19:10:53.8309472Z -- Will link against OpenMP libraries: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/libgomp.so
+2026-10-20T19:10:53.8310573Z -- Found nvtx3: /__w/TheRock/TheRock/external-builds/pytorch/pytorch/third_party/NVTX/c/include
+2026-10-20T19:10:53.8313220Z Building PyTorch for GPU arch: gfx942;gfx1100;gfx1101;gfx1102;gfx1103;gfx1151;gfx1200;gfx1201;gfx1250;gfx90a;gfx950
+2026-10-20T19:10:54.2827274Z -- The HIP compiler identification is Clang 24.0.0
+2026-10-20T19:10:54.3063820Z -- Detecting HIP compiler ABI info
+2026-10-20T19:10:54.5360038Z -- Detecting HIP compiler ABI info - done
+2026-10-20T19:10:54.5526320Z -- Check for working HIP compiler: /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llvm/bin/clang++ - skipped
+2026-10-20T19:10:54.5528665Z -- Detecting HIP compile features
+2026-10-20T19:10:54.5531631Z -- Detecting HIP compile features - done
+2026-10-20T19:10:54.5643260Z -- HIP language enabled with compiler: /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llvm/bin/clang++
+2026-10-20T19:10:54.5643663Z -- HIP architectures: gfx942;gfx1100;gfx1101;gfx1102;gfx1103;gfx1151;gfx1200;gfx1201;gfx1250;gfx90a;gfx950
+2026-10-20T19:10:54.5661263Z -- HIP: Using hipcc from relative path: /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/bin/hipcc
+2026-10-20T19:10:54.5755213Z -- HIP_PLATFORM using hip_HIPCONFIG_EXECUTABLE: amd
+2026-10-20T19:10:54.5963506Z CMake Warning (author) at /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/hip/hip-config-amd.cmake:82 (message):
+2026-10-20T19:10:54.5963903Z    GPU_TARGETS was not set, and system GPU detection was unsuccsessful.
+2026-10-20T19:10:54.5964216Z    
+2026-10-20T19:10:54.5964329Z    The amdgpu-arch tool failed:
+2026-10-20T19:10:54.5964547Z    Error: 'Failed to get device count: no ROCm-capable device is detected (error code: 100)'
+2026-10-20T19:10:54.5964766Z    Output: ''
+2026-10-20T19:10:54.5964869Z    
+2026-10-20T19:10:54.5965012Z    As a result, --offload-arch will not be set for subsequent
+2026-10-20T19:10:54.5965204Z    compilations, and the default architecture
+2026-10-20T19:10:54.5965400Z    (gfx906 for dynamic build / gfx942 for static build) will be used
+2026-10-20T19:10:54.5965602Z    for compiling device code in C++ language mode
+2026-10-20T19:10:54.5965717Z 
+2026-10-20T19:10:54.5965776Z Call Stack (most recent call first):
+2026-10-20T19:10:54.5966045Z   /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/hip/hip-config.cmake:164 (include)
+2026-10-20T19:10:54.5966330Z   cmake/public/LoadHIP.cmake:79 (find_package)
+2026-10-20T19:10:54.5966527Z   cmake/public/LoadHIP.cmake:203 (find_package_and_print_version)
+2026-10-20T19:10:54.5966722Z   cmake/Dependencies.cmake:1019 (include)
+2026-10-20T19:10:54.5966877Z   CMakeLists.txt:945 (include)
+2026-10-20T19:10:54.5967061Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T19:10:54.5967211Z 
+2026-10-20T19:10:54.6102752Z hip VERSION: 7.17.26416
+2026-10-20T19:10:54.6102896Z HIP version: 7.17.26416
+2026-10-20T19:10:54.6118681Z -- Reading ROCM version from: /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/include/rocm-core/rocm_version.h
+2026-10-20T19:10:54.6119128Z -- Content: 
+2026-10-20T19:10:54.6119326Z 
+2026-10-20T19:10:54.6119389Z ***** ROCm version from rocm_version.h ****
+2026-10-20T19:10:54.6119529Z 
+2026-10-20T19:10:54.6119584Z ROCM_VERSION_DEV: 10.2.0
+2026-10-20T19:10:54.6119720Z ROCM_VERSION_DEV_MAJOR: 10
+2026-10-20T19:10:54.6119853Z ROCM_VERSION_DEV_MINOR: 2
+2026-10-20T19:10:54.6119981Z ROCM_VERSION_DEV_PATCH: 0
+2026-10-20T19:10:54.6120110Z ROCM_VERSION_DEV_INT:   100200
+2026-10-20T19:10:54.6120250Z HIP_VERSION_MAJOR: 7
+2026-10-20T19:10:54.6120369Z HIP_VERSION_MINOR: 17
+2026-10-20T19:10:54.6120489Z TORCH_HIP_VERSION: 717
+2026-10-20T19:10:54.6120563Z 
+2026-10-20T19:10:54.6120635Z ***** Library versions from cmake find_package *****
+2026-10-20T19:10:54.6120754Z 
+2026-10-20T19:10:54.6123072Z amd_comgr VERSION: 3.5.0
+2026-10-20T19:10:54.6139702Z -- HIP: Using hipcc from relative path: /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/bin/hipcc
+2026-10-20T19:10:54.6324103Z CMake Warning (author) at /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/hip/hip-config-amd.cmake:82 (message):
+2026-10-20T19:10:54.6324490Z    GPU_TARGETS was not set, and system GPU detection was unsuccsessful.
+2026-10-20T19:10:54.6324677Z    
+2026-10-20T19:10:54.6324790Z    The amdgpu-arch tool failed:
+2026-10-20T19:10:54.6325009Z    Error: 'Failed to get device count: no ROCm-capable device is detected (error code: 100)'
+2026-10-20T19:10:54.6325228Z    Output: ''
+2026-10-20T19:10:54.6325335Z    
+2026-10-20T19:10:54.6325474Z    As a result, --offload-arch will not be set for subsequent
+2026-10-20T19:10:54.6325662Z    compilations, and the default architecture
+2026-10-20T19:10:54.6325861Z    (gfx906 for dynamic build / gfx942 for static build) will be used
+2026-10-20T19:10:54.6326064Z    for compiling device code in C++ language mode
+2026-10-20T19:10:54.6326175Z 
+2026-10-20T19:10:54.6326233Z Call Stack (most recent call first):
+2026-10-20T19:10:54.6326501Z   /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/hip/hip-config.cmake:164 (include)
+2026-10-20T19:10:54.6326946Z   /opt/_internal/cpython-3.12.10/lib/python3.12/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)
+2026-10-20T19:10:54.6327466Z   /opt/_internal/cpython-3.12.10/lib/python3.12/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)
+2026-10-20T19:10:54.6328014Z   /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/rocrand/rocrand-config.cmake:90 (find_dependency)
+2026-10-20T19:10:54.6328322Z   cmake/public/LoadHIP.cmake:79 (find_package)
+2026-10-20T19:10:54.6328519Z   cmake/public/LoadHIP.cmake:304 (find_package_and_print_version)
+2026-10-20T19:10:54.6328716Z   cmake/Dependencies.cmake:1019 (include)
+2026-10-20T19:10:54.6328870Z   CMakeLists.txt:945 (include)
+2026-10-20T19:10:54.6329053Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T19:10:54.6329203Z 
+2026-10-20T19:10:54.6424172Z rocrand VERSION: 5.2.0
+2026-10-20T19:10:54.6445366Z hiprand VERSION: 3.4.0
+2026-10-20T19:10:54.6461852Z rocblas VERSION: 5.8.0
+2026-10-20T19:10:54.6488296Z hipblas VERSION: 3.8.0
+2026-10-20T19:10:54.6504693Z miopen VERSION: 3.6.2
+2026-10-20T19:10:54.6519093Z hipfft VERSION: 1.0.27
+2026-10-20T19:10:54.6532583Z hipsparse VERSION: 4.8.0
+2026-10-20T19:10:54.6547063Z rocprim VERSION: 4.8.0
+2026-10-20T19:10:54.6565764Z hipcub VERSION: 4.7.1
+2026-10-20T19:10:54.6580046Z rocthrust VERSION: 4.7.1
+2026-10-20T19:10:54.6593748Z hipsolver VERSION: 3.8.0
+2026-10-20T19:10:54.6612506Z rocsolver VERSION: 3.38.0
+2026-10-20T19:10:54.6642632Z -- Found rocprofiler-register: /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel (found version "0.6.0")
+2026-10-20T19:10:54.6660012Z rocshmem VERSION: 3.8.0
+2026-10-20T19:10:54.6660654Z CMake Warning at cmake/public/LoadHIP.cmake:319 (message):
+2026-10-20T19:10:54.6660848Z   Work around hiprtc cmake failure for cmake >= 4
+2026-10-20T19:10:54.6661019Z Call Stack (most recent call first):
+2026-10-20T19:10:54.6661174Z   cmake/Dependencies.cmake:1019 (include)
+2026-10-20T19:10:54.6661326Z   CMakeLists.txt:945 (include)
+2026-10-20T19:10:54.6661414Z 
+2026-10-20T19:10:54.6661416Z 
+2026-10-20T19:10:54.6674617Z hiprtc VERSION: 7.17.26416
+2026-10-20T19:10:54.6707953Z hipblaslt VERSION: 1.5.0
+2026-10-20T19:10:54.6724335Z -- HIP: Using hipcc from relative path: /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/bin/hipcc
+2026-10-20T19:10:54.6910538Z CMake Warning (author) at /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/hip/hip-config-amd.cmake:82 (message):
+2026-10-20T19:10:54.6910922Z    GPU_TARGETS was not set, and system GPU detection was unsuccsessful.
+2026-10-20T19:10:54.6911120Z    
+2026-10-20T19:10:54.6911231Z    The amdgpu-arch tool failed:
+2026-10-20T19:10:54.6911454Z    Error: 'Failed to get device count: no ROCm-capable device is detected (error code: 100)'
+2026-10-20T19:10:54.6911671Z    Output: ''
+2026-10-20T19:10:54.6911775Z    
+2026-10-20T19:10:54.6911916Z    As a result, --offload-arch will not be set for subsequent
+2026-10-20T19:10:54.6912104Z    compilations, and the default architecture
+2026-10-20T19:10:54.6912299Z    (gfx906 for dynamic build / gfx942 for static build) will be used
+2026-10-20T19:10:54.6912499Z    for compiling device code in C++ language mode
+2026-10-20T19:10:54.6912610Z 
+2026-10-20T19:10:54.6912664Z Call Stack (most recent call first):
+2026-10-20T19:10:54.6912935Z   /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/hip/hip-config.cmake:164 (include)
+2026-10-20T19:10:54.6913388Z   /opt/_internal/cpython-3.12.10/lib/python3.12/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)
+2026-10-20T19:10:54.6913904Z   /opt/_internal/cpython-3.12.10/lib/python3.12/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)
+2026-10-20T19:10:54.6914376Z   /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/rccl/rccl-config.cmake:90 (find_dependency)
+2026-10-20T19:10:54.6914676Z   cmake/public/LoadHIP.cmake:79 (find_package)
+2026-10-20T19:10:54.6914874Z   cmake/public/LoadHIP.cmake:329 (find_package_and_print_version)
+2026-10-20T19:10:54.6915067Z   cmake/Dependencies.cmake:1019 (include)
+2026-10-20T19:10:54.6915221Z   CMakeLists.txt:945 (include)
+2026-10-20T19:10:54.6915408Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T19:10:54.6915611Z 
+2026-10-20T19:10:54.7028607Z rccl VERSION: 2.32.3
+2026-10-20T19:10:54.7032733Z hsa-runtime64 VERSION: 1.21.0
+2026-10-20T19:10:54.7072162Z hipsparselt VERSION: 0.2.9
+2026-10-20T19:10:54.7090560Z -- Found libhipcxx: /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/libhipcxx/libhipcxx-config.cmake (found version "3.0.2.0")
+2026-10-20T19:10:54.7090909Z libhipcxx VERSION: 3.0.2.0
+2026-10-20T19:10:55.3404468Z hipblaslt is using scale pointer outer vec
+2026-10-20T19:10:55.3404763Z INFOCompiling with HIP for AMD.
+2026-10-20T19:10:55.3405177Z INFOForcing USE_SYSTEM_NCCL to ON since it's required by using RCCL
+2026-10-20T19:10:55.3405517Z TORCH_HIP_VERSION=717 is added as a compiler defines
+2026-10-20T19:10:55.3406137Z -- Disabling Kernel Assert for ROCm
+2026-10-20T19:10:55.3413894Z -- RCCL Found!
+2026-10-20T19:10:55.3414541Z CMake Warning at cmake/Dependencies.cmake:1186 (message):
+2026-10-20T19:10:55.3414879Z   Not using XPU, so disabling USE_XCCL.  Suppress this warning with
+2026-10-20T19:10:55.3415169Z   -DUSE_XCCL=OFF.
+2026-10-20T19:10:55.3415357Z Call Stack (most recent call first):
+2026-10-20T19:10:55.3415579Z   CMakeLists.txt:945 (include)
+2026-10-20T19:10:55.3415714Z 
+2026-10-20T19:10:55.3415718Z 
+2026-10-20T19:10:55.3697080Z -- Performing Test UV_LINT_W4
+2026-10-20T19:10:55.3985276Z -- Performing Test UV_LINT_W4 - Failed
+2026-10-20T19:10:55.3988073Z -- Performing Test UV_LINT_NO_UNUSED_PARAMETER_MSVC
+2026-10-20T19:10:55.4267547Z -- Performing Test UV_LINT_NO_UNUSED_PARAMETER_MSVC - Failed
+2026-10-20T19:10:55.4272395Z -- Performing Test UV_LINT_NO_CONDITIONAL_CONSTANT_MSVC
+2026-10-20T19:10:55.4543287Z -- Performing Test UV_LINT_NO_CONDITIONAL_CONSTANT_MSVC - Failed
+2026-10-20T19:10:55.4547186Z -- Performing Test UV_LINT_NO_NONSTANDARD_MSVC
+2026-10-20T19:10:55.4815117Z -- Performing Test UV_LINT_NO_NONSTANDARD_MSVC - Failed
+2026-10-20T19:10:55.4819226Z -- Performing Test UV_LINT_NO_NONSTANDARD_EMPTY_TU_MSVC
+2026-10-20T19:10:55.5090022Z -- Performing Test UV_LINT_NO_NONSTANDARD_EMPTY_TU_MSVC - Failed
+2026-10-20T19:10:55.5094248Z -- Performing Test UV_LINT_NO_NONSTANDARD_FILE_SCOPE_MSVC
+2026-10-20T19:10:55.5353285Z -- Performing Test UV_LINT_NO_NONSTANDARD_FILE_SCOPE_MSVC - Failed
+2026-10-20T19:10:55.5357555Z -- Performing Test UV_LINT_NO_NONSTANDARD_NONSTATIC_DLIMPORT_MSVC
+2026-10-20T19:10:55.5624276Z -- Performing Test UV_LINT_NO_NONSTANDARD_NONSTATIC_DLIMPORT_MSVC - Failed
+2026-10-20T19:10:55.5634238Z -- Performing Test UV_LINT_NO_HIDES_LOCAL
+2026-10-20T19:10:55.5897741Z -- Performing Test UV_LINT_NO_HIDES_LOCAL - Failed
+2026-10-20T19:10:55.5901833Z -- Performing Test UV_LINT_NO_HIDES_PARAM
+2026-10-20T19:10:55.6156513Z -- Performing Test UV_LINT_NO_HIDES_PARAM - Failed
+2026-10-20T19:10:55.6161209Z -- Performing Test UV_LINT_NO_HIDES_GLOBAL
+2026-10-20T19:10:55.6422933Z -- Performing Test UV_LINT_NO_HIDES_GLOBAL - Failed
+2026-10-20T19:10:55.6427312Z -- Performing Test UV_LINT_NO_CONDITIONAL_ASSIGNMENT_MSVC
+2026-10-20T19:10:55.6692829Z -- Performing Test UV_LINT_NO_CONDITIONAL_ASSIGNMENT_MSVC - Failed
+2026-10-20T19:10:55.6696866Z -- Performing Test UV_LINT_NO_UNSAFE_MSVC
+2026-10-20T19:10:55.6965817Z -- Performing Test UV_LINT_NO_UNSAFE_MSVC - Failed
+2026-10-20T19:10:55.6966011Z -- Performing Test UV_LINT_WALL
+2026-10-20T19:10:55.7565011Z -- Performing Test UV_LINT_WALL - Success
+2026-10-20T19:10:55.7565220Z -- Performing Test UV_LINT_NO_UNUSED_PARAMETER
+2026-10-20T19:10:55.8155726Z -- Performing Test UV_LINT_NO_UNUSED_PARAMETER - Success
+2026-10-20T19:10:55.8160014Z -- Performing Test UV_LINT_STRICT_PROTOTYPES
+2026-10-20T19:10:55.8758773Z -- Performing Test UV_LINT_STRICT_PROTOTYPES - Success
+2026-10-20T19:10:55.8762813Z -- Performing Test UV_LINT_EXTRA
+2026-10-20T19:10:55.9395030Z -- Performing Test UV_LINT_EXTRA - Success
+2026-10-20T19:10:55.9399165Z -- Performing Test UV_LINT_UTF8_MSVC
+2026-10-20T19:10:55.9655200Z -- Performing Test UV_LINT_UTF8_MSVC - Failed
+2026-10-20T19:10:55.9660476Z -- Performing Test UV_F_STRICT_ALIASING
+2026-10-20T19:10:56.0218165Z -- Performing Test UV_F_STRICT_ALIASING - Success
+2026-10-20T19:10:56.0226080Z -- summary of build options:
+2026-10-20T19:10:56.0226287Z     Install prefix:  /__w/TheRock/TheRock/external-builds/pytorch/pytorch/torch
+2026-10-20T19:10:56.0226505Z     Target system:   Linux
+2026-10-20T19:10:56.0226637Z     Compiler:
+2026-10-20T19:10:56.0226789Z       C compiler:    /opt/rh/gcc-toolset-13/root/usr/bin/cc (GNU)
+2026-10-20T19:10:56.0226968Z       CFLAGS:         
+2026-10-20T19:10:56.0227044Z 
+2026-10-20T19:10:56.0235123Z -- Found uv: 1.51.0 (found version "1.51.0") 
+2026-10-20T19:10:56.0245151Z -- Performing Test HAS_WNO_MISSING_TEMPLATE_ARG_LIST_AFTER_TEMPLATE_KW
+2026-10-20T19:10:56.0570073Z -- Performing Test HAS_WNO_MISSING_TEMPLATE_ARG_LIST_AFTER_TEMPLATE_KW - Failed
+2026-10-20T19:10:56.0570933Z CMake Warning at cmake/Dependencies.cmake:1242 (message):
+2026-10-20T19:10:56.0571124Z   TensorPipe doesn't yet support ROCm
+2026-10-20T19:10:56.0571279Z Call Stack (most recent call first):
+2026-10-20T19:10:56.0571436Z   CMakeLists.txt:945 (include)
+2026-10-20T19:10:56.0571524Z 
+2026-10-20T19:10:56.0571527Z 
+2026-10-20T19:10:56.0587095Z -- Gloo build as SHARED library
+2026-10-20T19:10:56.0595284Z -- HIP: Using hipcc from relative path: /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/bin/hipcc
+2026-10-20T19:10:56.0782895Z CMake Warning (author) at /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/hip/hip-config-amd.cmake:82 (message):
+2026-10-20T19:10:56.0783280Z    GPU_TARGETS was not set, and system GPU detection was unsuccsessful.
+2026-10-20T19:10:56.0783473Z    
+2026-10-20T19:10:56.0783584Z    The amdgpu-arch tool failed:
+2026-10-20T19:10:56.0783804Z    Error: 'Failed to get device count: no ROCm-capable device is detected (error code: 100)'
+2026-10-20T19:10:56.0784020Z    Output: ''
+2026-10-20T19:10:56.0784126Z    
+2026-10-20T19:10:56.0784265Z    As a result, --offload-arch will not be set for subsequent
+2026-10-20T19:10:56.0784456Z    compilations, and the default architecture
+2026-10-20T19:10:56.0784654Z    (gfx906 for dynamic build / gfx942 for static build) will be used
+2026-10-20T19:10:56.0784852Z    for compiling device code in C++ language mode
+2026-10-20T19:10:56.0784962Z 
+2026-10-20T19:10:56.0785024Z Call Stack (most recent call first):
+2026-10-20T19:10:56.0785290Z   /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/hip/hip-config.cmake:164 (include)
+2026-10-20T19:10:56.0785578Z   third_party/gloo/cmake/Hip.cmake:35 (find_package)
+2026-10-20T19:10:56.0785770Z   third_party/gloo/cmake/Dependencies.cmake:140 (include)
+2026-10-20T19:10:56.0785954Z   third_party/gloo/CMakeLists.txt:113 (include)
+2026-10-20T19:10:56.0786161Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T19:10:56.0786306Z 
+2026-10-20T19:10:56.0876459Z -- Found HIP: 7.17.26416
+2026-10-20T19:10:56.0876705Z -- GLOO_ROCM_ARCH: gfx942;gfx1100;gfx1101;gfx1102;gfx1103;gfx1151;gfx1200;gfx1201;gfx1250;gfx90a;gfx950
+2026-10-20T19:10:56.1969979Z -- Found Python3: /opt/python/cp312-cp312/bin/python3.12 (found version "3.12.10") found components: Interpreter
+2026-10-20T19:10:56.3209562Z Successfully preprocessed all matching files.
+2026-10-20T19:10:56.3283870Z -- GLOO_USE_TORCH_DTYPES : 1 /__w/TheRock/TheRock/external-builds/pytorch/pytorch;/__w/TheRock/TheRock/external-builds/pytorch/pytorch/build
+2026-10-20T19:10:56.3973064Z -- Found Python3: /opt/python/cp312-cp312/bin/python (found version "3.12.10") found components: Interpreter
+2026-10-20T19:10:56.3985642Z -- ONNX_PROTOC_EXECUTABLE: $<TARGET_FILE:protobuf::protoc>
+2026-10-20T19:10:56.3985999Z Generated: /__w/TheRock/TheRock/external-builds/pytorch/pytorch/build/third_party/onnx/onnx/onnx_onnx_torch-ml.proto
+2026-10-20T19:10:56.3986430Z Generated: /__w/TheRock/TheRock/external-builds/pytorch/pytorch/build/third_party/onnx/onnx/onnx-operators_onnx_torch-ml.proto
+2026-10-20T19:10:56.3986850Z Generated: /__w/TheRock/TheRock/external-builds/pytorch/pytorch/build/third_party/onnx/onnx/onnx-data_onnx_torch.proto
+2026-10-20T19:10:56.3987256Z -- Protobuf_VERSION: Protobuf_VERSION_NOTFOUND
+2026-10-20T19:10:56.4578792Z -- 
+2026-10-20T19:10:56.4579013Z -- ******** Summary ********
+2026-10-20T19:10:56.4579184Z --   CMake version                     : 4.4.0
+2026-10-20T19:10:56.4579469Z --   CMake command                     : /opt/_internal/cpython-3.12.10/lib/python3.12/site-packages/cmake/data/bin/cmake
+2026-10-20T19:10:56.4579729Z --   System                            : Linux
+2026-10-20T19:10:56.4579920Z --   C++ compiler                      : /opt/rh/gcc-toolset-13/root/usr/bin/c++
+2026-10-20T19:10:56.4580118Z --   C++ compiler version              : 13.3.1
+2026-10-20T19:10:56.4580875Z --   CXX flags                         : -Wno-error=maybe-uninitialized -Wno-error=uninitialized -Wno-error=restrict -I/opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/rocm_sysdeps/include -I/opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/include/roctracer -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -Wnon-virtual-dtor
+2026-10-20T19:10:56.4581663Z --   Build type                        : Release
+2026-10-20T19:10:56.4582020Z --   Compile definitions               : ROCM_VERSION=100200;TORCH_HIP_VERSION=717;USE_LAYERNORM_FAST_RECIPROCAL;ONNX_ML=1;ONNXIFI_ENABLE_EXT=1
+2026-10-20T19:10:56.4582616Z --   CMAKE_PREFIX_PATH                 : /opt/python/cp312-cp312/lib/python3.12/site-packages;/opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake;/opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel
+2026-10-20T19:10:56.4583140Z --   CMAKE_INSTALL_PREFIX              : /__w/TheRock/TheRock/external-builds/pytorch/pytorch/torch
+2026-10-20T19:10:56.4584042Z --   CMAKE_MODULE_PATH                 : /__w/TheRock/TheRock/external-builds/pytorch/pytorch/cmake/Modules;/opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/tensilelite;/opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/hipblaslt;/opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/tensilelite;/opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/lib/cmake/hipblaslt
+2026-10-20T19:10:56.4584849Z -- 
+2026-10-20T19:10:56.4584964Z --   ONNX version                      : 1.18.0
+2026-10-20T19:10:56.4585137Z --   ONNX NAMESPACE                    : onnx_torch
+2026-10-20T19:10:56.4585303Z --   ONNX_USE_LITE_PROTO               : OFF
+2026-10-20T19:10:56.4585460Z --   USE_PROTOBUF_SHARED_LIBS          : OFF
+2026-10-20T19:10:56.4585612Z --   ONNX_DISABLE_EXCEPTIONS           : OFF
+2026-10-20T19:10:56.4585765Z --   ONNX_DISABLE_STATIC_REGISTRATION  : OFF
+2026-10-20T19:10:56.4585915Z --   ONNX_WERROR                       : OFF
+2026-10-20T19:10:56.4586057Z --   ONNX_BUILD_TESTS                  : OFF
+2026-10-20T19:10:56.4586203Z --   BUILD_SHARED_LIBS                 : OFF
+2026-10-20T19:10:56.4586335Z -- 
+2026-10-20T19:10:56.4586487Z --   Protobuf compiler                 : $<TARGET_FILE:protobuf::protoc>
+2026-10-20T19:10:56.4586685Z --   Protobuf includes                 : 
+2026-10-20T19:10:56.4586834Z --   Protobuf libraries                : 
+2026-10-20T19:10:56.4586983Z --   ONNX_BUILD_PYTHON                 : OFF
+2026-10-20T19:10:56.4587182Z -- Found CUDA with FP16 support, compiling with torch.cuda.HalfTensor
+2026-10-20T19:10:56.4587379Z -- Adding -DNDEBUG to compile flags
+2026-10-20T19:10:56.4604891Z -- Checking prototype magma_get_sgeqrf_nb for MAGMA_V2
+2026-10-20T19:10:56.4858667Z -- Checking prototype magma_get_sgeqrf_nb for MAGMA_V2 - False
+2026-10-20T19:10:56.4859497Z -- MAGMA not found. Compiling without MAGMA support
+2026-10-20T19:10:56.4865172Z -- Looking for sbgemm_
+2026-10-20T19:10:56.5560714Z -- Looking for sbgemm_ - not found
+2026-10-20T19:10:56.5560894Z -- Looking for shgemm_
+2026-10-20T19:10:56.6391065Z -- Looking for shgemm_ - not found
+2026-10-20T19:10:56.6395049Z -- Looking for cheev_
+2026-10-20T19:10:56.7065809Z -- Looking for cheev_ - found
+2026-10-20T19:10:56.7066082Z -- Looking for cgesdd_
+2026-10-20T19:10:56.7913956Z -- Looking for cgesdd_ - found
+2026-10-20T19:10:56.7914325Z -- Found a library with LAPACK API (open).
+2026-10-20T19:10:56.7916358Z disabling CUDA because NOT USE_CUDA is set
+2026-10-20T19:10:56.7917884Z -- Will build oneDNN Graph
+2026-10-20T19:10:56.7919121Z -- Will build oneDNN UKERNEL
+2026-10-20T19:10:56.7931392Z -- MKLDNN_CPU_RUNTIME = OMP
+2026-10-20T19:10:56.7944991Z CMake Warning (deprecated) at third_party/ideep/mkl-dnn/CMakeLists.txt:36 (cmake_policy):
+2026-10-20T19:10:56.7945285Z   The OLD behavior for policy CMP0146 will be removed from a future version
+2026-10-20T19:10:56.7945483Z   of CMake.
+2026-10-20T19:10:56.7945546Z 
+2026-10-20T19:10:56.7945650Z   The cmake-policies(7) manual explains that the OLD behaviors of all
+2026-10-20T19:10:56.7945895Z   policies are deprecated and that a policy should be set to OLD only under
+2026-10-20T19:10:56.7946152Z   specific short-term circumstances.  Projects should be ported to the NEW
+2026-10-20T19:10:56.7946375Z   behavior and not rely on setting a policy to OLD.
+2026-10-20T19:10:56.7946597Z This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+2026-10-20T19:10:56.7946792Z to suppress it.
+2026-10-20T19:10:56.7946861Z 
+2026-10-20T19:10:56.7946914Z -- DNNL_TARGET_ARCH: X64
+2026-10-20T19:10:56.7953168Z -- DNNL_LIBRARY_NAME: dnnl
+2026-10-20T19:10:56.7986526Z CMake Warning (author) at /opt/_internal/cpython-3.12.10/lib/python3.12/site-packages/cmake/data/share/cmake-4.4/Modules/FindPackageHandleStandardArgs.cmake:493 (message):
+2026-10-20T19:10:56.7986946Z   The package name passed to find_package_handle_standard_args() (OpenMP_C)
+2026-10-20T19:10:56.7987196Z   does not match the name of the calling package (OpenMP).  This can lead to
+2026-10-20T19:10:56.7987439Z   problems in calling code that expects find_package() result variables
+2026-10-20T19:10:56.7987648Z   (e.g., `_FOUND`) to follow a certain pattern.
+2026-10-20T19:10:56.7987810Z Call Stack (most recent call first):
+2026-10-20T19:10:56.7988010Z   cmake/Modules/FindOpenMP.cmake:635 (find_package_handle_standard_args)
+2026-10-20T19:10:56.7988248Z   third_party/ideep/mkl-dnn/cmake/OpenMP.cmake:50 (find_package)
+2026-10-20T19:10:56.7988457Z   third_party/ideep/mkl-dnn/CMakeLists.txt:94 (include)
+2026-10-20T19:10:56.7988679Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T19:10:56.7988827Z 
+2026-10-20T19:10:56.7988882Z -- Found OpenMP_C: -fopenmp
+2026-10-20T19:10:56.7989245Z CMake Warning (author) at /opt/_internal/cpython-3.12.10/lib/python3.12/site-packages/cmake/data/share/cmake-4.4/Modules/FindPackageHandleStandardArgs.cmake:493 (message):
+2026-10-20T19:10:56.7989661Z   The package name passed to find_package_handle_standard_args() (OpenMP_CXX)
+2026-10-20T19:10:56.7989918Z   does not match the name of the calling package (OpenMP).  This can lead to
+2026-10-20T19:10:56.7990160Z   problems in calling code that expects find_package() result variables
+2026-10-20T19:10:56.7990363Z   (e.g., `_FOUND`) to follow a certain pattern.
+2026-10-20T19:10:56.7990527Z Call Stack (most recent call first):
+2026-10-20T19:10:56.7990718Z   cmake/Modules/FindOpenMP.cmake:635 (find_package_handle_standard_args)
+2026-10-20T19:10:56.7990950Z   third_party/ideep/mkl-dnn/cmake/OpenMP.cmake:50 (find_package)
+2026-10-20T19:10:56.7991158Z   third_party/ideep/mkl-dnn/CMakeLists.txt:94 (include)
+2026-10-20T19:10:56.7991369Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-10-20T19:10:56.7991514Z 
+2026-10-20T19:10:56.7991573Z -- Found OpenMP_CXX: -fopenmp
+2026-10-20T19:10:56.8038942Z -- Enabled testing coverage: CI
+2026-10-20T19:10:56.8041556Z -- Enabled workload: TRAINING
+2026-10-20T19:10:56.8041695Z -- Enabled primitives: ALL
+2026-10-20T19:10:56.8041831Z -- Enabled primitive CPU ISA: ALL
+2026-10-20T19:10:56.8041975Z -- Enabled primitive GPU ISA: ALL
+2026-10-20T19:10:56.8042113Z -- Enabled GeMM kernels ISA: ALL
+2026-10-20T19:10:56.8076157Z -- Primitive cache is enabled
+2026-10-20T19:10:56.8076359Z -- Experimental functionality for ukernels is enabled
+2026-10-20T19:10:56.8144647Z -- Graph component is enabled
+2026-10-20T19:10:56.8200143Z -- Found MKL-DNN: TRUE
+2026-10-20T19:10:56.8203540Z -- Looking for clock_gettime in rt
+2026-10-20T19:10:56.8862895Z -- Looking for clock_gettime in rt - found
+2026-10-20T19:10:56.8863381Z -- Looking for mmap
+2026-10-20T19:10:56.9441635Z -- Looking for mmap - found
+2026-10-20T19:10:56.9441798Z -- Looking for shm_open
+2026-10-20T19:10:57.0148242Z -- Looking for shm_open - found
+2026-10-20T19:10:57.0148961Z -- Looking for shm_unlink
+2026-10-20T19:10:57.0907078Z -- Looking for shm_unlink - found
+2026-10-20T19:10:57.0907254Z -- Looking for malloc_usable_size
+2026-10-20T19:10:57.1611939Z -- Looking for malloc_usable_size - found
+2026-10-20T19:10:57.1612140Z -- Looking for posix_fallocate
+2026-10-20T19:10:57.2232163Z -- Looking for posix_fallocate - found
+2026-10-20T19:10:57.2232837Z -- <FindZVECTOR>
+2026-10-20T19:10:57.2234389Z -- Performing Test COMPILE_OUT_ZVECTOR
+2026-10-20T19:10:57.2459822Z -- ZVECTOR flags were NOT set.
+2026-10-20T19:10:57.2459976Z -- </FindZVECTOR>
+2026-10-20T19:10:57.2460124Z -- Performing Test COMPILE_OUT_ZVECTOR - Failed
+2026-10-20T19:10:57.2491990Z -- {fmt} version: 12.1.0
+2026-10-20T19:10:57.2492139Z -- Build type: Release
+2026-10-20T19:10:57.2506344Z -- Using Kineto with Roctracer support
+2026-10-20T19:10:57.2506521Z -- Configuring Kineto dependency:
+2026-10-20T19:10:57.2506784Z --   KINETO_SOURCE_DIR = /__w/TheRock/TheRock/external-builds/pytorch/pytorch/third_party/kineto/libkineto
+2026-10-20T19:10:57.2507043Z --   KINETO_BUILD_TESTS = OFF
+2026-10-20T19:10:57.2507185Z --   KINETO_LIBRARY_TYPE = static
+2026-10-20T19:10:57.2507324Z --   KINETO_BACKEND = rocm
+2026-10-20T19:10:57.3204370Z --  ROCM_SOURCE_DIR = /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel
+2026-10-20T19:10:57.3204615Z -- KINETO_BACKEND = rocm
+2026-10-20T19:10:57.3204876Z --  ROCTRACER_INCLUDE_DIR = /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/include/roctracer
+2026-10-20T19:10:57.3205291Z -- Reading ROCM version from: /opt/python/cp312-cp312/lib/python3.12/site-packages/_rocm_sdk_devel/include/rocm-core/rocm_version.h
+2026-10-20T19:10:57.3205584Z -- ROCM major: 10
+2026-10-20T19:10:57.3205698Z -- ROCM minor: 2
+2026-10-20T19:10:57.3205807Z -- ROCM patch: 0
+2026-10-20T19:10:57.3205936Z -- Building with: rocprofiler-sdk
+2026-10-20T19:10:57.3284210Z --  Building with rocprofiler-sdk
+2026-10-20T19:10:57.3462231Z --  DYNOLOG_INCLUDE_DIR = /__w/TheRock/TheRock/external-builds/pytorch/pytorch/third_party/kineto/libkineto/third_party/dynolog/
+2026-10-20T19:10:57.3462724Z --  IPCFABRIC_INCLUDE_DIR = /__w/TheRock/TheRock/external-builds/pytorch/pytorch/third_party/kineto/libkineto/third_party/dynolog//dynolog/src/ipcfabric/
+2026-10-20T19:10:57.3472672Z -- Configured Kineto
+2026-10-20T19:10:57.3477601Z CMake Warning at CMakeLists.txt:957 (message):
+2026-10-20T19:10:57.3477816Z   Setting USE_MSLK for gfx942/gfx950 to ON by default, doing ROCM build
+2026-10-20T19:10:57.3477971Z 
+2026-10-20T19:10:57.3477974Z 
+2026-10-20T19:10:57.3480001Z -- GCC 13.3.1: Adding gcc and gcc_s libs to link line
+2026-10-20T19:10:57.3490330Z -- Performing Test HAS_WERROR_RETURN_TYPE
+2026-10-20T19:10:57.4286766Z -- Performing Test HAS_WERROR_RETURN_TYPE - Success
+2026-10-20T19:10:57.4291082Z -- Performing Test HAS_WERROR_NON_VIRTUAL_DTOR
+2026-10-20T19:10:57.5043415Z -- Performing Test HAS_WERROR_NON_VIRTUAL_DTOR - Success
+2026-10-20T19:10:57.5048166Z -- Performing Test HAS_WERROR_BRACED_SCALAR_INIT
+2026-10-20T19:10:57.5337777Z -- Performing Test HAS_WERROR_BRACED_SCALAR_INIT - Failed
+2026-10-20T19:10:57.5342332Z -- Performing Test HAS_WERROR_RANGE_LOOP_CONSTRUCT
+2026-10-20T19:10:57.6137173Z -- Performing Test HAS_WERROR_RANGE_LOOP_CONSTRUCT - Success
+2026-10-20T19:10:57.6141376Z -- Performing Test HAS_WERROR_BOOL_OPERATION
+2026-10-20T19:10:57.6914491Z -- Performing Test HAS_WERROR_BOOL_OPERATION - Success
+2026-10-20T19:10:57.6917475Z -- Performing Test HAS_WNARROWING
+2026-10-20T19:10:57.7770350Z -- Performing Test HAS_WNARROWING - Success
+2026-10-20T19:10:57.7774715Z -- Performing Test HAS_WNO_MISSING_FIELD_INITIALIZERS
+2026-10-20T19:10:57.8549316Z -- Performing Test HAS_WNO_MISSING_FIELD_INITIALIZERS - Success
+2026-10-20T19:10:57.8553617Z -- Performing Test HAS_WNO_UNKNOWN_PRAGMAS
+2026-10-20T19:10:57.9339262Z -- Performing Test HAS_WNO_UNKNOWN_PRAGMAS - Success
+2026-10-20T19:10:57.9344361Z -- Performing Test HAS_WNO_UNUSED_PARAMETER
+2026-10-20T19:10:58.0081120Z -- Performing Test HAS_WNO_UNUSED_PARAMETER - Success
+2026-10-20T19:10:58.0085459Z -- Performing Test HAS_WNO_STRICT_OVERFLOW
+2026-10-20T19:10:58.0871554Z -- Performing Test HAS_WNO_STRICT_OVERFLOW - Success
+2026-10-20T19:10:58.0875496Z -- Performing Test HAS_WNO_STRICT_ALIASING
+2026-10-20T19:10:58.1663666Z -- Performing Test HAS_WNO_STRICT_ALIASING - Success
+2026-10-20T19:10:58.1668170Z -- Performing Test HAS_WNO_STRINGOP_OVERFLOW
+2026-10-20T19:10:58.2456714Z -- Performing Test HAS_WNO_STRINGOP_OVERFLOW - Success
+2026-10-20T19:10:58.2460400Z -- Performing Test HAS_WVLA_EXTENSION
+2026-10-20T19:10:58.2713981Z -- Performing Test HAS_WVLA_EXTENSION - Failed
+2026-10-20T19:10:58.2718517Z -- Performing Test HAS_WSUGGEST_OVERRIDE
+2026-10-20T19:10:58.3531290Z -- Performing Test HAS_WSUGGEST_OVERRIDE - Success
+2026-10-20T19:10:58.3535275Z -- Performing Test HAS_WNEWLINE_EOF
+2026-10-20T19:10:58.3781744Z -- Performing Test HAS_WNEWLINE_EOF - Failed
+2026-10-20T19:10:58.3786468Z -- Performing Test HAS_WINCONSISTENT_MISSING_OVERRIDE
+2026-10-20T19:10:58.4095131Z -- Performing Test HAS_WINCONSISTENT_MISSING_OVERRIDE - Failed
+2026-10-20T19:10:58.4099968Z -- Performing Test HAS_WINCONSISTENT_MISSING_DESTRUCTOR_OVERRIDE
+2026-10-20T19:10:58.4427514Z -- Performing Test HAS_WINCONSISTENT_MISSING_DESTRUCTOR_OVERRIDE - Failed
+2026-10-20T19:10:58.4432679Z -- Performing Test HAS_WNO_ERROR_OLD_STYLE_CAST
+2026-10-20T19:10:58.5213983Z -- Performing Test HAS_WNO_ERROR_OLD_STYLE_CAST - Success
+2026-10-20T19:10:58.5217517Z -- Performing Test HAS_WCONSTANT_CONVERSION
+2026-10-20T19:10:58.5491457Z -- Performing Test HAS_WCONSTANT_CONVERSION - Failed
+2026-10-20T19:10:58.5495524Z -- Performing Test HAS_WNO_ALIGNED_ALLOCATION_UNAVAILABLE
+2026-10-20T19:10:58.5798432Z -- Performing Test HAS_WNO_ALIGNED_ALLOCATION_UNAVAILABLE - Failed
+2026-10-20T19:10:58.5803084Z -- Performing Test HAS_QUNUSED_ARGUMENTS
+2026-10-20T19:10:58.6074431Z -- Performing Test HAS_QUNUSED_ARGUMENTS - Failed
+2026-10-20T19:10:58.6079082Z -- Performing Test HAS_FALIGNED_NEW
+2026-10-20T19:10:58.7197056Z -- Performing Test HAS_FALIGNED_NEW - Success
+2026-10-20T19:10:58.7201862Z -- Performing Test HAS_WNO_MAYBE_UNINITIALIZED
+2026-10-20T19:10:58.8014523Z -- Performing Test HAS_WNO_MAYBE_UNINITIALIZED - Success
+2026-10-20T19:10:58.8018993Z -- Performing Test HAS_FSTANDALONE_DEBUG
+2026-10-20T19:10:58.8285323Z -- Performing Test HAS_FSTANDALONE_DEBUG - Failed
+2026-10-20T19:10:58.8290527Z -- Performing Test HAS_FNO_MATH_ERRNO
+2026-10-20T19:10:58.9013312Z -- Performing Test HAS_FNO_MATH_ERRNO - Success
+2026-10-20T19:10:58.9016797Z -- Performing Test HAS_FNO_TRAPPING_MATH
+... [middle trimmed by labeler] ...
+2026-10-20T19:26:12.3765843Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3766529Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3767213Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3767896Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3768585Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3769269Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3769961Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3770645Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3771328Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3772015Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3772697Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3773386Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3774082Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3774769Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3775462Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3776148Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3776844Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3777527Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3778211Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3778896Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3779575Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3780262Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3780944Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3781636Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3782317Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3782999Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3783684Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3784364Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3785045Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3785740Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3786435Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3787121Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3787817Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3788503Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3789191Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3789875Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3790561Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3791245Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3791929Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3792618Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3793314Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3793996Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3794683Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3795364Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3796048Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3796730Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3797425Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3798121Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3798809Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3799505Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3800196Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3800882Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3801570Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3802254Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3802940Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3803661Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3804356Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3805045Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3805730Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3806417Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3807102Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3807784Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3808483Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3809165Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3809865Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3810550Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3811247Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3811928Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3812616Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3813299Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3813985Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3814668Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3815355Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3816051Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3816740Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3817428Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3818114Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3818800Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3819486Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3820193Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3820892Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3821577Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3822274Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3822962Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3823649Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3824332Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3825016Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3825700Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3826384Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3827065Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3827763Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3828448Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3829136Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3829823Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3830506Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3831190Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3831883Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3832578Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3833260Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3833954Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3834638Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3835328Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3836012Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3836694Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3837375Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3838063Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3838761Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3839447Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3840130Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3840901Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3841586Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3842269Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3842970Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3843716Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3844415Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3845102Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3845798Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3846483Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3847164Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3847854Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3848537Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3849222Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3849907Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3850613Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3851298Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3851985Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3852668Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3853356Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3854042Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3854740Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3855439Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3856128Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3856822Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3857506Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3858188Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3858873Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3859557Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3860243Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3860925Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3861609Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3862307Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3862998Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3863685Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3864375Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3865058Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3865763Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3866447Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3867147Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3867831Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3868531Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3869214Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3869903Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3870591Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3871286Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3871975Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3872669Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3873366Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3874057Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3874743Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3875434Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3876118Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3876808Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3877512Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3878211Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3878899Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3879587Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3880287Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3880971Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3881660Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3882345Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3883033Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3883750Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3884436Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3885135Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3885821Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3886508Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3887195Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3887880Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3888570Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3889268Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3889975Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3890662Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3891360Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3892044Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3892733Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3893418Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3894107Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3894795Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3895484Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3896171Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3896873Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3897562Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3898253Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3898940Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3899631Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3900330Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3901016Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3901711Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3902401Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3903098Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3903786Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3904472Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3905162Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3905848Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3906538Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3907224Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3907939Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3908626Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3909315Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3910000Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3910689Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3911372Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3912071Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3912768Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3913456Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3914141Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3914844Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3915528Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3916220Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3916905Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3917595Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3918278Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3918966Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3919662Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3920355Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3921042Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3921733Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3922419Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3923109Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3923839Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3924535Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3925224Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3925923Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3926611Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3927299Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3927986Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3928671Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3929361Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3930045Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3930732Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3931430Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3932120Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3932808Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3933501Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3934189Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3934895Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3935581Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3936290Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3936984Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3937686Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3938372Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3939063Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3939749Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3940571Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3941255Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3941943Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3942648Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3943335Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3944017Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3944710Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3945394Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3946082Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3946780Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3947486Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3948171Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3948861Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3949564Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3950252Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3950939Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3951264Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3951587Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3951909Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3952226Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3952564Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3952885Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3953206Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3953525Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3953851Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3954172Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3954502Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3954832Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3955152Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3955481Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3955801Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3956122Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3956444Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3956769Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3957087Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3957409Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3957728Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:26:12.3957932Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/Normalization.hip:11:
+2026-10-20T19:26:12.3958114Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/Normalization.cuh:13:
+2026-10-20T19:26:12.3958294Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/KernelUtils.cuh:3:
+2026-10-20T19:26:12.3958583Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/hip/Atomic.cuh:353:12: warning: 'atomicAddNoRet' is deprecated: use atomicAdd instead [-Wdeprecated-declarations]
+2026-10-20T19:26:12.3958654Z   353 |     return atomicAddNoRet(address, val);
+2026-10-20T19:26:12.3958700Z       |            ^
+2026-10-20T19:26:12.3959016Z /opt/_internal/cpython-3.12.10/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llvm/bin/../../../include/hip/amd_detail/amd_hip_atomic.h:212:1: note: 'atomicAddNoRet' has been explicitly marked deprecated here
+2026-10-20T19:26:12.3959087Z   212 | HIP_DEPRECATED("use atomicAdd instead")
+2026-10-20T19:26:12.3959135Z       | ^
+2026-10-20T19:26:12.3959398Z /opt/_internal/cpython-3.12.10/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llvm/bin/../../../include/hip/hip_runtime_api.h:727:44: note: expanded from macro 'HIP_DEPRECATED'
+2026-10-20T19:26:12.3959509Z   727 | #define HIP_DEPRECATED(msg) __attribute__((deprecated(msg)))
+2026-10-20T19:26:12.3959572Z       |                                            ^
+2026-10-20T19:26:12.3959636Z 1 warning generated when compiling for host.
+2026-10-20T19:26:14.4660770Z [3749/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/hip/Unique.hip.o
+2026-10-20T19:26:26.7174646Z [3750/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/hip/UnarySignKernels.hip.o
+2026-10-20T19:26:31.0657841Z [3751/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/hip/cub-RadixSortKeys.hip.o
+2026-10-20T19:27:13.4839341Z [3752/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/hip/ForeachUnaryOp.hip.o
+2026-10-20T19:27:28.0324723Z [3753/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/hip/TensorModeKernel.hip.o
+2026-10-20T19:27:33.0796648Z [3754/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/hip/CompareEQKernel.hip.o
+2026-10-20T19:27:33.0797141Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/CompareEQKernel.hip:8:
+2026-10-20T19:27:33.0797550Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/Loops.cuh:81:
+2026-10-20T19:27:33.0798292Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0799063Z   564 | __global__ void elementwise_kernel_manual_unroll(int N, func_t f) {
+2026-10-20T19:27:33.0799262Z       |                 ^
+2026-10-20T19:27:33.0799854Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0800905Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0802131Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0802752Z 4 warnings generated when compiling for gfx1100.
+2026-10-20T19:27:33.0803063Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/CompareEQKernel.hip:8:
+2026-10-20T19:27:33.0803512Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/Loops.cuh:81:
+2026-10-20T19:27:33.0804235Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0804886Z   564 | __global__ void elementwise_kernel_manual_unroll(int N, func_t f) {
+2026-10-20T19:27:33.0805085Z       |                 ^
+2026-10-20T19:27:33.0805714Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0806810Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0807860Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0808521Z 4 warnings generated when compiling for gfx1101.
+2026-10-20T19:27:33.0808818Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/CompareEQKernel.hip:8:
+2026-10-20T19:27:33.0815508Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/Loops.cuh:81:
+2026-10-20T19:27:33.0816282Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0816971Z   564 | __global__ void elementwise_kernel_manual_unroll(int N, func_t f) {
+2026-10-20T19:27:33.0817174Z       |                 ^
+2026-10-20T19:27:33.0817769Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0818827Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0819884Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0820546Z 4 warnings generated when compiling for gfx1102.
+2026-10-20T19:27:33.0820855Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/CompareEQKernel.hip:8:
+2026-10-20T19:27:33.0821256Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/Loops.cuh:81:
+2026-10-20T19:27:33.0821979Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0822629Z   564 | __global__ void elementwise_kernel_manual_unroll(int N, func_t f) {
+2026-10-20T19:27:33.0822832Z       |                 ^
+2026-10-20T19:27:33.0823422Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0824496Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0825559Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0826183Z 4 warnings generated when compiling for gfx1103.
+2026-10-20T19:27:33.0826497Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/CompareEQKernel.hip:8:
+2026-10-20T19:27:33.0826896Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/Loops.cuh:81:
+2026-10-20T19:27:33.0827605Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0828251Z   564 | __global__ void elementwise_kernel_manual_unroll(int N, func_t f) {
+2026-10-20T19:27:33.0828442Z       |                 ^
+2026-10-20T19:27:33.0829022Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0830072Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0831116Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0831740Z 4 warnings generated when compiling for gfx1151.
+2026-10-20T19:27:33.0832035Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/CompareEQKernel.hip:8:
+2026-10-20T19:27:33.0832429Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/Loops.cuh:81:
+2026-10-20T19:27:33.0833146Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0833785Z   564 | __global__ void elementwise_kernel_manual_unroll(int N, func_t f) {
+2026-10-20T19:27:33.0833980Z       |                 ^
+2026-10-20T19:27:33.0834554Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0835622Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0836678Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0837294Z 4 warnings generated when compiling for gfx1200.
+2026-10-20T19:27:33.0837586Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/CompareEQKernel.hip:8:
+2026-10-20T19:27:33.0837981Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/Loops.cuh:81:
+2026-10-20T19:27:33.0838708Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0839350Z   564 | __global__ void elementwise_kernel_manual_unroll(int N, func_t f) {
+2026-10-20T19:27:33.0839538Z       |                 ^
+2026-10-20T19:27:33.0840114Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0841371Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0842416Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0843024Z 4 warnings generated when compiling for gfx1201.
+2026-10-20T19:27:33.0843373Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/CompareEQKernel.hip:8:
+2026-10-20T19:27:33.0843796Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/Loops.cuh:81:
+2026-10-20T19:27:33.0844509Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0845151Z   564 | __global__ void elementwise_kernel_manual_unroll(int N, func_t f) {
+2026-10-20T19:27:33.0845340Z       |                 ^
+2026-10-20T19:27:33.0845917Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0846960Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0848036Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0848650Z 4 warnings generated when compiling for gfx1250.
+2026-10-20T19:27:33.0848962Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/CompareEQKernel.hip:8:
+2026-10-20T19:27:33.0849357Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/Loops.cuh:81:
+2026-10-20T19:27:33.0850069Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0850729Z   564 | __global__ void elementwise_kernel_manual_unroll(int N, func_t f) {
+2026-10-20T19:27:33.0850920Z       |                 ^
+2026-10-20T19:27:33.0851495Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0852541Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0853583Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0854198Z 4 warnings generated when compiling for gfx90a.
+2026-10-20T19:27:33.0854494Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/CompareEQKernel.hip:8:
+2026-10-20T19:27:33.0854890Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/Loops.cuh:81:
+2026-10-20T19:27:33.0855615Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0856263Z   564 | __global__ void elementwise_kernel_manual_unroll(int N, func_t f) {
+2026-10-20T19:27:33.0856451Z       |                 ^
+2026-10-20T19:27:33.0857030Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0858076Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0859140Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0859752Z 4 warnings generated when compiling for gfx942.
+2026-10-20T19:27:33.0860050Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/CompareEQKernel.hip:8:
+2026-10-20T19:27:33.0860460Z In file included from /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/Loops.cuh:81:
+2026-10-20T19:27:33.0861179Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0861834Z   564 | __global__ void elementwise_kernel_manual_unroll(int N, func_t f) {
+2026-10-20T19:27:33.0862025Z       |                 ^
+2026-10-20T19:27:33.0862599Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0863642Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0864683Z /__w/TheRock/TheRock/external-builds/pytorch/pytorch/aten/src/ATen/native/hip/HIPLoops.cuh:564:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2026-10-20T19:27:33.0865296Z 4 warnings generated when compiling for gfx950.
+2026-10-20T19:27:33.0865733Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0866427Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0867125Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0867807Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0868486Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0869169Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0869848Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0870530Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0871221Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0871917Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0872599Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0873296Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0873977Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0874661Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0875345Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0876033Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0876713Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0877400Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0878080Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0878780Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0879461Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0880144Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0880825Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0881508Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0882202Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0882886Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0883620Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0884306Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0885002Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0885687Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0886368Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0887051Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0887734Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0888420Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0889101Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0889798Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0890477Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0891166Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0891852Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0892538Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0893219Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0893916Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0894610Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:27:33.0895296Z ld.lld: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+2026-10-20T19:28:00.5923955Z [3755/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/hip/StepKernel.hip.o
+2026-10-20T19:28:45.3990895Z [3756/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/hip/BinaryLogicalOpsKernels.hip.o
+2026-10-20T19:29:00.4209357Z [3757/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/hip/UnaryOpsKernel.hip.o
+2026-10-20T19:29:02.5613858Z [3758/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/hip/BinaryMiscOpsKernels.hip.o
+2026-10-20T19:29:44.1198830Z [3759/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/hip/BinaryRemainderKernel.hip.o
+2026-10-20T19:30:19.8520428Z [3760/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/hip/MaxMinElementwiseKernel.hip.o
+2026-10-20T19:30:38.8271860Z [3761/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/quantized/hip/FakeQuantizeCore.hip.o
+2026-10-20T19:30:39.8671700Z [3762/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/hip/PointwiseOpsKernel.hip.o
+2026-10-20T19:32:39.3893893Z [3763/3867] Building HIP object caffe2/CMakeFiles/torch_hip.dir/__/aten/src/ATen/native/hip/PowKernel.hip.o
+2026-10-20T19:35:06.2189931Z ##[group]Run if [ "${CACHE_TYPE}" = "sccache" ]; then
+2026-10-20T19:35:06.2190161Z [36;1mif [ "${CACHE_TYPE}" = "sccache" ]; then[0m
+2026-10-20T19:35:06.2190325Z [36;1m  echo "sccache stats:"[0m
+2026-10-20T19:35:06.2190468Z [36;1m  echo "--------------"[0m
+2026-10-20T19:35:06.2190735Z [36;1m  sccache --show-stats || true[0m
+2026-10-20T19:35:06.2190902Z [36;1melif [ "${CACHE_TYPE}" = "ccache" ]; then[0m
+2026-10-20T19:35:06.2191064Z [36;1m  echo "ccache stats:"[0m
+2026-10-20T19:35:06.2191202Z [36;1m  echo "-------------"[0m
+2026-10-20T19:35:06.2191414Z [36;1m  ccache -s -v || true[0m
+2026-10-20T19:35:06.2191542Z [36;1mfi[0m
+2026-10-20T19:35:06.2191685Z shell: sh -e {0}
+2026-10-20T19:35:06.2191792Z env:
+2026-10-20T19:35:06.2191911Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T19:35:06.2192160Z   AMDGPU_FAMILIES: gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx125X-dcgpu;gfx90a;gfx950-dcgpu
+2026-10-20T19:35:06.2192465Z   ROCM_VERSION: 10.2.0.dev0+caaa72dd68de55aa5975ef649590173c9daa2dea
+2026-10-20T19:35:06.2192655Z   RELEASE_TYPE: ci
+2026-10-20T19:35:06.2192776Z   PYTHON_VERSION: 3.12
+2026-10-20T19:35:06.2192903Z   PYTORCH_GIT_REF: release/2.13
+2026-10-20T19:35:06.2193034Z   CACHE_TYPE: sccache
+2026-10-20T19:35:06.2193157Z   ROCM_PACKAGE_INDEX_URL: 
+2026-10-20T19:35:06.2193424Z   ROCM_PACKAGE_FIND_LINKS_URL: https://therock-ci-artifacts.s3.amazonaws.com/39457456493-linux/python/index.html
+2026-10-20T19:35:06.2193943Z   optional_build_prod_arguments: --rocm-sdk-version ==10.2.0.dev0+caaa72dd68de55aa5975ef649590173c9daa2dea --version-suffix +devrocm10.2.0.dev0-caaa72dd68de55aa5975ef649590173c9daa2dea
+2026-10-20T19:35:06.2194351Z   SCCACHE_BUCKET: therock-pytorch-sccache-ci
+2026-10-20T19:35:06.2194513Z   SCCACHE_REGION: us-east-1
+2026-10-20T19:35:06.2194663Z   SCCACHE_S3_KEY_PREFIX: linux/multi-arch-release/
+2026-10-20T19:35:06.2194825Z   SCCACHE_S3_USE_SSL: true
+2026-10-20T19:35:06.2194964Z   SCCACHE_S3_SERVER_SIDE_ENCRYPTION: true
+2026-10-20T19:35:06.2195113Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-20T19:35:06.2195235Z   SCCACHE_LOG: warn
+2026-10-20T19:35:06.2195406Z   PACKAGE_DIST_DIR: /home/runner/_work/TheRock/TheRock/output/packages/dist
+2026-10-20T19:35:06.2195606Z   cp_version: cp312-cp312
+2026-10-20T19:35:06.2195796Z   version_suffix: +devrocm10.2.0.dev0-caaa72dd68de55aa5975ef649590173c9daa2dea
+2026-10-20T19:35:06.2196006Z   AWS_DEFAULT_REGION: us-east-1
+2026-10-20T19:35:06.2196138Z   AWS_REGION: us-east-1
+2026-10-20T19:35:06.2196386Z   AWS_ACCESS_KEY_ID: ***
+2026-10-20T19:35:06.2196558Z   AWS_SECRET_ACCESS_KEY: ***
+2026-10-20T19:35:06.2198692Z   AWS_SESSION_TOKEN: ***
+2026-10-20T19:35:06.2198815Z ##[endgroup]
+2026-10-20T19:35:06.2207628Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:35:06.2208052Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:35:06.2208348Z ##[endgroup]
+2026-10-20T19:35:06.7090687Z sccache stats:
+2026-10-20T19:35:06.7090829Z --------------
+2026-10-20T19:35:06.7100657Z Compile requests                    153
+2026-10-20T19:35:06.7100945Z Compile requests executed           140
+2026-10-20T19:35:06.7101130Z Cache hits                          110
+2026-10-20T19:35:06.7102738Z Cache hits (C/C++)                  110
+2026-10-20T19:35:06.7102896Z Cache misses                          1
+2026-10-20T19:35:06.7103037Z Cache misses (C/C++)                  1
+2026-10-20T19:35:06.7103186Z Cache hits rate                   99.10 %
+2026-10-20T19:35:06.7103335Z Cache hits rate (C/C++)           99.10 %
+2026-10-20T19:35:06.7103482Z Cache timeouts                        0
+2026-10-20T19:35:06.7103628Z Cache read errors                     0
+2026-10-20T19:35:06.7103766Z Forced recaches                       0
+2026-10-20T19:35:06.7103908Z Cache write errors                    0
+2026-10-20T19:35:06.7104045Z Cache errors                         19
+2026-10-20T19:35:06.7104192Z Cache errors (C/C++)                 19
+2026-10-20T19:35:06.7104333Z Compilations                          1
+2026-10-20T19:35:06.7104470Z Compilation failures                 10
+2026-10-20T19:35:06.7104832Z Non-cacheable compilations            0
+2026-10-20T19:35:06.7104975Z Non-cacheable calls                  13
+2026-10-20T19:35:06.7105114Z Non-compilation calls                 0
+2026-10-20T19:35:06.7105259Z Unsupported compiler calls            0
+2026-10-20T19:35:06.7105402Z Average cache write               0.039 s
+2026-10-20T19:35:06.7105549Z Average compiler                  0.010 s
+2026-10-20T19:35:06.7105700Z Average cache read hit            0.031 s
+2026-10-20T19:35:06.7105847Z Failed distributed compilations       0
+2026-10-20T19:35:06.7105994Z 
+2026-10-20T19:35:06.7106050Z Non-cacheable reasons:
+2026-10-20T19:35:06.7106181Z multiple input files                 13
+2026-10-20T19:35:06.7106273Z 
+2026-10-20T19:35:06.7106434Z Cache location                  s3, name: therock-pytorch-sccache-ci, prefix: /linux/multi-arch-release/
+2026-10-20T19:35:06.7106690Z Base directories                (none)
+2026-10-20T19:35:06.7106837Z Version (client)                0.14.0
+2026-10-20T19:35:06.7177781Z ##[group]Run python external-builds/pytorch/sanity_check_wheel.py \
+2026-10-20T19:35:06.7178065Z [36;1mpython external-builds/pytorch/sanity_check_wheel.py \[0m
+2026-10-20T19:35:06.7178258Z [36;1m  "${PACKAGE_DIST_DIR}"/[0m
+2026-10-20T19:35:06.7178443Z shell: sh -e {0}
+2026-10-20T19:35:06.7178555Z env:
+2026-10-20T19:35:06.7178786Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T19:35:06.7179026Z   AMDGPU_FAMILIES: gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx125X-dcgpu;gfx90a;gfx950-dcgpu
+2026-10-20T19:35:06.7179310Z   ROCM_VERSION: 10.2.0.dev0+caaa72dd68de55aa5975ef649590173c9daa2dea
+2026-10-20T19:35:06.7179500Z   RELEASE_TYPE: ci
+2026-10-20T19:35:06.7179618Z   PYTHON_VERSION: 3.12
+2026-10-20T19:35:06.7179743Z   PYTORCH_GIT_REF: release/2.13
+2026-10-20T19:35:06.7179883Z   CACHE_TYPE: sccache
+2026-10-20T19:35:06.7180008Z   ROCM_PACKAGE_INDEX_URL: 
+2026-10-20T19:35:06.7180283Z   ROCM_PACKAGE_FIND_LINKS_URL: https://therock-ci-artifacts.s3.amazonaws.com/39457456493-linux/python/index.html
+2026-10-20T19:35:06.7180802Z   optional_build_prod_arguments: --rocm-sdk-version ==10.2.0.dev0+caaa72dd68de55aa5975ef649590173c9daa2dea --version-suffix +devrocm10.2.0.dev0-caaa72dd68de55aa5975ef649590173c9daa2dea
+2026-10-20T19:35:06.7181212Z   SCCACHE_BUCKET: therock-pytorch-sccache-ci
+2026-10-20T19:35:06.7181374Z   SCCACHE_REGION: us-east-1
+2026-10-20T19:35:06.7181524Z   SCCACHE_S3_KEY_PREFIX: linux/multi-arch-release/
+2026-10-20T19:35:06.7181688Z   SCCACHE_S3_USE_SSL: true
+2026-10-20T19:35:06.7181827Z   SCCACHE_S3_SERVER_SIDE_ENCRYPTION: true
+2026-10-20T19:35:06.7181979Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-20T19:35:06.7182101Z   SCCACHE_LOG: warn
+2026-10-20T19:35:06.7182269Z   PACKAGE_DIST_DIR: /home/runner/_work/TheRock/TheRock/output/packages/dist
+2026-10-20T19:35:06.7182472Z   cp_version: cp312-cp312
+2026-10-20T19:35:06.7182711Z   version_suffix: +devrocm10.2.0.dev0-caaa72dd68de55aa5975ef649590173c9daa2dea
+2026-10-20T19:35:06.7182924Z   AWS_DEFAULT_REGION: us-east-1
+2026-10-20T19:35:06.7183059Z   AWS_REGION: us-east-1
+2026-10-20T19:35:06.7183298Z   AWS_ACCESS_KEY_ID: ***
+2026-10-20T19:35:06.7183504Z   AWS_SECRET_ACCESS_KEY: ***
+2026-10-20T19:35:06.7185659Z   AWS_SESSION_TOKEN: ***
+2026-10-20T19:35:06.7185782Z ##[endgroup]
+2026-10-20T19:35:06.7204414Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:35:06.7204889Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:35:06.7205048Z ##[endgroup]
+2026-10-20T19:35:07.0413019Z ERROR: /__w/TheRock/TheRock/output/packages/dist is not a directory
+2026-10-20T19:35:07.0465084Z ##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/5ac68180-ccbd-11f1-83c7-5511e8ccb307.sh], exit code 1
+2026-10-20T19:35:07.0494479Z ##[error]Process completed with exit code 1.
+2026-10-20T19:35:07.0548250Z ##[error]Executing the custom container implementation failed. Please contact your self hosted runner administrator.
+2026-10-20T19:35:07.0624888Z Post job cleanup.
+2026-10-20T19:35:07.0633308Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:35:07.0633759Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:35:07.0633928Z ##[endgroup]
+2026-10-20T19:35:07.4375299Z Post job cleanup.
+2026-10-20T19:35:07.4383617Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:35:07.4384016Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:35:07.4384176Z ##[endgroup]
+2026-10-20T19:35:07.7963975Z [command]/usr/local/bin/git version
+2026-10-20T19:35:07.7990624Z git version 2.49.0
+2026-10-20T19:35:07.8006637Z Copying '/root/.gitconfig' to '/__w/_temp/efcb4554-c7af-4c5c-9906-c8d2ba235d32/.gitconfig'
+2026-10-20T19:35:07.8018123Z Temporarily overriding HOME='/__w/_temp/efcb4554-c7af-4c5c-9906-c8d2ba235d32' before making global git config changes
+2026-10-20T19:35:07.8019021Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T19:35:07.8020901Z [command]/usr/local/bin/git config --global --add safe.directory /__w/TheRock/TheRock
+2026-10-20T19:35:07.8041557Z Removing SSH command configuration
+2026-10-20T19:35:07.8043813Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T19:35:07.8066379Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T19:35:07.8285769Z Removing HTTP extra header
+2026-10-20T19:35:07.8286425Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T19:35:07.8301663Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T19:35:07.8503172Z Removing includeIf entries pointing to credentials config files
+2026-10-20T19:35:07.8503468Z [command]/usr/local/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T19:35:07.8565021Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T19:35:07.8870816Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:35:07.8871275Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:35:07.8871444Z ##[endgroup]
+2026-10-20T19:35:08.1182012Z Cleaning up orphan processes

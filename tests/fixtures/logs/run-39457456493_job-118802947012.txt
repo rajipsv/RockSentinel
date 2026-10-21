@@ -1,0 +1,116 @@
+# Source: ROCm/TheRock Actions run 39457456493 attempt 1, job 118802947012
+# Job: Linux::release / Build DEB Packages / Build deb packages (multi_arch_ci.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-20
+2026-10-20T19:34:45.1905744Z    dh_installsystemduser -O--no-parallel
+2026-10-20T19:34:45.2479063Z    dh_perl -O--no-parallel
+2026-10-20T19:34:45.3128026Z    dh_link -O--no-parallel
+2026-10-20T19:34:45.3822667Z    dh_strip_nondeterminism -O--no-parallel
+2026-10-20T19:34:45.5649460Z    dh_compress -O--no-parallel
+2026-10-20T19:34:45.5996107Z    dh_fixperms -O--no-parallel
+2026-10-20T19:34:45.6506617Z    dh_missing -O--no-parallel
+2026-10-20T19:34:45.7050377Z    debian/rules override_dh_dwz
+2026-10-20T19:34:45.7059441Z make[1]: Entering directory '/tmp/pkg_amdrocm-rpp_hik1ye02/deb/amdrocm-rpp10.2'
+2026-10-20T19:34:45.7060112Z dh_dwz -X.hsaco -X.co -- --low-mem-die-limit=none --max-die-limit=none
+2026-10-20T19:34:45.7813525Z dwz: debian/amdrocm-rpp10.2/opt/rocm/core-10.2/lib/librpp.so.3.2.0: .debug_info section not present
+2026-10-20T19:34:45.7836728Z make[1]: Leaving directory '/tmp/pkg_amdrocm-rpp_hik1ye02/deb/amdrocm-rpp10.2'
+2026-10-20T19:34:45.7838501Z    debian/rules override_dh_strip
+2026-10-20T19:34:45.7850559Z make[1]: Entering directory '/tmp/pkg_amdrocm-rpp_hik1ye02/deb/amdrocm-rpp10.2'
+2026-10-20T19:34:45.7851593Z :
+2026-10-20T19:34:45.7851933Z make[1]: Leaving directory '/tmp/pkg_amdrocm-rpp_hik1ye02/deb/amdrocm-rpp10.2'
+2026-10-20T19:34:45.7852224Z    debian/rules override_dh_makeshlibs
+2026-10-20T19:34:45.7860756Z make[1]: Entering directory '/tmp/pkg_amdrocm-rpp_hik1ye02/deb/amdrocm-rpp10.2'
+2026-10-20T19:34:45.7861238Z dh_makeshlibs -X.co
+2026-10-20T19:34:45.8876181Z make[1]: Leaving directory '/tmp/pkg_amdrocm-rpp_hik1ye02/deb/amdrocm-rpp10.2'
+2026-10-20T19:34:45.8877281Z    debian/rules override_dh_shlibdeps
+2026-10-20T19:34:45.8888667Z make[1]: Entering directory '/tmp/pkg_amdrocm-rpp_hik1ye02/deb/amdrocm-rpp10.2'
+2026-10-20T19:34:45.8892457Z Skipping dh_shlibdeps
+2026-10-20T19:34:45.8893086Z make[1]: Leaving directory '/tmp/pkg_amdrocm-rpp_hik1ye02/deb/amdrocm-rpp10.2'
+2026-10-20T19:34:45.8895839Z    dh_installdeb -O--no-parallel
+2026-10-20T19:34:45.9515026Z    dh_gencontrol -O--no-parallel
+2026-10-20T19:34:46.1089840Z    dh_md5sums -O--no-parallel
+2026-10-20T19:34:46.6121440Z    debian/rules override_dh_builddeb
+2026-10-20T19:34:46.6137198Z make[1]: Entering directory '/tmp/pkg_amdrocm-rpp_hik1ye02/deb/amdrocm-rpp10.2'
+2026-10-20T19:34:46.6137577Z dh_builddeb -- -Zxz --root-owner-group
+2026-10-20T19:34:46.6907547Z dpkg-deb: building package 'amdrocm-rpp10.2' in '../amdrocm-rpp10.2_10.2.0~dev20261020-39457456493_amd64.deb'.
+2026-10-20T19:34:47.3970688Z ##[group]Run python ./build_tools/packaging/linux/native_linux_package_pre_upload_test.py \
+2026-10-20T19:34:47.3971146Z [36;1mpython ./build_tools/packaging/linux/native_linux_package_pre_upload_test.py \[0m
+2026-10-20T19:34:47.3971404Z [36;1m  --packages-dir "output/packages" \[0m
+2026-10-20T19:34:47.3971589Z [36;1m  --pkg-type "${NATIVE_PACKAGE_TYPE}"[0m
+2026-10-20T19:34:47.3971861Z shell: sh -e {0}
+2026-10-20T19:34:47.3971974Z env:
+2026-10-20T19:34:47.3972092Z   ROCM_VERSION: 10.2.0~dev20261020
+2026-10-20T19:34:47.3972237Z   BUILD_VARIANT: release
+2026-10-20T19:34:47.3972370Z   NATIVE_PACKAGE_TYPE: deb
+2026-10-20T19:34:47.3973114Z   QUARTZ_REPORTING_WORKFLOW: multi_arch_build_native_linux_packages.yml
+2026-10-20T19:34:47.3973433Z   QUARTZ_WORKFLOW_POSTFIX: - build rpm/deb packages
+2026-10-20T19:34:47.3973603Z   ARTIFACT_RUN_ID: 39457456493
+2026-10-20T19:34:47.3973847Z   DIST_AMDGPU_FAMILIES: gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx125X-dcgpu;gfx90a;gfx950-dcgpu
+2026-10-20T19:34:47.3974185Z   PACKAGE_SUFFIX: 
+2026-10-20T19:34:47.3974304Z   OUTPUT_DIR: output
+2026-10-20T19:34:47.3974434Z   ARTIFACTS_DIR: output/artifacts
+2026-10-20T19:34:47.3974584Z   PACKAGE_DIST_DIR: output/packages
+2026-10-20T19:34:47.3974726Z   RELEASE_TYPE: ci
+2026-10-20T19:34:47.3974910Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T19:34:47.3975107Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T19:34:47.3975302Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T19:34:47.3976406Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T19:34:47.3976581Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T19:34:47.3976762Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T19:34:47.3976924Z ##[endgroup]
+2026-10-20T19:34:47.3986842Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:34:47.3987285Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:34:47.3987447Z ##[endgroup]
+2026-10-20T19:34:48.2826542Z [ERROR   ] __main__: built packages manifest not found: /__w/TheRock/TheRock/output/packages/built_packages.txt
+2026-10-20T19:34:48.2985178Z ##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/4f604330-ccbd-11f1-ae1d-71a1d31ccc15.sh], exit code 2
+2026-10-20T19:34:48.3026517Z ##[error]Process completed with exit code 1.
+2026-10-20T19:34:48.3269555Z ##[error]Executing the custom container implementation failed. Please contact your self hosted runner administrator.
+2026-10-20T19:34:48.3312646Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-20T19:34:48.3313006Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-20T19:34:48.3314236Z shell: sh -e {0}
+2026-10-20T19:34:48.3314360Z env:
+2026-10-20T19:34:48.3314479Z   ROCM_VERSION: 10.2.0~dev20261020
+2026-10-20T19:34:48.3314793Z   BUILD_VARIANT: release
+2026-10-20T19:34:48.3314930Z   NATIVE_PACKAGE_TYPE: deb
+2026-10-20T19:34:48.3315116Z   QUARTZ_REPORTING_WORKFLOW: multi_arch_build_native_linux_packages.yml
+2026-10-20T19:34:48.3315404Z   QUARTZ_WORKFLOW_POSTFIX: - build rpm/deb packages
+2026-10-20T19:34:48.3315578Z   ARTIFACT_RUN_ID: 39457456493
+2026-10-20T19:34:48.3315825Z   DIST_AMDGPU_FAMILIES: gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx125X-dcgpu;gfx90a;gfx950-dcgpu
+2026-10-20T19:34:48.3316075Z   PACKAGE_SUFFIX: 
+2026-10-20T19:34:48.3316195Z   OUTPUT_DIR: output
+2026-10-20T19:34:48.3316326Z   ARTIFACTS_DIR: output/artifacts
+2026-10-20T19:34:48.3316506Z   PACKAGE_DIST_DIR: output/packages
+2026-10-20T19:34:48.3316649Z   RELEASE_TYPE: ci
+2026-10-20T19:34:48.3316846Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T19:34:48.3317049Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T19:34:48.3317243Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T19:34:48.3317419Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T19:34:48.3317593Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T19:34:48.3317774Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T19:34:48.3317934Z ##[endgroup]
+2026-10-20T19:34:48.3328756Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:34:48.3329217Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:34:48.3329380Z ##[endgroup]
+2026-10-20T19:34:48.7715542Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-20T19:34:48.7988452Z Post job cleanup.
+2026-10-20T19:34:48.7998174Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:34:48.7998644Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:34:48.7998820Z ##[endgroup]
+2026-10-20T19:34:49.4928103Z [command]/usr/bin/git version
+2026-10-20T19:34:49.5286628Z git version 2.55.0
+2026-10-20T19:34:49.5327511Z Temporarily overriding HOME='/__w/_temp/ba21916d-2c30-4f3c-aa2b-df782d72545f' before making global git config changes
+2026-10-20T19:34:49.5327979Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T19:34:49.5328735Z [command]/usr/bin/git config --global --add safe.directory /__w/TheRock/TheRock
+2026-10-20T19:34:49.5512271Z Removing SSH command configuration
+2026-10-20T19:34:49.5515924Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T19:34:49.5821857Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T19:34:49.6823667Z Removing HTTP extra header
+2026-10-20T19:34:49.6824181Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T19:34:49.6871482Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T19:34:49.7220042Z Removing includeIf entries pointing to credentials config files
+2026-10-20T19:34:49.7237756Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T19:34:49.7251173Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T19:34:49.8232224Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:34:49.8232806Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:34:49.8232982Z ##[endgroup]
+2026-10-20T19:34:50.0811776Z Evaluate and set job outputs
+2026-10-20T19:34:50.0817602Z Cleaning up orphan processes

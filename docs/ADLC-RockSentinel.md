@@ -982,6 +982,7 @@ The hooks follow ECC `hooks.json`: PreToolUse, PostToolUse and Stop.
 |---|---|---|
 | `infra` | The runner or environment failed, not the code | "No space left on device", runner lost communication, network or 5xx errors, artifact upload credential errors |
 | `flaky` | Non-deterministic: passes on rerun with the same SHA | Timeouts, intermittent test failures; rerun passed |
+| `timeout` | A test or job exceeded its time limit, with no stronger signal (no runner failure, no fault or crash, not passed on rerun). Ambiguous on purpose: it may be a hung machine, a deadlock or a slowdown, so the RCA agent decides the cause using history (e.g. the same test timing out across GPU families points to code) | `***Timeout 600.11 sec`, `The action 'Test' has timed out after 15 minutes.`, `*** GPU HANG ANALYSIS` without a memory fault |
 | `regression` | A real code defect in a component | Compiler or linker error, deterministic test failure tied to a change |
 | `submodule-bump` | Breakage introduced by a submodule or compiler bump | Failing run comes from `bump_submodules` / `compiler_bump`; the error is in a moved submodule |
 | `packaging` | deb/rpm/wheel build or install failure | `multi_arch_build_native_linux_packages`, `test_native_linux_packages_install`, wheel tests |
@@ -989,7 +990,13 @@ The hooks follow ECC `hooks.json`: PreToolUse, PostToolUse and Stop.
 | `asan` | An AddressSanitizer finding in ASan workflows | `ERROR: AddressSanitizer:` |
 | `unknown` | Not enough evidence | Always escalated to RCA |
 
-Tie-breaks: `infra` beats `flaky` when an infra signature is present. `submodule-bump` beats `regression` when the run came from a bump workflow.
+Tie-breaks, in order: `asan` > `infra` > `flaky` > `timeout` > `submodule-bump` > `packaging` > `regression` > `unknown`.
+- `infra` beats `flaky` and `timeout` when an infra signature is present (a dead runner causes the timeout).
+- `flaky` beats `timeout` when the job passed on rerun (an intermittent hang).
+- A memory fault, crash or ASan report is the root cause, so a timeout next to it is ignored (the case stays `regression` or `asan`).
+- `submodule-bump` beats `regression` when the run came from a bump workflow.
+
+`timeout` was added on 2026-10-21 after golden-set review showed timeouts were being folded into `infra`; golden-002 was relabelled from `infra` to `timeout`.
 
 ## Appendix B: Worked example, a real failure (golden-001)
 
