@@ -1,0 +1,1034 @@
+# Source: ROCm/TheRock Actions run 39385932667 attempt 1, job 118533299702
+# Job: Linux::release / Test gfx90a / Test hipblasltprovider / Test hipblasltprovider (shard 1/1) (gfx90a) (multi_arch_ci.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+﻿2026-10-20T08:44:07.4847699Z Current runner version: '2.338.0'
+2026-10-20T08:44:07.4854735Z Runner name: 'linux-mi210-1gpu-ossci-rocm-runner-dxxmk'
+2026-10-20T08:44:07.4855762Z Runner group name: 'default'
+2026-10-20T08:44:07.4856894Z Machine name: 'linux-mi210-1gpu-ossci-rocm-runner-dxxmk'
+2026-10-20T08:44:07.4860397Z ##[group]GITHUB_TOKEN Permissions
+2026-10-20T08:44:07.4862703Z Contents: read
+2026-10-20T08:44:07.4863656Z Metadata: read
+2026-10-20T08:44:07.4864296Z ##[endgroup]
+2026-10-20T08:44:07.4866883Z Secret source: Actions
+2026-10-20T08:44:07.4868099Z Cache mode: write
+2026-10-20T08:44:07.4869101Z Prepare workflow directory
+2026-10-20T08:44:07.5531161Z Prepare all required actions
+2026-10-20T08:44:07.5581623Z Getting action download info
+2026-10-20T08:44:08.0335992Z Download action repository 'ROCm/Quartz@f386a9756620938616af0b4d5d04b24ae6e0353f' (SHA:f386a9756620938616af0b4d5d04b24ae6e0353f)
+2026-10-20T08:44:08.7544341Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-20T08:44:09.3188447Z Getting action download info
+2026-10-20T08:44:09.4243913Z Download action repository 'actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1' (SHA:bcd2ba49218906704ab6c1aa796996da409d3eb1)
+2026-10-20T08:44:10.0574359Z Getting action download info
+2026-10-20T08:44:10.3080142Z Uses: ROCm/TheRock/.github/workflows/test_component.yml@refs/heads/main (25fb893e63d297d0db8608d3c0b99258ad463aff)
+2026-10-20T08:44:10.3086252Z ##[group] Inputs
+2026-10-20T08:44:10.3087204Z   artifact_run_id: 
+2026-10-20T08:44:10.3088143Z   artifact_group: multi-arch-release
+2026-10-20T08:44:10.3089233Z   amdgpu_families: gfx90a
+2026-10-20T08:44:10.3090202Z   amdgpu_targets: gfx90a
+2026-10-20T08:44:10.3091218Z   test_runs_on: linux-mi210-1gpu-ossci-rocm
+2026-10-20T08:44:10.3092345Z   platform: linux
+2026-10-20T08:44:10.3102644Z   component: {
+  "additional_requirements_files": [],
+  "job_name": "hipblasltprovider",
+  "fetch_artifact_args": "--blas --hipdnn --hipblasltprovider --hipdnn-integration-tests --tests",
+  "timeout_minutes": 30,
+  "test_script": "python build_tools/github_actions/test_executable_scripts/test_runner.py",
+  "platform": [
+    "linux",
+    "windows"
+  ],
+  "total_shards_dict": {
+    "linux": 1,
+    "windows": 1
+  },
+  "exclude_family": {
+    "linux": [
+      "gfx125X-dcgpu"
+    ]
+  },
+  "test_type": "quick",
+  "shard_arr": [
+    1
+  ],
+  "total_shards": 1,
+  "test_runner": "linux-mi210-1gpu-ossci-rocm",
+  "container_options": "--user 0:0 --ulimit memlock=-1:-1 --ulimit nofile=1048576:1048576 --security-opt seccomp=unconfined --group-add video --device /dev/kfd --device /dev/dri --group-add 993 --group-add 992 --group-add 110 --env-file /etc/podinfo/gha-gpu-isolation-settings -e ROCR_VISIBLE_DEVICES -e KUBE_CPU_REQUEST"
+}
+2026-10-20T08:44:10.3113091Z   release_type: ci
+2026-10-20T08:44:10.3113953Z   repository: 
+2026-10-20T08:44:10.3114879Z   ref: 
+2026-10-20T08:44:10.3115684Z   build_variant: release
+2026-10-20T08:44:10.3117744Z   default_container_image: ghcr.io/rocm/no_rocm_image_ubuntu24_04@sha256:4150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98
+2026-10-20T08:44:10.3119973Z   quartz_tracking_id: 
+2026-10-20T08:44:10.3120877Z ##[endgroup]
+2026-10-20T08:44:10.3122593Z Complete job name: Linux::release / Test gfx90a / Test hipblasltprovider / Test hipblasltprovider (shard 1/1) (gfx90a)
+2026-10-20T08:44:10.3601967Z A job started hook has been configured by the self-hosted runner administrator
+2026-10-20T08:44:10.3756636Z ##[group]Run '/etc/podinfo/arc-job-started.sh'
+2026-10-20T08:44:10.3777244Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T08:44:10.3778839Z ##[endgroup]
+2026-10-20T08:44:10.3999122Z ##[group]ARC infrastructure metadata
+2026-10-20T08:44:10.4006765Z [ARC metadata] cluster=ccs_aus_bm_pvt_prd
+2026-10-20T08:44:10.4044236Z [ARC metadata] runner=linux-mi210-1gpu-ossci-rocm-runner-dxxmk
+2026-10-20T08:44:10.4079055Z [ARC metadata] scale_set=linux-mi210-1gpu-ossci-rocm
+2026-10-20T08:44:10.4106771Z [ARC metadata] pod=linux-mi210-1gpu-ossci-rocm-runner-dxxmk
+2026-10-20T08:44:10.4136781Z [ARC metadata] namespace=arc-rocm
+2026-10-20T08:44:10.4163457Z [ARC metadata] pod_uid=236a8265-a125-4b40-81b0-5c1eba234600
+2026-10-20T08:44:10.4188648Z [ARC metadata] node=smci210-ccs-aus-m14-37
+2026-10-20T08:44:10.4215461Z [ARC metadata] runner_os=Linux
+2026-10-20T08:44:10.4247262Z [ARC metadata] runner_arch=X64
+2026-10-20T08:44:10.4249423Z ##[endgroup]
+2026-10-20T08:44:10.4495525Z ##[group]Checking docker version
+2026-10-20T08:44:10.4515704Z ##[command]/usr/bin/docker version --format '{{.Server.APIVersion}}'
+2026-10-20T08:44:10.4993118Z '1.51'
+2026-10-20T08:44:10.5070843Z Docker daemon API version: '1.51'
+2026-10-20T08:44:10.5072812Z ##[command]/usr/bin/docker version --format '{{.Client.APIVersion}}'
+2026-10-20T08:44:10.5549239Z '1.51'
+2026-10-20T08:44:10.5613781Z Docker client API version: '1.51'
+2026-10-20T08:44:10.5625185Z ##[endgroup]
+2026-10-20T08:44:10.5632200Z ##[group]Clean up resources from previous jobs
+2026-10-20T08:44:10.5645704Z ##[command]/usr/bin/docker ps --all --quiet --no-trunc --filter "label=3b6f79"
+2026-10-20T08:44:10.6084416Z ##[command]/usr/bin/docker network prune --force --filter "label=3b6f79"
+2026-10-20T08:44:10.6501048Z ##[endgroup]
+2026-10-20T08:44:10.6502081Z ##[group]Create local container network
+2026-10-20T08:44:10.6514134Z ##[command]/usr/bin/docker network create --label 3b6f79 github_network_eddb19ab351a45e3b6eb8d699c382ece
+2026-10-20T08:44:10.7359377Z 6edb91d1e5e4a3994db7f44e03fa0619bf92a5a4b864243b2aa3075c3141dc7a
+2026-10-20T08:44:10.7490482Z ##[endgroup]
+2026-10-20T08:44:10.7547464Z ##[group]Starting job container
+2026-10-20T08:44:10.7583706Z ##[command]/usr/bin/docker --config /home/runner/_work/_temp/.docker_2aad41ec-9816-4e53-845f-6dd3528d8fe6 login ghcr.io -u raramakr --password-stdin
+2026-10-20T08:44:11.8541117Z ##[command]/usr/bin/docker --config /home/runner/_work/_temp/.docker_2aad41ec-9816-4e53-845f-6dd3528d8fe6 pull ghcr.io/rocm/no_rocm_image_ubuntu24_04@sha256:4150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98
+2026-10-20T08:44:12.6900910Z ghcr.io/rocm/no_rocm_image_ubuntu24_04@sha256:4150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98: Pulling from rocm/no_rocm_image_ubuntu24_04
+2026-10-20T08:44:12.6901837Z de66fc90c55d: Pulling fs layer
+2026-10-20T08:44:12.6902121Z 544b5ae63888: Pulling fs layer
+2026-10-20T08:44:12.6902388Z e86328f387a1: Pulling fs layer
+2026-10-20T08:44:12.6902734Z 0f0c66aa407f: Pulling fs layer
+2026-10-20T08:44:12.6903008Z 6d4122809ad4: Pulling fs layer
+2026-10-20T08:44:12.6903384Z 197e25486017: Pulling fs layer
+2026-10-20T08:44:12.6903664Z bd203acbfd8f: Pulling fs layer
+2026-10-20T08:44:12.6903926Z 0faccded2772: Pulling fs layer
+2026-10-20T08:44:12.6904188Z 4f4fb700ef54: Pulling fs layer
+2026-10-20T08:44:12.6904441Z 0faccded2772: Waiting
+2026-10-20T08:44:12.6905242Z 0f0c66aa407f: Waiting
+2026-10-20T08:44:12.6905465Z 197e25486017: Waiting
+2026-10-20T08:44:12.6905689Z bd203acbfd8f: Waiting
+2026-10-20T08:44:12.6905931Z 6d4122809ad4: Waiting
+2026-10-20T08:44:12.6906193Z 4f4fb700ef54: Waiting
+2026-10-20T08:44:14.0612293Z de66fc90c55d: Verifying Checksum
+2026-10-20T08:44:14.0613215Z de66fc90c55d: Download complete
+2026-10-20T08:44:14.2748199Z e86328f387a1: Verifying Checksum
+2026-10-20T08:44:14.2749120Z e86328f387a1: Download complete
+2026-10-20T08:44:14.3620882Z 0f0c66aa407f: Download complete
+2026-10-20T08:44:14.5637279Z 6d4122809ad4: Verifying Checksum
+2026-10-20T08:44:14.5637945Z 6d4122809ad4: Download complete
+2026-10-20T08:44:15.0187271Z 544b5ae63888: Verifying Checksum
+2026-10-20T08:44:15.0187950Z 544b5ae63888: Download complete
+2026-10-20T08:44:15.3962804Z 0faccded2772: Verifying Checksum
+2026-10-20T08:44:15.3963536Z 0faccded2772: Download complete
+2026-10-20T08:44:15.4230297Z de66fc90c55d: Pull complete
+2026-10-20T08:44:15.6337419Z bd203acbfd8f: Verifying Checksum
+2026-10-20T08:44:15.6338229Z bd203acbfd8f: Download complete
+2026-10-20T08:44:15.6808773Z 4f4fb700ef54: Download complete
+2026-10-20T08:44:15.7745100Z 544b5ae63888: Pull complete
+2026-10-20T08:44:15.7908982Z e86328f387a1: Pull complete
+2026-10-20T08:44:15.9943547Z 0f0c66aa407f: Pull complete
+2026-10-20T08:44:16.0058315Z 6d4122809ad4: Pull complete
+2026-10-20T08:44:31.3381073Z 197e25486017: Verifying Checksum
+2026-10-20T08:44:31.3381708Z 197e25486017: Download complete
+2026-10-20T08:44:38.9723567Z 197e25486017: Pull complete
+2026-10-20T08:44:39.0919743Z bd203acbfd8f: Pull complete
+2026-10-20T08:44:39.2331107Z 0faccded2772: Pull complete
+2026-10-20T08:44:39.2458471Z 4f4fb700ef54: Pull complete
+2026-10-20T08:44:39.2511060Z Digest: sha256:4150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98
+2026-10-20T08:44:39.2521198Z Status: Downloaded newer image for ghcr.io/rocm/no_rocm_image_ubuntu24_04@sha256:4150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98
+2026-10-20T08:44:39.2540147Z ghcr.io/rocm/no_rocm_image_ubuntu24_04@sha256:4150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98
+2026-10-20T08:44:39.2690489Z ##[command]/usr/bin/docker create --name caae66fcd3be42c3bca42053ae894ed5_ghcriorocmno_rocm_image_ubuntu24_04sha2564150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98_2e9632 --label 3b6f79 --workdir /__w/TheRock/TheRock --network github_network_eddb19ab351a45e3b6eb8d699c382ece --user 0:0 --ulimit memlock=-1:-1 --ulimit nofile=1048576:1048576 --security-opt seccomp=unconfined --group-add video --device /dev/kfd --device /dev/dri --group-add 993 --group-add 992 --group-add 110 --env-file /etc/podinfo/gha-gpu-isolation-settings -e ROCR_VISIBLE_DEVICES -e KUBE_CPU_REQUEST -e "HOME=/github/home" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/_work":"/__w" -v "/home/runner/externals":"/__e":ro -v "/home/runner/_work/_temp":"/__w/_temp" -v "/home/runner/_work/_actions":"/__w/_actions" -v "/home/runner/_work/_tool":"/__w/_tool" -v "/home/runner/_work/_temp/_github_home":"/github/home" -v "/home/runner/_work/_temp/_github_workflow":"/github/workflow" --entrypoint "tail" ghcr.io/rocm/no_rocm_image_ubuntu24_04@sha256:4150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98 "-f" "/dev/null"
+2026-10-20T08:44:40.7988840Z ba8e6d739159f0e4228fda9fbcc5a565b592036631eeef1ef2668404e8be4ed3
+2026-10-20T08:44:40.8056231Z ##[command]/usr/bin/docker start ba8e6d739159f0e4228fda9fbcc5a565b592036631eeef1ef2668404e8be4ed3
+2026-10-20T08:44:41.0715066Z ba8e6d739159f0e4228fda9fbcc5a565b592036631eeef1ef2668404e8be4ed3
+2026-10-20T08:44:41.0777345Z ##[command]/usr/bin/docker ps --all --filter id=ba8e6d739159f0e4228fda9fbcc5a565b592036631eeef1ef2668404e8be4ed3 --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"
+2026-10-20T08:44:41.1170479Z ba8e6d739159f0e4228fda9fbcc5a565b592036631eeef1ef2668404e8be4ed3 Up Less than a second
+2026-10-20T08:44:41.1232916Z ##[command]/usr/bin/docker inspect --format "{{range .Config.Env}}{{println .}}{{end}}" ba8e6d739159f0e4228fda9fbcc5a565b592036631eeef1ef2668404e8be4ed3
+2026-10-20T08:44:41.1595616Z ROCR_VISIBLE_DEVICES=0
+2026-10-20T08:44:41.1595891Z HIP_VISIBLE_DEVICES=0
+2026-10-20T08:44:41.1596214Z HOME=/github/home
+2026-10-20T08:44:41.1596444Z GITHUB_ACTIONS=true
+2026-10-20T08:44:41.1596669Z CI=true
+2026-10-20T08:44:41.1596865Z ROCR_VISIBLE_DEVICES
+2026-10-20T08:44:41.1597094Z KUBE_CPU_REQUEST=25
+2026-10-20T08:44:41.1597468Z PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+2026-10-20T08:44:41.1653199Z ##[endgroup]
+2026-10-20T08:44:41.1668476Z ##[group]Waiting for all services to be ready
+2026-10-20T08:44:41.1671054Z ##[endgroup]
+2026-10-20T08:44:41.1927504Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-20T08:44:41.1928133Z with:
+2026-10-20T08:44:41.1928476Z   persist-credentials: false
+2026-10-20T08:44:41.1928883Z   repository: ROCm/TheRock
+2026-10-20T08:44:41.1929248Z   sparse-checkout: build_tools
+2026-10-20T08:44:41.1929621Z   path: prejob
+2026-10-20T08:44:41.1932584Z   token: ***
+2026-10-20T08:44:41.1932916Z   ssh-strict: true
+2026-10-20T08:44:41.1933282Z   ssh-user: git
+2026-10-20T08:44:41.1933598Z   clean: true
+2026-10-20T08:44:41.1934531Z   sparse-checkout-cone-mode: true
+2026-10-20T08:44:41.1935057Z   fetch-depth: 1
+2026-10-20T08:44:41.1935380Z   fetch-tags: false
+2026-10-20T08:44:41.1935713Z   show-progress: true
+2026-10-20T08:44:41.1936041Z   lfs: false
+2026-10-20T08:44:41.1936344Z   submodules: false
+2026-10-20T08:44:41.1936685Z   set-safe-directory: true
+2026-10-20T08:44:41.1937071Z   allow-unsafe-pr-checkout: false
+2026-10-20T08:44:41.1937454Z env:
+2026-10-20T08:44:41.1937896Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T08:44:41.1938394Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T08:44:41.1938904Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T08:44:41.1939355Z   ARTIFACT_RUN_ID: 39385932667
+2026-10-20T08:44:41.1939720Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T08:44:41.1940084Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T08:44:41.1940461Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T08:44:41.1940823Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T08:44:41.1941193Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T08:44:41.1941611Z   BUILD_VARIANT: release
+2026-10-20T08:44:41.1941960Z ##[endgroup]
+2026-10-20T08:44:41.1998018Z ##[command]/usr/bin/docker exec  ba8e6d739159f0e4228fda9fbcc5a565b592036631eeef1ef2668404e8be4ed3 sh -c "cat /etc/*release | grep ^ID"
+2026-10-20T08:44:41.4858700Z Syncing repository: ROCm/TheRock
+2026-10-20T08:44:41.4859971Z ##[group]Getting Git version info
+2026-10-20T08:44:41.4860675Z Working directory is '/__w/TheRock/TheRock/prejob'
+2026-10-20T08:44:41.4861768Z [command]/usr/bin/git version
+2026-10-20T08:44:41.4862299Z git version 2.51.0
+2026-10-20T08:44:41.4863947Z ##[endgroup]
+2026-10-20T08:44:41.4871203Z Temporarily overriding HOME='/__w/_temp/9f34245a-cac1-42d1-921d-c957b309648f' before making global git config changes
+2026-10-20T08:44:41.4872732Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T08:44:41.4874016Z [command]/usr/bin/git config --global --add safe.directory /__w/TheRock/TheRock/prejob
+2026-10-20T08:44:41.4876261Z ##[group]Determining repository object format
+2026-10-20T08:44:41.4877184Z ##[endgroup]
+2026-10-20T08:44:41.4877949Z ##[group]Initializing the repository
+2026-10-20T08:44:41.4878690Z [command]/usr/bin/git init /__w/TheRock/TheRock/prejob
+2026-10-20T08:44:41.4913375Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-20T08:44:41.4914508Z hint: is subject to change. To configure the initial branch name to use in all
+2026-10-20T08:44:41.4915726Z hint: of your new repositories, which will suppress this warning, call:
+2026-10-20T08:44:41.4916489Z hint:
+2026-10-20T08:44:41.4917084Z hint: 	git config --global init.defaultBranch <name>
+2026-10-20T08:44:41.4917748Z hint:
+2026-10-20T08:44:41.4918376Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-20T08:44:41.4919440Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-20T08:44:41.4920249Z hint:
+2026-10-20T08:44:41.4920695Z hint: 	git branch -m <name>
+2026-10-20T08:44:41.4921205Z hint:
+2026-10-20T08:44:41.4921880Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-20T08:44:41.4922980Z Initialized empty Git repository in /__w/TheRock/TheRock/prejob/.git/
+2026-10-20T08:44:41.4925001Z [command]/usr/bin/git remote add origin https://github.com/ROCm/TheRock
+2026-10-20T08:44:41.5005134Z ##[endgroup]
+2026-10-20T08:44:41.5005937Z ##[group]Disabling automatic garbage collection
+2026-10-20T08:44:41.5008545Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-20T08:44:41.5046641Z ##[endgroup]
+2026-10-20T08:44:41.5047451Z ##[group]Setting up auth
+2026-10-20T08:44:41.5048070Z Removing SSH command configuration
+2026-10-20T08:44:41.5050353Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T08:44:41.5092360Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T08:44:41.5468524Z Removing HTTP extra header
+2026-10-20T08:44:41.5472852Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T08:44:41.5510785Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T08:44:41.5851607Z Removing includeIf entries pointing to credentials config files
+2026-10-20T08:44:41.5856296Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T08:44:41.5895215Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T08:44:41.6357740Z [command]/usr/bin/git config --file /__w/_temp/git-credentials-de51ffc4-eb61-4a02-b1a4-ea236befc28b.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-20T08:44:41.6411894Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/TheRock/TheRock/prejob/.git.path /__w/_temp/git-credentials-de51ffc4-eb61-4a02-b1a4-ea236befc28b.config
+2026-10-20T08:44:41.6456300Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/TheRock/TheRock/prejob/.git/worktrees/*.path /__w/_temp/git-credentials-de51ffc4-eb61-4a02-b1a4-ea236befc28b.config
+2026-10-20T08:44:41.6494743Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/prejob/.git.path /github/runner_temp/git-credentials-de51ffc4-eb61-4a02-b1a4-ea236befc28b.config
+2026-10-20T08:44:41.6545390Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/prejob/.git/worktrees/*.path /github/runner_temp/git-credentials-de51ffc4-eb61-4a02-b1a4-ea236befc28b.config
+2026-10-20T08:44:41.6587518Z ##[endgroup]
+2026-10-20T08:44:41.6587952Z ##[group]Fetching the repository
+2026-10-20T08:44:41.6594153Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin +25fb893e63d297d0db8608d3c0b99258ad463aff:refs/remotes/origin/main
+2026-10-20T08:44:42.5020121Z From https://github.com/ROCm/TheRock
+2026-10-20T08:44:42.5021097Z  * [new ref]         25fb893e63d297d0db8608d3c0b99258ad463aff -> origin/main
+2026-10-20T08:44:42.5083566Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-20T08:44:42.5137021Z   origin/main
+2026-10-20T08:44:42.5147964Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-20T08:44:42.5196524Z 25fb893e63d297d0db8608d3c0b99258ad463aff
+2026-10-20T08:44:42.5200568Z ##[endgroup]
+2026-10-20T08:44:42.5201397Z ##[group]Determining the checkout info
+2026-10-20T08:44:42.5202865Z ##[endgroup]
+2026-10-20T08:44:42.5203586Z ##[group]Setting up sparse checkout
+2026-10-20T08:44:42.5208861Z [command]/usr/bin/git sparse-checkout set build_tools
+2026-10-20T08:44:42.5261540Z ##[endgroup]
+2026-10-20T08:44:42.5262307Z ##[group]Checking out the ref
+2026-10-20T08:44:42.5265553Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-20T08:44:48.3872238Z Updating files:   0% (2/598)
+2026-10-20T08:44:48.3878621Z Updating files:   1% (6/598)
+2026-10-20T08:44:48.3885262Z Updating files:   2% (12/598)
+2026-10-20T08:44:48.3893902Z Updating files:   3% (18/598)
+2026-10-20T08:44:48.3900934Z Updating files:   4% (24/598)
+2026-10-20T08:44:48.3907102Z Updating files:   5% (30/598)
+2026-10-20T08:44:48.3914634Z Updating files:   6% (36/598)
+2026-10-20T08:44:48.3924439Z Updating files:   7% (42/598)
+2026-10-20T08:44:48.3927056Z Updating files:   8% (48/598)
+2026-10-20T08:44:48.3936177Z Updating files:   9% (54/598)
+2026-10-20T08:44:48.3944269Z Updating files:  10% (60/598)
+2026-10-20T08:44:48.3950608Z Updating files:  11% (66/598)
+2026-10-20T08:44:48.3957486Z Updating files:  12% (72/598)
+2026-10-20T08:44:48.3967356Z Updating files:  13% (78/598)
+2026-10-20T08:44:48.3971477Z Updating files:  14% (84/598)
+2026-10-20T08:44:48.3981285Z Updating files:  15% (90/598)
+2026-10-20T08:44:48.3986561Z Updating files:  16% (96/598)
+2026-10-20T08:44:48.3991059Z Updating files:  17% (102/598)
+2026-10-20T08:44:48.3998917Z Updating files:  18% (108/598)
+2026-10-20T08:44:48.4002939Z Updating files:  19% (114/598)
+2026-10-20T08:44:48.4008005Z Updating files:  20% (120/598)
+2026-10-20T08:44:48.4011246Z Updating files:  21% (126/598)
+2026-10-20T08:44:48.4014838Z Updating files:  22% (132/598)
+2026-10-20T08:44:48.4019207Z Updating files:  23% (138/598)
+2026-10-20T08:44:48.4022418Z Updating files:  24% (144/598)
+2026-10-20T08:44:48.4027240Z Updating files:  25% (150/598)
+2026-10-20T08:44:48.4030353Z Updating files:  26% (156/598)
+2026-10-20T08:44:48.4040235Z Updating files:  27% (162/598)
+2026-10-20T08:44:48.4044232Z Updating files:  28% (168/598)
+2026-10-20T08:44:48.4056246Z Updating files:  29% (174/598)
+2026-10-20T08:44:48.4061414Z Updating files:  30% (180/598)
+2026-10-20T08:44:48.4067855Z Updating files:  31% (186/598)
+2026-10-20T08:44:48.4072744Z Updating files:  32% (192/598)
+2026-10-20T08:44:48.4078974Z Updating files:  33% (198/598)
+2026-10-20T08:44:48.4085146Z Updating files:  34% (204/598)
+2026-10-20T08:44:48.4090063Z Updating files:  35% (210/598)
+2026-10-20T08:44:48.4094780Z Updating files:  36% (216/598)
+2026-10-20T08:44:48.4099320Z Updating files:  37% (222/598)
+2026-10-20T08:44:48.4103821Z Updating files:  38% (228/598)
+2026-10-20T08:44:48.4107802Z Updating files:  39% (234/598)
+2026-10-20T08:44:48.4113921Z Updating files:  40% (240/598)
+2026-10-20T08:44:48.4121921Z Updating files:  41% (246/598)
+2026-10-20T08:44:48.4131881Z Updating files:  42% (252/598)
+2026-10-20T08:44:48.4139313Z Updating files:  43% (258/598)
+2026-10-20T08:44:48.4149510Z Updating files:  44% (264/598)
+2026-10-20T08:44:48.4163017Z Updating files:  45% (270/598)
+2026-10-20T08:44:48.4167219Z Updating files:  46% (276/598)
+2026-10-20T08:44:48.4171002Z Updating files:  47% (282/598)
+2026-10-20T08:44:48.4178918Z Updating files:  48% (288/598)
+2026-10-20T08:44:48.4188660Z Updating files:  49% (294/598)
+2026-10-20T08:44:48.4196624Z Updating files:  50% (299/598)
+2026-10-20T08:44:48.4204847Z Updating files:  51% (305/598)
+2026-10-20T08:44:48.4210110Z Updating files:  52% (311/598)
+2026-10-20T08:44:48.4214691Z Updating files:  53% (317/598)
+2026-10-20T08:44:48.4219482Z Updating files:  54% (323/598)
+2026-10-20T08:44:48.4223692Z Updating files:  55% (329/598)
+2026-10-20T08:44:48.4228589Z Updating files:  56% (335/598)
+2026-10-20T08:44:48.4233933Z Updating files:  57% (341/598)
+2026-10-20T08:44:48.4239419Z Updating files:  58% (347/598)
+2026-10-20T08:44:48.4245188Z Updating files:  59% (353/598)
+2026-10-20T08:44:48.4252488Z Updating files:  60% (359/598)
+2026-10-20T08:44:48.4259846Z Updating files:  61% (365/598)
+2026-10-20T08:44:48.4262594Z Updating files:  62% (371/598)
+2026-10-20T08:44:48.4266681Z Updating files:  63% (377/598)
+2026-10-20T08:44:48.4270486Z Updating files:  64% (383/598)
+2026-10-20T08:44:48.4277773Z Updating files:  65% (389/598)
+2026-10-20T08:44:48.4283354Z Updating files:  66% (395/598)
+2026-10-20T08:44:48.4287756Z Updating files:  67% (401/598)
+2026-10-20T08:44:48.4293504Z Updating files:  68% (407/598)
+2026-10-20T08:44:48.4297559Z Updating files:  69% (413/598)
+2026-10-20T08:44:48.4303573Z Updating files:  70% (419/598)
+2026-10-20T08:44:48.4308734Z Updating files:  71% (425/598)
+2026-10-20T08:44:48.4312661Z Updating files:  72% (431/598)
+2026-10-20T08:44:48.4316471Z Updating files:  73% (437/598)
+2026-10-20T08:44:48.4320175Z Updating files:  74% (443/598)
+2026-10-20T08:44:48.4322525Z Updating files:  75% (449/598)
+2026-10-20T08:44:48.4326412Z Updating files:  76% (455/598)
+2026-10-20T08:44:48.4329488Z Updating files:  77% (461/598)
+2026-10-20T08:44:48.4332431Z Updating files:  78% (467/598)
+2026-10-20T08:44:48.4337176Z Updating files:  79% (473/598)
+2026-10-20T08:44:48.4339397Z Updating files:  80% (479/598)
+2026-10-20T08:44:48.4342722Z Updating files:  81% (485/598)
+2026-10-20T08:44:48.4345359Z Updating files:  82% (491/598)
+2026-10-20T08:44:48.4348417Z Updating files:  83% (497/598)
+2026-10-20T08:44:48.4350591Z Updating files:  84% (503/598)
+2026-10-20T08:44:48.4353643Z Updating files:  85% (509/598)
+2026-10-20T08:44:48.4357261Z Updating files:  86% (515/598)
+2026-10-20T08:44:48.4358889Z Updating files:  87% (521/598)
+2026-10-20T08:44:48.4361200Z Updating files:  88% (527/598)
+2026-10-20T08:44:48.4363557Z Updating files:  89% (533/598)
+2026-10-20T08:44:48.4366000Z Updating files:  90% (539/598)
+2026-10-20T08:44:48.4368464Z Updating files:  91% (545/598)
+2026-10-20T08:44:48.4370816Z Updating files:  92% (551/598)
+2026-10-20T08:44:48.4373115Z Updating files:  93% (557/598)
+2026-10-20T08:44:48.4417992Z Updating files:  94% (563/598)
+2026-10-20T08:44:48.4418878Z Updating files:  95% (569/598)
+2026-10-20T08:44:48.4419319Z Updating files:  96% (575/598)
+2026-10-20T08:44:48.4419719Z Updating files:  97% (581/598)
+2026-10-20T08:44:48.4420104Z Updating files:  98% (587/598)
+2026-10-20T08:44:48.4420532Z Updating files:  99% (593/598)
+2026-10-20T08:44:48.4420918Z Updating files: 100% (598/598)
+2026-10-20T08:44:48.4421310Z Updating files: 100% (598/598), done.
+2026-10-20T08:44:48.4423029Z Switched to a new branch 'main'
+2026-10-20T08:44:48.4426971Z branch 'main' set up to track 'origin/main'.
+2026-10-20T08:44:48.4440156Z ##[endgroup]
+2026-10-20T08:44:48.4529071Z [command]/usr/bin/git log -1 --format=%H
+2026-10-20T08:44:48.4583486Z 25fb893e63d297d0db8608d3c0b99258ad463aff
+2026-10-20T08:44:48.4595993Z ##[group]Removing auth
+2026-10-20T08:44:48.4596511Z Removing SSH command configuration
+2026-10-20T08:44:48.4601165Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T08:44:48.4656799Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T08:44:48.5125272Z Removing HTTP extra header
+2026-10-20T08:44:48.5126415Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T08:44:48.5174461Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T08:44:48.5578024Z Removing includeIf entries pointing to credentials config files
+2026-10-20T08:44:48.5579449Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T08:44:48.5615158Z includeif.gitdir:/__w/TheRock/TheRock/prejob/.git.path
+2026-10-20T08:44:48.5616025Z includeif.gitdir:/__w/TheRock/TheRock/prejob/.git/worktrees/*.path
+2026-10-20T08:44:48.5616699Z includeif.gitdir:/github/workspace/prejob/.git.path
+2026-10-20T08:44:48.5617313Z includeif.gitdir:/github/workspace/prejob/.git/worktrees/*.path
+2026-10-20T08:44:48.5623289Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/TheRock/TheRock/prejob/.git.path
+2026-10-20T08:44:48.5658169Z /__w/_temp/git-credentials-de51ffc4-eb61-4a02-b1a4-ea236befc28b.config
+2026-10-20T08:44:48.5673266Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/TheRock/TheRock/prejob/.git.path \/__w\/_temp\/git\-credentials\-de51ffc4\-eb61\-4a02\-b1a4\-ea236befc28b\.config
+2026-10-20T08:44:48.5718505Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/TheRock/TheRock/prejob/.git/worktrees/*.path
+2026-10-20T08:44:48.5752175Z /__w/_temp/git-credentials-de51ffc4-eb61-4a02-b1a4-ea236befc28b.config
+2026-10-20T08:44:48.5765222Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/TheRock/TheRock/prejob/.git/worktrees/*.path \/__w\/_temp\/git\-credentials\-de51ffc4\-eb61\-4a02\-b1a4\-ea236befc28b\.config
+2026-10-20T08:44:48.5815233Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/prejob/.git.path
+2026-10-20T08:44:48.5849122Z /github/runner_temp/git-credentials-de51ffc4-eb61-4a02-b1a4-ea236befc28b.config
+2026-10-20T08:44:48.5857665Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/prejob/.git.path \/github\/runner_temp\/git\-credentials\-de51ffc4\-eb61\-4a02\-b1a4\-ea236befc28b\.config
+2026-10-20T08:44:48.5906675Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/prejob/.git/worktrees/*.path
+2026-10-20T08:44:48.5940458Z /github/runner_temp/git-credentials-de51ffc4-eb61-4a02-b1a4-ea236befc28b.config
+2026-10-20T08:44:48.5948806Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/prejob/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-de51ffc4\-eb61\-4a02\-b1a4\-ea236befc28b\.config
+2026-10-20T08:44:48.6007339Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T08:44:48.6414531Z Removing credentials config '/__w/_temp/git-credentials-de51ffc4-eb61-4a02-b1a4-ea236befc28b.config'
+2026-10-20T08:44:48.6424834Z ##[endgroup]
+2026-10-20T08:44:48.6724674Z ##[group]Run bash ./prejob/build_tools/github_actions/cleanup_processes.sh
+2026-10-20T08:44:48.6725466Z [36;1mbash ./prejob/build_tools/github_actions/cleanup_processes.sh[0m
+2026-10-20T08:44:48.6726475Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T08:44:48.6726896Z env:
+2026-10-20T08:44:48.6727220Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T08:44:48.6727670Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T08:44:48.6728126Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T08:44:48.6728530Z   ARTIFACT_RUN_ID: 39385932667
+2026-10-20T08:44:48.6728878Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T08:44:48.6729224Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T08:44:48.6729554Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T08:44:48.6729866Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T08:44:48.6730195Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T08:44:48.6730549Z   BUILD_VARIANT: release
+2026-10-20T08:44:48.6730845Z ##[endgroup]
+2026-10-20T08:44:48.7630729Z [*] ==== Starting cleanup_processes.sh ====
+2026-10-20T08:44:48.7791643Z [*] Not running in a container (or container ID not detected)
+2026-10-20T08:44:48.7792243Z [*] Build directory: /__w/TheRock/TheRock/build
+2026-10-20T08:44:48.7879701Z [*] Build directory does not exist, nothing to clean up
+2026-10-20T08:44:48.8020888Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-20T08:44:48.8021491Z with:
+2026-10-20T08:44:48.8021814Z   persist-credentials: false
+2026-10-20T08:44:48.8022207Z   repository: ROCm/TheRock
+2026-10-20T08:44:48.8025315Z   token: ***
+2026-10-20T08:44:48.8025683Z   ssh-strict: true
+2026-10-20T08:44:48.8026046Z   ssh-user: git
+2026-10-20T08:44:48.8026441Z   clean: true
+2026-10-20T08:44:48.8026844Z   sparse-checkout-cone-mode: true
+2026-10-20T08:44:48.8027261Z   fetch-depth: 1
+2026-10-20T08:44:48.8027574Z   fetch-tags: false
+2026-10-20T08:44:48.8027972Z   show-progress: true
+2026-10-20T08:44:48.8028329Z   lfs: false
+2026-10-20T08:44:48.8028670Z   submodules: false
+2026-10-20T08:44:48.8029002Z   set-safe-directory: true
+2026-10-20T08:44:48.8029386Z   allow-unsafe-pr-checkout: false
+2026-10-20T08:44:48.8029765Z env:
+2026-10-20T08:44:48.8030182Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T08:44:48.8030760Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T08:44:48.8031258Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T08:44:48.8031715Z   ARTIFACT_RUN_ID: 39385932667
+2026-10-20T08:44:48.8032086Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T08:44:48.8032457Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T08:44:48.8032821Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T08:44:48.8033169Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T08:44:48.8033584Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T08:44:48.8034019Z   BUILD_VARIANT: release
+2026-10-20T08:44:48.8034351Z ##[endgroup]
+2026-10-20T08:44:48.8045673Z ##[command]/usr/bin/docker exec  ba8e6d739159f0e4228fda9fbcc5a565b592036631eeef1ef2668404e8be4ed3 sh -c "cat /etc/*release | grep ^ID"
+2026-10-20T08:44:49.0827491Z Syncing repository: ROCm/TheRock
+2026-10-20T08:44:49.0828380Z ##[group]Getting Git version info
+2026-10-20T08:44:49.0828841Z Working directory is '/__w/TheRock/TheRock'
+2026-10-20T08:44:49.0850225Z [command]/usr/bin/git version
+2026-10-20T08:44:49.0907080Z git version 2.51.0
+2026-10-20T08:44:49.0928312Z ##[endgroup]
+2026-10-20T08:44:49.0939150Z Temporarily overriding HOME='/__w/_temp/ecf2c262-c8da-4d78-ba74-3980f4bdf59d' before making global git config changes
+2026-10-20T08:44:49.0940127Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T08:44:49.0942761Z [command]/usr/bin/git config --global --add safe.directory /__w/TheRock/TheRock
+2026-10-20T08:44:49.0991214Z Deleting the contents of '/__w/TheRock/TheRock'
+2026-10-20T08:44:49.1153229Z ##[group]Determining repository object format
+2026-10-20T08:44:49.1153871Z ##[endgroup]
+2026-10-20T08:44:49.1154355Z ##[group]Initializing the repository
+2026-10-20T08:44:49.1158498Z [command]/usr/bin/git init /__w/TheRock/TheRock
+2026-10-20T08:44:49.1218865Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-20T08:44:49.1219652Z hint: is subject to change. To configure the initial branch name to use in all
+2026-10-20T08:44:49.1220445Z hint: of your new repositories, which will suppress this warning, call:
+2026-10-20T08:44:49.1220945Z hint:
+2026-10-20T08:44:49.1221291Z hint: 	git config --global init.defaultBranch <name>
+2026-10-20T08:44:49.1221698Z hint:
+2026-10-20T08:44:49.1222084Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-20T08:44:49.1222751Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-20T08:44:49.1223283Z hint:
+2026-10-20T08:44:49.1223537Z hint: 	git branch -m <name>
+2026-10-20T08:44:49.1223843Z hint:
+2026-10-20T08:44:49.1224282Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-20T08:44:49.1225087Z Initialized empty Git repository in /__w/TheRock/TheRock/.git/
+2026-10-20T08:44:49.1231381Z [command]/usr/bin/git remote add origin https://github.com/ROCm/TheRock
+2026-10-20T08:44:49.1285824Z ##[endgroup]
+2026-10-20T08:44:49.1286282Z ##[group]Disabling automatic garbage collection
+2026-10-20T08:44:49.1287525Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-20T08:44:49.1329616Z ##[endgroup]
+2026-10-20T08:44:49.1330062Z ##[group]Setting up auth
+2026-10-20T08:44:49.1330360Z Removing SSH command configuration
+2026-10-20T08:44:49.1334909Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T08:44:49.1373992Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T08:44:49.1819939Z Removing HTTP extra header
+2026-10-20T08:44:49.1823898Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T08:44:49.1863963Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T08:44:49.2247665Z Removing includeIf entries pointing to credentials config files
+2026-10-20T08:44:49.2251859Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T08:44:49.2292316Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T08:44:49.2697719Z [command]/usr/bin/git config --file /__w/_temp/git-credentials-9ba021e6-c11a-453f-ab7f-4638aee25299.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-20T08:44:49.2750183Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/TheRock/TheRock/.git.path /__w/_temp/git-credentials-9ba021e6-c11a-453f-ab7f-4638aee25299.config
+2026-10-20T08:44:49.2793185Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/TheRock/TheRock/.git/worktrees/*.path /__w/_temp/git-credentials-9ba021e6-c11a-453f-ab7f-4638aee25299.config
+2026-10-20T08:44:49.2833985Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-9ba021e6-c11a-453f-ab7f-4638aee25299.config
+2026-10-20T08:44:49.2871618Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-9ba021e6-c11a-453f-ab7f-4638aee25299.config
+2026-10-20T08:44:49.2906821Z ##[endgroup]
+2026-10-20T08:44:49.2907285Z ##[group]Fetching the repository
+2026-10-20T08:44:49.2913314Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +25fb893e63d297d0db8608d3c0b99258ad463aff:refs/remotes/origin/main
+2026-10-20T08:44:50.7147215Z From https://github.com/ROCm/TheRock
+2026-10-20T08:44:50.7148190Z  * [new ref]         25fb893e63d297d0db8608d3c0b99258ad463aff -> origin/main
+2026-10-20T08:44:50.7190479Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-20T08:44:50.7235496Z   origin/main
+2026-10-20T08:44:50.7245823Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-20T08:44:50.7291560Z 25fb893e63d297d0db8608d3c0b99258ad463aff
+2026-10-20T08:44:50.7294746Z ##[endgroup]
+2026-10-20T08:44:50.7295377Z ##[group]Determining the checkout info
+2026-10-20T08:44:50.7299657Z ##[endgroup]
+2026-10-20T08:44:50.7305400Z [command]/usr/bin/git sparse-checkout disable
+2026-10-20T08:44:50.7360400Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-20T08:44:50.7399091Z ##[group]Checking out the ref
+2026-10-20T08:44:50.7402776Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-20T08:44:50.8340728Z Switched to a new branch 'main'
+2026-10-20T08:44:50.8341485Z branch 'main' set up to track 'origin/main'.
+2026-10-20T08:44:50.8348485Z ##[endgroup]
+2026-10-20T08:44:50.8406152Z [command]/usr/bin/git log -1 --format=%H
+2026-10-20T08:44:50.8459067Z 25fb893e63d297d0db8608d3c0b99258ad463aff
+2026-10-20T08:44:50.8471056Z ##[group]Removing auth
+2026-10-20T08:44:50.8471708Z Removing SSH command configuration
+2026-10-20T08:44:50.8475406Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T08:44:50.8525750Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T08:44:50.8949583Z Removing HTTP extra header
+2026-10-20T08:44:50.8951160Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T08:44:50.8997104Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T08:44:50.9391659Z Removing includeIf entries pointing to credentials config files
+2026-10-20T08:44:50.9392401Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T08:44:50.9429432Z includeif.gitdir:/__w/TheRock/TheRock/.git.path
+2026-10-20T08:44:50.9430170Z includeif.gitdir:/__w/TheRock/TheRock/.git/worktrees/*.path
+2026-10-20T08:44:50.9430740Z includeif.gitdir:/github/workspace/.git.path
+2026-10-20T08:44:50.9431268Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-20T08:44:50.9436801Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/TheRock/TheRock/.git.path
+2026-10-20T08:44:50.9479018Z /__w/_temp/git-credentials-9ba021e6-c11a-453f-ab7f-4638aee25299.config
+2026-10-20T08:44:50.9489995Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/TheRock/TheRock/.git.path \/__w\/_temp\/git\-credentials\-9ba021e6\-c11a\-453f\-ab7f\-4638aee25299\.config
+2026-10-20T08:44:50.9538614Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/TheRock/TheRock/.git/worktrees/*.path
+2026-10-20T08:44:50.9572601Z /__w/_temp/git-credentials-9ba021e6-c11a-453f-ab7f-4638aee25299.config
+2026-10-20T08:44:50.9582190Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/TheRock/TheRock/.git/worktrees/*.path \/__w\/_temp\/git\-credentials\-9ba021e6\-c11a\-453f\-ab7f\-4638aee25299\.config
+2026-10-20T08:44:50.9629609Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-20T08:44:50.9667476Z /github/runner_temp/git-credentials-9ba021e6-c11a-453f-ab7f-4638aee25299.config
+2026-10-20T08:44:50.9675010Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-9ba021e6\-c11a\-453f\-ab7f\-4638aee25299\.config
+2026-10-20T08:44:50.9720205Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-20T08:44:50.9757242Z /github/runner_temp/git-credentials-9ba021e6-c11a-453f-ab7f-4638aee25299.config
+2026-10-20T08:44:50.9765859Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-9ba021e6\-c11a\-453f\-ab7f\-4638aee25299\.config
+2026-10-20T08:44:50.9818530Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T08:44:51.0226693Z Removing credentials config '/__w/_temp/git-credentials-9ba021e6-c11a-453f-ab7f-4638aee25299.config'
+2026-10-20T08:44:51.0230925Z ##[endgroup]
+2026-10-20T08:44:51.0596056Z Prepare all required actions
+2026-10-20T08:44:51.0597049Z Getting action download info
+2026-10-20T08:44:51.1617442Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-10-20T08:44:56.6207603Z ##[group]Run ./.github/actions/setup_test_environment
+2026-10-20T08:44:56.6207944Z with:
+2026-10-20T08:44:56.6208158Z   ARTIFACT_RUN_ID: 39385932667
+2026-10-20T08:44:56.6208413Z   ARTIFACT_GROUP: gfx90a
+2026-10-20T08:44:56.6208647Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T08:44:56.6208880Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T08:44:56.6209171Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T08:44:56.6209704Z   FETCH_ARTIFACT_ARGS: --blas --hipdnn --hipblasltprovider --hipdnn-integration-tests --tests
+2026-10-20T08:44:56.6210169Z   RELEASE_TYPE: ci
+2026-10-20T08:44:56.6210375Z env:
+2026-10-20T08:44:56.6210602Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T08:44:56.6210965Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T08:44:56.6211304Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T08:44:56.6211611Z   ARTIFACT_RUN_ID: 39385932667
+2026-10-20T08:44:56.6211861Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T08:44:56.6212106Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T08:44:56.6212349Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T08:44:56.6212581Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T08:44:56.6212831Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T08:44:56.6213095Z   BUILD_VARIANT: release
+2026-10-20T08:44:56.6213319Z   RETRY_THIS_STEP: true
+2026-10-20T08:44:56.6213549Z   STEP_TIMEOUT_MINUTES: 15
+2026-10-20T08:44:56.6213779Z ##[endgroup]
+2026-10-20T08:44:56.6281400Z ##[start-action display=Setting up Python;id=__self.__actions_setup-python]
+2026-10-20T08:44:56.6360008Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-10-20T08:44:56.6360678Z with:
+2026-10-20T08:44:56.6361033Z   python-version: 3.12
+2026-10-20T08:44:56.6361473Z   check-latest: false
+2026-10-20T08:44:56.6363913Z   token: ***
+2026-10-20T08:44:56.6364685Z   update-environment: true
+2026-10-20T08:44:56.6365246Z   allow-prereleases: false
+2026-10-20T08:44:56.6365619Z   freethreaded: false
+2026-10-20T08:44:56.6366022Z env:
+2026-10-20T08:44:56.6366415Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T08:44:56.6366874Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T08:44:56.6367454Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T08:44:56.6367903Z   ARTIFACT_RUN_ID: 39385932667
+2026-10-20T08:44:56.6368320Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T08:44:56.6368751Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T08:44:56.6369158Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T08:44:56.6369887Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T08:44:56.6370273Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T08:44:56.6370739Z   BUILD_VARIANT: release
+2026-10-20T08:44:56.6371129Z   RETRY_THIS_STEP: true
+2026-10-20T08:44:56.6371492Z   STEP_TIMEOUT_MINUTES: 15
+2026-10-20T08:44:56.6371943Z ##[endgroup]
+2026-10-20T08:44:56.6380924Z ##[command]/usr/bin/docker exec  ba8e6d739159f0e4228fda9fbcc5a565b592036631eeef1ef2668404e8be4ed3 sh -c "cat /etc/*release | grep ^ID"
+2026-10-20T08:44:56.9531178Z ##[group]Installed versions
+2026-10-20T08:44:56.9538707Z Version 3.12 was not found in the local cache
+2026-10-20T08:45:02.5867495Z Version 3.12 is available for downloading
+2026-10-20T08:45:02.5868751Z Download from "https://github.com/actions/python-versions/releases/download/3.12.15-36805895057/python-3.12.15-linux-24.04-x64.tar.gz"
+2026-10-20T08:45:26.6332933Z Extract downloaded archive
+2026-10-20T08:45:26.6497740Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /__w/_temp/52caf861-56e9-49b9-9120-111c1801b7db -f /__w/_temp/76367104-4dcf-4f8b-8376-47df016cdd55
+2026-10-20T08:45:28.6322021Z Execute installation script
+2026-10-20T08:45:28.6542644Z Check if Python hostedtoolcache folder exist...
+2026-10-20T08:45:28.6543149Z Creating Python hostedtoolcache folder...
+2026-10-20T08:45:28.6558969Z Create Python 3.12.15 folder
+2026-10-20T08:45:28.6574863Z Copy Python binaries to hostedtoolcache folder
+2026-10-20T08:45:29.4218537Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-10-20T08:45:29.4285804Z Upgrading pip...
+2026-10-20T08:45:30.7814469Z ##[warning]WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+2026-10-20T08:45:33.1786581Z Collecting pip
+2026-10-20T08:45:33.3239934Z Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+2026-10-20T08:45:33.3369362Z Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+2026-10-20T08:45:33.5984121Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 6.7 MB/s eta 0:00:00
+2026-10-20T08:45:33.5984823Z 
+2026-10-20T08:45:33.6333795Z Installing collected packages: pip
+2026-10-20T08:45:33.6335010Z Attempting uninstall: pip
+2026-10-20T08:45:33.6371032Z Found existing installation: pip 25.0.1
+2026-10-20T08:45:33.6777612Z Uninstalling pip-25.0.1:
+2026-10-20T08:45:33.6844314Z Successfully uninstalled pip-25.0.1
+2026-10-20T08:45:34.5746953Z Successfully installed pip-26.2.1
+2026-10-20T08:45:34.6541362Z Create complete file
+2026-10-20T08:45:34.6603750Z Successfully set up CPython (3.12.15)
+2026-10-20T08:45:34.6604355Z ##[endgroup]
+2026-10-20T08:45:34.7002829Z ##[end-action id=__self.__actions_setup-python;outcome=success;conclusion=success;duration_ms=38071]
+2026-10-20T08:45:34.7009711Z ##[start-action display=Install UV;id=__self.__run]
+2026-10-20T08:45:34.7051885Z ##[group]Run pip install uv
+2026-10-20T08:45:34.7052576Z [36;1mpip install uv[0m
+2026-10-20T08:45:34.7053858Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T08:45:34.7054490Z env:
+2026-10-20T08:45:34.7055152Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T08:45:34.7055896Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T08:45:34.7056605Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T08:45:34.7057258Z   ARTIFACT_RUN_ID: 39385932667
+2026-10-20T08:45:34.7057792Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T08:45:34.7058318Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T08:45:34.7058829Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T08:45:34.7059315Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T08:45:34.7059840Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T08:45:34.7060423Z   BUILD_VARIANT: release
+2026-10-20T08:45:34.7060973Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:34.7061749Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T08:45:34.7063085Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:34.7063768Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:34.7064446Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:34.7065277Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T08:45:34.7065914Z   RETRY_THIS_STEP: true
+2026-10-20T08:45:34.7066409Z   STEP_TIMEOUT_MINUTES: 15
+2026-10-20T08:45:34.7066914Z ##[endgroup]
+2026-10-20T08:45:35.0734975Z WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+2026-10-20T08:45:35.6580074Z Collecting uv
+2026-10-20T08:45:35.7288910Z   Downloading uv-0.13.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+2026-10-20T08:45:35.7403901Z Downloading uv-0.13.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+2026-10-20T08:45:42.4088959Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.3/17.3 MB 2.6 MB/s  0:00:06
+2026-10-20T08:45:42.4718401Z Installing collected packages: uv
+2026-10-20T08:45:42.6714096Z Successfully installed uv-0.13.3
+2026-10-20T08:45:42.6719471Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-10-20T08:45:42.7674052Z ##[end-action id=__self.__run;outcome=success;conclusion=success;duration_ms=8066]
+2026-10-20T08:45:42.7678680Z ##[start-action display=Create Python venv;id=__self.__run_2]
+2026-10-20T08:45:42.7702163Z ##[group]Run python build_tools/setup_venv.py ${VENV_DIR} \
+2026-10-20T08:45:42.7702766Z [36;1mpython build_tools/setup_venv.py ${VENV_DIR} \[0m
+2026-10-20T08:45:42.7703292Z [36;1m  --activate-in-future-github-actions-steps \[0m
+2026-10-20T08:45:42.7703710Z [36;1m  --use-uv[0m
+2026-10-20T08:45:42.7704134Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T08:45:42.7704513Z env:
+2026-10-20T08:45:42.7704957Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T08:45:42.7705373Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T08:45:42.7705796Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T08:45:42.7706194Z   ARTIFACT_RUN_ID: 39385932667
+2026-10-20T08:45:42.7706506Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T08:45:42.7706818Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T08:45:42.7707114Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T08:45:42.7707399Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T08:45:42.7707696Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T08:45:42.7708031Z   BUILD_VARIANT: release
+2026-10-20T08:45:42.7708352Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:42.7708797Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T08:45:42.7709251Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:42.7709687Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:42.7710092Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:42.7710536Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T08:45:42.7710963Z   RETRY_THIS_STEP: true
+2026-10-20T08:45:42.7711252Z   STEP_TIMEOUT_MINUTES: 15
+2026-10-20T08:45:42.7711538Z ##[endgroup]
+2026-10-20T08:45:42.9334129Z Creating venv at '/__w/TheRock/TheRock/.venv'
+2026-10-20T08:45:42.9335055Z   Dir relative to CWD: '.venv'
+2026-10-20T08:45:42.9335696Z   Dir fully resolved : '/__w/TheRock/TheRock/.venv'
+2026-10-20T08:45:42.9336197Z 
+2026-10-20T08:45:42.9336565Z ++ Exec [/__w/TheRock/TheRock]$ uv venv /__w/TheRock/TheRock/.venv
+2026-10-20T08:45:42.9979571Z Using CPython 3.12.15 interpreter at: /__w/_tool/Python/3.12.15/x64/bin/python
+2026-10-20T08:45:42.9980530Z Creating virtual environment at: .venv
+2026-10-20T08:45:43.0020719Z 
+2026-10-20T08:45:43.0021142Z Activating venv for future GitHub Actions workflow steps
+2026-10-20T08:45:43.0026528Z Adding to path by appending to $GITHUB_PATH:
+2026-10-20T08:45:43.0027078Z   '/__w/TheRock/TheRock/.venv/bin'
+2026-10-20T08:45:43.0027564Z Setting environment variable by appending to $GITHUB_ENV:
+2026-10-20T08:45:43.0028094Z   {'VIRTUAL_ENV': PosixPath('/__w/TheRock/TheRock/.venv')}
+2026-10-20T08:45:43.0255255Z ##[end-action id=__self.__run_2;outcome=success;conclusion=success;duration_ms=257]
+2026-10-20T08:45:43.0261262Z ##[start-action display=Install test requirements;id=__self.__run_3]
+2026-10-20T08:45:43.0322382Z ##[group]Run uv pip install -r requirements-test.txt
+2026-10-20T08:45:43.0322893Z [36;1muv pip install -r requirements-test.txt[0m
+2026-10-20T08:45:43.0323306Z [36;1muv pip freeze[0m
+2026-10-20T08:45:43.0323816Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T08:45:43.0324214Z env:
+2026-10-20T08:45:43.0324504Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T08:45:43.0325057Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T08:45:43.0325498Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T08:45:43.0325902Z   ARTIFACT_RUN_ID: 39385932667
+2026-10-20T08:45:43.0326222Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T08:45:43.0326848Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T08:45:43.0327167Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T08:45:43.0327467Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T08:45:43.0327782Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T08:45:43.0328123Z   BUILD_VARIANT: release
+2026-10-20T08:45:43.0328457Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:43.0328925Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T08:45:43.0329392Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:43.0329839Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:43.0330291Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:43.0330730Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T08:45:43.0331150Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-20T08:45:43.0331503Z   RETRY_THIS_STEP: true
+2026-10-20T08:45:43.0331790Z   STEP_TIMEOUT_MINUTES: 15
+2026-10-20T08:45:43.0332097Z ##[endgroup]
+2026-10-20T08:45:44.8644368Z Resolved 41 packages in 1.68s
+2026-10-20T08:45:44.8719877Z    Building perfetto==0.7.0
+2026-10-20T08:45:44.9342857Z Downloading botocore (13.3MiB)
+2026-10-20T08:45:44.9346645Z Downloading setuptools (1.0MiB)
+2026-10-20T08:45:44.9355971Z Downloading pygments (1.2MiB)
+2026-10-20T08:45:45.1167554Z       Built perfetto==0.7.0
+2026-10-20T08:45:46.0427739Z  Downloaded setuptools
+2026-10-20T08:45:46.0598986Z  Downloaded pygments
+2026-10-20T08:45:48.3585968Z  Downloaded botocore
+2026-10-20T08:45:48.3586709Z Prepared 41 packages in 3.49s
+2026-10-20T08:45:48.3605704Z warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+2026-10-20T08:45:48.3607286Z          If the cache and target directories are on different filesystems, hardlinking may not be supported.
+2026-10-20T08:45:48.3608853Z          If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+2026-10-20T08:45:48.6959746Z Installed 41 packages in 336ms
+2026-10-20T08:45:48.6960368Z  + attrs==26.1.0
+2026-10-20T08:45:48.6960900Z  + backports-zstd==1.8.0
+2026-10-20T08:45:48.6961422Z  + boto3==1.39.15
+2026-10-20T08:45:48.6961853Z  + botocore==1.39.17
+2026-10-20T08:45:48.6962301Z  + certifi==2026.10.19
+2026-10-20T08:45:48.6962775Z  + charset-normalizer==3.5.2
+2026-10-20T08:45:48.6963280Z  + cmake-parser==0.9.2
+2026-10-20T08:45:48.6963717Z  + coverage==7.16.2
+2026-10-20T08:45:48.6964130Z  + idna==3.20
+2026-10-20T08:45:48.6964527Z  + iniconfig==2.3.1
+2026-10-20T08:45:48.6965600Z  + installer==0.7.0
+2026-10-20T08:45:48.6966624Z  + jinja2==3.1.6
+2026-10-20T08:45:48.6967055Z  + jmespath==1.1.0
+2026-10-20T08:45:48.6967488Z  + markupsafe==3.0.4
+2026-10-20T08:45:48.6967926Z  + packaging==25.0
+2026-10-20T08:45:48.6969133Z  + perfetto==0.7.0
+2026-10-20T08:45:48.6969546Z  + pkginfo==1.12.1.2
+2026-10-20T08:45:48.6969967Z  + pluggy==1.7.0
+2026-10-20T08:45:48.6970564Z  + prettytable==3.12.0
+2026-10-20T08:45:48.6971076Z  + protobuf==7.36.2
+2026-10-20T08:45:48.6971470Z  + psutil==7.1.3
+2026-10-20T08:45:48.6971870Z  + pygments==2.21.0
+2026-10-20T08:45:48.6972265Z  + pytest==9.0.3
+2026-10-20T08:45:48.6972668Z  + pytest-check==2.5.3
+2026-10-20T08:45:48.6973099Z  + pytest-cov==6.0.0
+2026-10-20T08:45:48.6973546Z  + pytest-timeout==2.4.0
+2026-10-20T08:45:48.6974044Z  + python-dateutil==2.9.0.post0
+2026-10-20T08:45:48.6974696Z  + python-debian==1.1.1
+2026-10-20T08:45:48.6975158Z  + python-magic==0.4.27
+2026-10-20T08:45:48.6975618Z  + pyyaml==6.0.2
+2026-10-20T08:45:48.6976016Z  + pyzstd==0.20.0
+2026-10-20T08:45:48.6976422Z  + requests==2.33.0
+2026-10-20T08:45:48.6976833Z  + s3transfer==0.13.1
+2026-10-20T08:45:48.6977267Z  + setuptools==81.0.0
+2026-10-20T08:45:48.6977688Z  + six==1.17.0
+2026-10-20T08:45:48.6978077Z  + toml==0.10.2
+2026-10-20T08:45:48.6978532Z  + typing-extensions==4.16.0
+2026-10-20T08:45:48.6979013Z  + urllib3==2.8.0
+2026-10-20T08:45:48.6979403Z  + wcwidth==0.9.2
+2026-10-20T08:45:48.6979790Z  + wheel==0.46.2
+2026-10-20T08:45:48.6981920Z  + zlib-ng==1.0.0
+2026-10-20T08:45:48.7615579Z attrs==26.1.0
+2026-10-20T08:45:48.7616357Z backports-zstd==1.8.0
+2026-10-20T08:45:48.7616696Z boto3==1.39.15
+2026-10-20T08:45:48.7616974Z botocore==1.39.17
+2026-10-20T08:45:48.7617372Z certifi==2026.10.19
+2026-10-20T08:45:48.7617689Z charset-normalizer==3.5.2
+2026-10-20T08:45:48.7618021Z cmake-parser==0.9.2
+2026-10-20T08:45:48.7618307Z coverage==7.16.2
+2026-10-20T08:45:48.7618584Z idna==3.20
+2026-10-20T08:45:48.7618847Z iniconfig==2.3.1
+2026-10-20T08:45:48.7619127Z installer==0.7.0
+2026-10-20T08:45:48.7619397Z jinja2==3.1.6
+2026-10-20T08:45:48.7619671Z jmespath==1.1.0
+2026-10-20T08:45:48.7619955Z markupsafe==3.0.4
+2026-10-20T08:45:48.7620253Z packaging==25.0
+2026-10-20T08:45:48.7620529Z perfetto==0.7.0
+2026-10-20T08:45:48.7620810Z pkginfo==1.12.1.2
+2026-10-20T08:45:48.7621086Z pluggy==1.7.0
+2026-10-20T08:45:48.7621366Z prettytable==3.12.0
+2026-10-20T08:45:48.7621649Z protobuf==7.36.2
+2026-10-20T08:45:48.7621919Z psutil==7.1.3
+2026-10-20T08:45:48.7622187Z pygments==2.21.0
+2026-10-20T08:45:48.7622457Z pytest==9.0.3
+2026-10-20T08:45:48.7622736Z pytest-check==2.5.3
+2026-10-20T08:45:48.7623027Z pytest-cov==6.0.0
+2026-10-20T08:45:48.7623320Z pytest-timeout==2.4.0
+2026-10-20T08:45:48.7623657Z python-dateutil==2.9.0.post0
+2026-10-20T08:45:48.7623987Z python-debian==1.1.1
+2026-10-20T08:45:48.7624277Z python-magic==0.4.27
+2026-10-20T08:45:48.7624735Z pyyaml==6.0.2
+2026-10-20T08:45:48.7624992Z pyzstd==0.20.0
+2026-10-20T08:45:48.7625249Z requests==2.33.0
+2026-10-20T08:45:48.7625516Z s3transfer==0.13.1
+2026-10-20T08:45:48.7625784Z setuptools==81.0.0
+2026-10-20T08:45:48.7626044Z six==1.17.0
+2026-10-20T08:45:48.7626288Z toml==0.10.2
+2026-10-20T08:45:48.7626552Z typing-extensions==4.16.0
+2026-10-20T08:45:48.7626853Z urllib3==2.8.0
+2026-10-20T08:45:48.7627113Z wcwidth==0.9.2
+2026-10-20T08:45:48.7627360Z wheel==0.46.2
+2026-10-20T08:45:48.7627608Z zlib-ng==1.0.0
+2026-10-20T08:45:48.7753902Z ##[end-action id=__self.__run_3;outcome=success;conclusion=success;duration_ms=5749]
+2026-10-20T08:45:48.7758936Z ##[start-action display=Install Choco tools;id=__self.__run_4]
+2026-10-20T08:45:48.7772888Z ##[end-action id=__self.__run_4;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-20T08:45:48.7778688Z ##[start-action display=Download and Unpack Artifacts;id=__self.__run_5]
+2026-10-20T08:45:48.7808000Z ##[group]Run python ./build_tools/install_rocm_from_artifacts.py \
+2026-10-20T08:45:48.7808696Z [36;1mpython ./build_tools/install_rocm_from_artifacts.py \[0m
+2026-10-20T08:45:48.7809238Z [36;1m  --run-id=${ARTIFACT_RUN_ID} \[0m
+2026-10-20T08:45:48.7809718Z [36;1m  --artifact-group=${ARTIFACT_GROUP} \[0m
+2026-10-20T08:45:48.7810203Z [36;1m  --amdgpu-targets=${AMDGPU_TARGETS} \[0m
+2026-10-20T08:45:48.7810666Z [36;1m  --output-dir=${OUTPUT_ARTIFACTS_DIR} \[0m
+2026-10-20T08:45:48.7811613Z [36;1m  ${FETCH_ARTIFACT_ARGS}[0m
+2026-10-20T08:45:48.7812853Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T08:45:48.7813287Z env:
+2026-10-20T08:45:48.7813613Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T08:45:48.7814102Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T08:45:48.7814557Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T08:45:48.7815079Z   ARTIFACT_RUN_ID: 39385932667
+2026-10-20T08:45:48.7815437Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T08:45:48.7815805Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T08:45:48.7816153Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T08:45:48.7816487Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T08:45:48.7816833Z   ARTIFACT_GROUP: gfx90a
+2026-10-20T08:45:48.7817175Z   BUILD_VARIANT: release
+2026-10-20T08:45:48.7817583Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:48.7818089Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T08:45:48.7818594Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:48.7819078Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:48.7819546Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:48.7820002Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T08:45:48.7820836Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-20T08:45:48.7821303Z   RETRY_THIS_STEP: true
+2026-10-20T08:45:48.7821656Z   STEP_TIMEOUT_MINUTES: 15
+2026-10-20T08:45:48.7822257Z   FETCH_ARTIFACT_ARGS: --blas --hipdnn --hipblasltprovider --hipdnn-integration-tests --tests
+2026-10-20T08:45:48.7822898Z   RELEASE_TYPE: ci
+2026-10-20T08:45:48.7826512Z   GITHUB_TOKEN: ***
+2026-10-20T08:45:48.7826944Z   STEP_NAME: Download and Unpack Artifacts
+2026-10-20T08:45:48.7827373Z   STEP_TIMEOUT_TOLERANCE: 2
+2026-10-20T08:45:48.7827739Z ##[endgroup]
+2026-10-20T08:45:49.5979729Z ### Installing TheRock using artifacts ###
+2026-10-20T08:45:49.5980309Z Creating output directory '/__w/TheRock/TheRock/build'
+2026-10-20T08:45:49.5980839Z Created output directory '/__w/TheRock/TheRock/build'
+2026-10-20T08:45:49.5981268Z Retrieving artifacts for run ID 39385932667
+2026-10-20T08:45:49.5981518Z 
+2026-10-20T08:45:49.5981659Z Calling fetch_artifacts_main with args:
+2026-10-20T08:45:49.5984355Z   --run-id 39385932667 --artifact-group gfx90a --output-dir build --flatten --amdgpu-targets gfx90a core-hipinfo_run core-runtime_run core-runtime_lib rocjitsu-hotswap_lib sysdeps_lib base_run base_lib amd-llvm_run amd-llvm_lib core-amdsmi_run core-amdsmi_lib core-hip_lib core-hip_dev core-kpack_lib core-ocl_lib core-ocl_dev rocprofiler-sdk_lib host-suite-sparse_lib hipdnn-integration-tests_run rand_lib blas_lib hipdnn_lib hipdnn-integration-tests_lib hipblasltprovider_lib blas_test hipdnn_test hipdnn-integration-tests_test hipblasltprovider_test
+2026-10-20T08:45:49.5987479Z 
+2026-10-20T08:45:49.5987633Z Retrieving bucket info for workflow run...
+2026-10-20T08:45:49.5988017Z   github_repository: ROCm/TheRock
+2026-10-20T08:45:49.5988339Z   release_type: ci
+2026-10-20T08:45:53.7065854Z Traceback (most recent call last):
+2026-10-20T08:45:53.7082358Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 1357, in do_open
+2026-10-20T08:45:53.7083676Z     h.request(req.get_method(), req.selector, req.data, headers,
+2026-10-20T08:45:53.7085278Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/http/client.py", line 1386, in request
+2026-10-20T08:45:53.7086514Z     self._send_request(method, url, body, headers, encode_chunked)
+2026-10-20T08:45:53.7087760Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/http/client.py", line 1432, in _send_request
+2026-10-20T08:45:53.7088917Z     self.endheaders(body, encode_chunked=encode_chunked)
+2026-10-20T08:45:53.7090041Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/http/client.py", line 1381, in endheaders
+2026-10-20T08:45:53.7091175Z     self._send_output(message_body, encode_chunked=encode_chunked)
+2026-10-20T08:45:53.7092334Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/http/client.py", line 1141, in _send_output
+2026-10-20T08:45:53.7094197Z     self.send(msg)
+2026-10-20T08:45:53.7095264Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/http/client.py", line 1085, in send
+2026-10-20T08:45:53.7096146Z     self.connect()
+2026-10-20T08:45:53.7097010Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/http/client.py", line 1520, in connect
+2026-10-20T08:45:53.7097951Z     super().connect()
+2026-10-20T08:45:53.7098825Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/http/client.py", line 1051, in connect
+2026-10-20T08:45:53.7099836Z     self.sock = self._create_connection(
+2026-10-20T08:45:53.7100471Z                 ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7101472Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/socket.py", line 841, in create_connection
+2026-10-20T08:45:53.7102523Z     for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+2026-10-20T08:45:53.7103251Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7104223Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/socket.py", line 978, in getaddrinfo
+2026-10-20T08:45:53.7105606Z     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2026-10-20T08:45:53.7106524Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7107844Z socket.gaierror: [Errno -5] No address associated with hostname
+2026-10-20T08:45:53.7108480Z 
+2026-10-20T08:45:53.7108915Z During handling of the above exception, another exception occurred:
+2026-10-20T08:45:53.7109504Z 
+2026-10-20T08:45:53.7109764Z Traceback (most recent call last):
+2026-10-20T08:45:53.7110977Z   File "/__w/TheRock/TheRock/build_tools/github_actions/github_actions_api.py", line 263, in _send_request_via_rest_api
+2026-10-20T08:45:53.7112212Z     with urlopen(
+2026-10-20T08:45:53.7112662Z          ^^^^^^^^
+2026-10-20T08:45:53.7113508Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 215, in urlopen
+2026-10-20T08:45:53.7114476Z     return opener.open(url, data, timeout)
+2026-10-20T08:45:53.7115343Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7116272Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 515, in open
+2026-10-20T08:45:53.7117207Z     response = self._open(req, data)
+2026-10-20T08:45:53.7117806Z                ^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7118708Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 532, in _open
+2026-10-20T08:45:53.7119822Z     result = self._call_chain(self.handle_open, protocol, protocol +
+2026-10-20T08:45:53.7120653Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7121688Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
+2026-10-20T08:45:53.7122640Z     result = func(*args)
+2026-10-20T08:45:53.7123157Z              ^^^^^^^^^^^
+2026-10-20T08:45:53.7124029Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 1405, in https_open
+2026-10-20T08:45:53.7125318Z     return self.do_open(http.client.HTTPSConnection, req,
+2026-10-20T08:45:53.7126071Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7127060Z   File "/__w/_tool/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 1360, in do_open
+2026-10-20T08:45:53.7128031Z     raise URLError(err)
+2026-10-20T08:45:53.7128887Z urllib.error.URLError: <urlopen error [Errno -5] No address associated with hostname>
+2026-10-20T08:45:53.7129655Z 
+2026-10-20T08:45:53.7130061Z The above exception was the direct cause of the following exception:
+2026-10-20T08:45:53.7130671Z 
+2026-10-20T08:45:53.7130902Z Traceback (most recent call last):
+2026-10-20T08:45:53.7132190Z   File "/__w/TheRock/TheRock/build_tools/_therock_utils/s3_buckets.py", line 272, in get_artifacts_bucket_config_for_workflow_run
+2026-10-20T08:45:53.7133477Z     workflow_run = gha_query_workflow_run_by_id(
+2026-10-20T08:45:53.7134160Z                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7135866Z   File "/__w/TheRock/TheRock/build_tools/github_actions/github_actions_api.py", line 778, in gha_query_workflow_run_by_id
+2026-10-20T08:45:53.7137096Z     return gha_send_request(url)
+2026-10-20T08:45:53.7137681Z            ^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7138820Z   File "/__w/TheRock/TheRock/build_tools/github_actions/github_actions_api.py", line 613, in gha_send_request
+2026-10-20T08:45:53.7139981Z     return _default_github_api.send_request(
+2026-10-20T08:45:53.7140625Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7141716Z   File "/__w/TheRock/TheRock/build_tools/github_actions/github_actions_api.py", line 350, in send_request
+2026-10-20T08:45:53.7142823Z     return self._send_request_via_rest_api(
+2026-10-20T08:45:53.7143454Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7144807Z   File "/__w/TheRock/TheRock/build_tools/github_actions/github_actions_api.py", line 299, in _send_request_via_rest_api
+2026-10-20T08:45:53.7146276Z     raise GitHubAPIError(f"Network error for {url}: {e.reason}") from e
+2026-10-20T08:45:53.7148214Z github_actions.github_actions_api.GitHubAPIError: Network error for https://api.github.com/repos/ROCm/TheRock/actions/runs/39385932667: [Errno -5] No address associated with hostname
+2026-10-20T08:45:53.7149706Z 
+2026-10-20T08:45:53.7150421Z The above exception was the direct cause of the following exception:
+2026-10-20T08:45:53.7151057Z 
+2026-10-20T08:45:53.7151285Z Traceback (most recent call last):
+2026-10-20T08:45:53.7152289Z   File "/__w/TheRock/TheRock/./build_tools/install_rocm_from_artifacts.py", line 1124, in <module>
+2026-10-20T08:45:53.7153292Z     main(sys.argv[1:])
+2026-10-20T08:45:53.7154162Z   File "/__w/TheRock/TheRock/./build_tools/install_rocm_from_artifacts.py", line 1120, in main
+2026-10-20T08:45:53.7155216Z     run(args)
+2026-10-20T08:45:53.7156017Z   File "/__w/TheRock/TheRock/./build_tools/install_rocm_from_artifacts.py", line 769, in run
+2026-10-20T08:45:53.7156967Z     retrieve_artifacts_by_run_id(args)
+2026-10-20T08:45:53.7158152Z   File "/__w/TheRock/TheRock/./build_tools/install_rocm_from_artifacts.py", line 652, in retrieve_artifacts_by_run_id
+2026-10-20T08:45:53.7159330Z     fetch_artifacts_main(argv)
+2026-10-20T08:45:53.7160182Z   File "/__w/TheRock/TheRock/build_tools/fetch_artifacts.py", line 414, in main
+2026-10-20T08:45:53.7161057Z     run(args)
+2026-10-20T08:45:53.7161776Z   File "/__w/TheRock/TheRock/build_tools/fetch_artifacts.py", line 224, in run
+2026-10-20T08:45:53.7162726Z     output_root = WorkflowOutputRoot.from_workflow_run(
+2026-10-20T08:45:53.7163444Z                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7164754Z   File "/__w/TheRock/TheRock/build_tools/_therock_utils/workflow_outputs.py", line 331, in from_workflow_run
+2026-10-20T08:45:53.7165933Z     external_repo, bucket = _retrieve_bucket_info(
+2026-10-20T08:45:53.7166623Z                             ^^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7167768Z   File "/__w/TheRock/TheRock/build_tools/_therock_utils/workflow_outputs.py", line 387, in _retrieve_bucket_info
+2026-10-20T08:45:53.7169113Z     artifact_bucket_config = get_artifacts_bucket_config_for_workflow_run(
+2026-10-20T08:45:53.7170001Z                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-20T08:45:53.7171361Z   File "/__w/TheRock/TheRock/build_tools/_therock_utils/s3_buckets.py", line 279, in get_artifacts_bucket_config_for_workflow_run
+2026-10-20T08:45:53.7172594Z     raise GitHubAPIError(
+2026-10-20T08:45:53.7174142Z github_actions.github_actions_api.GitHubAPIError: Failed to query workflow run 39385932667 in repository ROCm/TheRock: https://github.com/ROCm/TheRock/actions/runs/39385932667
+2026-10-20T08:45:53.7176535Z   Network error for https://api.github.com/repos/ROCm/TheRock/actions/runs/39385932667: [Errno -5] No address associated with hostname
+2026-10-20T08:45:53.7178084Z Hint: Did you mean to specify a different repository with --run-github-repo?
+2026-10-20T08:45:53.7717027Z ##[error]Process completed with exit code 1.
+2026-10-20T08:45:53.7729071Z ##[end-action id=__self.__run_5;outcome=failure;conclusion=failure;duration_ms=4994]
+2026-10-20T08:45:53.7880352Z ##[group]Run bash ./build_tools/github_actions/cleanup_processes.sh
+2026-10-20T08:45:53.7881014Z [36;1mbash ./build_tools/github_actions/cleanup_processes.sh[0m
+2026-10-20T08:45:53.7881612Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T08:45:53.7881996Z env:
+2026-10-20T08:45:53.7882285Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T08:45:53.7882718Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T08:45:53.7883146Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T08:45:53.7883537Z   ARTIFACT_RUN_ID: 39385932667
+2026-10-20T08:45:53.7883856Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T08:45:53.7884169Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T08:45:53.7884480Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T08:45:53.7884907Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T08:45:53.7885215Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T08:45:53.7885589Z   BUILD_VARIANT: release
+2026-10-20T08:45:53.7885950Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:53.7886416Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T08:45:53.7886876Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:53.7887276Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:53.7887682Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:53.7888085Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T08:45:53.7888479Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-20T08:45:53.7888826Z ##[endgroup]
+2026-10-20T08:45:53.8981672Z [*] ==== Starting cleanup_processes.sh ====
+2026-10-20T08:45:53.9095558Z [*] Not running in a container (or container ID not detected)
+2026-10-20T08:45:53.9096121Z [*] Build directory: /__w/TheRock/TheRock/build
+2026-10-20T08:45:53.9096663Z [*] Searching for GPU processes from this container's build directory...
+2026-10-20T08:45:53.9569750Z [+] No GPU processes found
+2026-10-20T08:45:53.9729353Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-20T08:45:53.9730037Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-20T08:45:53.9730674Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T08:45:53.9731054Z env:
+2026-10-20T08:45:53.9731347Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T08:45:53.9731769Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T08:45:53.9732194Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T08:45:53.9732585Z   ARTIFACT_RUN_ID: 39385932667
+2026-10-20T08:45:53.9732900Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T08:45:53.9733211Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T08:45:53.9733514Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T08:45:53.9733805Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T08:45:53.9734112Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T08:45:53.9734455Z   BUILD_VARIANT: release
+2026-10-20T08:45:53.9734907Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:53.9735367Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T08:45:53.9735817Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:53.9736225Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:53.9736632Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T08:45:53.9737035Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T08:45:53.9737426Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-20T08:45:53.9737760Z ##[endgroup]
+2026-10-20T08:45:54.1159749Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-20T08:45:54.1526715Z Post job cleanup.
+2026-10-20T08:45:54.1533019Z ##[start-action display=Setting up Python;id=__d936d1a3-8973-4979-82f9-462f12d040ec.__actions_setup-python]
+2026-10-20T08:45:54.1537039Z ##[end-action id=__d936d1a3-8973-4979-82f9-462f12d040ec.__actions_setup-python;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-20T08:45:54.1648497Z Post job cleanup.
+2026-10-20T08:45:54.1658054Z ##[command]/usr/bin/docker exec  ba8e6d739159f0e4228fda9fbcc5a565b592036631eeef1ef2668404e8be4ed3 sh -c "cat /etc/*release | grep ^ID"
+2026-10-20T08:45:54.4427854Z [command]/usr/bin/git version
+2026-10-20T08:45:54.4485796Z git version 2.51.0
+2026-10-20T08:45:54.4527488Z Temporarily overriding HOME='/__w/_temp/969e1bc8-24c7-4831-a06e-15c3374bd3fd' before making global git config changes
+2026-10-20T08:45:54.4528493Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T08:45:54.4542966Z [command]/usr/bin/git config --global --add safe.directory /__w/TheRock/TheRock
+2026-10-20T08:45:54.4593785Z Removing SSH command configuration
+2026-10-20T08:45:54.4600231Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T08:45:54.4645491Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T08:45:54.5073498Z Removing HTTP extra header
+2026-10-20T08:45:54.5078767Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T08:45:54.5120184Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T08:45:54.5502810Z Removing includeIf entries pointing to credentials config files
+2026-10-20T08:45:54.5508192Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T08:45:54.5560977Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T08:45:54.6273365Z Post job cleanup.
+2026-10-20T08:45:54.6283531Z ##[command]/usr/bin/docker exec  ba8e6d739159f0e4228fda9fbcc5a565b592036631eeef1ef2668404e8be4ed3 sh -c "cat /etc/*release | grep ^ID"
+2026-10-20T08:45:54.9315124Z Stop and remove container: caae66fcd3be42c3bca42053ae894ed5_ghcriorocmno_rocm_image_ubuntu24_04sha2564150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98_2e9632
+2026-10-20T08:45:54.9323836Z ##[command]/usr/bin/docker rm --force ba8e6d739159f0e4228fda9fbcc5a565b592036631eeef1ef2668404e8be4ed3
+2026-10-20T08:45:56.7442684Z ba8e6d739159f0e4228fda9fbcc5a565b592036631eeef1ef2668404e8be4ed3
+2026-10-20T08:45:56.7516049Z Remove container network: github_network_eddb19ab351a45e3b6eb8d699c382ece
+2026-10-20T08:45:56.7521717Z ##[command]/usr/bin/docker network rm github_network_eddb19ab351a45e3b6eb8d699c382ece
+2026-10-20T08:45:57.0816913Z github_network_eddb19ab351a45e3b6eb8d699c382ece
+2026-10-20T08:45:57.0947512Z Evaluate and set job outputs
+2026-10-20T08:45:57.0955671Z Cleaning up orphan processes

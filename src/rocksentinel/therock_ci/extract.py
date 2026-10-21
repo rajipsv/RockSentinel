@@ -12,11 +12,12 @@ patterns and noise filtering are RockSentinel's own.
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 
 WINDOW_BEFORE = 12
 WINDOW_AFTER = 20
 DEFAULT_MAX_CANDIDATES = 20
+MAX_VARIANTS = 20  # distinct texts kept per grouped error (all line numbers are always kept)
 
 # Lines that are high-volume and never the cause (e.g. the kpack code-object loader).
 NOISE_PREFIXES = ("kpack:",)
@@ -39,6 +40,8 @@ PATTERNS: tuple[Pattern, ...] = (
     _p("gpu_hang", 95, r"\*\*\* GPU HANG ANALYSIS"),
     _p("asan", 95, r"ERROR: AddressSanitizer"),
     _p("crash", 90, r"Segmentation fault|\(SEGFAULT\)|Exception: SegFault|\(Subprocess aborted\)"),
+    # HIP runtime API failures, e.g. "hipModuleLoad failed: <path to .hsaco>"
+    _p("hip_runtime_error", 88, r"\bhip[A-Z][A-Za-z]+ failed\b|\bhipError[A-Z][A-Za-z]+"),
     _p("test_timeout", 85, r"\*\*\*Timeout\s+[\d.]+\s*sec"),
     _p("killed", 85, r"exit code 137\b"),
     _p(
@@ -69,6 +72,26 @@ _STEP_TIMEOUT = re.compile(r"timed out after (\d+) minutes")
 
 _FAULT_KINDS = {"gpu_memory_fault", "gpu_hang", "asan", "crash"}
 
+# An indented "error: ..." line continues the message on the line above, e.g.
+#   hipModuleLoad failed: /tmp/.../Kernels.so-000-gfx950.hsaco
+#    error: file not found
+# The line above holds the call and the file, so evidence anchors there.
+_CONTINUATION = re.compile(r"^\s+error: ")
+
+# Repeated errors usually differ only in paths, addresses or numbers (e.g. 66 x
+# "hipModuleLoad failed: /tmp/.../caches/<hash>/...hsaco"); mask those to group them.
+_DEDUPE_MASKS = (
+    (re.compile(r"(?:[A-Za-z]:)?[/\\][^\s:'\"]+"), "<path>"),
+    (re.compile(r"0x[0-9a-fA-F]+"), "<hex>"),
+    (re.compile(r"\d+"), "#"),
+)
+
+
+def dedupe_key(text: str) -> str:
+    for pattern, repl in _DEDUPE_MASKS:
+        text = pattern.sub(repl, text)
+    return text.strip()
+
 # Raw GitHub Actions logs: "2026-10-19T13:40:51.0080074Z 16: Memory access fault ..."
 #   timestamp prefix, optional "##[error]"-style command, optional ctest -V "<test#>: " prefix.
 _TIMESTAMP = re.compile(r"^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d+)?Z ")
@@ -94,6 +117,14 @@ class ErrorCandidate:
     kind: str
     severity: int
     window: tuple[int, int]
+    # Repeats of the same error shape are grouped, never dropped: every occurrence's line
+    # number is kept, plus the distinct texts (e.g. different files or tests) up to a cap.
+    occurrences: tuple[int, ...] = ()
+    variants: tuple[str, ...] = ()
+
+    @property
+    def count(self) -> int:
+        return max(1, len(self.occurrences))
 
 
 @dataclass
@@ -142,7 +173,9 @@ def extract_errors(log_text: str, max_candidates: int = DEFAULT_MAX_CANDIDATES) 
     """
     lines = [normalize_line(raw) for raw in log_text.splitlines()]
     total = len(lines)
-    found: list[ErrorCandidate] = []
+    by_line: dict[int, ErrorCandidate] = {}
+    first_by_key: dict[str, int] = {}
+    merged: set[int] = set()  # lines folded into an earlier identical error
 
     for idx, line in enumerate(lines):
         if _is_noise(line):
@@ -150,11 +183,40 @@ def extract_errors(log_text: str, max_candidates: int = DEFAULT_MAX_CANDIDATES) 
         pattern = _classify(line)
         if pattern is None:
             continue
-        n = idx + 1
+        anchor = idx
+        if _CONTINUATION.match(line) and idx > 0 and lines[idx - 1].strip() \
+                and not _is_noise(lines[idx - 1]):
+            anchor = idx - 1
+            above = _classify(lines[anchor])
+            if above is not None and above.severity > pattern.severity:
+                pattern = above
+        n = anchor + 1
+        text = lines[anchor].rstrip()
+        if n in merged:  # continuation of a line already counted as a repeat
+            continue
+        existing = by_line.get(n)
+        if existing is not None:  # same line reached again (continuation): not a repeat
+            if pattern.severity > existing.severity:
+                by_line[n] = replace(existing, kind=pattern.kind, severity=pattern.severity)
+            continue
+        key = dedupe_key(text)
+        if key in first_by_key:  # repeated error shape: record it on the first occurrence
+            first = by_line[first_by_key[key]]
+            variants = first.variants
+            if text not in variants and len(variants) < MAX_VARIANTS:
+                variants = (*variants, text)
+            by_line[first.line_no] = replace(
+                first, occurrences=(*first.occurrences, n), variants=variants
+            )
+            merged.add(n)
+            continue
         window = (max(1, n - WINDOW_BEFORE), min(total, n + WINDOW_AFTER))
-        found.append(ErrorCandidate(n, line.rstrip(), pattern.kind, pattern.severity, window))
+        by_line[n] = ErrorCandidate(
+            n, text, pattern.kind, pattern.severity, window, occurrences=(n,), variants=(text,)
+        )
+        first_by_key[key] = n
 
-    found.sort(key=lambda c: (-c.severity, c.line_no))
+    found = sorted(by_line.values(), key=lambda c: (-c.severity, c.line_no))
     result = Extraction(candidates=found[:max_candidates], lines=lines)
     _fill_facts(result, lines, found)
     return result
@@ -163,7 +225,10 @@ def extract_errors(log_text: str, max_candidates: int = DEFAULT_MAX_CANDIDATES) 
 def _fill_facts(result: Extraction, lines: list[str], found: list[ErrorCandidate]) -> None:
     first = found[0] if found else None
 
-    if first is not None and first.kind in _FAULT_KINDS:
+    if first is not None and first.kind == "crash" and _CTEST_TEST_NAME.search(first.text):
+        # e.g. "1349/2256 Test #1691: tests.integration...-k2000-i200 ...***Exception: SegFault"
+        result.failing_test = _CTEST_TEST_NAME.search(first.text).group(1)
+    elif first is not None and first.kind in _FAULT_KINDS:
         # The test that was running when the process faulted.
         for idx in range(first.line_no - 1, -1, -1):
             m = _GTEST_RUN.match(lines[idx])

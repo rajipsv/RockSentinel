@@ -1,0 +1,580 @@
+# Source: ROCm/TheRock Actions run 39476246312 attempt 1, job 118885894484
+# Job: Windows::release / Test gfx110X-all / Test hip-tests (ROCR) / Test hip-tests (ROCR) (shard 3/4) (gfx110X-all) (multi_arch_ci.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+2026-10-20T21:12:11.3131420Z  398/1032 Test #1590: Unit_hipLaunchHostFunc_Graph ..............................................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:12:11.3132305Z           Start 1594: Unit_hipStreamQuery_spt_NegativeCases
+2026-10-20T21:12:11.3132730Z  399/1032 Test #1594: Unit_hipStreamQuery_spt_NegativeCases .....................................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:12:11.3133700Z           Start 1598: Unit_hipStreamBatchMemOp_SequentialOrdering
+2026-10-20T21:12:11.3134148Z  400/1032 Test #1598: Unit_hipStreamBatchMemOp_SequentialOrdering ...............................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:12:11.3135334Z           Start 1602: Unit_hipStreamBatchMemOp_Capture
+2026-10-20T21:12:11.3135729Z  401/1032 Test #1602: Unit_hipStreamBatchMemOp_Capture ..........................................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:12:11.3136700Z           Start 1606: Unit_hipStreamGetFlags_Negative
+2026-10-20T21:12:11.8074785Z  402/1032 Test #1606: Unit_hipStreamGetFlags_Negative ...........................................................................................   Passed    0.49 sec
+2026-10-20T21:12:11.8077343Z           Start 1610: Unit_hipStreamGetPriority_stream_nullptr
+2026-10-20T21:12:11.9632107Z  403/1032 Test #1610: Unit_hipStreamGetPriority_stream_nullptr ..................................................................................   Passed    0.16 sec
+2026-10-20T21:12:11.9633627Z           Start 1614: Unit_hipMultiStream_SharedHwQueuePacketOrdering
+2026-10-20T21:12:12.4714992Z  404/1032 Test #1614: Unit_hipMultiStream_SharedHwQueuePacketOrdering ...........................................................................***Failed    0.51 sec
+2026-10-20T21:12:12.4715538Z Filters: "Unit_hipMultiStream_SharedHwQueuePacketOrdering"
+2026-10-20T21:12:12.4715779Z Randomness seeded to: 471582348
+2026-10-20T21:12:12.4715889Z 
+2026-10-20T21:12:12.4715996Z ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T21:12:12.4716255Z StreamTest.exe is a Catch2 v3.8.1 host application.
+2026-10-20T21:12:12.4716472Z Run with -? for options
+2026-10-20T21:12:12.4716574Z 
+2026-10-20T21:12:12.4716686Z -------------------------------------------------------------------------------
+2026-10-20T21:12:12.4716967Z Unit_hipMultiStream_SharedHwQueuePacketOrdering
+2026-10-20T21:12:12.4717548Z -------------------------------------------------------------------------------
+2026-10-20T21:12:12.4717963Z C:/home/runner/_work/TheRock/TheRock/rocm-systems/projects/hip-tests/catch/unit/stream/hipMultiStream.cc(49)
+2026-10-20T21:12:12.4718332Z ...............................................................................
+2026-10-20T21:12:12.4718494Z 
+2026-10-20T21:12:12.4718722Z C:/home/runner/_work/TheRock/TheRock/rocm-systems/projects/hip-tests/catch/unit/stream/hipMultiStream.cc(129): FAILED:
+2026-10-20T21:12:12.4719075Z   REQUIRE( host_ordering_errors == 0 )
+2026-10-20T21:12:12.4719250Z with expansion:
+2026-10-20T21:12:12.4719379Z   1 == 0
+2026-10-20T21:12:12.4719453Z 
+2026-10-20T21:12:12.4719535Z ===============================================================================
+2026-10-20T21:12:12.4719731Z test cases: 1 | 1 failed
+2026-10-20T21:12:12.4719890Z assertions: 3 | 2 passed | 1 failed
+2026-10-20T21:12:12.4719997Z 
+2026-10-20T21:12:12.4720000Z 
+2026-10-20T21:12:12.4720114Z           Start 1618: Unit_hipStreamAddCallback_ParamTst_Negative
+2026-10-20T21:12:12.6604087Z  405/1032 Test #1618: Unit_hipStreamAddCallback_ParamTst_Negative ...............................................................................   Passed    0.19 sec
+2026-10-20T21:12:12.6606776Z           Start 1622: Unit_hipStreamCreateWithFlags_Negative_InvalidFlag
+2026-10-20T21:12:12.8012523Z  406/1032 Test #1622: Unit_hipStreamCreateWithFlags_Negative_InvalidFlag ........................................................................   Passed    0.14 sec
+2026-10-20T21:12:12.8014616Z           Start 1626: Unit_hipStreamCreateWithPriority_NegTst
+2026-10-20T21:12:12.9437253Z  407/1032 Test #1626: Unit_hipStreamCreateWithPriority_NegTst ...................................................................................   Passed    0.14 sec
+2026-10-20T21:12:12.9439460Z           Start 1630: Unit_hipStreamDestroy_Negative_NullStream
+2026-10-20T21:12:13.0877984Z  408/1032 Test #1630: Unit_hipStreamDestroy_Negative_NullStream .................................................................................   Passed    0.14 sec
+2026-10-20T21:12:13.0880957Z           Start 1634: Unit_hipStreamValue_Write - TestParams<uint32_t, PtrType::DevicePtr>
+2026-10-20T21:12:13.2804244Z  409/1032 Test #1634: Unit_hipStreamValue_Write - TestParams<uint32_t, PtrType::DevicePtr> ......................................................   Passed    0.19 sec
+2026-10-20T21:12:13.2806635Z           Start 1638: Unit_hipStreamValue_Write - TestParams<uint64_t, PtrType::DevicePtrToHost>
+2026-10-20T21:12:13.4815645Z  410/1032 Test #1638: Unit_hipStreamValue_Write - TestParams<uint64_t, PtrType::DevicePtrToHost> ................................................   Passed    0.20 sec
+2026-10-20T21:12:13.4817813Z           Start 1642: Unit_hipStreamValue_Negative_StreamAndFlag - uint64_t
+2026-10-20T21:12:13.6431228Z  411/1032 Test #1642: Unit_hipStreamValue_Negative_StreamAndFlag - uint64_t .....................................................................   Passed    0.16 sec
+2026-10-20T21:12:13.6433675Z           Start 1646: Unit_hipStreamWriteValue_Increment_Default - uint64_t
+2026-10-20T21:12:13.8028958Z  412/1032 Test #1646: Unit_hipStreamWriteValue_Increment_Default - uint64_t .....................................................................   Passed    0.16 sec
+2026-10-20T21:12:13.8031365Z           Start 1650: Unit_hipStreamWriteValue_Increment_MultiStream_MultiDevice - uint64_t
+2026-10-20T21:12:13.9748176Z  413/1032 Test #1650: Unit_hipStreamWriteValue_Increment_MultiStream_MultiDevice - uint64_t .....................................................   Passed    0.17 sec
+2026-10-20T21:12:13.9749812Z           Start 1654: Unit_hipStreamWaitValue_Default - uint64_t
+2026-10-20T21:13:36.5805131Z  414/1032 Test #1654: Unit_hipStreamWaitValue_Default - uint64_t ................................................................................***Failed   82.61 sec
+2026-10-20T21:13:36.5807638Z pid:10824 tid:0x10876 [wsl::thunk::ComputeQueue::FaultMonitorThread] GPU stall detected: rptr=7 wptr=8 stalled for 30000ms — possible device memory fault
+2026-10-20T21:13:36.5808487Z pid:10824 tid:0x10876 [wsl::thunk::ComputeQueue::HandleError] error 41, sig_val 536870912
+2026-10-20T21:13:36.5809226Z pid:10824 tid:0x10892 [wsl::thunk::ComputeQueue::FaultMonitorThread] GPU stall detected: rptr=0 wptr=4 stalled for 30000ms — possible device memory fault
+2026-10-20T21:13:36.5809773Z pid:10824 tid:0x10892 [wsl::thunk::ComputeQueue::HandleError] error 41, sig_val 536870912
+2026-10-20T21:13:36.5810016Z 
+2026-10-20T21:13:36.5810137Z ****************************************************************************
+2026-10-20T21:13:36.5810639Z *** GPU HANG ANALYSIS - VGPU(0000021A6E16BD70) Queue(0000024D00DA0000)
+2026-10-20T21:13:36.5810925Z ****************************************************************************
+2026-10-20T21:13:36.5811256Z VGPU(0000021A6E16BD70) Queue(0000024D00DA0000). Couldn't find the hang AQL packet!
+2026-10-20T21:13:36.5811578Z ****************************************************************************
+2026-10-20T21:13:36.5811753Z 
+2026-10-20T21:13:36.5812292Z :0:rocdevice.cpp            :4569: 0422572882 us:  Callback: Queue 0000024D03850000 aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29 [GPU index: 0, kernel: <not identified>]
+2026-10-20T21:13:36.5812936Z 
+2026-10-20T21:13:36.5813040Z ****************************************************************************
+2026-10-20T21:13:36.5813326Z *** GPU HANG ANALYSIS - VGPU(0000021A6E1646D0) Queue(0000024D05950000)
+2026-10-20T21:13:36.5813600Z ****************************************************************************
+2026-10-20T21:13:36.5813904Z VGPU(0000021A6E1646D0) Queue(0000024D05950000). Couldn't find the hang AQL packet!
+2026-10-20T21:13:36.5814206Z ****************************************************************************
+2026-10-20T21:13:36.5814364Z 
+2026-10-20T21:13:36.5814884Z :0:rocdevice.cpp            :4569: 0422573115 us:  Callback: Queue 0000024D07650000 aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29 [GPU index: 0, kernel: <not identified>]
+2026-10-20T21:13:36.5815613Z Filters: "Unit_hipStreamWaitValue_Default - uint64_t"
+2026-10-20T21:13:36.5815868Z Randomness seeded to: 4232684211
+2026-10-20T21:13:36.5815987Z 
+2026-10-20T21:13:36.5816118Z ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-20T21:13:36.5816404Z StreamTest.exe is a Catch2 v3.8.1 host application.
+2026-10-20T21:13:36.5816644Z Run with -? for options
+2026-10-20T21:13:36.5816763Z 
+2026-10-20T21:13:36.5816882Z -------------------------------------------------------------------------------
+2026-10-20T21:13:36.5817162Z Unit_hipStreamWaitValue_Default - uint64_t
+2026-10-20T21:13:36.5817453Z -------------------------------------------------------------------------------
+2026-10-20T21:13:36.5818042Z C:/home/runner/_work/TheRock/TheRock/rocm-systems/projects/hip-tests/catch/unit/stream/hipStreamValue.cc(809)
+2026-10-20T21:13:36.5818439Z ...............................................................................
+2026-10-20T21:13:36.5818599Z 
+2026-10-20T21:13:36.5818856Z C:/home/runner/_work/TheRock/TheRock/rocm-systems/projects/hip-tests/catch/unit/stream/hipStreamValue.cc(856): FAILED:
+2026-10-20T21:13:36.5819227Z   REQUIRE( false )
+2026-10-20T21:13:36.5819399Z with message:
+2026-10-20T21:13:36.5819602Z   Error: an illegal memory access was encountered
+2026-10-20T21:13:36.5819833Z       Code: 700
+2026-10-20T21:13:36.5820048Z       Str: hipStreamSynchronize(dataCopyStream)
+2026-10-20T21:13:36.5820341Z       In File: C:/home/runner/_work/TheRock/TheRock/rocm-systems/projects/hip-
+2026-10-20T21:13:36.5820635Z   tests/catch/unit/stream/hipStreamValue.cc
+2026-10-20T21:13:36.5820853Z       At line: 856
+2026-10-20T21:13:36.5820939Z 
+2026-10-20T21:13:36.5821149Z -------------------------------------------------------------------------------
+2026-10-20T21:13:36.5821448Z Unit_hipStreamWaitValue_Default - uint64_t
+2026-10-20T21:13:36.5821720Z -------------------------------------------------------------------------------
+2026-10-20T21:13:36.5822138Z C:/home/runner/_work/TheRock/TheRock/rocm-systems/projects/hip-tests/catch/unit/stream/hipStreamValue.cc(809)
+2026-10-20T21:13:36.5822552Z ...............................................................................
+2026-10-20T21:13:36.5822710Z 
+2026-10-20T21:13:36.5822961Z C:/home/runner/_work/TheRock/TheRock/rocm-systems/projects/hip-tests/catch/unit/stream/hipStreamValue.cc(67): FAILED:
+2026-10-20T21:13:36.5823345Z   REQUIRE( false )
+2026-10-20T21:13:36.5823518Z with message:
+2026-10-20T21:13:36.5823708Z   Error: an illegal memory access was encountered
+2026-10-20T21:13:36.5823936Z       Code: 700
+2026-10-20T21:13:36.5824122Z       Str: hipGetDeviceCount(&device_num)
+2026-10-20T21:13:36.5824407Z       In File: C:/home/runner/_work/TheRock/TheRock/rocm-systems/projects/hip-
+2026-10-20T21:13:36.5824720Z   tests/catch/unit/stream/hipStreamValue.cc
+2026-10-20T21:13:36.5824933Z       At line: 67
+2026-10-20T21:13:36.5825017Z 
+2026-10-20T21:13:36.5825122Z ===============================================================================
+2026-10-20T21:13:36.5825354Z test cases: 1 | 1 failed
+2026-10-20T21:13:36.5825549Z assertions: 7 | 5 passed | 2 failed
+2026-10-20T21:13:36.5825693Z 
+2026-10-20T21:13:36.5825696Z 
+2026-10-20T21:13:36.5825788Z           Start 1658: Unit_hipStreamQuery_WithNoWork
+2026-10-20T21:13:39.0104850Z  415/1032 Test #1658: Unit_hipStreamQuery_WithNoWork ............................................................................................   Passed    2.43 sec
+2026-10-20T21:13:39.0107908Z           Start 1662: Unit_hipDeviceGetStreamPriorityRange_Default
+2026-10-20T21:13:39.1557665Z  416/1032 Test #1662: Unit_hipDeviceGetStreamPriorityRange_Default ..............................................................................   Passed    0.14 sec
+2026-10-20T21:13:39.1560667Z           Start 1666: Unit_hipLaunchHostFunc_multistreams
+2026-10-20T21:13:39.3639912Z  417/1032 Test #1666: Unit_hipLaunchHostFunc_multistreams .......................................................................................   Passed    0.21 sec
+2026-10-20T21:13:39.3642337Z           Start 1670: Unit_hipStreamGetDevice_Negative
+2026-10-20T21:13:39.5250970Z  418/1032 Test #1670: Unit_hipStreamGetDevice_Negative ..........................................................................................   Passed    0.16 sec
+2026-10-20T21:13:39.5253637Z           Start 1674: Unit_hipStreamGetDevice_NullStream
+2026-10-20T21:13:39.6657166Z  419/1032 Test #1674: Unit_hipStreamGetDevice_NullStream ........................................................................................   Passed    0.14 sec
+2026-10-20T21:13:39.6659613Z           Start 1678: Unit_hipStreamLegacy_WithNonBlockingStream
+2026-10-20T21:13:41.0493896Z  420/1032 Test #1678: Unit_hipStreamLegacy_WithNonBlockingStream ................................................................................   Passed    1.38 sec
+2026-10-20T21:13:41.0496059Z           Start 1682: Unit_hipStreamLegacy_MultiDeviceMultiOperation
+2026-10-20T21:13:41.1977964Z  421/1032 Test #1682: Unit_hipStreamLegacy_MultiDeviceMultiOperation ............................................................................***Skipped   0.15 sec
+2026-10-20T21:13:41.1980975Z           Start 1686: Unit_hipStreamLegacy_InChildProcess
+2026-10-20T21:13:41.8028021Z  422/1032 Test #1686: Unit_hipStreamLegacy_InChildProcess .......................................................................................   Passed    0.60 sec
+2026-10-20T21:13:41.8029672Z           Start 1690: Unit_hipStreamLegacy_TwoThreadsDiffOperationWithSptCompOption
+2026-10-20T21:13:43.1461087Z  423/1032 Test #1690: Unit_hipStreamLegacy_TwoThreadsDiffOperationWithSptCompOption .............................................................   Passed    1.34 sec
+2026-10-20T21:13:43.1462369Z           Start 1694: Unit_hipStreamGetId_MultipleThreads
+2026-10-20T21:13:43.3969468Z  424/1032 Test #1694: Unit_hipStreamGetId_MultipleThreads .......................................................................................   Passed    0.25 sec
+2026-10-20T21:13:43.3971975Z           Start 1698: Unit_hipStreamSetAttribute_Negative
+2026-10-20T21:13:43.5948339Z  425/1032 Test #1698: Unit_hipStreamSetAttribute_Negative .......................................................................................   Passed    0.20 sec
+2026-10-20T21:13:43.5951605Z           Start 1702: Unit_hipSharedQueueAnyOrderOverlap_InternalPredecessorOrdering
+2026-10-20T21:14:36.2867309Z  426/1032 Test #1702: Unit_hipSharedQueueAnyOrderOverlap_InternalPredecessorOrdering ............................................................   Passed   52.69 sec
+2026-10-20T21:14:36.2870326Z           Start 1706: Unit_hipStreamAttachMemAsync_UseCase
+2026-10-20T21:14:39.6633696Z  427/1032 Test #1706: Unit_hipStreamAttachMemAsync_UseCase ......................................................................................***Skipped   3.38 sec
+2026-10-20T21:14:39.6636267Z           Start 1710: Unit_hipExtStreamGetCUMask_verifyDefaultAndCustomMask
+2026-10-20T21:14:39.9309430Z  428/1032 Test #1710: Unit_hipExtStreamGetCUMask_verifyDefaultAndCustomMask .....................................................................   Passed    0.27 sec
+2026-10-20T21:14:39.9311810Z           Start 1714: Unit_hipExtStreamCreateWithCUMask_AllCUsMasked
+2026-10-20T21:14:40.2014750Z  429/1032 Test #1714: Unit_hipExtStreamCreateWithCUMask_AllCUsMasked ............................................................................   Passed    0.27 sec
+2026-10-20T21:14:40.2017873Z           Start 1718: Unit_hipStreamWaitEvent_Default
+2026-10-20T21:15:08.3712497Z  430/1032 Test #1718: Unit_hipStreamWaitEvent_Default ...........................................................................................   Passed   28.17 sec
+2026-10-20T21:15:08.3717418Z           Start 1722: Unit_hipStreamGetPriority_spt_BasicTst
+2026-10-20T21:17:44.8459159Z  431/1032 Test #1722: Unit_hipStreamGetPriority_spt_BasicTst ....................................................................................   Passed  156.47 sec
+2026-10-20T21:17:44.8464996Z           Start 1726: Unit_hipStreamSynchronize_spt_EmptyStream
+2026-10-20T21:19:29.0246827Z  432/1032 Test #1726: Unit_hipStreamSynchronize_spt_EmptyStream .................................................................................   Passed  104.18 sec
+2026-10-20T21:19:29.0250056Z           Start 1730: Unit_hipMemPrefetchAsync_Basic
+2026-10-20T21:22:09.3071572Z  433/1032 Test #1730: Unit_hipMemPrefetchAsync_Basic ............................................................................................   Passed  160.28 sec
+2026-10-20T21:22:09.3075872Z           Start 1734: Unit_hipEventIpc
+2026-10-20T21:22:09.3076424Z  434/1032 Test #1734: Unit_hipEventIpc ..........................................................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:22:09.3077304Z           Start 1738: Unit_hipEventCreateWithFlags_DisableSystemFence_NonCohHstMem
+2026-10-20T21:22:09.3077910Z  435/1032 Test #1738: Unit_hipEventCreateWithFlags_DisableSystemFence_NonCohHstMem ..............................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:22:09.3079594Z           Start 1742: Unit_hipEventCreate_NullCheck
+2026-10-20T21:22:35.7081917Z  436/1032 Test #1742: Unit_hipEventCreate_NullCheck .............................................................................................   Passed   26.40 sec
+2026-10-20T21:22:35.7084724Z           Start 1746: Unit_hipEventQuery_NullCheck
+2026-10-20T21:23:01.7534519Z  437/1032 Test #1746: Unit_hipEventQuery_NullCheck ..............................................................................................   Passed   26.04 sec
+2026-10-20T21:23:01.7538014Z           Start 1750: Unit_hipEventElapsedTime_DifferentDevices
+2026-10-20T21:23:27.7929247Z  438/1032 Test #1750: Unit_hipEventElapsedTime_DifferentDevices .................................................................................***Skipped  26.04 sec
+2026-10-20T21:23:27.7932318Z           Start 1754: Unit_hipEventRecord_Negative
+2026-10-20T21:23:53.8349347Z  439/1032 Test #1754: Unit_hipEventRecord_Negative ..............................................................................................   Passed   26.04 sec
+2026-10-20T21:23:53.8353486Z           Start 1758: Unit_hipEventDestroy_Verify_Capture
+2026-10-20T21:26:04.0300697Z  440/1032 Test #1758: Unit_hipEventDestroy_Verify_Capture .......................................................................................   Passed  130.19 sec
+2026-10-20T21:26:04.0304910Z           Start 1762: Unit_hipEventCreateWithFlags_Verify_Capture
+2026-10-20T21:28:40.2592904Z  441/1032 Test #1762: Unit_hipEventCreateWithFlags_Verify_Capture ...............................................................................   Passed  156.23 sec
+2026-10-20T21:28:40.2597438Z           Start 1766: Unit_hipEventMGpuMThreads_2
+2026-10-20T21:29:06.2979564Z  442/1032 Test #1766: Unit_hipEventMGpuMThreads_2 ...............................................................................................***Skipped  26.04 sec
+2026-10-20T21:29:06.2983230Z           Start 1770: Unit_hipEventCoalescing_InterleavedEvents
+2026-10-20T21:34:18.7320662Z  443/1032 Test #1770: Unit_hipEventCoalescing_InterleavedEvents .................................................................................   Passed  312.43 sec
+2026-10-20T21:34:18.7325561Z           Start 1774: Unit_hipModuleOccupancyMaxPotentialBlockSize_Negative_Parameters
+2026-10-20T21:34:18.7326289Z  444/1032 Test #1774: Unit_hipModuleOccupancyMaxPotentialBlockSize_Negative_Parameters ..........................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:34:18.7327051Z           Start 1778: Unit_hipModuleOccupancyMaxActiveBlocksPerMultiprocessor_Negative_Parameters
+2026-10-20T21:34:18.7327721Z  445/1032 Test #1778: Unit_hipModuleOccupancyMaxActiveBlocksPerMultiprocessor_Negative_Parameters ...............................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:34:18.7328557Z           Start 1782: Unit_hipOccupancyMaxPotBlkSizeVariableSMemWithFlags_Functional
+2026-10-20T21:34:18.7329139Z  446/1032 Test #1782: Unit_hipOccupancyMaxPotBlkSizeVariableSMemWithFlags_Functional ............................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:34:18.7330213Z           Start 1786: Unit_hipOccupancyMaxPotentialBlockSize_Positive_RangeValidation
+2026-10-20T21:35:11.1410169Z  447/1032 Test #1786: Unit_hipOccupancyMaxPotentialBlockSize_Positive_RangeValidation ...........................................................   Passed   52.41 sec
+2026-10-20T21:35:11.1414734Z           Start 1790: Unit_hipOccupancyMaxPotBlkSizeVariableSMemWithFlags_mgpu
+2026-10-20T21:35:37.1797108Z  448/1032 Test #1790: Unit_hipOccupancyMaxPotBlkSizeVariableSMemWithFlags_mgpu ..................................................................***Skipped  26.04 sec
+2026-10-20T21:35:37.1800738Z           Start 1794: Unit_hipOccupancyMaxActiveBlocksPerMultiprocessorWithFlags_ValidArgs
+2026-10-20T21:36:29.2439686Z  449/1032 Test #1794: Unit_hipOccupancyMaxActiveBlocksPerMultiprocessorWithFlags_ValidArgs ......................................................   Passed   52.06 sec
+2026-10-20T21:36:29.2443954Z           Start 1798: Unit_hipOccupancy_Positive_SharedMemPerMultiprocessorConsistency
+2026-10-20T21:36:55.2862427Z  450/1032 Test #1798: Unit_hipOccupancy_Positive_SharedMemPerMultiprocessorConsistency ..........................................................   Passed   26.04 sec
+2026-10-20T21:36:55.2865892Z           Start 1802: Unit_hipOccupancyMaxPotentialClusterSize_Negative_Parameters
+2026-10-20T21:37:21.3237870Z  451/1032 Test #1802: Unit_hipOccupancyMaxPotentialClusterSize_Negative_Parameters ..............................................................   Passed   26.04 sec
+2026-10-20T21:37:21.3240287Z           Start 1806: Unit_hipDeviceGetPCIBusId_Negative_PartialFill
+2026-10-20T21:37:21.3240801Z  452/1032 Test #1806: Unit_hipDeviceGetPCIBusId_Negative_PartialFill ............................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:37:21.3241767Z           Start 1810: Unit_UUID_setEnv_Thread
+2026-10-20T21:37:21.3242261Z  453/1032 Test #1810: Unit_UUID_setEnv_Thread ...................................................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:37:21.3242948Z           Start 1814: Unit_hipIpcOpenMemHandle_Multiproc_Child
+2026-10-20T21:37:21.3243472Z  454/1032 Test #1814: Unit_hipIpcOpenMemHandle_Multiproc_Child ..................................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:37:21.3244439Z           Start 1818: Unit_hipDeviceComputeCapability_ValidateVersion
+2026-10-20T21:37:47.7132823Z  455/1032 Test #1818: Unit_hipDeviceComputeCapability_ValidateVersion ...........................................................................   Passed   26.39 sec
+2026-10-20T21:37:47.7136939Z           Start 1822: Unit_hipDeviceGetByPCIBusId_WrongBusID
+2026-10-20T21:38:13.7510122Z  456/1032 Test #1822: Unit_hipDeviceGetByPCIBusId_WrongBusID ....................................................................................   Passed   26.04 sec
+2026-10-20T21:38:13.7513007Z           Start 1826: Unit_hipDeviceGetPCIBusId_Check_PciBusID_WithAttr
+2026-10-20T21:38:39.7892014Z  457/1032 Test #1826: Unit_hipDeviceGetPCIBusId_Check_PciBusID_WithAttr .........................................................................   Passed   26.04 sec
+2026-10-20T21:38:39.7894671Z           Start 1830: Unit_hipDeviceGetCacheConfig_Positive_Default
+2026-10-20T21:39:05.8281097Z  458/1032 Test #1830: Unit_hipDeviceGetCacheConfig_Positive_Default .............................................................................   Passed   26.04 sec
+2026-10-20T21:39:05.8283986Z           Start 1834: Unit_hipDeviceTotalMem_NegTst
+2026-10-20T21:39:31.8652228Z  459/1032 Test #1834: Unit_hipDeviceTotalMem_NegTst .............................................................................................   Passed   26.04 sec
+2026-10-20T21:39:31.8655123Z           Start 1838: Unit_hipDeviceGetAttribute_NegTst
+2026-10-20T21:39:57.9030157Z  460/1032 Test #1838: Unit_hipDeviceGetAttribute_NegTst .........................................................................................   Passed   26.04 sec
+2026-10-20T21:39:57.9032578Z           Start 1842: Unit_hipGetDeviceCount_NegTst
+2026-10-20T21:40:23.9403584Z  461/1032 Test #1842: Unit_hipGetDeviceCount_NegTst .............................................................................................   Passed   26.04 sec
+2026-10-20T21:40:23.9407625Z           Start 1846: Unit_hipRuntimeGetVersion_Positive
+2026-10-20T21:40:49.9772127Z  462/1032 Test #1846: Unit_hipRuntimeGetVersion_Positive ........................................................................................   Passed   26.04 sec
+2026-10-20T21:40:49.9775886Z           Start 1850: Unit_hipGetSetDeviceFlags_SetThenGet
+2026-10-20T21:41:16.0167444Z  463/1032 Test #1850: Unit_hipGetSetDeviceFlags_SetThenGet ......................................................................................   Passed   26.04 sec
+2026-10-20T21:41:16.0170355Z           Start 1854: Unit_hipGetSetDevice_MultiThreaded
+2026-10-20T21:42:34.1797564Z  464/1032 Test #1854: Unit_hipGetSetDevice_MultiThreaded ........................................................................................   Passed   78.16 sec
+2026-10-20T21:42:34.1801802Z           Start 1858: Unit_hipDeviceGetUuid_Negative
+2026-10-20T21:43:00.2171838Z  465/1032 Test #1858: Unit_hipDeviceGetUuid_Negative ............................................................................................   Passed   26.04 sec
+2026-10-20T21:43:00.2175485Z           Start 1862: Unit_hipDeviceAPUCheck
+2026-10-20T21:43:26.2538673Z  466/1032 Test #1862: Unit_hipDeviceAPUCheck ....................................................................................................***Skipped  26.04 sec
+2026-10-20T21:43:26.2541517Z           Start 1866: Unit_hipDeviceFlushGPUDirectRDMAWrites_Positive_Basic
+2026-10-20T21:43:52.2914765Z  467/1032 Test #1866: Unit_hipDeviceFlushGPUDirectRDMAWrites_Positive_Basic .....................................................................   Passed   26.04 sec
+2026-10-20T21:43:52.2917472Z           Start 1870: Unit_hipDeviceFlushGPUDirectRDMAWrites_Positive_DoesNotSynchronize
+2026-10-20T21:44:18.3319775Z  468/1032 Test #1870: Unit_hipDeviceFlushGPUDirectRDMAWrites_Positive_DoesNotSynchronize ........................................................***Skipped  26.04 sec
+2026-10-20T21:44:18.3323346Z           Start 1874: Unit_hipDeviceFlushGPUDirectRDMAWrites_Positive_AfterDeviceReset
+2026-10-20T21:44:44.3711729Z  469/1032 Test #1874: Unit_hipDeviceFlushGPUDirectRDMAWrites_Positive_AfterDeviceReset ..........................................................   Passed   26.04 sec
+2026-10-20T21:44:44.3714971Z           Start 1878: Unit_hipDeviceGetDefaultMemPool_Negative_Parameters
+2026-10-20T21:45:10.4084381Z  470/1032 Test #1878: Unit_hipDeviceGetDefaultMemPool_Negative_Parameters .......................................................................   Passed   26.04 sec
+2026-10-20T21:45:10.4087268Z           Start 1882: Unit_hipDeviceEnablePeerAccess_negative
+2026-10-20T21:45:36.4478258Z  471/1032 Test #1882: Unit_hipDeviceEnablePeerAccess_negative ...................................................................................***Skipped  26.04 sec
+2026-10-20T21:45:36.4481825Z           Start 1886: Unit_hipDeviceGetLimit_Negative_Parameters
+2026-10-20T21:46:02.4856184Z  472/1032 Test #1886: Unit_hipDeviceGetLimit_Negative_Parameters ................................................................................   Passed   26.04 sec
+2026-10-20T21:46:02.4858799Z           Start 1890: Unit_hipDeviceGetSetLimit_Scratch_SetBeforeKernelLaunch
+2026-10-20T21:46:02.5072222Z  473/1032 Test #1890: Unit_hipDeviceGetSetLimit_Scratch_SetBeforeKernelLaunch ...................................................................***Skipped   0.02 sec
+2026-10-20T21:46:02.5074795Z           Start 1894: Unit_hipDeviceGetSetLimit_Scratch_SetGetThreads
+2026-10-20T21:46:02.5289091Z  474/1032 Test #1894: Unit_hipDeviceGetSetLimit_Scratch_SetGetThreads ...........................................................................***Skipped   0.02 sec
+2026-10-20T21:46:02.5291825Z           Start 1898: Unit_hipDeviceGetSharedMemConfig_Negative_Parameters
+2026-10-20T21:46:28.5650283Z  475/1032 Test #1898: Unit_hipDeviceGetSharedMemConfig_Negative_Parameters ......................................................................   Passed   26.04 sec
+2026-10-20T21:46:28.5654664Z           Start 1902: Unit_hipDeviceSetMemPool_Negative_Parameters
+2026-10-20T21:46:54.6020982Z  476/1032 Test #1902: Unit_hipDeviceSetMemPool_Negative_Parameters ..............................................................................   Passed   26.04 sec
+2026-10-20T21:46:54.6023468Z           Start 1906: Unit_hipDeviceGetMemPool_Negative_Parameters
+2026-10-20T21:47:20.6395001Z  477/1032 Test #1906: Unit_hipDeviceGetMemPool_Negative_Parameters ..............................................................................   Passed   26.04 sec
+2026-10-20T21:47:20.6397806Z           Start 1910: Unit_hipInitDevice_Positive_DoesNotChangeCurrentDevice
+2026-10-20T21:47:46.6762818Z  478/1032 Test #1910: Unit_hipInitDevice_Positive_DoesNotChangeCurrentDevice ....................................................................***Skipped  26.04 sec
+2026-10-20T21:47:46.6766473Z           Start 1914: Unit_hipDriverGetVersion_Positive
+2026-10-20T21:48:12.7147902Z  479/1032 Test #1914: Unit_hipDriverGetVersion_Positive .........................................................................................   Passed   26.04 sec
+2026-10-20T21:48:12.7150761Z           Start 1918: Unit_hipSetValidDevices_Positive_Basic
+2026-10-20T21:48:38.7542871Z  480/1032 Test #1918: Unit_hipSetValidDevices_Positive_Basic ....................................................................................***Skipped  26.04 sec
+2026-10-20T21:48:38.7545427Z           Start 1922: Unit_hipSetValidDevices_with_hipMemcpyPeer
+2026-10-20T21:49:04.7906024Z  481/1032 Test #1922: Unit_hipSetValidDevices_with_hipMemcpyPeer ................................................................................***Skipped  26.04 sec
+2026-10-20T21:49:04.7909725Z           Start 1926: Unit_hipIpcGetMemHandle_Negative_Handle_For_Freed_Memory
+2026-10-20T21:49:30.8292827Z  482/1032 Test #1926: Unit_hipIpcGetMemHandle_Negative_Handle_For_Freed_Memory ..................................................................   Passed   26.04 sec
+2026-10-20T21:49:30.8296109Z           Start 1930: Unit_hipGetProcAddress_PeerDeviceAccessAPIs
+2026-10-20T21:49:56.8670527Z  483/1032 Test #1930: Unit_hipGetProcAddress_PeerDeviceAccessAPIs ...............................................................................***Skipped  26.04 sec
+2026-10-20T21:49:56.8673421Z           Start 1934: Unit_hipGetDriverEntryPoint_spt_Positive
+2026-10-20T21:50:22.9038048Z  484/1032 Test #1934: Unit_hipGetDriverEntryPoint_spt_Positive ..................................................................................   Passed   26.04 sec
+2026-10-20T21:50:22.9041494Z           Start 1938: Unit_hipEnvGpuEnablePal_ExplicitValues_WorkCorrectly
+2026-10-20T21:51:15.4693666Z  485/1032 Test #1938: Unit_hipEnvGpuEnablePal_ExplicitValues_WorkCorrectly ......................................................................   Passed   52.56 sec
+2026-10-20T21:51:15.4696482Z           Start 1942: Unit_Printf_Negative_Parameters_RTC
+2026-10-20T21:51:42.1907721Z  486/1032 Test #1942: Unit_Printf_Negative_Parameters_RTC .......................................................................................   Passed   26.72 sec
+2026-10-20T21:51:42.1911434Z           Start 1946: Unit_hipGetChannelDesc_Negative_Parameters
+2026-10-20T21:51:42.1913132Z  487/1032 Test #1946: Unit_hipGetChannelDesc_Negative_Parameters ................................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:51:42.1913742Z           Start 1950: Unit_hipTexRefGetArray_Positive
+2026-10-20T21:51:42.1914208Z  488/1032 Test #1950: Unit_hipTexRefGetArray_Positive ...........................................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:51:42.1914675Z           Start 1954: Unit_hipTexRefGetAddress_Positive
+2026-10-20T21:51:42.1915183Z  489/1032 Test #1954: Unit_hipTexRefGetAddress_Positive .........................................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:51:42.1915969Z           Start 1958: Unit_hipTexRefSetAddress_Positive
+2026-10-20T21:51:42.1916430Z  490/1032 Test #1958: Unit_hipTexRefSetAddress_Positive .........................................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:51:42.1917218Z           Start 1962: Unit_hipTexRefGetFormat_Negative
+2026-10-20T21:51:42.1917692Z  491/1032 Test #1962: Unit_hipTexRefGetFormat_Negative ..........................................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:51:42.1919167Z           Start 1966: Unit_hipTexRefSetAddress2D_Negative_Parameters
+2026-10-20T21:51:42.1920229Z  492/1032 Test #1966: Unit_hipTexRefSetAddress2D_Negative_Parameters ............................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:51:42.1921110Z           Start 1970: Unit_hipTexRefGetMaxAnisotropy_Negative_Parameters
+2026-10-20T21:51:42.1921699Z  493/1032 Test #1970: Unit_hipTexRefGetMaxAnisotropy_Negative_Parameters ........................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:51:42.1922221Z           Start 1974: Unit_hipTexRefGetFlags_Negative_Parameters
+2026-10-20T21:51:42.1922697Z  494/1032 Test #1974: Unit_hipTexRefGetFlags_Negative_Parameters ................................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:51:42.1923209Z           Start 1978: Unit_hipTexRefGetAddressMode_Negative_Parameters
+2026-10-20T21:51:42.1923702Z  495/1032 Test #1978: Unit_hipTexRefGetAddressMode_Negative_Parameters ..........................................................................***Not Run (Disabled)   0.00 sec
+2026-10-20T21:51:42.1924214Z           Start 1982: Unit_hipCreateTextureObject_Pitch2DResource
+2026-10-20T21:52:08.8170790Z  496/1032 Test #1982: Unit_hipCreateTextureObject_Pitch2DResource ...............................................................................   Passed   26.62 sec
+2026-10-20T21:52:08.8174910Z           Start 1986: Unit_hipTextureFetch_vector
+2026-10-20T21:53:26.9878387Z  497/1032 Test #1986: Unit_hipTextureFetch_vector ...............................................................................................   Passed   78.17 sec
+2026-10-20T21:53:26.9881749Z           Start 1990: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - short
+2026-10-20T21:54:45.1564198Z  498/1032 Test #1990: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - short ........................................................   Passed   78.17 sec
+2026-10-20T21:54:45.1568541Z           Start 1994: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - float
+2026-10-20T21:56:03.3230278Z  499/1032 Test #1994: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - float ........................................................   Passed   78.17 sec
+2026-10-20T21:56:03.3234581Z           Start 1998: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - ushort1
+2026-10-20T21:57:21.4928202Z  500/1032 Test #1998: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - ushort1 ......................................................   Passed   78.17 sec
+2026-10-20T21:57:21.4931459Z           Start 2002: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - char2
+2026-10-20T21:58:39.6602266Z  501/1032 Test #2002: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - char2 ........................................................   Passed   78.17 sec
+2026-10-20T21:58:39.6606161Z           Start 2006: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - int2
+2026-10-20T21:59:57.8388424Z  502/1032 Test #2006: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - int2 .........................................................   Passed   78.18 sec
+2026-10-20T21:59:57.8391933Z           Start 2010: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - uchar4
+2026-10-20T22:01:16.2544845Z  503/1032 Test #2010: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - uchar4 .......................................................   Passed   78.42 sec
+2026-10-20T22:01:16.2549000Z           Start 2014: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - uint4
+2026-10-20T22:02:34.4291001Z  504/1032 Test #2014: Unit_Layered1DTexture_Check_HostBufferToFromLayered1DArray - uint4 ........................................................   Passed   78.17 sec
+2026-10-20T22:02:34.4295515Z           Start 2018: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - short
+2026-10-20T22:03:52.5877441Z  505/1032 Test #2018: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - short ......................................................   Passed   78.16 sec
+2026-10-20T22:03:52.5881796Z           Start 2022: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - float
+2026-10-20T22:05:10.7520912Z  506/1032 Test #2022: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - float ......................................................   Passed   78.16 sec
+2026-10-20T22:05:10.7524845Z           Start 2026: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - ushort1
+2026-10-20T22:06:28.9072727Z  507/1032 Test #2026: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - ushort1 ....................................................   Passed   78.15 sec
+2026-10-20T22:06:28.9076692Z           Start 2030: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - char2
+2026-10-20T22:07:47.0703503Z  508/1032 Test #2030: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - char2 ......................................................   Passed   78.16 sec
+2026-10-20T22:07:47.0707084Z           Start 2034: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - int2
+2026-10-20T22:09:05.2543800Z  509/1032 Test #2034: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - int2 .......................................................   Passed   78.18 sec
+2026-10-20T22:09:05.2546826Z           Start 2038: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - uchar4
+2026-10-20T22:10:23.4260476Z  510/1032 Test #2038: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - uchar4 .....................................................   Passed   78.17 sec
+2026-10-20T22:10:23.4264657Z           Start 2042: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - uint4
+2026-10-20T22:11:41.5986926Z  511/1032 Test #2042: Unit_Layered1DTexture_Check_DeviceBufferToFromLayered1DArray - uint4 ......................................................   Passed   78.17 sec
+2026-10-20T22:11:41.5991430Z           Start 2046: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - short
+2026-10-20T22:12:59.8104037Z  512/1032 Test #2046: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - short ........................................................   Passed   78.21 sec
+2026-10-20T22:12:59.8107580Z           Start 2050: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - float
+2026-10-20T22:14:18.0164934Z  513/1032 Test #2050: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - float ........................................................   Passed   78.21 sec
+2026-10-20T22:14:18.0168846Z           Start 2054: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - ushort1
+2026-10-20T22:15:36.2122104Z  514/1032 Test #2054: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - ushort1 ......................................................   Passed   78.20 sec
+2026-10-20T22:15:36.2125691Z           Start 2058: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - char2
+2026-10-20T22:16:54.4762220Z  515/1032 Test #2058: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - char2 ........................................................   Passed   78.26 sec
+2026-10-20T22:16:54.4766300Z           Start 2062: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - int2
+2026-10-20T22:18:12.7195380Z  516/1032 Test #2062: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - int2 .........................................................   Passed   78.24 sec
+2026-10-20T22:18:12.7200252Z           Start 2066: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - uchar4
+2026-10-20T22:19:30.9620411Z  517/1032 Test #2066: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - uchar4 .......................................................   Passed   78.24 sec
+2026-10-20T22:19:30.9624005Z           Start 2070: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - uint4
+2026-10-20T22:20:49.2283081Z  518/1032 Test #2070: Unit_Layered2DTexture_Check_HostBufferToFromLayered2DArray - uint4 ........................................................   Passed   78.27 sec
+2026-10-20T22:20:49.2287791Z           Start 2074: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - short
+2026-10-20T22:22:07.4234460Z  519/1032 Test #2074: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - short ......................................................   Passed   78.19 sec
+2026-10-20T22:22:07.4238344Z           Start 2078: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - float
+2026-10-20T22:23:25.6181973Z  520/1032 Test #2078: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - float ......................................................   Passed   78.19 sec
+2026-10-20T22:23:25.6185551Z           Start 2082: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - ushort1
+2026-10-20T22:24:43.8203634Z  521/1032 Test #2082: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - ushort1 ....................................................   Passed   78.20 sec
+2026-10-20T22:24:43.8207129Z           Start 2086: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - char2
+2026-10-20T22:26:02.0327146Z  522/1032 Test #2086: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - char2 ......................................................   Passed   78.21 sec
+2026-10-20T22:26:02.0331472Z           Start 2090: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - int2
+2026-10-20T22:27:20.2534342Z  523/1032 Test #2090: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - int2 .......................................................   Passed   78.22 sec
+2026-10-20T22:27:20.2538865Z           Start 2094: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - uchar4
+2026-10-20T22:28:38.5030192Z  524/1032 Test #2094: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - uchar4 .....................................................   Passed   78.25 sec
+2026-10-20T22:28:38.5033943Z           Start 2098: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - uint4
+2026-10-20T22:29:56.7670693Z  525/1032 Test #2098: Unit_Layered2DTexture_Check_DeviceBufferToFromLayered2DArray - uint4 ......................................................   Passed   78.26 sec
+2026-10-20T22:29:56.7674706Z           Start 2102: Unit_hipBindTexture_Negative
+2026-10-20T22:30:48.8241837Z  526/1032 Test #2102: Unit_hipBindTexture_Negative ..............................................................................................   Passed   52.06 sec
+2026-10-20T22:30:48.8245901Z           Start 2106: Unit_tex1Dfetch_CheckModes
+2026-10-20T22:32:06.9832015Z  527/1032 Test #2106: Unit_tex1Dfetch_CheckModes ................................................................................................   Passed   78.16 sec
+2026-10-20T22:32:06.9835319Z           Start 2110: Unit_hipGetTextureReference_Positive
+2026-10-20T22:32:33.0204306Z  528/1032 Test #2110: Unit_hipGetTextureReference_Positive ......................................................................................   Passed   26.04 sec
+2026-10-20T22:32:33.0207804Z           Start 2114: Unit_hipTexObjPitch_texture2D - short
+2026-10-20T22:33:51.1871728Z  529/1032 Test #2114: Unit_hipTexObjPitch_texture2D - short .....................................................................................   Passed   78.17 sec
+2026-10-20T22:33:51.1875388Z           Start 2118: Unit_hipTexObjPitch_texture2D - float
+2026-10-20T22:35:09.3640546Z  530/1032 Test #2118: Unit_hipTexObjPitch_texture2D - float .....................................................................................   Passed   78.18 sec
+2026-10-20T22:35:09.3644290Z           Start 2122: Unit_hipTextureObj3DCheckModes
+2026-10-20T22:36:29.9401798Z  531/1032 Test #2122: Unit_hipTextureObj3DCheckModes ............................................................................................   Passed   80.58 sec
+2026-10-20T22:36:29.9406345Z           Start 2126: Unit_hipTextureObj1DCheckSRGBAModes_buffer
+2026-10-20T22:37:48.0975520Z  532/1032 Test #2126: Unit_hipTextureObj1DCheckSRGBAModes_buffer ................................................................................***Skipped  78.16 sec
+2026-10-20T22:37:48.0979042Z           Start 2130: Unit_TexObjectCreate_TypeLinear
+2026-10-20T22:38:14.1408985Z  533/1032 Test #2130: Unit_TexObjectCreate_TypeLinear ...........................................................................................   Passed   26.04 sec
+2026-10-20T22:38:14.1411644Z           Start 2134: Unit_TexObjectCreate_TypeArray_NullptrArray
+2026-10-20T22:38:40.1785097Z  534/1032 Test #2134: Unit_TexObjectCreate_TypeArray_NullptrArray ...............................................................................   Passed   26.04 sec
+2026-10-20T22:38:40.1788702Z           Start 2138: Unit_hipGetTexObjectResourceDesc_Negative_Parameters
+2026-10-20T22:39:58.3416470Z  535/1032 Test #2138: Unit_hipGetTexObjectResourceDesc_Negative_Parameters ......................................................................   Passed   78.16 sec
+2026-10-20T22:39:58.3419681Z           Start 2142: Unit_hipGetTexObjectTextureDesc_Negative_Parameters
+2026-10-20T22:41:16.5046870Z  536/1032 Test #2142: Unit_hipGetTexObjectTextureDesc_Negative_Parameters .......................................................................   Passed   78.16 sec
+2026-10-20T22:41:16.5050131Z           Start 2146: Unit_hipGetTextureObjectResourceViewDesc_positive
+2026-10-20T22:42:34.6641289Z  537/1032 Test #2146: Unit_hipGetTextureObjectResourceViewDesc_positive .........................................................................   Passed   78.16 sec
+2026-10-20T22:42:34.6645589Z           Start 2150: Unit_hipDestroyTextureObject_positive
+2026-10-20T22:43:52.8255615Z  538/1032 Test #2150: Unit_hipDestroyTextureObject_positive .....................................................................................   Passed   78.16 sec
+2026-10-20T22:43:52.8258375Z           Start 2154: Unit_hipUnbindTexture_Positive_3D
+2026-10-20T22:45:11.0087175Z  539/1032 Test #2154: Unit_hipUnbindTexture_Positive_3D .........................................................................................   Passed   78.18 sec
+2026-10-20T22:45:11.0091102Z           Start 2158: Unit_hipBindTextureToArray_Positive_3D
+2026-10-20T22:46:29.9942454Z  540/1032 Test #2158: Unit_hipBindTextureToArray_Positive_3D ....................................................................................   Passed   78.98 sec
+2026-10-20T22:46:29.9946558Z           Start 2162: Unit_hipMipmappedArrayGetMemoryRequirements_Negative_Parameters
+2026-10-20T22:46:56.0351724Z  541/1032 Test #2162: Unit_hipMipmappedArrayGetMemoryRequirements_Negative_Parameters ...........................................................   Passed   26.04 sec
+2026-10-20T22:46:56.0354262Z           Start 2166: Unit_surf1Dread_Positive_Basic - unsigned char
+2026-10-20T22:48:15.8401396Z  542/1032 Test #2166: Unit_surf1Dread_Positive_Basic - unsigned char ............................................................................   Passed   79.80 sec
+2026-10-20T22:48:15.8404661Z           Start 2170: Unit_surf1Dread_Positive_Basic - unsigned int
+2026-10-20T22:49:34.0167523Z  543/1032 Test #2170: Unit_surf1Dread_Positive_Basic - unsigned int .............................................................................   Passed   78.18 sec
+2026-10-20T22:49:34.0171615Z           Start 2174: Unit_surf1Dwrite_Positive_Basic - short
+2026-10-20T22:50:52.1942071Z  544/1032 Test #2174: Unit_surf1Dwrite_Positive_Basic - short ...................................................................................   Passed   78.18 sec
+2026-10-20T22:50:52.1945657Z           Start 2178: Unit_surf1Dwrite_Positive_Basic - float
+2026-10-20T22:52:10.3745899Z  545/1032 Test #2178: Unit_surf1Dwrite_Positive_Basic - float ...................................................................................   Passed   78.18 sec
+2026-10-20T22:52:10.3750204Z           Start 2182: Unit_surf1D_Positive_ReadWrite - unsigned short
+2026-10-20T22:53:28.5619791Z  546/1032 Test #2182: Unit_surf1D_Positive_ReadWrite - unsigned short ...........................................................................   Passed   78.19 sec
+2026-10-20T22:53:28.5622590Z           Start 2186: Unit_surf1DLayeredread_Positive_Basic - char
+2026-10-20T22:54:46.7456792Z  547/1032 Test #2186: Unit_surf1DLayeredread_Positive_Basic - char ..............................................................................   Passed   78.18 sec
+2026-10-20T22:54:46.7460605Z           Start 2190: Unit_surf1DLayeredread_Positive_Basic - int
+2026-10-20T22:56:04.9192628Z  548/1032 Test #2190: Unit_surf1DLayeredread_Positive_Basic - int ...............................................................................   Passed   78.17 sec
+2026-10-20T22:56:04.9197581Z           Start 2194: Unit_surf1DLayeredwrite_Positive_Basic - unsigned char
+2026-10-20T22:57:23.1109640Z  549/1032 Test #2194: Unit_surf1DLayeredwrite_Positive_Basic - unsigned char ....................................................................   Passed   78.19 sec
+2026-10-20T22:57:23.1113712Z           Start 2198: Unit_surf1DLayeredwrite_Positive_Basic - unsigned int
+2026-10-20T22:58:41.2849562Z  550/1032 Test #2198: Unit_surf1DLayeredwrite_Positive_Basic - unsigned int .....................................................................   Passed   78.17 sec
+2026-10-20T22:58:41.2853734Z           Start 2202: Unit_surf1DLayered_Positive_ReadWrite - short
+2026-10-20T22:59:59.4712534Z  551/1032 Test #2202: Unit_surf1DLayered_Positive_ReadWrite - short .............................................................................   Passed   78.19 sec
+2026-10-20T22:59:59.4715617Z           Start 2206: Unit_surf1DLayered_Positive_ReadWrite - float
+2026-10-20T23:01:17.6668840Z  552/1032 Test #2206: Unit_surf1DLayered_Positive_ReadWrite - float .............................................................................   Passed   78.20 sec
+2026-10-20T23:01:17.6672760Z           Start 2210: Unit_surf2Dread_Positive_Basic - unsigned short
+2026-10-20T23:02:35.8395390Z  553/1032 Test #2210: Unit_surf2Dread_Positive_Basic - unsigned short ...........................................................................   Passed   78.17 sec
+2026-10-20T23:02:35.8399464Z           Start 2214: Unit_surf2Dwrite_Positive_Basic - char
+2026-10-20T23:03:54.0259985Z  554/1032 Test #2214: Unit_surf2Dwrite_Positive_Basic - char ....................................................................................   Passed   78.19 sec
+2026-10-20T23:03:54.0264399Z           Start 2218: Unit_surf2Dwrite_Positive_Basic - int
+2026-10-20T23:05:12.2011153Z  555/1032 Test #2218: Unit_surf2Dwrite_Positive_Basic - int .....................................................................................   Passed   78.17 sec
+2026-10-20T23:05:12.2015606Z           Start 2222: Unit_surf2D_Positive_ReadWrite - unsigned char
+2026-10-20T23:06:30.3913855Z  556/1032 Test #2222: Unit_surf2D_Positive_ReadWrite - unsigned char ............................................................................   Passed   78.19 sec
+2026-10-20T23:06:30.3917404Z           Start 2226: Unit_surf2D_Positive_ReadWrite - unsigned int
+2026-10-20T23:07:48.6063712Z  557/1032 Test #2226: Unit_surf2D_Positive_ReadWrite - unsigned int .............................................................................   Passed   78.21 sec
+2026-10-20T23:07:48.6067930Z           Start 2230: Unit_surf2DLayeredread_Positive_Basic - short
+2026-10-20T23:09:06.8065912Z  558/1032 Test #2230: Unit_surf2DLayeredread_Positive_Basic - short .............................................................................   Passed   78.20 sec
+2026-10-20T23:09:06.8069965Z           Start 2234: Unit_surf2DLayeredread_Positive_Basic - float
+2026-10-20T23:09:19.1691039Z ##[error]The action 'Test' has timed out after 120 minutes.
+2026-10-20T23:09:19.1973962Z ##[group]Run python ./build_tools/github_actions/reproduce_test_failure.py \
+2026-10-20T23:09:19.1974482Z [36;1mpython ./build_tools/github_actions/reproduce_test_failure.py \[0m
+2026-10-20T23:09:19.1974796Z [36;1m  --run-id "${ARTIFACT_RUN_ID}" \[0m
+2026-10-20T23:09:19.1975049Z [36;1m  --repository "ROCm/TheRock" \[0m
+2026-10-20T23:09:19.1975378Z [36;1m  --amdgpu-family "${AMDGPU_FAMILIES}" \[0m
+2026-10-20T23:09:19.1975642Z [36;1m  --amdgpu-targets "${AMDGPU_TARGETS}" \[0m
+2026-10-20T23:09:19.1975915Z [36;1m  --test-script "${COMPONENT_TEST_SCRIPT}" \[0m
+2026-10-20T23:09:19.1976166Z [36;1m  --shard-index "${MATRIX_SHARD}" \[0m
+2026-10-20T23:09:19.1976437Z [36;1m  --total-shards "${COMPONENT_TOTAL_SHARDS}" \[0m
+2026-10-20T23:09:19.1976714Z [36;1m  --test-type "${COMPONENT_TEST_TYPE}" \[0m
+2026-10-20T23:09:19.1976973Z [36;1m  --print-cmd \[0m
+2026-10-20T23:09:19.1977272Z [36;1m  --fetch-artifact-args="${COMPONENT_FETCH_ARTIFACT_ARGS}" \[0m
+2026-10-20T23:09:19.1977665Z [36;1m  --additional-requirements-files="${REQUIREMENTS_FILES}"[0m
+2026-10-20T23:09:19.1997576Z shell: C:\Program Files\Git\usr\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-20T23:09:19.1997883Z env:
+2026-10-20T23:09:19.1998079Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T23:09:19.1998352Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T23:09:19.1998615Z   VENV_DIR: B:\actions-runner\_work\TheRock\TheRock/.venv
+2026-10-20T23:09:19.1998889Z   ARTIFACT_RUN_ID: 39476246312
+2026-10-20T23:09:19.1999098Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T23:09:19.1999295Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T23:09:19.1999477Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-20T23:09:19.1999697Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-20T23:09:19.1999930Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-20T23:09:19.2000120Z   BUILD_VARIANT: release
+2026-10-20T23:09:19.2000352Z   pythonLocation: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:09:19.2000714Z   PKG_CONFIG_PATH: B:\actions-runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-20T23:09:19.2001086Z   Python_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:09:19.2001390Z   Python2_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:09:19.2001698Z   Python3_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:09:19.2002002Z   VIRTUAL_ENV: B:\actions-runner\_work\TheRock\TheRock\.venv
+2026-10-20T23:09:19.2002251Z   MATRIX_SHARD: 3
+2026-10-20T23:09:19.2002543Z   COMPONENT_TEST_SCRIPT: python build_tools/github_actions/test_executable_scripts/test_hiptests.py
+2026-10-20T23:09:19.2002888Z   COMPONENT_TOTAL_SHARDS: 4
+2026-10-20T23:09:19.2003094Z   COMPONENT_TEST_TYPE: standard
+2026-10-20T23:09:19.2003324Z   REQUIREMENTS_FILES: 
+2026-10-20T23:09:19.2003529Z   COMPONENT_FETCH_ARTIFACT_ARGS: --hip-tests --tests
+2026-10-20T23:09:19.2003764Z ##[endgroup]
+2026-10-20T23:09:19.5112455Z To reproduce this failure, run:
+2026-10-20T23:09:19.5112854Z   git clone https://github.com/ROCm/TheRock.git && cd TheRock
+2026-10-20T23:09:19.5114006Z   python build_tools/github_actions/reproduce_test_failure.py --run-id 39476246312 --repository ROCm/TheRock --amdgpu-family gfx110X-all --test-script "python build_tools/github_actions/test_executable_scripts/test_hiptests.py" --amdgpu-targets gfx1100,gfx1101,gfx1102,gfx1103 --output-dir "./build" --shard-index 3 --total-shards 4 --test-type standard --fetch-artifact-args="--hip-tests --tests"
+2026-10-20T23:09:19.5453305Z ##[group]Run . 'B:\actions-runner\_work\TheRock\TheRock\build_tools\github_actions\cleanup_processes.ps1'
+2026-10-20T23:09:19.5453860Z [36;1m. 'B:\actions-runner\_work\TheRock\TheRock\build_tools\github_actions\cleanup_processes.ps1'[0m
+2026-10-20T23:09:19.5471098Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+2026-10-20T23:09:19.5471417Z env:
+2026-10-20T23:09:19.5471610Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T23:09:19.5471859Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T23:09:19.5472124Z   VENV_DIR: B:\actions-runner\_work\TheRock\TheRock/.venv
+2026-10-20T23:09:19.5472477Z   ARTIFACT_RUN_ID: 39476246312
+2026-10-20T23:09:19.5472677Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T23:09:19.5472874Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T23:09:19.5473084Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-20T23:09:19.5473311Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-20T23:09:19.5473556Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-20T23:09:19.5473764Z   BUILD_VARIANT: release
+2026-10-20T23:09:19.5474005Z   pythonLocation: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:09:19.5474350Z   PKG_CONFIG_PATH: B:\actions-runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-20T23:09:19.5474705Z   Python_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:09:19.5475010Z   Python2_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:09:19.5475309Z   Python3_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:09:19.5475611Z   VIRTUAL_ENV: B:\actions-runner\_work\TheRock\TheRock\.venv
+2026-10-20T23:09:19.5475859Z ##[endgroup]
+2026-10-20T23:09:19.8952168Z [*] ==== Starting cleanup_processes.ps1 ====
+2026-10-20T23:09:19.9046755Z [*] Checking if elevated: True | current user: NT AUTHORITY\SYSTEM
+2026-10-20T23:09:19.9067528Z [*] Running as a Windows Service (NT AUTHORITY\*) - Cleaning up system environment...
+2026-10-20T23:09:19.9568245Z [*] > Checking for "~/.gitconfig" file at: C:\Windows\system32\config\systemprofile\.gitconfig
+2026-10-20T23:09:19.9586435Z [*] >> .gitconfig file found, removing after logging contents:
+2026-10-20T23:09:20.1547062Z safe.directory=B:/actions-runner/_work/TheRock/TheRock
+2026-10-20T23:09:20.1596764Z [+] >> Successfully removed .gitconfig
+2026-10-20T23:09:20.1606842Z [*] > Checking for uv.zip archives under: C:\Windows\SystemTemp\
+2026-10-20T23:09:20.1878007Z [*] >> Found 0 uv.zip file(s), total size: 0 MB
+2026-10-20T23:09:20.1882748Z [*] > Checking for empty GUID directories under: C:\Windows\SystemTemp\
+2026-10-20T23:09:20.1996727Z [*] >> Found 0 empty GUID folder(s)
+2026-10-20T23:09:20.2013692Z [*] > Checking pip http-v2 cache under: C:\Windows\system32\config\systemprofile\AppData\Local\pip\cache\http-v2
+2026-10-20T23:09:20.2203115Z [*] >> Found 0 file(s) older than 1 day, total size: 0 MB
+2026-10-20T23:09:20.2221136Z [*] Clearing stale git submodule working trees in workspace: B:\actions-runner\_work\TheRock\TheRock
+2026-10-20T23:09:20.2556841Z       removing base/half
+2026-10-20T23:09:20.2577461Z       removing compiler/hipify
+2026-10-20T23:09:20.2586452Z       removing compiler/amd-llvm
+2026-10-20T23:09:20.2595764Z       removing base/rocm-cmake
+2026-10-20T23:09:20.2604402Z       removing rocm-libraries
+2026-10-20T23:09:20.2613026Z       removing rocm-systems
+2026-10-20T23:09:20.2621994Z       removing compiler/spirv-llvm-translator
+2026-10-20T23:09:20.2631378Z       removing third-party/sysdeps/common/mesa-fork
+2026-10-20T23:09:20.2640513Z       removing math-libs/libhipcxx
+2026-10-20T23:09:20.2649722Z       removing debug-tools/rocgdb/source
+2026-10-20T23:09:20.2658354Z       removing rocm-docs
+2026-10-20T23:09:20.2664264Z [*] >> Submodule working-tree cleanup finished
+2026-10-20T23:09:20.2665339Z [*] Cleaning up processes...
+2026-10-20T23:09:20.2671150Z [*] GITHUB_WORKSPACE env var defined: B:\actions-runner\_work\TheRock\TheRock
+2026-10-20T23:09:20.2684623Z [*] Checking for running build executables filtered by .exe regex: B:\\actions-runner\\_work\\TheRock\\TheRock\\build\\.*[.]exe
+2026-10-20T23:09:20.2890211Z [*] Found 1 running build executable(s):
+2026-10-20T23:09:20.2978011Z     > B:\actions-runner\_work\TheRock\TheRock\build\share\hip\catch_tests\SurfaceTest.exe
+2026-10-20T23:09:20.2978465Z [*] Attempting to stop executable(s) with WMI: 
+2026-10-20T23:09:20.3091093Z     > [pid:4380][HasExited:True] SurfaceTest.exe
+2026-10-20T23:09:20.3596263Z [*] Waiting up to 5 seconds for processes to stop...
+2026-10-20T23:09:21.3675615Z     > Waiting for 1 processes...
+2026-10-20T23:09:21.3788093Z       [pid:4380][HasExited:True] SurfaceTest.exe
+2026-10-20T23:09:22.4037420Z     > Waiting for 1 processes...
+2026-10-20T23:09:22.4043459Z       [pid:4380][HasExited:True] SurfaceTest.exe
+2026-10-20T23:09:23.4100348Z     > Waiting for 1 processes...
+2026-10-20T23:09:23.4106417Z       [pid:4380][HasExited:True] SurfaceTest.exe
+2026-10-20T23:09:24.4242411Z     > Waiting for 1 processes...
+2026-10-20T23:09:24.4248178Z       [pid:4380][HasExited:True] SurfaceTest.exe
+2026-10-20T23:09:25.4334514Z     > Waiting for 1 processes...
+2026-10-20T23:09:25.4340399Z       [pid:4380][HasExited:True] SurfaceTest.exe
+2026-10-20T23:09:25.4351255Z     > Found 1 processes after waiting 5 second(s)
+2026-10-20T23:09:25.4468511Z [*] Attempting to stop any remaining executable(s) forcefully with 'Stop-Process':
+2026-10-20T23:09:25.4594820Z     > [pid:4380][HasExited:True] SurfaceTest.exe
+2026-10-20T23:09:25.4624273Z [*] Waiting up to 5 seconds for processes to stop...
+2026-10-20T23:09:26.4856806Z     > Waiting for 1 processes...
+2026-10-20T23:09:26.4862806Z       [pid:4380][HasExited:True] SurfaceTest.exe
+2026-10-20T23:09:27.4894739Z     > Waiting for 1 processes...
+2026-10-20T23:09:27.4900399Z       [pid:4380][HasExited:True] SurfaceTest.exe
+2026-10-20T23:09:28.4936942Z     > Waiting for 1 processes...
+2026-10-20T23:09:28.4942961Z       [pid:4380][HasExited:True] SurfaceTest.exe
+2026-10-20T23:09:29.4978410Z     > Waiting for 1 processes...
+2026-10-20T23:09:29.4984038Z       [pid:4380][HasExited:True] SurfaceTest.exe
+2026-10-20T23:09:30.5051399Z     > Waiting for 1 processes...
+2026-10-20T23:09:30.5057334Z       [pid:4380][HasExited:True] SurfaceTest.exe
+2026-10-20T23:09:30.5061658Z     > Found 1 processes after waiting 5 second(s)
+2026-10-20T23:09:30.5179665Z [-] Failed to stop executable(s): 
+2026-10-20T23:09:30.5296220Z     > [pid:4380][HasExited:True] SurfaceTest.exe
+2026-10-20T23:09:32.8426878Z ##[error]Process completed with exit code 1.
+2026-10-20T23:09:32.8657581Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-20T23:09:32.8657937Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-20T23:09:32.8677382Z shell: C:\Program Files\Git\usr\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-20T23:09:32.8677669Z env:
+2026-10-20T23:09:32.8677816Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T23:09:32.8678030Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T23:09:32.8678256Z   VENV_DIR: B:\actions-runner\_work\TheRock\TheRock/.venv
+2026-10-20T23:09:32.8678461Z   ARTIFACT_RUN_ID: 39476246312
+2026-10-20T23:09:32.8678624Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T23:09:32.8678780Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T23:09:32.8678937Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-20T23:09:32.8679124Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-20T23:09:32.8679318Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-20T23:09:32.8679500Z   BUILD_VARIANT: release
+2026-10-20T23:09:32.8679705Z   pythonLocation: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:09:32.8680009Z   PKG_CONFIG_PATH: B:\actions-runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-20T23:09:32.8680321Z   Python_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:09:32.8680738Z   Python2_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:09:32.8681009Z   Python3_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T23:09:32.8681260Z   VIRTUAL_ENV: B:\actions-runner\_work\TheRock\TheRock\.venv
+2026-10-20T23:09:32.8681466Z ##[endgroup]
+2026-10-20T23:09:33.0560333Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-20T23:09:33.0972194Z Post job cleanup.
+2026-10-20T23:09:33.0975419Z ##[start-action display=Setting up Python;id=__4ddbef84-7a02-41c3-89de-5959cd3087ce.__actions_setup-python]
+2026-10-20T23:09:33.0977856Z ##[end-action id=__4ddbef84-7a02-41c3-89de-5959cd3087ce.__actions_setup-python;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-20T23:09:33.1223703Z Post job cleanup.
+2026-10-20T23:09:33.6682148Z [command]"C:\Program Files\Git\cmd\git.exe" version
+2026-10-20T23:09:33.8689605Z git version 2.55.0.windows.3
+2026-10-20T23:09:33.8736351Z Temporarily overriding HOME='B:\actions-runner\_work\_temp\cfe5290e-3ff2-42d2-8948-4a842a1e661a' before making global git config changes
+2026-10-20T23:09:33.8736869Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T23:09:33.8742190Z [command]"C:\Program Files\Git\cmd\git.exe" config --global --add safe.directory B:\actions-runner\_work\TheRock\TheRock
+2026-10-20T23:09:33.8963712Z Removing SSH command configuration
+2026-10-20T23:09:33.8970722Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T23:09:33.9189815Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-20T23:09:34.7262828Z Removing HTTP extra header
+2026-10-20T23:09:34.7269036Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T23:09:34.7501950Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-20T23:09:35.1577834Z Removing includeIf entries pointing to credentials config files
+2026-10-20T23:09:35.1585101Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T23:09:35.1797557Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-20T23:09:35.6062438Z Post job cleanup.
+2026-10-20T23:09:35.7045297Z Evaluate and set job outputs
+2026-10-20T23:09:35.7048975Z Cleaning up orphan processes

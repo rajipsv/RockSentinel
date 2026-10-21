@@ -95,6 +95,47 @@ def _diverse(jobs: list[JobResult], skip_ids: set[int], limit: int) -> list[JobR
     return (first_pass + second_pass)[:limit]
 
 
+def _must_cite(result) -> list[str]:
+    cites: list[str] = []
+    for c in result.candidates:
+        if c.kind != "exit_code" and c.text not in cites:
+            cites.append(c.text)
+        if len(cites) == 3:
+            break
+    return cites
+
+
+def refresh(paths: Paths | None = None) -> list[str]:
+    """Re-derive pending proposals from their saved logs after extractor/rule changes.
+
+    Outcome-based labels (passed on rerun, ...) keep their category; rule-based ones are
+    re-classified. Must-cite lines, failing test and kernel are always re-extracted.
+    """
+    paths = paths or Paths()
+    proposals = _read_jsonl(paths.proposals)
+    changed = []
+    for p in proposals:
+        fixture = paths.root / p["log_fixture"]
+        if not fixture.is_file():
+            continue
+        result = extract_errors(fixture.read_text(encoding="utf-8"))
+        expected = dict(p["expected"])
+        expected["must_cite"] = _must_cite(result)
+        expected["failing_test"] = result.failing_test
+        expected["failing_kernel"] = result.faulting_kernel
+        source = p.get("label_source", "")
+        if not source.startswith("outcome"):
+            category, reason = classify([c.kind for c in result.candidates],
+                                        workflow=p["workflow"])
+            expected["category"] = category
+            source = f"rules (B1): {reason} - VERIFY against the log"
+        if expected != p["expected"] or source != p.get("label_source"):
+            p["expected"], p["label_source"] = expected, source
+            changed.append(p["case_id"])
+    _write_jsonl(paths.proposals, proposals)
+    return changed
+
+
 def propose_case(store: JobStore, gh: GitHubClient, job: JobResult, paths: Paths) -> dict:
     log = gh.get_job_log(job.repo, job.job_id)
     excerpt = fixture_excerpt(log)
@@ -121,13 +162,7 @@ def propose_case(store: JobStore, gh: GitHubClient, job: JobResult, paths: Paths
     else:
         source = f"rules (B1): {reason} - VERIFY against the log"
 
-    must_cite = []
-    for c in result.candidates:
-        if c.kind != "exit_code" and c.text not in must_cite:
-            must_cite.append(c.text)
-        if len(must_cite) == 3:
-            break
-
+    must_cite = _must_cite(result)
     component = job.component or (
         map_symbol_to_component(result.faulting_kernel).component
         if result.faulting_kernel else None
@@ -279,6 +314,7 @@ def main() -> None:
     p_prop.add_argument("--db", default=".data/rocksentinel.db")
     p_prop.add_argument("--max-per-run", type=int, default=DEFAULT_MAX_PER_RUN)
     sub.add_parser("list")
+    sub.add_parser("refresh", help="re-derive pending proposals after extractor/rule changes")
     p_reb = sub.add_parser("rebalance", help="drop pending proposals beyond the per-run cap")
     p_reb.add_argument("--max-per-run", type=int, default=DEFAULT_MAX_PER_RUN)
     p_acc = sub.add_parser("accept")
@@ -302,6 +338,9 @@ def main() -> None:
         proposals = _read_jsonl(Paths().proposals)
         print(format_proposals(proposals))
         print(f"\n{len(proposals)} pending from {len({p['run_id'] for p in proposals})} runs")
+    elif args.cmd == "refresh":
+        changed = refresh()
+        print(f"refreshed {len(changed)} proposals: {changed}")
     elif args.cmd == "rebalance":
         dropped = rebalance(max_per_run=args.max_per_run)
         print(f"dropped {len(dropped)} over-represented proposals: {dropped}")

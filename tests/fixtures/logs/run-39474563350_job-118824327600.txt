@@ -1,0 +1,432 @@
+# Source: ROCm/TheRock Actions run 39474563350 attempt 1, job 118824327600
+# Job: Linux::release / Build Multi-Arch Stages / math-libs (gfx120X-all, gfx1200,gfx1201, aws-linux-scale-rocm-prod, true, false) / Stage - Math Libs (gfx120X-all) (multi_arch_ci.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+2026-10-20T19:34:52.6265858Z Detecting CXX compiler ABI info
+2026-10-20T19:34:52.6266097Z Detecting CXX compiler ABI info - done
+2026-10-20T19:34:52.6266410Z Check for working CXX compiler: /opt/rh/gcc-toolset-13/root/usr/bin/c++ - skipped
+2026-10-20T19:34:52.6266722Z Detecting CXX compile features
+2026-10-20T19:34:52.6266933Z Detecting CXX compile features - done
+2026-10-20T19:34:52.6267156Z Detecting HIP compiler ABI info
+2026-10-20T19:34:52.6267366Z Detecting HIP compiler ABI info - done
+2026-10-20T19:34:52.6267707Z Check for working HIP compiler: /__w/TheRock/TheRock/build/dist/rocm/lib/llvm/bin/clang++ - skipped
+2026-10-20T19:34:52.6268058Z Detecting HIP compile features
+2026-10-20T19:34:52.6268480Z Detecting HIP compile features - done
+2026-10-20T19:34:52.6268812Z HIP: Using hipcc from relative path: /__w/TheRock/TheRock/build/dist/rocm/bin/hipcc
+2026-10-20T19:34:52.6269266Z CMake Warning (dev) at /__w/TheRock/TheRock/build/dist/rocm/lib/cmake/hip/hip-config-amd.cmake:82 (message):
+2026-10-20T19:34:52.6269710Z    GPU_TARGETS was not set, and system GPU detection was unsuccsessful.
+2026-10-20T19:34:52.6270006Z    
+2026-10-20T19:34:52.6270208Z    The amdgpu-arch tool failed:
+2026-10-20T19:34:52.6270540Z    Error: 'Failed to get device count: no ROCm-capable device is detected (error code: 100)'
+2026-10-20T19:34:52.6270875Z    Output: ''
+2026-10-20T19:34:52.6271073Z    
+2026-10-20T19:34:52.6271336Z    As a result, --offload-arch will not be set for subsequent
+2026-10-20T19:34:52.6271647Z    compilations, and the default architecture
+2026-10-20T19:34:52.6271948Z    (gfx906 for dynamic build / gfx942 for static build) will be used
+2026-10-20T19:34:52.6272248Z    for compiling device code in C++ language mode
+2026-10-20T19:34:52.6272460Z 
+2026-10-20T19:34:52.6272600Z Call Stack (most recent call first):
+2026-10-20T19:34:52.6272927Z   /__w/TheRock/TheRock/build/dist/rocm/lib/cmake/hip/hip-config.cmake:164 (include)
+2026-10-20T19:34:52.6273256Z   CMakeLists.txt:51 (find_package)
+2026-10-20T19:34:52.6273551Z This warning is for project developers.  Use -Wno-dev to suppress it.
+2026-10-20T19:34:52.6273798Z 
+2026-10-20T19:34:52.6273934Z Performing Test CMAKE_HAVE_LIBC_PTHREAD
+2026-10-20T19:34:52.6274196Z Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+2026-10-20T19:34:52.6274464Z Looking for pthread_create in pthreads
+2026-10-20T19:34:52.6274724Z Looking for pthread_create in pthreads - not found
+2026-10-20T19:34:52.6274991Z Looking for pthread_create in pthread
+2026-10-20T19:34:52.6275236Z Looking for pthread_create in pthread - found
+2026-10-20T19:34:52.6275488Z Found Threads: TRUE  
+2026-10-20T19:34:52.6275698Z **** HIP Configuration:
+2026-10-20T19:34:52.6275907Z   VERSION: 7.17.26416
+2026-10-20T19:34:52.6276190Z   INCLUDE: /__w/TheRock/TheRock/build/dist/rocm/include
+2026-10-20T19:34:52.6281524Z   LIBRARIES: hip::host;hip::device
+2026-10-20T19:34:52.6282207Z   GPU_TARGETS: 
+2026-10-20T19:34:52.6283253Z HIP: Using hipcc from relative path: /__w/TheRock/TheRock/build/dist/rocm/bin/hipcc
+2026-10-20T19:34:52.6283729Z CMake Warning (dev) at /__w/TheRock/TheRock/build/dist/rocm/lib/cmake/hip/hip-config-amd.cmake:82 (message):
+2026-10-20T19:34:52.6284101Z    GPU_TARGETS was not set, and system GPU detection was unsuccsessful.
+2026-10-20T19:34:52.6284331Z    
+2026-10-20T19:34:52.6284466Z    The amdgpu-arch tool failed:
+2026-10-20T19:34:52.6285206Z    Error: 'Failed to get device count: no ROCm-capable device is detected (error code: 100)'
+2026-10-20T19:34:52.6285476Z    Output: ''
+2026-10-20T19:34:52.6285603Z    
+2026-10-20T19:34:52.6285773Z    As a result, --offload-arch will not be set for subsequent
+2026-10-20T19:34:52.6286004Z    compilations, and the default architecture
+2026-10-20T19:34:52.6286237Z    (gfx906 for dynamic build / gfx942 for static build) will be used
+2026-10-20T19:34:52.6286474Z    for compiling device code in C++ language mode
+2026-10-20T19:34:52.6286623Z 
+2026-10-20T19:34:52.6286688Z Call Stack (most recent call first):
+2026-10-20T19:34:52.6286943Z   /__w/TheRock/TheRock/build/dist/rocm/lib/cmake/hip/hip-config.cmake:164 (include)
+2026-10-20T19:34:52.6287331Z   /usr/local/therock-tools/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)
+2026-10-20T19:34:52.6287749Z   /__w/TheRock/TheRock/build/dist/rocm/lib/cmake/hiprand/hiprand-config.cmake:90 (find_dependency)
+2026-10-20T19:34:52.6288052Z   CMakeLists.txt:60 (find_package)
+2026-10-20T19:34:52.6288281Z This warning is for project developers.  Use -Wno-dev to suppress it.
+2026-10-20T19:34:52.6288453Z 
+2026-10-20T19:34:52.6288513Z hiprand version: 3.4.0
+2026-10-20T19:34:52.6288654Z rocrand version: 5.2.0
+2026-10-20T19:34:52.6288819Z CMake Error at CMakeLists.txt:68 (find_package):
+2026-10-20T19:34:52.6289080Z   Could not find a package configuration file provided by "hipsparselt" with
+2026-10-20T19:34:52.6289323Z   any of the following names:
+2026-10-20T19:34:52.6289427Z 
+2026-10-20T19:34:52.6289490Z     hipsparseltConfig.cmake
+2026-10-20T19:34:52.6289655Z     hipsparselt-config.cmake
+2026-10-20T19:34:52.6289762Z 
+2026-10-20T19:34:52.6289889Z   Add the installation prefix of "hipsparselt" to CMAKE_PREFIX_PATH or set
+2026-10-20T19:34:52.6290198Z   "hipsparselt_DIR" to a directory containing one of the above files.  If
+2026-10-20T19:34:52.6290506Z   "hipsparselt" provides a separate development package or SDK, be sure it
+2026-10-20T19:34:52.6290744Z   has been installed.
+2026-10-20T19:34:52.6290832Z 
+2026-10-20T19:34:52.6290834Z 
+2026-10-20T19:34:52.6290910Z Configuring incomplete, errors occurred!
+2026-10-20T19:34:52.6291028Z 
+2026-10-20T19:34:52.6291193Z CMake Error at /__w/TheRock/TheRock/examples/clean_configure_test_project.cmake:49 (message):
+2026-10-20T19:34:52.6291479Z   Failed to execute test process
+2026-10-20T19:34:52.6291588Z 
+2026-10-20T19:34:52.6291590Z 
+2026-10-20T19:34:52.6291593Z 
+2026-10-20T19:34:52.6291595Z 
+2026-10-20T19:34:52.6291674Z 98% tests passed, 1 tests failed out of 49
+2026-10-20T19:34:52.6291791Z 
+2026-10-20T19:34:52.6291858Z Total Test time (real) =   3.51 sec
+2026-10-20T19:34:52.6291967Z 
+2026-10-20T19:34:52.6292029Z The following tests FAILED:
+2026-10-20T19:34:52.6292211Z 	 49 - therock-examples-cpp-sdk-user (Failed)
+2026-10-20T19:34:52.6332350Z ##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/500cfdf0-ccbd-11f1-9e6c-4fd8a472779f.sh], exit code 8
+2026-10-20T19:34:52.6371839Z ##[error]Process completed with exit code 1.
+2026-10-20T19:34:52.6443037Z ##[error]Executing the custom container implementation failed. Please contact your self hosted runner administrator.
+2026-10-20T19:34:52.6494468Z Prepare all required actions
+2026-10-20T19:34:52.6494896Z Getting action download info
+2026-10-20T19:34:52.7389657Z Download action repository 'aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd' (SHA:e1253824e5c10ff9df46874f81ed3ec929e19cfd)
+2026-10-20T19:34:53.1938792Z ##[group]Run ./.github/actions/configure_aws_artifacts_credentials
+2026-10-20T19:34:53.1939053Z with:
+2026-10-20T19:34:53.1939196Z   release_type: ci
+2026-10-20T19:34:53.1939341Z env:
+2026-10-20T19:34:53.1939551Z   QUARTZ_REPORTING_WORKFLOW: multi_arch_build_portable_linux_artifacts.yml
+2026-10-20T19:34:53.1939845Z   QUARTZ_WORKFLOW_POSTFIX: - build ROCm artifacts
+2026-10-20T19:34:53.1940192Z   DIST_AMDGPU_FAMILIES: gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx125X-dcgpu;gfx90a;gfx950-dcgpu
+2026-10-20T19:34:53.1940516Z   AMDGPU_FAMILIES: gfx120X-all
+2026-10-20T19:34:53.1940772Z   ROCM_PACKAGE_VERSION: 10.2.0.dev0+1de8cb30128a7e1bf03f6ac1dbd42f9b8414e913
+2026-10-20T19:34:53.1941068Z   RELEASE_TYPE: ci
+2026-10-20T19:34:53.1941212Z   REBUILD_ARTIFACTS: 
+2026-10-20T19:34:53.1941362Z   STAGE_NAME: math-libs
+2026-10-20T19:34:53.1941623Z   CCACHE_CONFIGPATH: /home/runner/_work/TheRock/TheRock/.ccache/ccache.conf
+2026-10-20T19:34:53.1941885Z   TEATIME_FORCE_INTERACTIVE: 0
+2026-10-20T19:34:53.1942068Z   EXTERNAL_FETCH_SOURCES_ARGS: 
+2026-10-20T19:34:53.1942239Z   EXTERNAL_REPO_CONFIG: 
+2026-10-20T19:34:53.1942394Z   BUILD_DIR: build
+2026-10-20T19:34:53.1942588Z   CACHE_DIR: /home/runner/_work/TheRock/TheRock/.container-cache
+2026-10-20T19:34:53.1942815Z ##[endgroup]
+2026-10-20T19:34:53.1988713Z ##[start-action display=Determine IAM role;id=__self.iam]
+2026-10-20T19:34:53.2067911Z ##[group]Run python build_tools/github_actions/write_artifacts_bucket_info.py \
+2026-10-20T19:34:53.2068336Z [36;1mpython build_tools/github_actions/write_artifacts_bucket_info.py \[0m
+2026-10-20T19:34:53.2068650Z [36;1m  --release-type "${INPUTS_RELEASE_TYPE}"[0m
+2026-10-20T19:34:53.2069002Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T19:34:53.2069213Z env:
+2026-10-20T19:34:53.2069438Z   QUARTZ_REPORTING_WORKFLOW: multi_arch_build_portable_linux_artifacts.yml
+2026-10-20T19:34:53.2069736Z   QUARTZ_WORKFLOW_POSTFIX: - build ROCm artifacts
+2026-10-20T19:34:53.2070109Z   DIST_AMDGPU_FAMILIES: gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx125X-dcgpu;gfx90a;gfx950-dcgpu
+2026-10-20T19:34:53.2070451Z   AMDGPU_FAMILIES: gfx120X-all
+2026-10-20T19:34:53.2070720Z   ROCM_PACKAGE_VERSION: 10.2.0.dev0+1de8cb30128a7e1bf03f6ac1dbd42f9b8414e913
+2026-10-20T19:34:53.2070993Z   RELEASE_TYPE: ci
+2026-10-20T19:34:53.2071146Z   REBUILD_ARTIFACTS: 
+2026-10-20T19:34:53.2071305Z   STAGE_NAME: math-libs
+2026-10-20T19:34:53.2071549Z   CCACHE_CONFIGPATH: /home/runner/_work/TheRock/TheRock/.ccache/ccache.conf
+2026-10-20T19:34:53.2071823Z   TEATIME_FORCE_INTERACTIVE: 0
+2026-10-20T19:34:53.2072005Z   EXTERNAL_FETCH_SOURCES_ARGS: 
+2026-10-20T19:34:53.2072185Z   EXTERNAL_REPO_CONFIG: 
+2026-10-20T19:34:53.2072344Z   BUILD_DIR: build
+2026-10-20T19:34:53.2072554Z   CACHE_DIR: /home/runner/_work/TheRock/TheRock/.container-cache
+2026-10-20T19:34:53.2072801Z   INPUTS_RELEASE_TYPE: ci
+2026-10-20T19:34:53.2072967Z ##[endgroup]
+2026-10-20T19:34:53.2105483Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:34:53.2106069Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:34:53.2106277Z ##[endgroup]
+2026-10-20T19:34:53.7037031Z Retrieving bucket info for workflow run...
+2026-10-20T19:34:53.7080495Z   github_repository: ROCm/TheRock
+2026-10-20T19:34:53.7080787Z   release_type: ci
+2026-10-20T19:34:53.7080976Z   is_pr_from_fork: False
+2026-10-20T19:34:53.7081155Z   bucket: therock-ci-artifacts
+2026-10-20T19:34:53.7081331Z Setting github output:
+2026-10-20T19:34:53.7081478Z {
+2026-10-20T19:34:53.7081622Z   "bucket": "therock-ci-artifacts",
+2026-10-20T19:34:53.7081891Z   "iam_role": "arn:aws:iam::692859939525:role/therock-ci",
+2026-10-20T19:34:53.7082114Z   "aws_region": "us-east-2"
+2026-10-20T19:34:53.7082279Z }
+2026-10-20T19:34:53.7082897Z OUTPUT bucket=therock-ci-artifacts
+2026-10-20T19:34:53.7083117Z OUTPUT iam_role=arn:aws:iam::692859939525:role/therock-ci
+2026-10-20T19:34:53.7083335Z OUTPUT aws_region=us-east-2
+2026-10-20T19:34:53.8024572Z ##[end-action id=__self.iam;outcome=success;conclusion=success;duration_ms=603]
+2026-10-20T19:34:53.8027205Z ##[start-action display=Configure AWS Credentials;id=__self.__aws-actions_configure-aws-credentials]
+2026-10-20T19:34:53.8401620Z ##[group]Run aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd
+2026-10-20T19:34:53.8401889Z with:
+2026-10-20T19:34:53.8402007Z   aws-region: us-east-2
+2026-10-20T19:34:53.8402172Z   role-to-assume: arn:aws:iam::692859939525:role/therock-ci
+2026-10-20T19:34:53.8402375Z   special-characters-workaround: false
+2026-10-20T19:34:53.8402541Z   audience: sts.amazonaws.com
+2026-10-20T19:34:53.8402680Z env:
+2026-10-20T19:34:53.8402855Z   QUARTZ_REPORTING_WORKFLOW: multi_arch_build_portable_linux_artifacts.yml
+2026-10-20T19:34:53.8403110Z   QUARTZ_WORKFLOW_POSTFIX: - build ROCm artifacts
+2026-10-20T19:34:53.8403397Z   DIST_AMDGPU_FAMILIES: gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx125X-dcgpu;gfx90a;gfx950-dcgpu
+2026-10-20T19:34:53.8403666Z   AMDGPU_FAMILIES: gfx120X-all
+2026-10-20T19:34:53.8403875Z   ROCM_PACKAGE_VERSION: 10.2.0.dev0+1de8cb30128a7e1bf03f6ac1dbd42f9b8414e913
+2026-10-20T19:34:53.8404103Z   RELEASE_TYPE: ci
+2026-10-20T19:34:53.8404226Z   REBUILD_ARTIFACTS: 
+2026-10-20T19:34:53.8404355Z   STAGE_NAME: math-libs
+2026-10-20T19:34:53.8404549Z   CCACHE_CONFIGPATH: /home/runner/_work/TheRock/TheRock/.ccache/ccache.conf
+2026-10-20T19:34:53.8404773Z   TEATIME_FORCE_INTERACTIVE: 0
+2026-10-20T19:34:53.8404918Z   EXTERNAL_FETCH_SOURCES_ARGS: 
+2026-10-20T19:34:53.8405061Z   EXTERNAL_REPO_CONFIG: 
+2026-10-20T19:34:53.8405188Z   BUILD_DIR: build
+2026-10-20T19:34:53.8405348Z   CACHE_DIR: /home/runner/_work/TheRock/TheRock/.container-cache
+2026-10-20T19:34:53.8405537Z ##[endgroup]
+2026-10-20T19:34:53.8415656Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:34:53.8416211Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:34:53.8416393Z ##[endgroup]
+2026-10-20T19:34:54.5731157Z Assuming role with OIDC
+2026-10-20T19:34:54.6540088Z Authenticated as assumedRoleId AROA2CUNLVLCZX6P3MXJH:GitHubActions
+2026-10-20T19:34:54.7406888Z ##[end-action id=__self.__aws-actions_configure-aws-credentials;outcome=success;conclusion=success;duration_ms=937]
+2026-10-20T19:34:54.7519936Z ##[group]Run python build_tools/github_actions/post_stage_upload.py \
+2026-10-20T19:34:54.7520327Z [36;1mpython build_tools/github_actions/post_stage_upload.py \[0m
+2026-10-20T19:34:54.7520594Z [36;1m  --run-id=39474563350 \[0m
+2026-10-20T19:34:54.7520793Z [36;1m  --stage="${STAGE_NAME}" \[0m
+2026-10-20T19:34:54.7520995Z [36;1m  --build-dir="${BUILD_DIR}" \[0m
+2026-10-20T19:34:54.7521215Z [36;1m  --amdgpu-family="${AMDGPU_FAMILIES}"[0m
+2026-10-20T19:34:54.7521489Z shell: sh -e {0}
+2026-10-20T19:34:54.7521635Z env:
+2026-10-20T19:34:54.7521859Z   QUARTZ_REPORTING_WORKFLOW: multi_arch_build_portable_linux_artifacts.yml
+2026-10-20T19:34:54.7522158Z   QUARTZ_WORKFLOW_POSTFIX: - build ROCm artifacts
+2026-10-20T19:34:54.7522517Z   DIST_AMDGPU_FAMILIES: gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx125X-dcgpu;gfx90a;gfx950-dcgpu
+2026-10-20T19:34:54.7522879Z   AMDGPU_FAMILIES: gfx120X-all
+2026-10-20T19:34:54.7523171Z   ROCM_PACKAGE_VERSION: 10.2.0.dev0+1de8cb30128a7e1bf03f6ac1dbd42f9b8414e913
+2026-10-20T19:34:54.7523442Z   RELEASE_TYPE: ci
+2026-10-20T19:34:54.7523600Z   REBUILD_ARTIFACTS: 
+2026-10-20T19:34:54.7523766Z   STAGE_NAME: math-libs
+2026-10-20T19:34:54.7524013Z   CCACHE_CONFIGPATH: /home/runner/_work/TheRock/TheRock/.ccache/ccache.conf
+2026-10-20T19:34:54.7524290Z   TEATIME_FORCE_INTERACTIVE: 0
+2026-10-20T19:34:54.7524478Z   EXTERNAL_FETCH_SOURCES_ARGS: 
+2026-10-20T19:34:54.7524657Z   EXTERNAL_REPO_CONFIG: 
+2026-10-20T19:34:54.7524824Z   BUILD_DIR: build
+2026-10-20T19:34:54.7525028Z   CACHE_DIR: /home/runner/_work/TheRock/TheRock/.container-cache
+2026-10-20T19:34:54.7525275Z   AWS_DEFAULT_REGION: us-east-2
+2026-10-20T19:34:54.7525450Z   AWS_REGION: us-east-2
+2026-10-20T19:34:54.7525790Z   AWS_ACCESS_KEY_ID: ***
+2026-10-20T19:34:54.7526028Z   AWS_SECRET_ACCESS_KEY: ***
+2026-10-20T19:34:54.7529161Z   AWS_SESSION_TOKEN: ***
+2026-10-20T19:34:54.7529451Z ##[endgroup]
+2026-10-20T19:34:54.8071314Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:34:54.8071952Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:34:54.8072160Z ##[endgroup]
+2026-10-20T19:34:55.2897433Z Creating log archives for stage 'math-libs'
+2026-10-20T19:34:57.6796906Z [+] Archived: .ninja_log
+2026-10-20T19:34:57.6797257Z [+] Archived: math-libs/hipRAND/build/.ninja_log
+2026-10-20T19:34:57.6827666Z [+] Archived: math-libs/rocRAND/build/.ninja_log
+2026-10-20T19:34:57.6828004Z [+] Archived: math-libs/rocRAND/build/have_asm_incbin_test/.ninja_log
+2026-10-20T19:34:57.6901369Z [+] Archived: math-libs/composable_kernel/build/.ninja_log
+2026-10-20T19:34:57.6913586Z [+] Archived: math-libs/BLAS/rocRoller/build/.ninja_log
+2026-10-20T19:34:57.6914805Z [+] Archived: math-libs/BLAS/origami/build/.ninja_log
+2026-10-20T19:34:57.6915109Z [+] Archived: math-libs/BLAS/hipBLAS-common/build/.ninja_log
+2026-10-20T19:34:57.6931449Z [+] Archived: math-libs/BLAS/hipBLASLt/build/.ninja_log
+2026-10-20T19:34:57.6932203Z [+] Archived: math-libs/BLAS/hipBLASLt/build/_deps/nanobind-subbuild/.ninja_log
+2026-10-20T19:34:57.7860948Z [+] Archived: math-libs/rocPRIM_tests/build/.ninja_log
+2026-10-20T19:34:57.7861261Z [+] Archived: math-libs/rocPRIM/build/.ninja_log
+2026-10-20T19:34:57.7861538Z [+] Archived: math-libs/support/mxDataGenerator/build/.ninja_log
+2026-10-20T19:34:57.7928333Z [+] Archived: math-libs/rocThrust/build/.ninja_log
+2026-10-20T19:34:57.7928715Z [+] Archived: math-libs/rocThrust/build/_deps/googlebench-subbuild/.ninja_log
+2026-10-20T19:34:57.7955586Z [+] Archived: math-libs/libhipcxx/build/.ninja_log
+2026-10-20T19:34:57.7963788Z [+] Archived: math-libs/rocFFT/build/.ninja_log
+2026-10-20T19:34:57.7965935Z [+] Archived: math-libs/rocFFT/build/_deps/sqlite_local-subbuild/.ninja_log
+2026-10-20T19:34:57.8003960Z [+] Archived: math-libs/hipTensor/build/.ninja_log
+2026-10-20T19:34:57.8027239Z [+] Archived: math-libs/hipCUB/build/.ninja_log
+2026-10-20T19:34:57.8027600Z [+] Archived: math-libs/hipthreads/build/.ninja_log
+2026-10-20T19:34:57.8027923Z [+] Archived: third-party/flatbuffers/build/.ninja_log
+2026-10-20T19:34:57.8029728Z [+] Archived: third-party/libdivide/build/.ninja_log
+2026-10-20T19:34:57.8030074Z [+] Archived: third-party/Catch2/build/.ninja_log
+2026-10-20T19:34:57.8030332Z [+] Archived: third-party/msgpack-cxx/build/.ninja_log
+2026-10-20T19:34:57.8030581Z [+] Archived: third-party/eigen/build/.ninja_log
+2026-10-20T19:34:57.8030838Z [+] Archived: third-party/nlohmann-json/build/.ninja_log
+2026-10-20T19:34:57.8031116Z [+] Archived: third-party/FunctionalPlus/build/.ninja_log
+2026-10-20T19:34:57.8031371Z [+] Archived: third-party/spdlog/build/.ninja_log
+2026-10-20T19:34:57.8040655Z [+] Archived: third-party/frugally-deep/build/.ninja_log
+2026-10-20T19:34:57.8043434Z [+] Archived: third-party/googletest/build/.ninja_log
+2026-10-20T19:34:57.8044260Z [+] Archived: third-party/fmt/build/.ninja_log
+2026-10-20T19:34:57.8045852Z [+] Archived: third-party/yaml-cpp/build/.ninja_log
+2026-10-20T19:34:57.8053633Z [+] Archived: ml-libs/hipdnn_integration_tests/build/.ninja_log
+2026-10-20T19:34:57.8055302Z [+] Archived: ml-libs/hipkernelprovider/build/.ninja_log
+2026-10-20T19:34:57.8082953Z [+] Archived: ml-libs/hipDNN/build/.ninja_log
+2026-10-20T19:34:57.8091131Z [INFO] Created ninja log archive: build/logs/ninja_logs.tar.gz (36 files)
+2026-10-20T19:34:58.1266813Z [+] Archived ccache log: ccache.log
+2026-10-20T19:34:58.1281956Z [+] Archived ccache log: ccache_stats.log
+2026-10-20T19:34:58.1284578Z [INFO] Created ccache_logs.tar.zst (9MB from 2 files)
+2026-10-20T19:34:58.1284845Z Retrieving bucket info for workflow run...
+2026-10-20T19:34:58.1285072Z   github_repository: ROCm/TheRock
+2026-10-20T19:34:58.1285260Z   release_type: ci
+2026-10-20T19:34:58.1510294Z   is_pr_from_fork: False
+2026-10-20T19:34:58.1510749Z   bucket: therock-ci-artifacts
+2026-10-20T19:34:58.1628360Z INFO:_therock_utils.storage_backend:upload_directory: build/logs -> therock-ci-artifacts/39474563350-linux/logs/math-libs/gfx120X-all (93 files)
+2026-10-20T19:34:58.1629370Z INFO:_therock_utils.storage_backend:  ccache_logs.tar.zst
+2026-10-20T19:34:58.1629686Z INFO:_therock_utils.storage_backend:  composable_kernel_build.log
+2026-10-20T19:34:58.1630009Z INFO:_therock_utils.storage_backend:  composable_kernel_configure.log
+2026-10-20T19:34:58.1630319Z INFO:_therock_utils.storage_backend:  composable_kernel_install.log
+2026-10-20T19:34:58.1630623Z INFO:_therock_utils.storage_backend:  hipBLAS-common_build.log
+2026-10-20T19:34:58.1630917Z INFO:_therock_utils.storage_backend:  hipBLAS-common_configure.log
+2026-10-20T19:34:58.1631221Z INFO:_therock_utils.storage_backend:  hipBLAS-common_install.log
+2026-10-20T19:34:58.1631503Z INFO:_therock_utils.storage_backend:  hipBLASLt_build.log
+2026-10-20T19:34:58.1631772Z INFO:_therock_utils.storage_backend:  hipBLASLt_configure.log
+2026-10-20T19:34:58.1632039Z INFO:_therock_utils.storage_backend:  hipCUB_build.log
+2026-10-20T19:34:58.1632296Z INFO:_therock_utils.storage_backend:  hipCUB_configure.log
+2026-10-20T19:34:58.1632566Z INFO:_therock_utils.storage_backend:  hipCUB_install.log
+2026-10-20T19:34:58.1632815Z INFO:_therock_utils.storage_backend:  hipDNN_build.log
+2026-10-20T19:34:58.1633066Z INFO:_therock_utils.storage_backend:  hipDNN_configure.log
+2026-10-20T19:34:58.1633325Z INFO:_therock_utils.storage_backend:  hipDNN_install.log
+2026-10-20T19:34:58.1633574Z INFO:_therock_utils.storage_backend:  hipRAND_build.log
+2026-10-20T19:34:58.1633836Z INFO:_therock_utils.storage_backend:  hipRAND_configure.log
+2026-10-20T19:34:58.1634100Z INFO:_therock_utils.storage_backend:  hipRAND_install.log
+2026-10-20T19:34:58.1634353Z INFO:_therock_utils.storage_backend:  hipTensor_build.log
+2026-10-20T19:34:58.1634618Z INFO:_therock_utils.storage_backend:  hipTensor_configure.log
+2026-10-20T19:34:58.1634889Z INFO:_therock_utils.storage_backend:  hipTensor_install.log
+2026-10-20T19:34:58.1635180Z INFO:_therock_utils.storage_backend:  hipdnn_integration_tests_build.log
+2026-10-20T19:34:58.1635518Z INFO:_therock_utils.storage_backend:  hipdnn_integration_tests_configure.log
+2026-10-20T19:34:58.1636073Z INFO:_therock_utils.storage_backend:  hipdnn_integration_tests_install.log
+2026-10-20T19:34:58.1636397Z INFO:_therock_utils.storage_backend:  hipkernelprovider_build.log
+2026-10-20T19:34:58.1636701Z INFO:_therock_utils.storage_backend:  hipkernelprovider_configure.log
+2026-10-20T19:34:58.1637008Z INFO:_therock_utils.storage_backend:  hipkernelprovider_install.log
+2026-10-20T19:34:58.1637295Z INFO:_therock_utils.storage_backend:  hipthreads_build.log
+2026-10-20T19:34:58.1637566Z INFO:_therock_utils.storage_backend:  hipthreads_configure.log
+2026-10-20T19:34:58.1637846Z INFO:_therock_utils.storage_backend:  hipthreads_install.log
+2026-10-20T19:34:58.1638109Z INFO:_therock_utils.storage_backend:  libhipcxx_build.log
+2026-10-20T19:34:58.1638374Z INFO:_therock_utils.storage_backend:  libhipcxx_configure.log
+2026-10-20T19:34:58.1638648Z INFO:_therock_utils.storage_backend:  libhipcxx_install.log
+2026-10-20T19:34:58.1638926Z INFO:_therock_utils.storage_backend:  mxDataGenerator_build.log
+2026-10-20T19:34:58.1639227Z INFO:_therock_utils.storage_backend:  mxDataGenerator_configure.log
+2026-10-20T19:34:58.1639522Z INFO:_therock_utils.storage_backend:  mxDataGenerator_install.log
+2026-10-20T19:34:58.1639793Z INFO:_therock_utils.storage_backend:  ninja_logs.tar.gz
+2026-10-20T19:34:58.1640043Z INFO:_therock_utils.storage_backend:  origami_build.log
+2026-10-20T19:34:58.1640297Z INFO:_therock_utils.storage_backend:  origami_configure.log
+2026-10-20T19:34:58.1640557Z INFO:_therock_utils.storage_backend:  origami_install.log
+2026-10-20T19:34:58.1640806Z INFO:_therock_utils.storage_backend:  rocFFT_build.log
+2026-10-20T19:34:58.1641059Z INFO:_therock_utils.storage_backend:  rocFFT_configure.log
+2026-10-20T19:34:58.1641339Z INFO:_therock_utils.storage_backend:  rocPRIM_build.log
+2026-10-20T19:34:58.1641597Z INFO:_therock_utils.storage_backend:  rocPRIM_configure.log
+2026-10-20T19:34:58.1641858Z INFO:_therock_utils.storage_backend:  rocPRIM_install.log
+2026-10-20T19:34:58.1642167Z INFO:_therock_utils.storage_backend:  rocPRIM_tests_build.log
+2026-10-20T19:34:58.1642450Z INFO:_therock_utils.storage_backend:  rocPRIM_tests_configure.log
+2026-10-20T19:34:58.1642735Z INFO:_therock_utils.storage_backend:  rocPRIM_tests_install.log
+2026-10-20T19:34:58.1643003Z INFO:_therock_utils.storage_backend:  rocRAND_build.log
+2026-10-20T19:34:58.1643257Z INFO:_therock_utils.storage_backend:  rocRAND_configure.log
+2026-10-20T19:34:58.1643534Z INFO:_therock_utils.storage_backend:  rocRAND_install.log
+2026-10-20T19:34:58.1643784Z INFO:_therock_utils.storage_backend:  rocRoller_build.log
+2026-10-20T19:34:58.1644050Z INFO:_therock_utils.storage_backend:  rocRoller_configure.log
+2026-10-20T19:34:58.1644317Z INFO:_therock_utils.storage_backend:  rocRoller_install.log
+2026-10-20T19:34:58.1644575Z INFO:_therock_utils.storage_backend:  rocThrust_build.log
+2026-10-20T19:34:58.1644840Z INFO:_therock_utils.storage_backend:  rocThrust_configure.log
+2026-10-20T19:34:58.1645115Z INFO:_therock_utils.storage_backend:  rocThrust_install.log
+2026-10-20T19:34:58.1645412Z INFO:_therock_utils.storage_backend:  therock-FunctionalPlus_build.log
+2026-10-20T19:34:58.1645735Z INFO:_therock_utils.storage_backend:  therock-FunctionalPlus_configure.log
+2026-10-20T19:34:58.1646064Z INFO:_therock_utils.storage_backend:  therock-FunctionalPlus_install.log
+2026-10-20T19:34:58.1646373Z INFO:_therock_utils.storage_backend:  therock-catch2_build.log
+2026-10-20T19:34:58.1646661Z INFO:_therock_utils.storage_backend:  therock-catch2_configure.log
+2026-10-20T19:34:58.1646954Z INFO:_therock_utils.storage_backend:  therock-catch2_install.log
+2026-10-20T19:34:58.1647236Z INFO:_therock_utils.storage_backend:  therock-eigen_build.log
+2026-10-20T19:34:58.1647518Z INFO:_therock_utils.storage_backend:  therock-eigen_configure.log
+2026-10-20T19:34:58.1647804Z INFO:_therock_utils.storage_backend:  therock-eigen_install.log
+2026-10-20T19:34:58.1648092Z INFO:_therock_utils.storage_backend:  therock-flatbuffers_build.log
+2026-10-20T19:34:58.1648409Z INFO:_therock_utils.storage_backend:  therock-flatbuffers_configure.log
+2026-10-20T19:34:58.1648766Z INFO:_therock_utils.storage_backend:  therock-flatbuffers_install.log
+2026-10-20T19:34:58.1649056Z INFO:_therock_utils.storage_backend:  therock-fmt_build.log
+2026-10-20T19:34:58.1649329Z INFO:_therock_utils.storage_backend:  therock-fmt_configure.log
+2026-10-20T19:34:58.1649611Z INFO:_therock_utils.storage_backend:  therock-fmt_install.log
+2026-10-20T19:34:58.1649904Z INFO:_therock_utils.storage_backend:  therock-frugally-deep_build.log
+2026-10-20T19:34:58.1650223Z INFO:_therock_utils.storage_backend:  therock-frugally-deep_configure.log
+2026-10-20T19:34:58.1650554Z INFO:_therock_utils.storage_backend:  therock-frugally-deep_install.log
+2026-10-20T19:34:58.1650863Z INFO:_therock_utils.storage_backend:  therock-googletest_build.log
+2026-10-20T19:34:58.1651164Z INFO:_therock_utils.storage_backend:  therock-googletest_configure.log
+2026-10-20T19:34:58.1651471Z INFO:_therock_utils.storage_backend:  therock-googletest_install.log
+2026-10-20T19:34:58.1651775Z INFO:_therock_utils.storage_backend:  therock-libdivide_build.log
+2026-10-20T19:34:58.1652072Z INFO:_therock_utils.storage_backend:  therock-libdivide_configure.log
+2026-10-20T19:34:58.1652378Z INFO:_therock_utils.storage_backend:  therock-libdivide_install.log
+2026-10-20T19:34:58.1652676Z INFO:_therock_utils.storage_backend:  therock-msgpack-cxx_build.log
+2026-10-20T19:34:58.1652985Z INFO:_therock_utils.storage_backend:  therock-msgpack-cxx_configure.log
+2026-10-20T19:34:58.1653294Z INFO:_therock_utils.storage_backend:  therock-msgpack-cxx_install.log
+2026-10-20T19:34:58.1653599Z INFO:_therock_utils.storage_backend:  therock-nlohmann-json_build.log
+2026-10-20T19:34:58.1653916Z INFO:_therock_utils.storage_backend:  therock-nlohmann-json_configure.log
+2026-10-20T19:34:58.1654234Z INFO:_therock_utils.storage_backend:  therock-nlohmann-json_install.log
+2026-10-20T19:34:58.1654535Z INFO:_therock_utils.storage_backend:  therock-spdlog_build.log
+2026-10-20T19:34:58.1654862Z INFO:_therock_utils.storage_backend:  therock-spdlog_configure.log
+2026-10-20T19:34:58.1655160Z INFO:_therock_utils.storage_backend:  therock-spdlog_install.log
+2026-10-20T19:34:58.1655452Z INFO:_therock_utils.storage_backend:  therock-yaml-cpp_build.log
+2026-10-20T19:34:58.1655756Z INFO:_therock_utils.storage_backend:  therock-yaml-cpp_configure.log
+2026-10-20T19:34:58.1656058Z INFO:_therock_utils.storage_backend:  therock-yaml-cpp_install.log
+2026-10-20T19:34:58.2322021Z INFO:botocore.credentials:Found credentials in environment variables.
+2026-10-20T19:34:59.6348023Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-20T19:34:59.6348381Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-20T19:34:59.6348721Z shell: sh -e {0}
+2026-10-20T19:34:59.6348866Z env:
+2026-10-20T19:34:59.6349087Z   QUARTZ_REPORTING_WORKFLOW: multi_arch_build_portable_linux_artifacts.yml
+2026-10-20T19:34:59.6349390Z   QUARTZ_WORKFLOW_POSTFIX: - build ROCm artifacts
+2026-10-20T19:34:59.6349769Z   DIST_AMDGPU_FAMILIES: gfx94X-dcgpu;gfx110X-all;gfx1151;gfx120X-all;gfx125X-dcgpu;gfx90a;gfx950-dcgpu
+2026-10-20T19:34:59.6350107Z   AMDGPU_FAMILIES: gfx120X-all
+2026-10-20T19:34:59.6350374Z   ROCM_PACKAGE_VERSION: 10.2.0.dev0+1de8cb30128a7e1bf03f6ac1dbd42f9b8414e913
+2026-10-20T19:34:59.6350647Z   RELEASE_TYPE: ci
+2026-10-20T19:34:59.6350806Z   REBUILD_ARTIFACTS: 
+2026-10-20T19:34:59.6350966Z   STAGE_NAME: math-libs
+2026-10-20T19:34:59.6351209Z   CCACHE_CONFIGPATH: /home/runner/_work/TheRock/TheRock/.ccache/ccache.conf
+2026-10-20T19:34:59.6351497Z   TEATIME_FORCE_INTERACTIVE: 0
+2026-10-20T19:34:59.6351682Z   EXTERNAL_FETCH_SOURCES_ARGS: 
+2026-10-20T19:34:59.6351862Z   EXTERNAL_REPO_CONFIG: 
+2026-10-20T19:34:59.6352027Z   BUILD_DIR: build
+2026-10-20T19:34:59.6352228Z   CACHE_DIR: /home/runner/_work/TheRock/TheRock/.container-cache
+2026-10-20T19:34:59.6352478Z   AWS_DEFAULT_REGION: us-east-2
+2026-10-20T19:34:59.6352652Z   AWS_REGION: us-east-2
+2026-10-20T19:34:59.6352972Z   AWS_ACCESS_KEY_ID: ***
+2026-10-20T19:34:59.6353203Z   AWS_SECRET_ACCESS_KEY: ***
+2026-10-20T19:34:59.6356179Z   AWS_SESSION_TOKEN: ***
+2026-10-20T19:34:59.6356342Z ##[endgroup]
+2026-10-20T19:34:59.6367660Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:34:59.6368217Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:34:59.6368456Z ##[endgroup]
+2026-10-20T19:35:00.1256399Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-20T19:35:00.1706384Z Post job cleanup.
+2026-10-20T19:35:00.1709501Z ##[start-action display=Configure AWS Credentials;id=__f7673ad6-643e-4eb7-b290-3bbeae92e511.__aws-actions_configure-aws-credentials]
+2026-10-20T19:35:00.1850853Z Post job cleanup.
+2026-10-20T19:35:00.1866652Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:35:00.1867444Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:35:00.1867751Z ##[endgroup]
+2026-10-20T19:35:00.8050740Z ##[end-action id=__f7673ad6-643e-4eb7-b290-3bbeae92e511.__aws-actions_configure-aws-credentials;outcome=success;conclusion=success;duration_ms=634]
+2026-10-20T19:35:00.8181195Z Post job cleanup.
+2026-10-20T19:35:00.8193090Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:35:00.8193676Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:35:00.8193888Z ##[endgroup]
+2026-10-20T19:35:01.3574924Z [command]/usr/local/bin/git version
+2026-10-20T19:35:01.3605595Z git version 2.49.0
+2026-10-20T19:35:01.3652399Z Copying '/root/.gitconfig' to '/__w/_temp/41bee115-65cc-46bb-bd5d-3d84f50a4534/.gitconfig'
+2026-10-20T19:35:01.3728432Z Temporarily overriding HOME='/__w/_temp/41bee115-65cc-46bb-bd5d-3d84f50a4534' before making global git config changes
+2026-10-20T19:35:01.3728980Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T19:35:01.3740070Z [command]/usr/local/bin/git config --global --add safe.directory /__w/TheRock/TheRock
+2026-10-20T19:35:01.4153456Z Removing SSH command configuration
+2026-10-20T19:35:01.4154254Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T19:35:01.4192462Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T19:35:01.4593594Z Entering 'math-libs/libhipcxx'
+2026-10-20T19:35:01.4631644Z Entering 'rocm-libraries'
+2026-10-20T19:35:01.4788407Z Entering 'rocm-systems'
+2026-10-20T19:35:01.5029085Z Removing HTTP extra header
+2026-10-20T19:35:01.5029621Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T19:35:01.5030839Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T19:35:01.5291804Z Entering 'math-libs/libhipcxx'
+2026-10-20T19:35:01.5326214Z Entering 'rocm-libraries'
+2026-10-20T19:35:01.5459486Z Entering 'rocm-systems'
+2026-10-20T19:35:01.5549854Z Removing includeIf entries pointing to credentials config files
+2026-10-20T19:35:01.5618063Z [command]/usr/local/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T19:35:01.5647378Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T19:35:01.5916524Z Entering 'math-libs/libhipcxx'
+2026-10-20T19:35:01.6028592Z file:/__w/TheRock/TheRock/.git/modules/libhipcxx/config	remote.origin.url
+2026-10-20T19:35:01.6028960Z Entering 'rocm-libraries'
+2026-10-20T19:35:01.6029247Z file:/__w/TheRock/TheRock/.git/modules/rocm-libraries/config	remote.origin.url
+2026-10-20T19:35:01.6123650Z Entering 'rocm-systems'
+2026-10-20T19:35:01.6124012Z file:/__w/TheRock/TheRock/.git/modules/rocm-systems/config	remote.origin.url
+2026-10-20T19:35:01.6255686Z [command]/usr/local/bin/git config --file /__w/TheRock/TheRock/.git/modules/libhipcxx/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T19:35:01.6313229Z [command]/usr/local/bin/git config --file /__w/TheRock/TheRock/.git/modules/rocm-libraries/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T19:35:01.6392622Z [command]/usr/local/bin/git config --file /__w/TheRock/TheRock/.git/modules/rocm-systems/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T19:35:01.7091141Z ##[group]Run '/home/runner/k8s/index.js'
+2026-10-20T19:35:01.7091810Z shell: /home/runner/externals/node20/bin/node {0}
+2026-10-20T19:35:01.7092031Z ##[endgroup]
+2026-10-20T19:35:02.0188014Z Evaluate and set job outputs
+2026-10-20T19:35:02.0193298Z Cleaning up orphan processes

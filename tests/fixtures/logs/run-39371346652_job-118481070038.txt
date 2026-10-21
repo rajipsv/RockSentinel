@@ -1,0 +1,590 @@
+# Source: ROCm/TheRock Actions run 39371346652 attempt 1, job 118481070038
+# Job: Linux::release / Test gfx90a / Test rocrtst / Test rocrtst (shard 1/1) (gfx90a) (multi_arch_ci.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+2026-10-20T06:06:57.3215090Z 1: 	#### TEST SETUP ####
+2026-10-20T06:06:57.3215585Z 1: 
+2026-10-20T06:06:57.3216019Z 1: 	#### TEST EXECUTION ####
+2026-10-20T06:06:57.3216562Z 1: 
+2026-10-20T06:06:57.3216984Z 1: 	#### TEST RESULTS ####
+2026-10-20T06:06:57.3217646Z 1: 
+2026-10-20T06:06:57.3218074Z 1: 	#### TEST CLEAN UP ####
+2026-10-20T06:06:57.3218776Z 1: [       OK ] rocrtstFunc.Signal_Wait_Any_Nonzero_Index (516 ms)
+2026-10-20T06:06:57.3219819Z 1: [ RUN      ] rocrtstFunc.Signal_Wait_Any_Compacted_Conds_Values
+2026-10-20T06:06:57.8289793Z 1: ###############################################################################
+2026-10-20T06:06:57.8290796Z 1: 
+2026-10-20T06:06:57.8291332Z 1: 	#### TEST NAME ####
+2026-10-20T06:06:57.8291893Z 1: RocR Signal Wait Multi Test
+2026-10-20T06:06:57.8292457Z 1: 
+2026-10-20T06:06:57.8292911Z 1: 	#### TEST DESCRIPTION ####
+2026-10-20T06:06:57.8294694Z 1: This test verifies that hsa_amd_signal_wait_any and hsa_amd_signal_wait_all
+2026-10-20T06:06:57.8295855Z 1: report the correct satisfying index and values, including when the
+2026-10-20T06:06:57.8296891Z 1: satisfying signal is not the first and when a NULL signal is skipped
+2026-10-20T06:06:57.8298374Z 1: 
+2026-10-20T06:06:57.8298823Z 1: 	#### TEST SETUP ####
+2026-10-20T06:06:57.8299414Z 1: 
+2026-10-20T06:06:57.8299924Z 1: 	#### TEST EXECUTION ####
+2026-10-20T06:06:57.8300524Z 1: 
+2026-10-20T06:06:57.8301043Z 1: 	#### TEST RESULTS ####
+2026-10-20T06:06:57.8301623Z 1: 
+2026-10-20T06:06:57.8302121Z 1: 	#### TEST CLEAN UP ####
+2026-10-20T06:06:57.8302875Z 1: [       OK ] rocrtstFunc.Signal_Wait_Any_Compacted_Conds_Values (508 ms)
+2026-10-20T06:06:57.8303847Z 1: [ RUN      ] rocrtstFunc.Signal_Wait_All_Satisfying_Values
+2026-10-20T06:06:58.3425374Z 1: ###############################################################################
+2026-10-20T06:06:58.3426146Z 1: 
+2026-10-20T06:06:58.3426560Z 1: 	#### TEST NAME ####
+2026-10-20T06:06:58.3427978Z 1: RocR Signal Wait Multi Test
+2026-10-20T06:06:58.3428502Z 1: 
+2026-10-20T06:06:58.3428928Z 1: 	#### TEST DESCRIPTION ####
+2026-10-20T06:06:58.3429878Z 1: This test verifies that hsa_amd_signal_wait_any and hsa_amd_signal_wait_all
+2026-10-20T06:06:58.3431115Z 1: report the correct satisfying index and values, including when the
+2026-10-20T06:06:58.3432161Z 1: satisfying signal is not the first and when a NULL signal is skipped
+2026-10-20T06:06:58.3432907Z 1: 
+2026-10-20T06:06:58.3433292Z 1: 	#### TEST SETUP ####
+2026-10-20T06:06:58.3433744Z 1: 
+2026-10-20T06:06:58.3434132Z 1: 	#### TEST EXECUTION ####
+2026-10-20T06:06:58.3434597Z 1: 
+2026-10-20T06:06:58.3434973Z 1: 	#### TEST RESULTS ####
+2026-10-20T06:06:58.3435418Z 1: 
+2026-10-20T06:06:58.3435816Z 1: 	#### TEST CLEAN UP ####
+2026-10-20T06:06:58.3436516Z 1: [       OK ] rocrtstFunc.Signal_Wait_All_Satisfying_Values (514 ms)
+2026-10-20T06:06:58.3437419Z 1: [ RUN      ] rocrtstFunc.IPC
+2026-10-20T06:06:58.8793690Z 1: ###############################################################################
+2026-10-20T06:06:58.8795413Z 1: 
+2026-10-20T06:06:58.8795832Z 1: 	#### TEST NAME ####
+2026-10-20T06:06:58.8796306Z 1: IPC Test
+2026-10-20T06:06:58.8796682Z 1: 
+2026-10-20T06:06:58.8798215Z 1: 	#### TEST DESCRIPTION ####
+2026-10-20T06:06:58.8799432Z 1: IPCTest verifies that the IPC feature of RocR is functioning as expected.
+2026-10-20T06:06:58.8801113Z 1: The test first forks off second process. The 2 processes share pointers to
+2026-10-20T06:06:58.8802593Z 1: RocR allocated memory and also share signal handles
+2026-10-20T06:06:58.8803555Z 1: line:234 P0: Second process observed, handshake...
+2026-10-20T06:06:58.8804159Z 1: 
+2026-10-20T06:06:58.8804533Z 1: 	#### TEST SETUP ####
+2026-10-20T06:06:58.8805042Z 1: The gpu device name is gfx90a
+2026-10-20T06:06:58.8805623Z 1: Target HW Profile is HSA_PROFILE_BASE
+2026-10-20T06:06:58.8806202Z 1: Test can run on any profile. OK.
+2026-10-20T06:16:37.0967960Z 1/2 Test #1: rocrtst64_quick_suite ............***Timeout 600.11 sec
+2026-10-20T06:16:37.0968754Z ========================================================
+2026-10-20T06:16:37.0969269Z ROC Runtime Test Suite
+2026-10-20T06:16:37.0969687Z Platform detected: REAL_HARDWARE
+2026-10-20T06:16:37.0970367Z Configuration: /__w/TheRock/TheRock/build/bin/../share/rocrtst/platform_config.yaml
+2026-10-20T06:16:37.0971301Z Active groups: Atomics, Core, Extended, GL2Cache, Performance, SignalBatch, WslDxg
+2026-10-20T06:16:37.0971996Z ========================================================
+2026-10-20T06:16:37.0978770Z Note: Google Test filter = rocrtst.Test_Example:rocrtstFunc.MemoryAccessTests:rocrtstFunc.GroupMemoryAllocationTest:rocrtstFunc.MemoryAllocateAndFreeTest:rocrtstFunc.Memory_Alignment_Test:rocrtstFunc.Concurrent_Init_Test:rocrtstFunc.Concurrent_Init_Shutdown_Test:rocrtstFunc.Reference_Count:rocrtstFunc.Signal_Create_Concurrently:rocrtstFunc.Signal_Destroy_Concurrently:rocrtstFunc.Signal_Wait_Any_Nonzero_Index:rocrtstFunc.Signal_Wait_Any_Compacted_Conds_Values:rocrtstFunc.Signal_Wait_All_Satisfying_Values:rocrtstFunc.IPC:rocrtstFunc.Deallocation_Notifier_Test:rocrtstFunc.Memory_Atomic_Add_Test:rocrtstFunc.Memory_Atomic_Xchg_Test:rocrtstFunc.Memory_Fragment_Overlap_Test:rocrtstFunc.Memory_Fragment_ZeroInit_Test:rocrtstFunc.Memory_Fragment_Coherence_Test:rocrtstFunc.MemoryFillTest:rocrtstFunc.AgentProp_UUID:rocrtstFunc.AgentPropertiesTests:rocrtstFunc.GpuDiscoveryDeprecatedDoorbellTest:DoorbellTypeValidation.*-rocrtstFunc.Memory_Max_Mem
+2026-10-20T06:16:37.0984653Z [==========] Running 36 tests from 3 test cases.
+2026-10-20T06:16:37.0985199Z [----------] Global test environment set-up.
+2026-10-20T06:16:37.0985751Z [----------] 13 tests from DoorbellTypeValidation
+2026-10-20T06:16:37.0986407Z [ RUN      ] DoorbellTypeValidation.Supported_Type2_Vega_And_Newer
+2026-10-20T06:16:37.0987281Z [       OK ] DoorbellTypeValidation.Supported_Type2_Vega_And_Newer (0 ms)
+2026-10-20T06:16:37.0988129Z [ RUN      ] DoorbellTypeValidation.Deprecated_Type0_Pre1_Kaveri_Hawaii_Tonga
+2026-10-20T06:16:37.0989043Z [       OK ] DoorbellTypeValidation.Deprecated_Type0_Pre1_Kaveri_Hawaii_Tonga (0 ms)
+2026-10-20T06:16:37.0989917Z [ RUN      ] DoorbellTypeValidation.Deprecated_Type1_Polaris_Fiji_Vegam
+2026-10-20T06:16:37.0990742Z [       OK ] DoorbellTypeValidation.Deprecated_Type1_Polaris_Fiji_Vegam (0 ms)
+2026-10-20T06:16:37.0991570Z [ RUN      ] DoorbellTypeValidation.Reserved_Type3_Must_Be_Rejected
+2026-10-20T06:16:37.0992336Z [       OK ] DoorbellTypeValidation.Reserved_Type3_Must_Be_Rejected (0 ms)
+2026-10-20T06:16:37.0993209Z [ RUN      ] DoorbellTypeValidation.ExactlyOneTypeIsSupported_OutOfFourPossible
+2026-10-20T06:16:37.0994180Z [       OK ] DoorbellTypeValidation.ExactlyOneTypeIsSupported_OutOfFourPossible (0 ms)
+2026-10-20T06:16:37.0995067Z [ RUN      ] DoorbellTypeValidation.BitExtraction_EachDoorbellValue
+2026-10-20T06:16:37.0995848Z [       OK ] DoorbellTypeValidation.BitExtraction_EachDoorbellValue (0 ms)
+2026-10-20T06:16:37.0996670Z [ RUN      ] DoorbellTypeValidation.BitExtraction_IgnoresAdjacentFields
+2026-10-20T06:16:37.0998016Z [       OK ] DoorbellTypeValidation.BitExtraction_IgnoresAdjacentFields (0 ms)
+2026-10-20T06:16:37.0998848Z [ RUN      ] DoorbellTypeValidation.RealHardware_MI50_gfx906_Supported
+2026-10-20T06:16:37.0999658Z [       OK ] DoorbellTypeValidation.RealHardware_MI50_gfx906_Supported (0 ms)
+2026-10-20T06:16:37.1000485Z [ RUN      ] DoorbellTypeValidation.RealHardware_WX2100_gfx803_Deprecated
+2026-10-20T06:16:37.1001315Z [       OK ] DoorbellTypeValidation.RealHardware_WX2100_gfx803_Deprecated (0 ms)
+2026-10-20T06:16:37.1002151Z [ RUN      ] DoorbellTypeValidation.RealHardware_W5700_gfx1010_Supported
+2026-10-20T06:16:37.1002978Z [       OK ] DoorbellTypeValidation.RealHardware_W5700_gfx1010_Supported (0 ms)
+2026-10-20T06:16:37.1003827Z [ RUN      ] DoorbellTypeValidation.FutureProofing_CurrentFieldIsTwoBits
+2026-10-20T06:16:37.1004714Z [       OK ] DoorbellTypeValidation.FutureProofing_CurrentFieldIsTwoBits (0 ms)
+2026-10-20T06:16:37.1005654Z [ RUN      ] DoorbellTypeValidation.FutureProofing_SyntheticValues_MaskedToFieldWidth
+2026-10-20T06:16:37.1006673Z [       OK ] DoorbellTypeValidation.FutureProofing_SyntheticValues_MaskedToFieldWidth (0 ms)
+2026-10-20T06:16:37.1007822Z [ RUN      ] DoorbellTypeValidation.FutureProofing_MakeAndExtract_RoundTripsForAllValidValues
+2026-10-20T06:16:37.1008948Z [       OK ] DoorbellTypeValidation.FutureProofing_MakeAndExtract_RoundTripsForAllValidValues (0 ms)
+2026-10-20T06:16:37.1009880Z [----------] 13 tests from DoorbellTypeValidation (0 ms total)
+2026-10-20T06:16:37.1010304Z 
+2026-10-20T06:16:37.1010468Z [----------] 1 test from rocrtst
+2026-10-20T06:16:37.1010927Z [ RUN      ] rocrtst.Test_Example
+2026-10-20T06:16:37.1011462Z ###############################################################################
+2026-10-20T06:16:37.1011821Z 
+2026-10-20T06:16:37.1012013Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1012405Z Test Case Example
+2026-10-20T06:16:37.1012618Z 
+2026-10-20T06:16:37.1012812Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1013606Z Put a description of the test case here. Line breaks will be taken care of
+2026-10-20T06:16:37.1014263Z on output, not here.
+2026-10-20T06:16:37.1014511Z 
+2026-10-20T06:16:37.1014662Z 	#### TEST SETUP ####
+2026-10-20T06:16:37.1015072Z The gpu device name is gfx90a
+2026-10-20T06:16:37.1015566Z Target HW Profile is HSA_PROFILE_BASE
+2026-10-20T06:16:37.1016057Z Test can run on any profile. OK.
+2026-10-20T06:16:37.1016335Z 
+2026-10-20T06:16:37.1016522Z 	#### TEST EXECUTION ####
+2026-10-20T06:16:37.1016764Z 
+2026-10-20T06:16:37.1016950Z 	#### TEST RESULTS ####
+2026-10-20T06:16:37.1017563Z The average time was: 11.2882 uS
+2026-10-20T06:16:37.1017863Z 
+2026-10-20T06:16:37.1018019Z 	#### TEST CLEAN UP ####
+2026-10-20T06:16:37.1018460Z [       OK ] rocrtst.Test_Example (989 ms)
+2026-10-20T06:16:37.1018971Z [----------] 1 test from rocrtst (989 ms total)
+2026-10-20T06:16:37.1019293Z 
+2026-10-20T06:16:37.1019441Z [----------] 22 tests from rocrtstFunc
+2026-10-20T06:16:37.1019873Z [ RUN      ] rocrtstFunc.MemoryAccessTests
+2026-10-20T06:16:37.1020376Z ###############################################################################
+2026-10-20T06:16:37.1020729Z 
+2026-10-20T06:16:37.1020858Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1021198Z RocR Memory Access Tests
+2026-10-20T06:16:37.1021424Z 
+2026-10-20T06:16:37.1021570Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1022122Z This series of tests check memory allocationon GPU and CPU, i.e. GPU access
+2026-10-20T06:16:37.1022766Z to system memory and CPU access to GPU memory.
+2026-10-20T06:16:37.1023079Z 
+2026-10-20T06:16:37.1023219Z 	#### TEST SETUP ####
+2026-10-20T06:16:37.1023572Z The gpu device name is gfx90a
+2026-10-20T06:16:37.1023972Z Target HW Profile is HSA_PROFILE_BASE
+2026-10-20T06:16:37.1024392Z Test can run on any profile. OK.
+2026-10-20T06:16:37.1024652Z 
+2026-10-20T06:16:37.1024786Z 	#### TEST EXECUTION ####
+2026-10-20T06:16:37.1025264Z   *** Memory Subtest: CPUAccessToGPUMemoryTest in Memory Pools ***
+2026-10-20T06:16:37.1025843Z Verify CPU can read & write to GPU memory
+2026-10-20T06:16:37.1026533Z CPU have read & write to GPU memory successfully
+2026-10-20T06:16:37.1026985Z subtest Passed
+2026-10-20T06:16:37.1027383Z   **************************
+2026-10-20T06:16:37.1027861Z   *** Memory Subtest: GPUAccessToCPUMemoryTest in Memory Pools ***
+2026-10-20T06:16:37.1028420Z check gpu has read the system memory
+2026-10-20T06:16:37.1028854Z gpu has read the system memory successfully
+2026-10-20T06:16:37.1029309Z check gpu has written to system memory
+2026-10-20T06:16:37.1029756Z gpu has written to system memory successfully
+2026-10-20T06:16:37.1030187Z subtest Passed
+2026-10-20T06:16:37.1030487Z   **************************
+2026-10-20T06:16:37.1030709Z 
+2026-10-20T06:16:37.1030848Z 	#### TEST CLEAN UP ####
+2026-10-20T06:16:37.1031254Z [       OK ] rocrtstFunc.MemoryAccessTests (2638 ms)
+2026-10-20T06:16:37.1031782Z [ RUN      ] rocrtstFunc.GroupMemoryAllocationTest
+2026-10-20T06:16:37.1032304Z ###############################################################################
+2026-10-20T06:16:37.1032660Z 
+2026-10-20T06:16:37.1032785Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1033183Z RocR Memory Test  For Kernel Dynamic Memory Alocation
+2026-10-20T06:16:37.1033536Z 
+2026-10-20T06:16:37.1033673Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1034111Z  This test Allocate group memory in kernel dynamically.
+2026-10-20T06:16:37.1034474Z 
+2026-10-20T06:16:37.1034606Z 	#### TEST SETUP ####
+2026-10-20T06:16:37.1034952Z The gpu device name is gfx90a
+2026-10-20T06:16:37.1035349Z Target HW Profile is HSA_PROFILE_BASE
+2026-10-20T06:16:37.1035764Z Test can run on any profile. OK.
+2026-10-20T06:16:37.1036017Z 
+2026-10-20T06:16:37.1036157Z 	#### TEST EXECUTION ####
+2026-10-20T06:16:37.1036625Z   *** Memory Allocation  Test: Memory Group dynamic allocation ***
+2026-10-20T06:16:37.1037247Z aql.total_grp_byte_size4096
+2026-10-20T06:16:37.1037599Z subtest Passed
+2026-10-20T06:16:37.1037899Z   **************************
+2026-10-20T06:16:37.1038124Z 
+2026-10-20T06:16:37.1038462Z 	#### TEST CLEAN UP ####
+2026-10-20T06:16:37.1038907Z [       OK ] rocrtstFunc.GroupMemoryAllocationTest (567 ms)
+2026-10-20T06:16:37.1039474Z [ RUN      ] rocrtstFunc.MemoryAllocateAndFreeTest
+2026-10-20T06:16:37.1039993Z ###############################################################################
+2026-10-20T06:16:37.1040333Z 
+2026-10-20T06:16:37.1040464Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1040814Z RocR Memory Test  For BasicAllocateFree
+2026-10-20T06:16:37.1041112Z 
+2026-10-20T06:16:37.1041252Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1041758Z  This test Allocate And free Memory on all the availble pool  on which
+2026-10-20T06:16:37.1042344Z allocation is allowed on RocR Agents.
+2026-10-20T06:16:37.1042619Z 
+2026-10-20T06:16:37.1042753Z 	#### TEST SETUP ####
+2026-10-20T06:16:37.1043094Z The gpu device name is gfx90a
+2026-10-20T06:16:37.1043489Z Target HW Profile is HSA_PROFILE_BASE
+2026-10-20T06:16:37.1043900Z Test can run on any profile. OK.
+2026-10-20T06:16:37.1044147Z 
+2026-10-20T06:16:37.1044301Z 	#### TEST EXECUTION ####
+2026-10-20T06:16:37.1044763Z   *** Memory Allocation  Test: MemoryBasicAllocationAndFree ***
+2026-10-20T06:16:37.1045273Z   Pool 0:
+2026-10-20T06:16:37.1045603Z   Agent: AMD EPYC 7763 64-Core Processor (CPU)
+2026-10-20T06:16:37.1046034Z   GLOBAL SEGMENT
+2026-10-20T06:16:37.1046334Z   Pool 1:
+2026-10-20T06:16:37.1046654Z   Agent: AMD EPYC 7763 64-Core Processor (CPU)
+2026-10-20T06:16:37.1047165Z   GLOBAL SEGMENT
+2026-10-20T06:16:37.1047469Z   Pool 2:
+2026-10-20T06:16:37.1047786Z   Agent: AMD EPYC 7763 64-Core Processor (CPU)
+2026-10-20T06:16:37.1048206Z   GLOBAL SEGMENT
+2026-10-20T06:16:37.1048497Z   Pool 3:
+2026-10-20T06:16:37.1048810Z   Agent: AMD EPYC 7763 64-Core Processor (CPU)
+2026-10-20T06:16:37.1049230Z   GLOBAL SEGMENT
+2026-10-20T06:16:37.1049517Z   Pool 4:
+2026-10-20T06:16:37.1049831Z   Agent: AMD EPYC 7763 64-Core Processor (CPU)
+2026-10-20T06:16:37.1050251Z   GLOBAL SEGMENT
+2026-10-20T06:16:37.1050539Z   Pool 5:
+2026-10-20T06:16:37.1050856Z   Agent: AMD EPYC 7763 64-Core Processor (CPU)
+2026-10-20T06:16:37.1051471Z   GLOBAL SEGMENT
+2026-10-20T06:16:37.1051758Z   Pool 6:
+2026-10-20T06:16:37.1052072Z   Agent: AMD EPYC 7763 64-Core Processor (CPU)
+2026-10-20T06:16:37.1052487Z   GLOBAL SEGMENT
+2026-10-20T06:16:37.1052773Z   Pool 7:
+2026-10-20T06:16:37.1053094Z   Agent: AMD EPYC 7763 64-Core Processor (CPU)
+2026-10-20T06:16:37.1053511Z   GLOBAL SEGMENT
+2026-10-20T06:16:37.1053796Z   Pool 8:
+2026-10-20T06:16:37.1054077Z   Agent: gfx90a (GPU)
+2026-10-20T06:16:37.1054395Z   GLOBAL SEGMENT
+2026-10-20T06:16:37.1054680Z   Pool 9:
+2026-10-20T06:16:37.1054960Z   Agent: gfx90a (GPU)
+2026-10-20T06:16:37.1055291Z   GLOBAL SEGMENT
+2026-10-20T06:16:37.1055594Z   Pool 10:
+2026-10-20T06:16:37.1055890Z   Agent: gfx90a (GPU)
+2026-10-20T06:16:37.1056206Z   GLOBAL SEGMENT
+2026-10-20T06:16:37.1056499Z   Pool 11:
+2026-10-20T06:16:37.1056780Z   Agent: gfx90a (GPU)
+2026-10-20T06:16:37.1057182Z subtest Passed
+2026-10-20T06:16:37.1057488Z   **************************
+2026-10-20T06:16:37.1057726Z 
+2026-10-20T06:16:37.1057871Z 	#### TEST CLEAN UP ####
+2026-10-20T06:16:37.1058306Z [       OK ] rocrtstFunc.MemoryAllocateAndFreeTest (535 ms)
+2026-10-20T06:16:37.1058836Z [ RUN      ] rocrtstFunc.MemoryFillTest
+2026-10-20T06:16:37.1059307Z ###############################################################################
+2026-10-20T06:16:37.1059645Z 
+2026-10-20T06:16:37.1059778Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1060098Z RocR Memory Fill Test
+2026-10-20T06:16:37.1060305Z 
+2026-10-20T06:16:37.1060441Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1060911Z This test will use hsa_amd_memory_fill on system and GPU memory.
+2026-10-20T06:16:37.1061311Z 
+2026-10-20T06:16:37.1061450Z 	#### TEST SETUP ####
+2026-10-20T06:16:37.1061783Z The gpu device name is gfx90a
+2026-10-20T06:16:37.1062173Z Target HW Profile is HSA_PROFILE_BASE
+2026-10-20T06:16:37.1062588Z Test can run on any profile. OK.
+2026-10-20T06:16:37.1062838Z 
+2026-10-20T06:16:37.1062977Z 	#### TEST EXECUTION ####
+2026-10-20T06:16:37.1063196Z 
+2026-10-20T06:16:37.1063564Z 	#### TEST CLEAN UP ####
+2026-10-20T06:16:37.1063963Z [       OK ] rocrtstFunc.MemoryFillTest (548 ms)
+2026-10-20T06:16:37.1064454Z [ RUN      ] rocrtstFunc.Concurrent_Init_Test
+2026-10-20T06:16:37.1064949Z ###############################################################################
+2026-10-20T06:16:37.1065297Z 
+2026-10-20T06:16:37.1065430Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1065764Z RocR Concurrent Init Test
+2026-10-20T06:16:37.1065985Z 
+2026-10-20T06:16:37.1066127Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1066540Z This test initializes HSA runtime concurrently
+2026-10-20T06:16:37.1066857Z 
+2026-10-20T06:16:37.1067078Z 	#### TEST EXECUTION ####
+2026-10-20T06:16:37.1067487Z [       OK ] rocrtstFunc.Concurrent_Init_Test (531 ms)
+2026-10-20T06:16:37.1068008Z [ RUN      ] rocrtstFunc.Concurrent_Init_Shutdown_Test
+2026-10-20T06:16:37.1068523Z ###############################################################################
+2026-10-20T06:16:37.1068868Z 
+2026-10-20T06:16:37.1069011Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1069348Z RocR Concurrent Init Test
+2026-10-20T06:16:37.1069564Z 
+2026-10-20T06:16:37.1069709Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1070105Z This test initializes HSA runtime concurrently
+2026-10-20T06:16:37.1070427Z 
+2026-10-20T06:16:37.1070565Z 	#### TEST EXECUTION ####
+2026-10-20T06:16:37.1071015Z [       OK ] rocrtstFunc.Concurrent_Init_Shutdown_Test (12425 ms)
+2026-10-20T06:16:37.1071553Z [ RUN      ] rocrtstFunc.Reference_Count
+2026-10-20T06:16:37.1072020Z ###############################################################################
+2026-10-20T06:16:37.1072362Z 
+2026-10-20T06:16:37.1072485Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1072822Z RocR Reference Count Test
+2026-10-20T06:16:37.1073038Z 
+2026-10-20T06:16:37.1073183Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1073718Z Initializes HSA runtime N times and shutdown N-1 times, again call shutdown
+2026-10-20T06:16:37.1074180Z 
+2026-10-20T06:16:37.1074317Z 	#### TEST EXECUTION ####
+2026-10-20T06:16:37.1074905Z [       OK ] rocrtstFunc.Reference_Count (522 ms)
+2026-10-20T06:16:37.1075409Z [ RUN      ] rocrtstFunc.Signal_Destroy_Concurrently
+2026-10-20T06:16:37.1075915Z ###############################################################################
+2026-10-20T06:16:37.1076253Z 
+2026-10-20T06:16:37.1076376Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1076720Z RocR Signal Destroy Concurrent Test
+2026-10-20T06:16:37.1076986Z 
+2026-10-20T06:16:37.1077246Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1077630Z This test destroy signals concurrently
+2026-10-20T06:16:37.1077906Z 
+2026-10-20T06:16:37.1078041Z 	#### TEST SETUP ####
+2026-10-20T06:16:37.1078377Z The gpu device name is gfx90a
+2026-10-20T06:16:37.1078773Z Target HW Profile is HSA_PROFILE_BASE
+2026-10-20T06:16:37.1079193Z Test can run on any profile. OK.
+2026-10-20T06:16:37.1079445Z 
+2026-10-20T06:16:37.1079581Z 	#### TEST EXECUTION ####
+2026-10-20T06:16:37.1079800Z 
+2026-10-20T06:16:37.1079934Z 	#### TEST CLEAN UP ####
+2026-10-20T06:16:37.1080373Z [       OK ] rocrtstFunc.Signal_Destroy_Concurrently (523 ms)
+2026-10-20T06:16:37.1080916Z [ RUN      ] rocrtstFunc.Signal_Create_Concurrently
+2026-10-20T06:16:37.1081421Z ###############################################################################
+2026-10-20T06:16:37.1081753Z 
+2026-10-20T06:16:37.1081928Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1082268Z RocR Signal Create Concurrent Test
+2026-10-20T06:16:37.1082529Z 
+2026-10-20T06:16:37.1082670Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1083053Z This test create signals concurrently
+2026-10-20T06:16:37.1083330Z 
+2026-10-20T06:16:37.1083458Z 	#### TEST SETUP ####
+2026-10-20T06:16:37.1083800Z The gpu device name is gfx90a
+2026-10-20T06:16:37.1084195Z Target HW Profile is HSA_PROFILE_BASE
+2026-10-20T06:16:37.1084605Z Test can run on any profile. OK.
+2026-10-20T06:16:37.1084863Z 
+2026-10-20T06:16:37.1085004Z 	#### TEST EXECUTION ####
+2026-10-20T06:16:37.1085218Z 
+2026-10-20T06:16:37.1085360Z 	#### TEST CLEAN UP ####
+2026-10-20T06:16:37.1085967Z [       OK ] rocrtstFunc.Signal_Create_Concurrently (521 ms)
+2026-10-20T06:16:37.1086522Z [ RUN      ] rocrtstFunc.Signal_Wait_Any_Nonzero_Index
+2026-10-20T06:16:37.1087100Z ###############################################################################
+2026-10-20T06:16:37.1087447Z 
+2026-10-20T06:16:37.1087572Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1087900Z RocR Signal Wait Multi Test
+2026-10-20T06:16:37.1088136Z 
+2026-10-20T06:16:37.1088271Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1088805Z This test verifies that hsa_amd_signal_wait_any and hsa_amd_signal_wait_all
+2026-10-20T06:16:37.1089530Z report the correct satisfying index and values, including when the
+2026-10-20T06:16:37.1090220Z satisfying signal is not the first and when a NULL signal is skipped
+2026-10-20T06:16:37.1090643Z 
+2026-10-20T06:16:37.1090776Z 	#### TEST SETUP ####
+2026-10-20T06:16:37.1090975Z 
+2026-10-20T06:16:37.1091105Z 	#### TEST EXECUTION ####
+2026-10-20T06:16:37.1091328Z 
+2026-10-20T06:16:37.1091455Z 	#### TEST RESULTS ####
+2026-10-20T06:16:37.1091681Z 
+2026-10-20T06:16:37.1091811Z 	#### TEST CLEAN UP ####
+2026-10-20T06:16:37.1092242Z [       OK ] rocrtstFunc.Signal_Wait_Any_Nonzero_Index (516 ms)
+2026-10-20T06:16:37.1092842Z [ RUN      ] rocrtstFunc.Signal_Wait_Any_Compacted_Conds_Values
+2026-10-20T06:16:37.1093398Z ###############################################################################
+2026-10-20T06:16:37.1093738Z 
+2026-10-20T06:16:37.1093867Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1094197Z RocR Signal Wait Multi Test
+2026-10-20T06:16:37.1094425Z 
+2026-10-20T06:16:37.1094564Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1095084Z This test verifies that hsa_amd_signal_wait_any and hsa_amd_signal_wait_all
+2026-10-20T06:16:37.1095804Z report the correct satisfying index and values, including when the
+2026-10-20T06:16:37.1096493Z satisfying signal is not the first and when a NULL signal is skipped
+2026-10-20T06:16:37.1096917Z 
+2026-10-20T06:16:37.1097127Z 	#### TEST SETUP ####
+2026-10-20T06:16:37.1097325Z 
+2026-10-20T06:16:37.1097739Z 	#### TEST EXECUTION ####
+2026-10-20T06:16:37.1097957Z 
+2026-10-20T06:16:37.1098091Z 	#### TEST RESULTS ####
+2026-10-20T06:16:37.1098296Z 
+2026-10-20T06:16:37.1098435Z 	#### TEST CLEAN UP ####
+2026-10-20T06:16:37.1098917Z [       OK ] rocrtstFunc.Signal_Wait_Any_Compacted_Conds_Values (508 ms)
+2026-10-20T06:16:37.1099551Z [ RUN      ] rocrtstFunc.Signal_Wait_All_Satisfying_Values
+2026-10-20T06:16:37.1100084Z ###############################################################################
+2026-10-20T06:16:37.1100429Z 
+2026-10-20T06:16:37.1100559Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1100890Z RocR Signal Wait Multi Test
+2026-10-20T06:16:37.1101113Z 
+2026-10-20T06:16:37.1101256Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1101777Z This test verifies that hsa_amd_signal_wait_any and hsa_amd_signal_wait_all
+2026-10-20T06:16:37.1102492Z report the correct satisfying index and values, including when the
+2026-10-20T06:16:37.1103177Z satisfying signal is not the first and when a NULL signal is skipped
+2026-10-20T06:16:37.1103619Z 
+2026-10-20T06:16:37.1103746Z 	#### TEST SETUP ####
+2026-10-20T06:16:37.1103948Z 
+2026-10-20T06:16:37.1104087Z 	#### TEST EXECUTION ####
+2026-10-20T06:16:37.1104308Z 
+2026-10-20T06:16:37.1104443Z 	#### TEST RESULTS ####
+2026-10-20T06:16:37.1104644Z 
+2026-10-20T06:16:37.1104781Z 	#### TEST CLEAN UP ####
+2026-10-20T06:16:37.1105229Z [       OK ] rocrtstFunc.Signal_Wait_All_Satisfying_Values (514 ms)
+2026-10-20T06:16:37.1105754Z [ RUN      ] rocrtstFunc.IPC
+2026-10-20T06:16:37.1106170Z ###############################################################################
+2026-10-20T06:16:37.1106505Z 
+2026-10-20T06:16:37.1106628Z 	#### TEST NAME ####
+2026-10-20T06:16:37.1106932Z IPC Test
+2026-10-20T06:16:37.1107168Z 
+2026-10-20T06:16:37.1107306Z 	#### TEST DESCRIPTION ####
+2026-10-20T06:16:37.1107831Z IPCTest verifies that the IPC feature of RocR is functioning as expected.
+2026-10-20T06:16:37.1108586Z The test first forks off second process. The 2 processes share pointers to
+2026-10-20T06:16:37.1109417Z RocR allocated memory and also share signal handles
+2026-10-20T06:16:37.1109954Z line:234 P0: Second process observed, handshake...
+2026-10-20T06:16:37.1110297Z 
+2026-10-20T06:16:37.1110431Z 	#### TEST SETUP ####
+2026-10-20T06:16:37.1110765Z The gpu device name is gfx90a
+2026-10-20T06:16:37.1111155Z Target HW Profile is HSA_PROFILE_BASE
+2026-10-20T06:16:37.1111572Z Test can run on any profile. OK.
+2026-10-20T06:16:37.1111827Z 
+2026-10-20T06:16:37.1111939Z test 9
+2026-10-20T06:16:37.1112244Z     Start 9: intercept_queue_logic_test
+2026-10-20T06:16:37.1112525Z 
+2026-10-20T06:16:37.1112830Z 9: Test command: /__w/TheRock/TheRock/build/bin/intercept_queue_logic_test
+2026-10-20T06:16:37.1113501Z 9: Working Directory: /__w/TheRock/TheRock/build/bin/rocrtst
+2026-10-20T06:16:37.1114014Z 9: Test timeout computed to be: 60
+2026-10-20T06:16:37.1114449Z 9: Running main() from gtest_main.cc
+2026-10-20T06:16:37.1114885Z 9: [==========] Running 9 tests from 1 test case.
+2026-10-20T06:16:37.1115367Z 9: [----------] Global test environment set-up.
+2026-10-20T06:16:37.1115821Z 9: [----------] 9 tests from PlanSubmit
+2026-10-20T06:16:37.1116336Z 9: [ RUN      ] PlanSubmit.EverythingFitsSubmitsAllNoBarrier
+2026-10-20T06:16:37.1116985Z 9: [       OK ] PlanSubmit.EverythingFitsSubmitsAllNoBarrier (0 ms)
+2026-10-20T06:16:37.1117763Z 9: [ RUN      ] PlanSubmit.TransientReadAheadOfWriteDoesNotUnderflow
+2026-10-20T06:16:37.1118525Z 9: [       OK ] PlanSubmit.TransientReadAheadOfWriteDoesNotUnderflow (0 ms)
+2026-10-20T06:16:37.1119243Z 9: [ RUN      ] PlanSubmit.InflightLargerThanQueueIsClamped
+2026-10-20T06:16:37.1119895Z 9: [       OK ] PlanSubmit.InflightLargerThanQueueIsClamped (0 ms)
+2026-10-20T06:16:37.1120497Z 9: [ RUN      ] PlanSubmit.HugeCountNeverOvercommits
+2026-10-20T06:16:37.1121059Z 9: [       OK ] PlanSubmit.HugeCountNeverOvercommits (0 ms)
+2026-10-20T06:16:37.1121704Z 9: [ RUN      ] PlanSubmit.QueueFullNotPendingSubmitsNothingNoBarrier
+2026-10-20T06:16:37.1122503Z 9: [       OK ] PlanSubmit.QueueFullNotPendingSubmitsNothingNoBarrier (0 ms)
+2026-10-20T06:16:37.1123405Z 9: [ RUN      ] PlanSubmit.PartialFitInsertsRetryBarrier
+2026-10-20T06:16:37.1124002Z 9: [       OK ] PlanSubmit.PartialFitInsertsRetryBarrier (0 ms)
+2026-10-20T06:16:37.1124629Z 9: [ RUN      ] PlanSubmit.PendingBarrierNeverInsertsAnother
+2026-10-20T06:16:37.1125326Z 9: [       OK ] PlanSubmit.PendingBarrierNeverInsertsAnother (0 ms)
+2026-10-20T06:16:37.1126034Z 9: [ RUN      ] PlanSubmit.MarkerPacketsExcludedFromSubmitCount
+2026-10-20T06:16:37.1126760Z 9: [       OK ] PlanSubmit.MarkerPacketsExcludedFromSubmitCount (0 ms)
+2026-10-20T06:16:37.1127559Z 9: [ RUN      ] PlanSubmit.InvariantsHoldOverManySnapshots
+2026-10-20T06:16:38.7854775Z 9: [       OK ] PlanSubmit.InvariantsHoldOverManySnapshots (1683 ms)
+2026-10-20T06:16:38.7855634Z 9: [----------] 9 tests from PlanSubmit (1683 ms total)
+2026-10-20T06:16:38.7856165Z 9: 
+2026-10-20T06:16:38.7856584Z 9: [----------] Global test environment tear-down
+2026-10-20T06:16:38.7857330Z 9: [==========] 9 tests from 1 test case ran. (1683 ms total)
+2026-10-20T06:16:38.7857871Z 9: [  PASSED  ] 9 tests.
+2026-10-20T06:16:38.7858378Z 2/2 Test #9: intercept_queue_logic_test .......   Passed    1.69 sec
+2026-10-20T06:16:38.7864884Z 
+2026-10-20T06:16:38.7865130Z 50% tests passed, 1 tests failed out of 2
+2026-10-20T06:16:38.7865442Z 
+2026-10-20T06:16:38.7865913Z Label Time Summary:
+2026-10-20T06:16:38.7866267Z pr            =   1.69 sec*proc (1 test)
+2026-10-20T06:16:38.7866734Z pre-commit    = 601.80 sec*proc (2 tests)
+2026-10-20T06:16:38.7867302Z quick         = 601.80 sec*proc (2 tests)
+2026-10-20T06:16:38.7867750Z smoke         = 600.11 sec*proc (1 test)
+2026-10-20T06:16:38.7868180Z standard      =   1.69 sec*proc (1 test)
+2026-10-20T06:16:38.7868463Z 
+2026-10-20T06:16:38.7868622Z Total Test time (real) = 601.81 sec
+2026-10-20T06:16:38.7868907Z 
+2026-10-20T06:16:38.7869063Z The following tests FAILED:
+2026-10-20T06:16:38.7869461Z 	  1 - rocrtst64_quick_suite (Timeout)
+2026-10-20T06:16:38.7869909Z Errors while running CTest
+2026-10-20T06:16:38.7901179Z # TEST_COMPONENT: rocrtst -> Test Directory: build/bin/rocrtst
+2026-10-20T06:16:38.7901933Z # TEST_TYPE: quick -> Category: quick
+2026-10-20T06:16:38.7902440Z # AMDGPU_FAMILIES: gfx90a -> GPU Architecture: gfx90a
+2026-10-20T06:16:38.7902806Z 
+2026-10-20T06:16:38.7902964Z # Discovering available test labels...
+2026-10-20T06:16:38.7903390Z # Found 1 GPU suite test(s)
+2026-10-20T06:16:38.7903804Z # Available GPU architectures: ['gfx950']
+2026-10-20T06:16:38.7904099Z 
+2026-10-20T06:16:38.7904342Z # No GPU suite found for gfx90a, excluding all ex_gpu tests
+2026-10-20T06:16:38.7905378Z # Running: ctest -L ^quick$ -LE ex_gpu --output-on-failure --parallel 1 --timeout 7200 --test-dir build/bin/rocrtst -V --tests-information 1,,1
+2026-10-20T06:16:38.7906177Z 
+2026-10-20T06:16:38.8075210Z ##[error]Process completed with exit code 8.
+2026-10-20T06:16:38.8139282Z ##[group]Run python ./build_tools/github_actions/reproduce_test_failure.py \
+2026-10-20T06:16:38.8140123Z [36;1mpython ./build_tools/github_actions/reproduce_test_failure.py \[0m
+2026-10-20T06:16:38.8140833Z [36;1m  --run-id "${ARTIFACT_RUN_ID}" \[0m
+2026-10-20T06:16:38.8141306Z [36;1m  --repository "ROCm/TheRock" \[0m
+2026-10-20T06:16:38.8141830Z [36;1m  --amdgpu-family "${AMDGPU_FAMILIES}" \[0m
+2026-10-20T06:16:38.8142330Z [36;1m  --amdgpu-targets "${AMDGPU_TARGETS}" \[0m
+2026-10-20T06:16:38.8142836Z [36;1m  --test-script "${COMPONENT_TEST_SCRIPT}" \[0m
+2026-10-20T06:16:38.8143333Z [36;1m  --shard-index "${MATRIX_SHARD}" \[0m
+2026-10-20T06:16:38.8143818Z [36;1m  --total-shards "${COMPONENT_TOTAL_SHARDS}" \[0m
+2026-10-20T06:16:38.8144285Z [36;1m  --test-type "${COMPONENT_TEST_TYPE}" \[0m
+2026-10-20T06:16:38.8144711Z [36;1m  --print-cmd \[0m
+2026-10-20T06:16:38.8145186Z [36;1m  --fetch-artifact-args="${COMPONENT_FETCH_ARTIFACT_ARGS}" \[0m
+2026-10-20T06:16:38.8145871Z [36;1m  --additional-requirements-files="${REQUIREMENTS_FILES}"[0m
+2026-10-20T06:16:38.8146593Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T06:16:38.8147645Z env:
+2026-10-20T06:16:38.8147995Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T06:16:38.8148479Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T06:16:38.8148972Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T06:16:38.8149446Z   ARTIFACT_RUN_ID: 39371346652
+2026-10-20T06:16:38.8149823Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T06:16:38.8150197Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T06:16:38.8150562Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T06:16:38.8150913Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T06:16:38.8151284Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T06:16:38.8151668Z   BUILD_VARIANT: release
+2026-10-20T06:16:38.8152061Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T06:16:38.8152572Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T06:16:38.8153112Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T06:16:38.8153593Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T06:16:38.8154085Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T06:16:38.8154562Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T06:16:38.8155023Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-20T06:16:38.8155438Z   OPENBLAS_NUM_THREADS: 25
+2026-10-20T06:16:38.8155807Z   OMP_NUM_THREADS: 25
+2026-10-20T06:16:38.8156137Z   MATRIX_SHARD: 1
+2026-10-20T06:16:38.8156708Z   COMPONENT_TEST_SCRIPT: python build_tools/github_actions/test_executable_scripts/test_runner.py
+2026-10-20T06:16:38.8157525Z   COMPONENT_TOTAL_SHARDS: 1
+2026-10-20T06:16:38.8157903Z   COMPONENT_TEST_TYPE: quick
+2026-10-20T06:16:38.8158285Z   REQUIREMENTS_FILES: 
+2026-10-20T06:16:38.8158694Z   COMPONENT_FETCH_ARTIFACT_ARGS: --rocrtst --tests
+2026-10-20T06:16:38.8159147Z ##[endgroup]
+2026-10-20T06:16:38.9375431Z To reproduce this failure, run:
+2026-10-20T06:16:38.9376097Z   git clone https://github.com/ROCm/TheRock.git && cd TheRock
+2026-10-20T06:16:38.9378473Z   python build_tools/github_actions/reproduce_test_failure.py --run-id 39371346652 --repository ROCm/TheRock --amdgpu-family gfx90a --test-script "python build_tools/github_actions/test_executable_scripts/test_runner.py" --amdgpu-targets gfx90a --output-dir "./build" --test-type quick --fetch-artifact-args="--rocrtst --tests"
+2026-10-20T06:16:38.9542028Z ##[group]Run bash ./build_tools/github_actions/cleanup_processes.sh
+2026-10-20T06:16:38.9542661Z [36;1mbash ./build_tools/github_actions/cleanup_processes.sh[0m
+2026-10-20T06:16:38.9543270Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T06:16:38.9543665Z env:
+2026-10-20T06:16:38.9544023Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T06:16:38.9544431Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T06:16:38.9544862Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T06:16:38.9545261Z   ARTIFACT_RUN_ID: 39371346652
+2026-10-20T06:16:38.9545619Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T06:16:38.9545962Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T06:16:38.9546346Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T06:16:38.9546667Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T06:16:38.9547212Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T06:16:38.9547594Z   BUILD_VARIANT: release
+2026-10-20T06:16:38.9548090Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T06:16:38.9548584Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T06:16:38.9549066Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T06:16:38.9549465Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T06:16:38.9549864Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T06:16:38.9550299Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T06:16:38.9550784Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-20T06:16:38.9551170Z   OPENBLAS_NUM_THREADS: 25
+2026-10-20T06:16:38.9551498Z   OMP_NUM_THREADS: 25
+2026-10-20T06:16:38.9551809Z ##[endgroup]
+2026-10-20T06:16:39.0380866Z [*] ==== Starting cleanup_processes.sh ====
+2026-10-20T06:16:39.0521245Z [*] Not running in a container (or container ID not detected)
+2026-10-20T06:16:39.0526158Z [*] Build directory: /__w/TheRock/TheRock/build
+2026-10-20T06:16:39.0526775Z [*] Searching for GPU processes from this container's build directory...
+2026-10-20T06:16:39.0933239Z [+] No GPU processes found
+2026-10-20T06:16:39.1038834Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-20T06:16:39.1039397Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-20T06:16:39.1039923Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T06:16:39.1040230Z env:
+2026-10-20T06:16:39.1040475Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T06:16:39.1040821Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T06:16:39.1041168Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T06:16:39.1041487Z   ARTIFACT_RUN_ID: 39371346652
+2026-10-20T06:16:39.1041743Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T06:16:39.1041999Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T06:16:39.1042315Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T06:16:39.1042557Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T06:16:39.1042824Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T06:16:39.1043116Z   BUILD_VARIANT: release
+2026-10-20T06:16:39.1043415Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T06:16:39.1043850Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T06:16:39.1044323Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T06:16:39.1044708Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T06:16:39.1045104Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T06:16:39.1045477Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T06:16:39.1045825Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-20T06:16:39.1046173Z   OPENBLAS_NUM_THREADS: 25
+2026-10-20T06:16:39.1046529Z   OMP_NUM_THREADS: 25
+2026-10-20T06:16:39.1046792Z ##[endgroup]
+2026-10-20T06:16:39.2406945Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-20T06:16:39.2706225Z Post job cleanup.
+2026-10-20T06:16:39.2711646Z ##[start-action display=Setting up Python;id=__ee044c96-383c-42f8-b0c9-9aacad4e9646.__actions_setup-python]
+2026-10-20T06:16:39.2714449Z ##[end-action id=__ee044c96-383c-42f8-b0c9-9aacad4e9646.__actions_setup-python;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-20T06:16:39.2820074Z Post job cleanup.
+2026-10-20T06:16:39.2831791Z ##[command]/usr/bin/docker exec  b03d57dc7dfe5926f0b9650a50e1fbd6c46643f04a3762f4d42c14aaa8c72cca sh -c "cat /etc/*release | grep ^ID"
+2026-10-20T06:16:39.5491033Z [command]/usr/bin/git version
+2026-10-20T06:16:39.5540244Z git version 2.51.0
+2026-10-20T06:16:39.5569017Z Copying '/github/home/.gitconfig' to '/__w/_temp/3d478e63-22b5-4347-8142-3c60c5dc12ce/.gitconfig'
+2026-10-20T06:16:39.5580801Z Temporarily overriding HOME='/__w/_temp/3d478e63-22b5-4347-8142-3c60c5dc12ce' before making global git config changes
+2026-10-20T06:16:39.5581862Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T06:16:39.5597579Z [command]/usr/bin/git config --global --add safe.directory /__w/TheRock/TheRock
+2026-10-20T06:16:39.5631671Z Removing SSH command configuration
+2026-10-20T06:16:39.5636926Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T06:16:39.5671389Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T06:16:39.5988346Z Removing HTTP extra header
+2026-10-20T06:16:39.5991548Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T06:16:39.6025912Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T06:16:39.6333982Z Removing includeIf entries pointing to credentials config files
+2026-10-20T06:16:39.6340486Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T06:16:39.6366513Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T06:16:39.6968864Z Post job cleanup.
+2026-10-20T06:16:39.6986019Z ##[command]/usr/bin/docker exec  b03d57dc7dfe5926f0b9650a50e1fbd6c46643f04a3762f4d42c14aaa8c72cca sh -c "cat /etc/*release | grep ^ID"
+2026-10-20T06:16:39.9769163Z Stop and remove container: 93e6e65d0ea14d07a029958c5a93c6e8_ghcriorocmno_rocm_image_ubuntu24_04sha2564150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98_ea7b41
+2026-10-20T06:16:39.9775164Z ##[command]/usr/bin/docker rm --force b03d57dc7dfe5926f0b9650a50e1fbd6c46643f04a3762f4d42c14aaa8c72cca
+2026-10-20T06:16:40.3531395Z b03d57dc7dfe5926f0b9650a50e1fbd6c46643f04a3762f4d42c14aaa8c72cca
+2026-10-20T06:16:40.3615513Z Remove container network: github_network_a750f98a6c354b5d99766bb4010d68f6
+2026-10-20T06:16:40.3621031Z ##[command]/usr/bin/docker network rm github_network_a750f98a6c354b5d99766bb4010d68f6
+2026-10-20T06:16:40.7482757Z github_network_a750f98a6c354b5d99766bb4010d68f6
+2026-10-20T06:16:40.7614416Z Evaluate and set job outputs
+2026-10-20T06:16:40.7621886Z Cleaning up orphan processes

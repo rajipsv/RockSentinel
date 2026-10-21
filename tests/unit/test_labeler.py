@@ -157,6 +157,28 @@ def test_per_run_cap_and_rebalance(paths, monkeypatch):
     s.close()
 
 
+def test_refresh_rederives_rule_labels_but_keeps_outcome_labels(paths):
+    logs = paths.fixtures
+    logs.mkdir(parents=True, exist_ok=True)
+    (logs / "a.txt").write_text(
+        "hipModuleLoad failed: /tmp/x.hsaco\n error: file not found\n", encoding="utf-8")
+    base = {"run_id": 1, "workflow": "test_artifacts.yml",
+            "log_fixture": "tests/fixtures/logs/a.txt",
+            "expected": {"category": "infra", "must_cite": ["error: file not found"]}}
+    rows = [dict(base, case_id="cand-1", job_id=1, label_source="rules (B1): old"),
+            dict(base, case_id="cand-2", job_id=2,
+                 label_source="outcome: passed on rerun of the same run (strong)",
+                 expected={"category": "flaky", "must_cite": []})]
+    paths.proposals.write_text("".join(json.dumps(r) + "\n" for r in rows), encoding="utf-8")
+
+    assert labeler.refresh(paths) == ["cand-1", "cand-2"]
+    after = {r["case_id"]: r for r in _rows(paths.proposals)}
+    assert after["cand-1"]["expected"]["category"] == "regression"  # hip_runtime_error
+    assert after["cand-1"]["expected"]["must_cite"] == ["hipModuleLoad failed: /tmp/x.hsaco"]
+    assert after["cand-2"]["expected"]["category"] == "flaky"  # outcome label kept
+    assert after["cand-2"]["expected"]["must_cite"] == ["hipModuleLoad failed: /tmp/x.hsaco"]
+
+
 def test_diverse_prefers_new_combos_and_dedupes_names():
     jobs = [
         _job(1, "A (gfx1151)"),

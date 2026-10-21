@@ -1,0 +1,194 @@
+# Source: ROCm/TheRock Actions run 39445395419 attempt 1, job 118756286255
+# Job: Linux::release / Test gfx90a / Test tensilelite / Test tensilelite (shard 1/1) (gfx90a) (multi_arch_ci.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-20
+2026-10-20T17:02:18.1505416Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_every_wave_uses_its_tensors_axis[2-clusterDim0] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1523276Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_every_wave_uses_its_tensors_axis[2-clusterDim1] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1540937Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_every_wave_uses_its_tensors_axis[2-clusterDim2] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1558050Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_every_wave_uses_its_tensors_axis[3-clusterDim0] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1575178Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_every_wave_uses_its_tensors_axis[3-clusterDim1] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1592373Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_every_wave_uses_its_tensors_axis[3-clusterDim2] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1611322Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_combined_only_for_mx_ab[0-True-clusterDim0] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1629524Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_combined_only_for_mx_ab[0-True-clusterDim1] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1648189Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_combined_only_for_mx_ab[0-True-clusterDim2] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1666225Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_combined_only_for_mx_ab[1-False-clusterDim0] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1684549Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_combined_only_for_mx_ab[1-False-clusterDim1] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1702790Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_combined_only_for_mx_ab[1-False-clusterDim2] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1720644Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_combined_only_for_mx_ab[2-False-clusterDim0] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1738557Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_combined_only_for_mx_ab[2-False-clusterDim1] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1756369Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_combined_only_for_mx_ab[2-False-clusterDim2] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1774203Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_combined_only_for_mx_ab[3-False-clusterDim0] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1792127Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_combined_only_for_mx_ab[3-False-clusterDim1] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1809896Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_combined_only_for_mx_ab[3-False-clusterDim2] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1828161Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_split_masks_computed_and_attached[1] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1845832Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_split_masks_computed_and_attached[2] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1863535Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_split_masks_computed_and_attached[3] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:18.1881125Z tensilelite/Tests/unit/test_cluster_load_component.py::TestMaskAxisPerGrouping::test_declined_grouping_keeps_combined_mask [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:30.7612393Z tensilelite/Tests/unit/test_common_yaml_syncs_per_benchmark.py::test_common_yaml_files_disable_benchmark_syncs [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:30.7654039Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_flag_default_off [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:30.7682755Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_arg_validation [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:30.8698041Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_isa_belt_spoof[gfx942] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:30.9698815Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_isa_belt_spoof[gfx950] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:31.0707886Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_isa_belt_spoof[gfx90a] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:31.0741215Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_isa_primary_path [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:31.0766613Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_frequency_probe_skipped [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:31.0812540Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_no_side_effects [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:31.0862017Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_synthetic_csv_schema[gfx942] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:31.0908342Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_synthetic_csv_schema[gfx950] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:31.0954571Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_synthetic_csv_schema[gfx90a] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:31.0997602Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_determinism [32mPASSED[0m[33m  [ 70%][0m
+2026-10-20T17:02:36.8289710Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_cpu_only_end_to_end[gfx942] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:42.5669287Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_cpu_only_end_to_end[gfx950] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.2936553Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_cpu_only_end_to_end[gfx90a] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.3005495Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_off_path_text_golden [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4031655Z tensilelite/Tests/unit/test_cpu_only_switch.py::test_off_path_real_branches [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4080656Z tensilelite/Tests/unit/test_create_benchmark_client_params.py::test_archs_provided_uses_libraryDir_per_base[gfx942] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4128568Z tensilelite/Tests/unit/test_create_benchmark_client_params.py::test_archs_provided_uses_libraryDir_per_base[gfx942:xnack+] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4176808Z tensilelite/Tests/unit/test_create_benchmark_client_params.py::test_archs_provided_uses_libraryDir_per_base[gfx942:sramecc+:xnack+] [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4223209Z tensilelite/Tests/unit/test_create_benchmark_client_params.py::test_archs_provided_yaml_extension [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4269235Z tensilelite/Tests/unit/test_create_benchmark_client_params.py::test_archs_none_uses_gfxName [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4311899Z tensilelite/Tests/unit/test_create_benchmark_client_params.py::test_no_arch_raises [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4362010Z tensilelite/Tests/unit/test_create_benchmark_client_params.py::test_codeObjectFiles_filtered_from_per_base [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4384174Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_addcustomconfig_main_file_not_found [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4427146Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_addcustomconfig_main_provenance_only_injects [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4469745Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_addcustomconfig_main_dry_run_non_s_warns [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4517225Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_addcustomconfig_main_already_has_config [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4560644Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_addcustomconfig_main_yaml_parse_error [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4603465Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_addcustomconfig_main_read_error_exits [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4657049Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_addcustomconfig_main_with_yaml_injects_interface [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4704696Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_addcustomconfig_main_autodetects_threads_and_wavefront [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4762193Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_addcustomconfig_main_merges_detected_into_yaml_config [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4800246Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_addcustomconfig_main_inject_failure_exits [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4820731Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_validatemetadata_main_root_not_found [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4868515Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_validatemetadata_main_clean_exits_zero [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4914610Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_validatemetadata_main_strict_bad_exits_one [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:02:48.4959169Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_validatemetadata_main_non_strict_bad_exits_zero [32mPASSED[0m[33m [ 70%][0m
+2026-10-20T17:03:19.1990371Z tensilelite/Tests/unit/test_custom_kernel_cli.py::test_validatemetadata_main_default_root_uses_shipped_kernels 
+2026-10-20T17:03:19.2031468Z ##[error]The action 'Test' has timed out after 15 minutes.
+2026-10-20T17:03:19.2084532Z ##[group]Run python ./build_tools/github_actions/reproduce_test_failure.py \
+2026-10-20T17:03:19.2085215Z [36;1mpython ./build_tools/github_actions/reproduce_test_failure.py \[0m
+2026-10-20T17:03:19.2085677Z [36;1m  --run-id "${ARTIFACT_RUN_ID}" \[0m
+2026-10-20T17:03:19.2086023Z [36;1m  --repository "ROCm/TheRock" \[0m
+2026-10-20T17:03:19.2086381Z [36;1m  --amdgpu-family "${AMDGPU_FAMILIES}" \[0m
+2026-10-20T17:03:19.2086775Z [36;1m  --amdgpu-targets "${AMDGPU_TARGETS}" \[0m
+2026-10-20T17:03:19.2087150Z [36;1m  --test-script "${COMPONENT_TEST_SCRIPT}" \[0m
+2026-10-20T17:03:19.2087519Z [36;1m  --shard-index "${MATRIX_SHARD}" \[0m
+2026-10-20T17:03:19.2087885Z [36;1m  --total-shards "${COMPONENT_TOTAL_SHARDS}" \[0m
+2026-10-20T17:03:19.2088345Z [36;1m  --test-type "${COMPONENT_TEST_TYPE}" \[0m
+2026-10-20T17:03:19.2088664Z [36;1m  --print-cmd \[0m
+2026-10-20T17:03:19.2089027Z [36;1m  --fetch-artifact-args="${COMPONENT_FETCH_ARTIFACT_ARGS}" \[0m
+2026-10-20T17:03:19.2089570Z [36;1m  --additional-requirements-files="${REQUIREMENTS_FILES}"[0m
+2026-10-20T17:03:19.2090132Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T17:03:19.2090460Z env:
+2026-10-20T17:03:19.2090713Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T17:03:19.2091077Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T17:03:19.2091448Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T17:03:19.2091927Z   ARTIFACT_RUN_ID: 39445395419
+2026-10-20T17:03:19.2092215Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T17:03:19.2092494Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T17:03:19.2092761Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T17:03:19.2093027Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T17:03:19.2093298Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T17:03:19.2093588Z   BUILD_VARIANT: release
+2026-10-20T17:03:19.2093873Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T17:03:19.2094273Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T17:03:19.2094669Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T17:03:19.2095019Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T17:03:19.2095376Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T17:03:19.2095727Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T17:03:19.2096069Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-20T17:03:19.2096386Z   OPENBLAS_NUM_THREADS: 25
+2026-10-20T17:03:19.2096649Z   OMP_NUM_THREADS: 25
+2026-10-20T17:03:19.2096883Z   MATRIX_SHARD: 1
+2026-10-20T17:03:19.2097332Z   COMPONENT_TEST_SCRIPT: python build_tools/github_actions/test_executable_scripts/pytest_runner.py
+2026-10-20T17:03:19.2097863Z   COMPONENT_TOTAL_SHARDS: 1
+2026-10-20T17:03:19.2098204Z   COMPONENT_TEST_TYPE: quick
+2026-10-20T17:03:19.2098627Z   REQUIREMENTS_FILES: build/share/hipblaslt/tensilelite/requirements-test.txt
+2026-10-20T17:03:19.2099108Z   COMPONENT_FETCH_ARTIFACT_ARGS: --blas --tests
+2026-10-20T17:03:19.2099430Z ##[endgroup]
+2026-10-20T17:03:19.3072496Z To reproduce this failure, run:
+2026-10-20T17:03:19.3076216Z   git clone https://github.com/ROCm/TheRock.git && cd TheRock
+2026-10-20T17:03:19.3078356Z   python build_tools/github_actions/reproduce_test_failure.py --run-id 39445395419 --repository ROCm/TheRock --amdgpu-family gfx90a --test-script "python build_tools/github_actions/test_executable_scripts/pytest_runner.py" --amdgpu-targets gfx90a --output-dir "./build" --test-type quick --fetch-artifact-args="--blas --tests" --additional-requirements-files="build/share/hipblaslt/tensilelite/requirements-test.txt"
+2026-10-20T17:03:19.3249524Z ##[group]Run bash ./build_tools/github_actions/cleanup_processes.sh
+2026-10-20T17:03:19.3250564Z [36;1mbash ./build_tools/github_actions/cleanup_processes.sh[0m
+2026-10-20T17:03:19.3251515Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T17:03:19.3252115Z env:
+2026-10-20T17:03:19.3252587Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T17:03:19.3253261Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T17:03:19.3253948Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T17:03:19.3254582Z   ARTIFACT_RUN_ID: 39445395419
+2026-10-20T17:03:19.3255088Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T17:03:19.3255593Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T17:03:19.3256086Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T17:03:19.3256567Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T17:03:19.3257098Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T17:03:19.3257637Z   BUILD_VARIANT: release
+2026-10-20T17:03:19.3258344Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T17:03:19.3259096Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T17:03:19.3259850Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T17:03:19.3260502Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T17:03:19.3261143Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T17:03:19.3261796Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T17:03:19.3262442Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-20T17:03:19.3263016Z   OPENBLAS_NUM_THREADS: 25
+2026-10-20T17:03:19.3263482Z   OMP_NUM_THREADS: 25
+2026-10-20T17:03:19.3263902Z ##[endgroup]
+2026-10-20T17:03:19.3831720Z [*] ==== Starting cleanup_processes.sh ====
+2026-10-20T17:03:19.3940333Z [*] Not running in a container (or container ID not detected)
+2026-10-20T17:03:19.3940801Z [*] Build directory: /__w/TheRock/TheRock/build
+2026-10-20T17:03:19.3941301Z [*] Searching for GPU processes from this container's build directory...
+2026-10-20T17:03:20.9260558Z [+] No GPU processes found
+2026-10-20T17:03:20.9380706Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-20T17:03:20.9381870Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-20T17:03:20.9382865Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T17:03:20.9383487Z env:
+2026-10-20T17:03:20.9383978Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T17:03:20.9384681Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T17:03:20.9385388Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T17:03:20.9386032Z   ARTIFACT_RUN_ID: 39445395419
+2026-10-20T17:03:20.9386561Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T17:03:20.9387081Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T17:03:20.9387595Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T17:03:20.9388217Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T17:03:20.9388764Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T17:03:20.9389308Z   BUILD_VARIANT: release
+2026-10-20T17:03:20.9389910Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T17:03:20.9390670Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T17:03:20.9391407Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T17:03:20.9392064Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T17:03:20.9392716Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T17:03:20.9393380Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T17:03:20.9394050Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-20T17:03:20.9394624Z   OPENBLAS_NUM_THREADS: 25
+2026-10-20T17:03:20.9395104Z   OMP_NUM_THREADS: 25
+2026-10-20T17:03:20.9395545Z ##[endgroup]
+2026-10-20T17:03:21.0597580Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-20T17:03:21.0924525Z Post job cleanup.
+2026-10-20T17:03:21.0928522Z ##[start-action display=Setting up Python;id=__efad70c3-8d21-4096-8687-e826ee7dfa6a.__actions_setup-python]
+2026-10-20T17:03:21.0931325Z ##[end-action id=__efad70c3-8d21-4096-8687-e826ee7dfa6a.__actions_setup-python;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-20T17:03:21.1010236Z Post job cleanup.
+2026-10-20T17:03:21.1018989Z ##[command]/usr/bin/docker exec  620dabe16afc246e3a4951d76aa7cbb1b02ebe928016762e7cc34e1aa287f15d sh -c "cat /etc/*release | grep ^ID"
+2026-10-20T17:03:21.2980510Z [command]/usr/bin/git version
+2026-10-20T17:03:21.3029916Z git version 2.51.0
+2026-10-20T17:03:21.3066965Z Copying '/github/home/.gitconfig' to '/__w/_temp/05e7dee2-4d09-4a7c-ba38-e14b87bca275/.gitconfig'
+2026-10-20T17:03:21.3077408Z Temporarily overriding HOME='/__w/_temp/05e7dee2-4d09-4a7c-ba38-e14b87bca275' before making global git config changes
+2026-10-20T17:03:21.3080041Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T17:03:21.3081267Z [command]/usr/bin/git config --global --add safe.directory /__w/TheRock/TheRock
+2026-10-20T17:03:21.3116114Z Removing SSH command configuration
+2026-10-20T17:03:21.3120358Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T17:03:21.3179194Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T17:03:21.3540640Z Removing HTTP extra header
+2026-10-20T17:03:21.3544210Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T17:03:21.3579970Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T17:03:21.3886008Z Removing includeIf entries pointing to credentials config files
+2026-10-20T17:03:21.3889821Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T17:03:21.3922705Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T17:03:21.4474522Z Post job cleanup.
+2026-10-20T17:03:21.4484069Z ##[command]/usr/bin/docker exec  620dabe16afc246e3a4951d76aa7cbb1b02ebe928016762e7cc34e1aa287f15d sh -c "cat /etc/*release | grep ^ID"
+2026-10-20T17:03:21.6696034Z Stop and remove container: 029dd93b0785443a84cd2be7548b621e_ghcriorocmno_rocm_image_ubuntu24_04sha2564150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98_2237d7
+2026-10-20T17:03:21.6703904Z ##[command]/usr/bin/docker rm --force 620dabe16afc246e3a4951d76aa7cbb1b02ebe928016762e7cc34e1aa287f15d
+2026-10-20T17:03:22.4013749Z 620dabe16afc246e3a4951d76aa7cbb1b02ebe928016762e7cc34e1aa287f15d
+2026-10-20T17:03:22.4070042Z Remove container network: github_network_a058b82360bb49b89473f96b2b1abab1
+2026-10-20T17:03:22.4075941Z ##[command]/usr/bin/docker network rm github_network_a058b82360bb49b89473f96b2b1abab1
+2026-10-20T17:03:22.6053056Z github_network_a058b82360bb49b89473f96b2b1abab1
+2026-10-20T17:03:22.6171435Z Evaluate and set job outputs
+2026-10-20T17:03:22.6179782Z Cleaning up orphan processes

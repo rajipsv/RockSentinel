@@ -124,6 +124,55 @@ def test_normalizes_raw_github_log_lines():
     assert result.exit_code == 8
 
 
+def test_hip_runtime_error_anchors_on_line_above_continuation():
+    log = (
+        "+ tensilelite-client --config-file /tmp/a/ClientParameters.ini\n"
+        "hipModuleLoad failed: /tmp/a/Kernels.so-000-gfx950.hsaco\n"
+        " error: file not found\n"
+        "Process completed with exit code 1.\n"
+    )
+    first = extract_errors(log).first_error
+    assert first.kind == "hip_runtime_error" and first.line_no == 2
+    assert first.text.startswith("hipModuleLoad failed:")
+    assert first.count == 1
+
+
+def test_repeats_are_grouped_but_every_occurrence_is_kept():
+    blocks = []
+    for i in range(5):
+        blocks += [
+            f"hipModuleLoad failed: /tmp/cache/{i:04x}/Kernels.hsaco",
+            " error: file not found",
+            "TIMING:flush 0.001",
+        ]
+    r = extract_errors("\n".join(blocks))
+    hip = [c for c in r.candidates if c.kind == "hip_runtime_error"]
+    assert len(hip) == 1  # one candidate, not five windows of the same thing
+    assert hip[0].count == 5
+    assert hip[0].occurrences == (1, 4, 7, 10, 13)  # no occurrence lost
+    assert len(hip[0].variants) == 5 and hip[0].variants[3].endswith("/0003/Kernels.hsaco")
+
+
+def test_different_errors_are_not_grouped():
+    log = "hipModuleLoad failed: /tmp/a.hsaco\nhipMalloc failed: out of memory\n"
+    assert len(extract_errors(log).candidates) == 2
+
+
+def test_real_tensilelite_log_groups_66_module_load_failures():
+    log = (FIXTURES / "run-39385542565_job-118506197594.txt").read_text(encoding="utf-8")
+    first = extract_errors(log).first_error
+    assert first.kind == "hip_runtime_error" and first.count == 66
+    assert first.text.startswith("hipModuleLoad failed:")
+
+
+def test_ctest_segfault_line_gives_failing_test():
+    log = ("1349/2256 Test #1691: tests.integration.execute.rocprofv3-test-hip-graph "
+           "....***Exception: SegFault  0.69 sec\n")
+    r = extract_errors(log)
+    assert r.first_error.kind == "crash"
+    assert r.failing_test == "tests.integration.execute.rocprofv3-test-hip-graph"
+
+
 def test_window_is_clamped_to_log_bounds():
     result = extract_errors("Segmentation fault\n")
     assert result.first_error.window == (1, 1)

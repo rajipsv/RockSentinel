@@ -150,8 +150,15 @@ def get_job_log_windows(
             end = start + cap - 1
         lines = [{"line_no": n, "text": result.lines[n - 1]} for n in range(start, end + 1)]
         covered.update(range(start, end + 1))
-        windows.append({"anchor": {"line_no": c.line_no, "kind": c.kind, "text": c.text},
-                        "lines": lines})
+        windows.append({
+            "anchor": {
+                "line_no": c.line_no, "kind": c.kind, "text": c.text, "count": c.count,
+                # all repeats of this error shape, so none are lost; ask for a window at any
+                "occurrence_lines": list(c.occurrences),
+                "variants": list(c.variants),
+            },
+            "lines": lines,
+        })
     return {
         "job_id": job_id,
         "log_line_count": len(result.lines),
@@ -183,6 +190,9 @@ def extract_errors(log_text: str, max_candidates: int = 20) -> dict:
                 "severity": c.severity,
                 "text": c.text,
                 "window": list(c.window),
+                "count": c.count,
+                "occurrence_lines": list(c.occurrences),
+                "variants": list(c.variants),
             }
             for c in result.candidates
         ],

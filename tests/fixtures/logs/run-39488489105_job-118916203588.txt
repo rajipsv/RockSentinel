@@ -1,0 +1,1504 @@
+# Source: ROCm/TheRock Actions run 39488489105 attempt 1, job 118916203588
+# Job: Windows::release / Test gfx110X-all / Test rocsparse / Test rocsparse (shard 1/1) (gfx110X-all) (multi_arch_ci.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+2026-10-20T22:32:02.0133322Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_1b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:02.0134163Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_1b_reuse_rand_0
+2026-10-20T22:32:02.0427033Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_1b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:02.0427409Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_0b_force_rand_0
+2026-10-20T22:32:02.0607107Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_0b_force_rand_0 (17 ms)
+2026-10-20T22:32:02.0607488Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_0b_force_rand_0
+2026-10-20T22:32:02.0898256Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_0b_force_rand_0 (29 ms)
+2026-10-20T22:32:02.0898611Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_1b_force_rand_0
+2026-10-20T22:32:02.1075097Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_1b_force_rand_0 (17 ms)
+2026-10-20T22:32:02.1075458Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_1b_force_rand_0
+2026-10-20T22:32:02.1370183Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_1b_force_rand_0 (29 ms)
+2026-10-20T22:32:02.1370560Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_0b_reuse_rand_0
+2026-10-20T22:32:02.1546677Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_0b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:02.1547378Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_0b_reuse_rand_0
+2026-10-20T22:32:02.1840435Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_0b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:02.1840793Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_1b_reuse_rand_0
+2026-10-20T22:32:02.2018492Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_1b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:02.2019130Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_1b_reuse_rand_0
+2026-10-20T22:32:02.2313879Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_1b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:02.2314244Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_0b_force_rand_0
+2026-10-20T22:32:02.2487535Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_0b_force_rand_0 (17 ms)
+2026-10-20T22:32:02.2487890Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_0b_force_rand_0
+2026-10-20T22:32:02.2779358Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_0b_force_rand_0 (29 ms)
+2026-10-20T22:32:02.2779775Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_1b_force_rand_0
+2026-10-20T22:32:02.2955812Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_1b_force_rand_0 (17 ms)
+2026-10-20T22:32:02.2956184Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_1b_force_rand_0
+2026-10-20T22:32:02.3250850Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_1b_force_rand_0 (29 ms)
+2026-10-20T22:32:02.3251226Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_0b_reuse_rand_0
+2026-10-20T22:32:02.3427881Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_0b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:02.3428386Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_0b_reuse_rand_0
+2026-10-20T22:32:02.3721561Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_0b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:02.3721926Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_1b_reuse_rand_0
+2026-10-20T22:32:02.3901509Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_1b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:02.3901883Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_1b_reuse_rand_0
+2026-10-20T22:32:02.4197345Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_1b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:02.4197718Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_0b_force_rand_0
+2026-10-20T22:32:02.4373782Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_0b_force_rand_0 (17 ms)
+2026-10-20T22:32:02.4374682Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_0b_force_rand_0
+2026-10-20T22:32:02.4673514Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_0b_force_rand_0 (29 ms)
+2026-10-20T22:32:02.4673885Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_1b_force_rand_0
+2026-10-20T22:32:02.4853327Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_1b_force_rand_0 (17 ms)
+2026-10-20T22:32:02.4854086Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_1b_force_rand_0
+2026-10-20T22:32:02.5160477Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_1b_force_rand_0 (30 ms)
+2026-10-20T22:32:02.5160842Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_0b_reuse_rand_0
+2026-10-20T22:32:02.5339946Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_0b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:02.5340313Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_0b_reuse_rand_0
+2026-10-20T22:32:02.5631481Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_0b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:02.5631856Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_1b_reuse_rand_0
+2026-10-20T22:32:02.5799962Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_1b_reuse_rand_0 (16 ms)
+2026-10-20T22:32:02.5800318Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_1b_reuse_rand_0
+2026-10-20T22:32:02.6085824Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_1b_reuse_rand_0 (28 ms)
+2026-10-20T22:32:02.6086187Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_0b_force_rand_0
+2026-10-20T22:32:02.6255771Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_0b_force_rand_0 (16 ms)
+2026-10-20T22:32:02.6256432Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_0b_force_rand_0
+2026-10-20T22:32:02.6544546Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_0b_force_rand_0 (28 ms)
+2026-10-20T22:32:02.6544930Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_1b_force_rand_0
+2026-10-20T22:32:02.6713032Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_1b_force_rand_0 (16 ms)
+2026-10-20T22:32:02.6713415Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_1b_force_rand_0
+2026-10-20T22:32:02.7008556Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_1b_force_rand_0 (29 ms)
+2026-10-20T22:32:02.7008951Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_187_0b_reuse_rand_0
+2026-10-20T22:32:02.7180429Z 1: [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_187_0b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:02.7180810Z 1: [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_187_0b_reuse_rand_0
+2026-10-20T22:32:02.8721007Z 1/2 Test  #1: rocsparse-test_quick_suite .......***Timeout 300.13 sec
+2026-10-20T22:32:02.8747333Z kpack: cache created: disabled=0, debug=1, override_paths=0, prefix_paths=0
+2026-10-20T22:32:02.8747918Z kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse.dll', co_index=4, lookup_key='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse.dll#4', 2 search paths
+2026-10-20T22:32:02.8748602Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:02.8749189Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:02.8750102Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:02.8750694Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:02.8751215Z kpack: opened and cached archive: B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:02.8751528Z kpack:   architecture: gfx1101
+2026-10-20T22:32:02.8751827Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:02.8752348Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:02.8752784Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:02.8753211Z kpack: trying architecture: amdgcn-amd-amdhsa--gfx1101
+2026-10-20T22:32:02.8753574Z kpack:   archive B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx1101.kpack has architecture gfx1101
+2026-10-20T22:32:02.8753904Z kpack:   found kernel: 3312 bytes
+2026-10-20T22:32:02.8754076Z kpack: loaded code object: 3312 bytes
+2026-10-20T22:32:02.8754252Z Query device success: there are 1 devices
+2026-10-20T22:32:02.8754430Z Device ID 0: AMD Radeon PRO V710 MxGPU
+2026-10-20T22:32:02.8754636Z -------------------------------------------------------------------------
+2026-10-20T22:32:02.8754908Z with 25712MB memory, clock rate 1280MHz @ computing capability 11.0
+2026-10-20T22:32:02.8755199Z maxGridDimX 2147483647, sharedMemPerBlock 64KB, maxThreadsPerBlock 1024
+2026-10-20T22:32:02.8755433Z wavefrontSize 32
+2026-10-20T22:32:02.8755642Z -------------------------------------------------------------------------
+2026-10-20T22:32:02.8755971Z Using device ID 0 (AMD Radeon PRO V710 MxGPU) for rocSPARSE
+2026-10-20T22:32:02.8756212Z -------------------------------------------------------------------------
+2026-10-20T22:32:02.8756419Z rocSPARSE version: 5.2.0-cb261897
+2026-10-20T22:32:02.8756674Z rocSPARSE data path: B:\actions-runner\_work\TheRock\TheRock\build\share\rocsparse\test/
+2026-10-20T22:32:02.8757198Z rocsparse-test: debug arguments verbose is disabled for testings (use --force-debug-arguments-verbose to skip the disabling)
+2026-10-20T22:32:02.8757664Z rocsparse-test: warnings are disabled for testings (use --force-warnings to skip the disabling)
+2026-10-20T22:32:02.8757953Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8758128Z   Required host:   1 GB (available: 121 GB)
+2026-10-20T22:32:02.8758308Z   Required device: 70 GB (available: 24 GB)
+2026-10-20T22:32:02.8758482Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8758644Z   Required host:   1 GB (available: 121 GB)
+2026-10-20T22:32:02.8758817Z   Required device: 70 GB (available: 24 GB)
+2026-10-20T22:32:02.8758987Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8759143Z   Required host:   1 GB (available: 121 GB)
+2026-10-20T22:32:02.8759315Z   Required device: 70 GB (available: 24 GB)
+2026-10-20T22:32:02.8759487Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8759653Z   Required host:   1 GB (available: 121 GB)
+2026-10-20T22:32:02.8759904Z   Required device: 90 GB (available: 24 GB)
+2026-10-20T22:32:02.8760074Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8760235Z   Required host:   1 GB (available: 121 GB)
+2026-10-20T22:32:02.8760406Z   Required device: 90 GB (available: 24 GB)
+2026-10-20T22:32:02.8760571Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8760729Z   Required host:   1 GB (available: 121 GB)
+2026-10-20T22:32:02.8760892Z   Required device: 72 GB (available: 24 GB)
+2026-10-20T22:32:02.8761063Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8761237Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8761458Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8761625Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8761788Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8761964Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8762129Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8762288Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8762457Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8762627Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8762789Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8762962Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8763129Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8763287Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8763463Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8763631Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8763789Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8764002Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8764171Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8764333Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8764507Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8764674Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8764833Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8765007Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8765175Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8765336Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8765502Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8765674Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8765840Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8766013Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8766226Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8766398Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8766577Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8766759Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8766941Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8767122Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8767330Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8767497Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8767673Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8767843Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8768008Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8768183Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8768351Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8768515Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8768690Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8768869Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8769033Z   Required host:   64 GB (available: 121 GB)
+2026-10-20T22:32:02.8769214Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8769385Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8769563Z   Required host:   4 GB (available: 121 GB)
+2026-10-20T22:32:02.8769734Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8769897Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8770061Z   Required host:   4 GB (available: 121 GB)
+2026-10-20T22:32:02.8770234Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8770402Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8770560Z   Required host:   4 GB (available: 121 GB)
+2026-10-20T22:32:02.8770727Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8770905Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8771071Z   Required host:   4 GB (available: 121 GB)
+2026-10-20T22:32:02.8771242Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8771449Z SKIPPING TEST: Insufficient memory
+2026-10-20T22:32:02.8771610Z   Required host:   4 GB (available: 121 GB)
+2026-10-20T22:32:02.8771782Z   Required device: 47 GB (available: 24 GB)
+2026-10-20T22:32:02.8771970Z Note: Google Test filter = quick/*-*known_bug*
+2026-10-20T22:32:02.8772227Z [==========] Running 22736 tests from 160 test suites.
+2026-10-20T22:32:02.8772426Z [----------] Global test environment set-up.
+2026-10-20T22:32:02.8772604Z [----------] 448 tests from quick/axpby
+2026-10-20T22:32:02.8772831Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_1_0_0_0_0b_0
+2026-10-20T22:32:02.8773372Z kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse.dll', co_index=16, lookup_key='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse.dll#16', 2 search paths
+2026-10-20T22:32:02.8774048Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:02.8774681Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:02.8775270Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:02.8775848Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:02.8776364Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:02.8776788Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:02.8777219Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:02.8777604Z kpack: trying architecture: amdgcn-amd-amdhsa--gfx1101
+2026-10-20T22:32:02.8777963Z kpack:   archive B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx1101.kpack has architecture gfx1101
+2026-10-20T22:32:02.8778288Z kpack:   found kernel: 38288 bytes
+2026-10-20T22:32:02.8778455Z kpack: loaded code object: 38288 bytes
+2026-10-20T22:32:02.8778956Z kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse.dll', co_index=1, lookup_key='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse.dll#1', 2 search paths
+2026-10-20T22:32:02.8779635Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:02.8780294Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:02.8780871Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:02.8781444Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:02.8781956Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:02.8782383Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:02.8782812Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:02.8783156Z kpack: trying architecture: amdgcn-amd-amdhsa--gfx1101
+2026-10-20T22:32:02.8783510Z kpack:   archive B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx1101.kpack has architecture gfx1101
+2026-10-20T22:32:02.8783834Z kpack:   found kernel: 242944 bytes
+2026-10-20T22:32:02.8784009Z kpack: loaded code object: 242944 bytes
+2026-10-20T22:32:02.8784319Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_1_0_0_0_0b_0 (17 ms)
+2026-10-20T22:32:02.8784612Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_1_0_0_0_0b_0
+2026-10-20T22:32:02.8784892Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_1_0_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8785162Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_1_0_0_0_0b_0
+2026-10-20T22:32:02.8785438Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_1_0_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8785706Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_1_0_1_0_0b_0
+2026-10-20T22:32:02.8785967Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_1_0_1_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8786226Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_1_0_1_0_0b_0
+2026-10-20T22:32:02.8786493Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_1_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8786761Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_1_0_1_0_0b_0
+2026-10-20T22:32:02.8787062Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_1_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8787327Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_1_0_1p9_0_0b_0
+2026-10-20T22:32:02.8787590Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_1_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8787865Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_1_0_1p9_0_0b_0
+2026-10-20T22:32:02.8788140Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_1_0_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8788415Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_1_0_1p9_0_0b_0
+2026-10-20T22:32:02.8788703Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_1_0_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8788973Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_1_0_0_0_1b_0
+2026-10-20T22:32:02.8789230Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_1_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8789576Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_1_0_0_0_1b_0
+2026-10-20T22:32:02.8789846Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_1_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8790116Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_1_0_0_0_1b_0
+2026-10-20T22:32:02.8790427Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_1_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8790701Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_1_0_1_0_1b_0
+2026-10-20T22:32:02.8790963Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_1_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8791214Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_1_0_1_0_1b_0
+2026-10-20T22:32:02.8791474Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_1_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8791743Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_1_0_1_0_1b_0
+2026-10-20T22:32:02.8792013Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_1_0_1_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8792343Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_1_0_1p9_0_1b_0
+2026-10-20T22:32:02.8792627Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_1_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8792896Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_1_0_1p9_0_1b_0
+2026-10-20T22:32:02.8793171Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_1_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8793441Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_1_0_1p9_0_1b_0
+2026-10-20T22:32:02.8793718Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_1_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8793985Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_0_0_0_0_0b_0
+2026-10-20T22:32:02.8794242Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_0_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8794500Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_0_0_0_0_0b_0
+2026-10-20T22:32:02.8794817Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_0_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8795077Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_0_0_0_0_0b_0
+2026-10-20T22:32:02.8795335Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_0_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8795596Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_0_0_1_0_0b_0
+2026-10-20T22:32:02.8795857Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_0_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8796110Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_0_0_1_0_0b_0
+2026-10-20T22:32:02.8796369Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_0_0_1_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8796625Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_0_0_1_0_0b_0
+2026-10-20T22:32:02.8796883Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_0_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8797140Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_0_0_1p9_0_0b_0
+2026-10-20T22:32:02.8797440Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_0_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8797714Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_0_0_1p9_0_0b_0
+2026-10-20T22:32:02.8797993Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_0_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8798271Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_0_0_1p9_0_0b_0
+2026-10-20T22:32:02.8798556Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_0_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8798831Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_0_0_0_0_1b_0
+2026-10-20T22:32:02.8799098Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_0_0_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8799357Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_0_0_0_0_1b_0
+2026-10-20T22:32:02.8799621Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_0_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8799997Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_0_0_0_0_1b_0
+2026-10-20T22:32:02.8800267Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_0_0_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8800528Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_0_0_1_0_1b_0
+2026-10-20T22:32:02.8800821Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_0_0_1_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8801087Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_0_0_1_0_1b_0
+2026-10-20T22:32:02.8801341Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_0_0_1_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8801598Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_0_0_1_0_1b_0
+2026-10-20T22:32:02.8801860Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_0_0_1_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8802122Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_0_0_1p9_0_1b_0
+2026-10-20T22:32:02.8802386Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_5_0_0_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8802657Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_0_0_1p9_0_1b_0
+2026-10-20T22:32:02.8802928Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_10_0_0_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8803196Z [ RUN      ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_0_0_1p9_0_1b_0
+2026-10-20T22:32:02.8803478Z [       OK ] quick/axpby.level1/i32_f32_r_f32_r_f32_r_300_300_0_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8803749Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_1_0_0_0_0b_0
+2026-10-20T22:32:02.8804006Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_1_0_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8804268Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_1_0_0_0_0b_0
+2026-10-20T22:32:02.8804528Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_1_0_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8804789Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_1_0_0_0_0b_0
+2026-10-20T22:32:02.8805093Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_1_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8805352Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_1_0_1_0_0b_0
+2026-10-20T22:32:02.8805604Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_1_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8805859Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_1_0_1_0_0b_0
+2026-10-20T22:32:02.8806120Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_1_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8806377Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_1_0_1_0_0b_0
+2026-10-20T22:32:02.8806631Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_1_0_1_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8806888Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_1_0_1p9_0_0b_0
+2026-10-20T22:32:02.8807150Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_1_0_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8807452Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_1_0_1p9_0_0b_0
+2026-10-20T22:32:02.8807726Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_1_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8807990Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_1_0_1p9_0_0b_0
+2026-10-20T22:32:02.8808262Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_1_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8808528Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_1_0_0_0_1b_0
+2026-10-20T22:32:02.8808815Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_1_0_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8809074Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_1_0_0_0_1b_0
+2026-10-20T22:32:02.8809328Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_1_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8809591Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_1_0_0_0_1b_0
+2026-10-20T22:32:02.8809924Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_1_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8810218Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_1_0_1_0_1b_0
+2026-10-20T22:32:02.8810490Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_1_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8810754Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_1_0_1_0_1b_0
+2026-10-20T22:32:02.8811315Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_1_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8811591Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_1_0_1_0_1b_0
+2026-10-20T22:32:02.8811860Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_1_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8812130Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_1_0_1p9_0_1b_0
+2026-10-20T22:32:02.8812449Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_1_0_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8812727Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_1_0_1p9_0_1b_0
+2026-10-20T22:32:02.8813003Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_1_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8813275Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_1_0_1p9_0_1b_0
+2026-10-20T22:32:02.8813559Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_1_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8813826Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_0_0_0_0_0b_0
+2026-10-20T22:32:02.8814096Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_0_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8814357Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_0_0_0_0_0b_0
+2026-10-20T22:32:02.8814618Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_0_0_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8814884Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_0_0_0_0_0b_0
+2026-10-20T22:32:02.8815152Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_0_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8815413Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_0_0_1_0_0b_0
+2026-10-20T22:32:02.8815715Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_0_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8815970Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_0_0_1_0_0b_0
+2026-10-20T22:32:02.8816227Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_0_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8816486Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_0_0_1_0_0b_0
+2026-10-20T22:32:02.8816744Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_0_0_1_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8817009Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_0_0_1p9_0_0b_0
+2026-10-20T22:32:02.8817267Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_0_0_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8817528Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_0_0_1p9_0_0b_0
+2026-10-20T22:32:02.8817798Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_0_0_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8818105Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_0_0_1p9_0_0b_0
+2026-10-20T22:32:02.8818380Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_0_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8818646Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_0_0_0_0_1b_0
+2026-10-20T22:32:02.8818912Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_0_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8819169Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_0_0_0_0_1b_0
+2026-10-20T22:32:02.8819425Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_0_0_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8819681Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_0_0_0_0_1b_0
+2026-10-20T22:32:02.8820019Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_0_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8820298Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_0_0_1_0_1b_0
+2026-10-20T22:32:02.8820599Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_0_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8820856Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_0_0_1_0_1b_0
+2026-10-20T22:32:02.8821123Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_0_0_1_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8821384Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_0_0_1_0_1b_0
+2026-10-20T22:32:02.8821678Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_0_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8821954Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_0_0_1p9_0_1b_0
+2026-10-20T22:32:02.8822212Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_5_0_0_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8822476Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_0_0_1p9_0_1b_0
+2026-10-20T22:32:02.8822743Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_10_0_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8823019Z [ RUN      ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_0_0_1p9_0_1b_0
+2026-10-20T22:32:02.8823292Z [       OK ] quick/axpby.level1/i32_f64_r_f64_r_f64_r_300_300_0_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8823556Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_0_0_0b_0
+2026-10-20T22:32:02.8823808Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8824066Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_0_0_0b_0
+2026-10-20T22:32:02.8824321Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8824578Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_0_0_0b_0
+2026-10-20T22:32:02.8824840Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8825103Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_0_0p3_0b_0
+2026-10-20T22:32:02.8825364Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_0_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8825628Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_0_0p3_0b_0
+2026-10-20T22:32:02.8825936Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_0_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8826202Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_0_0p3_0b_0
+2026-10-20T22:32:02.8826473Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_0_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8826738Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1_0_0b_0
+2026-10-20T22:32:02.8826995Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8827257Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1_0_0b_0
+2026-10-20T22:32:02.8827513Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8827771Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1_0_0b_0
+2026-10-20T22:32:02.8828027Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8828631Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1_0p3_0b_0
+2026-10-20T22:32:02.8828895Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8829156Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1_0p3_0b_0
+2026-10-20T22:32:02.8829453Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8829729Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1_0p3_0b_0
+2026-10-20T22:32:02.8830000Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8830270Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1p9_0_0b_0
+2026-10-20T22:32:02.8830526Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8830783Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1p9_0_0b_0
+2026-10-20T22:32:02.8831389Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8831671Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1p9_0_0b_0
+2026-10-20T22:32:02.8831956Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8832302Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8832632Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1p9_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8832921Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8843016Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1p9_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8843380Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8843693Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1p9_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8843984Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_0_0_1b_0
+2026-10-20T22:32:02.8844260Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8844533Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_0_0_1b_0
+2026-10-20T22:32:02.8844802Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8845073Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_0_0_1b_0
+2026-10-20T22:32:02.8845350Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8845617Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_0_0p3_1b_0
+2026-10-20T22:32:02.8845882Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_0_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8846148Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_0_0p3_1b_0
+2026-10-20T22:32:02.8846418Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_0_0p3_1b_0 (7 ms)
+2026-10-20T22:32:02.8846822Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_0_0p3_1b_0
+2026-10-20T22:32:02.8847102Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_0_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8847375Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1_0_1b_0
+2026-10-20T22:32:02.8847644Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8847906Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1_0_1b_0
+2026-10-20T22:32:02.8848170Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1_0_1b_0 (5 ms)
+2026-10-20T22:32:02.8848432Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1_0_1b_0
+2026-10-20T22:32:02.8848692Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1_0_1b_0 (5 ms)
+2026-10-20T22:32:02.8848953Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1_0p3_1b_0
+2026-10-20T22:32:02.8849215Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8849743Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1_0p3_1b_0
+2026-10-20T22:32:02.8850017Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8850288Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1_0p3_1b_0
+2026-10-20T22:32:02.8850556Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8850824Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1p9_0_1b_0
+2026-10-20T22:32:02.8851082Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8851344Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1p9_0_1b_0
+2026-10-20T22:32:02.8851613Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8851884Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1p9_0_1b_0
+2026-10-20T22:32:02.8852202Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8852574Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8852853Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_1_1_1p9_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8853180Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8853463Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_1_1_1p9_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8853751Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8854039Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_1_1_1p9_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8854313Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_0_0_0b_0
+2026-10-20T22:32:02.8854574Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8854848Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_0_0_0b_0
+2026-10-20T22:32:02.8855109Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8855370Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_0_0_0b_0
+2026-10-20T22:32:02.8855637Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_0_0_0b_0 (5 ms)
+2026-10-20T22:32:02.8855902Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_0_0p3_0b_0
+2026-10-20T22:32:02.8856163Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_0_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8856426Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_0_0p3_0b_0
+2026-10-20T22:32:02.8856698Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_0_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8856970Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_0_0p3_0b_0
+2026-10-20T22:32:02.8857242Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_0_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8857570Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1_0_0b_0
+2026-10-20T22:32:02.8857827Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8858091Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1_0_0b_0
+2026-10-20T22:32:02.8858352Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8858614Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1_0_0b_0
+2026-10-20T22:32:02.8858878Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8859136Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1_0p3_0b_0
+2026-10-20T22:32:02.8859391Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8859657Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1_0p3_0b_0
+2026-10-20T22:32:02.8859969Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8860328Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1_0p3_0b_0
+2026-10-20T22:32:02.8860597Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8860864Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1p9_0_0b_0
+2026-10-20T22:32:02.8861127Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8861388Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1p9_0_0b_0
+2026-10-20T22:32:02.8861651Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8861916Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1p9_0_0b_0
+2026-10-20T22:32:02.8862180Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8862491Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8862760Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1p9_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8863035Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8863314Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1p9_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8863631Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8863911Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1p9_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8864185Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_0_0_1b_0
+2026-10-20T22:32:02.8864446Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8864702Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_0_0_1b_0
+2026-10-20T22:32:02.8864961Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8865230Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_0_0_1b_0
+2026-10-20T22:32:02.8865495Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8865753Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_0_0p3_1b_0
+2026-10-20T22:32:02.8866014Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_0_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8866275Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_0_0p3_1b_0
+2026-10-20T22:32:02.8866545Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_0_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8866820Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_0_0p3_1b_0
+2026-10-20T22:32:02.8867096Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_0_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8867362Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1_0_1b_0
+2026-10-20T22:32:02.8867667Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8867934Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1_0_1b_0
+2026-10-20T22:32:02.8868202Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1_0_1b_0 (6 ms)
+2026-10-20T22:32:02.8868481Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1_0_1b_0
+2026-10-20T22:32:02.8868755Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8869019Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1_0p3_1b_0
+2026-10-20T22:32:02.8869283Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8869550Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1_0p3_1b_0
+2026-10-20T22:32:02.8869888Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8870162Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1_0p3_1b_0
+2026-10-20T22:32:02.8870473Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8870750Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1p9_0_1b_0
+2026-10-20T22:32:02.8871017Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8871283Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1p9_0_1b_0
+2026-10-20T22:32:02.8871547Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8871816Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1p9_0_1b_0
+2026-10-20T22:32:02.8872084Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8872355Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8872624Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_5_0_1_1p9_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8872945Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8873226Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_10_0_1_1p9_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8873514Z [ RUN      ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8873828Z [       OK ] quick/axpby.level1/i32_f32_c_f32_c_f32_c_300_300_0_1_1p9_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8874108Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_0_0_0b_0
+2026-10-20T22:32:02.8874372Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8874636Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_0_0_0b_0
+2026-10-20T22:32:02.8874908Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8875175Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_0_0_0b_0
+2026-10-20T22:32:02.8875446Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8875712Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_0_0p3_0b_0
+2026-10-20T22:32:02.8875976Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_0_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8876238Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_0_0p3_0b_0
+2026-10-20T22:32:02.8876505Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_0_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8876775Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_0_0p3_0b_0
+2026-10-20T22:32:02.8877048Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_0_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8877313Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1_0_0b_0
+2026-10-20T22:32:02.8877569Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8877827Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1_0_0b_0
+2026-10-20T22:32:02.8878513Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8878776Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1_0_0b_0
+2026-10-20T22:32:02.8879037Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1_0_0b_0 (5 ms)
+2026-10-20T22:32:02.8879301Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1_0p3_0b_0
+2026-10-20T22:32:02.8879568Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1_0p3_0b_0 (5 ms)
+2026-10-20T22:32:02.8879833Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1_0p3_0b_0
+2026-10-20T22:32:02.8880135Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8880439Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1_0p3_0b_0
+2026-10-20T22:32:02.8880711Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8881029Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1p9_0_0b_0
+2026-10-20T22:32:02.8881297Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8881571Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1p9_0_0b_0
+2026-10-20T22:32:02.8881839Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8882109Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1p9_0_0b_0
+2026-10-20T22:32:02.8882379Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8882645Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8882913Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1p9_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8883186Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8883504Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1p9_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8883796Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8884074Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1p9_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8884345Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_0_0_1b_0
+2026-10-20T22:32:02.8884645Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8884912Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_0_0_1b_0
+2026-10-20T22:32:02.8885174Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_0_0_1b_0 (5 ms)
+2026-10-20T22:32:02.8885434Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_0_0_1b_0
+2026-10-20T22:32:02.8885693Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8885961Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_0_0p3_1b_0
+2026-10-20T22:32:02.8886221Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_0_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8886482Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_0_0p3_1b_0
+2026-10-20T22:32:02.8886747Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_0_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8887015Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_0_0p3_1b_0
+2026-10-20T22:32:02.8887287Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_0_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8887551Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1_0_1b_0
+2026-10-20T22:32:02.8887809Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8888064Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1_0_1b_0
+2026-10-20T22:32:02.8888325Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1_0_1b_0 (6 ms)
+2026-10-20T22:32:02.8888626Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1_0_1b_0
+2026-10-20T22:32:02.8888885Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1_0_1b_0 (5 ms)
+2026-10-20T22:32:02.8889150Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1_0p3_1b_0
+2026-10-20T22:32:02.8889412Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8889675Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1_0p3_1b_0
+2026-10-20T22:32:02.8890013Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8890278Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1_0p3_1b_0
+2026-10-20T22:32:02.8890548Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8890810Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1p9_0_1b_0
+2026-10-20T22:32:02.8891072Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8891382Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1p9_0_1b_0
+2026-10-20T22:32:02.8891647Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8891914Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1p9_0_1b_0
+2026-10-20T22:32:02.8892192Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1p9_0_1b_0 (5 ms)
+2026-10-20T22:32:02.8892462Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8892726Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_1_1_1p9_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8892999Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8893276Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_1_1_1p9_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8893556Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8893878Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_1_1_1p9_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8894152Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_0_0_0b_0
+2026-10-20T22:32:02.8894411Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8894702Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_0_0_0b_0
+2026-10-20T22:32:02.8894962Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_0_0_0b_0 (5 ms)
+2026-10-20T22:32:02.8895224Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_0_0_0b_0
+2026-10-20T22:32:02.8895482Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_0_0_0b_0 (5 ms)
+2026-10-20T22:32:02.8895741Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_0_0p3_0b_0
+2026-10-20T22:32:02.8895997Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_0_0p3_0b_0 (5 ms)
+2026-10-20T22:32:02.8896264Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_0_0p3_0b_0
+2026-10-20T22:32:02.8896531Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_0_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8896797Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_0_0p3_0b_0
+2026-10-20T22:32:02.8897062Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_0_0p3_0b_0 (5 ms)
+2026-10-20T22:32:02.8897328Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1_0_0b_0
+2026-10-20T22:32:02.8897580Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1_0_0b_0 (5 ms)
+2026-10-20T22:32:02.8897834Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1_0_0b_0
+2026-10-20T22:32:02.8898100Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8898353Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1_0_0b_0
+2026-10-20T22:32:02.8898612Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1_0_0b_0 (5 ms)
+2026-10-20T22:32:02.8898925Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1_0p3_0b_0
+2026-10-20T22:32:02.8899186Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8899447Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1_0p3_0b_0
+2026-10-20T22:32:02.8899710Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1_0p3_0b_0 (5 ms)
+2026-10-20T22:32:02.8899976Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1_0p3_0b_0
+2026-10-20T22:32:02.8900325Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1_0p3_0b_0 (5 ms)
+2026-10-20T22:32:02.8900597Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1p9_0_0b_0
+2026-10-20T22:32:02.8900858Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8901122Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1p9_0_0b_0
+2026-10-20T22:32:02.8901434Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1p9_0_0b_0 (5 ms)
+2026-10-20T22:32:02.8901699Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1p9_0_0b_0
+2026-10-20T22:32:02.8901969Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1p9_0_0b_0 (5 ms)
+2026-10-20T22:32:02.8902236Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8902507Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1p9_0p3_0b_0 (5 ms)
+2026-10-20T22:32:02.8902781Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8903059Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1p9_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8903338Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8903616Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1p9_0p3_0b_0 (5 ms)
+2026-10-20T22:32:02.8903939Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_0_0_1b_0
+2026-10-20T22:32:02.8904196Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8904458Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_0_0_1b_0
+2026-10-20T22:32:02.8904725Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8905021Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_0_0_1b_0
+2026-10-20T22:32:02.8905293Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8905567Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_0_0p3_1b_0
+2026-10-20T22:32:02.8905829Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_0_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8906093Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_0_0p3_1b_0
+2026-10-20T22:32:02.8906358Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_0_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8906636Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_0_0p3_1b_0
+2026-10-20T22:32:02.8906899Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_0_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8907162Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1_0_1b_0
+2026-10-20T22:32:02.8907421Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8907677Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1_0_1b_0
+2026-10-20T22:32:02.8907935Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8908193Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1_0_1b_0
+2026-10-20T22:32:02.8908453Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8908737Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1_0p3_1b_0
+2026-10-20T22:32:02.8909002Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8909313Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1_0p3_1b_0
+2026-10-20T22:32:02.8909575Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8909892Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1_0p3_1b_0
+2026-10-20T22:32:02.8910166Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8910431Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1p9_0_1b_0
+2026-10-20T22:32:02.8910698Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8910957Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1p9_0_1b_0
+2026-10-20T22:32:02.8911219Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8911499Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1p9_0_1b_0
+2026-10-20T22:32:02.8911803Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8912071Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8912339Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_5_0_1_1p9_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8912610Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8912892Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_10_0_1_1p9_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8913166Z [ RUN      ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8913439Z [       OK ] quick/axpby.level1/i32_f64_c_f64_c_f64_c_300_300_0_1_1p9_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8913723Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_1_0_0_0_0b_0
+2026-10-20T22:32:02.8913982Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_1_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8914288Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_1_0_0_0_0b_0
+2026-10-20T22:32:02.8914553Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_1_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8914824Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_1_0_0_0_0b_0
+2026-10-20T22:32:02.8915126Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_1_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8915396Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_1_0_1_0_0b_0
+2026-10-20T22:32:02.8915656Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_1_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8915911Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_1_0_1_0_0b_0
+2026-10-20T22:32:02.8916173Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_1_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8916431Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_1_0_1_0_0b_0
+2026-10-20T22:32:02.8916695Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_1_0_1_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8916956Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_1_0_1p9_0_0b_0
+2026-10-20T22:32:02.8917211Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_1_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8917474Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_1_0_1p9_0_0b_0
+2026-10-20T22:32:02.8917742Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_1_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8918005Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_1_0_1p9_0_0b_0
+2026-10-20T22:32:02.8918272Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_1_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8918534Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_1_0_0_0_1b_0
+2026-10-20T22:32:02.8918790Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_1_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8919047Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_1_0_0_0_1b_0
+2026-10-20T22:32:02.8919343Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_1_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8919595Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_1_0_0_0_1b_0
+2026-10-20T22:32:02.8919849Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_1_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8920101Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_1_0_1_0_1b_0
+2026-10-20T22:32:02.8920421Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_1_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8920674Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_1_0_1_0_1b_0
+2026-10-20T22:32:02.8920929Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_1_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8921184Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_1_0_1_0_1b_0
+2026-10-20T22:32:02.8921437Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_1_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8921730Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_1_0_1p9_0_1b_0
+2026-10-20T22:32:02.8921985Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_1_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8922243Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_1_0_1p9_0_1b_0
+2026-10-20T22:32:02.8922500Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_1_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8922764Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_1_0_1p9_0_1b_0
+2026-10-20T22:32:02.8923032Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_1_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8923294Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_0_0_0_0_0b_0
+2026-10-20T22:32:02.8923545Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_0_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8923795Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_0_0_0_0_0b_0
+2026-10-20T22:32:02.8924088Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_0_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8924344Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_0_0_0_0_0b_0
+2026-10-20T22:32:02.8924597Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_0_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8924853Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_0_0_1_0_0b_0
+2026-10-20T22:32:02.8925141Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_0_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8925395Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_0_0_1_0_0b_0
+2026-10-20T22:32:02.8925649Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_0_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8925899Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_0_0_1_0_0b_0
+2026-10-20T22:32:02.8926152Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_0_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8926406Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_0_0_1p9_0_0b_0
+2026-10-20T22:32:02.8926663Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_0_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8926926Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_0_0_1p9_0_0b_0
+2026-10-20T22:32:02.8927185Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_0_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8927448Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_0_0_1p9_0_0b_0
+2026-10-20T22:32:02.8927721Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_0_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8927978Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_0_0_0_0_1b_0
+2026-10-20T22:32:02.8928229Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_0_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8928485Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_0_0_0_0_1b_0
+2026-10-20T22:32:02.8928736Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_0_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8928990Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_0_0_0_0_1b_0
+2026-10-20T22:32:02.8929287Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_0_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8929537Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_0_0_1_0_1b_0
+2026-10-20T22:32:02.8929828Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_0_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8930081Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_0_0_1_0_1b_0
+2026-10-20T22:32:02.8930331Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_0_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8930585Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_0_0_1_0_1b_0
+2026-10-20T22:32:02.8930835Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_0_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8931097Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_0_0_1p9_0_1b_0
+2026-10-20T22:32:02.8931349Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_5_0_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8931643Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_0_0_1p9_0_1b_0
+2026-10-20T22:32:02.8931904Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_10_0_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8932168Z [ RUN      ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_0_0_1p9_0_1b_0
+2026-10-20T22:32:02.8932433Z [       OK ] quick/axpby.level1/i64_f32_r_f32_r_f32_r_300_300_0_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8932691Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_1_0_0_0_0b_0
+2026-10-20T22:32:02.8932945Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_1_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8933193Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_1_0_0_0_0b_0
+2026-10-20T22:32:02.8933445Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_1_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8933694Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_1_0_0_0_0b_0
+2026-10-20T22:32:02.8933985Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_1_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8934237Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_1_0_1_0_0b_0
+2026-10-20T22:32:02.8934485Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_1_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8934733Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_1_0_1_0_0b_0
+2026-10-20T22:32:02.8935018Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_1_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8935274Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_1_0_1_0_0b_0
+2026-10-20T22:32:02.8935527Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_1_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8935779Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_1_0_1p9_0_0b_0
+2026-10-20T22:32:02.8936029Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_1_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8936287Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_1_0_1p9_0_0b_0
+2026-10-20T22:32:02.8936551Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_1_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8936815Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_1_0_1p9_0_0b_0
+2026-10-20T22:32:02.8937079Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_1_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8937333Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_1_0_0_0_1b_0
+2026-10-20T22:32:02.8937583Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_1_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8937834Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_1_0_0_0_1b_0
+2026-10-20T22:32:02.8938085Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_1_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8938339Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_1_0_0_0_1b_0
+2026-10-20T22:32:02.8938588Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_1_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8938847Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_1_0_1_0_1b_0
+2026-10-20T22:32:02.8939133Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_1_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8939382Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_1_0_1_0_1b_0
+2026-10-20T22:32:02.8939629Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_1_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8939882Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_1_0_1_0_1b_0
+2026-10-20T22:32:02.8940137Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_1_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8940452Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_1_0_1p9_0_1b_0
+2026-10-20T22:32:02.8940707Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_1_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8940965Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_1_0_1p9_0_1b_0
+2026-10-20T22:32:02.8941223Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_1_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8941531Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_1_0_1p9_0_1b_0
+2026-10-20T22:32:02.8941796Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_1_0_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8942053Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_0_0_0_0_0b_0
+2026-10-20T22:32:02.8942304Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_0_0_0_0_0b_0 (5 ms)
+2026-10-20T22:32:02.8942555Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_0_0_0_0_0b_0
+2026-10-20T22:32:02.8942804Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_0_0_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8943060Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_0_0_0_0_0b_0
+2026-10-20T22:32:02.8943314Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_0_0_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8943564Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_0_0_1_0_0b_0
+2026-10-20T22:32:02.8943854Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_0_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8944105Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_0_0_1_0_0b_0
+2026-10-20T22:32:02.8944358Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_0_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8944609Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_0_0_1_0_0b_0
+2026-10-20T22:32:02.8944898Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_0_0_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8945154Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_0_0_1p9_0_0b_0
+2026-10-20T22:32:02.8945408Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_0_0_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8945666Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_0_0_1p9_0_0b_0
+2026-10-20T22:32:02.8945933Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_0_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8946194Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_0_0_1p9_0_0b_0
+2026-10-20T22:32:02.8946462Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_0_0_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8946721Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_0_0_0_0_1b_0
+2026-10-20T22:32:02.8946974Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_0_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8947226Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_0_0_0_0_1b_0
+2026-10-20T22:32:02.8947477Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_0_0_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8947728Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_0_0_0_0_1b_0
+2026-10-20T22:32:02.8947982Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_0_0_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8948232Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_0_0_1_0_1b_0
+2026-10-20T22:32:02.8948481Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_0_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8948739Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_0_0_1_0_1b_0
+2026-10-20T22:32:02.8949031Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_0_0_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8949281Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_0_0_1_0_1b_0
+2026-10-20T22:32:02.8949534Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_0_0_1_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8949788Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_0_0_1p9_0_1b_0
+2026-10-20T22:32:02.8950099Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_5_0_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8950359Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_0_0_1p9_0_1b_0
+2026-10-20T22:32:02.8950618Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_10_0_0_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8950878Z [ RUN      ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_0_0_1p9_0_1b_0
+2026-10-20T22:32:02.8951140Z [       OK ] quick/axpby.level1/i64_f64_r_f64_r_f64_r_300_300_0_0_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8951434Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_0_0_0b_0
+2026-10-20T22:32:02.8951682Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8951930Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_0_0_0b_0
+2026-10-20T22:32:02.8952185Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8952433Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_0_0_0b_0
+2026-10-20T22:32:02.8952688Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8952942Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_0_0p3_0b_0
+2026-10-20T22:32:02.8953194Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_0_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8953446Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_0_0p3_0b_0
+2026-10-20T22:32:02.8953737Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_0_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8953997Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_0_0p3_0b_0
+2026-10-20T22:32:02.8954258Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_0_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8954513Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1_0_0b_0
+2026-10-20T22:32:02.8954806Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8955057Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1_0_0b_0
+2026-10-20T22:32:02.8955305Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8955558Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1_0_0b_0
+2026-10-20T22:32:02.8955815Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8956067Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1_0p3_0b_0
+2026-10-20T22:32:02.8956327Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8956592Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1_0p3_0b_0
+2026-10-20T22:32:02.8956846Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8957109Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1_0p3_0b_0
+2026-10-20T22:32:02.8957371Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8957640Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1p9_0_0b_0
+2026-10-20T22:32:02.8957915Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8958185Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1p9_0_0b_0
+2026-10-20T22:32:02.8958446Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8958761Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1p9_0_0b_0
+2026-10-20T22:32:02.8959025Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1p9_0_0b_0 (5 ms)
+2026-10-20T22:32:02.8959289Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8959554Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1p9_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8959823Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8960094Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1p9_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8960404Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8960733Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1p9_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8961000Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_0_0_1b_0
+2026-10-20T22:32:02.8961257Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8961553Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_0_0_1b_0
+2026-10-20T22:32:02.8961820Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_0_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8962077Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_0_0_1b_0
+2026-10-20T22:32:02.8962337Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8962592Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_0_0p3_1b_0
+2026-10-20T22:32:02.8962847Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_0_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8963103Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_0_0p3_1b_0
+2026-10-20T22:32:02.8963365Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_0_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8963630Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_0_0p3_1b_0
+2026-10-20T22:32:02.8963933Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_0_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8964193Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1_0_1b_0
+2026-10-20T22:32:02.8964444Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8964733Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1_0_1b_0
+2026-10-20T22:32:02.8964988Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8965242Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1_0_1b_0
+2026-10-20T22:32:02.8965500Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8965759Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1_0p3_1b_0
+2026-10-20T22:32:02.8966017Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8966278Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1_0p3_1b_0
+2026-10-20T22:32:02.8966543Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8966805Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1_0p3_1b_0
+2026-10-20T22:32:02.8967066Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1_0p3_1b_0 (5 ms)
+2026-10-20T22:32:02.8967379Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1p9_0_1b_0
+2026-10-20T22:32:02.8967640Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8967899Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1p9_0_1b_0
+2026-10-20T22:32:02.8968155Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1p9_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8968413Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1p9_0_1b_0
+2026-10-20T22:32:02.8968676Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1p9_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8968983Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8969242Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_1_1_1p9_0p3_1b_0 (3 ms)
+2026-10-20T22:32:02.8969510Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8969785Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_1_1_1p9_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8970058Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1p9_0p3_1b_0
+2026-10-20T22:32:02.8970332Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_1_1_1p9_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8970596Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_0_0_0b_0
+2026-10-20T22:32:02.8970847Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8971099Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_0_0_0b_0
+2026-10-20T22:32:02.8971394Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_0_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8971651Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_0_0_0b_0
+2026-10-20T22:32:02.8971909Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_0_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8972165Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_0_0p3_0b_0
+2026-10-20T22:32:02.8972419Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_0_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8972677Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_0_0p3_0b_0
+2026-10-20T22:32:02.8972937Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_0_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8973194Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_0_0p3_0b_0
+2026-10-20T22:32:02.8973457Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_0_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8973761Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_1_0_0b_0
+2026-10-20T22:32:02.8974013Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8974264Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_1_0_0b_0
+2026-10-20T22:32:02.8974515Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_1_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8974805Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_1_0_0b_0
+2026-10-20T22:32:02.8975055Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_1_0_0b_0 (5 ms)
+2026-10-20T22:32:02.8975310Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_1_0p3_0b_0
+2026-10-20T22:32:02.8975567Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_1_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8975829Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_1_0p3_0b_0
+2026-10-20T22:32:02.8976085Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_1_0p3_0b_0 (5 ms)
+2026-10-20T22:32:02.8976348Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_1_0p3_0b_0
+2026-10-20T22:32:02.8976613Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_1_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8976869Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_1p9_0_0b_0
+2026-10-20T22:32:02.8977138Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_1p9_0_0b_0 (3 ms)
+2026-10-20T22:32:02.8977398Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_1p9_0_0b_0
+2026-10-20T22:32:02.8977659Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_1p9_0_0b_0 (4 ms)
+2026-10-20T22:32:02.8977923Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_1p9_0_0b_0
+2026-10-20T22:32:02.8978181Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_1p9_0_0b_0 (6 ms)
+2026-10-20T22:32:02.8978445Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8978752Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_1p9_0p3_0b_0 (3 ms)
+2026-10-20T22:32:02.8979018Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8979286Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_1p9_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8979559Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_1p9_0p3_0b_0
+2026-10-20T22:32:02.8979836Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_1p9_0p3_0b_0 (4 ms)
+2026-10-20T22:32:02.8980099Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_0_0_1b_0
+2026-10-20T22:32:02.8980348Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8980668Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_0_0_1b_0
+2026-10-20T22:32:02.8980922Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8981184Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_0_0_1b_0
+2026-10-20T22:32:02.8981480Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_0_0_1b_0 (3 ms)
+2026-10-20T22:32:02.8981742Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_0_0p3_1b_0
+2026-10-20T22:32:02.8982002Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_0_0p3_1b_0 (7 ms)
+2026-10-20T22:32:02.8982260Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_0_0p3_1b_0
+2026-10-20T22:32:02.8982524Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_0_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8982783Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_0_0p3_1b_0
+2026-10-20T22:32:02.8983044Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_300_0_1_0_0p3_1b_0 (4 ms)
+2026-10-20T22:32:02.8983299Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_1_0_1b_0
+2026-10-20T22:32:02.8983550Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_5_0_1_1_0_1b_0 (4 ms)
+2026-10-20T22:32:02.8983867Z [ RUN      ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_1_0_1b_0
+2026-10-20T22:32:02.8984121Z [       OK ] quick/axpby.level1/i64_f32_c_f32_c_f32_c_300_10_0_1_1_0_1b_0 (3 ms)
+... [middle trimmed by labeler] ...
+2026-10-20T22:32:03.4817224Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_1_1_7_1b_general_L_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4817410Z [ RUN      ] quick/check_spmat.util/i64_i64_f32_c_1_1_7_1b_general_U_unsorted_bsr_rand
+2026-10-20T22:32:03.4817540Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_1_1_7_1b_general_U_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4817686Z [ RUN      ] quick/check_spmat.util/i64_i64_f32_c_1_8_7_1b_general_L_sorted_bsr_rand
+2026-10-20T22:32:03.4817814Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_1_8_7_1b_general_L_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4817929Z [ RUN      ] quick/check_spmat.util/i64_i64_f32_c_1_8_7_1b_general_U_sorted_bsr_rand
+2026-10-20T22:32:03.4818051Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_1_8_7_1b_general_U_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4818171Z [ RUN      ] quick/check_spmat.util/i64_i64_f32_c_1_8_7_1b_general_L_unsorted_bsr_rand
+2026-10-20T22:32:03.4818298Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_1_8_7_1b_general_L_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4818426Z [ RUN      ] quick/check_spmat.util/i64_i64_f32_c_1_8_7_1b_general_U_unsorted_bsr_rand
+2026-10-20T22:32:03.4818557Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_1_8_7_1b_general_U_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4818678Z [ RUN      ] quick/check_spmat.util/i64_i64_f32_c_8_1_7_1b_general_L_sorted_bsr_rand
+2026-10-20T22:32:03.4818800Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_8_1_7_1b_general_L_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4818911Z [ RUN      ] quick/check_spmat.util/i64_i64_f32_c_8_1_7_1b_general_U_sorted_bsr_rand
+2026-10-20T22:32:03.4819038Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_8_1_7_1b_general_U_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4819152Z [ RUN      ] quick/check_spmat.util/i64_i64_f32_c_8_1_7_1b_general_L_unsorted_bsr_rand
+2026-10-20T22:32:03.4819282Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_8_1_7_1b_general_L_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4819401Z [ RUN      ] quick/check_spmat.util/i64_i64_f32_c_8_1_7_1b_general_U_unsorted_bsr_rand
+2026-10-20T22:32:03.4819531Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_8_1_7_1b_general_U_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4819645Z [ RUN      ] quick/check_spmat.util/i64_i64_f32_c_8_8_7_1b_general_L_sorted_bsr_rand
+2026-10-20T22:32:03.4819765Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_8_8_7_1b_general_L_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4819882Z [ RUN      ] quick/check_spmat.util/i64_i64_f32_c_8_8_7_1b_general_U_sorted_bsr_rand
+2026-10-20T22:32:03.4820006Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_8_8_7_1b_general_U_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4820164Z [ RUN      ] quick/check_spmat.util/i64_i64_f32_c_8_8_7_1b_general_L_unsorted_bsr_rand
+2026-10-20T22:32:03.4820294Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_8_8_7_1b_general_L_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4820406Z [ RUN      ] quick/check_spmat.util/i64_i64_f32_c_8_8_7_1b_general_U_unsorted_bsr_rand
+2026-10-20T22:32:03.4820540Z [       OK ] quick/check_spmat.util/i64_i64_f32_c_8_8_7_1b_general_U_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4820655Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_1_1_7_1b_general_L_sorted_bsr_rand
+2026-10-20T22:32:03.4820778Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_1_1_7_1b_general_L_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4820893Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_1_1_7_1b_general_U_sorted_bsr_rand
+2026-10-20T22:32:03.4821014Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_1_1_7_1b_general_U_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4821135Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_1_1_7_1b_general_L_unsorted_bsr_rand
+2026-10-20T22:32:03.4821264Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_1_1_7_1b_general_L_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4821379Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_1_1_7_1b_general_U_unsorted_bsr_rand
+2026-10-20T22:32:03.4821510Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_1_1_7_1b_general_U_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4821697Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_1_8_7_1b_general_L_sorted_bsr_rand
+2026-10-20T22:32:03.4821823Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_1_8_7_1b_general_L_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4821979Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_1_8_7_1b_general_U_sorted_bsr_rand
+2026-10-20T22:32:03.4822104Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_1_8_7_1b_general_U_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4822223Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_1_8_7_1b_general_L_unsorted_bsr_rand
+2026-10-20T22:32:03.4822351Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_1_8_7_1b_general_L_unsorted_bsr_rand (3 ms)
+2026-10-20T22:32:03.4822471Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_1_8_7_1b_general_U_unsorted_bsr_rand
+2026-10-20T22:32:03.4822594Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_1_8_7_1b_general_U_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4822709Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_8_1_7_1b_general_L_sorted_bsr_rand
+2026-10-20T22:32:03.4822834Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_8_1_7_1b_general_L_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4822947Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_8_1_7_1b_general_U_sorted_bsr_rand
+2026-10-20T22:32:03.4823073Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_8_1_7_1b_general_U_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4823186Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_8_1_7_1b_general_L_unsorted_bsr_rand
+2026-10-20T22:32:03.4823316Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_8_1_7_1b_general_L_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4823435Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_8_1_7_1b_general_U_unsorted_bsr_rand
+2026-10-20T22:32:03.4823560Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_8_1_7_1b_general_U_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4823675Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_8_8_7_1b_general_L_sorted_bsr_rand
+2026-10-20T22:32:03.4823800Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_8_8_7_1b_general_L_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4823915Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_8_8_7_1b_general_U_sorted_bsr_rand
+2026-10-20T22:32:03.4824040Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_8_8_7_1b_general_U_sorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4824154Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_8_8_7_1b_general_L_unsorted_bsr_rand
+2026-10-20T22:32:03.4824284Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_8_8_7_1b_general_L_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4824439Z [ RUN      ] quick/check_spmat.util/i64_i64_f64_c_8_8_7_1b_general_U_unsorted_bsr_rand
+2026-10-20T22:32:03.4824570Z [       OK ] quick/check_spmat.util/i64_i64_f64_c_8_8_7_1b_general_U_unsorted_bsr_rand (2 ms)
+2026-10-20T22:32:03.4824659Z [----------] 960 tests from quick/check_spmat (1936 ms total)
+2026-10-20T22:32:03.4824666Z 
+2026-10-20T22:32:03.4824734Z [----------] 72 tests from quick/bsrpad_value
+2026-10-20T22:32:03.4824854Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_100_10_0b_row_sorted_rand_0
+2026-10-20T22:32:03.4824976Z [       OK ] quick/bsrpad_value.conversion/f32_r_100_10_0b_row_sorted_rand_0 (4 ms)
+2026-10-20T22:32:03.4825094Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_100_10_0b_row_unsorted_rand_0
+2026-10-20T22:32:03.4825214Z [       OK ] quick/bsrpad_value.conversion/f32_r_100_10_0b_row_unsorted_rand_0 (5 ms)
+2026-10-20T22:32:03.4825323Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_300_10_0b_row_sorted_rand_0
+2026-10-20T22:32:03.4825441Z [       OK ] quick/bsrpad_value.conversion/f32_r_300_10_0b_row_sorted_rand_0 (4 ms)
+2026-10-20T22:32:03.4825550Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_300_10_0b_row_unsorted_rand_0
+2026-10-20T22:32:03.4825670Z [       OK ] quick/bsrpad_value.conversion/f32_r_300_10_0b_row_unsorted_rand_0 (4 ms)
+2026-10-20T22:32:03.4825773Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_100_10_0b_row_sorted_rand_0
+2026-10-20T22:32:03.4825960Z [       OK ] quick/bsrpad_value.conversion/f64_r_100_10_0b_row_sorted_rand_0 (4 ms)
+2026-10-20T22:32:03.4826072Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_100_10_0b_row_unsorted_rand_0
+2026-10-20T22:32:03.4826228Z [       OK ] quick/bsrpad_value.conversion/f64_r_100_10_0b_row_unsorted_rand_0 (4 ms)
+2026-10-20T22:32:03.4826337Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_300_10_0b_row_sorted_rand_0
+2026-10-20T22:32:03.4826449Z [       OK ] quick/bsrpad_value.conversion/f64_r_300_10_0b_row_sorted_rand_0 (4 ms)
+2026-10-20T22:32:03.4826558Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_300_10_0b_row_unsorted_rand_0
+2026-10-20T22:32:03.4826680Z [       OK ] quick/bsrpad_value.conversion/f64_r_300_10_0b_row_unsorted_rand_0 (5 ms)
+2026-10-20T22:32:03.4826782Z [ RUN      ] quick/bsrpad_value.conversion/f32_c_100_10_0b_row_sorted_rand_0
+2026-10-20T22:32:03.4826897Z [       OK ] quick/bsrpad_value.conversion/f32_c_100_10_0b_row_sorted_rand_0 (4 ms)
+2026-10-20T22:32:03.4827002Z [ RUN      ] quick/bsrpad_value.conversion/f32_c_100_10_0b_row_unsorted_rand_0
+2026-10-20T22:32:03.4827122Z [       OK ] quick/bsrpad_value.conversion/f32_c_100_10_0b_row_unsorted_rand_0 (4 ms)
+2026-10-20T22:32:03.4827222Z [ RUN      ] quick/bsrpad_value.conversion/f32_c_300_10_0b_row_sorted_rand_0
+2026-10-20T22:32:03.4827340Z [       OK ] quick/bsrpad_value.conversion/f32_c_300_10_0b_row_sorted_rand_0 (4 ms)
+2026-10-20T22:32:03.4827448Z [ RUN      ] quick/bsrpad_value.conversion/f32_c_300_10_0b_row_unsorted_rand_0
+2026-10-20T22:32:03.4827566Z [       OK ] quick/bsrpad_value.conversion/f32_c_300_10_0b_row_unsorted_rand_0 (5 ms)
+2026-10-20T22:32:03.4827720Z [ RUN      ] quick/bsrpad_value.conversion/f64_c_100_10_0b_row_sorted_rand_0
+2026-10-20T22:32:03.4827832Z [       OK ] quick/bsrpad_value.conversion/f64_c_100_10_0b_row_sorted_rand_0 (4 ms)
+2026-10-20T22:32:03.4827941Z [ RUN      ] quick/bsrpad_value.conversion/f64_c_100_10_0b_row_unsorted_rand_0
+2026-10-20T22:32:03.4828061Z [       OK ] quick/bsrpad_value.conversion/f64_c_100_10_0b_row_unsorted_rand_0 (4 ms)
+2026-10-20T22:32:03.4828163Z [ RUN      ] quick/bsrpad_value.conversion/f64_c_300_10_0b_row_sorted_rand_0
+2026-10-20T22:32:03.4828280Z [       OK ] quick/bsrpad_value.conversion/f64_c_300_10_0b_row_sorted_rand_0 (5 ms)
+2026-10-20T22:32:03.4828385Z [ RUN      ] quick/bsrpad_value.conversion/f64_c_300_10_0b_row_unsorted_rand_0
+2026-10-20T22:32:03.4828503Z [       OK ] quick/bsrpad_value.conversion/f64_c_300_10_0b_row_unsorted_rand_0 (5 ms)
+2026-10-20T22:32:03.4828626Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos1
+2026-10-20T22:32:03.4829062Z kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse.dll', co_index=324, lookup_key='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse.dll#324', 2 search paths
+2026-10-20T22:32:03.4829333Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:03.4829603Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:03.4829857Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:03.4830121Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:03.4830311Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:03.4830493Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:03.4830682Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:03.4830774Z kpack: trying architecture: amdgcn-amd-amdhsa--gfx1101
+2026-10-20T22:32:03.4831088Z kpack:   archive B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx1101.kpack has architecture gfx1101
+2026-10-20T22:32:03.4831150Z kpack:   found kernel: 21080 bytes
+2026-10-20T22:32:03.4831213Z kpack: loaded code object: 21080 bytes
+2026-10-20T22:32:03.4831383Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos1 (16 ms)
+2026-10-20T22:32:03.4831515Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos1
+2026-10-20T22:32:03.4831650Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos1 (16 ms)
+2026-10-20T22:32:03.4831769Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos2
+2026-10-20T22:32:03.4831895Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos2 (15 ms)
+2026-10-20T22:32:03.4832013Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos2
+2026-10-20T22:32:03.4832146Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos2 (16 ms)
+2026-10-20T22:32:03.4832259Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos3
+2026-10-20T22:32:03.4832384Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos3 (16 ms)
+2026-10-20T22:32:03.4832503Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos3
+2026-10-20T22:32:03.4832627Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos3 (16 ms)
+2026-10-20T22:32:03.4832744Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos4
+2026-10-20T22:32:03.4832868Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos4 (15 ms)
+2026-10-20T22:32:03.4832986Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos4
+2026-10-20T22:32:03.4833115Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos4 (16 ms)
+2026-10-20T22:32:03.4833226Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos5
+2026-10-20T22:32:03.4833348Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos5 (16 ms)
+2026-10-20T22:32:03.4833462Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos5
+2026-10-20T22:32:03.4833591Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos5 (16 ms)
+2026-10-20T22:32:03.4833704Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos6
+2026-10-20T22:32:03.4833863Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos6 (15 ms)
+2026-10-20T22:32:03.4833978Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos6
+2026-10-20T22:32:03.4834102Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos6 (16 ms)
+2026-10-20T22:32:03.4834216Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos7
+2026-10-20T22:32:03.4834340Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_sorted_csr_0_nos7 (15 ms)
+2026-10-20T22:32:03.4834453Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos7
+2026-10-20T22:32:03.4834580Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_5_1b_column_unsorted_csr_0_nos7 (16 ms)
+2026-10-20T22:32:03.4834691Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos1
+2026-10-20T22:32:03.4834813Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos1 (15 ms)
+2026-10-20T22:32:03.4834926Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos1
+2026-10-20T22:32:03.4835053Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos1 (16 ms)
+2026-10-20T22:32:03.4835169Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos2
+2026-10-20T22:32:03.4835291Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos2 (16 ms)
+2026-10-20T22:32:03.4835470Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos2
+2026-10-20T22:32:03.4835595Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos2 (16 ms)
+2026-10-20T22:32:03.4835743Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos3
+2026-10-20T22:32:03.4835869Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos3 (16 ms)
+2026-10-20T22:32:03.4835980Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos3
+2026-10-20T22:32:03.4836110Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos3 (16 ms)
+2026-10-20T22:32:03.4836220Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos4
+2026-10-20T22:32:03.4836344Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos4 (16 ms)
+2026-10-20T22:32:03.4836456Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos4
+2026-10-20T22:32:03.4836583Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos4 (17 ms)
+2026-10-20T22:32:03.4836697Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos5
+2026-10-20T22:32:03.4836818Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos5 (16 ms)
+2026-10-20T22:32:03.4836933Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos5
+2026-10-20T22:32:03.4837060Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos5 (16 ms)
+2026-10-20T22:32:03.4837170Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos6
+2026-10-20T22:32:03.4837290Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos6 (21 ms)
+2026-10-20T22:32:03.4837403Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos6
+2026-10-20T22:32:03.4837529Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos6 (18 ms)
+2026-10-20T22:32:03.4837643Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos7
+2026-10-20T22:32:03.4837767Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_sorted_csr_0_nos7 (16 ms)
+2026-10-20T22:32:03.4837880Z [ RUN      ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos7
+2026-10-20T22:32:03.4838008Z [       OK ] quick/bsrpad_value.conversion/f32_r_1_9_1b_column_unsorted_csr_0_nos7 (16 ms)
+2026-10-20T22:32:03.4838117Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos1
+2026-10-20T22:32:03.4838298Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos1 (4 ms)
+2026-10-20T22:32:03.4838412Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos1
+2026-10-20T22:32:03.4838536Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos1 (4 ms)
+2026-10-20T22:32:03.4838653Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos2
+2026-10-20T22:32:03.4838773Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos2 (4 ms)
+2026-10-20T22:32:03.4838890Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos2
+2026-10-20T22:32:03.4839017Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos2 (5 ms)
+2026-10-20T22:32:03.4839127Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos3
+2026-10-20T22:32:03.4839252Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos3 (5 ms)
+2026-10-20T22:32:03.4839365Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos3
+2026-10-20T22:32:03.4839491Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos3 (5 ms)
+2026-10-20T22:32:03.4839601Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos4
+2026-10-20T22:32:03.4839787Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos4 (4 ms)
+2026-10-20T22:32:03.4839902Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos4
+2026-10-20T22:32:03.4840056Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos4 (4 ms)
+2026-10-20T22:32:03.4840171Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos5
+2026-10-20T22:32:03.4840290Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos5 (4 ms)
+2026-10-20T22:32:03.4840407Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos5
+2026-10-20T22:32:03.4840532Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos5 (5 ms)
+2026-10-20T22:32:03.4840640Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos6
+2026-10-20T22:32:03.4840764Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos6 (4 ms)
+2026-10-20T22:32:03.4840877Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos6
+2026-10-20T22:32:03.4841003Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos6 (5 ms)
+2026-10-20T22:32:03.4841116Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos7
+2026-10-20T22:32:03.4841234Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_sorted_csr_0_nos7 (5 ms)
+2026-10-20T22:32:03.4841351Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos7
+2026-10-20T22:32:03.4841478Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_5_1b_column_unsorted_csr_0_nos7 (5 ms)
+2026-10-20T22:32:03.4841588Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos1
+2026-10-20T22:32:03.4841707Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos1 (4 ms)
+2026-10-20T22:32:03.4841818Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos1
+2026-10-20T22:32:03.4841945Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos1 (5 ms)
+2026-10-20T22:32:03.4842056Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos2
+2026-10-20T22:32:03.4842175Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos2 (4 ms)
+2026-10-20T22:32:03.4842291Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos2
+2026-10-20T22:32:03.4842415Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos2 (5 ms)
+2026-10-20T22:32:03.4842578Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos3
+2026-10-20T22:32:03.4842699Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos3 (5 ms)
+2026-10-20T22:32:03.4842815Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos3
+2026-10-20T22:32:03.4842938Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos3 (6 ms)
+2026-10-20T22:32:03.4843054Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos4
+2026-10-20T22:32:03.4843175Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos4 (4 ms)
+2026-10-20T22:32:03.4843288Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos4
+2026-10-20T22:32:03.4843415Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos4 (4 ms)
+2026-10-20T22:32:03.4843524Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos5
+2026-10-20T22:32:03.4843648Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos5 (5 ms)
+2026-10-20T22:32:03.4843765Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos5
+2026-10-20T22:32:03.4843886Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos5 (5 ms)
+2026-10-20T22:32:03.4843998Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos6
+2026-10-20T22:32:03.4844195Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos6 (4 ms)
+2026-10-20T22:32:03.4844312Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos6
+2026-10-20T22:32:03.4844476Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos6 (11 ms)
+2026-10-20T22:32:03.4844588Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos7
+2026-10-20T22:32:03.4844707Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_sorted_csr_0_nos7 (4 ms)
+2026-10-20T22:32:03.4844820Z [ RUN      ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos7
+2026-10-20T22:32:03.4844946Z [       OK ] quick/bsrpad_value.conversion/f64_r_1_9_1b_column_unsorted_csr_0_nos7 (5 ms)
+2026-10-20T22:32:03.4845033Z [----------] 72 tests from quick/bsrpad_value (694 ms total)
+2026-10-20T22:32:03.4845040Z 
+2026-10-20T22:32:03.4845103Z [----------] 200 tests from quick/spildlt0
+2026-10-20T22:32:03.4845214Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_0b_reuse_zero_0
+2026-10-20T22:32:03.4845582Z kpack: parsed HIPK metadata: kernel_name='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse.dll', co_index=335, lookup_key='math-libs/BLAS/rocSPARSE/stage/bin/rocsparse.dll#335', 2 search paths
+2026-10-20T22:32:03.4845849Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:03.4846114Z kpack: expanded pattern: ../.kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:03.4846365Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:03.4846629Z kpack: expanded pattern: .kpack/sparse_lib_@GFXARCH@.kpack -> B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:03.4846819Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:03.4847000Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx1101.kpack
+2026-10-20T22:32:03.4847193Z kpack: archive not found: B:\actions-runner\_work\TheRock\TheRock\build\bin\.kpack\sparse_lib_gfx11-generic.kpack
+2026-10-20T22:32:03.4847282Z kpack: trying architecture: amdgcn-amd-amdhsa--gfx1101
+2026-10-20T22:32:03.4847494Z kpack:   archive B:\actions-runner\_work\TheRock\TheRock\build\.kpack\sparse_lib_gfx1101.kpack has architecture gfx1101
+2026-10-20T22:32:03.4847833Z kpack:   found kernel: 1120232 bytes
+2026-10-20T22:32:03.4847895Z kpack: loaded code object: 1120232 bytes
+2026-10-20T22:32:03.4848016Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_0b_reuse_zero_0 (32 ms)
+2026-10-20T22:32:03.4848124Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_1b_reuse_zero_0
+2026-10-20T22:32:03.4848240Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_1b_reuse_zero_0 (16 ms)
+2026-10-20T22:32:03.4848336Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_0b_force_zero_0
+2026-10-20T22:32:03.4848445Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_0b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4848544Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_1b_force_zero_0
+2026-10-20T22:32:03.4848654Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_1b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4848753Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_0b_reuse_zero_0
+2026-10-20T22:32:03.4848860Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_0b_reuse_zero_0 (16 ms)
+2026-10-20T22:32:03.4848961Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_1b_reuse_zero_0
+2026-10-20T22:32:03.4849073Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_1b_reuse_zero_0 (15 ms)
+2026-10-20T22:32:03.4849258Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_0b_force_zero_0
+2026-10-20T22:32:03.4849366Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_0b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4849463Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_1b_force_zero_0
+2026-10-20T22:32:03.4849605Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_1b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4849704Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_0b_reuse_zero_0
+2026-10-20T22:32:03.4849814Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_0b_reuse_zero_0 (16 ms)
+2026-10-20T22:32:03.4849911Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_1b_reuse_zero_0
+2026-10-20T22:32:03.4850021Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_1b_reuse_zero_0 (15 ms)
+2026-10-20T22:32:03.4850115Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_0b_force_zero_0
+2026-10-20T22:32:03.4850226Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_0b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4850323Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_1b_force_zero_0
+2026-10-20T22:32:03.4850432Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_1b_force_zero_0 (18 ms)
+2026-10-20T22:32:03.4850528Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_0b_reuse_zero_0
+2026-10-20T22:32:03.4850635Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_0b_reuse_zero_0 (15 ms)
+2026-10-20T22:32:03.4850730Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_1b_reuse_zero_0
+2026-10-20T22:32:03.4850837Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_1b_reuse_zero_0 (15 ms)
+2026-10-20T22:32:03.4850935Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_0b_force_zero_0
+2026-10-20T22:32:03.4851054Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_0b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4851155Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_1b_force_zero_0
+2026-10-20T22:32:03.4851271Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_1b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4851376Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_0b_reuse_zero_0
+2026-10-20T22:32:03.4851495Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_0b_reuse_zero_0 (15 ms)
+2026-10-20T22:32:03.4851595Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_1b_reuse_zero_0
+2026-10-20T22:32:03.4851707Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_1b_reuse_zero_0 (15 ms)
+2026-10-20T22:32:03.4851856Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_0b_force_zero_0
+2026-10-20T22:32:03.4851965Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_0b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4852063Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_1b_force_zero_0
+2026-10-20T22:32:03.4852171Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_1b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4852270Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_187_0b_reuse_zero_0
+2026-10-20T22:32:03.4852381Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_187_0b_reuse_zero_0 (15 ms)
+2026-10-20T22:32:03.4852477Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_187_1b_reuse_zero_0
+2026-10-20T22:32:03.4852587Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_187_1b_reuse_zero_0 (15 ms)
+2026-10-20T22:32:03.4852684Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_187_0b_force_zero_0
+2026-10-20T22:32:03.4852797Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_187_0b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4852899Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_187_1b_force_zero_0
+2026-10-20T22:32:03.4853005Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_187_1b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4853103Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_187_0b_reuse_zero_0
+2026-10-20T22:32:03.4853211Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_187_0b_reuse_zero_0 (15 ms)
+2026-10-20T22:32:03.4853400Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_187_1b_reuse_zero_0
+2026-10-20T22:32:03.4853513Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_187_1b_reuse_zero_0 (15 ms)
+2026-10-20T22:32:03.4853649Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_187_0b_force_zero_0
+2026-10-20T22:32:03.4853761Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_187_0b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4853859Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_187_1b_force_zero_0
+2026-10-20T22:32:03.4853969Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_187_1b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4854066Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_187_0b_reuse_zero_0
+2026-10-20T22:32:03.4854177Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_187_0b_reuse_zero_0 (15 ms)
+2026-10-20T22:32:03.4854277Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_187_1b_reuse_zero_0
+2026-10-20T22:32:03.4854387Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_187_1b_reuse_zero_0 (16 ms)
+2026-10-20T22:32:03.4854486Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_187_0b_force_zero_0
+2026-10-20T22:32:03.4854595Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_187_0b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4854695Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_187_1b_force_zero_0
+2026-10-20T22:32:03.4854805Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_187_1b_force_zero_0 (15 ms)
+2026-10-20T22:32:03.4854905Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_0b_reuse_rand_0
+2026-10-20T22:32:03.4855016Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_0b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:03.4855110Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_50_0b_reuse_rand_0
+2026-10-20T22:32:03.4855219Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_50_0b_reuse_rand_0 (36 ms)
+2026-10-20T22:32:03.4855316Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_1b_reuse_rand_0
+2026-10-20T22:32:03.4855427Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_1b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:03.4855523Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_50_1b_reuse_rand_0
+2026-10-20T22:32:03.4855631Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_50_1b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:03.4855727Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_0b_force_rand_0
+2026-10-20T22:32:03.4855833Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_0b_force_rand_0 (17 ms)
+2026-10-20T22:32:03.4855980Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_50_0b_force_rand_0
+2026-10-20T22:32:03.4856121Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_50_0b_force_rand_0 (29 ms)
+2026-10-20T22:32:03.4856217Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_1b_force_rand_0
+2026-10-20T22:32:03.4856326Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_50_1b_force_rand_0 (17 ms)
+2026-10-20T22:32:03.4856423Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_50_1b_force_rand_0
+2026-10-20T22:32:03.4856531Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_50_1b_force_rand_0 (29 ms)
+2026-10-20T22:32:03.4856629Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_0b_reuse_rand_0
+2026-10-20T22:32:03.4856736Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_0b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:03.4856834Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_0b_reuse_rand_0
+2026-10-20T22:32:03.4856941Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_0b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:03.4857039Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_1b_reuse_rand_0
+2026-10-20T22:32:03.4857144Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_1b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:03.4857241Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_1b_reuse_rand_0
+2026-10-20T22:32:03.4857439Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_1b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:03.4857536Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_0b_force_rand_0
+2026-10-20T22:32:03.4857679Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_0b_force_rand_0 (17 ms)
+2026-10-20T22:32:03.4857780Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_0b_force_rand_0
+2026-10-20T22:32:03.4857901Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_0b_force_rand_0 (29 ms)
+2026-10-20T22:32:03.4857999Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_1b_force_rand_0
+2026-10-20T22:32:03.4858106Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_50_1b_force_rand_0 (17 ms)
+2026-10-20T22:32:03.4858202Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_1b_force_rand_0
+2026-10-20T22:32:03.4858309Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_50_1b_force_rand_0 (29 ms)
+2026-10-20T22:32:03.4858410Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_0b_reuse_rand_0
+2026-10-20T22:32:03.4858519Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_0b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:03.4858613Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_0b_reuse_rand_0
+2026-10-20T22:32:03.4858723Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_0b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:03.4858818Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_1b_reuse_rand_0
+2026-10-20T22:32:03.4858927Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_1b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:03.4859023Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_1b_reuse_rand_0
+2026-10-20T22:32:03.4859131Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_1b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:03.4859228Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_0b_force_rand_0
+2026-10-20T22:32:03.4859333Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_0b_force_rand_0 (17 ms)
+2026-10-20T22:32:03.4859434Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_0b_force_rand_0
+2026-10-20T22:32:03.4859539Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_0b_force_rand_0 (29 ms)
+2026-10-20T22:32:03.4859637Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_1b_force_rand_0
+2026-10-20T22:32:03.4859748Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_1_50_1b_force_rand_0 (17 ms)
+2026-10-20T22:32:03.4859842Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_1b_force_rand_0
+2026-10-20T22:32:03.4860002Z [       OK ] quick/spildlt0.precond/i32_i32_f32_c_csr_2_50_1b_force_rand_0 (29 ms)
+2026-10-20T22:32:03.4860098Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_0b_reuse_rand_0
+2026-10-20T22:32:03.4860207Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_0b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:03.4860307Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_0b_reuse_rand_0
+2026-10-20T22:32:03.4860415Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_0b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:03.4860511Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_1b_reuse_rand_0
+2026-10-20T22:32:03.4860619Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_1b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:03.4860719Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_1b_reuse_rand_0
+2026-10-20T22:32:03.4860825Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_1b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:03.4860922Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_0b_force_rand_0
+2026-10-20T22:32:03.4861033Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_0b_force_rand_0 (17 ms)
+2026-10-20T22:32:03.4861129Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_0b_force_rand_0
+2026-10-20T22:32:03.4861237Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_0b_force_rand_0 (29 ms)
+2026-10-20T22:32:03.4861331Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_1b_force_rand_0
+2026-10-20T22:32:03.4861517Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_1_50_1b_force_rand_0 (17 ms)
+2026-10-20T22:32:03.4861616Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_1b_force_rand_0
+2026-10-20T22:32:03.4861762Z [       OK ] quick/spildlt0.precond/i32_i32_f64_c_csr_2_50_1b_force_rand_0 (30 ms)
+2026-10-20T22:32:03.4861863Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_0b_reuse_rand_0
+2026-10-20T22:32:03.4861972Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_0b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:03.4862075Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_0b_reuse_rand_0
+2026-10-20T22:32:03.4862183Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_0b_reuse_rand_0 (29 ms)
+2026-10-20T22:32:03.4862282Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_1b_reuse_rand_0
+2026-10-20T22:32:03.4862391Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_1b_reuse_rand_0 (16 ms)
+2026-10-20T22:32:03.4862491Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_1b_reuse_rand_0
+2026-10-20T22:32:03.4862603Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_1b_reuse_rand_0 (28 ms)
+2026-10-20T22:32:03.4862701Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_0b_force_rand_0
+2026-10-20T22:32:03.4862811Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_0b_force_rand_0 (16 ms)
+2026-10-20T22:32:03.4862910Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_0b_force_rand_0
+2026-10-20T22:32:03.4863019Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_0b_force_rand_0 (28 ms)
+2026-10-20T22:32:03.4863118Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_1b_force_rand_0
+2026-10-20T22:32:03.4863228Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_1_187_1b_force_rand_0 (16 ms)
+2026-10-20T22:32:03.4863329Z [ RUN      ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_1b_force_rand_0
+2026-10-20T22:32:03.4863442Z [       OK ] quick/spildlt0.precond/i32_i32_f32_r_csr_2_187_1b_force_rand_0 (29 ms)
+2026-10-20T22:32:03.4863538Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_187_0b_reuse_rand_0
+2026-10-20T22:32:03.4863646Z [       OK ] quick/spildlt0.precond/i32_i32_f64_r_csr_1_187_0b_reuse_rand_0 (17 ms)
+2026-10-20T22:32:03.4863744Z [ RUN      ] quick/spildlt0.precond/i32_i32_f64_r_csr_2_187_0b_reuse_rand_0
+2026-10-20T22:32:03.4863749Z 
+2026-10-20T22:32:03.4863798Z test 13
+2026-10-20T22:32:03.4863858Z     Start 13: rocsparse-unit-test
+2026-10-20T22:32:03.4863865Z 
+2026-10-20T22:32:03.4864082Z 13: Test command: B:\actions-runner\_work\TheRock\TheRock\build\bin\rocsparse\rocsparse-unit-test.exe
+2026-10-20T22:32:03.4864216Z 13: Working Directory: B:/actions-runner/_work/TheRock/TheRock/build/bin/rocsparse
+2026-10-20T22:32:03.4864280Z 13: Environment variable modifications: 
+2026-10-20T22:32:03.4864375Z 13:  PATH=path_list_prepend:../../lib/rocsparse-clients/lib
+2026-10-20T22:32:03.4864437Z 13:  PATH=path_list_prepend:../../llvm/lib
+2026-10-20T22:32:03.4864498Z 13:  PATH=path_list_prepend:../../lib
+2026-10-20T22:32:03.4864563Z 13:  PATH=path_list_prepend:..
+2026-10-20T22:32:03.4864622Z 13: Test timeout computed to be: 7200
+2026-10-20T22:32:03.4864717Z Errors while running CTest
+2026-10-20T22:32:03.4864787Z 13: [==========] Running 14 tests from 4 test suites.
+2026-10-20T22:32:03.4864859Z 13: [----------] Global test environment set-up.
+2026-10-20T22:32:03.4864917Z 13: [----------] 1 test from enum_traits
+2026-10-20T22:32:03.4864989Z 13: [ RUN      ] enum_traits.compile_time_type_maps
+2026-10-20T22:32:03.4865069Z 13: [       OK ] enum_traits.compile_time_type_maps (0 ms)
+2026-10-20T22:32:03.4865137Z 13: [----------] 1 test from enum_traits (0 ms total)
+2026-10-20T22:32:03.4865180Z 13: 
+2026-10-20T22:32:03.4865242Z 13: [----------] 3 tests from indextype_utils
+2026-10-20T22:32:03.4865310Z 13: [ RUN      ] indextype_utils.get_indextype
+2026-10-20T22:32:03.4865378Z 13: [       OK ] indextype_utils.get_indextype (0 ms)
+2026-10-20T22:32:03.4865756Z 13: [ RUN      ] indextype_utils.indextype_sizeof
+2026-10-20T22:32:03.4865837Z 13: [       OK ] indextype_utils.indextype_sizeof (0 ms)
+2026-10-20T22:32:03.4865927Z 13: [ RUN      ] indextype_utils.get_indextype_sizeof_roundtrip
+2026-10-20T22:32:03.4866218Z 13: [       OK ] indextype_utils.get_indextype_sizeof_roundtrip (0 ms)
+2026-10-20T22:32:03.4866296Z 13: [----------] 3 tests from indextype_utils (0 ms total)
+2026-10-20T22:32:03.4866341Z 13: 
+2026-10-20T22:32:03.4866402Z 13: [----------] 4 tests from datatype_utils
+2026-10-20T22:32:03.4866462Z 13: [ RUN      ] datatype_utils.get_datatype
+2026-10-20T22:32:03.4866530Z 13: [       OK ] datatype_utils.get_datatype (0 ms)
+2026-10-20T22:32:03.4866599Z 13: [ RUN      ] datatype_utils.datatype_sizeof_real
+2026-10-20T22:32:03.4866677Z 13: [       OK ] datatype_utils.datatype_sizeof_real (0 ms)
+2026-10-20T22:32:03.4866749Z 13: [ RUN      ] datatype_utils.datatype_sizeof_complex
+2026-10-20T22:32:03.4866836Z 13: [       OK ] datatype_utils.datatype_sizeof_complex (0 ms)
+2026-10-20T22:32:03.4866921Z 13: [ RUN      ] datatype_utils.get_datatype_sizeof_roundtrip
+2026-10-20T22:32:03.4867012Z 13: [       OK ] datatype_utils.get_datatype_sizeof_roundtrip (0 ms)
+2026-10-20T22:32:03.4867089Z 13: [----------] 4 tests from datatype_utils (0 ms total)
+2026-10-20T22:32:03.4867128Z 13: 
+2026-10-20T22:32:03.4867199Z 13: [----------] 6 tests from csrmv_adaptive_analysis
+2026-10-20T22:32:03.4867266Z 13: [ RUN      ] csrmv_adaptive_analysis.flp2_basic
+2026-10-20T22:32:03.4867339Z 13: [       OK ] csrmv_adaptive_analysis.flp2_basic (0 ms)
+2026-10-20T22:32:03.4867452Z 13: [ RUN      ] csrmv_adaptive_analysis.flp2_powers_of_two_are_fixed_points
+2026-10-20T22:32:03.4867569Z 13: [       OK ] csrmv_adaptive_analysis.flp2_powers_of_two_are_fixed_points (0 ms)
+2026-10-20T22:32:03.4867675Z 13: [ RUN      ] csrmv_adaptive_analysis.numThreadsForReduction_default_wg
+2026-10-20T22:32:03.4867848Z 13: [       OK ] csrmv_adaptive_analysis.numThreadsForReduction_default_wg (0 ms)
+2026-10-20T22:32:03.4867954Z 13: [ RUN      ] csrmv_adaptive_analysis.numThreadsForReduction_boundaries
+2026-10-20T22:32:03.4868072Z 13: [       OK ] csrmv_adaptive_analysis.numThreadsForReduction_boundaries (0 ms)
+2026-10-20T22:32:03.4868210Z 13: [ RUN      ] csrmv_adaptive_analysis.numThreadsForReduction_monotonic_non_increasing
+2026-10-20T22:32:03.4868366Z 13: [       OK ] csrmv_adaptive_analysis.numThreadsForReduction_monotonic_non_increasing (0 ms)
+2026-10-20T22:32:03.4868482Z 13: [ RUN      ] csrmv_adaptive_analysis.numThreadsForReduction_custom_wg_size
+2026-10-20T22:32:03.4868659Z 13: [       OK ] csrmv_adaptive_analysis.numThreadsForReduction_custom_wg_size (0 ms)
+2026-10-20T22:32:03.4868752Z 13: [----------] 6 tests from csrmv_adaptive_analysis (0 ms total)
+2026-10-20T22:32:03.4868793Z 13: 
+2026-10-20T22:32:03.4868865Z 13: [----------] Global test environment tear-down
+2026-10-20T22:32:03.4868939Z 13: [==========] 14 tests from 4 test suites ran. (0 ms total)
+2026-10-20T22:32:03.4868995Z 13: [  PASSED  ] 14 tests.
+2026-10-20T22:32:03.4869104Z 2/2 Test #13: rocsparse-unit-test ..............   Passed    0.47 sec
+2026-10-20T22:32:03.4869108Z 
+2026-10-20T22:32:03.4869173Z 50% tests passed, 1 tests failed out of 2
+2026-10-20T22:32:03.4869176Z 
+2026-10-20T22:32:03.4869227Z Label Time Summary:
+2026-10-20T22:32:03.4869292Z comprehensive    =   0.47 sec*proc (1 test)
+2026-10-20T22:32:03.4869351Z full             =   0.47 sec*proc (1 test)
+2026-10-20T22:32:03.4869408Z pre-commit       = 300.13 sec*proc (1 test)
+2026-10-20T22:32:03.4869471Z quick            = 300.61 sec*proc (2 tests)
+2026-10-20T22:32:03.4869525Z standard         =   0.47 sec*proc (1 test)
+2026-10-20T22:32:03.4869528Z 
+2026-10-20T22:32:03.4869586Z Total Test time (real) = 300.75 sec
+2026-10-20T22:32:03.4869590Z 
+2026-10-20T22:32:03.4869644Z The following tests FAILED:
+2026-10-20T22:32:03.4869760Z 	  1 - rocsparse-test_quick_suite (Timeout)              pre-commit quick
+2026-10-20T22:32:03.4900608Z # TEST_COMPONENT: rocsparse -> Test Directory: build\bin\rocsparse
+2026-10-20T22:32:03.4900708Z # TEST_TYPE: quick -> Category: quick
+2026-10-20T22:32:03.4900819Z # AMDGPU_FAMILIES: gfx110X-all -> GPU Architecture: gfx110X
+2026-10-20T22:32:03.4900824Z 
+2026-10-20T22:32:03.4900926Z # Discovering available test labels...
+2026-10-20T22:32:03.4900988Z # Found 1 GPU suite test(s)
+2026-10-20T22:32:03.4901055Z # Available GPU architectures: ['gfx1151']
+2026-10-20T22:32:03.4901059Z 
+2026-10-20T22:32:03.4901150Z # No GPU suite found for gfx110X, excluding all ex_gpu tests
+2026-10-20T22:32:03.4901557Z # Running: ctest -L ^quick$ -LE ex_gpu --output-on-failure --parallel 1 --timeout 7200 --test-dir build\bin\rocsparse -V
+2026-10-20T22:32:03.4901561Z 
+2026-10-20T22:32:03.5023235Z ##[error]Process completed with exit code 8.
+2026-10-20T22:32:03.5141026Z ##[group]Run python ./build_tools/github_actions/reproduce_test_failure.py \
+2026-10-20T22:32:03.5141237Z [36;1mpython ./build_tools/github_actions/reproduce_test_failure.py \[0m
+2026-10-20T22:32:03.5141316Z [36;1m  --run-id "${ARTIFACT_RUN_ID}" \[0m
+2026-10-20T22:32:03.5141385Z [36;1m  --repository "ROCm/TheRock" \[0m
+2026-10-20T22:32:03.5141465Z [36;1m  --amdgpu-family "${AMDGPU_FAMILIES}" \[0m
+2026-10-20T22:32:03.5141539Z [36;1m  --amdgpu-targets "${AMDGPU_TARGETS}" \[0m
+2026-10-20T22:32:03.5141620Z [36;1m  --test-script "${COMPONENT_TEST_SCRIPT}" \[0m
+2026-10-20T22:32:03.5141688Z [36;1m  --shard-index "${MATRIX_SHARD}" \[0m
+2026-10-20T22:32:03.5141769Z [36;1m  --total-shards "${COMPONENT_TOTAL_SHARDS}" \[0m
+2026-10-20T22:32:03.5141849Z [36;1m  --test-type "${COMPONENT_TEST_TYPE}" \[0m
+2026-10-20T22:32:03.5141907Z [36;1m  --print-cmd \[0m
+2026-10-20T22:32:03.5142020Z [36;1m  --fetch-artifact-args="${COMPONENT_FETCH_ARTIFACT_ARGS}" \[0m
+2026-10-20T22:32:03.5142151Z [36;1m  --additional-requirements-files="${REQUIREMENTS_FILES}"[0m
+2026-10-20T22:32:03.5161424Z shell: C:\Program Files\Git\usr\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-20T22:32:03.5161473Z env:
+2026-10-20T22:32:03.5161565Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T22:32:03.5161640Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T22:32:03.5161732Z   VENV_DIR: B:\actions-runner\_work\TheRock\TheRock/.venv
+2026-10-20T22:32:03.5161788Z   ARTIFACT_RUN_ID: 39488489105
+2026-10-20T22:32:03.5161854Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T22:32:03.5161909Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T22:32:03.5161962Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-20T22:32:03.5162110Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-20T22:32:03.5162164Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-20T22:32:03.5162220Z   BUILD_VARIANT: release
+2026-10-20T22:32:03.5162335Z   pythonLocation: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T22:32:03.5162482Z   PKG_CONFIG_PATH: B:\actions-runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-20T22:32:03.5162592Z   Python_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T22:32:03.5162696Z   Python2_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T22:32:03.5162795Z   Python3_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T22:32:03.5162883Z   VIRTUAL_ENV: B:\actions-runner\_work\TheRock\TheRock\.venv
+2026-10-20T22:32:03.5162941Z   MATRIX_SHARD: 1
+2026-10-20T22:32:03.5163117Z   COMPONENT_TEST_SCRIPT: python build_tools/github_actions/test_executable_scripts/test_runner.py
+2026-10-20T22:32:03.5163172Z   COMPONENT_TOTAL_SHARDS: 1
+2026-10-20T22:32:03.5163231Z   COMPONENT_TEST_TYPE: quick
+2026-10-20T22:32:03.5163280Z   REQUIREMENTS_FILES: 
+2026-10-20T22:32:03.5163376Z   COMPONENT_FETCH_ARTIFACT_ARGS: --sparse --blas --tests
+2026-10-20T22:32:03.5163424Z ##[endgroup]
+2026-10-20T22:32:03.7714878Z To reproduce this failure, run:
+2026-10-20T22:32:03.7715058Z   git clone https://github.com/ROCm/TheRock.git && cd TheRock
+2026-10-20T22:32:03.7716091Z   python build_tools/github_actions/reproduce_test_failure.py --run-id 39488489105 --repository ROCm/TheRock --amdgpu-family gfx110X-all --test-script "python build_tools/github_actions/test_executable_scripts/test_runner.py" --amdgpu-targets gfx1100,gfx1101,gfx1102,gfx1103 --output-dir "./build" --test-type quick --fetch-artifact-args="--sparse --blas --tests"
+2026-10-20T22:32:03.7912446Z ##[group]Run . 'B:\actions-runner\_work\TheRock\TheRock\build_tools\github_actions\cleanup_processes.ps1'
+2026-10-20T22:32:03.7912679Z [36;1m. 'B:\actions-runner\_work\TheRock\TheRock\build_tools\github_actions\cleanup_processes.ps1'[0m
+2026-10-20T22:32:03.7929148Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+2026-10-20T22:32:03.7929197Z env:
+2026-10-20T22:32:03.7929292Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T22:32:03.7929374Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T22:32:03.7929471Z   VENV_DIR: B:\actions-runner\_work\TheRock\TheRock/.venv
+2026-10-20T22:32:03.7929532Z   ARTIFACT_RUN_ID: 39488489105
+2026-10-20T22:32:03.7929598Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T22:32:03.7929653Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T22:32:03.7929708Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-20T22:32:03.7929791Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-20T22:32:03.7929872Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-20T22:32:03.7929928Z   BUILD_VARIANT: release
+2026-10-20T22:32:03.7930055Z   pythonLocation: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T22:32:03.7930206Z   PKG_CONFIG_PATH: B:\actions-runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-20T22:32:03.7930322Z   Python_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T22:32:03.7930430Z   Python2_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T22:32:03.7930527Z   Python3_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T22:32:03.7930625Z   VIRTUAL_ENV: B:\actions-runner\_work\TheRock\TheRock\.venv
+2026-10-20T22:32:03.7930678Z ##[endgroup]
+2026-10-20T22:32:03.9452479Z [*] ==== Starting cleanup_processes.ps1 ====
+2026-10-20T22:32:03.9545913Z [*] Checking if elevated: True | current user: NT AUTHORITY\SYSTEM
+2026-10-20T22:32:03.9567072Z [*] Running as a Windows Service (NT AUTHORITY\*) - Cleaning up system environment...
+2026-10-20T22:32:03.9792241Z [*] > Checking for "~/.gitconfig" file at: C:\Windows\system32\config\systemprofile\.gitconfig
+2026-10-20T22:32:03.9810632Z [*] >> .gitconfig file found, removing after logging contents:
+2026-10-20T22:32:04.0018692Z safe.directory=B:/actions-runner/_work/TheRock/TheRock
+2026-10-20T22:32:04.0064123Z [+] >> Successfully removed .gitconfig
+2026-10-20T22:32:04.0073611Z [*] > Checking for uv.zip archives under: C:\Windows\SystemTemp\
+2026-10-20T22:32:04.0331584Z [*] >> Found 0 uv.zip file(s), total size: 0 MB
+2026-10-20T22:32:04.0336893Z [*] > Checking for empty GUID directories under: C:\Windows\SystemTemp\
+2026-10-20T22:32:04.0447255Z [*] >> Found 0 empty GUID folder(s)
+2026-10-20T22:32:04.0465366Z [*] > Checking pip http-v2 cache under: C:\Windows\system32\config\systemprofile\AppData\Local\pip\cache\http-v2
+2026-10-20T22:32:04.0648568Z [*] >> Found 0 file(s) older than 1 day, total size: 0 MB
+2026-10-20T22:32:04.0666390Z [*] Clearing stale git submodule working trees in workspace: B:\actions-runner\_work\TheRock\TheRock
+2026-10-20T22:32:04.0982926Z       removing base/half
+2026-10-20T22:32:04.1002441Z       removing compiler/hipify
+2026-10-20T22:32:04.1011684Z       removing compiler/amd-llvm
+2026-10-20T22:32:04.1020439Z       removing base/rocm-cmake
+2026-10-20T22:32:04.1028753Z       removing rocm-libraries
+2026-10-20T22:32:04.1037075Z       removing rocm-systems
+2026-10-20T22:32:04.1046180Z       removing compiler/spirv-llvm-translator
+2026-10-20T22:32:04.1055111Z       removing third-party/sysdeps/common/mesa-fork
+2026-10-20T22:32:04.1064939Z       removing math-libs/libhipcxx
+2026-10-20T22:32:04.1074330Z       removing debug-tools/rocgdb/source
+2026-10-20T22:32:04.1083819Z       removing rocm-docs
+2026-10-20T22:32:04.1089702Z [*] >> Submodule working-tree cleanup finished
+2026-10-20T22:32:04.1090964Z [*] Cleaning up processes...
+2026-10-20T22:32:04.1096440Z [*] GITHUB_WORKSPACE env var defined: B:\actions-runner\_work\TheRock\TheRock
+2026-10-20T22:32:04.1109006Z [*] Checking for running build executables filtered by .exe regex: B:\\actions-runner\\_work\\TheRock\\TheRock\\build\\.*[.]exe
+2026-10-20T22:32:04.1252528Z [+] No executables to clean up.
+2026-10-20T22:32:04.1471859Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-20T22:32:04.1472218Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-20T22:32:04.1490708Z shell: C:\Program Files\Git\usr\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-20T22:32:04.1490970Z env:
+2026-10-20T22:32:04.1491120Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T22:32:04.1491343Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T22:32:04.1491581Z   VENV_DIR: B:\actions-runner\_work\TheRock\TheRock/.venv
+2026-10-20T22:32:04.1491786Z   ARTIFACT_RUN_ID: 39488489105
+2026-10-20T22:32:04.1491948Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T22:32:04.1492114Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T22:32:04.1492275Z   AMDGPU_FAMILIES: gfx110X-all
+2026-10-20T22:32:04.1492459Z   AMDGPU_TARGETS: gfx1100,gfx1101,gfx1102,gfx1103
+2026-10-20T22:32:04.1492651Z   ARTIFACT_GROUP: gfx110X-all
+2026-10-20T22:32:04.1492826Z   BUILD_VARIANT: release
+2026-10-20T22:32:04.1493037Z   pythonLocation: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T22:32:04.1493343Z   PKG_CONFIG_PATH: B:\actions-runner\_work\_tool\Python\3.12.10\x64/lib/pkgconfig
+2026-10-20T22:32:04.1493644Z   Python_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T22:32:04.1493920Z   Python2_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T22:32:04.1494190Z   Python3_ROOT_DIR: B:\actions-runner\_work\_tool\Python\3.12.10\x64
+2026-10-20T22:32:04.1494448Z   VIRTUAL_ENV: B:\actions-runner\_work\TheRock\TheRock\.venv
+2026-10-20T22:32:04.1494653Z ##[endgroup]
+2026-10-20T22:32:04.2764670Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-20T22:32:04.3027852Z Post job cleanup.
+2026-10-20T22:32:04.3030825Z ##[start-action display=Setting up Python;id=__6abb1199-f1da-4ccc-9281-6d99b60770f5.__actions_setup-python]
+2026-10-20T22:32:04.3033103Z ##[end-action id=__6abb1199-f1da-4ccc-9281-6d99b60770f5.__actions_setup-python;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-20T22:32:04.3160567Z Post job cleanup.
+2026-10-20T22:32:05.1341306Z [command]"C:\Program Files\Git\cmd\git.exe" version
+2026-10-20T22:32:05.1540315Z git version 2.55.0.windows.3
+2026-10-20T22:32:05.1580543Z Temporarily overriding HOME='B:\actions-runner\_work\_temp\d8e4d048-2e03-45e5-b1dc-f287f9549c1b' before making global git config changes
+2026-10-20T22:32:05.1581033Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T22:32:05.1586350Z [command]"C:\Program Files\Git\cmd\git.exe" config --global --add safe.directory B:\actions-runner\_work\TheRock\TheRock
+2026-10-20T22:32:05.1796352Z Removing SSH command configuration
+2026-10-20T22:32:05.1802409Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T22:32:05.2014654Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-20T22:32:05.6229507Z Removing HTTP extra header
+2026-10-20T22:32:05.6235403Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T22:32:05.6461089Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-20T22:32:06.0683463Z Removing includeIf entries pointing to credentials config files
+2026-10-20T22:32:06.0690160Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T22:32:06.0906534Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-20T22:32:06.5335073Z Post job cleanup.
+2026-10-20T22:32:06.6155587Z Evaluate and set job outputs
+2026-10-20T22:32:06.6159248Z Cleaning up orphan processes

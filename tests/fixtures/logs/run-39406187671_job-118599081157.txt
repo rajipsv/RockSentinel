@@ -1,0 +1,1504 @@
+# Source: ROCm/TheRock Actions run 39406187671 attempt 1, job 118599081157
+# Job: Linux::release / Test gfx90a / Test hipdnn / Test hipdnn (shard 1/1) (gfx90a) (multi_arch_ci.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-21
+2026-10-20T11:22:33.0478280Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.UnpackTensorAttributes (0 ms)
+2026-10-20T11:22:33.0478558Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateShallowTensor
+2026-10-20T11:22:33.0478877Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateShallowTensor (0 ms)
+2026-10-20T11:22:33.0479258Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.BindShallowTensorReturnsMatchingTensor
+2026-10-20T11:22:33.0479671Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.BindShallowTensorReturnsMatchingTensor (0 ms)
+2026-10-20T11:22:33.0480024Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.BindShallowTensorThrowsOnMissingUid
+2026-10-20T11:22:33.0480436Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.BindShallowTensorThrowsOnMissingUid (0 ms)
+2026-10-20T11:22:33.0480853Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.BindOptionalShallowTensorNulloptYieldsNullptr
+2026-10-20T11:22:33.0481324Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.BindOptionalShallowTensorNulloptYieldsNullptr (0 ms)
+2026-10-20T11:22:33.0481699Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.BindOptionalShallowTensorPresentBinds
+2026-10-20T11:22:33.0482110Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.BindOptionalShallowTensorPresentBinds (0 ms)
+2026-10-20T11:22:33.0482357Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateTensorBoolean
+2026-10-20T11:22:33.0482647Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateTensorBoolean (0 ms)
+2026-10-20T11:22:33.0482983Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateTensorFp4UnpackedByDefault
+2026-10-20T11:22:33.0483346Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateTensorFp4UnpackedByDefault (0 ms)
+2026-10-20T11:22:33.0483691Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateTensorFp4PackedWhenRequested
+2026-10-20T11:22:33.0484063Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateTensorFp4PackedWhenRequested (0 ms)
+2026-10-20T11:22:33.0484396Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateTensorFp6UnpackedByDefault
+2026-10-20T11:22:33.0484752Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateTensorFp6UnpackedByDefault (0 ms)
+2026-10-20T11:22:33.0485086Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateTensorFp6PackedWhenRequested
+2026-10-20T11:22:33.0485458Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateTensorFp6PackedWhenRequested (0 ms)
+2026-10-20T11:22:33.0486160Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.PackSubByteElementsThrowsForUnimplementedSubByteTypes
+2026-10-20T11:22:33.0486681Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.PackSubByteElementsThrowsForUnimplementedSubByteTypes (0 ms)
+2026-10-20T11:22:33.0487075Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateTensorFromAttributeForwardsPackFlag
+2026-10-20T11:22:33.0487613Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateTensorFromAttributeForwardsPackFlag (0 ms)
+2026-10-20T11:22:33.0487969Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.IsSubByteDataType
+2026-10-20T11:22:33.0488249Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.IsSubByteDataType (0 ms)
+2026-10-20T11:22:33.0488673Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorAllDataTypes
+2026-10-20T11:22:33.0489025Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorAllDataTypes (0 ms)
+2026-10-20T11:22:33.0489384Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorSharesOffsetTensor
+2026-10-20T11:22:33.0489800Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorSharesOffsetTensor (0 ms)
+2026-10-20T11:22:33.0490176Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorUnsupportedTypeThrows
+2026-10-20T11:22:33.0490595Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorUnsupportedTypeThrows (0 ms)
+2026-10-20T11:22:33.0490933Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorAppliesMultiplier
+2026-10-20T11:22:33.0491320Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorAppliesMultiplier (0 ms)
+2026-10-20T11:22:33.0491702Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorFromAttributeAndOffset
+2026-10-20T11:22:33.0492119Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorFromAttributeAndOffset (0 ms)
+2026-10-20T11:22:33.0492517Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorAddressesLogicalBhsdDims
+2026-10-20T11:22:33.0492948Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorAddressesLogicalBhsdDims (0 ms)
+2026-10-20T11:22:33.0493358Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorRejectsPhysicalBhsdStrides
+2026-10-20T11:22:33.0493806Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorRejectsPhysicalBhsdStrides (0 ms)
+2026-10-20T11:22:33.0494140Z 6: [ RUN      ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorRejectsNonRank4
+2026-10-20T11:22:33.0494515Z 6: [       OK ] TestFlatbufferTensorAttributesUtils.CreateRaggedTensorRejectsNonRank4 (0 ms)
+2026-10-20T11:22:33.0494772Z 6: [----------] 22 tests from TestFlatbufferTensorAttributesUtils (0 ms total)
+2026-10-20T11:22:33.0494871Z 6: 
+2026-10-20T11:22:33.0495034Z 6: [----------] 6 tests from TestFillTensorFromFile
+2026-10-20T11:22:33.0495197Z 6: [ RUN      ] TestFillTensorFromFile.InvalidPath
+2026-10-20T11:22:33.0495383Z 6: [       OK ] TestFillTensorFromFile.InvalidPath (0 ms)
+2026-10-20T11:22:33.0495559Z 6: [ RUN      ] TestFillTensorFromFile.PathToDirectory
+2026-10-20T11:22:33.0495764Z 6: [       OK ] TestFillTensorFromFile.PathToDirectory (0 ms)
+2026-10-20T11:22:33.0496072Z 6: [ RUN      ] TestFillTensorFromFile.Valid
+2026-10-20T11:22:33.0496240Z 6: [       OK ] TestFillTensorFromFile.Valid (0 ms)
+2026-10-20T11:22:33.0496444Z 6: [ RUN      ] TestFillTensorFromFile.SizeMismatchSmaller
+2026-10-20T11:22:33.0496660Z 6: [       OK ] TestFillTensorFromFile.SizeMismatchSmaller (0 ms)
+2026-10-20T11:22:33.0496870Z 6: [ RUN      ] TestFillTensorFromFile.SizeMismatchLarger
+2026-10-20T11:22:33.0497068Z 6: [       OK ] TestFillTensorFromFile.SizeMismatchLarger (0 ms)
+2026-10-20T11:22:33.0497278Z 6: [ RUN      ] TestFillTensorFromFile.NonPackedTensor
+2026-10-20T11:22:33.0497468Z 6: [       OK ] TestFillTensorFromFile.NonPackedTensor (0 ms)
+2026-10-20T11:22:33.0497664Z 6: [----------] 6 tests from TestFillTensorFromFile (0 ms total)
+2026-10-20T11:22:33.0497886Z 6: 
+2026-10-20T11:22:33.0498041Z 6: [----------] 5 tests from TestScanBundleJsonFiles
+2026-10-20T11:22:33.0498243Z 6: [ RUN      ] TestScanBundleJsonFiles.NonexistentDirectory
+2026-10-20T11:22:33.0499100Z 6: Warning: failed to scan golden reference data in "/tmp/nonexistent_dir_xyzzy_42": filesystem error: recursive directory iterator cannot open directory: No such file or directory [/tmp/nonexistent_dir_xyzzy_42]
+2026-10-20T11:22:33.0499421Z 6: [       OK ] TestScanBundleJsonFiles.NonexistentDirectory (0 ms)
+2026-10-20T11:22:33.0499602Z 6: [ RUN      ] TestScanBundleJsonFiles.EmptyDirectory
+2026-10-20T11:22:33.0499882Z 6: [       OK ] TestScanBundleJsonFiles.EmptyDirectory (0 ms)
+2026-10-20T11:22:33.0500109Z 6: [ RUN      ] TestScanBundleJsonFiles.DiscoversJsonRecursively
+2026-10-20T11:22:33.0500454Z 6: [       OK ] TestScanBundleJsonFiles.DiscoversJsonRecursively (0 ms)
+2026-10-20T11:22:33.0500646Z 6: [ RUN      ] TestScanBundleJsonFiles.ExcludesMetaJson
+2026-10-20T11:22:33.0500882Z 6: [       OK ] TestScanBundleJsonFiles.ExcludesMetaJson (0 ms)
+2026-10-20T11:22:33.0501072Z 6: [ RUN      ] TestScanBundleJsonFiles.ReturnsSortedPaths
+2026-10-20T11:22:33.0501282Z 6: [       OK ] TestScanBundleJsonFiles.ReturnsSortedPaths (0 ms)
+2026-10-20T11:22:33.0501471Z 6: [----------] 5 tests from TestScanBundleJsonFiles (1 ms total)
+2026-10-20T11:22:33.0501570Z 6: 
+2026-10-20T11:22:33.0501728Z 6: [----------] 6 tests from TestLoadGraphAndTensors
+2026-10-20T11:22:33.0501882Z 6: [ RUN      ] TestLoadGraphAndTensors.Valid
+2026-10-20T11:22:33.0502375Z 6: /__w/TheRock/TheRock/rocm-libraries/projects/hipdnn/test_sdk/tests/utilities/TestLoadGraphAndTensors.cpp:206: Skipped
+2026-10-20T11:22:33.0502617Z 6: Integration test bundles are not installed (standalone hipDNN build)
+2026-10-20T11:22:33.0502723Z 6: 
+2026-10-20T11:22:33.0502895Z 6: [  SKIPPED ] TestLoadGraphAndTensors.Valid (0 ms)
+2026-10-20T11:22:33.0503147Z 6: [ RUN      ] TestLoadGraphAndTensors.ExtractAndClearOutputTensorData
+2026-10-20T11:22:33.0503617Z 6: /__w/TheRock/TheRock/rocm-libraries/projects/hipdnn/test_sdk/tests/utilities/TestLoadGraphAndTensors.cpp:254: Skipped
+2026-10-20T11:22:33.0503855Z 6: Integration test bundles are not installed (standalone hipDNN build)
+2026-10-20T11:22:33.0503955Z 6: 
+2026-10-20T11:22:33.0504258Z 6: [  SKIPPED ] TestLoadGraphAndTensors.ExtractAndClearOutputTensorData (0 ms)
+2026-10-20T11:22:33.0504452Z 6: [ RUN      ] TestLoadGraphAndTensors.LoadsRaggedBundle
+2026-10-20T11:22:33.0504926Z 6: /__w/TheRock/TheRock/rocm-libraries/projects/hipdnn/test_sdk/tests/utilities/TestLoadGraphAndTensors.cpp:312: Skipped
+2026-10-20T11:22:33.0505175Z 6: Integration test bundles are not installed (standalone hipDNN build)
+2026-10-20T11:22:33.0505273Z 6: 
+2026-10-20T11:22:33.0505502Z 6: [  SKIPPED ] TestLoadGraphAndTensors.LoadsRaggedBundle (0 ms)
+2026-10-20T11:22:33.0505828Z 6: [ RUN      ] TestLoadGraphAndTensors.LoadsRaggedTensorsDeclaredBeforeTheirOffset
+2026-10-20T11:22:33.0506291Z 6: [       OK ] TestLoadGraphAndTensors.LoadsRaggedTensorsDeclaredBeforeTheirOffset (1 ms)
+2026-10-20T11:22:33.0506655Z 6: [ RUN      ] TestLoadGraphAndTensors.ExtractAndClearOutputTensorDataKeepsRaggedLayout
+2026-10-20T11:22:33.0508584Z 6: [       OK ] TestLoadGraphAndTensors.ExtractAndClearOutputTensorDataKeepsRaggedLayout (0 ms)
+2026-10-20T11:22:33.0508877Z 6: [ RUN      ] TestLoadGraphAndTensors.ThrowsWhenRaggedOffsetTensorMissing
+2026-10-20T11:22:33.0515666Z 6: [       OK ] TestLoadGraphAndTensors.ThrowsWhenRaggedOffsetTensorMissing (0 ms)
+2026-10-20T11:22:33.0515993Z 6: [----------] 6 tests from TestLoadGraphAndTensors (2 ms total)
+2026-10-20T11:22:33.0516102Z 6: 
+2026-10-20T11:22:33.0516263Z 6: [----------] 6 tests from TestLoggingUtils
+2026-10-20T11:22:33.0516480Z 6: [ RUN      ] TestLoggingUtils.IsValidLogLevelWithValidLevels
+2026-10-20T11:22:33.0516723Z 6: [       OK ] TestLoggingUtils.IsValidLogLevelWithValidLevels (0 ms)
+2026-10-20T11:22:33.0516945Z 6: [ RUN      ] TestLoggingUtils.IsValidLogLevelWithInvalidLevels
+2026-10-20T11:22:33.0517525Z 6: [       OK ] TestLoggingUtils.IsValidLogLevelWithInvalidLevels (0 ms)
+2026-10-20T11:22:33.0517742Z 6: [ RUN      ] TestLoggingUtils.IsValidLogLevelCaseInsensitive
+2026-10-20T11:22:33.0517994Z 6: [       OK ] TestLoggingUtils.IsValidLogLevelCaseInsensitive (0 ms)
+2026-10-20T11:22:33.0518206Z 6: [ RUN      ] TestLoggingUtils.IsValidLogLevelTrimsWhitespace
+2026-10-20T11:22:33.0518520Z 6: [       OK ] TestLoggingUtils.IsValidLogLevelTrimsWhitespace (0 ms)
+2026-10-20T11:22:33.0518793Z 6: [ RUN      ] TestLoggingUtils.IsLoggingEnabledWithValidLevels
+2026-10-20T11:22:33.0519162Z 6: [       OK ] TestLoggingUtils.IsLoggingEnabledWithValidLevels (0 ms)
+2026-10-20T11:22:33.0519433Z 6: [ RUN      ] TestLoggingUtils.IsLoggingEnabledWithInvalidOrUnsetLevels
+2026-10-20T11:22:33.0519822Z 6: [       OK ] TestLoggingUtils.IsLoggingEnabledWithInvalidOrUnsetLevels (0 ms)
+2026-10-20T11:22:33.0520020Z 6: [----------] 6 tests from TestLoggingUtils (0 ms total)
+2026-10-20T11:22:33.0520118Z 6: 
+2026-10-20T11:22:33.0520277Z 6: [----------] 9 tests from TestStringToSeverity
+2026-10-20T11:22:33.0520502Z 6: [ RUN      ] TestStringToSeverity.ValidOffReturnsOptionalWithOff
+2026-10-20T11:22:33.0520760Z 6: [       OK ] TestStringToSeverity.ValidOffReturnsOptionalWithOff (0 ms)
+2026-10-20T11:22:33.0521000Z 6: [ RUN      ] TestStringToSeverity.ValidInfoReturnsOptionalWithInfo
+2026-10-20T11:22:33.0521263Z 6: [       OK ] TestStringToSeverity.ValidInfoReturnsOptionalWithInfo (0 ms)
+2026-10-20T11:22:33.0521499Z 6: [ RUN      ] TestStringToSeverity.ValidWarnReturnsOptionalWithWarn
+2026-10-20T11:22:33.0521764Z 6: [       OK ] TestStringToSeverity.ValidWarnReturnsOptionalWithWarn (0 ms)
+2026-10-20T11:22:33.0522011Z 6: [ RUN      ] TestStringToSeverity.ValidErrorReturnsOptionalWithError
+2026-10-20T11:22:33.0522292Z 6: [       OK ] TestStringToSeverity.ValidErrorReturnsOptionalWithError (0 ms)
+2026-10-20T11:22:33.0522537Z 6: [ RUN      ] TestStringToSeverity.ValidFatalReturnsOptionalWithFatal
+2026-10-20T11:22:33.0522815Z 6: [       OK ] TestStringToSeverity.ValidFatalReturnsOptionalWithFatal (0 ms)
+2026-10-20T11:22:33.0523030Z 6: [ RUN      ] TestStringToSeverity.InvalidStringReturnsNullopt
+2026-10-20T11:22:33.0523261Z 6: [       OK ] TestStringToSeverity.InvalidStringReturnsNullopt (0 ms)
+2026-10-20T11:22:33.0523473Z 6: [ RUN      ] TestStringToSeverity.EmptyStringReturnsNullopt
+2026-10-20T11:22:33.0523698Z 6: [       OK ] TestStringToSeverity.EmptyStringReturnsNullopt (0 ms)
+2026-10-20T11:22:33.0523903Z 6: [ RUN      ] TestStringToSeverity.CaseInsensitiveMatching
+2026-10-20T11:22:33.0524112Z 6: [       OK ] TestStringToSeverity.CaseInsensitiveMatching (0 ms)
+2026-10-20T11:22:33.0524290Z 6: [ RUN      ] TestStringToSeverity.TrimsWhitespace
+2026-10-20T11:22:33.0524475Z 6: [       OK ] TestStringToSeverity.TrimsWhitespace (0 ms)
+2026-10-20T11:22:33.0524669Z 6: [----------] 9 tests from TestStringToSeverity (0 ms total)
+2026-10-20T11:22:33.0524759Z 6: 
+2026-10-20T11:22:33.0524926Z 6: [----------] 4 tests from TestStringToSeverityOrOff
+2026-10-20T11:22:33.0525170Z 6: [ RUN      ] TestStringToSeverityOrOff.ValidInputsReturnCorrectEnum
+2026-10-20T11:22:33.0525447Z 6: [       OK ] TestStringToSeverityOrOff.ValidInputsReturnCorrectEnum (0 ms)
+2026-10-20T11:22:33.0525661Z 6: [ RUN      ] TestStringToSeverityOrOff.InvalidInputReturnsOff
+2026-10-20T11:22:33.0526001Z 6: [       OK ] TestStringToSeverityOrOff.InvalidInputReturnsOff (0 ms)
+2026-10-20T11:22:33.0526222Z 6: [ RUN      ] TestStringToSeverityOrOff.EmptyStringReturnsOff
+2026-10-20T11:22:33.0526451Z 6: [       OK ] TestStringToSeverityOrOff.EmptyStringReturnsOff (0 ms)
+2026-10-20T11:22:33.0526731Z 6: [ RUN      ] TestStringToSeverityOrOff.CaseInsensitiveAndTrimsWhitespace
+2026-10-20T11:22:33.0527067Z 6: [       OK ] TestStringToSeverityOrOff.CaseInsensitiveAndTrimsWhitespace (0 ms)
+2026-10-20T11:22:33.0527274Z 6: [----------] 4 tests from TestStringToSeverityOrOff (0 ms total)
+2026-10-20T11:22:33.0527372Z 6: 
+2026-10-20T11:22:33.0527506Z 6: [----------] 57 tests from TestLogRecorder
+2026-10-20T11:22:33.0527790Z 6: [ RUN      ] TestLogRecorder.RecordingStartsOff
+2026-10-20T11:22:33.0527969Z 6: [       OK ] TestLogRecorder.RecordingStartsOff (0 ms)
+2026-10-20T11:22:33.0528173Z 6: [ RUN      ] TestLogRecorder.StartRecordingEnablesCapture
+2026-10-20T11:22:33.0528397Z 6: [       OK ] TestLogRecorder.StartRecordingEnablesCapture (0 ms)
+2026-10-20T11:22:33.0528589Z 6: [ RUN      ] TestLogRecorder.StopRecordingDisablesCapture
+2026-10-20T11:22:33.0528904Z 6: [       OK ] TestLogRecorder.StopRecordingDisablesCapture (0 ms)
+2026-10-20T11:22:33.0529092Z 6: [ RUN      ] TestLogRecorder.RecordLogOnlyWhenRecording
+2026-10-20T11:22:33.0529401Z 6: [       OK ] TestLogRecorder.RecordLogOnlyWhenRecording (0 ms)
+2026-10-20T11:22:33.0529583Z 6: [ RUN      ] TestLogRecorder.ClearLogsEmptiesBuffer
+2026-10-20T11:22:33.0529868Z 6: [       OK ] TestLogRecorder.ClearLogsEmptiesBuffer (0 ms)
+2026-10-20T11:22:33.0530067Z 6: [ RUN      ] TestLogRecorder.WithOverrideLevelChangesLevel
+2026-10-20T11:22:33.0530291Z 6: [       OK ] TestLogRecorder.WithOverrideLevelChangesLevel (0 ms)
+2026-10-20T11:22:33.0530508Z 6: [ RUN      ] TestLogRecorder.WithOverrideLevelRestoresOriginal
+2026-10-20T11:22:33.0530746Z 6: [       OK ] TestLogRecorder.WithOverrideLevelRestoresOriginal (0 ms)
+2026-10-20T11:22:33.0530954Z 6: [ RUN      ] TestLogRecorder.WithCurrentLevelPreservesLevel
+2026-10-20T11:22:33.0531189Z 6: [       OK ] TestLogRecorder.WithCurrentLevelPreservesLevel (0 ms)
+2026-10-20T11:22:33.0531400Z 6: [ RUN      ] TestLogRecorder.WithCurrentLevelRestoresOnDestroy
+2026-10-20T11:22:33.0531642Z 6: [       OK ] TestLogRecorder.WithCurrentLevelRestoresOnDestroy (0 ms)
+2026-10-20T11:22:33.0531847Z 6: [ RUN      ] TestLogRecorder.GetSavedLogLevelReturnsOriginal
+2026-10-20T11:22:33.0532081Z 6: [       OK ] TestLogRecorder.GetSavedLogLevelReturnsOriginal (0 ms)
+2026-10-20T11:22:33.0532288Z 6: [ RUN      ] TestLogRecorder.HasLogContainingFindsSubstring
+2026-10-20T11:22:33.0532508Z 6: [       OK ] TestLogRecorder.HasLogContainingFindsSubstring (0 ms)
+2026-10-20T11:22:33.0532734Z 6: [ RUN      ] TestLogRecorder.HasLogContainingWithSeverityFilters
+2026-10-20T11:22:33.0532980Z 6: [       OK ] TestLogRecorder.HasLogContainingWithSeverityFilters (0 ms)
+2026-10-20T11:22:33.0533211Z 6: [ RUN      ] TestLogRecorder.CountLogsAtLevelReturnsAccurateCount
+2026-10-20T11:22:33.0533468Z 6: [       OK ] TestLogRecorder.CountLogsAtLevelReturnsAccurateCount (0 ms)
+2026-10-20T11:22:33.0533685Z 6: [ RUN      ] TestLogRecorder.GetRecordedLogCountReturnsTotal
+2026-10-20T11:22:33.0533913Z 6: [       OK ] TestLogRecorder.GetRecordedLogCountReturnsTotal (0 ms)
+2026-10-20T11:22:33.0534106Z 6: [ RUN      ] TestLogRecorder.GetRecordedLogsReturnsVector
+2026-10-20T11:22:33.0534322Z 6: [       OK ] TestLogRecorder.GetRecordedLogsReturnsVector (0 ms)
+2026-10-20T11:22:33.0534553Z 6: [ RUN      ] TestLogRecorder.SharedRecorderClearLogsEmptiesBuffer
+2026-10-20T11:22:33.0534819Z 6: [       OK ] TestLogRecorder.SharedRecorderClearLogsEmptiesBuffer (0 ms)
+2026-10-20T11:22:33.0535078Z 6: [ RUN      ] TestLogRecorder.SharedRecorderClearLogsAllowsNewRecording
+2026-10-20T11:22:33.0535376Z 6: [       OK ] TestLogRecorder.SharedRecorderClearLogsAllowsNewRecording (0 ms)
+2026-10-20T11:22:33.0535628Z 6: [ RUN      ] TestLogRecorder.GetRecordedLogsAsStringShowsEmptyMessage
+2026-10-20T11:22:33.0536034Z 6: [       OK ] TestLogRecorder.GetRecordedLogsAsStringShowsEmptyMessage (0 ms)
+2026-10-20T11:22:33.0536268Z 6: [ RUN      ] TestLogRecorder.GetRecordedLogsAsStringFormatsLogs
+2026-10-20T11:22:33.0536508Z 6: [       OK ] TestLogRecorder.GetRecordedLogsAsStringFormatsLogs (0 ms)
+2026-10-20T11:22:33.0536807Z 6: [ RUN      ] TestLogRecorder.GetRecordedLogsAsStringWithMaxLogsLimitsOutput
+2026-10-20T11:22:33.0537133Z 6: [       OK ] TestLogRecorder.GetRecordedLogsAsStringWithMaxLogsLimitsOutput (0 ms)
+2026-10-20T11:22:33.0537399Z 6: [ RUN      ] TestLogRecorder.GetRecordedLogsAsStringSkipMessageSingular
+2026-10-20T11:22:33.0537695Z 6: [       OK ] TestLogRecorder.GetRecordedLogsAsStringSkipMessageSingular (0 ms)
+2026-10-20T11:22:33.0538053Z 6: [ RUN      ] TestLogRecorder.GetRecordedLogsAsStringNoLimitShowsAll
+2026-10-20T11:22:33.0538326Z 6: [       OK ] TestLogRecorder.GetRecordedLogsAsStringNoLimitShowsAll (0 ms)
+2026-10-20T11:22:33.0538665Z 6: [ RUN      ] TestLogRecorder.GetRecordedLogsAsStringMaxLogsGreaterThanCountShowsAll
+2026-10-20T11:22:33.0539036Z 6: [       OK ] TestLogRecorder.GetRecordedLogsAsStringMaxLogsGreaterThanCountShowsAll (0 ms)
+2026-10-20T11:22:33.0539377Z 6: [ RUN      ] TestLogRecorder.GetRecordedLogsAsStringFormatsSeverities
+2026-10-20T11:22:33.0539660Z 6: [       OK ] TestLogRecorder.GetRecordedLogsAsStringFormatsSeverities (0 ms)
+2026-10-20T11:22:33.0540026Z 6: [ RUN      ] TestLogRecorder.LogRecordingOutputCallsCallbackWhenLevelAllows
+2026-10-20T11:22:33.0540421Z 6: [       OK ] TestLogRecorder.LogRecordingOutputCallsCallbackWhenLevelAllows (0 ms)
+2026-10-20T11:22:33.0540745Z 6: [ RUN      ] TestLogRecorder.LogRecordingOutputDoesNotCallCallbackWhenLevelBlocks
+2026-10-20T11:22:33.0541118Z 6: [       OK ] TestLogRecorder.LogRecordingOutputDoesNotCallCallbackWhenLevelBlocks (0 ms)
+2026-10-20T11:22:33.0541313Z 6: [ RUN      ] TestLogRecorder.EmptyLogMessagesAreRecorded
+2026-10-20T11:22:33.0541524Z 6: [       OK ] TestLogRecorder.EmptyLogMessagesAreRecorded (0 ms)
+2026-10-20T11:22:33.0541711Z 6: [ RUN      ] TestLogRecorder.SpecialCharactersInMessages
+2026-10-20T11:22:33.0541922Z 6: [       OK ] TestLogRecorder.SpecialCharactersInMessages (0 ms)
+2026-10-20T11:22:33.0542110Z 6: [ RUN      ] TestLogRecorder.MultipleRecordersCanExist
+2026-10-20T11:22:33.0542307Z 6: [       OK ] TestLogRecorder.MultipleRecordersCanExist (0 ms)
+2026-10-20T11:22:33.0542563Z 6: [ RUN      ] TestLogRecorder.SeverityToStringReturnsCorrectStrings
+2026-10-20T11:22:33.0542827Z 6: [       OK ] TestLogRecorder.SeverityToStringReturnsCorrectStrings (0 ms)
+2026-10-20T11:22:33.0543070Z 6: [ RUN      ] TestLogRecorder.LogRecordingCallbackIgnoresNullMessage
+2026-10-20T11:22:33.0543338Z 6: [       OK ] TestLogRecorder.LogRecordingCallbackIgnoresNullMessage (0 ms)
+2026-10-20T11:22:33.0543593Z 6: [ RUN      ] TestLogRecorder.LogRecordingCallbackRecordsValidMessage
+2026-10-20T11:22:33.0543872Z 6: [       OK ] TestLogRecorder.LogRecordingCallbackRecordsValidMessage (0 ms)
+2026-10-20T11:22:33.0544159Z 6: [ RUN      ] TestLogRecorder.LogChainedRecordingCallbackRecordsValidMessage
+2026-10-20T11:22:33.0544483Z 6: [       OK ] TestLogRecorder.LogChainedRecordingCallbackRecordsValidMessage (0 ms)
+2026-10-20T11:22:33.0544765Z 6: [ RUN      ] TestLogRecorder.LogChainedRecordingCallbackIgnoresNullMessage
+2026-10-20T11:22:33.0545082Z 6: [       OK ] TestLogRecorder.LogChainedRecordingCallbackIgnoresNullMessage (0 ms)
+2026-10-20T11:22:33.0545363Z 6: [ RUN      ] TestLogRecorder.SimpleStderrOutputCallbackOutputsValidMessage
+2026-10-20T11:22:33.0545678Z 6: [       OK ] TestLogRecorder.SimpleStderrOutputCallbackOutputsValidMessage (0 ms)
+2026-10-20T11:22:33.0546046Z 6: [ RUN      ] TestLogRecorder.SimpleStderrOutputCallbackHandlesNullMessage
+2026-10-20T11:22:33.0546357Z 6: [       OK ] TestLogRecorder.SimpleStderrOutputCallbackHandlesNullMessage (0 ms)
+2026-10-20T11:22:33.0546643Z 6: [ RUN      ] TestLogRecorder.SimpleStderrOutputCallbackFormatsAllSeverities
+2026-10-20T11:22:33.0546959Z 6: [       OK ] TestLogRecorder.SimpleStderrOutputCallbackFormatsAllSeverities (0 ms)
+2026-10-20T11:22:33.0547192Z 6: [ RUN      ] TestLogRecorder.IsolatedWithOverrideLevelChangesLevel
+2026-10-20T11:22:33.0547463Z 6: [       OK ] TestLogRecorder.IsolatedWithOverrideLevelChangesLevel (0 ms)
+2026-10-20T11:22:33.0547720Z 6: [ RUN      ] TestLogRecorder.IsolatedWithOverrideLevelRestoresOriginal
+2026-10-20T11:22:33.0548013Z 6: [       OK ] TestLogRecorder.IsolatedWithOverrideLevelRestoresOriginal (0 ms)
+2026-10-20T11:22:33.0548246Z 6: [ RUN      ] TestLogRecorder.IsolatedWithCurrentLevelPreservesLevel
+2026-10-20T11:22:33.0548523Z 6: [       OK ] TestLogRecorder.IsolatedWithCurrentLevelPreservesLevel (0 ms)
+2026-10-20T11:22:33.0548775Z 6: [ RUN      ] TestLogRecorder.IsolatedGetCallbackReturnsValidCallback
+2026-10-20T11:22:33.0549172Z 6: [       OK ] TestLogRecorder.IsolatedGetCallbackReturnsValidCallback (0 ms)
+2026-10-20T11:22:33.0549429Z 6: [ RUN      ] TestLogRecorder.IsolatedCallbackRecordsToIsolatedInstance
+2026-10-20T11:22:33.0549715Z 6: [       OK ] TestLogRecorder.IsolatedCallbackRecordsToIsolatedInstance (0 ms)
+2026-10-20T11:22:33.0549988Z 6: [ RUN      ] TestLogRecorder.IsolatedGetUserCallbackReturnsValidCallback
+2026-10-20T11:22:33.0550371Z 6: [       OK ] TestLogRecorder.IsolatedGetUserCallbackReturnsValidCallback (0 ms)
+2026-10-20T11:22:33.0550733Z 6: [ RUN      ] TestLogRecorder.IsolatedUserCallbackRecordsToIsolatedInstance
+2026-10-20T11:22:33.0551049Z 6: [       OK ] TestLogRecorder.IsolatedUserCallbackRecordsToIsolatedInstance (0 ms)
+2026-10-20T11:22:33.0551366Z 6: [ RUN      ] TestLogRecorder.IsolatedUserCallbackIgnoresNullMessage
+2026-10-20T11:22:33.0551632Z 6: [       OK ] TestLogRecorder.IsolatedUserCallbackIgnoresNullMessage (0 ms)
+2026-10-20T11:22:33.0551869Z 6: [ RUN      ] TestLogRecorder.IsolatedRecorderClearLogsEmptiesBuffer
+2026-10-20T11:22:33.0552135Z 6: [       OK ] TestLogRecorder.IsolatedRecorderClearLogsEmptiesBuffer (0 ms)
+2026-10-20T11:22:33.0552402Z 6: [ RUN      ] TestLogRecorder.IsolatedRecorderClearLogsAllowsNewRecording
+2026-10-20T11:22:33.0552692Z 6: [       OK ] TestLogRecorder.IsolatedRecorderClearLogsAllowsNewRecording (0 ms)
+2026-10-20T11:22:33.0552949Z 6: [ RUN      ] TestLogRecorder.IsolatedAndSharedInstancesAreIndependent
+2026-10-20T11:22:33.0553239Z 6: [       OK ] TestLogRecorder.IsolatedAndSharedInstancesAreIndependent (0 ms)
+2026-10-20T11:22:33.0553481Z 6: [ RUN      ] TestLogRecorder.SharedAndIsolatedInstancesAreSeparate
+2026-10-20T11:22:33.0553750Z 6: [       OK ] TestLogRecorder.SharedAndIsolatedInstancesAreSeparate (0 ms)
+2026-10-20T11:22:33.0553955Z 6: [ RUN      ] TestLogRecorder.LogsDoNotLeakBetweenInstances
+2026-10-20T11:22:33.0554173Z 6: [       OK ] TestLogRecorder.LogsDoNotLeakBetweenInstances (0 ms)
+2026-10-20T11:22:33.0554409Z 6: [ RUN      ] TestLogRecorder.SharedAndIsolatedRecordersWorkTogether
+2026-10-20T11:22:33.0554680Z 6: [       OK ] TestLogRecorder.SharedAndIsolatedRecordersWorkTogether (0 ms)
+2026-10-20T11:22:33.0554934Z 6: [ RUN      ] TestLogRecorder.WaitForLogCountReturnsTrueWhenAlreadyMet
+2026-10-20T11:22:33.0555210Z 6: [       OK ] TestLogRecorder.WaitForLogCountReturnsTrueWhenAlreadyMet (0 ms)
+2026-10-20T11:22:33.0555442Z 6: [ RUN      ] TestLogRecorder.WaitForLogCountReturnsFalseOnTimeout
+2026-10-20T11:22:33.1022142Z 6: [       OK ] TestLogRecorder.WaitForLogCountReturnsFalseOnTimeout (50 ms)
+2026-10-20T11:22:33.1022531Z 6: [ RUN      ] TestLogRecorder.WaitForLogCountZeroTargetReturnsTrueImmediately
+2026-10-20T11:22:33.1022917Z 6: [       OK ] TestLogRecorder.WaitForLogCountZeroTargetReturnsTrueImmediately (0 ms)
+2026-10-20T11:22:33.1023293Z 6: [ RUN      ] TestLogRecorder.WaitForLogsContainingReturnsTrueWhenAlreadyPresent
+2026-10-20T11:22:33.1023700Z 6: [       OK ] TestLogRecorder.WaitForLogsContainingReturnsTrueWhenAlreadyPresent (0 ms)
+2026-10-20T11:22:33.1024004Z 6: [ RUN      ] TestLogRecorder.WaitForLogsContainingReturnsFalseOnTimeout
+2026-10-20T11:22:33.1121977Z 6: [       OK ] TestLogRecorder.WaitForLogsContainingReturnsFalseOnTimeout (10 ms)
+2026-10-20T11:22:33.1122371Z 6: [ RUN      ] TestLogRecorder.WaitForLogsContainingEmptyListReturnsTrueImmediately
+2026-10-20T11:22:33.1122813Z 6: [       OK ] TestLogRecorder.WaitForLogsContainingEmptyListReturnsTrueImmediately (0 ms)
+2026-10-20T11:22:33.1123023Z 6: [----------] 57 tests from TestLogRecorder (60 ms total)
+2026-10-20T11:22:33.1123148Z 6: 
+2026-10-20T11:22:33.1123332Z 6: [----------] 2 tests from TestScopedDirectory
+2026-10-20T11:22:33.1123528Z 6: [ RUN      ] TestScopedDirectory.CreatesAndDestroys
+2026-10-20T11:22:33.1123761Z 6: [       OK ] TestScopedDirectory.CreatesAndDestroys (0 ms)
+2026-10-20T11:22:33.1123950Z 6: [ RUN      ] TestScopedDirectory.ExistingPath
+2026-10-20T11:22:33.1124175Z 6: [       OK ] TestScopedDirectory.ExistingPath (0 ms)
+2026-10-20T11:22:33.1124615Z 6: [----------] 2 tests from TestScopedDirectory (0 ms total)
+2026-10-20T11:22:33.1124746Z 6: 
+2026-10-20T11:22:33.1124983Z 6: [----------] 4 tests from TestScopedEnvironmentVariableSetter
+2026-10-20T11:22:33.1125324Z 6: [ RUN      ] TestScopedEnvironmentVariableSetter.RestoresOriginalValue
+2026-10-20T11:22:33.1125660Z 6: [       OK ] TestScopedEnvironmentVariableSetter.RestoresOriginalValue (0 ms)
+2026-10-20T11:22:33.1126290Z 6: [ RUN      ] TestScopedEnvironmentVariableSetter.RestoresUnsetVariable
+2026-10-20T11:22:33.1126651Z 6: [       OK ] TestScopedEnvironmentVariableSetter.RestoresUnsetVariable (0 ms)
+2026-10-20T11:22:33.1127141Z 6: [ RUN      ] TestScopedEnvironmentVariableSetter.HandlesEmptyValue
+2026-10-20T11:22:33.1127463Z 6: [       OK ] TestScopedEnvironmentVariableSetter.HandlesEmptyValue (0 ms)
+2026-10-20T11:22:33.1127823Z 6: [ RUN      ] TestScopedEnvironmentVariableSetter.SetValueMethod
+2026-10-20T11:22:33.1128105Z 6: [       OK ] TestScopedEnvironmentVariableSetter.SetValueMethod (0 ms)
+2026-10-20T11:22:33.1128400Z 6: [----------] 4 tests from TestScopedEnvironmentVariableSetter (0 ms total)
+2026-10-20T11:22:33.1128512Z 6: 
+2026-10-20T11:22:33.1128683Z 6: [----------] 3 tests from TestScratchDirectory
+2026-10-20T11:22:33.1129133Z 6: [ RUN      ] TestScratchDirectory.WalksPastANameSomethingElseAlreadyHoldsAndLeavesItIntact
+2026-10-20T11:22:33.1131407Z 6: [       OK ] TestScratchDirectory.WalksPastANameSomethingElseAlreadyHoldsAndLeavesItIntact (0 ms)
+2026-10-20T11:22:33.1131749Z 6: [ RUN      ] TestScratchDirectory.NamesTheDirectoryAfterItsLabelAndACounter
+2026-10-20T11:22:33.1132140Z 6: [       OK ] TestScratchDirectory.NamesTheDirectoryAfterItsLabelAndACounter (0 ms)
+2026-10-20T11:22:33.1132578Z 6: [ RUN      ] TestScratchDirectory.ReportsAnUnusableTempDirectoryRatherThanNameExhaustion
+2026-10-20T11:22:33.1133312Z 6: [       OK ] TestScratchDirectory.ReportsAnUnusableTempDirectoryRatherThanNameExhaustion (0 ms)
+2026-10-20T11:22:33.1133526Z 6: [----------] 3 tests from TestScratchDirectory (0 ms total)
+2026-10-20T11:22:33.1133634Z 6: 
+2026-10-20T11:22:33.1133805Z 6: [----------] 9 tests from TestSeeds
+2026-10-20T11:22:33.1134042Z 6: [ RUN      ] TestSeeds.ReturnsDefaultSeedWhenEnvVarNotSet
+2026-10-20T11:22:33.1134320Z 6: [       OK ] TestSeeds.ReturnsDefaultSeedWhenEnvVarNotSet (0 ms)
+2026-10-20T11:22:33.1134557Z 6: [ RUN      ] TestSeeds.ReturnsDefaultSeedWhenEnvVarIsEmpty
+2026-10-20T11:22:33.1134815Z 6: [       OK ] TestSeeds.ReturnsDefaultSeedWhenEnvVarIsEmpty (0 ms)
+2026-10-20T11:22:33.1135085Z 6: [ RUN      ] TestSeeds.ReturnsSpecificSeedWhenNumericValueProvided
+2026-10-20T11:22:33.1135394Z 6: [       OK ] TestSeeds.ReturnsSpecificSeedWhenNumericValueProvided (0 ms)
+2026-10-20T11:22:33.1135581Z 6: [ RUN      ] TestSeeds.HandlesLargeNumericValues
+2026-10-20T11:22:33.1135796Z 6: [       OK ] TestSeeds.HandlesLargeNumericValues (0 ms)
+2026-10-20T11:22:33.1136161Z 6: [ RUN      ] TestSeeds.ReturnsRandomSeedWhenRandomSpecified
+2026-10-20T11:22:33.1136427Z 6: [       OK ] TestSeeds.ReturnsRandomSeedWhenRandomSpecified (0 ms)
+2026-10-20T11:22:33.1136618Z 6: [ RUN      ] TestSeeds.RandomIsCaseInsensitive
+2026-10-20T11:22:33.1139182Z 6: [       OK ] TestSeeds.RandomIsCaseInsensitive (0 ms)
+2026-10-20T11:22:33.1141486Z 6: [ RUN      ] TestSeeds.ReturnsDefaultSeedForInvalidNumericValue
+2026-10-20T11:22:33.1142238Z 6: [       OK ] TestSeeds.ReturnsDefaultSeedForInvalidNumericValue (0 ms)
+2026-10-20T11:22:33.1142750Z 6: [ RUN      ] TestSeeds.ReturnsDefaultSeedForOutOfRangeValue
+2026-10-20T11:22:33.1143234Z 6: [       OK ] TestSeeds.ReturnsDefaultSeedForOutOfRangeValue (0 ms)
+2026-10-20T11:22:33.1143664Z 6: [ RUN      ] TestSeeds.ConsistentSeedProducesSameValue
+2026-10-20T11:22:33.1144124Z 6: [       OK ] TestSeeds.ConsistentSeedProducesSameValue (0 ms)
+2026-10-20T11:22:33.1144562Z 6: [----------] 9 tests from TestSeeds (0 ms total)
+2026-10-20T11:22:33.1144768Z 6: 
+2026-10-20T11:22:33.1145131Z 6: [----------] 6 tests from TestComputeTensorDiff
+2026-10-20T11:22:33.1145536Z 6: [ RUN      ] TestComputeTensorDiff.IdenticalTensorsHaveNoMismatches
+2026-10-20T11:22:33.1157693Z 6: [       OK ] TestComputeTensorDiff.IdenticalTensorsHaveNoMismatches (1 ms)
+2026-10-20T11:22:33.1158176Z 6: [ RUN      ] TestComputeTensorDiff.DetectsSingleMismatch
+2026-10-20T11:22:33.1163098Z 6: [       OK ] TestComputeTensorDiff.DetectsSingleMismatch (0 ms)
+2026-10-20T11:22:33.1163693Z 6: [ RUN      ] TestComputeTensorDiff.MismatchesWithinToleranceAreIgnored
+2026-10-20T11:22:33.1166892Z 6: [       OK ] TestComputeTensorDiff.MismatchesWithinToleranceAreIgnored (0 ms)
+2026-10-20T11:22:33.1167437Z 6: [ RUN      ] TestComputeTensorDiff.ShapeMismatchReturnsEmptySummary
+2026-10-20T11:22:33.1168212Z 6: [       OK ] TestComputeTensorDiff.ShapeMismatchReturnsEmptySummary (0 ms)
+2026-10-20T11:22:33.1169128Z 6: [ RUN      ] TestComputeTensorDiff.WorstMismatchesCappedAtMaxMismatches
+2026-10-20T11:22:33.1177057Z 6: [       OK ] TestComputeTensorDiff.WorstMismatchesCappedAtMaxMismatches (1 ms)
+2026-10-20T11:22:33.1177597Z 6: [ RUN      ] TestComputeTensorDiff.ZeroMaxMismatchesSuppressesEntries
+2026-10-20T11:22:33.1179791Z 6: [       OK ] TestComputeTensorDiff.ZeroMaxMismatchesSuppressesEntries (0 ms)
+2026-10-20T11:22:33.1180253Z 6: [----------] 6 tests from TestComputeTensorDiff (4 ms total)
+2026-10-20T11:22:33.1180450Z 6: 
+2026-10-20T11:22:33.1180786Z 6: [----------] 2 tests from TestPrintTensorDiffSummary
+2026-10-20T11:22:33.1181248Z 6: [ RUN      ] TestPrintTensorDiffSummary.OutputContainsExpectedFields
+2026-10-20T11:22:33.1181791Z 6: [       OK ] TestPrintTensorDiffSummary.OutputContainsExpectedFields (0 ms)
+2026-10-20T11:22:33.1182371Z 6: [ RUN      ] TestPrintTensorDiffSummary.NoMismatchesOmitsWorstSection
+2026-10-20T11:22:33.1182885Z 6: [       OK ] TestPrintTensorDiffSummary.NoMismatchesOmitsWorstSection (0 ms)
+2026-10-20T11:22:33.1183321Z 6: [----------] 2 tests from TestPrintTensorDiffSummary (0 ms total)
+2026-10-20T11:22:33.1183527Z 6: 
+2026-10-20T11:22:33.1183890Z 6: [----------] 3 tests from TestValidateAndReport
+2026-10-20T11:22:33.1184348Z 6: [ RUN      ] TestValidateAndReport.PassingValidationPrintsSuccessful
+2026-10-20T11:22:33.1189372Z 6: [       OK ] TestValidateAndReport.PassingValidationPrintsSuccessful (0 ms)
+2026-10-20T11:22:33.1189845Z 6: [ RUN      ] TestValidateAndReport.FailingValidationPrintsDiff
+2026-10-20T11:22:33.1205414Z 6: [       OK ] TestValidateAndReport.FailingValidationPrintsDiff (1 ms)
+2026-10-20T11:22:33.1206039Z 6: [ RUN      ] TestValidateAndReport.ShapeMismatchPrintsShapeError
+2026-10-20T11:22:33.1206817Z 6: [       OK ] TestValidateAndReport.ShapeMismatchPrintsShapeError (0 ms)
+2026-10-20T11:22:33.1207208Z 6: [----------] 3 tests from TestValidateAndReport (2 ms total)
+2026-10-20T11:22:33.1207451Z 6: 
+2026-10-20T11:22:33.1207836Z 6: [----------] 6 tests from RaggedTensorDiff/0, where TypeParam = float
+2026-10-20T11:22:33.1208295Z 6: [ RUN      ] RaggedTensorDiff/0.IdenticalTensorsCountInBlockElements
+2026-10-20T11:22:33.1236577Z 6: [       OK ] RaggedTensorDiff/0.IdenticalTensorsCountInBlockElements (3 ms)
+2026-10-20T11:22:33.1237073Z 6: [ RUN      ] RaggedTensorDiff/0.InBlockNaNReferenceIsExcluded
+2026-10-20T11:22:33.1274104Z 6: [       OK ] RaggedTensorDiff/0.InBlockNaNReferenceIsExcluded (3 ms)
+2026-10-20T11:22:33.1274437Z 6: [ RUN      ] RaggedTensorDiff/0.ReportsInBlockDifference
+2026-10-20T11:22:33.1301679Z 6: [       OK ] RaggedTensorDiff/0.ReportsInBlockDifference (2 ms)
+2026-10-20T11:22:33.1302114Z 6: [ RUN      ] RaggedTensorDiff/0.MismatchedLayoutsReturnEmptySummary
+2026-10-20T11:22:33.1302530Z 6: [       OK ] RaggedTensorDiff/0.MismatchedLayoutsReturnEmptySummary (0 ms)
+2026-10-20T11:22:33.1302924Z 6: [ RUN      ] RaggedTensorDiff/0.ValidateAndReportPrintsLayoutMismatch
+2026-10-20T11:22:33.1303358Z 6: [       OK ] RaggedTensorDiff/0.ValidateAndReportPrintsLayoutMismatch (0 ms)
+2026-10-20T11:22:33.1303864Z 6: [ RUN      ] RaggedTensorDiff/0.ValidateAndReportPrintsLayoutMismatchAgainstDense
+2026-10-20T11:22:33.1304403Z 6: [       OK ] RaggedTensorDiff/0.ValidateAndReportPrintsLayoutMismatchAgainstDense (0 ms)
+2026-10-20T11:22:33.1304938Z 6: [----------] 6 tests from RaggedTensorDiff/0 (9 ms total)
+2026-10-20T11:22:33.1305110Z 6: 
+2026-10-20T11:22:33.1305641Z 6: [----------] 6 tests from RaggedTensorDiff/1, where TypeParam = hipdnn_data_sdk::types::half
+2026-10-20T11:22:33.1306182Z 6: [ RUN      ] RaggedTensorDiff/1.IdenticalTensorsCountInBlockElements
+2026-10-20T11:22:33.1328813Z 6: [       OK ] RaggedTensorDiff/1.IdenticalTensorsCountInBlockElements (2 ms)
+2026-10-20T11:22:33.1329398Z 6: [ RUN      ] RaggedTensorDiff/1.InBlockNaNReferenceIsExcluded
+2026-10-20T11:22:33.1355084Z 6: [       OK ] RaggedTensorDiff/1.InBlockNaNReferenceIsExcluded (2 ms)
+2026-10-20T11:22:33.1355614Z 6: [ RUN      ] RaggedTensorDiff/1.ReportsInBlockDifference
+2026-10-20T11:22:33.1381649Z 6: [       OK ] RaggedTensorDiff/1.ReportsInBlockDifference (2 ms)
+2026-10-20T11:22:33.1382309Z 6: [ RUN      ] RaggedTensorDiff/1.MismatchedLayoutsReturnEmptySummary
+2026-10-20T11:22:33.1382714Z 6: [       OK ] RaggedTensorDiff/1.MismatchedLayoutsReturnEmptySummary (0 ms)
+2026-10-20T11:22:33.1383112Z 6: [ RUN      ] RaggedTensorDiff/1.ValidateAndReportPrintsLayoutMismatch
+2026-10-20T11:22:33.1383539Z 6: [       OK ] RaggedTensorDiff/1.ValidateAndReportPrintsLayoutMismatch (0 ms)
+2026-10-20T11:22:33.1384040Z 6: [ RUN      ] RaggedTensorDiff/1.ValidateAndReportPrintsLayoutMismatchAgainstDense
+2026-10-20T11:22:33.1384566Z 6: [       OK ] RaggedTensorDiff/1.ValidateAndReportPrintsLayoutMismatchAgainstDense (0 ms)
+2026-10-20T11:22:33.1384866Z 6: [----------] 6 tests from RaggedTensorDiff/1 (7 ms total)
+2026-10-20T11:22:33.1385083Z 6: 
+2026-10-20T11:22:33.1386054Z 6: [----------] 6 tests from RaggedTensorDiff/2, where TypeParam = hipdnn_data_sdk::types::bfloat16_t<(hipdnn_data_sdk::types::Bfloat16RoundingMode)0>
+2026-10-20T11:22:33.1386457Z 6: [ RUN      ] RaggedTensorDiff/2.IdenticalTensorsCountInBlockElements
+2026-10-20T11:22:33.1406540Z 6: [       OK ] RaggedTensorDiff/2.IdenticalTensorsCountInBlockElements (2 ms)
+2026-10-20T11:22:33.1406941Z 6: [ RUN      ] RaggedTensorDiff/2.InBlockNaNReferenceIsExcluded
+2026-10-20T11:22:33.1434230Z 6: [       OK ] RaggedTensorDiff/2.InBlockNaNReferenceIsExcluded (2 ms)
+2026-10-20T11:22:33.1434523Z 6: [ RUN      ] RaggedTensorDiff/2.ReportsInBlockDifference
+2026-10-20T11:22:33.1460220Z 6: [       OK ] RaggedTensorDiff/2.ReportsInBlockDifference (2 ms)
+2026-10-20T11:22:33.1460667Z 6: [ RUN      ] RaggedTensorDiff/2.MismatchedLayoutsReturnEmptySummary
+2026-10-20T11:22:33.1461099Z 6: [       OK ] RaggedTensorDiff/2.MismatchedLayoutsReturnEmptySummary (0 ms)
+2026-10-20T11:22:33.1461521Z 6: [ RUN      ] RaggedTensorDiff/2.ValidateAndReportPrintsLayoutMismatch
+2026-10-20T11:22:33.1461968Z 6: [       OK ] RaggedTensorDiff/2.ValidateAndReportPrintsLayoutMismatch (0 ms)
+2026-10-20T11:22:33.1462487Z 6: [ RUN      ] RaggedTensorDiff/2.ValidateAndReportPrintsLayoutMismatchAgainstDense
+2026-10-20T11:22:33.1463035Z 6: [       OK ] RaggedTensorDiff/2.ValidateAndReportPrintsLayoutMismatchAgainstDense (0 ms)
+2026-10-20T11:22:33.1463319Z 6: [----------] 6 tests from RaggedTensorDiff/2 (7 ms total)
+2026-10-20T11:22:33.1463493Z 6: 
+2026-10-20T11:22:33.1463743Z 6: [----------] 11 tests from TestVectorLoggingUtils
+2026-10-20T11:22:33.1464061Z 6: [ RUN      ] TestVectorLoggingUtils.FormatsEmptyVector
+2026-10-20T11:22:33.1464389Z 6: [       OK ] TestVectorLoggingUtils.FormatsEmptyVector (0 ms)
+2026-10-20T11:22:33.1464723Z 6: [ RUN      ] TestVectorLoggingUtils.FormatsSingleElement
+2026-10-20T11:22:33.1465098Z 6: [       OK ] TestVectorLoggingUtils.FormatsSingleElement (0 ms)
+2026-10-20T11:22:33.1465434Z 6: [ RUN      ] TestVectorLoggingUtils.FormatsMultipleElements
+2026-10-20T11:22:33.1465832Z 6: [       OK ] TestVectorLoggingUtils.FormatsMultipleElements (0 ms)
+2026-10-20T11:22:33.1466256Z 6: [ RUN      ] TestVectorLoggingUtils.FormatsNegativeNumbers
+2026-10-20T11:22:33.1466629Z 6: [       OK ] TestVectorLoggingUtils.FormatsNegativeNumbers (0 ms)
+2026-10-20T11:22:33.1466945Z 6: [ RUN      ] TestVectorLoggingUtils.FormatsLargeNumbers
+2026-10-20T11:22:33.1467558Z 6: [       OK ] TestVectorLoggingUtils.FormatsLargeNumbers (0 ms)
+2026-10-20T11:22:33.1467881Z 6: [ RUN      ] TestVectorLoggingUtils.FormatsMinMaxValues
+2026-10-20T11:22:33.1468218Z 6: [       OK ] TestVectorLoggingUtils.FormatsMinMaxValues (0 ms)
+2026-10-20T11:22:33.1468560Z 6: [ RUN      ] TestVectorLoggingUtils.WorksWithFormatStrings
+2026-10-20T11:22:33.1468906Z 6: [       OK ] TestVectorLoggingUtils.WorksWithFormatStrings (0 ms)
+2026-10-20T11:22:33.1469617Z 6: [ RUN      ] TestVectorLoggingUtils.FormatsMultipleVectorsInSameString
+2026-10-20T11:22:33.1470326Z 6: [       OK ] TestVectorLoggingUtils.FormatsMultipleVectorsInSameString (0 ms)
+2026-10-20T11:22:33.1470655Z 6: [ RUN      ] TestVectorLoggingUtils.FormatsZeroValues
+2026-10-20T11:22:33.1471221Z 6: [       OK ] TestVectorLoggingUtils.FormatsZeroValues (0 ms)
+2026-10-20T11:22:33.1471542Z 6: [ RUN      ] TestVectorLoggingUtils.PreservesElementOrder
+2026-10-20T11:22:33.1471921Z 6: [       OK ] TestVectorLoggingUtils.PreservesElementOrder (0 ms)
+2026-10-20T11:22:33.1472296Z 6: [ RUN      ] TestVectorLoggingUtils.HandlesAlternatingSignValues
+2026-10-20T11:22:33.1472727Z 6: [       OK ] TestVectorLoggingUtils.HandlesAlternatingSignValues (0 ms)
+2026-10-20T11:22:33.1473035Z 6: [----------] 11 tests from TestVectorLoggingUtils (0 ms total)
+2026-10-20T11:22:33.1473173Z 6: 
+2026-10-20T11:22:33.1473437Z 6: [----------] 2 tests from TestBlockScaleDequantizePlan
+2026-10-20T11:22:33.1473711Z 6: [ RUN      ] TestBlockScaleDequantizePlan.ExecutePlan
+2026-10-20T11:22:33.2285484Z 6: [       OK ] TestBlockScaleDequantizePlan.ExecutePlan (82 ms)
+2026-10-20T11:22:33.2286958Z 6: [ RUN      ] TestBlockScaleDequantizePlan.ExecutePlanNegativeScale
+2026-10-20T11:22:33.3313632Z 6: [       OK ] TestBlockScaleDequantizePlan.ExecutePlanNegativeScale (102 ms)
+2026-10-20T11:22:33.3314233Z 6: [----------] 2 tests from TestBlockScaleDequantizePlan (185 ms total)
+2026-10-20T11:22:33.3314440Z 6: 
+2026-10-20T11:22:33.3314879Z 6: [----------] 2 tests from TestBlockScaleDequantizePlanBuilder
+2026-10-20T11:22:33.3315516Z 6: [ RUN      ] TestBlockScaleDequantizePlanBuilder.PlanConstruction
+2026-10-20T11:22:33.3316186Z 6: [       OK ] TestBlockScaleDequantizePlanBuilder.PlanConstruction (0 ms)
+2026-10-20T11:22:33.3316657Z 6: [ RUN      ] TestBlockScaleDequantizePlanBuilder.IsApplicable
+2026-10-20T11:22:33.3317099Z 6: [       OK ] TestBlockScaleDequantizePlanBuilder.IsApplicable (0 ms)
+2026-10-20T11:22:33.3317634Z 6: [----------] 2 tests from TestBlockScaleDequantizePlanBuilder (0 ms total)
+2026-10-20T11:22:33.3317814Z 6: 
+2026-10-20T11:22:33.3319496Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/0, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)8,(hipdnn_flatbuffers_sdk::data_objects::DataType)10,(hipdnn_flatbuffers_sdk::data_objects::DataType)1>
+2026-10-20T11:22:33.3319902Z 6: [ RUN      ] BlockScaleDequantizeMxPlan/0.ExecutePlan
+2026-10-20T11:22:33.3324048Z 6: [       OK ] BlockScaleDequantizeMxPlan/0.ExecutePlan (1 ms)
+2026-10-20T11:22:33.3324603Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/0 (1 ms total)
+2026-10-20T11:22:33.3324870Z 6: 
+2026-10-20T11:22:33.3326589Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/1, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)8,(hipdnn_flatbuffers_sdk::data_objects::DataType)10,(hipdnn_flatbuffers_sdk::data_objects::DataType)2>
+2026-10-20T11:22:33.3326953Z 6: [ RUN      ] BlockScaleDequantizeMxPlan/1.ExecutePlan
+2026-10-20T11:22:33.3334188Z 6: [       OK ] BlockScaleDequantizeMxPlan/1.ExecutePlan (1 ms)
+2026-10-20T11:22:33.3334791Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/1 (1 ms total)
+2026-10-20T11:22:33.3335026Z 6: 
+2026-10-20T11:22:33.3336857Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/2, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)9,(hipdnn_flatbuffers_sdk::data_objects::DataType)10,(hipdnn_flatbuffers_sdk::data_objects::DataType)1>
+2026-10-20T11:22:33.3337473Z 6: [ RUN      ] BlockScaleDequantizeMxPlan/2.ExecutePlan
+2026-10-20T11:22:33.3346265Z 6: [       OK ] BlockScaleDequantizeMxPlan/2.ExecutePlan (1 ms)
+2026-10-20T11:22:33.3347091Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/2 (1 ms total)
+2026-10-20T11:22:33.3347719Z 6: 
+2026-10-20T11:22:33.3349438Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/3, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)9,(hipdnn_flatbuffers_sdk::data_objects::DataType)10,(hipdnn_flatbuffers_sdk::data_objects::DataType)2>
+2026-10-20T11:22:33.3351211Z 6: [ RUN      ] BlockScaleDequantizeMxPlan/3.ExecutePlan
+2026-10-20T11:22:33.3356994Z 6: [       OK ] BlockScaleDequantizeMxPlan/3.ExecutePlan (1 ms)
+2026-10-20T11:22:33.3357750Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/3 (1 ms total)
+2026-10-20T11:22:33.3358670Z 6: 
+2026-10-20T11:22:33.3360070Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/4, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)11,(hipdnn_flatbuffers_sdk::data_objects::DataType)10,(hipdnn_flatbuffers_sdk::data_objects::DataType)1>
+2026-10-20T11:22:33.3361688Z 6: [ RUN      ] BlockScaleDequantizeMxPlan/4.ExecutePlan
+2026-10-20T11:22:33.3367028Z 6: [       OK ] BlockScaleDequantizeMxPlan/4.ExecutePlan (1 ms)
+2026-10-20T11:22:33.3367825Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/4 (1 ms total)
+2026-10-20T11:22:33.3368819Z 6: 
+2026-10-20T11:22:33.3370268Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/5, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)11,(hipdnn_flatbuffers_sdk::data_objects::DataType)10,(hipdnn_flatbuffers_sdk::data_objects::DataType)2>
+2026-10-20T11:22:33.3371910Z 6: [ RUN      ] BlockScaleDequantizeMxPlan/5.ExecutePlan
+2026-10-20T11:22:33.3377800Z 6: [       OK ] BlockScaleDequantizeMxPlan/5.ExecutePlan (1 ms)
+2026-10-20T11:22:33.3378917Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/5 (1 ms total)
+2026-10-20T11:22:33.3379868Z 6: 
+2026-10-20T11:22:33.3381842Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/6, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)12,(hipdnn_flatbuffers_sdk::data_objects::DataType)10,(hipdnn_flatbuffers_sdk::data_objects::DataType)1>
+2026-10-20T11:22:33.3384164Z 6: [ RUN      ] BlockScaleDequantizeMxPlan/6.ExecutePlan
+2026-10-20T11:22:33.3389189Z 6: [       OK ] BlockScaleDequantizeMxPlan/6.ExecutePlan (1 ms)
+2026-10-20T11:22:33.3390303Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/6 (1 ms total)
+2026-10-20T11:22:33.3391120Z 6: 
+2026-10-20T11:22:33.3393047Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/7, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)12,(hipdnn_flatbuffers_sdk::data_objects::DataType)10,(hipdnn_flatbuffers_sdk::data_objects::DataType)2>
+2026-10-20T11:22:33.3395271Z 6: [ RUN      ] BlockScaleDequantizeMxPlan/7.ExecutePlan
+2026-10-20T11:22:33.3400015Z 6: [       OK ] BlockScaleDequantizeMxPlan/7.ExecutePlan (1 ms)
+2026-10-20T11:22:33.3401085Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/7 (1 ms total)
+2026-10-20T11:22:33.3401953Z 6: 
+2026-10-20T11:22:33.3403785Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/8, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)13,(hipdnn_flatbuffers_sdk::data_objects::DataType)10,(hipdnn_flatbuffers_sdk::data_objects::DataType)1>
+2026-10-20T11:22:33.3406041Z 6: [ RUN      ] BlockScaleDequantizeMxPlan/8.ExecutePlan
+2026-10-20T11:22:33.3409809Z 6: [       OK ] BlockScaleDequantizeMxPlan/8.ExecutePlan (0 ms)
+2026-10-20T11:22:33.3410900Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/8 (0 ms total)
+2026-10-20T11:22:33.3411739Z 6: 
+2026-10-20T11:22:33.3413598Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/9, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)13,(hipdnn_flatbuffers_sdk::data_objects::DataType)10,(hipdnn_flatbuffers_sdk::data_objects::DataType)2>
+2026-10-20T11:22:33.3416052Z 6: [ RUN      ] BlockScaleDequantizeMxPlan/9.ExecutePlan
+2026-10-20T11:22:33.3420388Z 6: [       OK ] BlockScaleDequantizeMxPlan/9.ExecutePlan (1 ms)
+2026-10-20T11:22:33.3421448Z 6: [----------] 1 test from BlockScaleDequantizeMxPlan/9 (1 ms total)
+2026-10-20T11:22:33.3422434Z 6: 
+2026-10-20T11:22:33.3424674Z 6: [----------] 1 test from BlockScaleDequantizeNonFloatInputPlan/0, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)2,(hipdnn_flatbuffers_sdk::data_objects::DataType)1,(hipdnn_flatbuffers_sdk::data_objects::DataType)1>
+2026-10-20T11:22:33.3427261Z 6: [ RUN      ] BlockScaleDequantizeNonFloatInputPlan/0.ExecutePlan
+2026-10-20T11:22:33.3432075Z 6: [       OK ] BlockScaleDequantizeNonFloatInputPlan/0.ExecutePlan (1 ms)
+2026-10-20T11:22:33.3433397Z 6: [----------] 1 test from BlockScaleDequantizeNonFloatInputPlan/0 (1 ms total)
+2026-10-20T11:22:33.3434592Z 6: 
+2026-10-20T11:22:33.3436956Z 6: [----------] 1 test from BlockScaleDequantizeNonFloatInputPlan/1, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)2,(hipdnn_flatbuffers_sdk::data_objects::DataType)1,(hipdnn_flatbuffers_sdk::data_objects::DataType)2>
+2026-10-20T11:22:33.3439361Z 6: [ RUN      ] BlockScaleDequantizeNonFloatInputPlan/1.ExecutePlan
+2026-10-20T11:22:33.3445534Z 6: [       OK ] BlockScaleDequantizeNonFloatInputPlan/1.ExecutePlan (1 ms)
+2026-10-20T11:22:33.3446940Z 6: [----------] 1 test from BlockScaleDequantizeNonFloatInputPlan/1 (1 ms total)
+2026-10-20T11:22:33.3447859Z 6: 
+2026-10-20T11:22:33.3449869Z 6: [----------] 1 test from BlockScaleDequantizeNonFloatInputPlan/2, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)3,(hipdnn_flatbuffers_sdk::data_objects::DataType)1,(hipdnn_flatbuffers_sdk::data_objects::DataType)1>
+2026-10-20T11:22:33.3452237Z 6: [ RUN      ] BlockScaleDequantizeNonFloatInputPlan/2.ExecutePlan
+2026-10-20T11:22:33.3457059Z 6: [       OK ] BlockScaleDequantizeNonFloatInputPlan/2.ExecutePlan (1 ms)
+2026-10-20T11:22:33.3458308Z 6: [----------] 1 test from BlockScaleDequantizeNonFloatInputPlan/2 (1 ms total)
+2026-10-20T11:22:33.3459286Z 6: 
+2026-10-20T11:22:33.3461150Z 6: [----------] 1 test from BlockScaleDequantizeNonFloatInputPlan/3, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)3,(hipdnn_flatbuffers_sdk::data_objects::DataType)1,(hipdnn_flatbuffers_sdk::data_objects::DataType)3>
+2026-10-20T11:22:33.3463357Z 6: [ RUN      ] BlockScaleDequantizeNonFloatInputPlan/3.ExecutePlan
+2026-10-20T11:22:33.3469168Z 6: [       OK ] BlockScaleDequantizeNonFloatInputPlan/3.ExecutePlan (1 ms)
+2026-10-20T11:22:33.3470402Z 6: [----------] 1 test from BlockScaleDequantizeNonFloatInputPlan/3 (1 ms total)
+2026-10-20T11:22:33.3471308Z 6: 
+2026-10-20T11:22:33.3472925Z 6: [----------] 1 test from BlockScaleDequantizeMxIsApplicable/0, where TypeParam = MxIsApplicableConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)11,(hipdnn_flatbuffers_sdk::data_objects::DataType)12>
+2026-10-20T11:22:33.3475042Z 6: [ RUN      ] BlockScaleDequantizeMxIsApplicable/0.MatchingTypeIsApplicable
+2026-10-20T11:22:33.3476368Z 6: [       OK ] BlockScaleDequantizeMxIsApplicable/0.MatchingTypeIsApplicable (0 ms)
+2026-10-20T11:22:33.3477575Z 6: [----------] 1 test from BlockScaleDequantizeMxIsApplicable/0 (0 ms total)
+2026-10-20T11:22:33.3478407Z 6: 
+2026-10-20T11:22:33.3480052Z 6: [----------] 1 test from BlockScaleDequantizeMxIsApplicable/1, where TypeParam = MxIsApplicableConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)12,(hipdnn_flatbuffers_sdk::data_objects::DataType)13>
+2026-10-20T11:22:33.3482190Z 6: [ RUN      ] BlockScaleDequantizeMxIsApplicable/1.MatchingTypeIsApplicable
+2026-10-20T11:22:33.3483439Z 6: [       OK ] BlockScaleDequantizeMxIsApplicable/1.MatchingTypeIsApplicable (0 ms)
+2026-10-20T11:22:33.3484605Z 6: [----------] 1 test from BlockScaleDequantizeMxIsApplicable/1 (0 ms total)
+2026-10-20T11:22:33.3485415Z 6: 
+2026-10-20T11:22:33.3487117Z 6: [----------] 1 test from BlockScaleDequantizeMxIsApplicable/2, where TypeParam = MxIsApplicableConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)13,(hipdnn_flatbuffers_sdk::data_objects::DataType)11>
+2026-10-20T11:22:33.3489377Z 6: [ RUN      ] BlockScaleDequantizeMxIsApplicable/2.MatchingTypeIsApplicable
+2026-10-20T11:22:33.3490648Z 6: [       OK ] BlockScaleDequantizeMxIsApplicable/2.MatchingTypeIsApplicable (0 ms)
+2026-10-20T11:22:33.3491855Z 6: [----------] 1 test from BlockScaleDequantizeMxIsApplicable/2 (0 ms total)
+2026-10-20T11:22:33.3492721Z 6: 
+2026-10-20T11:22:33.3493570Z 6: [----------] 4 tests from TestBlockScaleDequantizeSignatureKey
+2026-10-20T11:22:33.3494614Z 6: [ RUN      ] TestBlockScaleDequantizeSignatureKey.EqualityOperator
+2026-10-20T11:22:33.3495836Z 6: [       OK ] TestBlockScaleDequantizeSignatureKey.EqualityOperator (0 ms)
+2026-10-20T11:22:33.3497037Z 6: [ RUN      ] TestBlockScaleDequantizeSignatureKey.HashFunction
+2026-10-20T11:22:33.3498118Z 6: [       OK ] TestBlockScaleDequantizeSignatureKey.HashFunction (0 ms)
+2026-10-20T11:22:33.3499035Z 6: [ RUN      ] TestBlockScaleDequantizeSignatureKey.Copy
+2026-10-20T11:22:33.3499909Z 6: [       OK ] TestBlockScaleDequantizeSignatureKey.Copy (0 ms)
+2026-10-20T11:22:33.3501045Z 6: [ RUN      ] TestBlockScaleDequantizeSignatureKey.CreateFromNodeAndTensorMap
+2026-10-20T11:22:33.3502407Z 6: [       OK ] TestBlockScaleDequantizeSignatureKey.CreateFromNodeAndTensorMap (0 ms)
+2026-10-20T11:22:33.3503722Z 6: [----------] 4 tests from TestBlockScaleDequantizeSignatureKey (0 ms total)
+2026-10-20T11:22:33.3504632Z 6: 
+2026-10-20T11:22:33.3505250Z 6: [----------] 2 tests from TestBlockScaleQuantizePlan
+2026-10-20T11:22:33.3506198Z 6: [ RUN      ] TestBlockScaleQuantizePlan.ExecutePlan
+2026-10-20T11:22:33.4862795Z 6: [       OK ] TestBlockScaleQuantizePlan.ExecutePlan (138 ms)
+2026-10-20T11:22:33.4863642Z 6: [ RUN      ] TestBlockScaleQuantizePlan.ExecutePlanWithoutAxis
+2026-10-20T11:22:33.6150285Z 6: [       OK ] TestBlockScaleQuantizePlan.ExecutePlanWithoutAxis (129 ms)
+2026-10-20T11:22:33.6150901Z 6: [----------] 2 tests from TestBlockScaleQuantizePlan (268 ms total)
+2026-10-20T11:22:33.6151326Z 6: 
+2026-10-20T11:22:33.6151648Z 6: [----------] 2 tests from TestBlockScaleQuantizePlanBuilder
+2026-10-20T11:22:33.6152152Z 6: [ RUN      ] TestBlockScaleQuantizePlanBuilder.PlanConstruction
+2026-10-20T11:22:33.6152707Z 6: [       OK ] TestBlockScaleQuantizePlanBuilder.PlanConstruction (0 ms)
+2026-10-20T11:22:33.6153250Z 6: [ RUN      ] TestBlockScaleQuantizePlanBuilder.IsApplicable
+2026-10-20T11:22:33.6153761Z 6: [       OK ] TestBlockScaleQuantizePlanBuilder.IsApplicable (0 ms)
+2026-10-20T11:22:33.6154288Z 6: [----------] 2 tests from TestBlockScaleQuantizePlanBuilder (0 ms total)
+2026-10-20T11:22:33.6167924Z 6: 
+2026-10-20T11:22:33.6169533Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/0, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)1,(hipdnn_flatbuffers_sdk::data_objects::DataType)8,(hipdnn_flatbuffers_sdk::data_objects::DataType)10>
+2026-10-20T11:22:33.6171133Z 6: [ RUN      ] BlockScaleQuantizeMxPlan/0.ExecutePlan
+2026-10-20T11:22:33.7400213Z 6: [       OK ] BlockScaleQuantizeMxPlan/0.ExecutePlan (124 ms)
+2026-10-20T11:22:33.7401006Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/0 (124 ms total)
+2026-10-20T11:22:33.7401688Z 6: 
+2026-10-20T11:22:33.7403018Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/1, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)2,(hipdnn_flatbuffers_sdk::data_objects::DataType)8,(hipdnn_flatbuffers_sdk::data_objects::DataType)10>
+2026-10-20T11:22:33.7404508Z 6: [ RUN      ] BlockScaleQuantizeMxPlan/1.ExecutePlan
+2026-10-20T11:22:33.8664159Z 6: [       OK ] BlockScaleQuantizeMxPlan/1.ExecutePlan (126 ms)
+2026-10-20T11:22:33.8664856Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/1 (126 ms total)
+2026-10-20T11:22:33.8665364Z 6: 
+2026-10-20T11:22:33.8666738Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/2, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)1,(hipdnn_flatbuffers_sdk::data_objects::DataType)9,(hipdnn_flatbuffers_sdk::data_objects::DataType)10>
+2026-10-20T11:22:33.8668400Z 6: [ RUN      ] BlockScaleQuantizeMxPlan/2.ExecutePlan
+2026-10-20T11:22:33.9829774Z 6: [       OK ] BlockScaleQuantizeMxPlan/2.ExecutePlan (116 ms)
+2026-10-20T11:22:33.9830454Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/2 (116 ms total)
+2026-10-20T11:22:33.9830949Z 6: 
+2026-10-20T11:22:33.9832395Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/3, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)2,(hipdnn_flatbuffers_sdk::data_objects::DataType)9,(hipdnn_flatbuffers_sdk::data_objects::DataType)10>
+2026-10-20T11:22:33.9833921Z 6: [ RUN      ] BlockScaleQuantizeMxPlan/3.ExecutePlan
+2026-10-20T11:22:34.0970811Z 6: [       OK ] BlockScaleQuantizeMxPlan/3.ExecutePlan (114 ms)
+2026-10-20T11:22:34.0971884Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/3 (114 ms total)
+2026-10-20T11:22:34.0972462Z 6: 
+2026-10-20T11:22:34.0973777Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/4, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)1,(hipdnn_flatbuffers_sdk::data_objects::DataType)11,(hipdnn_flatbuffers_sdk::data_objects::DataType)10>
+2026-10-20T11:22:34.0975274Z 6: [ RUN      ] BlockScaleQuantizeMxPlan/4.ExecutePlan
+2026-10-20T11:22:34.2098675Z 6: [       OK ] BlockScaleQuantizeMxPlan/4.ExecutePlan (112 ms)
+2026-10-20T11:22:34.2099600Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/4 (112 ms total)
+2026-10-20T11:22:34.2100156Z 6: 
+2026-10-20T11:22:34.2101794Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/5, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)2,(hipdnn_flatbuffers_sdk::data_objects::DataType)11,(hipdnn_flatbuffers_sdk::data_objects::DataType)10>
+2026-10-20T11:22:34.2103410Z 6: [ RUN      ] BlockScaleQuantizeMxPlan/5.ExecutePlan
+2026-10-20T11:22:34.3451844Z 6: [       OK ] BlockScaleQuantizeMxPlan/5.ExecutePlan (135 ms)
+2026-10-20T11:22:34.3452556Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/5 (135 ms total)
+2026-10-20T11:22:34.3453199Z 6: 
+2026-10-20T11:22:34.3454469Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/6, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)1,(hipdnn_flatbuffers_sdk::data_objects::DataType)12,(hipdnn_flatbuffers_sdk::data_objects::DataType)10>
+2026-10-20T11:22:34.3456042Z 6: [ RUN      ] BlockScaleQuantizeMxPlan/6.ExecutePlan
+2026-10-20T11:22:34.4667745Z 6: [       OK ] BlockScaleQuantizeMxPlan/6.ExecutePlan (121 ms)
+2026-10-20T11:22:34.4668453Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/6 (121 ms total)
+2026-10-20T11:22:34.4668953Z 6: 
+2026-10-20T11:22:34.4670212Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/7, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)2,(hipdnn_flatbuffers_sdk::data_objects::DataType)12,(hipdnn_flatbuffers_sdk::data_objects::DataType)10>
+2026-10-20T11:22:34.4671613Z 6: [ RUN      ] BlockScaleQuantizeMxPlan/7.ExecutePlan
+2026-10-20T11:22:34.5777903Z 6: [       OK ] BlockScaleQuantizeMxPlan/7.ExecutePlan (110 ms)
+2026-10-20T11:22:34.5778671Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/7 (110 ms total)
+2026-10-20T11:22:34.5779185Z 6: 
+2026-10-20T11:22:34.5780448Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/8, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)1,(hipdnn_flatbuffers_sdk::data_objects::DataType)13,(hipdnn_flatbuffers_sdk::data_objects::DataType)10>
+2026-10-20T11:22:34.5781883Z 6: [ RUN      ] BlockScaleQuantizeMxPlan/8.ExecutePlan
+2026-10-20T11:22:34.6838448Z 6: [       OK ] BlockScaleQuantizeMxPlan/8.ExecutePlan (105 ms)
+2026-10-20T11:22:34.6839257Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/8 (105 ms total)
+2026-10-20T11:22:34.6839751Z 6: 
+2026-10-20T11:22:34.6840905Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/9, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)2,(hipdnn_flatbuffers_sdk::data_objects::DataType)13,(hipdnn_flatbuffers_sdk::data_objects::DataType)10>
+2026-10-20T11:22:34.6842701Z 6: [ RUN      ] BlockScaleQuantizeMxPlan/9.ExecutePlan
+2026-10-20T11:22:34.7931643Z 6: [       OK ] BlockScaleQuantizeMxPlan/9.ExecutePlan (109 ms)
+2026-10-20T11:22:34.7932273Z 6: [----------] 1 test from BlockScaleQuantizeMxPlan/9 (109 ms total)
+2026-10-20T11:22:34.7932741Z 6: 
+2026-10-20T11:22:34.7934217Z 6: [----------] 1 test from BlockScaleQuantizeNonFloatIOPlan/0, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)2,(hipdnn_flatbuffers_sdk::data_objects::DataType)2,(hipdnn_flatbuffers_sdk::data_objects::DataType)1>
+2026-10-20T11:22:34.7935581Z 6: [ RUN      ] BlockScaleQuantizeNonFloatIOPlan/0.ExecutePlan
+2026-10-20T11:22:34.9064688Z 6: [       OK ] BlockScaleQuantizeNonFloatIOPlan/0.ExecutePlan (113 ms)
+2026-10-20T11:22:34.9065521Z 6: [----------] 1 test from BlockScaleQuantizeNonFloatIOPlan/0 (113 ms total)
+2026-10-20T11:22:34.9066724Z 6: 
+2026-10-20T11:22:34.9067975Z 6: [----------] 1 test from BlockScaleQuantizeNonFloatIOPlan/1, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)2,(hipdnn_flatbuffers_sdk::data_objects::DataType)3,(hipdnn_flatbuffers_sdk::data_objects::DataType)1>
+2026-10-20T11:22:34.9069390Z 6: [ RUN      ] BlockScaleQuantizeNonFloatIOPlan/1.ExecutePlan
+2026-10-20T11:22:35.0209620Z 6: [       OK ] BlockScaleQuantizeNonFloatIOPlan/1.ExecutePlan (114 ms)
+2026-10-20T11:22:35.0210465Z 6: [----------] 1 test from BlockScaleQuantizeNonFloatIOPlan/1 (114 ms total)
+2026-10-20T11:22:35.0211061Z 6: 
+2026-10-20T11:22:35.0212482Z 6: [----------] 1 test from BlockScaleQuantizeNonFloatIOPlan/2, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)3,(hipdnn_flatbuffers_sdk::data_objects::DataType)3,(hipdnn_flatbuffers_sdk::data_objects::DataType)1>
+2026-10-20T11:22:35.0214122Z 6: [ RUN      ] BlockScaleQuantizeNonFloatIOPlan/2.ExecutePlan
+2026-10-20T11:22:35.1259883Z 6: [       OK ] BlockScaleQuantizeNonFloatIOPlan/2.ExecutePlan (104 ms)
+2026-10-20T11:22:35.1260707Z 6: [----------] 1 test from BlockScaleQuantizeNonFloatIOPlan/2 (104 ms total)
+2026-10-20T11:22:35.1261288Z 6: 
+2026-10-20T11:22:35.1262522Z 6: [----------] 1 test from BlockScaleQuantizeNonFloatIOPlan/3, where TypeParam = MxPlanConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)3,(hipdnn_flatbuffers_sdk::data_objects::DataType)2,(hipdnn_flatbuffers_sdk::data_objects::DataType)1>
+2026-10-20T11:22:35.1263953Z 6: [ RUN      ] BlockScaleQuantizeNonFloatIOPlan/3.ExecutePlan
+2026-10-20T11:22:35.2313863Z 6: [       OK ] BlockScaleQuantizeNonFloatIOPlan/3.ExecutePlan (105 ms)
+2026-10-20T11:22:35.2314826Z 6: [----------] 1 test from BlockScaleQuantizeNonFloatIOPlan/3 (105 ms total)
+2026-10-20T11:22:35.2315476Z 6: 
+2026-10-20T11:22:35.2317394Z 6: [----------] 1 test from BlockScaleQuantizeMxIsApplicable/0, where TypeParam = MxIsApplicableConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)11,(hipdnn_flatbuffers_sdk::data_objects::DataType)12>
+2026-10-20T11:22:35.2318997Z 6: [ RUN      ] BlockScaleQuantizeMxIsApplicable/0.MatchingTypeIsApplicable
+2026-10-20T11:22:35.2319925Z 6: [       OK ] BlockScaleQuantizeMxIsApplicable/0.MatchingTypeIsApplicable (0 ms)
+2026-10-20T11:22:35.2320658Z 6: [----------] 1 test from BlockScaleQuantizeMxIsApplicable/0 (0 ms total)
+2026-10-20T11:22:35.2321206Z 6: 
+2026-10-20T11:22:35.2322273Z 6: [----------] 1 test from BlockScaleQuantizeMxIsApplicable/1, where TypeParam = MxIsApplicableConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)12,(hipdnn_flatbuffers_sdk::data_objects::DataType)13>
+2026-10-20T11:22:35.2323617Z 6: [ RUN      ] BlockScaleQuantizeMxIsApplicable/1.MatchingTypeIsApplicable
+2026-10-20T11:22:35.2324383Z 6: [       OK ] BlockScaleQuantizeMxIsApplicable/1.MatchingTypeIsApplicable (0 ms)
+2026-10-20T11:22:35.2325117Z 6: [----------] 1 test from BlockScaleQuantizeMxIsApplicable/1 (0 ms total)
+2026-10-20T11:22:35.2325647Z 6: 
+2026-10-20T11:22:35.2326832Z 6: [----------] 1 test from BlockScaleQuantizeMxIsApplicable/2, where TypeParam = MxIsApplicableConfig<(hipdnn_flatbuffers_sdk::data_objects::DataType)13,(hipdnn_flatbuffers_sdk::data_objects::DataType)11>
+2026-10-20T11:22:35.2328611Z 6: [ RUN      ] BlockScaleQuantizeMxIsApplicable/2.MatchingTypeIsApplicable
+2026-10-20T11:22:35.2329387Z 6: [       OK ] BlockScaleQuantizeMxIsApplicable/2.MatchingTypeIsApplicable (0 ms)
+2026-10-20T11:22:35.2330339Z 6: [----------] 1 test from BlockScaleQuantizeMxIsApplicable/2 (0 ms total)
+2026-10-20T11:22:35.2330963Z 6: 
+2026-10-20T11:22:35.2331435Z 6: [----------] 4 tests from TestBlockScaleQuantizeSignatureKey
+2026-10-20T11:22:35.2332381Z 6: [ RUN      ] TestBlockScaleQuantizeSignatureKey.EqualityOperator
+2026-10-20T11:22:35.2333232Z 6: [       OK ] TestBlockScaleQuantizeSignatureKey.EqualityOperator (0 ms)
+2026-10-20T11:22:35.2334229Z 6: [ RUN      ] TestBlockScaleQuantizeSignatureKey.HashFunction
+2026-10-20T11:22:35.2335199Z 6: [       OK ] TestBlockScaleQuantizeSignatureKey.HashFunction (0 ms)
+2026-10-20T11:22:35.2336107Z 6: [ RUN      ] TestBlockScaleQuantizeSignatureKey.Copy
+2026-10-20T11:22:35.2336828Z 6: [       OK ] TestBlockScaleQuantizeSignatureKey.Copy (0 ms)
+2026-10-20T11:22:35.2337684Z 6: [ RUN      ] TestBlockScaleQuantizeSignatureKey.CreateFromNodeAndTensorMap
+2026-10-20T11:22:35.2338948Z 6: [       OK ] TestBlockScaleQuantizeSignatureKey.CreateFromNodeAndTensorMap (0 ms)
+2026-10-20T11:22:35.2339826Z 6: [----------] 4 tests from TestBlockScaleQuantizeSignatureKey (0 ms total)
+2026-10-20T11:22:35.2340347Z 6: 
+2026-10-20T11:22:35.2340667Z 6: [----------] 2 tests from TestBatchnormBwdPlan
+2026-10-20T11:22:35.2341142Z 6: [ RUN      ] TestBatchnormBwdPlan.ExecutePlan
+2026-10-20T11:22:35.2616652Z 6: [       OK ] TestBatchnormBwdPlan.ExecutePlan (30 ms)
+2026-10-20T11:22:35.2617278Z 6: [ RUN      ] TestBatchnormBwdPlan.ExecutePlanNoStats
+2026-10-20T11:22:35.2929794Z 6: [       OK ] TestBatchnormBwdPlan.ExecutePlanNoStats (31 ms)
+2026-10-20T11:22:35.2930514Z 6: [----------] 2 tests from TestBatchnormBwdPlan (61 ms total)
+2026-10-20T11:22:35.2931014Z 6: 
+2026-10-20T11:22:35.2931391Z 6: [----------] 2 tests from TestBatchnormBwdPlanBuilder
+2026-10-20T11:22:35.2932033Z 6: [ RUN      ] TestBatchnormBwdPlanBuilder.PlanConstruction
+2026-10-20T11:22:35.2932706Z 6: [       OK ] TestBatchnormBwdPlanBuilder.PlanConstruction (0 ms)
+2026-10-20T11:22:35.2933309Z 6: [ RUN      ] TestBatchnormBwdPlanBuilder.IsApplicable
+2026-10-20T11:22:35.2933879Z 6: [       OK ] TestBatchnormBwdPlanBuilder.IsApplicable (0 ms)
+2026-10-20T11:22:35.2934487Z 6: [----------] 2 tests from TestBatchnormBwdPlanBuilder (0 ms total)
+2026-10-20T11:22:35.2934994Z 6: 
+2026-10-20T11:22:35.2935359Z 6: [----------] 4 tests from TestBatchnormBwdSignatureKey
+2026-10-20T11:22:35.2936050Z 6: [ RUN      ] TestBatchnormBwdSignatureKey.EqualityOperator
+2026-10-20T11:22:35.2936678Z 6: [       OK ] TestBatchnormBwdSignatureKey.EqualityOperator (0 ms)
+2026-10-20T11:22:35.2937277Z 6: [ RUN      ] TestBatchnormBwdSignatureKey.HashFunction
+2026-10-20T11:22:35.2937865Z 6: [       OK ] TestBatchnormBwdSignatureKey.HashFunction (0 ms)
+2026-10-20T11:22:35.2938422Z 6: [ RUN      ] TestBatchnormBwdSignatureKey.Copy
+2026-10-20T11:22:35.2938923Z 6: [       OK ] TestBatchnormBwdSignatureKey.Copy (0 ms)
+2026-10-20T11:22:35.2939535Z 6: [ RUN      ] TestBatchnormBwdSignatureKey.CreateFromNodeAndTensorMap
+2026-10-20T11:22:35.2940268Z 6: [       OK ] TestBatchnormBwdSignatureKey.CreateFromNodeAndTensorMap (0 ms)
+2026-10-20T11:22:35.2940967Z 6: [----------] 4 tests from TestBatchnormBwdSignatureKey (0 ms total)
+2026-10-20T11:22:35.2941442Z 6: 
+2026-10-20T11:22:35.2941776Z 6: [----------] 1 test from TestBatchnormFwdPlan
+2026-10-20T11:22:35.2942240Z 6: [ RUN      ] TestBatchnormFwdPlan.ExecutePlan
+2026-10-20T11:22:35.3623803Z 6: [       OK ] TestBatchnormFwdPlan.ExecutePlan (68 ms)
+2026-10-20T11:22:35.3624504Z 6: [----------] 1 test from TestBatchnormFwdPlan (68 ms total)
+2026-10-20T11:22:35.3624991Z 6: 
+2026-10-20T11:22:35.3625428Z 6: [----------] 2 tests from TestBatchnormFwdInferencePlanBuilder
+2026-10-20T11:22:35.3626228Z 6: [ RUN      ] TestBatchnormFwdInferencePlanBuilder.PlanConstruction
+2026-10-20T11:22:35.3627223Z 6: [       OK ] TestBatchnormFwdInferencePlanBuilder.PlanConstruction (0 ms)
+2026-10-20T11:22:35.3627974Z 6: [ RUN      ] TestBatchnormFwdInferencePlanBuilder.IsApplicable
+2026-10-20T11:22:35.3628670Z 6: [       OK ] TestBatchnormFwdInferencePlanBuilder.IsApplicable (0 ms)
+2026-10-20T11:22:35.3629441Z 6: [----------] 2 tests from TestBatchnormFwdInferencePlanBuilder (0 ms total)
+2026-10-20T11:22:35.3630001Z 6: 
+2026-10-20T11:22:35.3630542Z 6: [----------] 4 tests from TestBatchnormFwdInferenceSignatureKey
+2026-10-20T11:22:35.3631237Z 6: [ RUN      ] TestBatchnormFwdInferenceSignatureKey.EqualityOperator
+2026-10-20T11:22:35.3632149Z 6: [       OK ] TestBatchnormFwdInferenceSignatureKey.EqualityOperator (0 ms)
+2026-10-20T11:22:35.3632905Z 6: [ RUN      ] TestBatchnormFwdInferenceSignatureKey.HashFunction
+2026-10-20T11:22:35.3633701Z 6: [       OK ] TestBatchnormFwdInferenceSignatureKey.HashFunction (0 ms)
+2026-10-20T11:22:35.3634370Z 6: [ RUN      ] TestBatchnormFwdInferenceSignatureKey.Copy
+2026-10-20T11:22:35.3634998Z 6: [       OK ] TestBatchnormFwdInferenceSignatureKey.Copy (0 ms)
+2026-10-20T11:22:35.3635719Z 6: [ RUN      ] TestBatchnormFwdInferenceSignatureKey.CreateFromNodeAndTensorMap
+2026-10-20T11:22:35.3636754Z 6: [       OK ] TestBatchnormFwdInferenceSignatureKey.CreateFromNodeAndTensorMap (0 ms)
+2026-10-20T11:22:35.3637592Z 6: [----------] 4 tests from TestBatchnormFwdInferenceSignatureKey (0 ms total)
+2026-10-20T11:22:35.3638156Z 6: 
+2026-10-20T11:22:35.3638543Z 6: [----------] 2 tests from TestBatchnormFwdWithVariancePlan
+2026-10-20T11:22:35.3639127Z 6: [ RUN      ] TestBatchnormFwdWithVariancePlan.ExecutePlan
+2026-10-20T11:22:35.4317712Z 6: [       OK ] TestBatchnormFwdWithVariancePlan.ExecutePlan (69 ms)
+2026-10-20T11:22:35.4319054Z 6: [ RUN      ] TestBatchnormFwdWithVariancePlan.ExecutePlanWithRuntimeEpsilonFromPack
+2026-10-20T11:22:35.5034459Z 6: [       OK ] TestBatchnormFwdWithVariancePlan.ExecutePlanWithRuntimeEpsilonFromPack (71 ms)
+2026-10-20T11:22:35.5036176Z 6: [----------] 2 tests from TestBatchnormFwdWithVariancePlan (140 ms total)
+2026-10-20T11:22:35.5037046Z 6: 
+2026-10-20T11:22:35.5037706Z 6: [----------] 2 tests from TestBatchnormFwdWithVariancePlanBuilder
+2026-10-20T11:22:35.5038781Z 6: [ RUN      ] TestBatchnormFwdWithVariancePlanBuilder.PlanConstruction
+2026-10-20T11:22:35.5039969Z 6: [       OK ] TestBatchnormFwdWithVariancePlanBuilder.PlanConstruction (0 ms)
+2026-10-20T11:22:35.5041136Z 6: [ RUN      ] TestBatchnormFwdWithVariancePlanBuilder.IsApplicable
+2026-10-20T11:22:35.5042205Z 6: [       OK ] TestBatchnormFwdWithVariancePlanBuilder.IsApplicable (0 ms)
+2026-10-20T11:22:35.5043357Z 6: [----------] 2 tests from TestBatchnormFwdWithVariancePlanBuilder (0 ms total)
+2026-10-20T11:22:35.5044225Z 6: 
+2026-10-20T11:22:35.5044858Z 6: [----------] 3 tests from TestBatchnormFwdInferenceWithVariancePlan
+2026-10-20T11:22:35.5046306Z 6: [ RUN      ] TestBatchnormFwdInferenceWithVariancePlan.PlanBuilderMapContainsExpectedKeys
+2026-10-20T11:22:35.5047940Z 6: [       OK ] TestBatchnormFwdInferenceWithVariancePlan.PlanBuilderMapContainsExpectedKeys (0 ms)
+2026-10-20T11:22:35.5049436Z 6: [ RUN      ] TestBatchnormFwdInferenceWithVariancePlan.SignatureKeyHashingWorks
+2026-10-20T11:22:35.5050818Z 6: [       OK ] TestBatchnormFwdInferenceWithVariancePlan.SignatureKeyHashingWorks (0 ms)
+2026-10-20T11:22:35.5052109Z 6: [ RUN      ] TestBatchnormFwdInferenceWithVariancePlan.NodeTypeIsCorrect
+2026-10-20T11:22:35.5053341Z 6: [       OK ] TestBatchnormFwdInferenceWithVariancePlan.NodeTypeIsCorrect (0 ms)
+2026-10-20T11:22:35.5054572Z 6: [----------] 3 tests from TestBatchnormFwdInferenceWithVariancePlan (0 ms total)
+2026-10-20T11:22:35.5055432Z 6: 
+2026-10-20T11:22:35.5056097Z 6: [----------] 2 tests from TestBatchnormTrainPlan
+2026-10-20T11:22:35.5056875Z 6: [ RUN      ] TestBatchnormTrainPlan.ExecutePlan
+2026-10-20T11:22:35.5323414Z 6: [       OK ] TestBatchnormTrainPlan.ExecutePlan (28 ms)
+2026-10-20T11:22:35.5324728Z 6: [ RUN      ] TestBatchnormTrainPlan.ExecutePlanWithRuntimeEpsilonAndMomentumFromPack
+2026-10-20T11:22:35.5614998Z 6: [       OK ] TestBatchnormTrainPlan.ExecutePlanWithRuntimeEpsilonAndMomentumFromPack (29 ms)
+2026-10-20T11:22:35.5615773Z 6: [----------] 2 tests from TestBatchnormTrainPlan (58 ms total)
+2026-10-20T11:22:35.5616362Z 6: 
+2026-10-20T11:22:35.5616695Z 6: [----------] 2 tests from TestBatchnormTrainPlanBuilder
+2026-10-20T11:22:35.5617188Z 6: [ RUN      ] TestBatchnormTrainPlanBuilder.PlanConstruction
+2026-10-20T11:22:35.5617945Z 6: [       OK ] TestBatchnormTrainPlanBuilder.PlanConstruction (0 ms)
+2026-10-20T11:22:35.5618511Z 6: [ RUN      ] TestBatchnormTrainPlanBuilder.IsApplicable
+2026-10-20T11:22:35.5619091Z 6: [       OK ] TestBatchnormTrainPlanBuilder.IsApplicable (0 ms)
+2026-10-20T11:22:35.5619632Z 6: [----------] 2 tests from TestBatchnormTrainPlanBuilder (0 ms total)
+2026-10-20T11:22:35.5620123Z 6: 
+2026-10-20T11:22:35.5620417Z 6: [----------] 4 tests from TestBatchnormTrainSignatureKey
+2026-10-20T11:22:35.5620882Z 6: [ RUN      ] TestBatchnormTrainSignatureKey.EqualityOperator
+2026-10-20T11:22:35.5621406Z 6: [       OK ] TestBatchnormTrainSignatureKey.EqualityOperator (0 ms)
+2026-10-20T11:22:35.5621915Z 6: [ RUN      ] TestBatchnormTrainSignatureKey.HashFunction
+2026-10-20T11:22:35.5622429Z 6: [       OK ] TestBatchnormTrainSignatureKey.HashFunction (0 ms)
+2026-10-20T11:22:35.5622891Z 6: [ RUN      ] TestBatchnormTrainSignatureKey.Copy
+2026-10-20T11:22:35.5623330Z 6: [       OK ] TestBatchnormTrainSignatureKey.Copy (0 ms)
+2026-10-20T11:22:35.5623859Z 6: [ RUN      ] TestBatchnormTrainSignatureKey.CreateFromNodeAndTensorMap
+2026-10-20T11:22:35.5624485Z 6: [       OK ] TestBatchnormTrainSignatureKey.CreateFromNodeAndTensorMap (0 ms)
+2026-10-20T11:22:35.5625097Z 6: [----------] 4 tests from TestBatchnormTrainSignatureKey (0 ms total)
+2026-10-20T11:22:35.5625525Z 6: 
+2026-10-20T11:22:35.5625805Z 6: [----------] 1 test from TestConvolutionBwdPlan
+2026-10-20T11:22:35.5626386Z 6: [ RUN      ] TestConvolutionBwdPlan.ExecutePlan
+2026-10-20T11:22:35.5626879Z 6: [       OK ] TestConvolutionBwdPlan.ExecutePlan (0 ms)
+2026-10-20T11:22:35.5627348Z 6: [----------] 1 test from TestConvolutionBwdPlan (0 ms total)
+2026-10-20T11:22:35.5627779Z 6: 
+2026-10-20T11:22:35.5628125Z 6: [----------] 2 tests from TestConvolutionBwdPlanBuilder
+2026-10-20T11:22:35.5628601Z 6: [ RUN      ] TestConvolutionBwdPlanBuilder.PlanConstruction
+2026-10-20T11:22:35.5629129Z 6: [       OK ] TestConvolutionBwdPlanBuilder.PlanConstruction (0 ms)
+2026-10-20T11:22:35.5629657Z 6: [ RUN      ] TestConvolutionBwdPlanBuilder.IsApplicable
+2026-10-20T11:22:35.5630137Z 6: [       OK ] TestConvolutionBwdPlanBuilder.IsApplicable (0 ms)
+2026-10-20T11:22:35.5630675Z 6: [----------] 2 tests from TestConvolutionBwdPlanBuilder (0 ms total)
+2026-10-20T11:22:35.5631095Z 6: 
+2026-10-20T11:22:35.5631406Z 6: [----------] 4 tests from TestConvolutionBwdSignatureKey
+2026-10-20T11:22:35.5631872Z 6: [ RUN      ] TestConvolutionBwdSignatureKey.EqualityOperator
+2026-10-20T11:22:35.5632378Z 6: [       OK ] TestConvolutionBwdSignatureKey.EqualityOperator (0 ms)
+2026-10-20T11:22:35.5632888Z 6: [ RUN      ] TestConvolutionBwdSignatureKey.HashFunction
+2026-10-20T11:22:35.5633363Z 6: [       OK ] TestConvolutionBwdSignatureKey.HashFunction (0 ms)
+2026-10-20T11:22:35.5633845Z 6: [ RUN      ] TestConvolutionBwdSignatureKey.Copy
+2026-10-20T11:22:35.5634294Z 6: [       OK ] TestConvolutionBwdSignatureKey.Copy (0 ms)
+2026-10-20T11:22:35.5634838Z 6: [ RUN      ] TestConvolutionBwdSignatureKey.CreateFromNodeAndTensorMap
+2026-10-20T11:22:35.5635457Z 6: [       OK ] TestConvolutionBwdSignatureKey.CreateFromNodeAndTensorMap (0 ms)
+2026-10-20T11:22:35.5636226Z 6: [----------] 4 tests from TestConvolutionBwdSignatureKey (0 ms total)
+2026-10-20T11:22:35.5636687Z 6: 
+2026-10-20T11:22:35.5636980Z 6: [----------] 1 test from TestConvolutionWrwPlan
+2026-10-20T11:22:35.5637392Z 6: [ RUN      ] TestConvolutionWrwPlan.ExecutePlan
+2026-10-20T11:22:35.5637861Z 6: [       OK ] TestConvolutionWrwPlan.ExecutePlan (0 ms)
+2026-10-20T11:22:35.5638336Z 6: [----------] 1 test from TestConvolutionWrwPlan (0 ms total)
+2026-10-20T11:22:35.5638872Z 6: 
+2026-10-20T11:22:35.5639175Z 6: [----------] 2 tests from TestConvolutionWrwPlanBuilder
+2026-10-20T11:22:35.5639627Z 6: [ RUN      ] TestConvolutionWrwPlanBuilder.PlanConstruction
+2026-10-20T11:22:35.5640122Z 6: [       OK ] TestConvolutionWrwPlanBuilder.PlanConstruction (0 ms)
+2026-10-20T11:22:35.5640573Z 6: [ RUN      ] TestConvolutionWrwPlanBuilder.IsApplicable
+2026-10-20T11:22:35.5641107Z 6: [       OK ] TestConvolutionWrwPlanBuilder.IsApplicable (0 ms)
+2026-10-20T11:22:35.5641607Z 6: [----------] 2 tests from TestConvolutionWrwPlanBuilder (0 ms total)
+2026-10-20T11:22:35.5642000Z 6: 
+2026-10-20T11:22:35.5642390Z 6: [----------] 4 tests from TestConvolutionWrwSignatureKey
+2026-10-20T11:22:35.5642845Z 6: [ RUN      ] TestConvolutionWrwSignatureKey.EqualityOperator
+2026-10-20T11:22:35.5643415Z 6: [       OK ] TestConvolutionWrwSignatureKey.EqualityOperator (0 ms)
+2026-10-20T11:22:35.5643905Z 6: [ RUN      ] TestConvolutionWrwSignatureKey.HashFunction
+2026-10-20T11:22:35.5644371Z 6: [       OK ] TestConvolutionWrwSignatureKey.HashFunction (0 ms)
+2026-10-20T11:22:35.5644816Z 6: [ RUN      ] TestConvolutionWrwSignatureKey.Copy
+2026-10-20T11:22:35.5645244Z 6: [       OK ] TestConvolutionWrwSignatureKey.Copy (0 ms)
+2026-10-20T11:22:35.5645749Z 6: [ RUN      ] TestConvolutionWrwSignatureKey.CreateFromNodeAndTensorMap
+2026-10-20T11:22:35.5646456Z 6: [       OK ] TestConvolutionWrwSignatureKey.CreateFromNodeAndTensorMap (0 ms)
+2026-10-20T11:22:35.5647059Z 6: [----------] 4 tests from TestConvolutionWrwSignatureKey (0 ms total)
+2026-10-20T11:22:35.5647470Z 6: 
+2026-10-20T11:22:35.5647760Z 6: [----------] 1 test from TestConvolutionFwdPlan
+2026-10-20T11:22:35.5648160Z 6: [ RUN      ] TestConvolutionFwdPlan.ExecutePlan
+2026-10-20T11:22:35.5648583Z 6: [       OK ] TestConvolutionFwdPlan.ExecutePlan (0 ms)
+2026-10-20T11:22:35.5649007Z 6: [----------] 1 test from TestConvolutionFwdPlan (0 ms total)
+2026-10-20T11:22:35.5649359Z 6: 
+2026-10-20T11:22:35.5649657Z 6: [----------] 2 tests from TestConvolutionFwdPlanBuilder
+2026-10-20T11:22:35.5650110Z 6: [ RUN      ] TestConvolutionFwdPlanBuilder.PlanConstruction
+2026-10-20T11:22:35.5650618Z 6: [       OK ] TestConvolutionFwdPlanBuilder.PlanConstruction (0 ms)
+2026-10-20T11:22:35.5651106Z 6: [ RUN      ] TestConvolutionFwdPlanBuilder.IsApplicable
+2026-10-20T11:22:35.5651563Z 6: [       OK ] TestConvolutionFwdPlanBuilder.IsApplicable (0 ms)
+2026-10-20T11:22:35.5652028Z 6: [----------] 2 tests from TestConvolutionFwdPlanBuilder (0 ms total)
+2026-10-20T11:22:35.5652414Z 6: 
+2026-10-20T11:22:35.5652719Z 6: [----------] 4 tests from TestConvolutionFwdSignatureKey
+2026-10-20T11:22:35.5653195Z 6: [ RUN      ] TestConvolutionFwdSignatureKey.EqualityOperator
+2026-10-20T11:22:35.5653711Z 6: [       OK ] TestConvolutionFwdSignatureKey.EqualityOperator (0 ms)
+2026-10-20T11:22:35.5654227Z 6: [ RUN      ] TestConvolutionFwdSignatureKey.HashFunction
+2026-10-20T11:22:35.5654742Z 6: [       OK ] TestConvolutionFwdSignatureKey.HashFunction (0 ms)
+2026-10-20T11:22:35.5655201Z 6: [ RUN      ] TestConvolutionFwdSignatureKey.Copy
+2026-10-20T11:22:35.5655644Z 6: [       OK ] TestConvolutionFwdSignatureKey.Copy (0 ms)
+2026-10-20T11:22:35.5656221Z 6: [ RUN      ] TestConvolutionFwdSignatureKey.CreateFromNodeAndTensorMap
+2026-10-20T11:22:35.5656791Z 6: [       OK ] TestConvolutionFwdSignatureKey.CreateFromNodeAndTensorMap (0 ms)
+2026-10-20T11:22:35.5657363Z 6: [----------] 4 tests from TestConvolutionFwdSignatureKey (0 ms total)
+2026-10-20T11:22:35.5657755Z 6: 
+2026-10-20T11:22:35.5658050Z 6: [----------] 79 tests from TestCpuReferenceGraphExecutor
+2026-10-20T11:22:35.5658562Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.BatchnormFwdInferenceAllFloats
+2026-10-20T11:22:35.5864587Z 6: [       OK ] TestCpuReferenceGraphExecutor.BatchnormFwdInferenceAllFloats (22 ms)
+2026-10-20T11:22:35.5865290Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.BatchnormFwdInferenceAllHalfs
+2026-10-20T11:22:35.6082546Z 6: [       OK ] TestCpuReferenceGraphExecutor.BatchnormFwdInferenceAllHalfs (21 ms)
+2026-10-20T11:22:35.6083796Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.BatchnormFwdInferenceAllBFloats
+2026-10-20T11:22:35.6310866Z 6: [       OK ] TestCpuReferenceGraphExecutor.BatchnormFwdInferenceAllBFloats (22 ms)
+2026-10-20T11:22:35.6311814Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.SignaturesThatDontExist
+2026-10-20T11:22:35.6316295Z 6: [       OK ] TestCpuReferenceGraphExecutor.SignaturesThatDontExist (0 ms)
+2026-10-20T11:22:35.6317290Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.BatchnormBwdAllFloats
+2026-10-20T11:22:35.6321471Z 6: [       OK ] TestCpuReferenceGraphExecutor.BatchnormBwdAllFloats (0 ms)
+2026-10-20T11:22:35.6322381Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.BatchnormBwdAllHalfs
+2026-10-20T11:22:35.6327117Z 6: [       OK ] TestCpuReferenceGraphExecutor.BatchnormBwdAllHalfs (0 ms)
+2026-10-20T11:22:35.6328063Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.BatchnormBwdAllBFloat16
+2026-10-20T11:22:35.6331805Z 6: [       OK ] TestCpuReferenceGraphExecutor.BatchnormBwdAllBFloat16 (0 ms)
+2026-10-20T11:22:35.6332563Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.BatchnormTrainAllFloats
+2026-10-20T11:22:35.6344902Z 6: [       OK ] TestCpuReferenceGraphExecutor.BatchnormTrainAllFloats (1 ms)
+2026-10-20T11:22:35.6345662Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.BatchnormTrainAllHalfs
+2026-10-20T11:22:35.6350028Z 6: [       OK ] TestCpuReferenceGraphExecutor.BatchnormTrainAllHalfs (0 ms)
+2026-10-20T11:22:35.6350812Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.BatchnormTrainAllBFloat16
+2026-10-20T11:22:35.6354730Z 6: [       OK ] TestCpuReferenceGraphExecutor.BatchnormTrainAllBFloat16 (0 ms)
+2026-10-20T11:22:35.6355524Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.ConvolutionFwdAllFloats
+2026-10-20T11:22:35.6359011Z 6: [       OK ] TestCpuReferenceGraphExecutor.ConvolutionFwdAllFloats (0 ms)
+2026-10-20T11:22:35.6359747Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.ConvolutionFwdAllHalfs
+2026-10-20T11:22:35.6362585Z 6: [       OK ] TestCpuReferenceGraphExecutor.ConvolutionFwdAllHalfs (0 ms)
+2026-10-20T11:22:35.6363355Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.ConvolutionFwdAllBFloat16
+2026-10-20T11:22:35.6365597Z 6: [       OK ] TestCpuReferenceGraphExecutor.ConvolutionFwdAllBFloat16 (0 ms)
+2026-10-20T11:22:35.6366479Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.ConvolutionBwdAllFloats
+2026-10-20T11:22:35.6369447Z 6: [       OK ] TestCpuReferenceGraphExecutor.ConvolutionBwdAllFloats (0 ms)
+2026-10-20T11:22:35.6370204Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.ConvolutionBwdAllHalfs
+2026-10-20T11:22:35.6372867Z 6: [       OK ] TestCpuReferenceGraphExecutor.ConvolutionBwdAllHalfs (0 ms)
+2026-10-20T11:22:35.6373547Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.ConvolutionBwdAllBFloat16
+2026-10-20T11:22:35.6376116Z 6: [       OK ] TestCpuReferenceGraphExecutor.ConvolutionBwdAllBFloat16 (0 ms)
+2026-10-20T11:22:35.6376833Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.ConvolutionWrwAllFloats
+2026-10-20T11:22:35.6378332Z 6: [       OK ] TestCpuReferenceGraphExecutor.ConvolutionWrwAllFloats (0 ms)
+2026-10-20T11:22:35.6379047Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.ConvolutionWrwAllHalfs
+2026-10-20T11:22:35.6381035Z 6: [       OK ] TestCpuReferenceGraphExecutor.ConvolutionWrwAllHalfs (0 ms)
+2026-10-20T11:22:35.6381761Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.ConvolutionWrwAllBFloat16
+2026-10-20T11:22:35.6383102Z 6: [       OK ] TestCpuReferenceGraphExecutor.ConvolutionWrwAllBFloat16 (0 ms)
+2026-10-20T11:22:35.6383786Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MatmulAllFloats
+2026-10-20T11:22:35.6417348Z 6: [       OK ] TestCpuReferenceGraphExecutor.MatmulAllFloats (3 ms)
+2026-10-20T11:22:35.6418023Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MatmulAllHalfs
+2026-10-20T11:22:35.6450319Z 6: [       OK ] TestCpuReferenceGraphExecutor.MatmulAllHalfs (3 ms)
+2026-10-20T11:22:35.6450972Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MatmulAllBFloat16
+2026-10-20T11:22:35.6483809Z 6: [       OK ] TestCpuReferenceGraphExecutor.MatmulAllBFloat16 (3 ms)
+2026-10-20T11:22:35.6484793Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneAllFloats
+2026-10-20T11:22:35.6511999Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneAllFloats (2 ms)
+2026-10-20T11:22:35.6512782Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneAllHalfs
+2026-10-20T11:22:35.6541975Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneAllHalfs (2 ms)
+2026-10-20T11:22:35.6542941Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneAllBFloat16
+2026-10-20T11:22:35.6572336Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneAllBFloat16 (3 ms)
+2026-10-20T11:22:35.6573381Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneHalfInputFloatOutput
+2026-10-20T11:22:35.6601893Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneHalfInputFloatOutput (2 ms)
+2026-10-20T11:22:35.6603132Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneBFloat16InputFloatOutput
+2026-10-20T11:22:35.6629050Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneBFloat16InputFloatOutput (2 ms)
+2026-10-20T11:22:35.6630068Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneFloatInputHalfOutput
+2026-10-20T11:22:35.6656523Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneFloatInputHalfOutput (2 ms)
+2026-10-20T11:22:35.6657523Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneFloatInputBFloat16Output
+2026-10-20T11:22:35.6686759Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulNoneFloatInputBFloat16Output (3 ms)
+2026-10-20T11:22:35.6687720Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherAllFloats
+2026-10-20T11:22:35.6730195Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherAllFloats (4 ms)
+2026-10-20T11:22:35.6730945Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherAllHalfs
+2026-10-20T11:22:35.6763037Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherAllHalfs (3 ms)
+2026-10-20T11:22:35.6763788Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherAllBFloat16
+2026-10-20T11:22:35.6796627Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherAllBFloat16 (3 ms)
+2026-10-20T11:22:35.6797416Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherHalfInputFloatOutput
+2026-10-20T11:22:35.6830633Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherHalfInputFloatOutput (3 ms)
+2026-10-20T11:22:35.6831502Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherBFloat16InputFloatOutput
+2026-10-20T11:22:35.6862554Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherBFloat16InputFloatOutput (3 ms)
+2026-10-20T11:22:35.6863407Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherFloatInputHalfOutput
+2026-10-20T11:22:35.6894671Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherFloatInputHalfOutput (3 ms)
+2026-10-20T11:22:35.6895529Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherFloatInputBFloat16Output
+2026-10-20T11:22:35.6932588Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulGatherFloatInputBFloat16Output (3 ms)
+2026-10-20T11:22:35.6933560Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterAllFloats
+2026-10-20T11:22:35.6961204Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterAllFloats (2 ms)
+2026-10-20T11:22:35.6962071Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterAllHalfs
+2026-10-20T11:22:35.6988635Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterAllHalfs (2 ms)
+2026-10-20T11:22:35.6989536Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterAllBFloat16
+2026-10-20T11:22:35.7017664Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterAllBFloat16 (2 ms)
+2026-10-20T11:22:35.7018656Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterHalfInputFloatOutput
+2026-10-20T11:22:35.7044986Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterHalfInputFloatOutput (2 ms)
+2026-10-20T11:22:35.7046178Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterBFloat16InputFloatOutput
+2026-10-20T11:22:35.7072942Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterBFloat16InputFloatOutput (2 ms)
+2026-10-20T11:22:35.7073988Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterFloatInputHalfOutput
+2026-10-20T11:22:35.7102095Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterFloatInputHalfOutput (2 ms)
+2026-10-20T11:22:35.7103247Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterFloatInputBFloat16Output
+2026-10-20T11:22:35.7131913Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulScatterFloatInputBFloat16Output (2 ms)
+2026-10-20T11:22:35.7132966Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdAllFloats
+2026-10-20T11:22:35.7160134Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdAllFloats (2 ms)
+2026-10-20T11:22:35.7160905Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdAllHalfs
+2026-10-20T11:22:35.7187843Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdAllHalfs (2 ms)
+2026-10-20T11:22:35.7188607Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdAllBFloat16
+2026-10-20T11:22:35.7220455Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdAllBFloat16 (3 ms)
+2026-10-20T11:22:35.7221369Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdHalfInputFloatDweight
+2026-10-20T11:22:35.7250692Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdHalfInputFloatDweight (3 ms)
+2026-10-20T11:22:35.7251708Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdBFloat16InputFloatDweight
+2026-10-20T11:22:35.7277928Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdBFloat16InputFloatDweight (2 ms)
+2026-10-20T11:22:35.7278927Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdFloatInputHalfDweight
+2026-10-20T11:22:35.7306000Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdFloatInputHalfDweight (2 ms)
+2026-10-20T11:22:35.7307007Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdFloatInputBFloat16Dweight
+2026-10-20T11:22:35.7335422Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdFloatInputBFloat16Dweight (2 ms)
+2026-10-20T11:22:35.7336513Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdRowMajorDweight
+2026-10-20T11:22:35.7363064Z 6: [       OK ] TestCpuReferenceGraphExecutor.MoeGroupedMatmulBwdRowMajorDweight (2 ms)
+2026-10-20T11:22:35.7363869Z 6: [ RUN      ] TestCpuReferenceGraphExecutor.PointwiseBinaryAdd
+... [middle trimmed by labeler] ...
+2026-10-20T11:22:53.6408515Z [----------] 3 tests from IntegrationFrontendSetPluginPathsExt
+2026-10-20T11:22:53.6408958Z [ RUN      ] IntegrationFrontendSetPluginPathsExt.EmptyPathsAdditive
+2026-10-20T11:22:53.6409469Z [       OK ] IntegrationFrontendSetPluginPathsExt.EmptyPathsAdditive (0 ms)
+2026-10-20T11:22:53.6410009Z [ RUN      ] IntegrationFrontendSetPluginPathsExt.AbsoluteLoadsOnlyCustom
+2026-10-20T11:22:53.6410563Z [       OK ] IntegrationFrontendSetPluginPathsExt.AbsoluteLoadsOnlyCustom (0 ms)
+2026-10-20T11:22:53.6411170Z [ RUN      ] IntegrationFrontendSetPluginPathsExt.AdditiveLoadsBothDefaultAndCustom
+2026-10-20T11:22:53.6411833Z [       OK ] IntegrationFrontendSetPluginPathsExt.AdditiveLoadsBothDefaultAndCustom (9 ms)
+2026-10-20T11:22:53.6412431Z [----------] 3 tests from IntegrationFrontendSetPluginPathsExt (10 ms total)
+2026-10-20T11:22:53.6412731Z 
+2026-10-20T11:22:53.6412907Z [----------] 1 test from IntegrationOverrideExecutePluginDispatch
+2026-10-20T11:22:53.6413568Z [ RUN      ] IntegrationOverrideExecutePluginDispatch.HostLoadMakesLookupAvailableAndDispatchesLegacyEntry
+2026-10-20T11:22:53.6414489Z [       OK ] IntegrationOverrideExecutePluginDispatch.HostLoadMakesLookupAvailableAndDispatchesLegacyEntry (1 ms)
+2026-10-20T11:22:53.6415327Z [----------] 1 test from IntegrationOverrideExecutePluginDispatch (1 ms total)
+2026-10-20T11:22:53.6415643Z 
+2026-10-20T11:22:53.6415801Z [----------] 5 tests from IntegrationOverrideExecuteFourCorner
+2026-10-20T11:22:53.6416412Z [ RUN      ] IntegrationOverrideExecuteFourCorner.LegacyGraphLegacyPluginUsesLegacyEntry
+2026-10-20T11:22:53.6417205Z [       OK ] IntegrationOverrideExecuteFourCorner.LegacyGraphLegacyPluginUsesLegacyEntry (0 ms)
+2026-10-20T11:22:53.6417963Z [ RUN      ] IntegrationOverrideExecuteFourCorner.LegacyGraphImplementingPluginUsesLegacyEntry
+2026-10-20T11:22:53.6418818Z [       OK ] IntegrationOverrideExecuteFourCorner.LegacyGraphImplementingPluginUsesLegacyEntry (0 ms)
+2026-10-20T11:22:53.6419671Z [ RUN      ] IntegrationOverrideExecuteFourCorner.OverrideGraphOmittingPluginNoApplicableEngine
+2026-10-20T11:22:53.6420466Z [       OK ] IntegrationOverrideExecuteFourCorner.OverrideGraphOmittingPluginNoApplicableEngine (0 ms)
+2026-10-20T11:22:53.6421283Z [ RUN      ] IntegrationOverrideExecuteFourCorner.OverrideGraphImplementingPluginUsesOverrideEntry
+2026-10-20T11:22:53.6422109Z [       OK ] IntegrationOverrideExecuteFourCorner.OverrideGraphImplementingPluginUsesOverrideEntry (0 ms)
+2026-10-20T11:22:53.6423017Z [ RUN      ] IntegrationOverrideExecuteFourCorner.OverrideGraphWithMultipleOverridePluginsDispatchesOverrideEntry
+2026-10-20T11:22:53.6424024Z [       OK ] IntegrationOverrideExecuteFourCorner.OverrideGraphWithMultipleOverridePluginsDispatchesOverrideEntry (0 ms)
+2026-10-20T11:22:53.6424789Z [----------] 5 tests from IntegrationOverrideExecuteFourCorner (3 ms total)
+2026-10-20T11:22:53.6425090Z 
+2026-10-20T11:22:53.6425259Z [----------] 2 tests from IntegrationOverrideExecuteShortCircuit
+2026-10-20T11:22:53.6425774Z [ RUN      ] IntegrationOverrideExecuteShortCircuit.EmptyMapDispatchesLegacyEntry
+2026-10-20T11:22:53.6426474Z [       OK ] IntegrationOverrideExecuteShortCircuit.EmptyMapDispatchesLegacyEntry (0 ms)
+2026-10-20T11:22:53.6427176Z [ RUN      ] IntegrationOverrideExecuteShortCircuit.EmptyParallelArraysDispatchesLegacyEntry
+2026-10-20T11:22:53.6427943Z [       OK ] IntegrationOverrideExecuteShortCircuit.EmptyParallelArraysDispatchesLegacyEntry (0 ms)
+2026-10-20T11:22:53.6428604Z [----------] 2 tests from IntegrationOverrideExecuteShortCircuit (1 ms total)
+2026-10-20T11:22:53.6428908Z 
+2026-10-20T11:22:53.6429072Z [----------] 2 tests from IntegrationOverrideExecuteEquivalence
+2026-10-20T11:22:53.6429624Z [ RUN      ] IntegrationOverrideExecuteEquivalence.MapAndParallelArrayProduceSameDispatch
+2026-10-20T11:22:53.6430355Z [       OK ] IntegrationOverrideExecuteEquivalence.MapAndParallelArrayProduceSameDispatch (0 ms)
+2026-10-20T11:22:53.6431099Z [ RUN      ] IntegrationOverrideExecuteEquivalence.SinglePlanExecutesMultipleOverridePayloads
+2026-10-20T11:22:53.6431877Z [       OK ] IntegrationOverrideExecuteEquivalence.SinglePlanExecutesMultipleOverridePayloads (0 ms)
+2026-10-20T11:22:53.6432529Z [----------] 2 tests from IntegrationOverrideExecuteEquivalence (0 ms total)
+2026-10-20T11:22:53.6432834Z 
+2026-10-20T11:22:53.6432993Z [----------] 1 test from IntegrationOverrideExecutePlanGuard
+2026-10-20T11:22:53.6433493Z [ RUN      ] IntegrationOverrideExecutePlanGuard.ArrayFormRejectedBeforeBuildPlan
+2026-10-20T11:22:53.6434126Z [       OK ] IntegrationOverrideExecutePlanGuard.ArrayFormRejectedBeforeBuildPlan (0 ms)
+2026-10-20T11:22:53.6434700Z [----------] 1 test from IntegrationOverrideExecutePlanGuard (0 ms total)
+2026-10-20T11:22:53.6434990Z 
+2026-10-20T11:22:53.6435140Z [----------] 7 tests from IntegrationOverrideExecutePlanOnly
+2026-10-20T11:22:53.6435718Z [ RUN      ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanNormalExecuteUsesLegacyEntry
+2026-10-20T11:22:53.6436599Z [       OK ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanNormalExecuteUsesLegacyEntry (0 ms)
+2026-10-20T11:22:53.6437430Z [ RUN      ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanOverrideExecuteForwardsPayload
+2026-10-20T11:22:53.6438380Z [       OK ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanOverrideExecuteForwardsPayload (0 ms)
+2026-10-20T11:22:53.6439292Z [ RUN      ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanWithoutOverrideEnabledRejectsOverrideExecute
+2026-10-20T11:22:53.6440274Z [       OK ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanWithoutOverrideEnabledRejectsOverrideExecute (0 ms)
+2026-10-20T11:22:53.6441278Z [ RUN      ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanReportsOverrideShapeEnabledFlag
+2026-10-20T11:22:53.6442204Z [       OK ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanReportsOverrideShapeEnabledFlag (0 ms)
+2026-10-20T11:22:53.6443041Z [ RUN      ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanForwardsDifferentOverrideRanks
+2026-10-20T11:22:53.6443959Z [       OK ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanForwardsDifferentOverrideRanks (0 ms)
+2026-10-20T11:22:53.6444789Z [ RUN      ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanUnknownGraphUidReachesProvider
+2026-10-20T11:22:53.6445629Z [       OK ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanUnknownGraphUidReachesProvider (0 ms)
+2026-10-20T11:22:53.6446524Z [ RUN      ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanEmptyOverridesFallThrough
+2026-10-20T11:22:53.6447296Z [       OK ] IntegrationOverrideExecutePlanOnly.RestoredCompiledPlanEmptyOverridesFallThrough (0 ms)
+2026-10-20T11:22:53.6447939Z [----------] 7 tests from IntegrationOverrideExecutePlanOnly (2 ms total)
+2026-10-20T11:22:53.6448230Z 
+2026-10-20T11:22:53.6448371Z [----------] 4 tests from IntegrationOverrideValidation
+2026-10-20T11:22:53.6448893Z [ RUN      ] IntegrationOverrideValidation.ArrayFormInvalidOverrideRejectedBeforeBackend
+2026-10-20T11:22:53.6449613Z [       OK ] IntegrationOverrideValidation.ArrayFormInvalidOverrideRejectedBeforeBackend (0 ms)
+2026-10-20T11:22:53.6450315Z [ RUN      ] IntegrationOverrideValidation.MapFormInvalidOverrideRejectedBeforeBackend
+2026-10-20T11:22:53.6451008Z [       OK ] IntegrationOverrideValidation.MapFormInvalidOverrideRejectedBeforeBackend (0 ms)
+2026-10-20T11:22:53.6451621Z [ RUN      ] IntegrationOverrideValidation.ValidOverrideReachesPlugin
+2026-10-20T11:22:53.6452139Z [       OK ] IntegrationOverrideValidation.ValidOverrideReachesPlugin (0 ms)
+2026-10-20T11:22:53.6452810Z [ RUN      ] IntegrationOverrideValidation.OverrideUidMissingFromVariantPackRejectedBeforeDispatch
+2026-10-20T11:22:53.6453642Z [       OK ] IntegrationOverrideValidation.OverrideUidMissingFromVariantPackRejectedBeforeDispatch (0 ms)
+2026-10-20T11:22:53.6454290Z [----------] 4 tests from IntegrationOverrideValidation (0 ms total)
+2026-10-20T11:22:53.6454554Z 
+2026-10-20T11:22:53.6454724Z [----------] 3 tests from IntegrationOverrideValidationFlagAbsent
+2026-10-20T11:22:53.6455258Z [ RUN      ] IntegrationOverrideValidationFlagAbsent.ArrayFormRejectedWhenFlagAbsent
+2026-10-20T11:22:53.6456007Z [       OK ] IntegrationOverrideValidationFlagAbsent.ArrayFormRejectedWhenFlagAbsent (0 ms)
+2026-10-20T11:22:53.6456729Z [ RUN      ] IntegrationOverrideValidationFlagAbsent.PostBuildToggleDoesNotEnableExistingPlan
+2026-10-20T11:22:53.6457497Z [       OK ] IntegrationOverrideValidationFlagAbsent.PostBuildToggleDoesNotEnableExistingPlan (0 ms)
+2026-10-20T11:22:53.6458211Z [ RUN      ] IntegrationOverrideValidationFlagAbsent.MapFormRejectedWhenFlagAbsent
+2026-10-20T11:22:53.6458864Z [       OK ] IntegrationOverrideValidationFlagAbsent.MapFormRejectedWhenFlagAbsent (0 ms)
+2026-10-20T11:22:53.6459459Z [----------] 3 tests from IntegrationOverrideValidationFlagAbsent (0 ms total)
+2026-10-20T11:22:53.6459777Z 
+2026-10-20T11:22:53.6459913Z [----------] 4 tests from IntegrationOverrideRoundTrip
+2026-10-20T11:22:53.6460419Z [ RUN      ] IntegrationOverrideRoundTrip.OverrideShapeEnabledFlagSurvivesSerialization
+2026-10-20T11:22:53.6461130Z [       OK ] IntegrationOverrideRoundTrip.OverrideShapeEnabledFlagSurvivesSerialization (0 ms)
+2026-10-20T11:22:53.6461832Z [ RUN      ] IntegrationOverrideRoundTrip.OverrideShapeEnabledFlagSurvivesJsonRoundTrip
+2026-10-20T11:22:53.6462681Z [       OK ] IntegrationOverrideRoundTrip.OverrideShapeEnabledFlagSurvivesJsonRoundTrip (0 ms)
+2026-10-20T11:22:53.6463462Z [ RUN      ] IntegrationOverrideRoundTrip.OverrideShapeEnabledDefaultFalseSurvivesBuildOperationGraph
+2026-10-20T11:22:53.6464327Z [       OK ] IntegrationOverrideRoundTrip.OverrideShapeEnabledDefaultFalseSurvivesBuildOperationGraph (0 ms)
+2026-10-20T11:22:53.6465242Z [ RUN      ] IntegrationOverrideRoundTrip.OverrideShapeEnabledDefaultFalseSurvivesSerialization
+2026-10-20T11:22:53.6466254Z [       OK ] IntegrationOverrideRoundTrip.OverrideShapeEnabledDefaultFalseSurvivesSerialization (0 ms)
+2026-10-20T11:22:53.6466888Z [----------] 4 tests from IntegrationOverrideRoundTrip (0 ms total)
+2026-10-20T11:22:53.6467245Z 
+2026-10-20T11:22:53.6467389Z [----------] 1 test from IntegrationPluginInfrastructure
+2026-10-20T11:22:53.6467879Z [ RUN      ] IntegrationPluginInfrastructure.NoLoadMissThenScopedOwnerHitAndUnload
+2026-10-20T11:22:53.6468529Z [       OK ] IntegrationPluginInfrastructure.NoLoadMissThenScopedOwnerHitAndUnload (1 ms)
+2026-10-20T11:22:53.6469095Z [----------] 1 test from IntegrationPluginInfrastructure (1 ms total)
+2026-10-20T11:22:53.6469367Z 
+2026-10-20T11:22:53.6469528Z [----------] 3 tests from IntegrationSdpaBwdDescriptorLowering
+2026-10-20T11:22:53.6470014Z [ RUN      ] IntegrationSdpaBwdDescriptorLowering.SdpaBwdTensorScaleRoundTrip
+2026-10-20T11:22:53.6470620Z [       OK ] IntegrationSdpaBwdDescriptorLowering.SdpaBwdTensorScaleRoundTrip (0 ms)
+2026-10-20T11:22:53.6471281Z [ RUN      ] IntegrationSdpaBwdDescriptorLowering.SdpaBwdWithAllOptionalTensorsAndScalars
+2026-10-20T11:22:53.6472009Z [       OK ] IntegrationSdpaBwdDescriptorLowering.SdpaBwdWithAllOptionalTensorsAndScalars (0 ms)
+2026-10-20T11:22:53.6472720Z [ RUN      ] IntegrationSdpaBwdDescriptorLowering.AutoAssignedUidsPreservedInRoundTrip
+2026-10-20T11:22:53.6473407Z [       OK ] IntegrationSdpaBwdDescriptorLowering.AutoAssignedUidsPreservedInRoundTrip (0 ms)
+2026-10-20T11:22:53.6474020Z [----------] 3 tests from IntegrationSdpaBwdDescriptorLowering (0 ms total)
+2026-10-20T11:22:53.6474328Z 
+2026-10-20T11:22:53.6474456Z [----------] 7 tests from IntegrationSdpaBwdLifting
+2026-10-20T11:22:53.6474844Z [ RUN      ] IntegrationSdpaBwdLifting.SdpaBwdRoundTripViaCApi
+2026-10-20T11:22:53.6475300Z [       OK ] IntegrationSdpaBwdLifting.SdpaBwdRoundTripViaCApi (0 ms)
+2026-10-20T11:22:53.6475785Z [ RUN      ] IntegrationSdpaBwdLifting.SdpaBwdTensorSharingPreserved
+2026-10-20T11:22:53.6476358Z [       OK ] IntegrationSdpaBwdLifting.SdpaBwdTensorSharingPreserved (0 ms)
+2026-10-20T11:22:53.6476951Z [ RUN      ] IntegrationSdpaBwdLifting.SdpaBwdWithCompatibleOptionalAttributesViaCApi
+2026-10-20T11:22:53.6477635Z [       OK ] IntegrationSdpaBwdLifting.SdpaBwdWithCompatibleOptionalAttributesViaCApi (0 ms)
+2026-10-20T11:22:53.6478272Z [ RUN      ] IntegrationSdpaBwdLifting.AutoAssignedUidsPreservedInRoundTrip
+2026-10-20T11:22:53.6478846Z [       OK ] IntegrationSdpaBwdLifting.AutoAssignedUidsPreservedInRoundTrip (0 ms)
+2026-10-20T11:22:53.6479394Z [ RUN      ] IntegrationSdpaBwdLifting.SdpaBwdLiftWithoutFinalization
+2026-10-20T11:22:53.6479909Z [       OK ] IntegrationSdpaBwdLifting.SdpaBwdLiftWithoutFinalization (0 ms)
+2026-10-20T11:22:53.6480469Z [ RUN      ] IntegrationSdpaBwdLifting.SdpaBwdDeserializeViaBackendWithHandle
+2026-10-20T11:22:53.6481067Z [       OK ] IntegrationSdpaBwdLifting.SdpaBwdDeserializeViaBackendWithHandle (0 ms)
+2026-10-20T11:22:53.6481597Z [ RUN      ] IntegrationSdpaBwdLifting.JsonRoundTripWithHandle
+2026-10-20T11:22:53.6482045Z [       OK ] IntegrationSdpaBwdLifting.JsonRoundTripWithHandle (0 ms)
+2026-10-20T11:22:53.6482483Z [----------] 7 tests from IntegrationSdpaBwdLifting (0 ms total)
+2026-10-20T11:22:53.6482736Z 
+2026-10-20T11:22:53.6482893Z [----------] 9 tests from IntegrationSdpaFwdDescriptorLifting
+2026-10-20T11:22:53.6483340Z [ RUN      ] IntegrationSdpaFwdDescriptorLifting.BasicSdpaFwdRoundTrip
+2026-10-20T11:22:53.6483971Z [       OK ] IntegrationSdpaFwdDescriptorLifting.BasicSdpaFwdRoundTrip (0 ms)
+2026-10-20T11:22:53.6484542Z [ RUN      ] IntegrationSdpaFwdDescriptorLifting.SdpaFwdTensorSharingPreserved
+2026-10-20T11:22:53.6485150Z [       OK ] IntegrationSdpaFwdDescriptorLifting.SdpaFwdTensorSharingPreserved (0 ms)
+2026-10-20T11:22:53.6485762Z [ RUN      ] IntegrationSdpaFwdDescriptorLifting.SdpaFwdLiftWithoutFinalization
+2026-10-20T11:22:53.6486537Z [       OK ] IntegrationSdpaFwdDescriptorLifting.SdpaFwdLiftWithoutFinalization (0 ms)
+2026-10-20T11:22:53.6487249Z [ RUN      ] IntegrationSdpaFwdDescriptorLifting.SdpaFwdWithCompatibleOptionalAttributesViaCApi
+2026-10-20T11:22:53.6488119Z [       OK ] IntegrationSdpaFwdDescriptorLifting.SdpaFwdWithCompatibleOptionalAttributesViaCApi (0 ms)
+2026-10-20T11:22:53.6488929Z [ RUN      ] IntegrationSdpaFwdDescriptorLifting.AutoAssignedUidsPreservedInRoundTrip
+2026-10-20T11:22:53.6489610Z [       OK ] IntegrationSdpaFwdDescriptorLifting.AutoAssignedUidsPreservedInRoundTrip (0 ms)
+2026-10-20T11:22:53.6490301Z [ RUN      ] IntegrationSdpaFwdDescriptorLifting.SdpaFwdDeserializeViaBackendWithHandle
+2026-10-20T11:22:53.6491001Z [       OK ] IntegrationSdpaFwdDescriptorLifting.SdpaFwdDeserializeViaBackendWithHandle (0 ms)
+2026-10-20T11:22:53.6491634Z [ RUN      ] IntegrationSdpaFwdDescriptorLifting.JsonRoundTripWithHandle
+2026-10-20T11:22:53.6492183Z [       OK ] IntegrationSdpaFwdDescriptorLifting.JsonRoundTripWithHandle (0 ms)
+2026-10-20T11:22:53.6492779Z [ RUN      ] IntegrationSdpaFwdDescriptorLifting.SdpaFwdMmaCoreModeUnsetRoundTrip
+2026-10-20T11:22:53.6493415Z [       OK ] IntegrationSdpaFwdDescriptorLifting.SdpaFwdMmaCoreModeUnsetRoundTrip (0 ms)
+2026-10-20T11:22:53.6494051Z [ RUN      ] IntegrationSdpaFwdDescriptorLifting.SdpaFwdMmaCoreModeSetRoundTrip
+2026-10-20T11:22:53.6494667Z [       OK ] IntegrationSdpaFwdDescriptorLifting.SdpaFwdMmaCoreModeSetRoundTrip (0 ms)
+2026-10-20T11:22:53.6495231Z [----------] 9 tests from IntegrationSdpaFwdDescriptorLifting (0 ms total)
+2026-10-20T11:22:53.6495526Z 
+2026-10-20T11:22:53.6495689Z [----------] 6 tests from IntegrationSdpaFwdDescriptorLowering
+2026-10-20T11:22:53.6496229Z [ RUN      ] IntegrationSdpaFwdDescriptorLowering.SdpaFwdGraphRoundTrip
+2026-10-20T11:22:53.6496768Z [       OK ] IntegrationSdpaFwdDescriptorLowering.SdpaFwdGraphRoundTrip (0 ms)
+2026-10-20T11:22:53.6497343Z [ RUN      ] IntegrationSdpaFwdDescriptorLowering.SdpaFwdTensorScaleRoundTrip
+2026-10-20T11:22:53.6497941Z [       OK ] IntegrationSdpaFwdDescriptorLowering.SdpaFwdTensorScaleRoundTrip (0 ms)
+2026-10-20T11:22:53.6498579Z [ RUN      ] IntegrationSdpaFwdDescriptorLowering.AutoAssignedUidsPreservedInRoundTrip
+2026-10-20T11:22:53.6499271Z [       OK ] IntegrationSdpaFwdDescriptorLowering.AutoAssignedUidsPreservedInRoundTrip (0 ms)
+2026-10-20T11:22:53.6499911Z [ RUN      ] IntegrationSdpaFwdDescriptorLowering.SdpaFwdWithStatsRoundTrip
+2026-10-20T11:22:53.6500487Z [       OK ] IntegrationSdpaFwdDescriptorLowering.SdpaFwdWithStatsRoundTrip (0 ms)
+2026-10-20T11:22:53.6501114Z [ RUN      ] IntegrationSdpaFwdDescriptorLowering.SdpaFwdWithOptionalTensorsAndScalars
+2026-10-20T11:22:53.6501801Z [       OK ] IntegrationSdpaFwdDescriptorLowering.SdpaFwdWithOptionalTensorsAndScalars (0 ms)
+2026-10-20T11:22:53.6502422Z [ RUN      ] IntegrationSdpaFwdDescriptorLowering.SdpaFwdWithFp8Tensors
+2026-10-20T11:22:53.6502967Z [       OK ] IntegrationSdpaFwdDescriptorLowering.SdpaFwdWithFp8Tensors (0 ms)
+2026-10-20T11:22:53.6503490Z [----------] 6 tests from IntegrationSdpaFwdDescriptorLowering (0 ms total)
+2026-10-20T11:22:53.6503782Z 
+2026-10-20T11:22:53.6503954Z [----------] 4 tests from IntegrationBatchnormForwardInferenceFp32
+2026-10-20T11:22:53.6504561Z [ RUN      ] IntegrationBatchnormForwardInferenceFp32.ExecutePluginPipeline/DefaultPluginWithManualUids
+2026-10-20T11:22:53.6505372Z [       OK ] IntegrationBatchnormForwardInferenceFp32.ExecutePluginPipeline/DefaultPluginWithManualUids (0 ms)
+2026-10-20T11:22:53.6506241Z [ RUN      ] IntegrationBatchnormForwardInferenceFp32.ExecutePluginPipeline/DefaultPluginWithAutoUids
+2026-10-20T11:22:53.6507133Z [       OK ] IntegrationBatchnormForwardInferenceFp32.ExecutePluginPipeline/DefaultPluginWithAutoUids (0 ms)
+2026-10-20T11:22:53.6507902Z [ RUN      ] IntegrationBatchnormForwardInferenceFp32.ExecutePluginPipeline/ExecuteFailsPlugin
+2026-10-20T11:22:53.6508636Z [       OK ] IntegrationBatchnormForwardInferenceFp32.ExecutePluginPipeline/ExecuteFailsPlugin (0 ms)
+2026-10-20T11:22:53.6509473Z [ RUN      ] IntegrationBatchnormForwardInferenceFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin
+2026-10-20T11:22:53.6510347Z [       OK ] IntegrationBatchnormForwardInferenceFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin (0 ms)
+2026-10-20T11:22:53.6511027Z [----------] 4 tests from IntegrationBatchnormForwardInferenceFp32 (2 ms total)
+2026-10-20T11:22:53.6511424Z 
+2026-10-20T11:22:53.6511648Z [----------] 4 tests from IntegrationBatchnormForwardInferenceVarianceExtFp32
+2026-10-20T11:22:53.6512428Z [ RUN      ] IntegrationBatchnormForwardInferenceVarianceExtFp32.ExecutePluginPipeline/DefaultPluginWithManualUids
+2026-10-20T11:22:53.6513397Z [       OK ] IntegrationBatchnormForwardInferenceVarianceExtFp32.ExecutePluginPipeline/DefaultPluginWithManualUids (0 ms)
+2026-10-20T11:22:53.6514333Z [ RUN      ] IntegrationBatchnormForwardInferenceVarianceExtFp32.ExecutePluginPipeline/DefaultPluginWithAutoUids
+2026-10-20T11:22:53.6515292Z [       OK ] IntegrationBatchnormForwardInferenceVarianceExtFp32.ExecutePluginPipeline/DefaultPluginWithAutoUids (0 ms)
+2026-10-20T11:22:53.6516267Z [ RUN      ] IntegrationBatchnormForwardInferenceVarianceExtFp32.ExecutePluginPipeline/ExecuteFailsPlugin
+2026-10-20T11:22:53.6517169Z [       OK ] IntegrationBatchnormForwardInferenceVarianceExtFp32.ExecutePluginPipeline/ExecuteFailsPlugin (0 ms)
+2026-10-20T11:22:53.6518070Z [ RUN      ] IntegrationBatchnormForwardInferenceVarianceExtFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin
+2026-10-20T11:22:53.6519014Z [       OK ] IntegrationBatchnormForwardInferenceVarianceExtFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin (0 ms)
+2026-10-20T11:22:53.6519824Z [----------] 4 tests from IntegrationBatchnormForwardInferenceVarianceExtFp32 (2 ms total)
+2026-10-20T11:22:53.6520200Z 
+2026-10-20T11:22:53.6520371Z [----------] 5 tests from IntegrationBlockScaleDequantizeFp32
+2026-10-20T11:22:53.6520907Z [ RUN      ] IntegrationBlockScaleDequantizeFp32.ExecutePluginPipeline/WithManualUids
+2026-10-20T11:22:53.6521590Z [       OK ] IntegrationBlockScaleDequantizeFp32.ExecutePluginPipeline/WithManualUids (14 ms)
+2026-10-20T11:22:53.6522271Z [ RUN      ] IntegrationBlockScaleDequantizeFp32.ExecutePluginPipeline/WithAutoUids
+2026-10-20T11:22:53.6522934Z [       OK ] IntegrationBlockScaleDequantizeFp32.ExecutePluginPipeline/WithAutoUids (13 ms)
+2026-10-20T11:22:53.6523628Z [ RUN      ] IntegrationBlockScaleDequantizeFp32.ExecutePluginPipeline/WithNegativeScale
+2026-10-20T11:22:53.6524346Z [       OK ] IntegrationBlockScaleDequantizeFp32.ExecutePluginPipeline/WithNegativeScale (13 ms)
+2026-10-20T11:22:53.6525052Z [ RUN      ] IntegrationBlockScaleDequantizeFp32.ExecutePluginPipeline/ExecuteFailsPlugin
+2026-10-20T11:22:53.6525777Z [       OK ] IntegrationBlockScaleDequantizeFp32.ExecutePluginPipeline/ExecuteFailsPlugin (13 ms)
+2026-10-20T11:22:53.6526595Z [ RUN      ] IntegrationBlockScaleDequantizeFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin
+2026-10-20T11:22:53.6527372Z [       OK ] IntegrationBlockScaleDequantizeFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin (13 ms)
+2026-10-20T11:22:53.6528037Z [----------] 5 tests from IntegrationBlockScaleDequantizeFp32 (67 ms total)
+2026-10-20T11:22:53.6528350Z 
+2026-10-20T11:22:53.6528523Z [----------] 5 tests from IntegrationBlockScaleQuantizeFp32
+2026-10-20T11:22:53.6529045Z [ RUN      ] IntegrationBlockScaleQuantizeFp32.ExecutePluginPipeline/WithManualUids
+2026-10-20T11:22:53.6529713Z [       OK ] IntegrationBlockScaleQuantizeFp32.ExecutePluginPipeline/WithManualUids (13 ms)
+2026-10-20T11:22:53.6530367Z [ RUN      ] IntegrationBlockScaleQuantizeFp32.ExecutePluginPipeline/WithAutoUids
+2026-10-20T11:22:53.6531127Z [       OK ] IntegrationBlockScaleQuantizeFp32.ExecutePluginPipeline/WithAutoUids (12 ms)
+2026-10-20T11:22:53.6531780Z [ RUN      ] IntegrationBlockScaleQuantizeFp32.ExecutePluginPipeline/WithTranspose
+2026-10-20T11:22:53.6532427Z [       OK ] IntegrationBlockScaleQuantizeFp32.ExecutePluginPipeline/WithTranspose (12 ms)
+2026-10-20T11:22:53.6533192Z [ RUN      ] IntegrationBlockScaleQuantizeFp32.ExecutePluginPipeline/ExecuteFailsPlugin
+2026-10-20T11:22:53.6533891Z [       OK ] IntegrationBlockScaleQuantizeFp32.ExecutePluginPipeline/ExecuteFailsPlugin (13 ms)
+2026-10-20T11:22:53.6534695Z [ RUN      ] IntegrationBlockScaleQuantizeFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin
+2026-10-20T11:22:53.6535470Z [       OK ] IntegrationBlockScaleQuantizeFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin (12 ms)
+2026-10-20T11:22:53.6535780Z [----------] 5 tests from IntegrationBlockScaleQuantizeFp32 (65 ms total)
+2026-10-20T11:22:53.6535786Z 
+2026-10-20T11:22:53.6536008Z [----------] 4 tests from IntegrationConvolutionForwardFp32
+2026-10-20T11:22:53.6536338Z [ RUN      ] IntegrationConvolutionForwardFp32.ExecutePluginPipeline/DefaultPluginWithManualUids
+2026-10-20T11:22:53.6536689Z [       OK ] IntegrationConvolutionForwardFp32.ExecutePluginPipeline/DefaultPluginWithManualUids (1 ms)
+2026-10-20T11:22:53.6537019Z [ RUN      ] IntegrationConvolutionForwardFp32.ExecutePluginPipeline/DefaultPluginWithAutoUids
+2026-10-20T11:22:53.6537365Z [       OK ] IntegrationConvolutionForwardFp32.ExecutePluginPipeline/DefaultPluginWithAutoUids (0 ms)
+2026-10-20T11:22:53.6537651Z [ RUN      ] IntegrationConvolutionForwardFp32.ExecutePluginPipeline/ExecuteFailsPlugin
+2026-10-20T11:22:53.6537965Z [       OK ] IntegrationConvolutionForwardFp32.ExecutePluginPipeline/ExecuteFailsPlugin (0 ms)
+2026-10-20T11:22:53.6538263Z [ RUN      ] IntegrationConvolutionForwardFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin
+2026-10-20T11:22:53.6538614Z [       OK ] IntegrationConvolutionForwardFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin (0 ms)
+2026-10-20T11:22:53.6538834Z [----------] 4 tests from IntegrationConvolutionForwardFp32 (3 ms total)
+2026-10-20T11:22:53.6538840Z 
+2026-10-20T11:22:53.6539011Z [----------] 4 tests from IntegrationConvolutionBackwardDataFp32
+2026-10-20T11:22:53.6539379Z [ RUN      ] IntegrationConvolutionBackwardDataFp32.ExecutePluginPipeline/DefaultPluginWithManualUids
+2026-10-20T11:22:53.6539753Z [       OK ] IntegrationConvolutionBackwardDataFp32.ExecutePluginPipeline/DefaultPluginWithManualUids (0 ms)
+2026-10-20T11:22:53.6540113Z [ RUN      ] IntegrationConvolutionBackwardDataFp32.ExecutePluginPipeline/DefaultPluginWithAutoUids
+2026-10-20T11:22:53.6540496Z [       OK ] IntegrationConvolutionBackwardDataFp32.ExecutePluginPipeline/DefaultPluginWithAutoUids (0 ms)
+2026-10-20T11:22:53.6540799Z [ RUN      ] IntegrationConvolutionBackwardDataFp32.ExecutePluginPipeline/ExecuteFailsPlugin
+2026-10-20T11:22:53.6541137Z [       OK ] IntegrationConvolutionBackwardDataFp32.ExecutePluginPipeline/ExecuteFailsPlugin (0 ms)
+2026-10-20T11:22:53.6541474Z [ RUN      ] IntegrationConvolutionBackwardDataFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin
+2026-10-20T11:22:53.6541837Z [       OK ] IntegrationConvolutionBackwardDataFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin (0 ms)
+2026-10-20T11:22:53.6542068Z [----------] 4 tests from IntegrationConvolutionBackwardDataFp32 (2 ms total)
+2026-10-20T11:22:53.6542073Z 
+2026-10-20T11:22:53.6542255Z [----------] 4 tests from IntegrationConvolutionBackwardWeightFp32
+2026-10-20T11:22:53.6542632Z [ RUN      ] IntegrationConvolutionBackwardWeightFp32.ExecutePluginPipeline/DefaultPluginWithManualUids
+2026-10-20T11:22:53.6543007Z [       OK ] IntegrationConvolutionBackwardWeightFp32.ExecutePluginPipeline/DefaultPluginWithManualUids (0 ms)
+2026-10-20T11:22:53.6543369Z [ RUN      ] IntegrationConvolutionBackwardWeightFp32.ExecutePluginPipeline/DefaultPluginWithAutoUids
+2026-10-20T11:22:53.6543757Z [       OK ] IntegrationConvolutionBackwardWeightFp32.ExecutePluginPipeline/DefaultPluginWithAutoUids (0 ms)
+2026-10-20T11:22:53.6544170Z [ RUN      ] IntegrationConvolutionBackwardWeightFp32.ExecutePluginPipeline/ExecuteFailsPlugin
+2026-10-20T11:22:53.6544744Z [       OK ] IntegrationConvolutionBackwardWeightFp32.ExecutePluginPipeline/ExecuteFailsPlugin (0 ms)
+2026-10-20T11:22:53.6545125Z [ RUN      ] IntegrationConvolutionBackwardWeightFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin
+2026-10-20T11:22:53.6545598Z [       OK ] IntegrationConvolutionBackwardWeightFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin (0 ms)
+2026-10-20T11:22:53.6545986Z [----------] 4 tests from IntegrationConvolutionBackwardWeightFp32 (2 ms total)
+2026-10-20T11:22:53.6545993Z 
+2026-10-20T11:22:53.6546158Z [----------] 3 tests from IntegrationGraphEngineFiltering
+2026-10-20T11:22:53.6546512Z [ RUN      ] IntegrationGraphEngineFiltering.EngineSelection/PreferGoodPluginExplicitly
+2026-10-20T11:22:53.6546813Z [       OK ] IntegrationGraphEngineFiltering.EngineSelection/PreferGoodPluginExplicitly (0 ms)
+2026-10-20T11:22:53.6547100Z [ RUN      ] IntegrationGraphEngineFiltering.EngineSelection/PreferNonExistentEngineId
+2026-10-20T11:22:53.6547402Z [       OK ] IntegrationGraphEngineFiltering.EngineSelection/PreferNonExistentEngineId (0 ms)
+2026-10-20T11:22:53.6547666Z [ RUN      ] IntegrationGraphEngineFiltering.EngineSelection/PreferExecuteFailsPlugin
+2026-10-20T11:22:53.6547969Z [       OK ] IntegrationGraphEngineFiltering.EngineSelection/PreferExecuteFailsPlugin (0 ms)
+2026-10-20T11:22:53.6548156Z [----------] 3 tests from IntegrationGraphEngineFiltering (1 ms total)
+2026-10-20T11:22:53.6548161Z 
+2026-10-20T11:22:53.6548331Z [----------] 7 tests from IntegrationLayernormForwardFp32
+2026-10-20T11:22:53.6548623Z [ RUN      ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/InferenceWithManualUids
+2026-10-20T11:22:53.6548940Z [       OK ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/InferenceWithManualUids (0 ms)
+2026-10-20T11:22:53.6549225Z [ RUN      ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/InferenceWithAutoUids
+2026-10-20T11:22:53.6549537Z [       OK ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/InferenceWithAutoUids (0 ms)
+2026-10-20T11:22:53.6549834Z [ RUN      ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/TrainingWithManualUids
+2026-10-20T11:22:53.6550150Z [       OK ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/TrainingWithManualUids (0 ms)
+2026-10-20T11:22:53.6550413Z [ RUN      ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/TrainingWithAutoUids
+2026-10-20T11:22:53.6550734Z [       OK ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/TrainingWithAutoUids (0 ms)
+2026-10-20T11:22:53.6551037Z [ RUN      ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/NotSetPhaseValidationFails
+2026-10-20T11:22:53.6551375Z [       OK ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/NotSetPhaseValidationFails (0 ms)
+2026-10-20T11:22:53.6551637Z [ RUN      ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/ExecuteFailsPlugin
+2026-10-20T11:22:53.6551932Z [       OK ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/ExecuteFailsPlugin (0 ms)
+2026-10-20T11:22:53.6552237Z [ RUN      ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin
+2026-10-20T11:22:53.6552555Z [       OK ] IntegrationLayernormForwardFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin (0 ms)
+2026-10-20T11:22:53.6552754Z [----------] 7 tests from IntegrationLayernormForwardFp32 (3 ms total)
+2026-10-20T11:22:53.6552759Z 
+2026-10-20T11:22:53.6552910Z [----------] 6 tests from IntegrationLayernormBackwardFp32
+2026-10-20T11:22:53.6553174Z [ RUN      ] IntegrationLayernormBackwardFp32.ExecutePluginPipeline/ManualUids
+2026-10-20T11:22:53.6553451Z [       OK ] IntegrationLayernormBackwardFp32.ExecutePluginPipeline/ManualUids (0 ms)
+2026-10-20T11:22:53.6553696Z [ RUN      ] IntegrationLayernormBackwardFp32.ExecutePluginPipeline/AutoUids
+2026-10-20T11:22:53.6553964Z [       OK ] IntegrationLayernormBackwardFp32.ExecutePluginPipeline/AutoUids (0 ms)
+2026-10-20T11:22:53.6554363Z [ RUN      ] IntegrationLayernormBackwardFp32.ExecutePluginPipeline/ManualUidsWithMeanInvVar
+2026-10-20T11:22:53.6554700Z [       OK ] IntegrationLayernormBackwardFp32.ExecutePluginPipeline/ManualUidsWithMeanInvVar (0 ms)
+2026-10-20T11:22:53.6554987Z [ RUN      ] IntegrationLayernormBackwardFp32.ExecutePluginPipeline/AutoUidsWithMeanInvVar
+2026-10-20T11:22:53.6555377Z [       OK ] IntegrationLayernormBackwardFp32.ExecutePluginPipeline/AutoUidsWithMeanInvVar (0 ms)
+2026-10-20T11:22:53.6555671Z [ RUN      ] IntegrationLayernormBackwardFp32.ExecutePluginPipeline/ExecuteFailsPlugin
+2026-10-20T11:22:53.6556122Z [       OK ] IntegrationLayernormBackwardFp32.ExecutePluginPipeline/ExecuteFailsPlugin (1 ms)
+2026-10-20T11:22:53.6556531Z [ RUN      ] IntegrationLayernormBackwardFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin
+2026-10-20T11:22:53.6556872Z [       OK ] IntegrationLayernormBackwardFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin (0 ms)
+2026-10-20T11:22:53.6557071Z [----------] 6 tests from IntegrationLayernormBackwardFp32 (4 ms total)
+2026-10-20T11:22:53.6557076Z 
+2026-10-20T11:22:53.6557232Z [----------] 4 tests from IntegrationMatmulFp32
+2026-10-20T11:22:53.6557464Z [ RUN      ] IntegrationMatmulFp32.ExecutePluginPipeline/GoodPluginManualUids
+2026-10-20T11:22:53.6557727Z [       OK ] IntegrationMatmulFp32.ExecutePluginPipeline/GoodPluginManualUids (0 ms)
+2026-10-20T11:22:53.6557975Z [ RUN      ] IntegrationMatmulFp32.ExecutePluginPipeline/GoodPluginAutoUids
+2026-10-20T11:22:53.6558216Z [       OK ] IntegrationMatmulFp32.ExecutePluginPipeline/GoodPluginAutoUids (0 ms)
+2026-10-20T11:22:53.6558460Z [ RUN      ] IntegrationMatmulFp32.ExecutePluginPipeline/ExecuteFailsPlugin
+2026-10-20T11:22:53.6558696Z [       OK ] IntegrationMatmulFp32.ExecutePluginPipeline/ExecuteFailsPlugin (0 ms)
+2026-10-20T11:22:53.6558920Z [ RUN      ] IntegrationMatmulFp32.ExecutePluginPipeline/NoEnginesPlugin
+2026-10-20T11:22:53.6559152Z [       OK ] IntegrationMatmulFp32.ExecutePluginPipeline/NoEnginesPlugin (0 ms)
+2026-10-20T11:22:53.6559316Z [----------] 4 tests from IntegrationMatmulFp32 (1 ms total)
+2026-10-20T11:22:53.6559322Z 
+2026-10-20T11:22:53.6559500Z [----------] 3 tests from AllModes/IntegrationMoeGroupedMatmul
+2026-10-20T11:22:53.6559742Z [ RUN      ] AllModes/IntegrationMoeGroupedMatmul.GraphDispatchesToProvider/0
+2026-10-20T11:22:53.6560013Z [       OK ] AllModes/IntegrationMoeGroupedMatmul.GraphDispatchesToProvider/0 (0 ms)
+2026-10-20T11:22:53.6560249Z [ RUN      ] AllModes/IntegrationMoeGroupedMatmul.GraphDispatchesToProvider/1
+2026-10-20T11:22:53.6560523Z [       OK ] AllModes/IntegrationMoeGroupedMatmul.GraphDispatchesToProvider/1 (0 ms)
+2026-10-20T11:22:53.6560782Z [ RUN      ] AllModes/IntegrationMoeGroupedMatmul.GraphDispatchesToProvider/2
+2026-10-20T11:22:53.6561041Z [       OK ] AllModes/IntegrationMoeGroupedMatmul.GraphDispatchesToProvider/2 (0 ms)
+2026-10-20T11:22:53.6561261Z [----------] 3 tests from AllModes/IntegrationMoeGroupedMatmul (1 ms total)
+2026-10-20T11:22:53.6561268Z 
+2026-10-20T11:22:53.6561477Z [----------] 9 tests from AllReductionModes/IntegrationReductionModeLowering
+2026-10-20T11:22:53.6561825Z [ RUN      ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/ADD
+2026-10-20T11:22:53.6562212Z [       OK ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/ADD (0 ms)
+2026-10-20T11:22:53.6562556Z [ RUN      ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/MUL
+2026-10-20T11:22:53.6562949Z [       OK ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/MUL (0 ms)
+2026-10-20T11:22:53.6563282Z [ RUN      ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/MIN
+2026-10-20T11:22:53.6563649Z [       OK ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/MIN (0 ms)
+2026-10-20T11:22:53.6564019Z [ RUN      ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/MAX
+2026-10-20T11:22:53.6564507Z [       OK ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/MAX (0 ms)
+2026-10-20T11:22:53.6564878Z [ RUN      ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/AMAX
+2026-10-20T11:22:53.6565252Z [       OK ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/AMAX (0 ms)
+2026-10-20T11:22:53.6565678Z [ RUN      ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/AVG
+2026-10-20T11:22:53.6566231Z [       OK ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/AVG (0 ms)
+2026-10-20T11:22:53.6566582Z [ RUN      ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/NORM1
+2026-10-20T11:22:53.6567048Z [       OK ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/NORM1 (0 ms)
+2026-10-20T11:22:53.6567399Z [ RUN      ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/NORM2
+2026-10-20T11:22:53.6567768Z [       OK ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/NORM2 (0 ms)
+2026-10-20T11:22:53.6568161Z [ RUN      ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/MUL_NO_ZEROS
+2026-10-20T11:22:53.6568574Z [       OK ] AllReductionModes/IntegrationReductionModeLowering.ModePreservedInLoweringRoundTrip/MUL_NO_ZEROS (0 ms)
+2026-10-20T11:22:53.6568849Z [----------] 9 tests from AllReductionModes/IntegrationReductionModeLowering (0 ms total)
+2026-10-20T11:22:53.6568855Z 
+2026-10-20T11:22:53.6568997Z [----------] 8 tests from IntegrationRMSNormForwardFp32
+2026-10-20T11:22:53.6569277Z [ RUN      ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/TrainingWithManualUids
+2026-10-20T11:22:53.6569608Z [       OK ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/TrainingWithManualUids (0 ms)
+2026-10-20T11:22:53.6569888Z [ RUN      ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/TrainingWithAutoUids
+2026-10-20T11:22:53.6570188Z [       OK ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/TrainingWithAutoUids (0 ms)
+2026-10-20T11:22:53.6570445Z [ RUN      ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/TrainingWithBias
+2026-10-20T11:22:53.6570721Z [       OK ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/TrainingWithBias (0 ms)
+2026-10-20T11:22:53.6570980Z [ RUN      ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/InferenceNoBias
+2026-10-20T11:22:53.6571237Z [       OK ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/InferenceNoBias (0 ms)
+2026-10-20T11:22:53.6571500Z [ RUN      ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/InferenceWithBias
+2026-10-20T11:22:53.6571776Z [       OK ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/InferenceWithBias (0 ms)
+2026-10-20T11:22:53.6572076Z [ RUN      ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/NotSetPhaseValidationFails
+2026-10-20T11:22:53.6572407Z [       OK ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/NotSetPhaseValidationFails (0 ms)
+2026-10-20T11:22:53.6572664Z [ RUN      ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/ExecuteFailsPlugin
+2026-10-20T11:22:53.6572959Z [       OK ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/ExecuteFailsPlugin (0 ms)
+2026-10-20T11:22:53.6573250Z [ RUN      ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin
+2026-10-20T11:22:53.6573570Z [       OK ] IntegrationRMSNormForwardFp32.ExecutePluginPipeline/NoApplicableEnginesPlugin (0 ms)
+2026-10-20T11:22:53.6573757Z [----------] 8 tests from IntegrationRMSNormForwardFp32 (3 ms total)
+2026-10-20T11:22:53.6573762Z 
+2026-10-20T11:22:53.6573962Z [----------] 18 tests from SupportedOps/IntegrationAutotuneConfigRoundTrip
+2026-10-20T11:22:53.6574406Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/ConvForward
+2026-10-20T11:22:53.6574857Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/ConvForward (119 ms)
+2026-10-20T11:22:53.6575407Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/ConvBackwardData
+2026-10-20T11:22:53.6575971Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/ConvBackwardData (113 ms)
+2026-10-20T11:22:53.6576507Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/ConvBackwardWeights
+2026-10-20T11:22:53.6577103Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/ConvBackwardWeights (128 ms)
+2026-10-20T11:22:53.6577538Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/ConvFwdBiasActiv
+2026-10-20T11:22:53.6578084Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/ConvFwdBiasActiv (110 ms)
+2026-10-20T11:22:53.6578497Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/Matmul
+2026-10-20T11:22:53.6578920Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/Matmul (122 ms)
+2026-10-20T11:22:53.6579374Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/BatchnormTraining
+2026-10-20T11:22:53.6579849Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/BatchnormTraining (115 ms)
+2026-10-20T11:22:53.6580311Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/BatchnormInference
+2026-10-20T11:22:53.6580814Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/BatchnormInference (130 ms)
+2026-10-20T11:22:53.6581306Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/BatchnormInferenceVarianceExt
+2026-10-20T11:22:53.6581850Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/BatchnormInferenceVarianceExt (137 ms)
+2026-10-20T11:22:53.6582305Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/BatchnormBackward
+2026-10-20T11:22:53.6582769Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/BatchnormBackward (180 ms)
+2026-10-20T11:22:53.6583197Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/Layernorm
+2026-10-20T11:22:53.6583644Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/Layernorm (145 ms)
+2026-10-20T11:22:53.6584061Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/RMSNorm
+2026-10-20T11:22:53.6584498Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/RMSNorm (91 ms)
+2026-10-20T11:22:53.6584920Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/RMSNormBackward
+2026-10-20T11:22:53.6585401Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/RMSNormBackward (88 ms)
+2026-10-20T11:22:53.6585814Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/Reduction
+2026-10-20T11:22:53.6586326Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/Reduction (85 ms)
+2026-10-20T11:22:53.6586769Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/ResampleFwd
+2026-10-20T11:22:53.6587217Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/ResampleFwd (90 ms)
+2026-10-20T11:22:53.6587738Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/PointwiseUnary
+2026-10-20T11:22:53.6588202Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/PointwiseUnary (75 ms)
+2026-10-20T11:22:53.6588645Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/PointwiseBinary
+2026-10-20T11:22:53.6589195Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/PointwiseBinary (117 ms)
+2026-10-20T11:22:53.6589677Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/SdpaForward
+2026-10-20T11:22:53.6590164Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/SdpaForward (136 ms)
+2026-10-20T11:22:53.6590647Z [ RUN      ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/SdpaBackward
+2026-10-20T11:22:53.6591103Z [       OK ] SupportedOps/IntegrationAutotuneConfigRoundTrip.EngineSelectionRoundTripsThroughConfigFile/SdpaBackward (121 ms)
+2026-10-20T11:22:53.6591382Z [----------] 18 tests from SupportedOps/IntegrationAutotuneConfigRoundTrip (2110 ms total)
+2026-10-20T11:22:53.6591387Z 
+2026-10-20T11:22:53.6591650Z [----------] 6 tests from RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject
+2026-10-20T11:22:53.6592199Z [ RUN      ] RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject.RestoredCompiledPlanRejectsInvalidOverrides/OuterArraySizeMismatch
+2026-10-20T11:22:53.6592806Z [       OK ] RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject.RestoredCompiledPlanRejectsInvalidOverrides/OuterArraySizeMismatch (1 ms)
+2026-10-20T11:22:53.6593353Z [ RUN      ] RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject.RestoredCompiledPlanRejectsInvalidOverrides/ShapeStrideRankMismatch
+2026-10-20T11:22:53.6593931Z [       OK ] RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject.RestoredCompiledPlanRejectsInvalidOverrides/ShapeStrideRankMismatch (0 ms)
+2026-10-20T11:22:53.6594432Z [ RUN      ] RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject.RestoredCompiledPlanRejectsInvalidOverrides/DuplicateUids
+2026-10-20T11:22:53.6594978Z [       OK ] RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject.RestoredCompiledPlanRejectsInvalidOverrides/DuplicateUids (0 ms)
+2026-10-20T11:22:53.6595521Z [ RUN      ] RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject.RestoredCompiledPlanRejectsInvalidOverrides/NonPositiveShape
+2026-10-20T11:22:53.6596134Z [       OK ] RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject.RestoredCompiledPlanRejectsInvalidOverrides/NonPositiveShape (0 ms)
+2026-10-20T11:22:53.6596657Z [ RUN      ] RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject.RestoredCompiledPlanRejectsInvalidOverrides/ZeroRankOverride
+2026-10-20T11:22:53.6597190Z [       OK ] RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject.RestoredCompiledPlanRejectsInvalidOverrides/ZeroRankOverride (0 ms)
+2026-10-20T11:22:53.6597722Z [ RUN      ] RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject.RestoredCompiledPlanRejectsInvalidOverrides/NonPositiveStride
+2026-10-20T11:22:53.6598268Z [       OK ] RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject.RestoredCompiledPlanRejectsInvalidOverrides/NonPositiveStride (0 ms)
+2026-10-20T11:22:53.6598587Z [----------] 6 tests from RestoredCompiledPlan/IntegrationOverrideExecutePlanOnlyReject (5 ms total)
+2026-10-20T11:22:53.6598593Z 
+2026-10-20T11:22:53.6598734Z [----------] Global test environment tear-down
+2026-10-20T11:22:53.6598891Z [==========] 483 tests from 95 test suites ran. (11399 ms total)
+2026-10-20T11:22:53.6599025Z [  PASSED  ] 482 tests.
+2026-10-20T11:22:53.6599160Z [  FAILED  ] 1 test, listed below:
+2026-10-20T11:22:53.6599480Z [  FAILED  ] IntegrationAutotuneStallRecovery.LaterIndependentCallIsEligibleToStallAgain
+2026-10-20T11:22:53.6599583Z 
+2026-10-20T11:22:53.6599696Z  1 FAILED TEST
+2026-10-20T11:22:53.6599701Z 
+2026-10-20T11:22:53.6599781Z test 11
+2026-10-20T11:22:53.6599944Z       Start 11: hipdnn_public_frontend_dynamic_load_tests
+2026-10-20T11:22:53.6599950Z 
+2026-10-20T11:22:53.6600237Z 11: Test command: /__w/TheRock/TheRock/build/bin/hipdnn_public_frontend_dynamic_load_tests
+2026-10-20T11:22:53.6600412Z 11: Working Directory: /__w/TheRock/TheRock/build/bin/hipdnn
+2026-10-20T11:22:53.6600599Z 11: Test timeout computed to be: 7200
+2026-10-20T11:22:53.7283830Z 11: [==========] Running 10 tests from 2 test suites.
+2026-10-20T11:22:53.7284026Z 11: [----------] Global test environment set-up.
+2026-10-20T11:22:53.7284348Z 11: [----------] 3 tests from TestHipdnnDynamicBackendWrapper
+2026-10-20T11:22:53.7284800Z 11: [ RUN      ] TestHipdnnDynamicBackendWrapper.MissingStatusReturningSymbolsReturnVersionMismatch
+2026-10-20T11:22:53.7285229Z 11: [       OK ] TestHipdnnDynamicBackendWrapper.MissingStatusReturningSymbolsReturnVersionMismatch (0 ms)
+2026-10-20T11:22:53.7285521Z 11: [ RUN      ] TestHipdnnDynamicBackendWrapper.MissingLastErrorStringClearsBuffer
+2026-10-20T11:22:53.7285999Z 11: [       OK ] TestHipdnnDynamicBackendWrapper.MissingLastErrorStringClearsBuffer (0 ms)
+2026-10-20T11:22:53.7286380Z 11: [ RUN      ] TestHipdnnDynamicBackendWrapper.MissingLastErrorStringAllowsNullAndZeroSize
+2026-10-20T11:22:53.7286754Z 11: [       OK ] TestHipdnnDynamicBackendWrapper.MissingLastErrorStringAllowsNullAndZeroSize (0 ms)
+2026-10-20T11:22:53.7286979Z 11: [----------] 3 tests from TestHipdnnDynamicBackendWrapper (0 ms total)
+2026-10-20T11:22:53.7287067Z 11: 
+2026-10-20T11:22:53.7287281Z 11: [----------] 7 tests from IntegrationHipdnnDynamicBackendWrapper
+2026-10-20T11:22:53.7287575Z 11: [ RUN      ] IntegrationHipdnnDynamicBackendWrapper.VersionStringMatchesBackend
+2026-10-20T11:22:53.7287917Z 11: [       OK ] IntegrationHipdnnDynamicBackendWrapper.VersionStringMatchesBackend (0 ms)
+2026-10-20T11:22:53.7288265Z 11: [ RUN      ] IntegrationHipdnnDynamicBackendWrapper.HandleLifecycleForwardsToBackend
+2026-10-20T11:22:53.7288627Z 11: [       OK ] IntegrationHipdnnDynamicBackendWrapper.HandleLifecycleForwardsToBackend (0 ms)
+2026-10-20T11:22:53.7288948Z 11: [ RUN      ] IntegrationHipdnnDynamicBackendWrapper.DescriptorApiForwardsToBackend
+2026-10-20T11:22:53.7289276Z 11: [       OK ] IntegrationHipdnnDynamicBackendWrapper.DescriptorApiForwardsToBackend (0 ms)
+2026-10-20T11:22:53.7289596Z 11: [ RUN      ] IntegrationHipdnnDynamicBackendWrapper.SerializationApiForwardsToBackend
+2026-10-20T11:22:53.7289944Z 11: [       OK ] IntegrationHipdnnDynamicBackendWrapper.SerializationApiForwardsToBackend (0 ms)
+2026-10-20T11:22:53.7290288Z 11: [ RUN      ] IntegrationHipdnnDynamicBackendWrapper.PluginAndHeuristicApiForwardsToBackend
+2026-10-20T11:22:53.7290678Z 11: [       OK ] IntegrationHipdnnDynamicBackendWrapper.PluginAndHeuristicApiForwardsToBackend (0 ms)
+2026-10-20T11:22:53.7290956Z 11: [ RUN      ] IntegrationHipdnnDynamicBackendWrapper.LoggingApiForwardsToBackend
+2026-10-20T11:22:53.7291289Z 11: [       OK ] IntegrationHipdnnDynamicBackendWrapper.LoggingApiForwardsToBackend (0 ms)
+2026-10-20T11:22:53.7291636Z 11: [ RUN      ] IntegrationHipdnnDynamicBackendWrapper.SymbolResolutionCachesLoadedSymbols
+2026-10-20T11:22:53.7291995Z 11: [       OK ] IntegrationHipdnnDynamicBackendWrapper.SymbolResolutionCachesLoadedSymbols (0 ms)
+2026-10-20T11:22:53.7292258Z 11: [----------] 7 tests from IntegrationHipdnnDynamicBackendWrapper (1 ms total)
+2026-10-20T11:22:53.7292358Z 11: 
+2026-10-20T11:22:53.7292521Z 11: [----------] Global test environment tear-down
+2026-10-20T11:22:53.7292694Z 11: [==========] 10 tests from 2 test suites ran. (1 ms total)
+2026-10-20T11:22:53.7292796Z 11: [  PASSED  ] 10 tests.
+2026-10-20T11:22:53.7403843Z 11/11 Test #11: hipdnn_public_frontend_dynamic_load_tests ...   Passed    0.17 sec
+2026-10-20T11:22:53.7410047Z 
+2026-10-20T11:22:53.7410300Z 91% tests passed, 1 tests failed out of 11
+2026-10-20T11:22:53.7410306Z 
+2026-10-20T11:22:53.7410689Z Label Time Summary:
+2026-10-20T11:22:53.7411952Z comprehensive    =  33.40 sec*proc (11 tests)
+2026-10-20T11:22:53.7412181Z ffm-full         =  33.40 sec*proc (11 tests)
+2026-10-20T11:22:53.7412352Z ffm-quick        =  33.40 sec*proc (11 tests)
+2026-10-20T11:22:53.7412548Z full             =  33.40 sec*proc (11 tests)
+2026-10-20T11:22:53.7412723Z integration      =  12.38 sec*proc (3 tests)
+2026-10-20T11:22:53.7412912Z quick            =  33.40 sec*proc (11 tests)
+2026-10-20T11:22:53.7413493Z standard         =  33.40 sec*proc (11 tests)
+2026-10-20T11:22:53.7413658Z unit             =  20.82 sec*proc (6 tests)
+2026-10-20T11:22:53.7413669Z 
+2026-10-20T11:22:53.7414033Z Total Test time (real) =  33.41 sec
+2026-10-20T11:22:53.7414043Z 
+2026-10-20T11:22:53.7414200Z The following tests FAILED:
+2026-10-20T11:22:53.7414531Z 	 10 - hipdnn_public_frontend_tests (Failed)
+2026-10-20T11:22:53.7462460Z Errors while running CTest
+2026-10-20T11:22:53.7495772Z # TEST_COMPONENT: hipdnn -> Test Directory: build/bin/hipdnn
+2026-10-20T11:22:53.7496206Z # TEST_TYPE: quick -> Category: quick
+2026-10-20T11:22:53.7496484Z # AMDGPU_FAMILIES: gfx90a -> GPU Architecture: gfx90a
+2026-10-20T11:22:53.7496496Z 
+2026-10-20T11:22:53.7496735Z # Discovering available test labels...
+2026-10-20T11:22:53.7496967Z # Warning: No GPU specific test suites available
+2026-10-20T11:22:53.7497014Z 
+2026-10-20T11:22:53.7497305Z # No GPU suite found for gfx90a, excluding all ex_gpu tests
+2026-10-20T11:22:53.7498134Z # Running: ctest -L ^quick$ -LE ex_gpu --output-on-failure --parallel 1 --timeout 7200 --test-dir build/bin/hipdnn -V --tests-information 1,,1
+2026-10-20T11:22:53.7498144Z 
+2026-10-20T11:22:53.7717496Z ##[error]Process completed with exit code 8.
+2026-10-20T11:22:53.7934964Z ##[group]Run python ./build_tools/github_actions/reproduce_test_failure.py \
+2026-10-20T11:22:53.7935551Z [36;1mpython ./build_tools/github_actions/reproduce_test_failure.py \[0m
+2026-10-20T11:22:53.7935799Z [36;1m  --run-id "${ARTIFACT_RUN_ID}" \[0m
+2026-10-20T11:22:53.7936284Z [36;1m  --repository "ROCm/TheRock" \[0m
+2026-10-20T11:22:53.7936549Z [36;1m  --amdgpu-family "${AMDGPU_FAMILIES}" \[0m
+2026-10-20T11:22:53.7936801Z [36;1m  --amdgpu-targets "${AMDGPU_TARGETS}" \[0m
+2026-10-20T11:22:53.7937094Z [36;1m  --test-script "${COMPONENT_TEST_SCRIPT}" \[0m
+2026-10-20T11:22:53.7937324Z [36;1m  --shard-index "${MATRIX_SHARD}" \[0m
+2026-10-20T11:22:53.7937612Z [36;1m  --total-shards "${COMPONENT_TOTAL_SHARDS}" \[0m
+2026-10-20T11:22:53.7937844Z [36;1m  --test-type "${COMPONENT_TEST_TYPE}" \[0m
+2026-10-20T11:22:53.7938042Z [36;1m  --print-cmd \[0m
+2026-10-20T11:22:53.7938427Z [36;1m  --fetch-artifact-args="${COMPONENT_FETCH_ARTIFACT_ARGS}" \[0m
+2026-10-20T11:22:53.7938849Z [36;1m  --additional-requirements-files="${REQUIREMENTS_FILES}"[0m
+2026-10-20T11:22:53.7939313Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T11:22:53.7939479Z env:
+2026-10-20T11:22:53.7939762Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T11:22:53.7940016Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T11:22:53.7940303Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T11:22:53.7940497Z   ARTIFACT_RUN_ID: 39406187671
+2026-10-20T11:22:53.7940701Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T11:22:53.7940887Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T11:22:53.7941080Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T11:22:53.7941268Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T11:22:53.7941482Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T11:22:53.7941666Z   BUILD_VARIANT: release
+2026-10-20T11:22:53.7941918Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T11:22:53.7942255Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T11:22:53.7942506Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T11:22:53.7942765Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T11:22:53.7943004Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T11:22:53.7943255Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T11:22:53.7943737Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-20T11:22:53.7943927Z   OPENBLAS_NUM_THREADS: 25
+2026-10-20T11:22:53.7944106Z   OMP_NUM_THREADS: 25
+2026-10-20T11:22:53.7944269Z   MATRIX_SHARD: 1
+2026-10-20T11:22:53.7944876Z   COMPONENT_TEST_SCRIPT: python build_tools/github_actions/test_executable_scripts/test_runner.py
+2026-10-20T11:22:53.7945082Z   COMPONENT_TOTAL_SHARDS: 1
+2026-10-20T11:22:53.7945279Z   COMPONENT_TEST_TYPE: quick
+2026-10-20T11:22:53.7945470Z   REQUIREMENTS_FILES: 
+2026-10-20T11:22:53.7945735Z   COMPONENT_FETCH_ARTIFACT_ARGS: --hipdnn --tests
+2026-10-20T11:22:53.7946042Z ##[endgroup]
+2026-10-20T11:22:54.0560935Z To reproduce this failure, run:
+2026-10-20T11:22:54.0561476Z   git clone https://github.com/ROCm/TheRock.git && cd TheRock
+2026-10-20T11:22:54.0563569Z   python build_tools/github_actions/reproduce_test_failure.py --run-id 39406187671 --repository ROCm/TheRock --amdgpu-family gfx90a --test-script "python build_tools/github_actions/test_executable_scripts/test_runner.py" --amdgpu-targets gfx90a --output-dir "./build" --test-type quick --fetch-artifact-args="--hipdnn --tests"
+2026-10-20T11:22:54.0770884Z ##[group]Run bash ./build_tools/github_actions/cleanup_processes.sh
+2026-10-20T11:22:54.0771892Z [36;1mbash ./build_tools/github_actions/cleanup_processes.sh[0m
+2026-10-20T11:22:54.0772633Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T11:22:54.0773065Z env:
+2026-10-20T11:22:54.0773420Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T11:22:54.0773924Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T11:22:54.0774427Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T11:22:54.0774890Z   ARTIFACT_RUN_ID: 39406187671
+2026-10-20T11:22:54.0775281Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T11:22:54.0775664Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T11:22:54.0776152Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T11:22:54.0776528Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T11:22:54.0776903Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T11:22:54.0777329Z   BUILD_VARIANT: release
+2026-10-20T11:22:54.0777837Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T11:22:54.0778359Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T11:22:54.0778878Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T11:22:54.0779346Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T11:22:54.0779816Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T11:22:54.0780286Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T11:22:54.0780783Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-20T11:22:54.0781188Z   OPENBLAS_NUM_THREADS: 25
+2026-10-20T11:22:54.0781542Z   OMP_NUM_THREADS: 25
+2026-10-20T11:22:54.0781872Z ##[endgroup]
+2026-10-20T11:22:54.2729786Z [*] ==== Starting cleanup_processes.sh ====
+2026-10-20T11:22:54.2730806Z [*] Not running in a container (or container ID not detected)
+2026-10-20T11:22:54.2731629Z [*] Build directory: /__w/TheRock/TheRock/build
+2026-10-20T11:22:54.2732580Z [*] Searching for GPU processes from this container's build directory...
+2026-10-20T11:22:54.2733486Z [+] No GPU processes found
+2026-10-20T11:22:54.2891034Z ##[group]Run python build_tools/github_actions/capture_job_summary.py
+2026-10-20T11:22:54.2891645Z [36;1mpython build_tools/github_actions/capture_job_summary.py[0m
+2026-10-20T11:22:54.2892200Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-10-20T11:22:54.2892586Z env:
+2026-10-20T11:22:54.2892925Z   QUARTZ_REPORTING_WORKFLOW: test_component.yml
+2026-10-20T11:22:54.2893346Z   QUARTZ_WORKFLOW_POSTFIX: - test ROCm component
+2026-10-20T11:22:54.2893769Z   VENV_DIR: /home/runner/_work/TheRock/TheRock/.venv
+2026-10-20T11:22:54.2894141Z   ARTIFACT_RUN_ID: 39406187671
+2026-10-20T11:22:54.2894468Z   OUTPUT_ARTIFACTS_DIR: ./build
+2026-10-20T11:22:54.2894783Z   THEROCK_BIN_DIR: ./build/bin
+2026-10-20T11:22:54.2895069Z   AMDGPU_FAMILIES: gfx90a
+2026-10-20T11:22:54.2895374Z   AMDGPU_TARGETS: gfx90a
+2026-10-20T11:22:54.2895675Z   ARTIFACT_GROUP: multi-arch-release
+2026-10-20T11:22:54.2896319Z   BUILD_VARIANT: release
+2026-10-20T11:22:54.2896704Z   pythonLocation: /__w/_tool/Python/3.12.15/x64
+2026-10-20T11:22:54.2897138Z   PKG_CONFIG_PATH: /__w/_tool/Python/3.12.15/x64/lib/pkgconfig
+2026-10-20T11:22:54.2897559Z   Python_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T11:22:54.2897939Z   Python2_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T11:22:54.2898316Z   Python3_ROOT_DIR: /__w/_tool/Python/3.12.15/x64
+2026-10-20T11:22:54.2898696Z   LD_LIBRARY_PATH: /__w/_tool/Python/3.12.15/x64/lib
+2026-10-20T11:22:54.2899092Z   VIRTUAL_ENV: /__w/TheRock/TheRock/.venv
+2026-10-20T11:22:54.2899436Z   OPENBLAS_NUM_THREADS: 25
+2026-10-20T11:22:54.2899733Z   OMP_NUM_THREADS: 25
+2026-10-20T11:22:54.2900013Z ##[endgroup]
+2026-10-20T11:22:54.5011696Z   No job summary content to publish; skipping 'summary' to add to $GITHUB_OUTPUT
+2026-10-20T11:22:54.5252291Z Post job cleanup.
+2026-10-20T11:22:54.5257552Z ##[start-action display=Setting up Python;id=__fb4c6496-d2c8-4552-9ed0-da188a94c3c1.__actions_setup-python]
+2026-10-20T11:22:54.5260494Z ##[end-action id=__fb4c6496-d2c8-4552-9ed0-da188a94c3c1.__actions_setup-python;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-20T11:22:54.5397148Z Post job cleanup.
+2026-10-20T11:22:54.5407226Z ##[command]/usr/bin/docker exec  f42ed4ae225319f17095f33157558ebf47746e540ca2f3e37319f5ac50fde22a sh -c "cat /etc/*release | grep ^ID"
+2026-10-20T11:22:54.9878624Z [command]/usr/bin/git version
+2026-10-20T11:22:54.9879385Z git version 2.51.0
+2026-10-20T11:22:54.9884535Z Copying '/github/home/.gitconfig' to '/__w/_temp/f7ab6e82-95aa-4af9-8833-2061bb1a3356/.gitconfig'
+2026-10-20T11:22:54.9886337Z Temporarily overriding HOME='/__w/_temp/f7ab6e82-95aa-4af9-8833-2061bb1a3356' before making global git config changes
+2026-10-20T11:22:54.9887973Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T11:22:54.9889232Z [command]/usr/bin/git config --global --add safe.directory /__w/TheRock/TheRock
+2026-10-20T11:22:54.9911119Z Removing SSH command configuration
+2026-10-20T11:22:54.9917642Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T11:22:54.9959661Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T11:22:55.0371327Z Removing HTTP extra header
+2026-10-20T11:22:55.0376551Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T11:22:55.0417477Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T11:22:55.0774593Z Removing includeIf entries pointing to credentials config files
+2026-10-20T11:22:55.0775628Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T11:22:55.0812630Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T11:22:55.1513208Z Post job cleanup.
+2026-10-20T11:22:55.1523156Z ##[command]/usr/bin/docker exec  f42ed4ae225319f17095f33157558ebf47746e540ca2f3e37319f5ac50fde22a sh -c "cat /etc/*release | grep ^ID"
+2026-10-20T11:22:55.5856876Z Stop and remove container: f2cebadba4794c34aec4326fec2eece5_ghcriorocmno_rocm_image_ubuntu24_04sha2564150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98_3b8670
+2026-10-20T11:22:55.5869896Z ##[command]/usr/bin/docker rm --force f42ed4ae225319f17095f33157558ebf47746e540ca2f3e37319f5ac50fde22a
+2026-10-20T11:23:23.0087925Z f42ed4ae225319f17095f33157558ebf47746e540ca2f3e37319f5ac50fde22a
+2026-10-20T11:23:23.0176567Z Remove container network: github_network_48362646e7774c5f8f9a3095ea1501d3
+2026-10-20T11:23:23.0181911Z ##[command]/usr/bin/docker network rm github_network_48362646e7774c5f8f9a3095ea1501d3
+2026-10-20T11:23:23.4790262Z github_network_48362646e7774c5f8f9a3095ea1501d3
+2026-10-20T11:23:23.4936934Z Evaluate and set job outputs
+2026-10-20T11:23:23.4944234Z Cleaning up orphan processes

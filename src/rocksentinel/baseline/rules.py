@@ -27,8 +27,8 @@ _PACKAGING_HINTS = ("native_linux_packages", "native_windows_packages", "package
 _INFRA_KINDS = frozenset({"infra", "killed"})
 _HANG_KINDS = frozenset({"test_timeout", "step_timeout", "gpu_hang"})
 _CODE_KINDS = frozenset({
-    "gpu_memory_fault", "crash", "build_error", "gtest_failed", "python_error",
-    "ctest_failed_list", "ctest_summary",
+    "gpu_memory_fault", "crash", "hip_runtime_error", "build_error", "gtest_failed",
+    "python_error", "ctest_failed_list", "ctest_summary",
 })
 # A fault or crash is the root cause; any timeout/hang next to it is a consequence.
 _ROOT_CAUSE_KINDS = frozenset({"gpu_memory_fault", "crash", "asan"})
