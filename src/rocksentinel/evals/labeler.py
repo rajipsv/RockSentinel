@@ -31,6 +31,7 @@ from rocksentinel.therock_ci.mappers import map_symbol_to_component
 ROOT = Path(__file__).resolve().parents[3]
 MAX_FIXTURE_LINES = 1500
 CONTEXT_BEFORE_FIRST_WINDOW = 50
+EXCERPT_TOP_CANDIDATES = 5
 
 
 @dataclass(frozen=True)
@@ -71,8 +72,11 @@ def fixture_excerpt(log_text: str) -> list[str]:
     lines = log_text.splitlines()
     if len(lines) <= MAX_FIXTURE_LINES:
         return lines
-    first = extract_errors(log_text, max_candidates=1).first_error
-    start = max(0, first.window[0] - 1 - CONTEXT_BEFORE_FIRST_WINDOW) if first else 0
+    # Start before the EARLIEST of the top-ranked errors, not before the single top one:
+    # a suite's final summary can outrank the per-test failure lines printed earlier.
+    top = extract_errors(log_text, max_candidates=EXCERPT_TOP_CANDIDATES).candidates
+    first_start = min((c.window[0] for c in top), default=1)
+    start = max(0, first_start - 1 - CONTEXT_BEFORE_FIRST_WINDOW) if top else 0
     segment = lines[start:]
     if len(segment) <= MAX_FIXTURE_LINES:
         return segment
@@ -136,17 +140,38 @@ def refresh(paths: Paths | None = None) -> list[str]:
     return changed
 
 
-def propose_case(store: JobStore, gh: GitHubClient, job: JobResult, paths: Paths) -> dict:
-    log = gh.get_job_log(job.repo, job.job_id)
+def _save_fixture(paths: Paths, *, repo: str, run_id: int, attempt: int, job_id: int,
+                  job_name: str, workflow: str, log: str) -> tuple[Path, list[str]]:
     excerpt = fixture_excerpt(log)
-    fixture = paths.fixtures / f"run-{job.run_id}_job-{job.job_id}.txt"
+    fixture = paths.fixtures / f"run-{run_id}_job-{job_id}.txt"
     fixture.parent.mkdir(parents=True, exist_ok=True)
     header = [
-        f"# Source: {job.repo} Actions run {job.run_id} attempt {job.attempt}, job {job.job_id}",
-        f"# Job: {job.job_name} ({job.workflow})",
+        f"# Source: {repo} Actions run {run_id} attempt {attempt}, job {job_id}",
+        f"# Job: {job_name} ({workflow})",
         f"# Excerpt saved by rocksentinel.evals.labeler on {datetime.now(UTC):%Y-%m-%d}",
     ]
     fixture.write_text("\n".join(header + excerpt) + "\n", encoding="utf-8")
+    return fixture, excerpt
+
+
+def refetch(case_id: str, gh: GitHubClient, paths: Paths | None = None) -> dict:
+    """Re-download a pending proposal's log with the current excerpt logic, then refresh it."""
+    paths = paths or Paths()
+    p = next((x for x in _read_jsonl(paths.proposals) if x["case_id"] == case_id), None)
+    if p is None:
+        raise KeyError(f"no proposal {case_id}")
+    _save_fixture(paths, repo=p["repo"], run_id=p["run_id"], attempt=p.get("attempt", 1),
+                  job_id=p["job_id"], job_name=p["job_name"], workflow=p["workflow"],
+                  log=gh.get_job_log(p["repo"], p["job_id"]))
+    refresh(paths)
+    return next(x for x in _read_jsonl(paths.proposals) if x["case_id"] == case_id)
+
+
+def propose_case(store: JobStore, gh: GitHubClient, job: JobResult, paths: Paths) -> dict:
+    fixture, excerpt = _save_fixture(
+        paths, repo=job.repo, run_id=job.run_id, attempt=job.attempt, job_id=job.job_id,
+        job_name=job.job_name, workflow=job.workflow, log=gh.get_job_log(job.repo, job.job_id),
+    )
 
     result = extract_errors("\n".join(excerpt))
     history = job_history(store, job.job_id)
@@ -315,6 +340,8 @@ def main() -> None:
     p_prop.add_argument("--max-per-run", type=int, default=DEFAULT_MAX_PER_RUN)
     sub.add_parser("list")
     sub.add_parser("refresh", help="re-derive pending proposals after extractor/rule changes")
+    p_ref = sub.add_parser("refetch", help="re-download a proposal's log, then refresh it")
+    p_ref.add_argument("case_id")
     p_reb = sub.add_parser("rebalance", help="drop pending proposals beyond the per-run cap")
     p_reb.add_argument("--max-per-run", type=int, default=DEFAULT_MAX_PER_RUN)
     p_acc = sub.add_parser("accept")
@@ -338,6 +365,10 @@ def main() -> None:
         proposals = _read_jsonl(Paths().proposals)
         print(format_proposals(proposals))
         print(f"\n{len(proposals)} pending from {len({p['run_id'] for p in proposals})} runs")
+    elif args.cmd == "refetch":
+        with GitHubClient() as gh:
+            p = refetch(args.case_id, gh)
+        print(format_proposals([p]))
     elif args.cmd == "refresh":
         changed = refresh()
         print(f"refreshed {len(changed)} proposals: {changed}")

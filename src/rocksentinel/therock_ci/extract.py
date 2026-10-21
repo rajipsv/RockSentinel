@@ -55,6 +55,9 @@ PATTERNS: tuple[Pattern, ...] = (
     _p("build_error", 80, r"^FAILED: |CMake Error|\berror: |undefined reference to|fatal error:"),
     _p("python_error", 75, r"Traceback \(most recent call last\)|FileNotFoundError"),
     _p("gtest_failed", 75, r"^\[\s+FAILED\s+\]"),
+    # DejaGnu (e.g. rocgdb): one line per failure, with the reason after the test name:
+    #   "FAIL: gdb.rocm/multi-inferior-gpu.exp: wait for gpu stops (timeout)"
+    _p("dejagnu_fail", 74, r"^(?:FAIL|UNRESOLVED|ERROR): \S+\.exp\b"),
     _p("ctest_failed_list", 70, r"The following tests FAILED:"),
     # Summary printed by some suites' runners (e.g. rocgdb):
     #   "[X] Unexpected Failures (2):" / "[X] Total Failed Tests: 2" / "[X] OVERALL STATUS: FAIL"
@@ -69,6 +72,7 @@ PATTERNS: tuple[Pattern, ...] = (
 _GTEST_RUN = re.compile(r"^\[ RUN\s+\] (\S+)")
 _CTEST_TEST_NAME = re.compile(r"Test\s+#\d+:\s+(\S+)")
 _GTEST_FAILED_NAME = re.compile(r"^\[\s+FAILED\s+\] (\S+)")
+_DEJAGNU_NAME = re.compile(r"^(?:FAIL|UNRESOLVED|ERROR): (\S+\.exp)")
 _KERNEL = re.compile(r"kernel: (?:void )?([^(\]]+)\(")
 _CTEST_FAILED_ENTRY = re.compile(r"^\s+(\d+ - .+?)\s*$")
 _SUITE_FAILED_HEADER = re.compile(r"\[X\] Unexpected Failures \(\d+\):")
@@ -254,6 +258,9 @@ def _fill_facts(result: Extraction, lines: list[str], found: list[ErrorCandidate
         result.failing_test = m.group(1) if m else None
     elif first is not None and first.kind == "gtest_failed":
         m = _GTEST_FAILED_NAME.match(first.text)
+        result.failing_test = m.group(1) if m else None
+    elif first is not None and first.kind == "dejagnu_fail":
+        m = _DEJAGNU_NAME.match(first.text)
         result.failing_test = m.group(1) if m else None
 
     for idx, line in enumerate(lines):

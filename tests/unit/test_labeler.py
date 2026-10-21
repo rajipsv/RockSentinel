@@ -195,6 +195,14 @@ def test_fixture_excerpt_keeps_small_logs_whole():
     assert fixture_excerpt(log) == log.splitlines()
 
 
+def test_fixture_excerpt_starts_before_earliest_top_error_not_top_ranked():
+    lines = [f"noise {i}" for i in range(6000)]
+    lines[2000] = "FAIL: gdb.rocm/a.exp: wait for gpu stops (timeout)"  # earlier, per-test
+    lines[5900] = "Memory access fault by GPU node-1"  # later, ranked higher
+    out = fixture_excerpt("\n".join(lines))
+    assert lines[2000] in out and lines[5900] in out
+
+
 def test_fixture_excerpt_trims_large_logs_but_keeps_error_and_tail():
     lines = [f"noise {i}" for i in range(10_000)]
     lines[5000] = "Memory access fault by GPU node-1 on address 0x1."

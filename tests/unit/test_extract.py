@@ -192,6 +192,28 @@ def test_suite_summary_failures_are_extracted_in_full():
     assert not any("Cleaning up" in c.text for c in r.candidates)
 
 
+def test_dejagnu_fail_lines_give_test_and_reason():
+    log = (
+        "Running .../gdb.rocm/multi-inferior-gpu.exp ...\n"
+        "FAIL: gdb.rocm/multi-inferior-gpu.exp: wait for gpu stops (timeout)\n"
+        "FAIL: gdb.rocm/multi-inferior-fork.exp: stop_at=kernel: run\n"
+        "FAIL: gdb.rocm/multi-inferior-gpu.exp: wait for gpu stops (timeout)\n"  # retry
+        "2026-10-19 20:29:42,057 - INFO: [X] Unexpected Failures (2):\n"
+        "2026-10-19 20:29:42,057 - INFO:        gdb.rocm/multi-inferior-fork.exp\n"
+        "2026-10-19 20:29:42,057 - INFO:        gdb.rocm/multi-inferior-gpu.exp\n"
+    )
+    r = extract_errors(log)
+    fails = [c for c in r.candidates if c.kind == "dejagnu_fail"]
+    assert [c.text for c in fails] == [
+        "FAIL: gdb.rocm/multi-inferior-gpu.exp: wait for gpu stops (timeout)",
+        "FAIL: gdb.rocm/multi-inferior-fork.exp: stop_at=kernel: run",
+    ]
+    assert fails[0].count == 2  # failed again on retry; both occurrences kept
+    assert r.first_error.kind == "dejagnu_fail"  # per-test reason outranks the summary
+    assert r.failing_test == "gdb.rocm/multi-inferior-gpu.exp"
+    assert r.suite_failed == ["gdb.rocm/multi-inferior-fork.exp", "gdb.rocm/multi-inferior-gpu.exp"]
+
+
 def test_real_rocgdb_log():
     log = (FIXTURES / "rocgdb_suite_summary_run-39314226932.txt").read_text(encoding="utf-8")
     r = extract_errors(log)
