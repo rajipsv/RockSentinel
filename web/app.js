@@ -5,6 +5,19 @@
 const state = { proposals: [], categories: [], selected: null };
 
 const $ = (sel) => document.querySelector(sel);
+
+// Theme: dark by default (design system); light is opt-in and remembered.
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  const btn = document.querySelector("#theme-toggle");
+  if (btn) btn.textContent = theme === "dark" ? "Light theme" : "Dark theme";
+}
+applyTheme(localStorage.getItem("rs-theme") || "dark");
+document.querySelector("#theme-toggle")?.addEventListener("click", () => {
+  const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  localStorage.setItem("rs-theme", next);
+  applyTheme(next);
+});
 function el(tag, attrs = {}, ...children) {
   const node = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs)) {
