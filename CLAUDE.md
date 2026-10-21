@@ -21,6 +21,7 @@ Design: `docs/ADLC-RockSentinel.md`. Keep code consistent with it; if a decision
 - [x] 2. `job_history` tool (failing-since, rerun/flake evidence, same-run co-failures)
 - [x] 3. B0 non-AI baseline + eval runner over the golden set (plus B1 deterministic baseline)
 - [ ] 4. Grow the golden set to ~30–50 human-reviewed cases
+- [x] 4a. Console v0 (pulled forward, user request): local review UI for proposals (accept/reject), golden cases and eval results; step 8 extends it into the full Console
 - [ ] 5. `memory` MCP server (signatures, cases, instincts, feedback; SQLite locally)
 - [ ] 6. Harness + Triage agent (`LLMProvider`; replay mode; GitHub Models for live dev)
 - [ ] 7. RCA agent + `find_introducing_change`

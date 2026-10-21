@@ -566,6 +566,14 @@ The Console never calls an agent. Agents write results, the Console reads them, 
 
 **Security.** The Console reads cases and writes **only** feedback. Like the rest of the system, it holds **no GitHub credentials**.
 
+**Console v0 (built early, local).** A first version exists now to make golden-set review easy:
+- views: **Review** (proposals with highlighted evidence, Accept/Reject, category override), **Golden set**, **Evals** (B0 vs B1);
+- `web/` is the static frontend that Static Web Apps will serve;
+- `src/rocksentinel/console/api.py` holds framework-free handler functions that become the SWA managed Functions;
+- locally a stdlib dev server (`python -m rocksentinel.console.server`) binds to 127.0.0.1 and accepts same-origin writes only.
+
+The Review view is a labelling tool for the golden set. In production it can stay as an admin-only view or be hidden; the Case, Run and Signature views above are added in step 8.
+
 **Trade-off.** A UI is **pull** (people must visit). Mitigation: an optional **Teams or Slack notification** (through the Azure Monitor Action Group) for high-confidence regressions only, linking to the Console case.
 
 ---

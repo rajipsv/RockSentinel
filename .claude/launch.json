@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "console",
+      "runtimeExecutable": ".venv/Scripts/python",
+      "runtimeArgs": ["-m", "rocksentinel.console.server", "--port", "8765"],
+      "port": 8765
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RockSentinel Console</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">RockSentinel <span>Console</span></div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-view="review" role="tab">Review <span id="count-review" class="pill">0</span></button>
+      <button class="tab" data-view="golden" role="tab">Golden set <span id="count-golden" class="pill">0</span></button>
+      <button class="tab" data-view="evals" role="tab">Evals</button>
+    </nav>
+    <div class="hint">read-only toward GitHub · local only</div>
+  </header>
+
+  <main>
+    <!-- Review -->
+    <section id="view-review" class="view active">
+      <aside class="list" id="proposal-list" aria-label="Proposals"></aside>
+      <article class="detail" id="proposal-detail">
+        <p class="empty">No proposal selected.</p>
+      </article>
+    </section>
+
+    <!-- Golden set -->
+    <section id="view-golden" class="view">
+      <div class="panel">
+        <h2>Golden set</h2>
+        <p class="muted" id="golden-summary"></p>
+        <div class="table-wrap"><table id="golden-table"></table></div>
+      </div>
+    </section>
+
+    <!-- Evals -->
+    <section id="view-evals" class="view">
+      <div class="panel">
+        <div class="row-between">
+          <h2>Evals: non-AI baselines</h2>
+          <label class="check"><input type="checkbox" id="confirmed-only"> confirmed cases only</label>
+        </div>
+        <p class="muted">B0 = TheRock-style keyword excerpt · B1 = RockSentinel extract_errors.
+          Both use the same rules; the LLM agents must beat both.</p>
+        <p class="muted" id="evals-summary"></p>
+        <div class="table-wrap"><table id="evals-table"></table></div>
+        <h3>Per case</h3>
+        <div class="table-wrap"><table id="evals-cases"></table></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

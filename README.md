@@ -21,6 +21,8 @@ src/rocksentinel/therock_ci/history.py   job_history: failing-since, flake evide
 src/rocksentinel/baseline/               non-AI baselines: B0 (TheRock-style excerpt), B1 (extract_errors)
 src/rocksentinel/evals/runner.py         scores systems on the golden set
 src/rocksentinel/evals/labeler.py        proposes golden cases from real failures for human review
+src/rocksentinel/console/                Console API (framework-free) + local dev server
+web/                                     Console frontend (static HTML/JS, served by SWA in Azure)
 src/rocksentinel/therock_ci/server.py    therock-ci MCP server (MCP Python SDK 2.x)
 src/rocksentinel/github/client.py        read-only GitHub REST client (runs, jobs, logs)
 src/rocksentinel/ingest/poller.py        polls completed runs, stores every job, queues failures
@@ -54,6 +56,19 @@ lookback before its saved cursor to catch runs that finished late.
 ```
 It prints category accuracy and macro-F1, component/family/platform match, failing-test and
 kernel match, and the grounding rate for each system. The LLM agents must beat B0 and B1.
+
+## Console (local)
+```bash
+.venv/Scripts/python -m rocksentinel.console.server     # http://127.0.0.1:8765
+```
+- **Review:** each pending proposal with its highlighted evidence lines, failing-since and
+  co-failure context, a category picker and Accept/Reject (keys A / R, J / K to move).
+- **Golden set:** all labelled cases and who confirmed them.
+- **Evals:** B0 vs B1 metrics and per-case results.
+
+Local only (binds to 127.0.0.1, same-origin writes); it edits only the golden-set files and
+never writes to GitHub. In Azure, `web/` is served by Static Web Apps and
+`src/rocksentinel/console/api.py` runs as its managed Functions.
 
 ## Grow the golden set (human review)
 ```bash
