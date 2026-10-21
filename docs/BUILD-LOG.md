@@ -81,7 +81,10 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 
 **Interview talking point:** "Before any LLM, I measured what deterministic code achieves. An agent that doesn't beat B1 isn't worth its tokens."
 
-## Step 4: Growing the golden set (84a49dc → 2414ba0, in progress)
+## Step 4: Growing the golden set (84a49dc → 6497677, done)
+**Result:** 35 real TheRock failures, 33 confirmed by a human reviewer through the Console (24 dev / 11 held-out test).
+- By category: timeout 14, regression 9, infra 7, packaging 2, flaky 2, unknown 1.
+- Coverage is uneven: timeouts dominate (as in TheRock's CI), while flaky, packaging and asan are thin. Macro-F1 is therefore noisy, and those classes need more cases over time.
 **Built:**
 - **A labelling helper** that proposes cases from real failures, with diversity (one job per name, at most 2 per run), per-proposal label sources (outcome-based = strong, rule-based = verify), and accept/reject/refresh/refetch.
 - **A backfill mode** and resilience to GitHub 502s.
