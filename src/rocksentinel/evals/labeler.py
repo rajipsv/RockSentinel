@@ -33,6 +33,7 @@ ROOT = Path(__file__).resolve().parents[3]
 MAX_FIXTURE_LINES = 1500
 CONTEXT_BEFORE_FIRST_WINDOW = 50
 EXCERPT_TOP_CANDIDATES = 5
+EXCERPT_TAIL_LINES = 400
 
 
 @dataclass(frozen=True)
@@ -73,16 +74,30 @@ def fixture_excerpt(log_text: str) -> list[str]:
     lines = log_text.splitlines()
     if len(lines) <= MAX_FIXTURE_LINES:
         return lines
-    # Start before the EARLIEST of the top-ranked errors, not before the single top one:
-    # a suite's final summary can outrank the per-test failure lines printed earlier.
-    top = extract_errors(log_text, max_candidates=EXCERPT_TOP_CANDIDATES).candidates
-    first_start = min((c.window[0] for c in top), default=1)
-    start = max(0, first_start - 1 - CONTEXT_BEFORE_FIRST_WINDOW) if top else 0
-    segment = lines[start:]
-    if len(segment) <= MAX_FIXTURE_LINES:
-        return segment
-    head, tail = 900, MAX_FIXTURE_LINES - 900
-    return segment[:head] + ["... [middle trimmed by labeler] ..."] + segment[-tail:]
+    # Keep a window around EACH top-ranked error, not just the first part of the log: in a
+    # 10k-line log the failure can sit in the middle (found on a rockrel hipblaslt GPU hang,
+    # where head+tail trimming cut out the hang and the abort). The generic safety net and
+    # the exit code don't steer the excerpt unless nothing else was found.
+    ranked = extract_errors(log_text, max_candidates=20).candidates
+    top = [c for c in ranked if c.kind not in ("generic_error", "exit_code")] or ranked
+    top = top[:EXCERPT_TOP_CANDIDATES]
+    ranges = [(max(0, c.window[0] - 1 - CONTEXT_BEFORE_FIRST_WINDOW), c.window[1]) for c in top]
+    ranges.append((max(0, len(lines) - EXCERPT_TAIL_LINES), len(lines)))  # where B0 looks
+    ranges.sort()
+    if len(lines) - ranges[0][0] <= MAX_FIXTURE_LINES:  # fits as one piece
+        return lines[ranges[0][0]:]
+    merged: list[list[int]] = []
+    for lo, hi in ranges:
+        if merged and lo <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], hi)
+        else:
+            merged.append([lo, hi])
+    out: list[str] = []
+    for i, (lo, hi) in enumerate(merged):
+        if i:
+            out.append("... [trimmed by labeler] ...")
+        out.extend(lines[lo:hi])
+    return out
 
 
 def _diverse(jobs: list[JobResult], skip_ids: set[int], limit: int) -> list[JobResult]:

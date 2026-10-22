@@ -181,9 +181,49 @@ def test_different_errors_are_not_grouped():
 
 def test_real_tensilelite_log_groups_66_module_load_failures():
     log = (FIXTURES / "run-39385542565_job-118506197594.txt").read_text(encoding="utf-8")
-    first = extract_errors(log).first_error
-    assert first.kind == "hip_runtime_error" and first.count == 66
-    assert first.text.startswith("hipModuleLoad failed:")
+    r = extract_errors(log)
+    # the client run that failed (exit 134) hit a GPU hardware exception; the 66 module-load
+    # misses come from client runs that exited 0, so they rank below it but stay grouped
+    assert r.first_error.kind == "gpu_hw_exception"
+    assert "reason :GPU Hang" in r.first_error.text
+    loads = next(c for c in r.candidates if c.kind == "hip_runtime_error")
+    assert loads.count == 66 and loads.text.startswith("hipModuleLoad failed:")
+
+
+def test_real_rockrel_gpu_hang_is_root_and_passing_test_noise_is_ignored():
+    log = (FIXTURES / "run-39706995961_job-119589847503.txt").read_text(encoding="utf-8")
+    r = extract_errors(log)
+    assert r.first_error.kind == "gpu_hw_exception" and r.first_error.count == 2
+    assert r.failing_test.endswith("NN_1568_256_1024_1_1568_1024_0_1568_1568_1_t2")
+    kinds = [c.kind for c in r.candidates]
+    assert "crash" in kinds and "hip_runtime_error" not in kinds
+
+
+def test_soft_errors_inside_a_passing_gtest_are_ignored_but_counted():
+    log = "\n".join([
+        "[ RUN      ] Recovery.smoke_MissingContext/0",
+        "hipModuleLoad failed: /library/primary.co",
+        " error: unspecified launch failure",
+        "[       OK ] Recovery.smoke_MissingContext/0 (0 ms)",
+        "[ RUN      ] Matmul.f64",
+        "hipModuleLoad failed: /library/other.co",
+        "[  FAILED  ] Matmul.f64 (3 ms)",
+    ])
+    r = extract_errors(log)
+    texts = [c.text for c in r.candidates]
+    assert "hipModuleLoad failed: /library/primary.co" not in texts   # inside a passing test
+    assert "hipModuleLoad failed: /library/other.co" in texts         # inside a failing test
+    assert r.ignored_in_passing_tests == 1
+
+
+def test_faults_inside_a_passing_gtest_are_never_ignored():
+    log = "[ RUN      ] A.b\nMemory access fault by GPU node-1\n[       OK ] A.b (1 ms)\n"
+    assert extract_errors(log).first_error.kind == "gpu_memory_fault"
+
+
+def test_gtest_summary_line_is_not_taken_as_the_failing_test():
+    log = "[  FAILED  ] 1 test, listed below:\n[  FAILED  ] Suite.RealName\n"
+    assert extract_errors(log).failing_test == "Suite.RealName"
 
 
 def test_ctest_segfault_line_gives_failing_test():

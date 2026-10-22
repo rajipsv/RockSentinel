@@ -27,11 +27,14 @@ _PACKAGING_HINTS = ("native_linux_packages", "native_windows_packages", "package
 _INFRA_KINDS = frozenset({"infra", "killed"})
 _HANG_KINDS = frozenset({"test_timeout", "step_timeout", "gpu_hang"})
 _CODE_KINDS = frozenset({
-    "gpu_memory_fault", "crash", "hip_runtime_error", "build_error", "gtest_failed",
-    "python_error", "ctest_failed_list", "ctest_summary", "test_suite_failed", "dejagnu_fail",
+    "gpu_memory_fault", "gpu_hw_exception", "crash", "hip_runtime_error", "build_error",
+    "gtest_failed", "python_error", "ctest_failed_list", "ctest_summary", "test_suite_failed",
+    "dejagnu_fail",
 })
-# A fault or crash is the root cause; any timeout/hang next to it is a consequence.
-_ROOT_CAUSE_KINDS = frozenset({"gpu_memory_fault", "crash", "asan"})
+# A fault, hardware exception or crash is the root cause; a hang dump or time-limit hit next
+# to it is its consequence. ("HW Exception ... GPU Hang" aborts the process, so the
+# "Subprocess aborted" that follows is a consequence too, and both are code signals.)
+_ROOT_CAUSE_KINDS = frozenset({"gpu_memory_fault", "gpu_hw_exception", "crash", "asan"})
 
 
 def classify(

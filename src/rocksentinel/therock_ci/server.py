@@ -169,6 +169,7 @@ def get_job_log_windows(
         "suite_failed": result.suite_failed,
         "exit_code": result.exit_code,
         "step_timeout_minutes": result.step_timeout_minutes,
+        "ignored_in_passing_tests": result.ignored_in_passing_tests,
     }
 
 
@@ -203,6 +204,7 @@ def extract_errors(log_text: str, max_candidates: int = 20) -> dict:
         "suite_failed": result.suite_failed,
         "exit_code": result.exit_code,
         "step_timeout_minutes": result.step_timeout_minutes,
+        "ignored_in_passing_tests": result.ignored_in_passing_tests,
     }
 
 

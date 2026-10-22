@@ -211,3 +211,16 @@ def test_fixture_excerpt_trims_large_logs_but_keeps_error_and_tail():
     assert len(out) <= labeler.MAX_FIXTURE_LINES + 1
     assert lines[5000] in out and out[-1] == lines[-1]
     assert any("trimmed by labeler" in x for x in out)
+
+
+def test_fixture_excerpt_keeps_errors_in_the_middle_of_a_long_log():
+    # rockrel hipblaslt shape: noise early, the hang mid-log, the ctest summary later, and
+    # a long tail; head+tail trimming used to cut out both failure lines.
+    lines = [f"noise {i}" for i in range(10_600)]
+    lines[197] = "HEAD is now at 93291d1 update nightly status -> failure"  # generic noise
+    lines[5428] = "HW Exception by GPU node-1 (Agent handle: 0x5e) reason :GPU Hang"
+    lines[9113] = "\t  3 - hipblaslt-test_comprehensive_suite (Subprocess aborted)"
+    lines[-1] = "Error: Process completed with exit code 8."
+    out = fixture_excerpt("\n".join(lines))
+    assert lines[5428] in out and lines[9113] in out and out[-1] == lines[-1]
+    assert len(out) <= labeler.MAX_FIXTURE_LINES

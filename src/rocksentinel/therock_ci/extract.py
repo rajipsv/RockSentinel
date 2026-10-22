@@ -37,6 +37,11 @@ def _p(kind: str, severity: int, expr: str) -> Pattern:
 # Higher severity = more likely to be the root cause, not a consequence.
 PATTERNS: tuple[Pattern, ...] = (
     _p("gpu_memory_fault", 100, r"Memory access fault by GPU|HSA_STATUS_ERROR_MEMORY_FAULT"),
+    # The HSA runtime's hardware exception, which aborts the process on the spot:
+    #   "HW Exception by GPU node-1 (Agent handle: 0x...) reason :GPU Hang"
+    _p("gpu_hw_exception", 96, r"HW Exception by GPU node-\d+.*reason\s*:"),
+    # The hang-analysis dump. It also appears inside memory-fault dumps and when a hung test
+    # is killed for running too long, so on its own it means "hung", not "what caused it".
     _p("gpu_hang", 95, r"\*\*\* GPU HANG ANALYSIS"),
     _p("asan", 95, r"ERROR: AddressSanitizer"),
     _p("crash", 90, r"Segmentation fault|\(SEGFAULT\)|Exception: SegFault|\(Subprocess aborted\)"),
@@ -84,8 +89,14 @@ _GENERIC_NOISE = re.compile(
 )
 
 _GTEST_RUN = re.compile(r"^\[ RUN\s+\] (\S+)")
+_GTEST_OK = re.compile(r"^\[\s+OK \] (\S+)")
+# Kinds a passing test may print on purpose (negative tests exercise error paths, e.g.
+# "hipModuleLoad failed: ..." inside a test that ends "[       OK ]"). Faults, hangs and
+# crashes are never ignored, even inside a passing test.
+_SOFT_KINDS = frozenset({"hip_runtime_error", "generic_error", "python_error", "build_error"})
 _CTEST_TEST_NAME = re.compile(r"Test\s+#\d+:\s+(\S+)")
-_GTEST_FAILED_NAME = re.compile(r"^\[\s+FAILED\s+\] (\S+)")
+# Skips the summary line "[  FAILED  ] 1 test, listed below:"
+_GTEST_FAILED_NAME = re.compile(r"^\[\s+FAILED\s+\] (?!\d+ tests?, listed below)(\S+)")
 _DEJAGNU_NAME = re.compile(r"^(?:FAIL|UNRESOLVED|ERROR): (\S+\.exp)")
 _KERNEL = re.compile(r"kernel: (?:void )?([^(\]]+)\(")
 _CTEST_FAILED_ENTRY = re.compile(r"^\s+(\d+ - .+?)\s*$")
@@ -95,7 +106,7 @@ _SUITE_FAILED_ENTRY = re.compile(r"^(?:.*? - [A-Z]+:)?\s{2,}(\S+)\s*$")
 _EXIT_CODE = re.compile(r"Process completed with exit code (\d+)")
 _STEP_TIMEOUT = re.compile(r"timed out after (\d+) minutes")
 
-_FAULT_KINDS = {"gpu_memory_fault", "gpu_hang", "asan", "crash"}
+_FAULT_KINDS = {"gpu_memory_fault", "gpu_hw_exception", "gpu_hang", "asan", "crash"}
 
 # An indented "error: ..." line continues the message on the line above, e.g.
 #   hipModuleLoad failed: /tmp/.../Kernels.so-000-gfx950.hsaco
@@ -162,6 +173,9 @@ class Extraction:
     suite_failed: list[str] = field(default_factory=list)
     exit_code: int | None = None
     step_timeout_minutes: int | None = None
+    # Error-looking lines skipped because they sit inside a gtest that passed (counted, so
+    # nothing disappears silently).
+    ignored_in_passing_tests: int = 0
     lines: list[str] = field(default_factory=list, repr=False)
 
     @property
@@ -198,6 +212,19 @@ def _classify(line: str) -> Pattern | None:
     return best or generic
 
 
+def _inside_passing_tests(lines: list[str]) -> list[bool]:
+    """True for lines between "[ RUN ] X" and the matching "[ OK ] X" (a test that passed)."""
+    inside = [False] * len(lines)
+    open_at: dict[str, int] = {}
+    for idx, line in enumerate(lines):
+        if m := _GTEST_RUN.match(line):
+            open_at[m.group(1)] = idx
+        elif (m := _GTEST_OK.match(line)) and m.group(1) in open_at:
+            for i in range(open_at.pop(m.group(1)) + 1, idx):
+                inside[i] = True
+    return inside
+
+
 def extract_errors(log_text: str, max_candidates: int = DEFAULT_MAX_CANDIDATES) -> Extraction:
     """Rank the lines of a CI job log that most likely explain its failure.
 
@@ -206,6 +233,8 @@ def extract_errors(log_text: str, max_candidates: int = DEFAULT_MAX_CANDIDATES) 
     """
     lines = [normalize_line(raw) for raw in log_text.splitlines()]
     total = len(lines)
+    in_passing = _inside_passing_tests(lines)
+    ignored: set[int] = set()
     by_line: dict[int, ErrorCandidate] = {}
     first_by_key: dict[str, int] = {}
     merged: set[int] = set()  # lines folded into an earlier identical error
@@ -223,6 +252,9 @@ def extract_errors(log_text: str, max_candidates: int = DEFAULT_MAX_CANDIDATES) 
             above = _classify(lines[anchor])
             if above is not None and above.severity > pattern.severity:
                 pattern = above
+        if in_passing[anchor] and pattern.kind in _SOFT_KINDS:
+            ignored.add(anchor)
+            continue
         n = anchor + 1
         text = lines[anchor].rstrip()
         if n in merged:  # continuation of a line already counted as a repeat
@@ -250,7 +282,8 @@ def extract_errors(log_text: str, max_candidates: int = DEFAULT_MAX_CANDIDATES) 
         first_by_key[key] = n
 
     found = sorted(by_line.values(), key=lambda c: (-c.severity, c.line_no))
-    result = Extraction(candidates=found[:max_candidates], lines=lines)
+    result = Extraction(candidates=found[:max_candidates], lines=lines,
+                        ignored_in_passing_tests=len(ignored))
     _fill_facts(result, lines, found)
     return result
 
@@ -277,8 +310,8 @@ def _fill_facts(result: Extraction, lines: list[str], found: list[ErrorCandidate
         m = _CTEST_TEST_NAME.search(first.text)
         result.failing_test = m.group(1) if m else None
     elif first is not None and first.kind == "gtest_failed":
-        m = _GTEST_FAILED_NAME.match(first.text)
-        result.failing_test = m.group(1) if m else None
+        names = (_GTEST_FAILED_NAME.match(c.text) for c in found if c.kind == "gtest_failed")
+        result.failing_test = next((m.group(1) for m in names if m), None)
     elif first is not None and first.kind == "dejagnu_fail":
         m = _DEJAGNU_NAME.match(first.text)
         result.failing_test = m.group(1) if m else None

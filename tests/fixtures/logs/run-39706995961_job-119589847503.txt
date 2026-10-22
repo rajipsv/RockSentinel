@@ -1,0 +1,581 @@
+# Source: ROCm/rockrel Actions run 39706995961 attempt 1, job 119589847503
+# Job: test / Test hipblaslt / Test hipblaslt (shard 2/6) (gfx110X-all) (test_artifacts.yml)
+# Excerpt saved by rocksentinel.evals.labeler on 2026-10-22
+2026-10-22T01:43:42.7145170Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TN_16_16_16_1_16_16_3_16_16_10 (12 ms)
+2026-10-22T01:43:42.7146252Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TN_128_128_64_1_128_128_3_128_128_10
+2026-10-22T01:43:42.7290256Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TN_128_128_64_1_128_128_3_128_128_10 (14 ms)
+2026-10-22T01:43:42.7291259Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TN_16_16_16_1_16_16_1_16_16_10
+2026-10-22T01:43:42.7408746Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TN_16_16_16_1_16_16_1_16_16_10 (11 ms)
+2026-10-22T01:43:42.7409723Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TN_128_128_64_1_128_128_1_128_128_10
+2026-10-22T01:43:42.7556160Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TN_128_128_64_1_128_128_1_128_128_10 (14 ms)
+2026-10-22T01:43:42.7557200Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_5_16_16_0_16_16_10
+2026-10-22T01:43:42.7672068Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_5_16_16_0_16_16_10 (11 ms)
+2026-10-22T01:43:42.7673010Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_5_128_128_0_128_128_10
+2026-10-22T01:43:42.7817279Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_5_128_128_0_128_128_10 (14 ms)
+2026-10-22T01:43:42.7818303Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_0_16_16_3_16_16_10
+2026-10-22T01:43:42.7913739Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_0_16_16_3_16_16_10 (9 ms)
+2026-10-22T01:43:42.7939089Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_0_128_128_3_128_128_10
+2026-10-22T01:43:42.8064036Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_0_128_128_3_128_128_10 (12 ms)
+2026-10-22T01:43:42.8065002Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_1_16_16_3_16_16_10
+2026-10-22T01:43:42.8155785Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_1_16_16_3_16_16_10 (9 ms)
+2026-10-22T01:43:42.8156690Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_1_128_128_3_128_128_10
+2026-10-22T01:43:42.8328718Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_1_128_128_3_128_128_10 (17 ms)
+2026-10-22T01:43:42.8329674Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_1_16_16_1_16_16_10
+2026-10-22T01:43:42.8429827Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_1_16_16_1_16_16_10 (10 ms)
+2026-10-22T01:43:42.8453874Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_1_128_128_1_128_128_10
+2026-10-22T01:43:42.8600854Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_1_128_128_1_128_128_10 (14 ms)
+2026-10-22T01:43:42.8601839Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_chunk_bf16_rbf16_rbf16_rbf16_rf32_r_NN_24000_256_256_2_24000_256_3_24020_24020_1
+2026-10-22T01:43:43.0857861Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_chunk_bf16_rbf16_rbf16_rbf16_rf32_r_NN_24000_256_256_2_24000_256_3_24020_24020_1 (224 ms)
+2026-10-22T01:43:43.0859590Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_chunk_f64_rf64_rf64_rf64_rf64_r_NT_24000_256_256_2_24010_256_3_24000_24000_1
+2026-10-22T01:43:43.6260387Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_chunk_f64_rf64_rf64_rf64_rf64_r_NT_24000_256_256_2_24010_256_3_24000_24000_1 (540 ms)
+2026-10-22T01:43:43.6261937Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_chunk_bf16_rbf16_rbf16_rbf16_rf32_r_TN_24000_256_256_2_24010_256_3_24000_24000_1
+2026-10-22T01:43:45.4919563Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_chunk_bf16_rbf16_rbf16_rbf16_rf32_r_TN_24000_256_256_2_24010_256_3_24000_24000_1 (1865 ms)
+2026-10-22T01:43:45.4921105Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_chunk_f64_rf64_rf64_rf64_rf64_r_TN_24000_256_256_2_24000_256_3_24020_24020_1
+2026-10-22T01:43:50.3972893Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_chunk_f64_rf64_rf64_rf64_rf64_r_TN_24000_256_256_2_24000_256_3_24020_24020_1 (4904 ms)
+2026-10-22T01:43:50.3975582Z 3: [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_chunk_bf16_rbf16_rbf16_rbf16_rf32_r_TT_24000_256_256_2_24000_256_3_24020_24020_1
+2026-10-22T01:43:51.7898650Z 3: [       OK ] _/matmul_test.matmul/pre_checkin_matmul_chunk_bf16_rbf16_rbf16_rbf16_rf32_r_TT_24000_256_256_2_24000_256_3_24020_24020_1 (1392 ms)
+2026-10-22T01:43:51.7900172Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_192_64_784_1_192_784_0_192_192_1
+2026-10-22T01:43:51.8104390Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_192_64_784_1_192_784_0_192_192_1 (13 ms)
+2026-10-22T01:43:51.8105408Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_192_64_784_1_192_784_0_192_192_3
+2026-10-22T01:43:51.8216117Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_192_64_784_1_192_784_0_192_192_3 (18 ms)
+2026-10-22T01:43:51.8217128Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_192_64_784_1_192_784_0_192_192_3_t2
+2026-10-22T01:43:51.8445004Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_192_64_784_1_192_784_0_192_192_3_t2 (22 ms)
+2026-10-22T01:43:51.8446106Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_12544_128_256_1_12544_256_0_12544_12544_1_t2
+2026-10-22T01:43:51.9094041Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_12544_128_256_1_12544_256_0_12544_12544_1_t2 (64 ms)
+2026-10-22T01:43:51.9095692Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_12544_128_256_1_12544_256_0_12544_12544_3
+2026-10-22T01:43:52.1442314Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_12544_128_256_1_12544_256_0_12544_12544_3 (234 ms)
+2026-10-22T01:43:52.1444309Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_12544_256_64_1_12544_64_0_12544_12544_1
+2026-10-22T01:43:52.2465544Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_12544_256_64_1_12544_64_0_12544_12544_1 (101 ms)
+2026-10-22T01:43:52.2477022Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_12544_256_64_1_12544_64_0_12544_12544_1_t2
+2026-10-22T01:43:52.3187006Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_12544_256_64_1_12544_64_0_12544_12544_1_t2 (69 ms)
+2026-10-22T01:43:52.3188259Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_12544_256_64_1_12544_64_0_12544_12544_3_t2
+2026-10-22T01:43:52.5151803Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_12544_256_64_1_12544_64_0_12544_12544_3_t2 (199 ms)
+2026-10-22T01:43:52.5153241Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_1024_256_1_1568_256_0_1568_1568_1
+2026-10-22T01:43:52.6060841Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_1024_256_1_1568_256_0_1568_1568_1 (90 ms)
+2026-10-22T01:43:52.6062437Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_1568_1024_256_1_1568_256_0_1568_1568_3
+2026-10-22T01:43:52.8182012Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_1568_1024_256_1_1568_256_0_1568_1568_3 (212 ms)
+2026-10-22T01:43:52.8183462Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_1024_256_1_1568_256_0_1568_1568_3_t2
+2026-10-22T01:43:52.9616795Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_1024_256_1_1568_256_0_1568_1568_3_t2 (143 ms)
+2026-10-22T01:43:52.9621759Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_1568_1024_512_1_1568_512_0_1568_1568_1_t2
+2026-10-22T01:43:53.0238706Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_1568_1024_512_1_1568_512_0_1568_1568_1_t2 (60 ms)
+2026-10-22T01:43:53.0243878Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_1024_512_1_1568_512_0_1568_1568_3
+2026-10-22T01:43:53.2070635Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_1024_512_1_1568_512_0_1568_1568_3 (181 ms)
+2026-10-22T01:43:53.2075389Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_1568_256_1024_1_1568_1024_0_1568_1568_1
+2026-10-22T01:43:53.2759757Z 3: [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_1568_256_1024_1_1568_1024_0_1568_1568_1 (65 ms)
+2026-10-22T01:43:53.2764620Z 3: [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_256_1024_1_1568_1024_0_1568_1568_1_t2
+2026-10-22T01:43:53.4818500Z 3: HW Exception by GPU node-1 (Agent handle: 0x5eccef3f7f90) reason :GPU Hang
+2026-10-22T01:43:53.6027878Z 1/1 Test #3: hipblaslt-test_comprehensive_suite ...Subprocess aborted***Exception:  66.04 sec
+2026-10-22T01:43:53.6035954Z hipBLASLt version: 100500
+2026-10-22T01:43:53.6036368Z hipBLASLt git version: d8756483
+2026-10-22T01:43:53.6036883Z Query device success: there are 1 devices. (Target device ID is 0)
+2026-10-22T01:43:53.6037493Z Device ID 0 : AMD Radeon 780M Graphics gfx1103 (PCI Chip ID: (not available))
+2026-10-22T01:43:53.6038139Z with 16.4 GB memory, max. SCLK 2700 MHz, max. MCLK 937 MHz, compute capability 11.0
+2026-10-22T01:43:53.6038830Z maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 32
+2026-10-22T01:43:53.6039528Z info: parsing of test data may take a couple minutes before any test output appears...
+2026-10-22T01:43:53.6040212Z 
+2026-10-22T01:43:53.6040573Z Note: Google Test filter = *smoke*:*quick*:*pre_checkin*:*nightly*:*HostUnit*:*TuningStore.*-*known_bug*
+2026-10-22T01:43:53.6041157Z Note: This is test shard 2 of 6.
+2026-10-22T01:43:53.6041564Z [==========] Running 4825 tests from 25 test suites.
+2026-10-22T01:43:53.6042107Z [----------] Global test environment set-up.
+2026-10-22T01:43:53.6042542Z [----------] 2 tests from CachingLibraryCollision
+2026-10-22T01:43:53.6049710Z [ RUN      ] CachingLibraryCollision.smoke_RepeatedLookupIsCached
+2026-10-22T01:43:53.6050304Z [       OK ] CachingLibraryCollision.smoke_RepeatedLookupIsCached (0 ms)
+2026-10-22T01:43:53.6050891Z [ RUN      ] CachingLibraryCollision.smoke_NonZeroBetaValuesShareCacheEntry
+2026-10-22T01:43:53.6051552Z [       OK ] CachingLibraryCollision.smoke_NonZeroBetaValuesShareCacheEntry (1 ms)
+2026-10-22T01:43:53.6052176Z [----------] 2 tests from CachingLibraryCollision (1 ms total)
+2026-10-22T01:43:53.6052447Z 
+... [trimmed by labeler] ...
+2026-10-22T01:43:53.7313878Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TN_16_16_16_1_16_16_1_16_16_10
+2026-10-22T01:43:53.7314109Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TN_16_16_16_1_16_16_1_16_16_10 (11 ms)
+2026-10-22T01:43:53.7314337Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TN_128_128_64_1_128_128_1_128_128_10
+2026-10-22T01:43:53.7314571Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TN_128_128_64_1_128_128_1_128_128_10 (14 ms)
+2026-10-22T01:43:53.7314793Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_5_16_16_0_16_16_10
+2026-10-22T01:43:53.7315026Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_5_16_16_0_16_16_10 (11 ms)
+2026-10-22T01:43:53.7315249Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_5_128_128_0_128_128_10
+2026-10-22T01:43:53.7315481Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_5_128_128_0_128_128_10 (14 ms)
+2026-10-22T01:43:53.7315705Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_0_16_16_3_16_16_10
+2026-10-22T01:43:53.7316030Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_0_16_16_3_16_16_10 (9 ms)
+2026-10-22T01:43:53.7316261Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_0_128_128_3_128_128_10
+2026-10-22T01:43:53.7316497Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_0_128_128_3_128_128_10 (12 ms)
+2026-10-22T01:43:53.7316719Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_1_16_16_3_16_16_10
+2026-10-22T01:43:53.7316950Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_1_16_16_3_16_16_10 (9 ms)
+2026-10-22T01:43:53.7317172Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_1_128_128_3_128_128_10
+2026-10-22T01:43:53.7317414Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_1_128_128_3_128_128_10 (17 ms)
+2026-10-22T01:43:53.7317634Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_1_16_16_1_16_16_10
+2026-10-22T01:43:53.7317867Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_bf16_rbf16_rbf16_rbf16_rf32_r_TT_16_16_16_1_16_16_1_16_16_10 (10 ms)
+2026-10-22T01:43:53.7318091Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_1_128_128_1_128_128_10
+2026-10-22T01:43:53.7318326Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_batch_medium_f64_rf64_rf64_rf64_rf64_r_TT_128_128_64_1_128_128_1_128_128_10 (14 ms)
+2026-10-22T01:43:53.7318558Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_chunk_bf16_rbf16_rbf16_rbf16_rf32_r_NN_24000_256_256_2_24000_256_3_24020_24020_1
+2026-10-22T01:43:53.7318897Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_chunk_bf16_rbf16_rbf16_rbf16_rf32_r_NN_24000_256_256_2_24000_256_3_24020_24020_1 (224 ms)
+2026-10-22T01:43:53.7319127Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_chunk_f64_rf64_rf64_rf64_rf64_r_NT_24000_256_256_2_24010_256_3_24000_24000_1
+2026-10-22T01:43:53.7319367Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_chunk_f64_rf64_rf64_rf64_rf64_r_NT_24000_256_256_2_24010_256_3_24000_24000_1 (540 ms)
+2026-10-22T01:43:53.7319607Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_chunk_bf16_rbf16_rbf16_rbf16_rf32_r_TN_24000_256_256_2_24010_256_3_24000_24000_1
+2026-10-22T01:43:53.7319859Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_chunk_bf16_rbf16_rbf16_rbf16_rf32_r_TN_24000_256_256_2_24010_256_3_24000_24000_1 (1865 ms)
+2026-10-22T01:43:53.7320088Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_chunk_f64_rf64_rf64_rf64_rf64_r_TN_24000_256_256_2_24000_256_3_24020_24020_1
+2026-10-22T01:43:53.7320330Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_chunk_f64_rf64_rf64_rf64_rf64_r_TN_24000_256_256_2_24000_256_3_24020_24020_1 (4904 ms)
+2026-10-22T01:43:53.7320568Z [ RUN      ] _/matmul_test.matmul/pre_checkin_matmul_chunk_bf16_rbf16_rbf16_rbf16_rf32_r_TT_24000_256_256_2_24000_256_3_24020_24020_1
+2026-10-22T01:43:53.7320814Z [       OK ] _/matmul_test.matmul/pre_checkin_matmul_chunk_bf16_rbf16_rbf16_rbf16_rf32_r_TT_24000_256_256_2_24000_256_3_24020_24020_1 (1392 ms)
+2026-10-22T01:43:53.7321037Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_192_64_784_1_192_784_0_192_192_1
+2026-10-22T01:43:53.7321266Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_192_64_784_1_192_784_0_192_192_1 (13 ms)
+2026-10-22T01:43:53.7321495Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_192_64_784_1_192_784_0_192_192_3
+2026-10-22T01:43:53.7321729Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_192_64_784_1_192_784_0_192_192_3 (18 ms)
+2026-10-22T01:43:53.7322020Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_192_64_784_1_192_784_0_192_192_3_t2
+2026-10-22T01:43:53.7322268Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_192_64_784_1_192_784_0_192_192_3_t2 (22 ms)
+2026-10-22T01:43:53.7322514Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_12544_128_256_1_12544_256_0_12544_12544_1_t2
+2026-10-22T01:43:53.7322766Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_12544_128_256_1_12544_256_0_12544_12544_1_t2 (64 ms)
+2026-10-22T01:43:53.7323028Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_12544_128_256_1_12544_256_0_12544_12544_3
+2026-10-22T01:43:53.7323284Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_12544_128_256_1_12544_256_0_12544_12544_3 (234 ms)
+2026-10-22T01:43:53.7323558Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_12544_256_64_1_12544_64_0_12544_12544_1
+2026-10-22T01:43:53.7323805Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_12544_256_64_1_12544_64_0_12544_12544_1 (101 ms)
+2026-10-22T01:43:53.7324038Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_12544_256_64_1_12544_64_0_12544_12544_1_t2
+2026-10-22T01:43:53.7324277Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_12544_256_64_1_12544_64_0_12544_12544_1_t2 (69 ms)
+2026-10-22T01:43:53.7324525Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_12544_256_64_1_12544_64_0_12544_12544_3_t2
+2026-10-22T01:43:53.7324775Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_12544_256_64_1_12544_64_0_12544_12544_3_t2 (199 ms)
+2026-10-22T01:43:53.7325092Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_1024_256_1_1568_256_0_1568_1568_1
+2026-10-22T01:43:53.7325331Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_1024_256_1_1568_256_0_1568_1568_1 (90 ms)
+2026-10-22T01:43:53.7325565Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_1568_1024_256_1_1568_256_0_1568_1568_3
+2026-10-22T01:43:53.7325809Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_1568_1024_256_1_1568_256_0_1568_1568_3 (212 ms)
+2026-10-22T01:43:53.7326041Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_1024_256_1_1568_256_0_1568_1568_3_t2
+2026-10-22T01:43:53.7326282Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_1024_256_1_1568_256_0_1568_1568_3_t2 (143 ms)
+2026-10-22T01:43:53.7326522Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_1568_1024_512_1_1568_512_0_1568_1568_1_t2
+2026-10-22T01:43:53.7326770Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_1568_1024_512_1_1568_512_0_1568_1568_1_t2 (60 ms)
+2026-10-22T01:43:53.7326994Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_1024_512_1_1568_512_0_1568_1568_3
+2026-10-22T01:43:53.7327231Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_1024_512_1_1568_512_0_1568_1568_3 (181 ms)
+2026-10-22T01:43:53.7327469Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_1568_256_1024_1_1568_1024_0_1568_1568_1
+2026-10-22T01:43:53.7327713Z [       OK ] _/matmul_test.matmul/nightly_matmul_deepbench_bf16_rbf16_rbf16_rbf16_rf32_r_NN_1568_256_1024_1_1568_1024_0_1568_1568_1 (65 ms)
+2026-10-22T01:43:53.7327940Z [ RUN      ] _/matmul_test.matmul/nightly_matmul_deepbench_f64_rf64_rf64_rf64_rf64_r_NN_1568_256_1024_1_1568_1024_0_1568_1568_1_t2
+2026-10-22T01:43:53.7328192Z HW Exception by GPU node-1 (Agent handle: 0x5eccef3f7f90) reason :GPU Hang
+2026-10-22T01:43:53.7328198Z 
+2026-10-22T01:43:53.7328202Z 
+2026-10-22T01:43:53.7328306Z 0% tests passed, 1 tests failed out of 1
+2026-10-22T01:43:53.7328310Z 
+2026-10-22T01:43:53.7328398Z Label Time Summary:
+2026-10-22T01:43:53.7328499Z comprehensive    =  66.04 sec*proc (1 test)
+2026-10-22T01:43:53.7328594Z extended         =  66.04 sec*proc (1 test)
+2026-10-22T01:43:53.7328685Z nightly          =  66.04 sec*proc (1 test)
+2026-10-22T01:43:53.7328688Z 
+2026-10-22T01:43:53.7328778Z Total Test time (real) =  66.06 sec
+2026-10-22T01:43:53.7328782Z 
+2026-10-22T01:43:53.7328872Z The following tests FAILED:
+2026-10-22T01:43:53.7329015Z 	  3 - hipblaslt-test_comprehensive_suite (Subprocess aborted)
+2026-10-22T01:43:53.7329163Z # TEST_COMPONENT: hipblaslt -> Test Directory: build/bin/hipblaslt
+2026-10-22T01:43:53.7329277Z # TEST_TYPE: comprehensive -> Category: comprehensive
+2026-10-22T01:43:53.7329411Z # AMDGPU_FAMILIES: gfx110X-all -> GPU Architecture: gfx110X
+2026-10-22T01:43:53.7329417Z 
+2026-10-22T01:43:53.7329515Z # Discovering available test labels...
+2026-10-22T01:43:53.7329622Z # Warning: No GPU specific test suites available
+2026-10-22T01:43:53.7329629Z 
+2026-10-22T01:43:53.7329750Z # No GPU suite found for gfx110X, excluding all ex_gpu tests
+2026-10-22T01:43:53.7330084Z # Running: ctest -L ^comprehensive$ -LE ex_gpu --output-on-failure --parallel 1 --timeout 7200 --test-dir build/bin/hipblaslt -V --tests-information 2,,6
+2026-10-22T01:43:53.7330088Z 
+2026-10-22T01:43:53.7338443Z ##[error]Process completed with exit code 8.
+2026-10-22T01:43:53.7387151Z ##[group]Run python ./build_tools/github_actions/reproduce_test_failure.py \
+2026-10-22T01:43:53.7387347Z [36;1mpython ./build_tools/github_actions/reproduce_test_failure.py \[0m
+2026-10-22T01:43:53.7387453Z [36;1m  --run-id "${ARTIFACT_RUN_ID}" \[0m
+2026-10-22T01:43:53.7387555Z [36;1m  --repository "ROCm/rockrel" \[0m
+2026-10-22T01:43:53.7387786Z [36;1m  --amdgpu-family "${AMDGPU_FAMILIES}" \[0m
+2026-10-22T01:43:53.7387890Z [36;1m  --amdgpu-targets "${AMDGPU_TARGETS}" \[0m
+2026-10-22T01:43:53.7388014Z [36;1m  --test-script "${COMPONENT_TEST_SCRIPT}" \[0m
+2026-10-22T01:43:53.7388118Z [36;1m  --shard-index "${MATRIX_SHARD}" \[0m
+2026-10-22T01:43:53.7388237Z [36;1m  --total-shards "${COMPONENT_TOTAL_SHARDS}" \[0m
+... [trimmed by labeler] ...
+2026-10-22T01:43:59.1041696Z         "conclusion": null,
+2026-10-22T01:43:59.1041872Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1042073Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1042270Z         "runner_name": "",
+2026-10-22T01:43:59.1042440Z         "labels": [
+2026-10-22T01:43:59.1042608Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1042788Z         ]
+2026-10-22T01:43:59.1042937Z       },
+2026-10-22T01:43:59.1043117Z       {
+2026-10-22T01:43:59.1043271Z         "id": 119589847866,
+2026-10-22T01:43:59.1043679Z         "name": "test / Test rocprofiler-sdk / Test rocprofiler-sdk (shard 1/1) (gfx110X-all)",
+2026-10-22T01:43:59.1043978Z         "status": "queued",
+2026-10-22T01:43:59.1044151Z         "conclusion": null,
+2026-10-22T01:43:59.1044330Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1044527Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1044719Z         "runner_name": "",
+2026-10-22T01:43:59.1044889Z         "labels": [
+2026-10-22T01:43:59.1045055Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1045238Z         ]
+2026-10-22T01:43:59.1045383Z       },
+2026-10-22T01:43:59.1045531Z       {
+2026-10-22T01:43:59.1045687Z         "id": 119589847869,
+2026-10-22T01:43:59.1045913Z         "name": "test / Test hipsparse / Test hipsparse (shard 3/3) (gfx110X-all)",
+2026-10-22T01:43:59.1046166Z         "status": "queued",
+2026-10-22T01:43:59.1046339Z         "conclusion": null,
+2026-10-22T01:43:59.1046516Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1046721Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1046915Z         "runner_name": "",
+2026-10-22T01:43:59.1047081Z         "labels": [
+2026-10-22T01:43:59.1047244Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1047428Z         ]
+2026-10-22T01:43:59.1047573Z       },
+2026-10-22T01:43:59.1047721Z       {
+2026-10-22T01:43:59.1047873Z         "id": 119589847872,
+2026-10-22T01:43:59.1048098Z         "name": "test / Test rocsparse / Test rocsparse (shard 2/3) (gfx110X-all)",
+2026-10-22T01:43:59.1048349Z         "status": "queued",
+2026-10-22T01:43:59.1048521Z         "conclusion": null,
+2026-10-22T01:43:59.1048704Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1048903Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1049103Z         "runner_name": "",
+2026-10-22T01:43:59.1049269Z         "labels": [
+2026-10-22T01:43:59.1049436Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1049619Z         ]
+2026-10-22T01:43:59.1049771Z       },
+2026-10-22T01:43:59.1049917Z       {
+2026-10-22T01:43:59.1050066Z         "id": 119589847873,
+2026-10-22T01:43:59.1050290Z         "name": "test / Test hiprand / Test hiprand (shard 1/1) (gfx110X-all)",
+2026-10-22T01:43:59.1050539Z         "status": "queued",
+2026-10-22T01:43:59.1050713Z         "conclusion": null,
+2026-10-22T01:43:59.1050892Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1051096Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1051309Z         "runner_name": "",
+2026-10-22T01:43:59.1051486Z         "labels": [
+2026-10-22T01:43:59.1051659Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1051844Z         ]
+2026-10-22T01:43:59.1052090Z       },
+2026-10-22T01:43:59.1052249Z       {
+2026-10-22T01:43:59.1052410Z         "id": 119589847896,
+2026-10-22T01:43:59.1052655Z         "name": "test / Test hipsparse / Test hipsparse (shard 2/3) (gfx110X-all)",
+2026-10-22T01:43:59.1052917Z         "status": "queued",
+2026-10-22T01:43:59.1053147Z         "conclusion": null,
+2026-10-22T01:43:59.1055660Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1055913Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1056129Z         "runner_name": "",
+2026-10-22T01:43:59.1056315Z         "labels": [
+2026-10-22T01:43:59.1056499Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1056694Z         ]
+2026-10-22T01:43:59.1056851Z       },
+2026-10-22T01:43:59.1057012Z       {
+2026-10-22T01:43:59.1057171Z         "id": 119589847901,
+2026-10-22T01:43:59.1057422Z         "name": "test / Test rocsparse / Test rocsparse (shard 3/3) (gfx110X-all)",
+2026-10-22T01:43:59.1057684Z         "status": "queued",
+2026-10-22T01:43:59.1057872Z         "conclusion": null,
+2026-10-22T01:43:59.1058067Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1058283Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1058487Z         "runner_name": "",
+2026-10-22T01:43:59.1058667Z         "labels": [
+2026-10-22T01:43:59.1058960Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1059148Z         ]
+2026-10-22T01:43:59.1059300Z       },
+2026-10-22T01:43:59.1059447Z       {
+2026-10-22T01:43:59.1059603Z         "id": 119589847927,
+2026-10-22T01:43:59.1059879Z         "name": "test / Test hipblasltprovider / Test hipblasltprovider (shard 1/1) (gfx110X-all)",
+2026-10-22T01:43:59.1060181Z         "status": "queued",
+2026-10-22T01:43:59.1060360Z         "conclusion": null,
+2026-10-22T01:43:59.1060547Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1060752Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1060951Z         "runner_name": "",
+2026-10-22T01:43:59.1061130Z         "labels": [
+2026-10-22T01:43:59.1061308Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1061500Z         ]
+2026-10-22T01:43:59.1061650Z       },
+2026-10-22T01:43:59.1061798Z       {
+2026-10-22T01:43:59.1061951Z         "id": 119589847941,
+2026-10-22T01:43:59.1062240Z         "name": "test / Test hipdnn-cudnn-samples / Test hipdnn-cudnn-samples (shard 1/1) (gfx110X-all)",
+2026-10-22T01:43:59.1062552Z         "status": "queued",
+2026-10-22T01:43:59.1062724Z         "conclusion": null,
+2026-10-22T01:43:59.1062910Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1063173Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1063383Z         "runner_name": "",
+2026-10-22T01:43:59.1063572Z         "labels": [
+2026-10-22T01:43:59.1063741Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1063935Z         ]
+2026-10-22T01:43:59.1064091Z       },
+2026-10-22T01:43:59.1064246Z       {
+2026-10-22T01:43:59.1064405Z         "id": 119589847942,
+2026-10-22T01:43:59.1064648Z         "name": "test / Test rocsparse / Test rocsparse (shard 1/3) (gfx110X-all)",
+2026-10-22T01:43:59.1064915Z         "status": "queued",
+2026-10-22T01:43:59.1065092Z         "conclusion": null,
+2026-10-22T01:43:59.1065278Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1065482Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1065688Z         "runner_name": "",
+2026-10-22T01:43:59.1065861Z         "labels": [
+2026-10-22T01:43:59.1066033Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1066226Z         ]
+2026-10-22T01:43:59.1066382Z       },
+2026-10-22T01:43:59.1066532Z       {
+2026-10-22T01:43:59.1066683Z         "id": 119589847961,
+2026-10-22T01:43:59.1066907Z         "name": "test / Test miopen / Test miopen (shard 4/4) (gfx110X-all)",
+2026-10-22T01:43:59.1067157Z         "status": "queued",
+2026-10-22T01:43:59.1067332Z         "conclusion": null,
+2026-10-22T01:43:59.1067512Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1067801Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1068004Z         "runner_name": "",
+2026-10-22T01:43:59.1068176Z         "labels": [
+2026-10-22T01:43:59.1068346Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1068534Z         ]
+2026-10-22T01:43:59.1068688Z       },
+2026-10-22T01:43:59.1068836Z       {
+2026-10-22T01:43:59.1068990Z         "id": 119589847983,
+2026-10-22T01:43:59.1069206Z         "name": "test / Test miopen / Test miopen (shard 2/4) (gfx110X-all)",
+2026-10-22T01:43:59.1069447Z         "status": "queued",
+2026-10-22T01:43:59.1069623Z         "conclusion": null,
+2026-10-22T01:43:59.1069804Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1070004Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1070198Z         "runner_name": "",
+2026-10-22T01:43:59.1070370Z         "labels": [
+2026-10-22T01:43:59.1070536Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1070717Z         ]
+2026-10-22T01:43:59.1070865Z       },
+2026-10-22T01:43:59.1071012Z       {
+2026-10-22T01:43:59.1071167Z         "id": 119589847991,
+2026-10-22T01:43:59.1071380Z         "name": "test / Test miopen / Test miopen (shard 1/4) (gfx110X-all)",
+2026-10-22T01:43:59.1071623Z         "status": "queued",
+2026-10-22T01:43:59.1071801Z         "conclusion": null,
+2026-10-22T01:43:59.1071981Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1072279Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1072477Z         "runner_name": "",
+2026-10-22T01:43:59.1072651Z         "labels": [
+2026-10-22T01:43:59.1072819Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1073052Z         ]
+2026-10-22T01:43:59.1073207Z       },
+2026-10-22T01:43:59.1073356Z       {
+2026-10-22T01:43:59.1073525Z         "id": 119589848006,
+2026-10-22T01:43:59.1073780Z         "name": "test / Test profiler-hub / Test profiler-hub (shard 1/1) (gfx110X-all)",
+2026-10-22T01:43:59.1074059Z         "status": "completed",
+2026-10-22T01:43:59.1074250Z         "conclusion": "success",
+2026-10-22T01:43:59.1074448Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1074651Z         "started_at": "2026-10-22T01:42:32Z",
+2026-10-22T01:43:59.1074857Z         "completed_at": "2026-10-22T01:43:48Z",
+2026-10-22T01:43:59.1075131Z         "runner_name": "aws-linux-scale-rocm-prod-xfhtc-runner-fgpk8",
+2026-10-22T01:43:59.1075387Z         "labels": [
+2026-10-22T01:43:59.1075567Z           "aws-linux-scale-rocm-prod"
+2026-10-22T01:43:59.1075764Z         ]
+2026-10-22T01:43:59.1075914Z       },
+2026-10-22T01:43:59.1076063Z       {
+2026-10-22T01:43:59.1076219Z         "id": 119589848014,
+2026-10-22T01:43:59.1076441Z         "name": "test / Test amdsmi / Test amdsmi (shard 1/1) (gfx110X-all)",
+2026-10-22T01:43:59.1076687Z         "status": "queued",
+2026-10-22T01:43:59.1076865Z         "conclusion": null,
+2026-10-22T01:43:59.1077045Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1077248Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1077449Z         "runner_name": "",
+2026-10-22T01:43:59.1077668Z         "labels": [
+2026-10-22T01:43:59.1077841Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1078027Z         ]
+2026-10-22T01:43:59.1078177Z       },
+2026-10-22T01:43:59.1078328Z       {
+2026-10-22T01:43:59.1078483Z         "id": 119589848025,
+2026-10-22T01:43:59.1078711Z         "name": "test / Test rocwmma / Test rocwmma (shard 3/5) (gfx110X-all)",
+2026-10-22T01:43:59.1078959Z         "status": "queued",
+2026-10-22T01:43:59.1079133Z         "conclusion": null,
+2026-10-22T01:43:59.1079312Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1079511Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1079707Z         "runner_name": "",
+2026-10-22T01:43:59.1079880Z         "labels": [
+2026-10-22T01:43:59.1080046Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1080229Z         ]
+2026-10-22T01:43:59.1080375Z       },
+2026-10-22T01:43:59.1080524Z       {
+2026-10-22T01:43:59.1080673Z         "id": 119589848034,
+2026-10-22T01:43:59.1080981Z         "name": "test / Test hipdnn / Test hipdnn (shard 1/1) (gfx110X-all)",
+2026-10-22T01:43:59.1081300Z         "status": "queued",
+2026-10-22T01:43:59.1081497Z         "conclusion": null,
+2026-10-22T01:43:59.1081678Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1081878Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1082084Z         "runner_name": "",
+2026-10-22T01:43:59.1082258Z         "labels": [
+2026-10-22T01:43:59.1082422Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1082613Z         ]
+2026-10-22T01:43:59.1082761Z       },
+2026-10-22T01:43:59.1082911Z       {
+2026-10-22T01:43:59.1083106Z         "id": 119589848086,
+2026-10-22T01:43:59.1083330Z         "name": "test / Test miopen / Test miopen (shard 3/4) (gfx110X-all)",
+2026-10-22T01:43:59.1083574Z         "status": "queued",
+2026-10-22T01:43:59.1083751Z         "conclusion": null,
+2026-10-22T01:43:59.1083931Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1084133Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1084338Z         "runner_name": "",
+2026-10-22T01:43:59.1084504Z         "labels": [
+2026-10-22T01:43:59.1084672Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1084854Z         ]
+2026-10-22T01:43:59.1085002Z       },
+2026-10-22T01:43:59.1085147Z       {
+2026-10-22T01:43:59.1085435Z         "id": 119589848124,
+2026-10-22T01:43:59.1085670Z         "name": "test / Test rocwmma / Test rocwmma (shard 1/5) (gfx110X-all)",
+2026-10-22T01:43:59.1085945Z         "status": "queued",
+2026-10-22T01:43:59.1086121Z         "conclusion": null,
+2026-10-22T01:43:59.1086302Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1086501Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1086696Z         "runner_name": "",
+2026-10-22T01:43:59.1086869Z         "labels": [
+2026-10-22T01:43:59.1087034Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1087215Z         ]
+2026-10-22T01:43:59.1087366Z       },
+2026-10-22T01:43:59.1087517Z       {
+2026-10-22T01:43:59.1087675Z         "id": 119589848142,
+2026-10-22T01:43:59.1087896Z         "name": "test / Test rocwmma / Test rocwmma (shard 5/5) (gfx110X-all)",
+2026-10-22T01:43:59.1088145Z         "status": "queued",
+2026-10-22T01:43:59.1088324Z         "conclusion": null,
+2026-10-22T01:43:59.1088510Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1088713Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1088905Z         "runner_name": "",
+2026-10-22T01:43:59.1089074Z         "labels": [
+2026-10-22T01:43:59.1089240Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1089423Z         ]
+2026-10-22T01:43:59.1089571Z       },
+2026-10-22T01:43:59.1089720Z       {
+2026-10-22T01:43:59.1089872Z         "id": 119589848157,
+2026-10-22T01:43:59.1090085Z         "name": "test / Test rocwmma / Test rocwmma (shard 2/5) (gfx110X-all)",
+2026-10-22T01:43:59.1090329Z         "status": "queued",
+2026-10-22T01:43:59.1090502Z         "conclusion": null,
+2026-10-22T01:43:59.1090687Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1090888Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1091088Z         "runner_name": "",
+2026-10-22T01:43:59.1091258Z         "labels": [
+2026-10-22T01:43:59.1091422Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1091614Z         ]
+2026-10-22T01:43:59.1091764Z       },
+2026-10-22T01:43:59.1094320Z       {
+2026-10-22T01:43:59.1094497Z         "id": 119589848166,
+2026-10-22T01:43:59.1094762Z         "name": "test / Test aqlprofile / Test aqlprofile (shard 1/1) (gfx110X-all)",
+2026-10-22T01:43:59.1095038Z         "status": "queued",
+2026-10-22T01:43:59.1095227Z         "conclusion": null,
+2026-10-22T01:43:59.1095418Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1095634Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1095835Z         "runner_name": "",
+2026-10-22T01:43:59.1096018Z         "labels": [
+2026-10-22T01:43:59.1096200Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1096398Z         ]
+2026-10-22T01:43:59.1096657Z       },
+2026-10-22T01:43:59.1096816Z       {
+2026-10-22T01:43:59.1096976Z         "id": 119589848258,
+2026-10-22T01:43:59.1097227Z         "name": "test / Test tensilelite / Test tensilelite (shard 1/1) (gfx110X-all)",
+2026-10-22T01:43:59.1097502Z         "status": "queued",
+2026-10-22T01:43:59.1097689Z         "conclusion": null,
+2026-10-22T01:43:59.1097869Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1098118Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1098313Z         "runner_name": "",
+2026-10-22T01:43:59.1098493Z         "labels": [
+2026-10-22T01:43:59.1098665Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1098852Z         ]
+2026-10-22T01:43:59.1099001Z       },
+2026-10-22T01:43:59.1099153Z       {
+2026-10-22T01:43:59.1099308Z         "id": 119589848361,
+2026-10-22T01:43:59.1099536Z         "name": "test / Test rocwmma / Test rocwmma (shard 4/5) (gfx110X-all)",
+2026-10-22T01:43:59.1099793Z         "status": "queued",
+2026-10-22T01:43:59.1099969Z         "conclusion": null,
+2026-10-22T01:43:59.1100150Z         "created_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1100353Z         "started_at": "2026-10-22T01:41:55Z",
+2026-10-22T01:43:59.1100552Z         "runner_name": "",
+2026-10-22T01:43:59.1100827Z         "labels": [
+2026-10-22T01:43:59.1101005Z           "linux-gfx110X-gpu-rocm"
+2026-10-22T01:43:59.1101194Z         ]
+2026-10-22T01:43:59.1101348Z       }
+2026-10-22T01:43:59.1101510Z     ],
+2026-10-22T01:43:59.1101684Z     "parent_workflow": null,
+2026-10-22T01:43:59.1101878Z     "referenced_workflows": [
+2026-10-22T01:43:59.1102060Z       {
+2026-10-22T01:43:59.1102274Z         "path": "ROCm/TheRock/.github/workflows/test_artifacts.yml@main",
+2026-10-22T01:43:59.1102553Z         "sha": "f93a7c762c127f1691e190342d172f8bf9b9e955",
+2026-10-22T01:43:59.1102787Z         "ref": "refs/heads/main"
+2026-10-22T01:43:59.1103012Z       },
+2026-10-22T01:43:59.1103175Z       {
+2026-10-22T01:43:59.1103460Z         "path": "ROCm/TheRock/.github/workflows/test_component.yml@f93a7c762c127f1691e190342d172f8bf9b9e955",
+2026-10-22T01:43:59.1103797Z         "sha": "f93a7c762c127f1691e190342d172f8bf9b9e955",
+2026-10-22T01:43:59.1104022Z         "ref": "refs/heads/main"
+2026-10-22T01:43:59.1104208Z       }
+2026-10-22T01:43:59.1104363Z     ]
+2026-10-22T01:43:59.1104515Z   }
+2026-10-22T01:43:59.1104583Z }
+2026-10-22T01:44:00.5696834Z INFO     Dispatched to ROCm/Quartz (ref: main, payload: 26061 chars, fetch_jobs: False)
+2026-10-22T01:44:00.5870587Z ##[end-action id=__ROCm_Quartz_2.__run_2;outcome=success;conclusion=success;duration_ms=3653]
+2026-10-22T01:44:00.5943321Z Post job cleanup.
+2026-10-22T01:44:00.5946257Z ##[start-action display=Generate GitHub App token;id=__e446878b-bd39-46b9-9c3f-a96323e55273.app-token]
+2026-10-22T01:44:00.6014824Z Post job cleanup.
+2026-10-22T01:44:00.6028248Z ##[command]/usr/bin/docker exec  594016aabcb3d98d97c8240dad8142415c02e665cd5e92b825ab89a45201d5c1 sh -c "cat /etc/*release | grep ^ID"
+2026-10-22T01:44:00.9991820Z Token revoked
+2026-10-22T01:44:01.0315219Z ##[end-action id=__e446878b-bd39-46b9-9c3f-a96323e55273.app-token;outcome=success;conclusion=success;duration_ms=436]
+2026-10-22T01:44:01.0317267Z ##[start-action display=Checkout Quartz (notify_quartz script);id=__e446878b-bd39-46b9-9c3f-a96323e55273.__actions_checkout]
+2026-10-22T01:44:01.0354198Z Post job cleanup.
+2026-10-22T01:44:01.0361986Z ##[command]/usr/bin/docker exec  594016aabcb3d98d97c8240dad8142415c02e665cd5e92b825ab89a45201d5c1 sh -c "cat /etc/*release | grep ^ID"
+2026-10-22T01:44:01.1778104Z [command]/usr/bin/git version
+2026-10-22T01:44:01.1802560Z git version 2.51.0
+2026-10-22T01:44:01.1818774Z Copying '/github/home/.gitconfig' to '/__w/_temp/f9b478a3-db2e-4f8b-b1cd-1dafd512dfb4/.gitconfig'
+2026-10-22T01:44:01.1824584Z Temporarily overriding HOME='/__w/_temp/f9b478a3-db2e-4f8b-b1cd-1dafd512dfb4' before making global git config changes
+2026-10-22T01:44:01.1825241Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-22T01:44:01.1832928Z [command]/usr/bin/git config --global --add safe.directory /__w/rockrel/rockrel/.quartz-notify-quartz
+2026-10-22T01:44:01.1907466Z Removing SSH command configuration
+2026-10-22T01:44:01.1910919Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-22T01:44:01.1938919Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-22T01:44:01.2214443Z Removing HTTP extra header
+2026-10-22T01:44:01.2218824Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-22T01:44:01.2241164Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-22T01:44:01.2506505Z Removing includeIf entries pointing to credentials config files
+2026-10-22T01:44:01.2508566Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-22T01:44:01.2528450Z includeif.gitdir:/__w/rockrel/rockrel/.quartz-notify-quartz/.git.path
+2026-10-22T01:44:01.2528995Z includeif.gitdir:/__w/rockrel/rockrel/.quartz-notify-quartz/.git/worktrees/*.path
+2026-10-22T01:44:01.2530004Z includeif.gitdir:/github/workspace/.quartz-notify-quartz/.git.path
+2026-10-22T01:44:01.2530950Z includeif.gitdir:/github/workspace/.quartz-notify-quartz/.git/worktrees/*.path
+2026-10-22T01:44:01.2534236Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/rockrel/rockrel/.quartz-notify-quartz/.git.path
+2026-10-22T01:44:01.2553791Z /__w/_temp/git-credentials-ab96333f-b6da-44a4-a537-489a810f344d.config
+2026-10-22T01:44:01.2559151Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/rockrel/rockrel/.quartz-notify-quartz/.git.path \/__w\/_temp\/git\-credentials\-ab96333f\-b6da\-44a4\-a537\-489a810f344d\.config
+2026-10-22T01:44:01.2585170Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/rockrel/rockrel/.quartz-notify-quartz/.git/worktrees/*.path
+2026-10-22T01:44:01.2603564Z /__w/_temp/git-credentials-ab96333f-b6da-44a4-a537-489a810f344d.config
+2026-10-22T01:44:01.2609930Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/rockrel/rockrel/.quartz-notify-quartz/.git/worktrees/*.path \/__w\/_temp\/git\-credentials\-ab96333f\-b6da\-44a4\-a537\-489a810f344d\.config
+2026-10-22T01:44:01.2630723Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.quartz-notify-quartz/.git.path
+2026-10-22T01:44:01.2654207Z /github/runner_temp/git-credentials-ab96333f-b6da-44a4-a537-489a810f344d.config
+2026-10-22T01:44:01.2660277Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.quartz-notify-quartz/.git.path \/github\/runner_temp\/git\-credentials\-ab96333f\-b6da\-44a4\-a537\-489a810f344d\.config
+2026-10-22T01:44:01.2697100Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.quartz-notify-quartz/.git/worktrees/*.path
+2026-10-22T01:44:01.2716693Z /github/runner_temp/git-credentials-ab96333f-b6da-44a4-a537-489a810f344d.config
+2026-10-22T01:44:01.2720509Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.quartz-notify-quartz/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-ab96333f\-b6da\-44a4\-a537\-489a810f344d\.config
+2026-10-22T01:44:01.2754664Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-22T01:44:01.3023209Z Removing credentials config '/__w/_temp/git-credentials-ab96333f-b6da-44a4-a537-489a810f344d.config'
+2026-10-22T01:44:01.3126973Z ##[end-action id=__e446878b-bd39-46b9-9c3f-a96323e55273.__actions_checkout;outcome=success;conclusion=success;duration_ms=280]
+2026-10-22T01:44:01.3178362Z Post job cleanup.
+2026-10-22T01:44:01.3180918Z ##[start-action display=Setting up Python;id=__d35c9547-18c5-48b0-bd4b-007924efe3f7.__actions_setup-python]
+2026-10-22T01:44:01.3182477Z ##[end-action id=__d35c9547-18c5-48b0-bd4b-007924efe3f7.__actions_setup-python;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-22T01:44:01.3223900Z Post job cleanup.
+2026-10-22T01:44:01.3244518Z ##[command]/usr/bin/docker exec  594016aabcb3d98d97c8240dad8142415c02e665cd5e92b825ab89a45201d5c1 sh -c "cat /etc/*release | grep ^ID"
+2026-10-22T01:44:01.4719964Z [command]/usr/bin/git version
+2026-10-22T01:44:01.4744903Z git version 2.51.0
+2026-10-22T01:44:01.4761546Z Copying '/github/home/.gitconfig' to '/__w/_temp/effc5add-cea9-4f5b-a9c8-f4bd31e2f4c0/.gitconfig'
+2026-10-22T01:44:01.4772051Z Temporarily overriding HOME='/__w/_temp/effc5add-cea9-4f5b-a9c8-f4bd31e2f4c0' before making global git config changes
+2026-10-22T01:44:01.4772674Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-22T01:44:01.4782582Z [command]/usr/bin/git config --global --add safe.directory /__w/rockrel/rockrel
+2026-10-22T01:44:01.4802814Z Removing SSH command configuration
+2026-10-22T01:44:01.4805465Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-22T01:44:01.4826501Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-22T01:44:01.5091586Z Removing HTTP extra header
+2026-10-22T01:44:01.5096959Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-22T01:44:01.5121433Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-22T01:44:01.5363670Z Removing includeIf entries pointing to credentials config files
+2026-10-22T01:44:01.5369132Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-22T01:44:01.5391410Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-22T01:44:01.5796105Z Post job cleanup.
+2026-10-22T01:44:01.5801965Z ##[command]/usr/bin/docker exec  594016aabcb3d98d97c8240dad8142415c02e665cd5e92b825ab89a45201d5c1 sh -c "cat /etc/*release | grep ^ID"
+2026-10-22T01:44:01.7432489Z Post job cleanup.
+2026-10-22T01:44:01.7435547Z ##[start-action display=Generate GitHub App token;id=__63f2ecf4-4266-4566-84f3-e7678cb5d2d4.app-token]
+2026-10-22T01:44:01.7504726Z Post job cleanup.
+2026-10-22T01:44:01.7518485Z ##[command]/usr/bin/docker exec  594016aabcb3d98d97c8240dad8142415c02e665cd5e92b825ab89a45201d5c1 sh -c "cat /etc/*release | grep ^ID"
+2026-10-22T01:44:02.2217364Z Token revoked
+2026-10-22T01:44:02.2544010Z ##[end-action id=__63f2ecf4-4266-4566-84f3-e7678cb5d2d4.app-token;outcome=success;conclusion=success;duration_ms=510]
+2026-10-22T01:44:02.2546025Z ##[start-action display=Checkout Quartz (notify_quartz script);id=__63f2ecf4-4266-4566-84f3-e7678cb5d2d4.__actions_checkout]
+2026-10-22T01:44:02.2595319Z Post job cleanup.
+2026-10-22T01:44:02.2601284Z ##[command]/usr/bin/docker exec  594016aabcb3d98d97c8240dad8142415c02e665cd5e92b825ab89a45201d5c1 sh -c "cat /etc/*release | grep ^ID"
+2026-10-22T01:44:02.4109409Z [command]/usr/bin/git version
+2026-10-22T01:44:02.4139699Z git version 2.51.0
+2026-10-22T01:44:02.4155136Z Copying '/github/home/.gitconfig' to '/__w/_temp/8df852ff-ff4c-4efa-8248-c581655046b7/.gitconfig'
+2026-10-22T01:44:02.4160416Z Temporarily overriding HOME='/__w/_temp/8df852ff-ff4c-4efa-8248-c581655046b7' before making global git config changes
+2026-10-22T01:44:02.4160882Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-22T01:44:02.4167530Z [command]/usr/bin/git config --global --add safe.directory /__w/rockrel/rockrel/.quartz-notify-quartz
+2026-10-22T01:44:02.4242056Z Removing SSH command configuration
+2026-10-22T01:44:02.4246411Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-22T01:44:02.4269898Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-22T01:44:02.4537404Z Removing HTTP extra header
+2026-10-22T01:44:02.4541901Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-22T01:44:02.4562945Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-22T01:44:02.4832177Z Removing includeIf entries pointing to credentials config files
+2026-10-22T01:44:02.4837422Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-22T01:44:02.4865454Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-22T01:44:02.5215243Z ##[end-action id=__63f2ecf4-4266-4566-84f3-e7678cb5d2d4.__actions_checkout;outcome=success;conclusion=success;duration_ms=266]
+2026-10-22T01:44:02.5239365Z Stop and remove container: 324c080e5f834f2db36bbb5e2f738284_ghcriorocmno_rocm_image_ubuntu24_04sha2564150afe4759d14822f0e3f8930e1124f26e11f68b5c7b91ec9a02b20b1ebbb98_c14f35
+2026-10-22T01:44:02.5242345Z ##[command]/usr/bin/docker rm --force 594016aabcb3d98d97c8240dad8142415c02e665cd5e92b825ab89a45201d5c1
+2026-10-22T01:44:02.7997796Z 594016aabcb3d98d97c8240dad8142415c02e665cd5e92b825ab89a45201d5c1
+2026-10-22T01:44:02.8030666Z Remove container network: github_network_0d408380093b44e9b6bb43376e69571b
+2026-10-22T01:44:02.8034588Z ##[command]/usr/bin/docker network rm github_network_0d408380093b44e9b6bb43376e69571b
+2026-10-22T01:44:02.9745323Z github_network_0d408380093b44e9b6bb43376e69571b
+2026-10-22T01:44:02.9837081Z Evaluate and set job outputs
+2026-10-22T01:44:02.9841709Z Cleaning up orphan processes

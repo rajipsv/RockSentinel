@@ -21,6 +21,7 @@ TUNED_ON_JOB_IDS = frozenset({
     118506197594,  # tensilelite-common: hipModuleLoad + continuation lines + grouping
     118285601270,  # rocgdb-gpu: suite summary + DejaGnu FAIL lines
     118930553597,  # hipthreads timeout reviewed while defining the timeout category
+    119589847503,  # rockrel hipblaslt: "HW Exception ... GPU Hang" + noise in passing tests
 })
 TUNED_ON_CASE_IDS = frozenset({"golden-002"})  # hip-tests timeout (no job id recorded)
 

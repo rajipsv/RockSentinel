@@ -17,7 +17,7 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 
 - Golden set: 35 real TheRock failures, 33 confirmed by a human; 24 dev / 11 held-out test.
 - Pattern coverage on 25 failures *outside* the golden set: 92% hit a specific pattern.
-- Tests: 231 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
+- Tests: 237 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
 
 ---
 
@@ -240,6 +240,24 @@ All read-only toward GitHub; local only.
 - The nightly build seen on the HUD (10.2.0a20261022) is not produced by this workflow. Where it comes from is still to be found.
 
 **Interview talking point:** "The first useful result of a sync was learning what the data really is: release builds here are mostly manual triage runs, not nightlies."
+
+## Extractor fix: GPU hardware exceptions and passing-test noise (this commit)
+**Trigger:** a HUD comparison on one failure: ROCm/rockrel, hipblaslt shard 2/6 on gfx110X, run 39706995961. The HUD's own report says it does not read logs, so its "root cause" was a generic guess. Ours found the right failing test but missed the cause.
+- The log line was `HW Exception by GPU node-1 … reason :GPU Hang`, which aborted the process.
+- B1 was steered by `hipModuleLoad failed` lines printed by **negative tests that pass** (`[ OK ]`).
+
+**Built:**
+- **New `gpu_hw_exception` kind** (ranks above crashes). The `*** GPU HANG ANALYSIS` dump keeps its old meaning, because it also appears when a hung test is killed for running too long.
+- **Soft errors inside passing gtests are dropped, but counted** (`ignored_in_passing_tests` in the tool output). The soft kinds are HIP-API, `error:`, Python and generic. Faults, hangs and crashes are never dropped.
+- **The gtest summary line** (`[ FAILED ] 1 test, listed below:`) is no longer taken as the test name.
+- **The labeler excerpt keeps a window around each top error, plus the tail.** Head-plus-tail trimming had cut the failure out of the middle of a 10,615-line log.
+
+**Found:**
+- **Two confirmed dev golden cases cited noise** as must-cite evidence: golden-016 (a warning from a passing negative test) and golden-020 (the same GPU hang pattern, where it cited a `hipModuleLoad` line from a client run that exited 0). Their evidence was corrected, each with a note. Categories are unchanged.
+- **The first rule change made every GPU hang a root cause.** That **dropped the held-out test split from 0.91 to 0.82**. It was seen only as an aggregate number; no test case was opened. Splitting the two hang signals restored the old behaviour for the dump, and the test split returned to 0.91 / F1 0.73. Dev grounding is back to 1.00, and extraction coverage is unchanged at 92%.
+- The rockrel job is pinned to dev (it was tuned on).
+
+**Interview talking point:** "Our held-out split caught my own regression: a rule that looked right on the case in front of me broke a case I wasn't allowed to look at. I reverted to a narrower rule instead of tuning to the test set."
 
 ---
 

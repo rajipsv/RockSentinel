@@ -48,6 +48,14 @@ def test_gpu_hang_alone_is_timeout():
     assert classify(["gpu_hang"], workflow="test_artifacts.yml")[0] == "timeout"
 
 
+def test_gpu_hw_exception_is_a_code_failure_not_a_timeout():
+    # "HW Exception ... reason :GPU Hang" then ctest "Subprocess aborted"
+    kinds = ["gpu_hw_exception", "crash", "ctest_failed_list", "ctest_summary"]
+    category, reason = classify(kinds, workflow="test_artifacts.yml")
+    assert category == "regression" and "gpu_hw_exception" in reason
+    assert classify(["gpu_hw_exception"], workflow="x.yml", likely_flaky=True)[0] == "flaky"
+
+
 # --- B0 excerpt (TheRock detect_failed_logs.py behaviour) -----------------------------------
 
 def test_b0_takes_last_keyword_match_with_12_before_20_after():
