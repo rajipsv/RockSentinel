@@ -206,33 +206,291 @@ async function loadEvals() {
   $("#evals-cases").replaceChildren(el("thead", {}, chead), el("tbody", {}, crows));
 }
 
-// --- runs + case ----------------------------------------------------------------------------
-async function loadRuns() {
-  const r = await api("/api/runs");
-  const list = $("#run-list"); list.replaceChildren();
-  if (!r.items.length) {
-    list.append(el("p", { class: "empty", style: "padding:12px" },
-      "No runs yet. Run: python -m rocksentinel.ingest.poller"));
-    return;
-  }
-  for (const run of r.items) {
-    list.append(el("div", { class: "item", "data-id": run.run_id, onclick: () => showRun(run.run_id) },
-      el("div", { class: "title" }, run.failed ? badge("regression") : badge("ok"), " ", run.workflow),
-      el("div", { class: "sub" }, `run ${run.run_id} · ${run.failed}/${run.jobs} failed · ${(run.started_at || "").slice(0, 16)}`)));
+// --- runs: workflow cards → a workflow's runs → run detail → case ---------------------------
+// Dates are UTC days; "On a day" sends since = until, "Between dates" sends either or both.
+const runs = { level: "workflows", workflow: null, runId: null, mode: "day",
+  dataRange: {}, wfItems: [], runItems: [], timer: null };
+
+const when = (iso) => (iso ? `${iso.slice(0, 16).replace("T", " ")} UTC` : "—");
+function ago(iso) {
+  if (!iso) return "—";
+  const s = (Date.now() - Date.parse(iso)) / 1000;
+  if (s < 90) return "just now";
+  if (s < 5400) return `${Math.round(s / 60)} min ago`;
+  if (s < 129600) return `${Math.round(s / 3600)} h ago`;
+  return `${Math.round(s / 86400)} d ago`;
+}
+const utcDay = (offsetDays = 0) =>
+  new Date(Date.now() - offsetDays * 86400000).toISOString().slice(0, 10);
+const tone = (failed, rate) => (!failed ? "good" : rate >= 0.5 ? "bad" : "warn");
+
+function dayParams() {
+  const from = $("#date-from").value || null;
+  const to = runs.mode === "day" ? from : ($("#date-to").value || null);
+  const p = new URLSearchParams();
+  if (from) p.set("since", from);
+  if (to) p.set("until", to);
+  return p;
+}
+function describeDays() {
+  const from = $("#date-from").value, to = $("#date-to").value;
+  if (runs.mode === "day" || (from && from === to)) return from ? `on ${from}` : "all dates";
+  if (from && to) return `${from} → ${to}`;
+  if (from) return `from ${from}`;
+  return to ? `until ${to}` : "all dates";
+}
+function setMode(mode) {
+  runs.mode = mode;
+  document.querySelectorAll(".seg-btn").forEach((b) => {
+    b.classList.toggle("active", b.dataset.mode === mode);
+    b.setAttribute("aria-pressed", String(b.dataset.mode === mode));
+  });
+  $("#field-to").hidden = mode === "day";
+  $("#lbl-from").textContent = mode === "day" ? "Day" : "From";
+}
+function setDateBounds(range) {
+  runs.dataRange = range || {};
+  for (const id of ["#date-from", "#date-to"]) {
+    if (range?.first) $(id).min = range.first;
+    if (range?.last) $(id).max = utcDay() > range.last ? utcDay() : range.last;
   }
 }
+
+document.querySelectorAll(".seg-btn").forEach((b) => b.addEventListener("click", () => {
+  setMode(b.dataset.mode);
+  if (b.dataset.mode === "day") $("#date-to").value = "";
+  loadRuns();
+}));
+$("#date-from").addEventListener("change", () => {
+  const f = $("#date-from"), t = $("#date-to");
+  if (runs.mode === "range" && t.value && f.value > t.value) t.value = f.value;
+  loadRuns();
+});
+$("#date-to").addEventListener("change", () => {
+  const f = $("#date-from"), t = $("#date-to");
+  if (f.value && t.value && t.value < f.value) f.value = t.value;
+  loadRuns();
+});
+document.querySelectorAll("[data-preset]").forEach((b) => b.addEventListener("click", () => {
+  const p = b.dataset.preset;
+  if (p === "all") { setMode("day"); $("#date-from").value = ""; $("#date-to").value = ""; }
+  else if (p === "latest") { setMode("day"); $("#date-from").value = runs.dataRange.last || utcDay(); }
+  else { setMode("range"); $("#date-from").value = utcDay(Number(p) - 1); $("#date-to").value = utcDay(); }
+  loadRuns();
+}));
+$("#runs-search").addEventListener("input", () =>
+  (runs.level === "workflows" ? renderWorkflows() : renderRunList()));
+$("#failing-only").addEventListener("change", () =>
+  (runs.level === "workflows" ? renderWorkflows() : renderRunList()));
+
+// Auto-refresh: re-read the job store (the poller keeps adding runs) without losing the
+// open run or case.
+function scheduleRefresh() {
+  clearInterval(runs.timer);
+  runs.timer = setInterval(() => {
+    if (!$("#auto-refresh").checked || document.hidden) return;
+    if (!$("#view-runs").classList.contains("active")) return;
+    loadRuns({ refresh: true }).catch(() => {});
+  }, 60000);
+}
+scheduleRefresh();
+
+function renderCrumbs() {
+  const c = $("#runs-crumbs");
+  const link = (label, onclick) => el("button", { type: "button", class: "crumb", onclick }, label);
+  const parts = [runs.level === "workflows"
+    ? el("span", { class: "crumb current", "aria-current": "page" }, "All workflows")
+    : link("All workflows", () => goWorkflows())];
+  if (runs.workflow) {
+    parts.push(el("span", { class: "sep", "aria-hidden": "true" }, "›"),
+      runs.runId ? link(runs.workflow, () => openWorkflow(runs.workflow))
+        : el("span", { class: "crumb current", "aria-current": "page" }, runs.workflow));
+  }
+  if (runs.runId) {
+    parts.push(el("span", { class: "sep", "aria-hidden": "true" }, "›"),
+      el("span", { class: "crumb current", "aria-current": "page" }, `run ${runs.runId}`));
+  }
+  if (runs.level !== "workflows") parts.push(el("span", { class: "kbd" }, "Esc: back"));
+  c.replaceChildren(...parts);
+  $("#runs-search").placeholder = runs.level === "workflows"
+    ? "Filter workflows…" : "Filter runs (id, branch, commit)…";
+}
+
+function stat(label, value, cls = "") {
+  return el("div", { class: `stat ${cls}` }, el("div", { class: "stat-v" }, value),
+    el("div", { class: "stat-l" }, label));
+}
+const emptyBox = (...msg) => el("div", { class: "panel empty-state" }, ...msg);
+
+async function loadRuns(opts = {}) {
+  renderCrumbs();
+  try {
+    if (runs.level === "workflows") await loadWorkflows();
+    else await loadWorkflowRuns(opts.refresh);
+    $("#runs-updated").textContent = `updated ${new Date().toLocaleTimeString()}`;
+  } catch (e) { toast(`Error: ${e.message}`); }
+}
+
+function goWorkflows() {
+  runs.level = "workflows"; runs.workflow = null; runs.runId = null;
+  $("#runs-search").value = "";
+  loadRuns();
+}
+function openWorkflow(workflow, runId = null) {
+  const fresh = runs.workflow !== workflow || runs.level !== "workflow";
+  runs.level = "workflow"; runs.workflow = workflow; runs.runId = runId;
+  if (fresh) {
+    $("#runs-search").value = "";
+    $("#runs-body").replaceChildren(el("div", { class: "split" },
+      el("aside", { class: "list", id: "run-list", "aria-label": `Runs of ${workflow}` }),
+      el("article", { class: "detail", id: "run-detail" },
+        el("p", { class: "empty" }, "Select a run to see which jobs failed, grouped by runner pool."))));
+  }
+  loadRuns();
+}
+
+// Level 1: one card per workflow.
+async function loadWorkflows() {
+  const r = await api(`/api/workflows?${dayParams()}`);
+  setDateBounds(r.data_range);
+  runs.wfItems = r.items;
+  renderWorkflows();
+}
+
+function renderWorkflows() {
+  const all = runs.wfItems;
+  const q = $("#runs-search").value.trim().toLowerCase();
+  const failingOnly = $("#failing-only").checked;
+  const items = all.filter((w) => (!q || w.workflow.toLowerCase().includes(q)) &&
+    (!failingOnly || w.failed_runs));
+  const t = all.reduce((a, w) => ({ runs: a.runs + w.runs, failed: a.failed + w.failed_runs,
+    jobs: a.jobs + w.jobs, fj: a.fj + w.failed_jobs }), { runs: 0, failed: 0, jobs: 0, fj: 0 });
+  $("#runs-stats").replaceChildren(
+    stat("Workflows", all.length), stat("Runs", t.runs),
+    stat("Runs with failures", t.failed, t.failed ? "bad" : "good"),
+    stat("Failed jobs", `${t.fj} / ${t.jobs}`), stat("Dates (UTC)", describeDays()));
+  const body = $("#runs-body");
+  if (!all.length) {
+    const dr = runs.dataRange;
+    body.replaceChildren(emptyBox(el("h3", {}, "No runs " + describeDays()),
+      el("p", { class: "muted" }, dr.first
+        ? `The job store has runs from ${dr.first} to ${dr.last} (UTC). Pick a day in that range or choose "All dates".`
+        : "The job store is empty. Run: python -m rocksentinel.ingest.poller")));
+    return;
+  }
+  if (!items.length) {
+    body.replaceChildren(emptyBox(el("p", { class: "muted" }, "No workflows match the filter.")));
+    return;
+  }
+  body.replaceChildren(el("div", { class: "cards" }, items.map(workflowCard)));
+}
+
+function workflowCard(w) {
+  const pct = Math.round(w.failure_rate * 100);
+  const cls = tone(w.failed_runs, w.failure_rate);
+  const open = () => openWorkflow(w.workflow);
+  const ticks = [...w.recent].reverse().map((r) => el("button", {
+    type: "button", class: `tick ${r.failed ? "bad" : "good"}`,
+    title: `run ${r.run_id} · ${r.failed}/${r.jobs} jobs failed · ${when(r.started_at)}`,
+    "aria-label": `Open run ${r.run_id}: ${r.failed ? `${r.failed} jobs failed` : "passed"}`,
+    onclick: (e) => { e.stopPropagation(); openWorkflow(w.workflow, r.run_id); } }));
+  return el("article", { class: `wf-card ${cls}`, tabindex: "0", "aria-label": `Open ${w.workflow}`,
+    onclick: open,
+    onkeydown: (e) => { if (e.target === e.currentTarget && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); open(); } } },
+    el("div", { class: "wf-head" }, el("h3", {}, w.workflow),
+      el("span", { class: `rate ${cls}` }, w.failed_runs ? `${pct}% failing` : "all passing")),
+    el("div", { class: "bar", role: "img", "aria-label": `${pct}% of runs had failures` },
+      el("span", { style: `width:${pct}%` })),
+    el("div", { class: "wf-nums" },
+      el("span", {}, el("b", {}, w.runs), " runs"),
+      el("span", {}, el("b", {}, w.failed_runs), " with failures"),
+      el("span", {}, el("b", {}, w.failed_jobs), ` / ${w.jobs} jobs failed`)),
+    el("div", { class: "strip-label" }, `Last ${ticks.length} runs (oldest → newest, click one to open)`),
+    el("div", { class: "strip" }, ticks),
+    el("div", { class: "sub" }, `last run ${ago(w.last_run_at)} · ${when(w.last_run_at)}`));
+}
+
+// Level 2: the runs of one workflow, grouped by day; detail on the right.
+async function loadWorkflowRuns(refresh = false) {
+  const p = dayParams(); p.set("workflow", runs.workflow);
+  const r = await api(`/api/runs?${p}`);
+  runs.runItems = r.items;
+  renderRunList();
+  if (!refresh && runs.runId) showRun(runs.runId);
+}
+
+function renderRunList() {
+  const all = runs.runItems;
+  const q = $("#runs-search").value.trim().toLowerCase();
+  const failingOnly = $("#failing-only").checked;
+  const items = all.filter((r) => (!failingOnly || r.failed) &&
+    (!q || `${r.run_id} ${r.branch || ""} ${r.head_sha || ""}`.toLowerCase().includes(q)));
+  const failed = all.filter((r) => r.failed).length;
+  $("#runs-stats").replaceChildren(
+    stat("Runs", all.length), stat("With failures", failed, failed ? "bad" : "good"),
+    stat("Passed", all.length - failed, "good"),
+    stat("Failure rate", all.length ? `${Math.round((failed / all.length) * 100)}%` : "—"),
+    stat("Dates (UTC)", describeDays()));
+  const list = $("#run-list");
+  if (!list) return;
+  list.replaceChildren();
+  if (!items.length) {
+    list.append(el("p", { class: "empty", style: "padding:12px" },
+      all.length ? "No runs match the filter." : `No runs ${describeDays()}.`));
+    return;
+  }
+  let day = null;
+  for (const r of items) {
+    const d = (r.started_at || "").slice(0, 10) || "unknown date";
+    if (d !== day) {
+      day = d;
+      const n = items.filter((x) => (x.started_at || "").slice(0, 10) === d);
+      list.append(el("div", { class: "day-head" }, d,
+        el("span", { class: "muted" }, ` · ${n.length} runs, ${n.filter((x) => x.failed).length} with failures`)));
+    }
+    list.append(el("div", { class: `item${String(r.run_id) === String(runs.runId) ? " selected" : ""}`,
+      "data-id": r.run_id, tabindex: "0", role: "button",
+      onclick: () => selectRun(r.run_id),
+      onkeydown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); selectRun(r.run_id); } } },
+      el("div", { class: "title" }, el("span", { class: `dot ${r.failed ? "bad" : "good"}`, "aria-hidden": "true" }),
+        `run ${r.run_id}`, " ",
+        el("span", { class: `status ${r.failed ? "bad" : "good"}` },
+          r.failed ? `${r.failed}/${r.jobs} failed` : `passed · ${r.jobs} jobs`)),
+      el("div", { class: "sub" }, `${(r.started_at || "").slice(11, 16)} UTC · ${r.branch || "?"} @ ${(r.head_sha || "").slice(0, 8)}` +
+        (r.attempts > 1 ? ` · ${r.attempts} attempts` : ""))));
+  }
+}
+
+function selectRun(runId) {
+  runs.runId = runId;
+  renderCrumbs();
+  showRun(runId);
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape" || !$("#view-runs").classList.contains("active")) return;
+  if (["INPUT", "SELECT", "TEXTAREA"].includes(document.activeElement?.tagName)) return;
+  if (runs.runId) { runs.runId = null; openWorkflow(runs.workflow); }
+  else if (runs.level === "workflow") goWorkflows();
+});
 
 async function showRun(runId) {
   document.querySelectorAll("#run-list .item").forEach((i) =>
     i.classList.toggle("selected", i.dataset.id === String(runId)));
-  const r = await api(`/api/runs/${runId}`);
   const d = $("#run-detail");
-  d.replaceChildren(
+  if (!d) return;
+  d.replaceChildren(el("p", { class: "empty" }, "Loading run…"));
+  let r;
+  try { r = await api(`/api/runs/${runId}`); }
+  catch (e) { d.replaceChildren(el("p", { class: "empty" }, e.message)); return; }
+  if (String(runs.runId) !== String(runId)) return;
+  d.replaceChildren(...[
     el("h2", {}, `${r.workflow} · run ${r.run_id}`),
     el("div", { class: "meta" }, `${r.failed}/${r.jobs} jobs failed · ${r.branch} @ ${(r.head_sha || "").slice(0, 8)} · `,
       el("a", { href: r.run_url, target: "_blank", rel: "noopener" }, "run on GitHub ↗")),
     r.platform_event_hint ? el("span", { class: "chip weak" },
       "platform-event hint: ≥3 components failed on one runner pool") : null,
+    r.failed ? null : el("p", { class: "muted" }, `All ${r.jobs} jobs passed in this run.`),
     ...r.by_runner_pool.map((g) => el("div", {},
       el("h3", {}, `${g.runner_label} — ${g.failed.length} failed`),
       el("table", {}, el("tbody", {}, g.failed.map((j) => el("tr", {},
@@ -240,7 +498,7 @@ async function showRun(runId) {
           j.component || j.job_name)),
         el("td", {}, j.gpu_family || "?"), el("td", {}, j.platform || "?"),
         el("td", {}, j.conclusion), el("td", { class: "muted" }, `attempt ${j.attempt}`))))))),
-    el("div", { id: "case-panel" }));
+    el("div", { id: "case-panel" })].filter(Boolean));
 }
 
 async function showCase(jobId) {

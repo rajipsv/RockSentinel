@@ -106,18 +106,56 @@ class SQLiteStore:
 
     # --- TriageQueue --------------------------------------------------------------------
 
+    # Date filters are inclusive UTC days ("YYYY-MM-DD") on the run's start (first job start).
+    _DAY_FILTER = ("HAVING (? IS NULL OR substr(MIN(started_at), 1, 10) >= ?) "
+                   "AND (? IS NULL OR substr(MIN(started_at), 1, 10) <= ?) ")
+
     @_locked
-    def recent_runs(self, limit: int = 50) -> list[dict]:
-        """Runs newest first, with job and failure counts (for the Console Runs view)."""
+    def recent_runs(self, limit: int = 50, workflow: str | None = None,
+                    since: str | None = None, until: str | None = None) -> list[dict]:
+        """Runs newest first, with job and failure counts (optionally one workflow / days)."""
         rows = self._db.execute(
             "SELECT run_id, workflow, head_sha, branch, MIN(started_at), MAX(finished_at), "
             "COUNT(*), SUM(conclusion IN ('failure','timed_out')), MAX(attempt) "
-            "FROM job_results GROUP BY run_id ORDER BY MIN(started_at) DESC LIMIT ?",
-            (limit,),
+            "FROM job_results WHERE (? IS NULL OR workflow = ?) "
+            "GROUP BY run_id " + self._DAY_FILTER + "ORDER BY MIN(started_at) DESC LIMIT ?",
+            (workflow, workflow, since, since, until, until, limit),
         ).fetchall()
         keys = ("run_id", "workflow", "head_sha", "branch", "started_at", "finished_at",
                 "jobs", "failed", "attempts")
         return [dict(zip(keys, r, strict=True)) for r in rows]
+
+    @_locked
+    def run_date_range(self) -> tuple[str | None, str | None]:
+        """First and last UTC day with any run, for the date picker bounds."""
+        lo, hi = self._db.execute(
+            "SELECT substr(MIN(started_at), 1, 10), substr(MAX(started_at), 1, 10) "
+            "FROM job_results").fetchone()
+        return lo, hi
+
+    @_locked
+    def workflow_summaries(self, recent: int = 20, since: str | None = None,
+                           until: str | None = None) -> list[dict]:
+        """Per workflow: run and failure counts, last run, and recent run outcomes."""
+        per_run = self._db.execute(
+            "SELECT workflow, run_id, MIN(started_at) AS started, "
+            "SUM(conclusion IN ('failure','timed_out')) AS failed, COUNT(*) AS jobs "
+            "FROM job_results GROUP BY run_id " + self._DAY_FILTER + "ORDER BY started DESC",
+            (since, since, until, until)).fetchall()
+        out: dict[str, dict] = {}
+        for wf, run_id, started, failed, jobs in per_run:
+            w = out.setdefault(wf, {"workflow": wf, "runs": 0, "failed_runs": 0, "jobs": 0,
+                                    "failed_jobs": 0, "last_run_at": started, "recent": []})
+            w["runs"] += 1
+            w["failed_runs"] += failed > 0
+            w["jobs"] += jobs
+            w["failed_jobs"] += failed
+            if len(w["recent"]) < recent:
+                w["recent"].append({"run_id": run_id, "failed": failed, "jobs": jobs,
+                                    "started_at": started})
+        for w in out.values():
+            w["failure_rate"] = round(w["failed_runs"] / w["runs"], 3) if w["runs"] else 0.0
+        return sorted(out.values(), key=lambda w: (-w["failed_runs"], w["workflow"]))
 
     @_locked
     def failed_jobs(self, limit: int = 200) -> list[JobResult]:

@@ -17,7 +17,7 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 
 - Golden set: 35 real TheRock failures, 33 confirmed by a human; 24 dev / 11 held-out test.
 - Pattern coverage on 25 failures *outside* the golden set: 92% hit a specific pattern.
-- Tests: 219 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
+- Tests: 226 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
 
 ---
 
@@ -214,6 +214,22 @@ All read-only toward GitHub; local only.
 - No horizontal scroll at 375 px.
 
 **Interview talking point:** "I treat agent skills like any dependency. I read the code and the prompt before installing, vendor it with attribution, and still apply judgment to its output."
+
+## Step 8 follow-up: Runs view redesign (this commit)
+**Built:** after user feedback that the Runs tab was "just displaying all the runs", it is now a drill-down. The flow:
+- **Workflow cards:** failure rate bar, runs with failures, failed jobs, last run, and a strip of the last 20 run outcomes. Each strip tick opens that run.
+- **One workflow's runs:** grouped by day, with run detail on the right, then the Case view.
+- **Navigation:** breadcrumb plus Esc to go back.
+- **Filters:** search, "failing only", and 60 s auto-refresh that keeps the open run.
+- **Date filter (UTC days):** "on a day" or "between dates" with the native calendar, plus presets (all, latest day, last 3/7 days). The picker is bounded by the job store's date range, and an empty result says which dates exist.
+
+**Why / decisions:** filtering runs in SQL (`since`/`until` on the run's first job start, via `HAVING`) rather than in the browser, so it holds up at ADX scale in step 9. Dates are validated as `YYYY-MM-DD` (400 otherwise). There is no client framework: still plain DOM with `textContent` only.
+
+**Found:** a browser check caught two UI bugs, both fixed:
+- the hidden "to" date field still showed, because a CSS `display` rule overrode the `hidden` attribute;
+- run detail printed a literal "null" because `replaceChildren` doesn't skip nulls (this one existed before).
+
+**Interview talking point:** "Feedback said the view was a static list, so I restructured it around the question an on-call engineer asks first: which workflow is failing, since when, and on which day."
 
 ---
 

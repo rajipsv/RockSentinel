@@ -24,6 +24,13 @@ from rocksentinel.evals.labeler import ROOT, Paths
 WEB_DIR = ROOT / "web"
 MAX_BODY = 16_384
 _CASE = r"(?P<case>[A-Za-z0-9\-]+)"
+
+
+def _q(query: dict, key: str) -> str | None:
+    """First value of a query parameter, or None."""
+    return (query.get(key) or [None])[0]
+
+
 ROUTES = [
     ("GET", re.compile(r"^/api/proposals$"), lambda h, m, q: api.list_proposals(h.paths)),
     ("GET", re.compile(r"^/api/golden$"), lambda h, m, q: api.list_golden(h.paths)),
@@ -36,7 +43,11 @@ ROUTES = [
      lambda h, m, q: api.accept(m["case"], h.json_body(), h.paths)),
     ("POST", re.compile(rf"^/api/proposals/{_CASE}/reject$"),
      lambda h, m, q: api.reject(m["case"], h.paths)),
-    ("GET", re.compile(r"^/api/runs$"), lambda h, m, q: api.list_runs(h.jobs())),
+    ("GET", re.compile(r"^/api/workflows$"),
+     lambda h, m, q: api.list_workflows(h.jobs(), since=_q(q, "since"), until=_q(q, "until"))),
+    ("GET", re.compile(r"^/api/runs$"),
+     lambda h, m, q: api.list_runs(h.jobs(), workflow=_q(q, "workflow"),
+                                   since=_q(q, "since"), until=_q(q, "until"))),
     ("GET", re.compile(r"^/api/runs/(?P<run>\d+)$"),
      lambda h, m, q: api.run_detail(h.jobs(), int(m["run"]))),
     ("GET", re.compile(r"^/api/jobs/(?P<job>\d+)$"),

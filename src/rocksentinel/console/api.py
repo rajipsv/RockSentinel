@@ -7,6 +7,7 @@ the offline evals. Nothing here talks to GitHub.
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 from rocksentinel.baseline.rules import CATEGORIES
@@ -161,9 +162,35 @@ def evals(paths: Paths, confirmed_only: bool = False, split: str = "all") -> dic
 _EVIDENCE_CACHE: dict[int, dict] = {}
 
 
-def list_runs(jobs, limit: int = 50) -> dict:
-    runs = jobs.recent_runs(limit=max(1, min(limit, 200)))
-    return {"count": len(runs), "items": runs}
+_DAY = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+def _days(since: str | None, until: str | None) -> tuple[str | None, str | None]:
+    """Validate an inclusive UTC day range; a single day is since == until."""
+    since, until = since or None, until or None
+    for d in (since, until):
+        if d is not None and not _DAY.match(d):
+            raise ApiError(400, f"bad date {d!r}: use YYYY-MM-DD")
+    if since and until and since > until:
+        raise ApiError(400, "'since' is after 'until'")
+    return since, until
+
+
+def list_runs(jobs, limit: int = 300, workflow: str | None = None,
+              since: str | None = None, until: str | None = None) -> dict:
+    since, until = _days(since, until)
+    runs = jobs.recent_runs(limit=max(1, min(limit, 500)), workflow=workflow,
+                            since=since, until=until)
+    return {"count": len(runs), "workflow": workflow, "since": since, "until": until,
+            "items": runs}
+
+
+def list_workflows(jobs, since: str | None = None, until: str | None = None) -> dict:
+    since, until = _days(since, until)
+    items = jobs.workflow_summaries(since=since, until=until)
+    first, last = jobs.run_date_range()
+    return {"count": len(items), "since": since, "until": until,
+            "data_range": {"first": first, "last": last}, "items": items}
 
 
 def run_detail(jobs, run_id: int) -> dict:

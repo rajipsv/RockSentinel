@@ -62,8 +62,33 @@
     </section>
     <!-- Runs + Case -->
     <section id="view-runs" class="view">
-      <aside class="list" id="run-list" aria-label="Runs"></aside>
-      <article class="detail" id="run-detail"><p class="empty">Select a run.</p></article>
+      <div class="panel runs-toolbar">
+        <nav class="crumbs" id="runs-crumbs" aria-label="Breadcrumb"></nav>
+        <div class="filters">
+          <div class="seg" role="group" aria-label="Date filter mode">
+            <button type="button" class="seg-btn active" data-mode="day" aria-pressed="true">On a day</button>
+            <button type="button" class="seg-btn" data-mode="range" aria-pressed="false">Between dates</button>
+          </div>
+          <label class="date-field"><span id="lbl-from">Day</span>
+            <input type="date" id="date-from" aria-label="Start day (UTC)"></label>
+          <label class="date-field" id="field-to" hidden><span>to</span>
+            <input type="date" id="date-to" aria-label="End day (UTC)"></label>
+          <div class="presets" role="group" aria-label="Quick date ranges">
+            <button type="button" class="btn small" data-preset="all">All dates</button>
+            <button type="button" class="btn small" data-preset="latest">Latest day</button>
+            <button type="button" class="btn small" data-preset="3">Last 3 days</button>
+            <button type="button" class="btn small" data-preset="7">Last 7 days</button>
+          </div>
+        </div>
+        <div class="filters">
+          <input type="search" id="runs-search" placeholder="Filter workflows…" aria-label="Filter">
+          <label class="check"><input type="checkbox" id="failing-only"> failing only</label>
+          <label class="check"><input type="checkbox" id="auto-refresh" checked> auto-refresh (60 s)</label>
+          <span class="muted small-text" id="runs-updated" aria-live="polite"></span>
+        </div>
+      </div>
+      <div class="stats" id="runs-stats"></div>
+      <div id="runs-body"></div>
     </section>
 
     <!-- Signatures -->
