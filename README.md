@@ -1,6 +1,6 @@
 # RockSentinel
 
-AI agents that triage [ROCm/TheRock](https://github.com/ROCm/TheRock) CI failures on Azure. The agents read the logs, find the real error, attribute it to a component, GPU family and platform, trace it to the change that likely caused it, and learn from past cases. Results are shown in a reviewer console.
+AI agents that triage GitHub Actions CI failures, with [ROCm/TheRock](https://github.com/ROCm/TheRock) as the first supported CI (the `rocm` pack). The agents read the logs, find the real error, attribute it to a component, GPU family and platform, trace it to the change that likely caused it, and learn from past cases. Results are shown in a reviewer console.
 
 RockSentinel is **read-only toward GitHub**: it never posts, comments or pushes. Reviewers decide what to share.
 
@@ -9,15 +9,17 @@ Design phase. See the full design: [docs/ADLC-RockSentinel.md](docs/ADLC-RockSen
 
 ## At a glance
 - **AI agents:** Triage, Root-Cause Advisor, Memory Curator (PR Reviewer planned). They are run by a deterministic Supervisor, with a Report Builder at the end.
-- **Tools via MCP:** GitHub's official MCP server (read-only), plus custom `therock-ci` and `memory` servers.
+- **Tools via MCP:** GitHub's official MCP server (read-only), plus custom `ci-evidence` and `memory` servers.
+- **Packs:** CI-specific knowledge (log patterns, job-name mapping, workflow hints, skills) is pluggable. `core` covers any CI; `rocm` adds GPU faults, HIP errors, gfx families and submodule-bump tracing. See the design doc §2.5a.
 - **Azure:** Container Apps jobs, Service Bus, Cosmos DB, Azure Data Explorer, Azure OpenAI, Static Web Apps, Key Vault, managed identity, App Insights. Infrastructure as code in Bicep, deployed with `azd`.
 - **Evaluation:** a golden set of real TheRock failures, a non-AI baseline, grounding checks and prompt-injection safety tests. See [evals/golden/](evals/golden/).
 
 ## Repository layout (so far)
 ```
-src/rocksentinel/therock_ci/extract.py   deterministic error extraction (extract_errors)
-src/rocksentinel/therock_ci/mappers.py   job -> component/family/platform, path/symbol -> component
-src/rocksentinel/therock_ci/history.py   job_history: failing-since, flake evidence, co-failures
+src/rocksentinel/ci_evidence/extract.py  deterministic error extraction engine (extract_errors)
+src/rocksentinel/ci_evidence/history.py  job_history: failing-since, flake evidence, co-failures
+src/rocksentinel/packs/                  pluggable CI knowledge: core (any CI) + rocm (TheRock/GPU)
+src/rocksentinel/packs/rocm/mappers.py   TheRock job -> component/family/platform, path/symbol -> component
 src/rocksentinel/baseline/               non-AI baselines: B0 (TheRock-style excerpt), B1 (extract_errors)
 src/rocksentinel/evals/runner.py         scores systems on the golden set
 src/rocksentinel/evals/labeler.py        proposes golden cases from real failures for human review
@@ -25,12 +27,12 @@ src/rocksentinel/memory/                 memory MCP server: signatures, cases, i
 src/rocksentinel/llm/provider.py         LLMProvider interface + ReplayProvider (offline)
 src/rocksentinel/llm/openai_compat.py    live provider for Ollama / OpenAI / Azure OpenAI + recorder
 src/rocksentinel/harness/                agent loop, policy hooks, budgets, grounding
-src/rocksentinel/agents/triage.py        Triage agent (skill: skills/triage-therock/SKILL.md)
-src/rocksentinel/agents/rca.py           RCA agent (skill: skills/rca-therock/SKILL.md)
-src/rocksentinel/therock_ci/changes.py   find_introducing_change: symbol -> commit -> TheRock bump
+src/rocksentinel/agents/triage.py        Triage agent (skill from the pack: skills/triage-rocm/SKILL.md)
+src/rocksentinel/agents/rca.py           RCA agent (skill from the pack: skills/rca-rocm/SKILL.md)
+src/rocksentinel/packs/rocm/changes.py   find_introducing_change: symbol -> commit -> TheRock bump
 src/rocksentinel/console/                Console API (framework-free) + local dev server
 web/                                     Console frontend (static HTML/JS, served by SWA in Azure)
-src/rocksentinel/therock_ci/server.py    therock-ci MCP server (MCP Python SDK 2.x)
+src/rocksentinel/ci_evidence/server.py   ci-evidence MCP server (MCP Python SDK 2.x)
 src/rocksentinel/github/client.py        read-only GitHub REST client (runs, jobs, logs)
 src/rocksentinel/ingest/poller.py        polls completed runs, stores every job, queues failures
 src/rocksentinel/store/                  storage interfaces + local SQLite adapter (.data/, git-ignored)

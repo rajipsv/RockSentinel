@@ -1,4 +1,4 @@
-"""Map TheRock CI job names, file paths and symbols to component, GPU family and platform.
+"""rocm pack: map TheRock-style job names, paths and symbols to component, family, platform.
 
 Job names follow the conventions of TheRock's workflows, for example:
   test_artifacts.yml   "Test rocsparse / Test rocsparse (shard 2/3) (gfx1151)"
@@ -10,6 +10,8 @@ from __future__ import annotations
 
 import re
 from dataclasses import asdict, dataclass
+
+from rocksentinel.packs.base import JobInfo
 
 # Top-level component groups of the TheRock super-project (see TheRock AGENTS.md).
 COMPONENT_GROUPS = frozenset(
@@ -62,19 +64,6 @@ _BUILD_GROUP = re.compile(r"^([a-z][a-z0-9\-]+) \(gfx")
 # e.g. "Linux::release / Build Multi-Arch Stages / wsl-rocdxg / Stage - WSL ROCDXG".
 _STAGE_SLUG = re.compile(r"^[a-z][a-z0-9\-]+$")
 _SYMBOL_HEAD = re.compile(r"^(?:void\s+)?([A-Za-z_][A-Za-z0-9_]*)::")
-
-
-@dataclass(frozen=True)
-class JobInfo:
-    component: str | None
-    gpu_family: str | None
-    platform: str | None
-    stage: str | None
-    shard: str | None
-    variant: str | None
-
-    def as_dict(self) -> dict:
-        return asdict(self)
 
 
 def _platform(job_name: str, workflow: str, runner_label: str | None) -> str | None:

@@ -6,11 +6,11 @@ import pytest
 from _recorded import JOB_ID, RUN_ID, recorded_transport
 
 from rocksentinel.agents.triage import TriageResult, apply_escalation, build_spec, triage
+from rocksentinel.ci_evidence import server as therock
 from rocksentinel.github.client import GitHubClient
 from rocksentinel.harness.loop import run_agent
 from rocksentinel.harness.policy import redact
 from rocksentinel.llm.provider import LLMResponse, ReplayProvider, ToolCall
-from rocksentinel.therock_ci import server as therock
 
 FAULT_LINE = "Memory access fault by GPU node-1"
 JOB = {"repo": "ROCm/TheRock", "run_id": RUN_ID, "job_id": JOB_ID,

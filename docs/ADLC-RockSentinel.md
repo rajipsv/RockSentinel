@@ -113,7 +113,7 @@ TheRock **already has triage tooling**. RockSentinel is designed to **complement
 | HUD *Failure context → AI Investigation* (observed 2026-10-19) | For each failure cluster: a recurrence count ("failed 10 times in 30 days"), tags (e.g. `gfx1151 · rocsparse · platform_stability · gpu_reset`), an LLM-written **likely root cause** and **next step**, **keyword-matched related GitHub issues**, and a recommended action ("comment on existing #N" or "create new issue") with a **comment draft the human copies and posts**. Labelled as generated (and cached) by claude-haiku-4-5 | In the observed example the AI **did not read the log**: its next step was "check the job logs … for the failure mode". It reasons from metadata and issue titles. Related issues are matched by keywords. It's a single cached call per cluster, not a tool-using loop. No accuracy metrics are published | The **agents read the log themselves** (windowing tools) and cite line-level evidence. They pull diffs and commits through tools, find similar cases by **error signature and vectors** rather than keywords, learn over time, and are **measured** (§4) |
 | HUD *Summary → Weekly digest* | An LLM-written weekly CI health report (failure rate, hotspots, most affected architectures, what needs attention). Labelled as pre-computed by claude-haiku-4-5 | Delivery into the issue/PR flow | **Already covered by the HUD.** RockSentinel's Health Digest (Agent 5) is therefore **dropped from scope** (P6) |
 | HUD issue classes (Code Regression, Test Infra, Infra Machine, Infra Timeout) | Taken from GitHub *labels*, not AI | Classifying failures that have no issue yet | Classifies every failure, including those not yet filed. Its taxonomy (App. A) is aligned with these labels so the two can be compared |
-| `build_tools/github_actions/detect_failed_logs.py` | Finds failed build logs (teatime `END` exit code ≠ 0), extracts a keyword-anchored excerpt (`FAILED:`, `error:`, `CMake Error`, `Traceback`…, 12 lines before and 20 after), and writes `0.error.<name>.log` and a step summary | Any classification or attribution | **Reused:** `therock-ci.extract_errors` starts from the same keyword set and window logic (credited). It is also the **non-AI baseline** in evals (§4.3) |
+| `build_tools/github_actions/detect_failed_logs.py` | Finds failed build logs (teatime `END` exit code ≠ 0), extracts a keyword-anchored excerpt (`FAILED:`, `error:`, `CMake Error`, `Traceback`…, 12 lines before and 20 after), and writes `0.error.<name>.log` and a step summary | Any classification or attribution | **Reused:** `ci-evidence.extract_errors` starts from the same keyword set and window logic (credited). It is also the **non-AI baseline** in evals (§4.3) |
 | `build_tools/github_actions/reproduce_test_failure.py` | Reproduces a CI test failure locally: downloads the run's artifacts and runs the test in Docker (Linux) or on bare metal (Windows) | Analysis | **Reused:** for test failures, the RCA's suggested next step includes a ready-to-run `reproduce_test_failure.py --run-id … --repository … --amdgpu-family … --test-script …` command |
 
 **Is the HUD already an agent system?** Partly. It's an **LLM-augmented dashboard**: an analytics pipeline plus *pre-computed, cached* single LLM calls (Claude Haiku 4.5), with a human clicking to post. That's the "augmented LLM / workflow" pattern rather than an autonomous agent with a tool loop, memory and evals. Caveat: this is judged from its UI on 2026-10-19, since the backend isn't public.
@@ -155,7 +155,7 @@ flowchart TB
     SUP[Supervisor + agent workers<br/>Container Apps jobs, KEDA, scale to zero]
     subgraph MCP[MCP servers: Container Apps, internal ingress]
       M1[github-mcp read-only]
-      M3[therock-ci-mcp]
+      M3[ci-evidence-mcp]
       M4[memory-mcp]
     end
     AOAI[Azure OpenAI<br/>mini + strong deployments]
@@ -325,10 +325,10 @@ Each agent is specified with the same template: **goal, inputs, outputs, skills,
   | `cpp-build-triage` (light) | from ECC `cpp-build-resolver` | Recognizing ninja, CMake, hipcc/clang and linker error shapes |
 
 - **MCP tools (allowlist):**
-  - `therock-ci.get_job_log_windows`
-  - `therock-ci.extract_errors`
-  - `therock-ci.map_job_to_family`
-  - `therock-ci.map_path_to_component`
+  - `ci-evidence.get_job_log_windows`
+  - `ci-evidence.extract_errors`
+  - `ci-evidence.map_job_to_family`
+  - `ci-evidence.map_path_to_component`
   - `memory.lookup_signature`
 - **Budget:** ≤ 6 tool calls, ≤ 12k input tokens, ≤ 30 s.
 - **Escalation:** sets `needs_rca=true` when confidence < 0.7, the category is `regression`, or the signature is unknown.
@@ -354,11 +354,11 @@ Each agent is specified with the same template: **goal, inputs, outputs, skills,
   | `search-first` | ECC | Search memory and docs *before* hypothesizing |
 
 - **MCP tools (allowlist):**
-  - `therock-ci.get_submodule_diff`
-  - `therock-ci.get_build_topology`
-  - `therock-ci.get_artifact_manifest`
-  - `therock-ci.reproduce_command` (for test failures)
-  - `therock-ci.find_introducing_change`
+  - `ci-evidence.get_submodule_diff`
+  - `ci-evidence.get_build_topology`
+  - `ci-evidence.get_artifact_manifest`
+  - `ci-evidence.reproduce_command` (for test failures)
+  - `ci-evidence.find_introducing_change`
   - `github-ro.get_commit`
   - `github-ro.list_commits`
   - `github-ro.get_file_contents`
@@ -384,7 +384,7 @@ Each agent is specified with the same template: **goal, inputs, outputs, skills,
   - `memory.record_outcome`
   - `memory.update_instinct`
   - `memory.search_similar_failures`
-  - `therock-ci.list_failed_runs` (to check rerun outcomes)
+  - `ci-evidence.list_failed_runs` (to check rerun outcomes)
 - **Confidence update:**
   - `c ← c + 0.2·(1−c)` on confirmation; `c ← c·0.7` on contradiction;
   - a decay of `c ← c·0.98` per week without new evidence;
@@ -443,7 +443,7 @@ Each agent is specified with the same template: **goal, inputs, outputs, skills,
 | # | Server | External / custom | Backing | Who may call it | Why |
 |---|---|---|---|---|---|
 | 1 | `github-ro` | **External**: official [GitHub MCP server](https://github.com/github/github-mcp-server), `--read-only`, `--toolsets actions,repos,issues,pull_requests` | GitHub API, read-only fine-grained token | Triage, RCA, Reviewer | GitHub access is generic. Also reads TheRock docs and skills (`get_file_contents`), which replaced a custom knowledge server |
-| 2 | `therock-ci` | **Custom** (Python, FastMCP) | GitHub API + TheRock domain logic | Triage, RCA, Curator | No external server knows TheRock's job naming, `per_family_info`, component folders, `BUILD_TOPOLOGY.toml` or bump tracing |
+| 2 | `ci-evidence` | **Custom** (Python, FastMCP) | GitHub API + the repo's **packs** (§2.5a) | Triage, RCA, Curator | Evidence windows, history and job mapping no external server provides; domain knowledge (e.g. TheRock's job naming, component folders, bump tracing) comes from packs |
 | 3 | `memory` | **Custom** | Cosmos DB (+ optional AI Search) | Triage (read), RCA (read), Curator (read/write), Report Builder (case write) | Holds our logic (signature normalization, instinct confidence, idempotent writes) and is the **only write path into the database** |
 | dev | Azure MCP server | **External** ([Azure MCP](https://learn.microsoft.com/azure/developer/azure-mcp-server/)) | Azure resources | **Developers and operators only**, from Claude Code / VS Code | Ops queries such as "DLQ depth" or "failed cases in App Insights" |
 
@@ -462,7 +462,7 @@ Each agent is specified with the same template: **goal, inputs, outputs, skills,
 
 **Removed during design:** a second, write-enabled GitHub MCP instance for posting results as issues. The Console replaced it (ADR-004), which takes GitHub write credentials out of the system entirely.
 
-`therock-ci` (custom):
+`ci-evidence` (custom):
 
 | Tool | Input | Output | Notes |
 |---|---|---|---|
@@ -491,7 +491,7 @@ Each agent is specified with the same template: **goal, inputs, outputs, skills,
 | `upsert_case(case)` | Idempotent write keyed by `run_id:attempt:job_id` |
 | `record_outcome(case_id, outcome)` | Rerun passed / fix commit / Console feedback |
 | `update_instinct(sig, delta, evidence)` | Confidence update with an audit trail |
-| `aggregate_by_family(window)` | Case counts by category and family, from the agents' own results. Job-level pass/fail statistics come from ADX via `therock-ci.job_history` |
+| `aggregate_by_family(window)` | Case counts by category and family, from the agents' own results. Job-level pass/fail statistics come from ADX via `ci-evidence.job_history` |
 
 **Why the Azure MCP server is not on the production path.** It is broad: 40+ Azure services, many with write operations. Agents need only narrow, domain-specific tools, so exposing the Azure MCP server would greatly widen the blast radius for no functional gain. It's valuable as a developer and operator tool, for example asking from Claude Code "show me the DLQ depth" or "query App Insights for failed cases in the last hour."
 
@@ -499,6 +499,20 @@ Each agent is specified with the same template: **goal, inputs, outputs, skills,
 - They give a single contract, reused by the run-time agents, the offline eval replay and the developer tools.
 - Each server can be deployed and scaled on its own.
 - Tool permissions are enforced at a process boundary as well as in the prompt.
+
+### 2.5a Packs: domain knowledge as plugins (product architecture)
+RockSentinel is a generic product for GitHub Actions CI. Everything specific to one kind of CI lives in a **pack** (`src/rocksentinel/packs/`):
+
+| Pack part | Example (rocm pack) | Used by |
+|---|---|---|
+| Log patterns (kind, severity, regex) | `Memory access fault by GPU`, `HW Exception by GPU node-N … GPU Hang`, `hipModuleLoad failed` | `extract_errors` |
+| Kind roles | root cause, code signal, time limit, infra, fault (name the running test), soft (ignorable inside a passing test) | rule classifier (B1), extractor |
+| Noise prefixes | `kpack:` loader lines | extractor |
+| Workflow hints (glob → category) | `bump_submodules.yml` → submodule-bump; `*wheels*` → packaging | rule classifier |
+| Job-name mapper, symbol mapper | `Test rocsparse (shard 2/3) (gfx1151)` → rocsparse · gfx1151 · 2/3; `rocsparse::…` → rocSPARSE | poller, baselines, labeler |
+| Extra agent tools, skills | `find_introducing_change`, `map_path_to_component`; `skills/triage-rocm`, `skills/rca-rocm` | agents |
+
+A repo's **profile** is its domain packs followed by **`core`** (crashes, sanitizers, gtest/ctest/DejaGnu/pytest, build errors, time limits, runner/infra, a generic safety net, exit code; generic job-name reading). Until per-repo config exists (roadmap P2) the default profile is `rocm + core`. Moving the ROCm knowledge into its pack (P1) was a pure refactor: eval output stayed byte-identical.
 
 ### 2.6 Data model
 
@@ -595,7 +609,7 @@ src/rocksentinel/
   agents/    supervisor.py, triage.py, rca.py, curator.py, report_builder.py, reviewer.py
   ingest/    poller.py
   schemas/   case.py, triage.py, rca.py
-mcp_servers/ therock_ci/, memory/   # FastMCP apps, one container each (GitHub uses the official server image)
+mcp_servers/ ci_evidence/, memory/   # FastMCP apps, one container each (GitHub uses the official server image)
 web/         Console: static frontend + api/ (SWA managed Functions)
 skills/      <skill-name>/SKILL.md (+ reference.md)
 evals/       golden/, injection/, judge/, run_evals.py, thresholds.yaml, reports/
@@ -980,11 +994,12 @@ The run-time harness exists in `src/rocksentinel/harness/` and is exercised in *
 |---|---|---|---|
 | ADR-001 | Azure OpenAI behind an `LLMProvider` interface | Credits cover it; Entra/MI auth | Claude on Foundry later, through a new provider |
 | ADR-002 | Custom small harness (§7.12) | Explicit, testable safety; easy replay | Some in-house plumbing |
-| ADR-003 | External MCP for generic capabilities (GitHub); custom only for domain logic or a security boundary (`therock-ci`, `memory`); custom `knowledge` server removed | Less code, less cost, a smaller attack surface | We depend on the official server's tool names and versions (pinned image) |
+| ADR-003 | External MCP for generic capabilities (GitHub); custom only for domain logic or a security boundary (`ci-evidence`, `memory`); custom `knowledge` server removed | Less code, less cost, a smaller attack surface | We depend on the official server's tool names and versions (pinned image) |
 | ADR-004 | Console UI (Static Web Apps) is the **only** output channel; no writing to GitHub (fork posting removed) | Reviewer experience, **structured feedback for evals**, and **zero GitHub write credentials** | A UI is "pull", so an optional Teams/Slack notification covers high-confidence regressions |
 | ADR-005 | Health Digest agent dropped | The HUD already publishes an LLM weekly digest | — |
 | ADR-006 | Cosmos DB for operational documents + Azure Data Explorer for analytics | Each store matches its access pattern: keyed upserts vs. fast aggregations over all job history | Two stores to operate, so each Console view documents its source (§2.7) |
 | ADR-007 | Console API as a cached query proxy over Cosmos + ADX | One secured API layer and CDN caching keep the UI fast and database load low | Short staleness (TTL), acceptable for triage |
+| ADR-008 | Domain knowledge in pluggable packs (core + rocm), composed per repo; the engine (`ci-evidence`, rules, harness, evals) stays generic | Makes RockSentinel a product for any GitHub Actions CI; TheRock becomes the first pack, not a hard-coded assumption | One more indirection; packs need their own golden cases to show they work |
 
 ---
 
@@ -1030,11 +1045,11 @@ It **did not read the log**. Its verdict comes from a recurrence count plus issu
 
 | Step | Agent / tool | Result on this case |
 |---|---|---|
-| 1. Find the fatal lines, not the noise | Triage → `therock-ci.extract_errors` | Skips hundreds of `kpack:` loader lines. Finds `HSA_STATUS_ERROR_MEMORY_FAULT`, `Memory access fault by GPU node-1 … Reason: Page not present`, and the ctest summary `16 - rocsparse-unit-test-device_gfx1151 (Subprocess aborted)` |
+| 1. Find the fatal lines, not the noise | Triage → `ci-evidence.extract_errors` | Skips hundreds of `kpack:` loader lines. Finds `HSA_STATUS_ERROR_MEMORY_FAULT`, `Memory access fault by GPU node-1 … Reason: Page not present`, and the ctest summary `16 - rocsparse-unit-test-device_gfx1151 (Subprocess aborted)` |
 | 2. Pin down the test and kernel | Triage (`log-windowing` skill) | Test `internal_extra_csrgemm_bitmap.calc_tiled_f64_i64_i64`. Kernel `rocsparse::csrgemm_bitmap_emit_kernel<256u, long, long>`. The 8 previous tests in the same group passed |
 | 3. Classify | Triage (`failure-taxonomy` skill) | A page fault in one specific kernel, after green tests in the same process → **regression** candidate, not generic platform noise → `needs_rca = true` |
-| 4. Attribute | `therock-ci.map_path_to_component` | `math-libs/BLAS/rocSPARSE` → **rocSPARSE** · gfx1151 · Linux |
-| 5. Trace the change | RCA → `therock-ci.find_introducing_change` | The kernel came from rocm-libraries [`183759b`](https://github.com/ROCm/rocm-libraries/commit/183759b92ee5b9817967b246f80a586cdf10a83f) *"perf(rocsparse): bitmap path for csrgemm rows whose hash table does not fit in shared memory (#12830)"*, which reached TheRock via bump **#8986** (`24bdd07 → 3dc098e`, 2026-10-14). Compare API: `24bdd07` is *behind* the commit, `3dc098e` is *ahead* |
+| 4. Attribute | `ci-evidence.map_path_to_component` | `math-libs/BLAS/rocSPARSE` → **rocSPARSE** · gfx1151 · Linux |
+| 5. Trace the change | RCA → `ci-evidence.find_introducing_change` | The kernel came from rocm-libraries [`183759b`](https://github.com/ROCm/rocm-libraries/commit/183759b92ee5b9817967b246f80a586cdf10a83f) *"perf(rocsparse): bitmap path for csrgemm rows whose hash table does not fit in shared memory (#12830)"*, which reached TheRock via bump **#8986** (`24bdd07 → 3dc098e`, 2026-10-14). Compare API: `24bdd07` is *behind* the commit, `3dc098e` is *ahead* |
 | 6. Gather context | RCA → `memory.search_similar_failures`, `github-ro.search_issues` | gfx1151 has known page-fault issues (#9271). The same run also has a hip-tests hang (golden-002), miopen exit 137 and runner container errors, so the platform can't be ruled out |
 | 7. Grounding check | Harness output validator | Every quoted line is present in the fixture ✔ |
 

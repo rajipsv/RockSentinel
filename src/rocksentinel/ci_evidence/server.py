@@ -1,8 +1,10 @@
-"""`therock-ci` MCP server: TheRock domain tools for the RockSentinel agents (MCP Python SDK 2.x).
+"""`ci-evidence` MCP server: CI evidence tools for the RockSentinel agents (MCP Python SDK 2.x).
 
 Run locally over stdio:
-    python -m rocksentinel.therock_ci.server
+    python -m rocksentinel.ci_evidence.server
 
+Generic tools (logs, history, job mapping) use the repo's packs; pack tools
+(`map_path_to_component`, `find_introducing_change`) come from the rocm pack.
 All tools are read-only and deterministic (no LLM). `list_failed_runs` and
 `get_job_log_windows` read from GitHub with the read-only GITHUB_TOKEN
 (environment or .env); the other tools work on data passed in.
@@ -12,17 +14,18 @@ from __future__ import annotations
 
 from mcp.server.mcpserver import MCPServer  # mcp 2.x name for FastMCP
 
+from rocksentinel.ci_evidence import extract as _extract
+from rocksentinel.ci_evidence import history as _history
 from rocksentinel.github.client import GitHubClient
+from rocksentinel.packs import default_profile
+from rocksentinel.packs.rocm import mappers
 from rocksentinel.store.base import JobStore
-from rocksentinel.therock_ci import extract as _extract
-from rocksentinel.therock_ci import history as _history
-from rocksentinel.therock_ci import mappers
 
 DEFAULT_REPO = "ROCm/TheRock"
 # Cap on log size accepted by a single call, so one huge log can't blow the agent's budget.
 MAX_LOG_CHARS = 5_000_000
 
-mcp = MCPServer("therock-ci")
+mcp = MCPServer("ci-evidence")
 
 _github: GitHubClient | None = None
 
@@ -114,7 +117,8 @@ def list_failed_runs(
                     "conclusion": job.conclusion,
                     "runner_label": job.runner_label,
                     "html_url": job.html_url,
-                    **mappers.map_job_to_family(run.workflow, job.name, job.runner_label).as_dict(),
+                    **default_profile().map_job(run.workflow, job.name,
+                                                job.runner_label).as_dict(),
                 }
                 for job in gh.list_jobs(repo, run.run_id, failed_only=True)
             ]
@@ -175,7 +179,7 @@ def get_job_log_windows(
 
 @mcp.tool()
 def extract_errors(log_text: str, max_candidates: int = 20) -> dict:
-    """Rank the lines of a TheRock CI job log that most likely explain its failure.
+    """Rank the lines of a CI job log that most likely explain its failure.
 
     Returns ranked error candidates (root cause first, cascade after) with line
     numbers and quote windows, plus parsed facts: failing test, faulting GPU
@@ -210,13 +214,13 @@ def extract_errors(log_text: str, max_candidates: int = 20) -> dict:
 
 @mcp.tool()
 def map_job_to_family(workflow: str, job_name: str, runner_label: str | None = None) -> dict:
-    """Parse a TheRock CI job name into component, GPU family, platform, stage, shard and variant.
+    """Parse a CI job name into component, hardware family, platform, stage, shard and variant.
 
     Example: workflow="test_artifacts.yml",
     job_name="Test rocsparse / Test rocsparse (shard 2/3) (gfx1151)",
     runner_label="linux-gfx1151-gpu-rocm".
     """
-    return mappers.map_job_to_family(workflow, job_name, runner_label).as_dict()
+    return default_profile().map_job(workflow, job_name, runner_label).as_dict()
 
 
 @mcp.tool()
@@ -235,7 +239,7 @@ def find_introducing_change(symbol: str, submodule_repo: str = "ROCm/rocm-librar
                             since_days: int = 30) -> dict:
     """Trace a failing symbol (kernel, function or test name) to candidate commits in a
     submodule repo, and to the TheRock submodule bump (PR) that brought each one in."""
-    from rocksentinel.therock_ci.changes import find_introducing_change as _find
+    from rocksentinel.packs.rocm.changes import find_introducing_change as _find  # rocm pack
 
     return _find(get_github(), symbol, submodule_repo=submodule_repo,
                  submodule_path=submodule_path, therock_repo=DEFAULT_REPO,

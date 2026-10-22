@@ -17,7 +17,7 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 
 - Golden set: 35 real TheRock failures, 33 confirmed by a human; 24 dev / 11 held-out test.
 - Pattern coverage on 25 failures *outside* the golden set: 92% hit a specific pattern.
-- Tests: 237 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
+- Tests: 248 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
 
 ---
 
@@ -258,6 +258,29 @@ All read-only toward GitHub; local only.
 - The rockrel job is pinned to dev (it was tuned on).
 
 **Interview talking point:** "Our held-out split caught my own regression: a rule that looked right on the case in front of me broke a case I wasn't allowed to look at. I reverted to a narrower rule instead of tuning to the test set."
+
+
+## Product track P1: pack architecture (this commit)
+**Why:** the goal changed from "triage TheRock" to a **product any company can hook into its GitHub Actions CI**. A code survey showed the engine was already generic. The ROCm knowledge was a thin layer, hard-coded in a few places:
+- GPU log patterns and kind roles in the extractor and rules;
+- the TheRock job-name mapper;
+- bump/packaging workflow names;
+- submodule-bump tracing;
+- skill texts.
+
+**Built:** `src/rocksentinel/packs/`.
+- A `Pack` declares its log patterns, the role of each error kind (root cause, code signal, time limit, infra, fault, soft), noise prefixes, workflow hints, job/symbol mappers, extra tools and skills.
+- A repo's profile is its domain packs, then `core`.
+- `core` covers any CI: crashes, sanitizers, gtest/ctest/DejaGnu/pytest, build errors, time limits, infra, the generic tier, and generic job-name reading for Linux/Windows/macOS and shards.
+- `rocm` holds everything AMD-specific.
+- The engine moved to `ci_evidence/`, served by the MCP server now named `ci-evidence`.
+- `extract_errors`, `classify`, the poller, the baselines, the labeler and the agents take the profile. The default is `rocm + core` until per-repo config lands (P2).
+
+**How it was checked:**
+- **A pure refactor, so the bar was byte-identical eval output.** Both the test and dev splits produced exactly the same report. All 237 existing tests passed unchanged apart from import paths.
+- **11 new tests show what a non-ROCm repo sees.** The GPU hardware-exception line is not special without the rocm pack (the process abort becomes the root signal); `bump_submodules.yml` is not a bump workflow; HIP errors are not a code signal; generic job names map to component/platform/shard.
+
+**Interview talking point:** "I turned a single-repo tool into a product by finding the seam, not rewriting: the domain knowledge became a plugin, and I proved the refactor safe with byte-identical evals."
 
 ---
 

@@ -3,12 +3,12 @@
 import pytest
 from _recorded import JOB_ID, RUN_ID, recorded_transport
 
+from rocksentinel.ci_evidence import server as therock
 from rocksentinel.console import api
 from rocksentinel.github.client import GitHubClient
 from rocksentinel.memory.store import MemoryStore
 from rocksentinel.store.base import JobResult
 from rocksentinel.store.sqlite_store import SQLiteStore
-from rocksentinel.therock_ci import server as therock
 
 
 def _job(job_id, comp, conclusion="failure", runner="linux-gfx1151-gpu-rocm"):

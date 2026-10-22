@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "rocksentinel"
 version = "0.1.0"
-description = "Agentic CI failure triage for ROCm/TheRock on Azure"
+description = "Agentic, evidence-grounded CI failure triage for GitHub Actions (first pack: ROCm/TheRock)"
 readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "MIT" }
@@ -15,7 +15,7 @@ dependencies = ["mcp>=2.3,<3", "httpx>=0.27"]
 dev = ["pytest>=8.0", "anyio>=4.0", "ruff>=0.6"]
 
 [project.scripts]
-therock-ci-mcp = "rocksentinel.therock_ci.server:main"
+ci-evidence-mcp = "rocksentinel.ci_evidence.server:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/rocksentinel"]

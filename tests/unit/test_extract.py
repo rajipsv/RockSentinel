@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from rocksentinel.therock_ci.extract import extract_errors
+from rocksentinel.ci_evidence.extract import extract_errors
 
 ROOT = Path(__file__).resolve().parents[2]
 FIXTURES = ROOT / "tests" / "fixtures" / "logs"
@@ -288,6 +288,6 @@ def test_window_is_clamped_to_log_bounds():
 
 
 def test_byte_order_mark_before_timestamp_is_stripped():
-    from rocksentinel.therock_ci.extract import normalize_line
+    from rocksentinel.ci_evidence.extract import normalize_line
     assert normalize_line("﻿2026-10-20T23:24:28.9432368Z error: unable to write file x") == (
         "error: unable to write file x")

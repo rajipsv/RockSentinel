@@ -18,10 +18,10 @@ import json
 from collections import Counter
 from pathlib import Path
 
+from rocksentinel.ci_evidence.extract import extract_errors
 from rocksentinel.evals.labeler import Paths, _diverse, _read_jsonl
 from rocksentinel.github.client import GitHubClient, GitHubError
 from rocksentinel.store.base import JobStore
-from rocksentinel.therock_ci.extract import extract_errors
 
 NON_SPECIFIC = frozenset({"generic_error", "exit_code"})
 

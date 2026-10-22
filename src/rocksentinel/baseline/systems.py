@@ -14,8 +14,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from rocksentinel.baseline.rules import classify
-from rocksentinel.therock_ci.extract import extract_errors, normalize_line
-from rocksentinel.therock_ci.mappers import map_job_to_family, map_symbol_to_component
+from rocksentinel.ci_evidence.extract import extract_errors, normalize_line
+from rocksentinel.packs import default_profile
 
 B0_KEYWORDS = (
     "FAILED:",
@@ -58,7 +58,7 @@ def _kinds_of(lines: list[str]) -> list[str]:
 
 
 def run_b0(log_text: str, workflow: str, job_name: str, runner_label: str | None) -> Prediction:
-    info = map_job_to_family(workflow, job_name, runner_label)
+    info = default_profile().map_job(workflow, job_name, runner_label)
     excerpt = b0_excerpt(log_text)
     category, reason = classify(_kinds_of(excerpt), workflow=workflow, variant=info.variant)
     return Prediction(
@@ -70,7 +70,8 @@ def run_b0(log_text: str, workflow: str, job_name: str, runner_label: str | None
 
 def run_b1(log_text: str, workflow: str, job_name: str, runner_label: str | None,
            likely_flaky: bool = False) -> Prediction:
-    info = map_job_to_family(workflow, job_name, runner_label)
+    profile = default_profile()
+    info = profile.map_job(workflow, job_name, runner_label)
     result = extract_errors(log_text)
     category, reason = classify(
         [c.kind for c in result.candidates], workflow=workflow, variant=info.variant,
@@ -78,7 +79,7 @@ def run_b1(log_text: str, workflow: str, job_name: str, runner_label: str | None
     )
     component = info.component
     if component is None and result.faulting_kernel:
-        component = map_symbol_to_component(result.faulting_kernel).component
+        component = profile.map_symbol(result.faulting_kernel)
     return Prediction(
         system="B1", category=category, reason=reason, component=component,
         gpu_family=info.gpu_family, platform=info.platform,

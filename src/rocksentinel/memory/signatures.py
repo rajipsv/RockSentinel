@@ -10,7 +10,7 @@ from __future__ import annotations
 import hashlib
 import re
 
-from rocksentinel.therock_ci.extract import dedupe_key
+from rocksentinel.ci_evidence.extract import dedupe_key
 
 _GFX = re.compile(r"gfx[0-9][0-9A-Za-z]*(?:-[a-z]+)?")
 _TOKEN = re.compile(r"[A-Za-z_][A-Za-z0-9_:.<>\-]*")

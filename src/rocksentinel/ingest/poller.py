@@ -15,8 +15,8 @@ from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 
 from rocksentinel.github.client import GitHubClient, GitHubError, JobRef, RunRef
+from rocksentinel.packs import default_profile
 from rocksentinel.store.base import JobResult, JobStore, StateStore, TriageQueue
-from rocksentinel.therock_ci.mappers import map_job_to_family
 
 DEFAULT_REPO = "ROCm/TheRock"
 LOOKBACK = timedelta(hours=6)
@@ -37,7 +37,7 @@ def _parse_ts(value: str | None) -> datetime | None:
 
 
 def to_job_result(repo: str, run: RunRef, job: JobRef) -> JobResult:
-    info = map_job_to_family(run.workflow, job.name, job.runner_label)
+    info = default_profile().map_job(run.workflow, job.name, job.runner_label)
     started, finished = _parse_ts(job.started_at), _parse_ts(job.completed_at)
     duration = int((finished - started).total_seconds()) if started and finished else None
     return JobResult(

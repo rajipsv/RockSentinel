@@ -22,12 +22,12 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from rocksentinel.baseline.rules import CATEGORIES, classify
+from rocksentinel.ci_evidence.extract import extract_errors
+from rocksentinel.ci_evidence.history import job_history
 from rocksentinel.evals.splits import assign_split, is_tuned_on
 from rocksentinel.github.client import GitHubClient, GitHubError
+from rocksentinel.packs import default_profile
 from rocksentinel.store.base import JobResult, JobStore
-from rocksentinel.therock_ci.extract import extract_errors
-from rocksentinel.therock_ci.history import job_history
-from rocksentinel.therock_ci.mappers import map_symbol_to_component
 
 ROOT = Path(__file__).resolve().parents[3]
 MAX_FIXTURE_LINES = 1500
@@ -205,7 +205,7 @@ def propose_case(store: JobStore, gh: GitHubClient, job: JobResult, paths: Paths
 
     must_cite = _must_cite(result)
     component = job.component or (
-        map_symbol_to_component(result.faulting_kernel).component
+        default_profile().map_symbol(result.faulting_kernel)
         if result.faulting_kernel else None
     )
     return {

@@ -1,14 +1,13 @@
 """Root-Cause & Fix Advisor (RCA) agent: why it failed, which change, what next (strong model tier).
 
 Runs only for cases Triage escalated (regression/unknown or low confidence). Read-only
-tools: therock-ci get_job_log_windows / job_history / find_introducing_change /
-map_path_to_component and memory search_similar_failures. Skill: skills/rca-therock.
+tools: ci-evidence get_job_log_windows / job_history / find_introducing_change /
+map_path_to_component and memory search_similar_failures. Skill: skills/rca-rocm.
 """
 
 from __future__ import annotations
 
 from collections.abc import Callable
-from pathlib import Path
 
 from pydantic import BaseModel, Field
 
@@ -16,8 +15,9 @@ from rocksentinel.agents.triage import Evidence, TriageResult
 from rocksentinel.harness.loop import AgentResult, run_agent
 from rocksentinel.harness.policy import AgentSpec, Tool
 from rocksentinel.llm.provider import LLMProvider, ToolSpec
+from rocksentinel.packs import default_profile
 
-SKILL = Path(__file__).resolve().parents[3] / "skills" / "rca-therock" / "SKILL.md"
+SKILL = default_profile().skill("rca")  # from the repo's packs (rocm today)
 
 
 class SuspectedChange(BaseModel):
@@ -52,8 +52,8 @@ TOOL_DOCS = {
 
 
 def default_tools() -> dict[str, Callable]:
+    from rocksentinel.ci_evidence import server as therock
     from rocksentinel.memory import server as memory
-    from rocksentinel.therock_ci import server as therock
 
     return {
         "get_job_log_windows": therock.get_job_log_windows,

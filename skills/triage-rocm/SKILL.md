@@ -1,5 +1,5 @@
 ---
-name: triage-therock
+name: triage-rocm
 version: 1.0.0
 description: Classify one failed ROCm/TheRock CI job and attribute it, citing log evidence.
 used_by: [triage]

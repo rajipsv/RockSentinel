@@ -1,1 +1,1 @@
-"""Read-only GitHub REST client used by the therock-ci MCP server and the poller."""
+"""Read-only GitHub REST client used by the ci-evidence MCP server and the poller."""

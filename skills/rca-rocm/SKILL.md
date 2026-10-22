@@ -1,5 +1,5 @@
 ---
-name: rca-therock
+name: rca-rocm
 version: 1.0.0
 description: Explain why a triaged TheRock CI failure happened and propose the next step, with evidence.
 used_by: [rca]

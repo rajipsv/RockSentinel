@@ -11,10 +11,10 @@ import re
 from pathlib import Path
 
 from rocksentinel.baseline.rules import CATEGORIES
+from rocksentinel.ci_evidence.extract import normalize_line
 from rocksentinel.evals import labeler
 from rocksentinel.evals.labeler import Paths, _read_jsonl
 from rocksentinel.evals.runner import evaluate
-from rocksentinel.therock_ci.extract import normalize_line
 
 EVIDENCE_CONTEXT = 8
 MAX_EVIDENCE_LINES = 300
@@ -157,7 +157,7 @@ def evals(paths: Paths, confirmed_only: bool = False, split: str = "all") -> dic
 
 # --- Runs, Case and Signature views (step 8) ------------------------------------------------
 # These read the job store (poller) and memory; case evidence is fetched live through the
-# same therock-ci functions the agents use (read-only GitHub), then cached per job.
+# same ci-evidence functions the agents use (read-only GitHub), then cached per job.
 
 _EVIDENCE_CACHE: dict[int, dict] = {}
 
@@ -220,9 +220,9 @@ def run_detail(jobs, run_id: int) -> dict:
 def case_detail(jobs, memory, job_id: int, fetch_evidence: bool = True) -> dict:
     """One failed job: history, deterministic (B1) verdict, evidence and memory match."""
     from rocksentinel.baseline.rules import classify
+    from rocksentinel.ci_evidence import server as therock
+    from rocksentinel.ci_evidence.history import job_history
     from rocksentinel.memory.signatures import make_signature
-    from rocksentinel.therock_ci import server as therock
-    from rocksentinel.therock_ci.history import job_history
 
     job = jobs.get_job(job_id)
     if job is None:

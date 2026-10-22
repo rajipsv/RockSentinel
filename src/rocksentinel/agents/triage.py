@@ -1,14 +1,13 @@
 """Triage agent: classify and attribute one failed job (mini model tier).
 
-Tools (read-only): therock-ci get_job_log_windows / map_job_to_family / job_history and
+Tools (read-only): ci-evidence get_job_log_windows / map_job_to_family / job_history and
 memory lookup_signature / search_similar_failures. Instructions come from the versioned
-skill skills/triage-therock/SKILL.md. The escalation rule to the RCA agent is code.
+skill skills/triage-rocm/SKILL.md. The escalation rule to the RCA agent is code.
 """
 
 from __future__ import annotations
 
 from collections.abc import Callable
-from pathlib import Path
 from typing import Literal
 
 from pydantic import BaseModel, Field
@@ -17,8 +16,9 @@ from rocksentinel.baseline.rules import CATEGORIES
 from rocksentinel.harness.loop import AgentResult, run_agent
 from rocksentinel.harness.policy import AgentSpec, Tool
 from rocksentinel.llm.provider import LLMProvider, ToolSpec
+from rocksentinel.packs import default_profile
 
-SKILL = Path(__file__).resolve().parents[3] / "skills" / "triage-therock" / "SKILL.md"
+SKILL = default_profile().skill("triage")  # from the repo's packs (rocm today)
 RCA_CONFIDENCE_BELOW = 0.7
 RCA_CATEGORIES = frozenset({"regression", "unknown"})
 
@@ -57,8 +57,8 @@ TOOL_DOCS = {
 
 
 def default_tools() -> dict[str, Callable]:
+    from rocksentinel.ci_evidence import server as therock
     from rocksentinel.memory import server as memory
-    from rocksentinel.therock_ci import server as therock
 
     return {
         "get_job_log_windows": therock.get_job_log_windows,

@@ -30,6 +30,13 @@ Design: `docs/ADLC-RockSentinel.md`. Keep code consistent with it; if a decision
 - [x] 7. RCA agent + `find_introducing_change` (replay mode; live evals once Azure is set up)
 - [x] 8. Console UI: Review, Golden, Evals, Runs, Case, Signatures (local; SWA in step 9)
 - [x] 8b. Console design pass with the vetted ui-ux-pro-max skill (.claude/skills/ui-ux-pro-max)
+- [ ] Product track (generic CI/CD product; plan: org → repo → workflow, packs, GitHub App)
+  - [x] P0. Extractor fix: GPU hardware exceptions, passing-test noise, mid-log excerpts
+  - [x] P1. Pack architecture: `core` + `rocm` packs, `ci_evidence` engine (pure refactor, evals byte-identical)
+  - [ ] P2. Per-repo config (`config/repos.yaml`), tenants, multi-repo ingestion (TheRock, rockrel, one non-ROCm repo)
+  - [ ] P3. GitHub App auth (installation tokens) + webhook handler (offline-tested; live in step 9)
+  - [ ] P4. Console: org → repo → workflow → run → case, root cause first, triage worker, Quality tab, no Review tab
+  - [ ] P5. Docs: product architecture, private-repo/data handling, onboarding
 - [ ] 8a. Adapt real ECC skills (read ECC SKILL.md files, adapt with MIT attribution into skills/, wire into agents)
 - [ ] 9. Azure deployment (Bicep + azd; switch `LLMProvider` to Azure OpenAI; rerun evals)
 - [ ] 10. Eval gate in CI + runbook, threat model, interview guide

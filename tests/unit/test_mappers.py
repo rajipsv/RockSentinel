@@ -1,6 +1,6 @@
 import pytest
 
-from rocksentinel.therock_ci.mappers import (
+from rocksentinel.packs.rocm.mappers import (
     map_job_to_family,
     map_path_to_component,
     map_symbol_to_component,

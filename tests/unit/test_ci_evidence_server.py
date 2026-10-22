@@ -7,8 +7,8 @@ import pytest
 from _recorded import JOB_ID, RUN_ID, recorded_transport
 from mcp import Client
 
+from rocksentinel.ci_evidence.server import mcp, set_github_client
 from rocksentinel.github.client import GitHubClient
-from rocksentinel.therock_ci.server import mcp, set_github_client
 
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures" / "logs"
 

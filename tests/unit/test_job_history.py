@@ -7,12 +7,12 @@ import pytest
 from _recorded import recorded_transport
 from mcp import Client
 
+from rocksentinel.ci_evidence import server
+from rocksentinel.ci_evidence.history import job_history
 from rocksentinel.github.client import GitHubClient
 from rocksentinel.ingest.poller import poll_once
 from rocksentinel.store.base import JobResult
 from rocksentinel.store.sqlite_store import SQLiteStore
-from rocksentinel.therock_ci import server
-from rocksentinel.therock_ci.history import job_history
 
 ROCSPARSE = "Test rocsparse / Test rocsparse (shard 2/3) (gfx1151)"
 GFX1151 = "linux-gfx1151-gpu-rocm"

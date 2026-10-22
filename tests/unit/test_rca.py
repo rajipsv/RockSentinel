@@ -7,10 +7,10 @@ import pytest
 
 from rocksentinel.agents.rca import RcaResult, build_spec, rca
 from rocksentinel.agents.triage import TriageResult
+from rocksentinel.ci_evidence import server as therock
 from rocksentinel.github.client import GitHubClient
 from rocksentinel.llm.provider import LLMResponse, ReplayProvider, ToolCall
-from rocksentinel.therock_ci import server as therock
-from rocksentinel.therock_ci.changes import find_introducing_change, search_terms
+from rocksentinel.packs.rocm.changes import find_introducing_change, search_terms
 
 KERNEL = "rocsparse::csrgemm_bitmap_emit_kernel<256u, long, long>"
 CULPRIT = "183759b92ee5b9817967b246f80a586cdf10a83f"
