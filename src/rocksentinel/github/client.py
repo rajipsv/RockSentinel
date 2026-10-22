@@ -26,6 +26,7 @@ API_URL = "https://api.github.com"
 logging.getLogger("httpx").setLevel(logging.WARNING)
 # Owner: letters, digits, hyphens (no dots). Repo: may contain dots but not start with one,
 # which rules out "." and ".." path segments.
+_WORKFLOW_FILE = re.compile(r"^[A-Za-z0-9_\-][A-Za-z0-9_.\-]{0,99}\.ya?ml$")
 _REPO_RE = re.compile(r"^[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})/[A-Za-z0-9_\-][A-Za-z0-9_.\-]{0,99}$")
 _DEFAULT_ENV_FILE = Path(__file__).resolve().parents[3] / ".env"
 
@@ -205,6 +206,8 @@ class GitHubClient:
         `status` is any GitHub run status/conclusion filter: "completed", "failure", ...
         """
         validate_repo(repo)
+        if workflow is not None and not _WORKFLOW_FILE.match(workflow):
+            raise ValueError(f"invalid workflow file name: {workflow!r}")
         start = since or (datetime.now(UTC) - timedelta(hours=since_hours))
         per_page = min(max(limit, 1), 100)
         params: dict[str, Any] = {

@@ -17,7 +17,7 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 
 - Golden set: 35 real TheRock failures, 33 confirmed by a human; 24 dev / 11 held-out test.
 - Pattern coverage on 25 failures *outside* the golden set: 92% hit a specific pattern.
-- Tests: 226 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
+- Tests: 231 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
 
 ---
 
@@ -230,6 +230,16 @@ All read-only toward GitHub; local only.
 - run detail printed a literal "null" because `replaceChildren` doesn't skip nulls (this one existed before).
 
 **Interview talking point:** "Feedback said the view was a static list, so I restructured it around the question an on-call engineer asks first: which workflow is failing, since when, and on which day."
+
+## Ingest follow-up: per-workflow sync (this commit)
+**Built:** `poller --workflow <file>.yml` polls a single workflow. It keeps its own cursor, so it never moves the all-workflows cursor past runs that haven't been read yet. The workflow file name is validated before it goes into the API path.
+
+**Found (2026-10-22):** syncing `multi_arch_release.yml` showed why we had only one release run: all 10 runs in the last 7 days were manual "dev" builds, and 9 were on personal `users/...` triage branches. The poller reads `main` only by default.
+- After syncing all branches: 10 runs, 484 jobs.
+- The one failure (comm-libs staging, killed) was classified infra and marked likely flaky, because attempt 2 passed.
+- The nightly build seen on the HUD (10.2.0a20261022) is not produced by this workflow. Where it comes from is still to be found.
+
+**Interview talking point:** "The first useful result of a sync was learning what the data really is: release builds here are mostly manual triage runs, not nightlies."
 
 ---
 

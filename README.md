@@ -52,6 +52,8 @@ Tests never use the network: they replay recorded responses from `tests/fixtures
 ## Poll TheRock CI locally
 ```bash
 .venv/Scripts/python -m rocksentinel.ingest.poller --since-hours 24 --max-runs 20
+# one workflow, all branches (e.g. release builds dispatched from triage branches):
+.venv/Scripts/python -m rocksentinel.ingest.poller --workflow multi_arch_release.yml --branch "" --since-hours 168 --backfill
 ```
 This stores every job result (pass and fail) in `.data/rocksentinel.db` and queues failures
 for triage. Re-running is safe: writes are idempotent, and each poll re-reads a 6-hour

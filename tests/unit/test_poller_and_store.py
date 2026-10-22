@@ -135,6 +135,37 @@ def test_backfill_ignores_cursor(store):
     assert not created.startswith(">=2026-10-19T02")  # not cursor - 6h
 
 
+def test_poll_one_workflow_uses_its_own_cursor(store):
+    paths: list[str] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        paths.append(request.url.path)
+        if request.url.path.endswith("/runs") and "/workflows/" in request.url.path:
+            return httpx.Response(200, json={"workflow_runs": [
+                {"id": 7, "run_number": 1, "run_attempt": 1, "name": "rel",
+                 "path": ".github/workflows/multi_arch_release.yml", "head_sha": "s",
+                 "head_branch": "main", "event": "schedule", "conclusion": "success",
+                 "created_at": "2026-10-22T01:00:00Z", "html_url": "u"}]})
+        return httpx.Response(200, json={"jobs": []})
+
+    store.set_state("poller:ROCm/TheRock:last_created_at", "2026-10-19T00:00:00Z")
+    with GitHubClient("t", transport=httpx.MockTransport(handler)) as gh:
+        result = poll_once(gh, store, store, store, workflow="multi_arch_release.yml")
+    assert paths[0] == "/repos/ROCm/TheRock/actions/workflows/multi_arch_release.yml/runs"
+    assert result.runs_seen == 1
+    assert store.get_state("poller:ROCm/TheRock:last_created_at:multi_arch_release.yml") \
+        == "2026-10-22T01:00:00Z"
+    # the all-workflows cursor is untouched, so other workflows' runs are not skipped
+    assert store.get_state("poller:ROCm/TheRock:last_created_at") == "2026-10-19T00:00:00Z"
+
+
+@pytest.mark.parametrize("bad", ["../secrets", "a/b.yml", "x.yml?y=1", "release"])
+def test_workflow_name_is_validated(bad):
+    with GitHubClient("t", transport=httpx.MockTransport(lambda r: httpx.Response(500))) as gh, \
+            pytest.raises(ValueError):
+        gh.list_runs("ROCm/TheRock", workflow=bad)
+
+
 def test_poll_twice_is_idempotent_and_uses_cursor_with_lookback(store):
     calls: list[httpx.Request] = []
     with GitHubClient("t", transport=recorded_transport(calls)) as gh:

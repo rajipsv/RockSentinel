@@ -73,16 +73,22 @@ def poll_once(
     branch: str | None = "main",
     max_runs: int = 50,
     backfill: bool = False,
+    workflow: str | None = None,
 ) -> PollResult:
-    """Poll once. `backfill` ignores the saved cursor and reads the last `since_hours`."""
-    key = _CURSOR_KEY.format(repo=repo)
+    """Poll once. `backfill` ignores the saved cursor and reads the last `since_hours`.
+
+    `workflow` (a file name such as "multi_arch_release.yml") polls just that workflow,
+    with its own cursor, so it never moves the all-workflows cursor past unread runs.
+    """
+    key = _CURSOR_KEY.format(repo=repo) + (f":{workflow}" if workflow else "")
     cursor = _parse_ts(state.get_state(key))
     if cursor and not backfill:
         since = cursor - LOOKBACK
     else:
         since = datetime.now(UTC) - timedelta(hours=since_hours)
 
-    runs = gh.list_runs(repo, since=since, status="completed", branch=branch, limit=max_runs)
+    runs = gh.list_runs(repo, since=since, status="completed", branch=branch,
+                        workflow=workflow, limit=max_runs)
     written = queued = 0
     newest = cursor
     skipped: list[RunRef] = []
@@ -127,6 +133,8 @@ def main() -> None:
     parser.add_argument("--db", default=".data/rocksentinel.db")
     parser.add_argument("--backfill", action="store_true",
                         help="ignore the saved cursor and read the whole --since-hours window")
+    parser.add_argument("--workflow", default=None,
+                        help="poll one workflow file only, e.g. multi_arch_release.yml")
     args = parser.parse_args()
 
     store = SQLiteStore(args.db)
@@ -135,6 +143,7 @@ def main() -> None:
             gh, store, store, store,
             repo=args.repo, since_hours=args.since_hours,
             branch=args.branch or None, max_runs=args.max_runs, backfill=args.backfill,
+            workflow=args.workflow,
         )
     print(
         f"runs={result.runs_seen} jobs_written={result.jobs_written} "
