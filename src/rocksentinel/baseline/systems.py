@@ -15,7 +15,7 @@ from dataclasses import dataclass, field
 
 from rocksentinel.baseline.rules import classify
 from rocksentinel.ci_evidence.extract import extract_errors, normalize_line
-from rocksentinel.packs import default_profile
+from rocksentinel.packs import Profile, default_profile
 
 B0_KEYWORDS = (
     "FAILED:",
@@ -51,16 +51,20 @@ def b0_excerpt(log_text: str) -> list[str]:
     return lines[-B0_FALLBACK:]
 
 
-def _kinds_of(lines: list[str]) -> list[str]:
+def _kinds_of(lines: list[str], profile: Profile) -> list[str]:
     """Classify each excerpt line with the same patterns extract_errors uses."""
     joined = "\n".join(lines)
-    return [c.kind for c in extract_errors(joined, max_candidates=1000).candidates]
+    found = extract_errors(joined, max_candidates=1000, profile=profile).candidates
+    return [c.kind for c in found]
 
 
-def run_b0(log_text: str, workflow: str, job_name: str, runner_label: str | None) -> Prediction:
-    info = default_profile().map_job(workflow, job_name, runner_label)
+def run_b0(log_text: str, workflow: str, job_name: str, runner_label: str | None,
+           profile: Profile | None = None) -> Prediction:
+    profile = profile or default_profile()
+    info = profile.map_job(workflow, job_name, runner_label)
     excerpt = b0_excerpt(log_text)
-    category, reason = classify(_kinds_of(excerpt), workflow=workflow, variant=info.variant)
+    category, reason = classify(_kinds_of(excerpt, profile), workflow=workflow,
+                                variant=info.variant, profile=profile)
     return Prediction(
         system="B0", category=category, reason=reason, component=info.component,
         gpu_family=info.gpu_family, platform=info.platform,
@@ -69,13 +73,13 @@ def run_b0(log_text: str, workflow: str, job_name: str, runner_label: str | None
 
 
 def run_b1(log_text: str, workflow: str, job_name: str, runner_label: str | None,
-           likely_flaky: bool = False) -> Prediction:
-    profile = default_profile()
+           likely_flaky: bool = False, profile: Profile | None = None) -> Prediction:
+    profile = profile or default_profile()
     info = profile.map_job(workflow, job_name, runner_label)
-    result = extract_errors(log_text)
+    result = extract_errors(log_text, profile=profile)
     category, reason = classify(
         [c.kind for c in result.candidates], workflow=workflow, variant=info.variant,
-        likely_flaky=likely_flaky,
+        likely_flaky=likely_flaky, profile=profile,
     )
     component = info.component
     if component is None and result.faulting_kernel:

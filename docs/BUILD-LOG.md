@@ -17,7 +17,7 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 
 - Golden set: 35 real TheRock failures, 33 confirmed by a human; 24 dev / 11 held-out test.
 - Pattern coverage on 25 failures *outside* the golden set: 92% hit a specific pattern.
-- Tests: 248 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
+- Tests: 267 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
 
 ---
 
@@ -281,6 +281,24 @@ All read-only toward GitHub; local only.
 - **11 new tests show what a non-ROCm repo sees.** The GPU hardware-exception line is not special without the rocm pack (the process abort becomes the root signal); `bump_submodules.yml` is not a bump workflow; HIP errors are not a code signal; generic job names map to component/platform/shard.
 
 **Interview talking point:** "I turned a single-repo tool into a product by finding the seam, not rewriting: the domain knowledge became a plugin, and I proved the refactor safe with byte-identical evals."
+
+
+## Product track P2: per-repo config and multi-repo ingestion (this commit)
+**Built:**
+- **`config/repos.toml` + `config.py`** (pydantic, validated on load). Per repo it sets packs, branches (`all` or a list), workflows, tenant (default: owner), `enabled`, and optional job-name regexes with named groups (component, platform, hardware, shard, stage). It also holds `github_api_url` for GitHub Enterprise Server and `excerpt_retention_days`. Unknown keys are rejected, so no secrets can sneak in.
+- **`profile_for(repo)`** gives each repo its own packs, with repo-specific job-name rules tried first. The poller, MCP server, baselines, labeler, coverage and Console all use it.
+- **Poller:** with no `--repo`, it polls every enabled repo, one cursor per (repo, workflow, branch). The old main-branch key is kept.
+- **Store, API and Console:** runs and workflow cards are keyed by **repo + workflow**. TheRock and rockrel both have a `test_artifacts.yml`, which used to merge into one card.
+- **Client:** `api_url` for GHES. Huge runs fall back to 30-job pages on 5xx.
+
+**Found:**
+- **A dropped connection** ("peer closed connection without sending complete message body") crashed a whole poll: the client retried 5xx responses but not transport errors. Transport errors are now retried, then reported as a normal GitHub error so one run or repo is skipped. A per-repo guard was added in the poller.
+- **The poll was also cut short** by the laptop's disk filling up (unrelated to the project, which uses about 125 MB).
+- **pandas-dev/pandas** (a Python/pytest project, `core` pack only) is onboarded **by config only**. Its runs aren't polled yet: by the user's choice, the interface is built on stored data first.
+
+**Checks:** 19 new offline tests (config validation, per-repo profiles, multi-repo poll with mocked GitHub, page fallback, GHES URL, retries, repo-keyed summaries). Eval numbers are unchanged (test: B1 0.91 / F1 0.73).
+
+**Interview talking point:** "Onboarding a new repo is a config change, validated like code, and it can't carry secrets."
 
 ---
 

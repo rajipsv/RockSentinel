@@ -17,6 +17,7 @@ from collections.abc import Callable
 from pathlib import Path
 
 from rocksentinel.baseline.systems import SYSTEMS, Prediction
+from rocksentinel.config import profile_for
 
 ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_DATASET = ROOT / "evals" / "golden" / "dataset.jsonl"
@@ -78,7 +79,8 @@ def evaluate(
         log = (root / case["log_fixture"]).read_text(encoding="utf-8")
         row = {"case_id": case["case_id"], "expected_category": case["expected"]["category"]}
         for name, run in systems.items():
-            pred = run(log, case["workflow"], case["job_name"], case.get("runner_label"))
+            pred = run(log, case["workflow"], case["job_name"], case.get("runner_label"),
+                       profile=profile_for(case.get("repo") or "ROCm/TheRock"))
             per_system[name].append((case["expected"], pred))
             row[name] = {
                 "category": pred.category,

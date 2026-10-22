@@ -32,7 +32,9 @@ _DEFAULT_ENV_FILE = Path(__file__).resolve().parents[3] / ".env"
 
 
 class GitHubError(RuntimeError):
-    pass
+    def __init__(self, message: str, status: int | None = None):
+        super().__init__(message)
+        self.status = status
 
 
 class RateLimitedError(GitHubError):
@@ -53,6 +55,12 @@ def load_token(env_file: Path | None = None) -> str:
             if sep and key.strip() == "GITHUB_TOKEN" and value.strip():
                 return value.strip().strip('"').strip("'")
     raise GitHubError("GITHUB_TOKEN not set (environment or .env)")
+
+
+def validate_workflow(workflow: str) -> str:
+    if not _WORKFLOW_FILE.match(workflow):
+        raise ValueError(f"invalid workflow file name: {workflow!r}")
+    return workflow
 
 
 def validate_repo(repo: str) -> str:
@@ -128,9 +136,11 @@ class GitHubClient:
         transport: httpx.BaseTransport | None = None,
         max_retries: int = 3,
         backoff_s: float = 1.0,
+        api_url: str = API_URL,
     ):
+        # api_url: GitHub Enterprise Server uses https://<host>/api/v3
         self._http = httpx.Client(
-            base_url=API_URL,
+            base_url=api_url,
             headers={
                 "Authorization": f"Bearer {token or load_token()}",
                 "Accept": "application/vnd.github+json",
@@ -158,7 +168,15 @@ class GitHubClient:
 
     def _get(self, path: str, params: dict[str, Any] | None = None) -> httpx.Response:
         for attempt in range(self._max_retries + 1):
-            resp = self._http.get(path, params=params)
+            try:
+                resp = self._http.get(path, params=params)
+            except httpx.TransportError as exc:
+                # Dropped connections / incomplete bodies / timeouts: retry like a 5xx, then
+                # surface as GitHubError so callers can skip one run instead of crashing.
+                if attempt < self._max_retries:
+                    time.sleep(self._backoff_s * (2**attempt))
+                    continue
+                raise GitHubError(f"GET {path} failed: {type(exc).__name__}") from exc
             if resp.status_code in (403, 429) and resp.headers.get("x-ratelimit-remaining") == "0":
                 reset = resp.headers.get("x-ratelimit-reset")
                 raise RateLimitedError(
@@ -182,7 +200,8 @@ class GitHubClient:
         if resp.status_code == 304 and cached:
             return cached[1]
         if resp.status_code != 200:
-            raise GitHubError(f"GET {path} -> {resp.status_code}: {resp.text[:200]}")
+            raise GitHubError(f"GET {path} -> {resp.status_code}: {resp.text[:200]}",
+                              status=resp.status_code)
         data = resp.json()
         if etag := resp.headers.get("etag"):
             self._etags[key] = (etag, data)
@@ -206,8 +225,8 @@ class GitHubClient:
         `status` is any GitHub run status/conclusion filter: "completed", "failure", ...
         """
         validate_repo(repo)
-        if workflow is not None and not _WORKFLOW_FILE.match(workflow):
-            raise ValueError(f"invalid workflow file name: {workflow!r}")
+        if workflow is not None:
+            validate_workflow(workflow)
         start = since or (datetime.now(UTC) - timedelta(hours=since_hours))
         per_page = min(max(limit, 1), 100)
         params: dict[str, Any] = {
@@ -258,17 +277,26 @@ class GitHubClient:
         (needed for rerun/flake evidence), otherwise only the latest attempt is returned."""
         validate_repo(repo)
         jobs: list[JobRef] = []
-        page = 1
-        while True:
-            data = self._get_json(
-                f"/repos/{repo}/actions/runs/{run_id}/jobs",
-                {"filter": "all" if all_attempts else "latest", "per_page": 100, "page": page},
-            )
-            batch = [_job_from_api(j) for j in data.get("jobs", [])]
-            jobs.extend(batch)
-            if len(batch) < 100:
+        # Very large runs (1000+ jobs) can make GitHub time out (502/504) on 100-job pages;
+        # then fall back to smaller pages for this run.
+        for per_page in (100, 30):
+            jobs, page = [], 1
+            try:
+                while True:
+                    data = self._get_json(
+                        f"/repos/{repo}/actions/runs/{run_id}/jobs",
+                        {"filter": "all" if all_attempts else "latest", "per_page": per_page,
+                         "page": page},
+                    )
+                    batch = [_job_from_api(j) for j in data.get("jobs", [])]
+                    jobs.extend(batch)
+                    if len(batch) < per_page:
+                        break
+                    page += 1
                 break
-            page += 1
+            except GitHubError as exc:
+                if per_page == 30 or not (exc.status and exc.status >= 500):
+                    raise
         if failed_only:
             jobs = [j for j in jobs if j.conclusion in ("failure", "timed_out")]
         return jobs
@@ -278,7 +306,8 @@ class GitHubClient:
         validate_repo(repo)
         resp = self._get(f"/repos/{repo}/actions/jobs/{job_id}/logs")
         if resp.status_code != 200:
-            raise GitHubError(f"log for job {job_id} -> {resp.status_code}")
+            raise GitHubError(f"log for job {job_id} -> {resp.status_code}",
+                              status=resp.status_code)
         return resp.text
 
     # --- history tracing (used by find_introducing_change) --------------------------------

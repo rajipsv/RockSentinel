@@ -24,9 +24,10 @@ from pathlib import Path
 from rocksentinel.baseline.rules import CATEGORIES, classify
 from rocksentinel.ci_evidence.extract import extract_errors
 from rocksentinel.ci_evidence.history import job_history
+from rocksentinel.config import profile_for
 from rocksentinel.evals.splits import assign_split, is_tuned_on
 from rocksentinel.github.client import GitHubClient, GitHubError
-from rocksentinel.packs import default_profile
+from rocksentinel.packs import Profile
 from rocksentinel.store.base import JobResult, JobStore
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -65,7 +66,7 @@ def _write_jsonl(path: Path, rows: Iterable[dict]) -> None:
                     encoding="utf-8")
 
 
-def fixture_excerpt(log_text: str) -> list[str]:
+def fixture_excerpt(log_text: str, profile: Profile | None = None) -> list[str]:
     """Keep enough of the raw log for both baselines to be scored fairly.
 
     Starts a little before the first ranked error and runs to the end of the log (where
@@ -78,7 +79,7 @@ def fixture_excerpt(log_text: str) -> list[str]:
     # 10k-line log the failure can sit in the middle (found on a rockrel hipblaslt GPU hang,
     # where head+tail trimming cut out the hang and the abort). The generic safety net and
     # the exit code don't steer the excerpt unless nothing else was found.
-    ranked = extract_errors(log_text, max_candidates=20).candidates
+    ranked = extract_errors(log_text, max_candidates=20, profile=profile).candidates
     top = [c for c in ranked if c.kind not in ("generic_error", "exit_code")] or ranked
     top = top[:EXCERPT_TOP_CANDIDATES]
     ranges = [(max(0, c.window[0] - 1 - CONTEXT_BEFORE_FIRST_WINDOW), c.window[1]) for c in top]
@@ -138,7 +139,8 @@ def refresh(paths: Paths | None = None) -> list[str]:
         fixture = paths.root / p["log_fixture"]
         if not fixture.is_file():
             continue
-        result = extract_errors(fixture.read_text(encoding="utf-8"))
+        prof = profile_for(p.get("repo") or "ROCm/TheRock")
+        result = extract_errors(fixture.read_text(encoding="utf-8"), profile=prof)
         expected = dict(p["expected"])
         expected["must_cite"] = _must_cite(result)
         expected["failing_test"] = result.failing_test
@@ -146,7 +148,7 @@ def refresh(paths: Paths | None = None) -> list[str]:
         source = p.get("label_source", "")
         if not source.startswith("outcome"):
             category, reason = classify([c.kind for c in result.candidates],
-                                        workflow=p["workflow"])
+                                        workflow=p["workflow"], profile=prof)
             expected["category"] = category
             source = f"rules (B1): {reason} - VERIFY against the log"
         if expected != p["expected"] or source != p.get("label_source"):
@@ -158,7 +160,7 @@ def refresh(paths: Paths | None = None) -> list[str]:
 
 def _save_fixture(paths: Paths, *, repo: str, run_id: int, attempt: int, job_id: int,
                   job_name: str, workflow: str, log: str) -> tuple[Path, list[str]]:
-    excerpt = fixture_excerpt(log)
+    excerpt = fixture_excerpt(log, profile_for(repo))
     fixture = paths.fixtures / f"run-{run_id}_job-{job_id}.txt"
     fixture.parent.mkdir(parents=True, exist_ok=True)
     header = [
@@ -189,12 +191,13 @@ def propose_case(store: JobStore, gh: GitHubClient, job: JobResult, paths: Paths
         job_name=job.job_name, workflow=job.workflow, log=gh.get_job_log(job.repo, job.job_id),
     )
 
-    result = extract_errors("\n".join(excerpt))
+    prof = profile_for(job.repo)
+    result = extract_errors("\n".join(excerpt), profile=prof)
     history = job_history(store, job.job_id)
     flake = history["flake_evidence"]
     category, reason = classify(
         [c.kind for c in result.candidates], workflow=job.workflow,
-        likely_flaky=flake["likely_flaky"],
+        likely_flaky=flake["likely_flaky"], profile=prof,
     )
     if flake["passed_on_rerun_same_run"]:
         source = "outcome: passed on rerun of the same run (strong)"
@@ -205,7 +208,7 @@ def propose_case(store: JobStore, gh: GitHubClient, job: JobResult, paths: Paths
 
     must_cite = _must_cite(result)
     component = job.component or (
-        default_profile().map_symbol(result.faulting_kernel)
+        prof.map_symbol(result.faulting_kernel)
         if result.faulting_kernel else None
     )
     return {

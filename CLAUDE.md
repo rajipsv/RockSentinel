@@ -33,7 +33,7 @@ Design: `docs/ADLC-RockSentinel.md`. Keep code consistent with it; if a decision
 - [ ] Product track (generic CI/CD product; plan: org → repo → workflow, packs, GitHub App)
   - [x] P0. Extractor fix: GPU hardware exceptions, passing-test noise, mid-log excerpts
   - [x] P1. Pack architecture: `core` + `rocm` packs, `ci_evidence` engine (pure refactor, evals byte-identical)
-  - [ ] P2. Per-repo config (`config/repos.yaml`), tenants, multi-repo ingestion (TheRock, rockrel, one non-ROCm repo)
+  - [x] P2. Per-repo config (`config/repos.toml`), tenants, multi-repo ingestion (TheRock + rockrel polled; pandas-dev/pandas configured, not polled yet)
   - [ ] P3. GitHub App auth (installation tokens) + webhook handler (offline-tested; live in step 9)
   - [ ] P4. Console: org → repo → workflow → run → case, root cause first, triage worker, Quality tab, no Review tab
   - [ ] P5. Docs: product architecture, private-repo/data handling, onboarding

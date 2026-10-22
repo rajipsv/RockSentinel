@@ -16,8 +16,8 @@ from mcp.server.mcpserver import MCPServer  # mcp 2.x name for FastMCP
 
 from rocksentinel.ci_evidence import extract as _extract
 from rocksentinel.ci_evidence import history as _history
+from rocksentinel.config import profile_for
 from rocksentinel.github.client import GitHubClient
-from rocksentinel.packs import default_profile
 from rocksentinel.packs.rocm import mappers
 from rocksentinel.store.base import JobStore
 
@@ -117,7 +117,7 @@ def list_failed_runs(
                     "conclusion": job.conclusion,
                     "runner_label": job.runner_label,
                     "html_url": job.html_url,
-                    **default_profile().map_job(run.workflow, job.name,
+                    **profile_for(repo).map_job(run.workflow, job.name,
                                                 job.runner_label).as_dict(),
                 }
                 for job in gh.list_jobs(repo, run.run_id, failed_only=True)
@@ -140,7 +140,8 @@ def get_job_log_windows(
     """
     log = get_github().get_job_log(repo, job_id)
     result = _extract.extract_errors(
-        log[:MAX_LOG_CHARS], max_candidates=max(1, min(max_candidates, 20))
+        log[:MAX_LOG_CHARS], max_candidates=max(1, min(max_candidates, 20)),
+        profile=profile_for(repo),
     )
     cap = max(5, min(max_lines_per_window, 100))
     windows = []
@@ -178,7 +179,7 @@ def get_job_log_windows(
 
 
 @mcp.tool()
-def extract_errors(log_text: str, max_candidates: int = 20) -> dict:
+def extract_errors(log_text: str, max_candidates: int = 20, repo: str = DEFAULT_REPO) -> dict:
     """Rank the lines of a CI job log that most likely explain its failure.
 
     Returns ranked error candidates (root cause first, cascade after) with line
@@ -187,7 +188,8 @@ def extract_errors(log_text: str, max_candidates: int = 20) -> dict:
     """
     if len(log_text) > MAX_LOG_CHARS:
         raise ValueError(f"log_text exceeds {MAX_LOG_CHARS} characters")
-    result = _extract.extract_errors(log_text, max_candidates=max(1, min(max_candidates, 100)))
+    result = _extract.extract_errors(log_text, max_candidates=max(1, min(max_candidates, 100)),
+                                     profile=profile_for(repo))
     return {
         "candidates": [
             {
@@ -213,14 +215,15 @@ def extract_errors(log_text: str, max_candidates: int = 20) -> dict:
 
 
 @mcp.tool()
-def map_job_to_family(workflow: str, job_name: str, runner_label: str | None = None) -> dict:
+def map_job_to_family(workflow: str, job_name: str, runner_label: str | None = None,
+                      repo: str = DEFAULT_REPO) -> dict:
     """Parse a CI job name into component, hardware family, platform, stage, shard and variant.
 
     Example: workflow="test_artifacts.yml",
     job_name="Test rocsparse / Test rocsparse (shard 2/3) (gfx1151)",
     runner_label="linux-gfx1151-gpu-rocm".
     """
-    return default_profile().map_job(workflow, job_name, runner_label).as_dict()
+    return profile_for(repo).map_job(workflow, job_name, runner_label).as_dict()
 
 
 @mcp.tool()

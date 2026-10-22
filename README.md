@@ -51,11 +51,31 @@ GITHUB_TOKEN=<your token>
 ```
 Tests never use the network: they replay recorded responses from `tests/fixtures/github/`.
 
-## Poll TheRock CI locally
+## Onboard a repo (config only)
+Add it to [config/repos.toml](config/repos.toml). No code is needed:
+```toml
+[[repos]]
+repo = "your-org/your-repo"
+packs = []                    # domain packs, e.g. ["rocm"]; "core" is always included
+branches = ["main"]           # or "all"
+workflows = ["ci.yml"]        # or "all"
+
+[[repos.job_name_rules]]      # optional: how to read your job names
+match = '^test \((?P<component>[^,]+), (?P<platform>[^)]+)\)'
+```
+Options: `tenant` (defaults to the repo owner), `enabled`, and under `[settings]`
+`github_api_url` (GitHub Enterprise Server) and `excerpt_retention_days`. The file is
+validated on load (unknown keys, packs, bad regexes or repo names are rejected); it never
+holds secrets. Private repos need a token or GitHub App installation that can read them.
+
+## Poll CI locally
 ```bash
-.venv/Scripts/python -m rocksentinel.ingest.poller --since-hours 24 --max-runs 20
+.venv/Scripts/python -m rocksentinel.ingest.poller --since-hours 24 --max-runs 20   # every configured repo
+.venv/Scripts/python -m rocksentinel.ingest.poller --repo ROCm/TheRock               # one repo
 # one workflow, all branches (e.g. release builds dispatched from triage branches):
-.venv/Scripts/python -m rocksentinel.ingest.poller --workflow multi_arch_release.yml --branch "" --since-hours 168 --backfill
+.venv/Scripts/python -m rocksentinel.ingest.poller --repo ROCm/TheRock --workflow multi_arch_release.yml --branch "" --since-hours 168 --backfill
+# extraction coverage on one repo's failures:
+.venv/Scripts/python -m rocksentinel.evals.coverage --repo pandas-dev/pandas --sample 20
 ```
 This stores every job result (pass and fail) in `.data/rocksentinel.db` and queues failures
 for triage. Re-running is safe: writes are idempotent, and each poll re-reads a 6-hour

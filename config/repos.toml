@@ -1,0 +1,28 @@
+# Repos RockSentinel watches. Central config: admins onboard repos here (no secrets).
+# Read access comes from the GitHub token (local) or the GitHub App installation (product).
+# Schema and options: src/rocksentinel/config.py
+
+[settings]
+github_api_url = "https://api.github.com"   # GitHub Enterprise Server: https://<host>/api/v3
+excerpt_retention_days = 30                 # log excerpts only; whole logs are never stored
+
+[[repos]]
+repo = "ROCm/TheRock"
+packs = ["rocm"]
+branches = ["main"]
+workflows = "all"
+
+[[repos]]
+# Release/nightly builds and their dispatched test runs (seen on TheRock HUD). Release runs
+# are often dispatched from users/* triage branches, so all branches are read.
+repo = "ROCm/rockrel"
+packs = ["rocm"]
+branches = "all"
+workflows = ["multi_arch_release.yml", "test_artifacts.yml"]
+
+[[repos]]
+# Non-ROCm proof repo: a large public Python project (pytest), onboarded by config only.
+repo = "pandas-dev/pandas"
+packs = []
+branches = ["main"]
+workflows = ["unit-tests.yml", "code-checks.yml"]

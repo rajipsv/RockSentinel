@@ -177,17 +177,19 @@ def _days(since: str | None, until: str | None) -> tuple[str | None, str | None]
 
 
 def list_runs(jobs, limit: int = 300, workflow: str | None = None,
-              since: str | None = None, until: str | None = None) -> dict:
+              since: str | None = None, until: str | None = None,
+              repo: str | None = None) -> dict:
     since, until = _days(since, until)
     runs = jobs.recent_runs(limit=max(1, min(limit, 500)), workflow=workflow,
-                            since=since, until=until)
-    return {"count": len(runs), "workflow": workflow, "since": since, "until": until,
-            "items": runs}
+                            since=since, until=until, repo=repo)
+    return {"count": len(runs), "repo": repo, "workflow": workflow, "since": since,
+            "until": until, "items": runs}
 
 
-def list_workflows(jobs, since: str | None = None, until: str | None = None) -> dict:
+def list_workflows(jobs, since: str | None = None, until: str | None = None,
+                   repo: str | None = None) -> dict:
     since, until = _days(since, until)
-    items = jobs.workflow_summaries(since=since, until=until)
+    items = jobs.workflow_summaries(since=since, until=until, repo=repo)
     first, last = jobs.run_date_range()
     return {"count": len(items), "since": since, "until": until,
             "data_range": {"first": first, "last": last}, "items": items}
@@ -240,7 +242,9 @@ def case_detail(jobs, memory, job_id: int, fetch_evidence: bool = True) -> dict:
             raise ApiError(502, f"could not fetch log: {exc}") from exc
     ev = _EVIDENCE_CACHE[job_id]
     kinds = [w["anchor"]["kind"] for w in ev["windows"]]
-    category, reason = classify(kinds, workflow=job.workflow,
+    from rocksentinel.config import profile_for
+
+    category, reason = classify(kinds, workflow=job.workflow, profile=profile_for(job.repo),
                                 likely_flaky=history["flake_evidence"]["likely_flaky"])
     first_text = next((w["anchor"]["text"] for w in ev["windows"]
                        if w["anchor"]["kind"] not in ("exit_code", "generic_error")), None)

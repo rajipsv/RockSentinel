@@ -208,7 +208,7 @@ async function loadEvals() {
 
 // --- runs: workflow cards → a workflow's runs → run detail → case ---------------------------
 // Dates are UTC days; "On a day" sends since = until, "Between dates" sends either or both.
-const runs = { level: "workflows", workflow: null, runId: null, mode: "day",
+const runs = { level: "workflows", workflow: null, repo: null, runId: null, mode: "day",
   dataRange: {}, wfItems: [], runItems: [], timer: null };
 
 const when = (iso) => (iso ? `${iso.slice(0, 16).replace("T", " ")} UTC` : "—");
@@ -303,8 +303,8 @@ function renderCrumbs() {
     : link("All workflows", () => goWorkflows())];
   if (runs.workflow) {
     parts.push(el("span", { class: "sep", "aria-hidden": "true" }, "›"),
-      runs.runId ? link(runs.workflow, () => openWorkflow(runs.workflow))
-        : el("span", { class: "crumb current", "aria-current": "page" }, runs.workflow));
+      runs.runId ? link(`${runs.repo} · ${runs.workflow}`, () => openWorkflow(runs.workflow, null, runs.repo))
+        : el("span", { class: "crumb current", "aria-current": "page" }, `${runs.repo} · ${runs.workflow}`));
   }
   if (runs.runId) {
     parts.push(el("span", { class: "sep", "aria-hidden": "true" }, "›"),
@@ -332,13 +332,13 @@ async function loadRuns(opts = {}) {
 }
 
 function goWorkflows() {
-  runs.level = "workflows"; runs.workflow = null; runs.runId = null;
+  runs.level = "workflows"; runs.workflow = null; runs.repo = null; runs.runId = null;
   $("#runs-search").value = "";
   loadRuns();
 }
-function openWorkflow(workflow, runId = null) {
-  const fresh = runs.workflow !== workflow || runs.level !== "workflow";
-  runs.level = "workflow"; runs.workflow = workflow; runs.runId = runId;
+function openWorkflow(workflow, runId = null, repo = runs.repo) {
+  const fresh = runs.workflow !== workflow || runs.repo !== repo || runs.level !== "workflow";
+  runs.level = "workflow"; runs.workflow = workflow; runs.repo = repo; runs.runId = runId;
   if (fresh) {
     $("#runs-search").value = "";
     $("#runs-body").replaceChildren(el("div", { class: "split" },
@@ -361,7 +361,7 @@ function renderWorkflows() {
   const all = runs.wfItems;
   const q = $("#runs-search").value.trim().toLowerCase();
   const failingOnly = $("#failing-only").checked;
-  const items = all.filter((w) => (!q || w.workflow.toLowerCase().includes(q)) &&
+  const items = all.filter((w) => (!q || `${w.repo} ${w.workflow}`.toLowerCase().includes(q)) &&
     (!failingOnly || w.failed_runs));
   const t = all.reduce((a, w) => ({ runs: a.runs + w.runs, failed: a.failed + w.failed_runs,
     jobs: a.jobs + w.jobs, fj: a.fj + w.failed_jobs }), { runs: 0, failed: 0, jobs: 0, fj: 0 });
@@ -388,15 +388,16 @@ function renderWorkflows() {
 function workflowCard(w) {
   const pct = Math.round(w.failure_rate * 100);
   const cls = tone(w.failed_runs, w.failure_rate);
-  const open = () => openWorkflow(w.workflow);
+  const open = () => openWorkflow(w.workflow, null, w.repo);
   const ticks = [...w.recent].reverse().map((r) => el("button", {
     type: "button", class: `tick ${r.failed ? "bad" : "good"}`,
     title: `run ${r.run_id} · ${r.failed}/${r.jobs} jobs failed · ${when(r.started_at)}`,
     "aria-label": `Open run ${r.run_id}: ${r.failed ? `${r.failed} jobs failed` : "passed"}`,
-    onclick: (e) => { e.stopPropagation(); openWorkflow(w.workflow, r.run_id); } }));
-  return el("article", { class: `wf-card ${cls}`, tabindex: "0", "aria-label": `Open ${w.workflow}`,
+    onclick: (e) => { e.stopPropagation(); openWorkflow(w.workflow, r.run_id, w.repo); } }));
+  return el("article", { class: `wf-card ${cls}`, tabindex: "0", "aria-label": `Open ${w.repo} ${w.workflow}`,
     onclick: open,
     onkeydown: (e) => { if (e.target === e.currentTarget && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); open(); } } },
+    el("div", { class: "wf-repo" }, w.repo),
     el("div", { class: "wf-head" }, el("h3", {}, w.workflow),
       el("span", { class: `rate ${cls}` }, w.failed_runs ? `${pct}% failing` : "all passing")),
     el("div", { class: "bar", role: "img", "aria-label": `${pct}% of runs had failures` },
@@ -412,7 +413,7 @@ function workflowCard(w) {
 
 // Level 2: the runs of one workflow, grouped by day; detail on the right.
 async function loadWorkflowRuns(refresh = false) {
-  const p = dayParams(); p.set("workflow", runs.workflow);
+  const p = dayParams(); p.set("workflow", runs.workflow); p.set("repo", runs.repo);
   const r = await api(`/api/runs?${p}`);
   runs.runItems = r.items;
   renderRunList();
@@ -470,7 +471,7 @@ function selectRun(runId) {
 document.addEventListener("keydown", (e) => {
   if (e.key !== "Escape" || !$("#view-runs").classList.contains("active")) return;
   if (["INPUT", "SELECT", "TEXTAREA"].includes(document.activeElement?.tagName)) return;
-  if (runs.runId) { runs.runId = null; openWorkflow(runs.workflow); }
+  if (runs.runId) { runs.runId = null; openWorkflow(runs.workflow, null, runs.repo); }
   else if (runs.level === "workflow") goWorkflows();
 });
 

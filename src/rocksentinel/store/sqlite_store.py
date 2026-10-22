@@ -112,16 +112,17 @@ class SQLiteStore:
 
     @_locked
     def recent_runs(self, limit: int = 50, workflow: str | None = None,
-                    since: str | None = None, until: str | None = None) -> list[dict]:
-        """Runs newest first, with job and failure counts (optionally one workflow / days)."""
+                    since: str | None = None, until: str | None = None,
+                    repo: str | None = None) -> list[dict]:
+        """Runs newest first, with job and failure counts (optionally one repo/workflow/days)."""
         rows = self._db.execute(
-            "SELECT run_id, workflow, head_sha, branch, MIN(started_at), MAX(finished_at), "
+            "SELECT run_id, repo, workflow, head_sha, branch, MIN(started_at), MAX(finished_at), "
             "COUNT(*), SUM(conclusion IN ('failure','timed_out')), MAX(attempt) "
-            "FROM job_results WHERE (? IS NULL OR workflow = ?) "
+            "FROM job_results WHERE (? IS NULL OR workflow = ?) AND (? IS NULL OR repo = ?) "
             "GROUP BY run_id " + self._DAY_FILTER + "ORDER BY MIN(started_at) DESC LIMIT ?",
-            (workflow, workflow, since, since, until, until, limit),
+            (workflow, workflow, repo, repo, since, since, until, until, limit),
         ).fetchall()
-        keys = ("run_id", "workflow", "head_sha", "branch", "started_at", "finished_at",
+        keys = ("run_id", "repo", "workflow", "head_sha", "branch", "started_at", "finished_at",
                 "jobs", "failed", "attempts")
         return [dict(zip(keys, r, strict=True)) for r in rows]
 
@@ -135,17 +136,19 @@ class SQLiteStore:
 
     @_locked
     def workflow_summaries(self, recent: int = 20, since: str | None = None,
-                           until: str | None = None) -> list[dict]:
-        """Per workflow: run and failure counts, last run, and recent run outcomes."""
+                           until: str | None = None, repo: str | None = None) -> list[dict]:
+        """Per (repo, workflow): run and failure counts, last run, and recent run outcomes."""
         per_run = self._db.execute(
-            "SELECT workflow, run_id, MIN(started_at) AS started, "
+            "SELECT repo, workflow, run_id, MIN(started_at) AS started, "
             "SUM(conclusion IN ('failure','timed_out')) AS failed, COUNT(*) AS jobs "
-            "FROM job_results GROUP BY run_id " + self._DAY_FILTER + "ORDER BY started DESC",
-            (since, since, until, until)).fetchall()
-        out: dict[str, dict] = {}
-        for wf, run_id, started, failed, jobs in per_run:
-            w = out.setdefault(wf, {"workflow": wf, "runs": 0, "failed_runs": 0, "jobs": 0,
-                                    "failed_jobs": 0, "last_run_at": started, "recent": []})
+            "FROM job_results WHERE (? IS NULL OR repo = ?) "
+            "GROUP BY run_id " + self._DAY_FILTER + "ORDER BY started DESC",
+            (repo, repo, since, since, until, until)).fetchall()
+        out: dict[tuple[str, str], dict] = {}
+        for rp, wf, run_id, started, failed, jobs in per_run:
+            w = out.setdefault((rp, wf), {"repo": rp, "workflow": wf, "runs": 0,
+                                          "failed_runs": 0, "jobs": 0, "failed_jobs": 0,
+                                          "last_run_at": started, "recent": []})
             w["runs"] += 1
             w["failed_runs"] += failed > 0
             w["jobs"] += jobs
@@ -155,15 +158,15 @@ class SQLiteStore:
                                     "started_at": started})
         for w in out.values():
             w["failure_rate"] = round(w["failed_runs"] / w["runs"], 3) if w["runs"] else 0.0
-        return sorted(out.values(), key=lambda w: (-w["failed_runs"], w["workflow"]))
+        return sorted(out.values(), key=lambda w: (-w["failed_runs"], w["repo"], w["workflow"]))
 
     @_locked
-    def failed_jobs(self, limit: int = 200) -> list[JobResult]:
+    def failed_jobs(self, limit: int = 200, repo: str | None = None) -> list[JobResult]:
         rows = self._db.execute(
             f"SELECT {', '.join(_COLUMNS)} FROM job_results "
-            "WHERE conclusion IN ('failure', 'timed_out') "
+            "WHERE conclusion IN ('failure', 'timed_out') AND (? IS NULL OR repo = ?) "
             "ORDER BY COALESCE(finished_at, started_at) DESC LIMIT ?",
-            (limit,),
+            (repo, repo, limit),
         ).fetchall()
         return [JobResult(*r) for r in rows]
 

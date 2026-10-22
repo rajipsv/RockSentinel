@@ -19,15 +19,17 @@ from collections import Counter
 from pathlib import Path
 
 from rocksentinel.ci_evidence.extract import extract_errors
+from rocksentinel.config import profile_for
 from rocksentinel.evals.labeler import Paths, _diverse, _read_jsonl
 from rocksentinel.github.client import GitHubClient, GitHubError
+from rocksentinel.packs import Profile
 from rocksentinel.store.base import JobStore
 
 NON_SPECIFIC = frozenset({"generic_error", "exit_code"})
 
 
-def classify_coverage(log: str) -> tuple[str, str | None]:
-    candidates = extract_errors(log).candidates
+def classify_coverage(log: str, profile: Profile | None = None) -> tuple[str, str | None]:
+    candidates = extract_errors(log, profile=profile).candidates
     specific = [c for c in candidates if c.kind not in NON_SPECIFIC]
     if specific:
         return "specific", specific[0].kind
@@ -37,21 +39,24 @@ def classify_coverage(log: str) -> tuple[str, str | None]:
 
 
 def coverage(store: JobStore, gh: GitHubClient, sample: int = 30,
-             paths: Paths | None = None) -> dict:
+             paths: Paths | None = None, repo: str | None = None) -> dict:
     paths = paths or Paths()
     known = {c.get("job_id") for c in _read_jsonl(paths.dataset) + _read_jsonl(paths.proposals)}
-    jobs = _diverse(store.failed_jobs(limit=2000), {j for j in known if j}, limit=2000)
+    jobs = _diverse(store.failed_jobs(limit=2000, repo=repo), {j for j in known if j},
+                    limit=2000)
     rows, skipped = [], 0
     for job in jobs:
         if len(rows) >= sample:
             break
         try:
-            status, kind = classify_coverage(gh.get_job_log(job.repo, job.job_id))
+            status, kind = classify_coverage(gh.get_job_log(job.repo, job.job_id),
+                                             profile_for(job.repo))
         except GitHubError:
             skipped += 1  # e.g. 404: failed before any step ran
             continue
         rows.append({
-            "job_id": job.job_id, "workflow": job.workflow, "job_name": job.job_name,
+            "job_id": job.job_id, "repo": job.repo, "workflow": job.workflow,
+            "job_name": job.job_name,
             "status": status, "top_kind": kind,
             "job_url": f"https://github.com/{job.repo}/actions/runs/{job.run_id}/job/{job.job_id}",
         })
@@ -73,15 +78,16 @@ def main() -> None:
 
     parser = argparse.ArgumentParser(description="Pattern coverage on non-golden failures.")
     parser.add_argument("--sample", type=int, default=30)
+    parser.add_argument("--repo", default=None, help="only this repo's failures")
     parser.add_argument("--db", default=".data/rocksentinel.db")
     parser.add_argument("--out", type=Path, default=Path("evals/reports/coverage.json"))
     args = parser.parse_args()
 
     store = SQLiteStore(args.db)
     with GitHubClient() as gh:
-        report = coverage(store, gh, args.sample)
+        report = coverage(store, gh, args.sample, repo=args.repo)
     store.close()
-    print(f"sampled {report['sampled']} non-golden failed jobs "
+    print(f"{args.repo or 'all repos'}: sampled {report['sampled']} non-golden failed jobs "
           f"(skipped {report['skipped_no_log']} without logs)")
     print(f"specific pattern found: {report['specific_rate']}  counts: {report['counts']}")
     print(f"top kinds: {report['top_kinds']}")

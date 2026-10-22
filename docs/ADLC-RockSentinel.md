@@ -514,6 +514,21 @@ RockSentinel is a generic product for GitHub Actions CI. Everything specific to 
 
 A repo's **profile** is its domain packs followed by **`core`** (crashes, sanitizers, gtest/ctest/DejaGnu/pytest, build errors, time limits, runner/infra, a generic safety net, exit code; generic job-name reading). Until per-repo config exists (roadmap P2) the default profile is `rocm + core`. Moving the ROCm knowledge into its pack (P1) was a pure refactor: eval output stayed byte-identical.
 
+### 2.5b Per-repo config, tenants and private repos
+- **Central config** (`config/repos.toml` locally, Cosmos DB in Azure): each repo lists its packs, branches (`all` or a list), workflows, an optional tenant (default: the repo owner) and optional job-name regexes. Central rather than in-repo, so repos we don't own (TheRock, rockrel) can be onboarded. The file is validated on load and never holds secrets.
+- **A tenant is a customer org.** Repo names already carry it, and per-tenant partitions and secrets come with the hosted (SaaS) model.
+- **Private repos:** the customer installs the read-only GitHub App on chosen repos. RockSentinel gets short-lived installation tokens scoped to those repos (Actions read, Metadata read) that the customer can revoke. Nothing else changes downstream.
+- **Deployment models:**
+  1. **Self-hosted in the customer's Azure first** (`azd up`; logs, data and the LLM stay in their tenant).
+  2. **Hosted multi-tenant later.**
+  3. **GitHub Enterprise Server** via `github_api_url`, with polling when webhooks can't reach in.
+- **Data rules:**
+  - log **excerpts only**, never whole logs, with `excerpt_retention_days`;
+  - redaction before any LLM call;
+  - the LLM provider is the customer's choice;
+  - the Console shows a user only the repos they can see on GitHub.
+- **Proof of genericity (P2):** `pandas-dev/pandas` (a Python/pytest project) was onboarded with only config and the `core` pack.
+
 ### 2.6 Data model
 
 **Split: Cosmos DB holds operational documents (what the agents decided). Azure Data Explorer holds analytics (everything CI did).** One line on why: documents need fast keyed reads and upserts, while history needs fast aggregations over millions of rows. Each store is chosen for its access pattern.
