@@ -2,9 +2,10 @@
 
     python -m rocksentinel.console.server            # http://127.0.0.1:8765
 
-Local only: binds to 127.0.0.1, accepts writes only from the same origin, and its
-writes touch only the golden-set files. In Azure, web/ is served by Static Web Apps
-and the api.py functions run as managed Functions behind its sign-in.
+Local only: binds to 127.0.0.1 and accepts POSTs only from the same origin. The only
+write is the user-triggered single-job triage (it stores a triage result). In Azure, web/
+is served by Static Web Apps and the api.py functions run as managed Functions behind
+its sign-in.
 """
 
 from __future__ import annotations
@@ -23,7 +24,6 @@ from rocksentinel.evals.labeler import ROOT, Paths
 
 WEB_DIR = ROOT / "web"
 MAX_BODY = 16_384
-_CASE = r"(?P<case>[A-Za-z0-9\-]+)"
 
 
 def _q(query: dict, key: str) -> str | None:
@@ -31,30 +31,36 @@ def _q(query: dict, key: str) -> str | None:
     return (query.get(key) or [None])[0]
 
 
+def _days(q: dict) -> dict:
+    return {"since": _q(q, "since"), "until": _q(q, "until")}
+
+
 ROUTES = [
-    ("GET", re.compile(r"^/api/proposals$"), lambda h, m, q: api.list_proposals(h.paths)),
-    ("GET", re.compile(r"^/api/golden$"), lambda h, m, q: api.list_golden(h.paths)),
-    ("GET", re.compile(r"^/api/evals$"),
-     lambda h, m, q: api.evals(h.paths, confirmed_only=q.get("confirmed") == ["1"],
-                               split=(q.get("split") or ["all"])[0])),
-    ("GET", re.compile(rf"^/api/cases/{_CASE}/evidence$"),
-     lambda h, m, q: api.evidence(m["case"], h.paths)),
-    ("POST", re.compile(rf"^/api/proposals/{_CASE}/accept$"),
-     lambda h, m, q: api.accept(m["case"], h.json_body(), h.paths)),
-    ("POST", re.compile(rf"^/api/proposals/{_CASE}/reject$"),
-     lambda h, m, q: api.reject(m["case"], h.paths)),
+    # Home / flow
+    ("GET", re.compile(r"^/api/overview$"),
+     lambda h, m, q: api.overview(h.jobs(), repo=_q(q, "repo"), **_days(q))),
+    ("GET", re.compile(r"^/api/repos$"), lambda h, m, q: api.list_repos(h.jobs(), **_days(q))),
     ("GET", re.compile(r"^/api/workflows$"),
-     lambda h, m, q: api.list_workflows(h.jobs(), since=_q(q, "since"), until=_q(q, "until"),
-                                        repo=_q(q, "repo"))),
+     lambda h, m, q: api.list_workflows(h.jobs(), repo=_q(q, "repo"), **_days(q))),
     ("GET", re.compile(r"^/api/runs$"),
      lambda h, m, q: api.list_runs(h.jobs(), workflow=_q(q, "workflow"), repo=_q(q, "repo"),
-                                   since=_q(q, "since"), until=_q(q, "until"))),
+                                   **_days(q))),
     ("GET", re.compile(r"^/api/runs/(?P<run>\d+)$"),
      lambda h, m, q: api.run_detail(h.jobs(), int(m["run"]))),
     ("GET", re.compile(r"^/api/jobs/(?P<job>\d+)$"),
-     lambda h, m, q: api.case_detail(h.jobs(), h.memory(), int(m["job"]),
-                                     fetch_evidence=q.get("evidence") != ["0"])),
-    ("GET", re.compile(r"^/api/signatures$"), lambda h, m, q: api.list_signatures(h.memory())),
+     lambda h, m, q: api.case_detail(h.jobs(), int(m["job"]))),
+    # the one network action: user-triggered, single job, read-only
+    ("POST", re.compile(r"^/api/jobs/(?P<job>\d+)/triage$"),
+     lambda h, m, q: api.triage_now(h.jobs(), int(m["job"]))),
+    ("GET", re.compile(r"^/api/signatures$"),
+     lambda h, m, q: api.list_signatures(h.jobs(), repo=_q(q, "repo"), **_days(q))),
+    ("GET", re.compile(r"^/api/signatures/(?P<sig>[0-9a-f]{16})$"),
+     lambda h, m, q: api.signature_detail(h.jobs(), m["sig"])),
+    # Quality
+    ("GET", re.compile(r"^/api/golden$"), lambda h, m, q: api.list_golden(h.paths, h.jobs())),
+    ("GET", re.compile(r"^/api/evals$"),
+     lambda h, m, q: api.evals(h.paths, confirmed_only=q.get("confirmed") == ["1"],
+                               split=(q.get("split") or ["all"])[0])),
 ]
 
 

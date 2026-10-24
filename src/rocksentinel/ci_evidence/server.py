@@ -143,27 +143,7 @@ def get_job_log_windows(
         log[:MAX_LOG_CHARS], max_candidates=max(1, min(max_candidates, 20)),
         profile=profile_for(repo),
     )
-    cap = max(5, min(max_lines_per_window, 100))
-    windows = []
-    covered: set[int] = set()
-    for c in result.candidates:
-        if c.line_no in covered:
-            continue  # already shown inside an earlier, higher-ranked window
-        start, end = c.window
-        if end - start + 1 > cap:
-            start = max(start, c.line_no - cap // 3)
-            end = start + cap - 1
-        lines = [{"line_no": n, "text": result.lines[n - 1]} for n in range(start, end + 1)]
-        covered.update(range(start, end + 1))
-        windows.append({
-            "anchor": {
-                "line_no": c.line_no, "kind": c.kind, "text": c.text, "count": c.count,
-                # all repeats of this error shape, so none are lost; ask for a window at any
-                "occurrence_lines": list(c.occurrences),
-                "variants": list(c.variants),
-            },
-            "lines": lines,
-        })
+    windows = _extract.evidence_windows(result, max_lines_per_window)
     return {
         "job_id": job_id,
         "log_line_count": len(result.lines),

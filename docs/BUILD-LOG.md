@@ -283,7 +283,7 @@ All read-only toward GitHub; local only.
 **Interview talking point:** "I turned a single-repo tool into a product by finding the seam, not rewriting: the domain knowledge became a plugin, and I proved the refactor safe with byte-identical evals."
 
 
-## Product track P2: per-repo config and multi-repo ingestion (this commit)
+## Product track P2: per-repo config and multi-repo ingestion (35c92f0)
 **Built:**
 - **`config/repos.toml` + `config.py`** (pydantic, validated on load). Per repo it sets packs, branches (`all` or a list), workflows, tenant (default: owner), `enabled`, and optional job-name regexes with named groups (component, platform, hardware, shard, stage). It also holds `github_api_url` for GitHub Enterprise Server and `excerpt_retention_days`. Unknown keys are rejected, so no secrets can sneak in.
 - **`profile_for(repo)`** gives each repo its own packs, with repo-specific job-name rules tried first. The poller, MCP server, baselines, labeler, coverage and Console all use it.
@@ -299,6 +299,28 @@ All read-only toward GitHub; local only.
 **Checks:** 19 new offline tests (config validation, per-repo profiles, multi-repo poll with mocked GitHub, page fallback, GHES URL, retries, repo-keyed summaries). Eval numbers are unchanged (test: B1 0.91 / F1 0.73).
 
 **Interview talking point:** "Onboarding a new repo is a config change, validated like code, and it can't carry secrets."
+
+## Product track P4: Console as one flow, root cause first (this commit)
+**Built:**
+- **Console flow:** Home → repository → workflow → run → case, plus Root causes and Quality tabs, with a URL for every screen ([web/app.js](../web/app.js)).
+- **Home** leads with "what's failing", grouped by root-cause signature, new causes first.
+- **Case page** starts with a one-sentence headline, the verdict and the error line; evidence and history follow.
+- **Triage worker** ([src/rocksentinel/triage/](../src/rocksentinel/triage/)): deterministic (B1, no LLM), writes `triage_results` in the job store. Run offline over the 34 saved excerpts, it gave 24 root causes; 369 of the 403 stored failed jobs have no saved log yet.
+
+**Why / decisions:**
+- **Group by root cause, not by job:** one GPU hang across 5 jobs is one problem to look at.
+- **Triage stays out of memory**, so held-out test jobs can't leak to the agents.
+- **No automatic polling:** the only network action is a per-job "Fetch log & triage" click. In Azure it will enqueue the job instead, so the Console API keeps no GitHub credentials.
+- **Review tab removed:** labelling stays on the command line.
+
+**Found:**
+- **Headline vs verdict:** the first headline version described the top-ranked error line even when the verdict was "timeout" (e.g. a build line). The headline now uses the line behind the verdict.
+- **ctest summaries** now name the failing test instead of "The following tests FAILED:".
+- **Browser check:** found literal "null" text in breadcrumbs (`replaceChildren` stringifies null), now fixed. It also caught a CSS clash between the date toggle and the evidence blocks (both used class `seg`).
+
+**Checks:** tests rewritten for the new API (triage via recorded GitHub responses, grouping, "new" flag, signatures, repo cards, cross-origin POST blocked). Eval output is byte-identical to P2.
+
+**Interview talking point:** "The first thing you see is the problem, in one sentence, with the line that proves it; the log is one click further."
 
 ---
 

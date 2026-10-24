@@ -230,6 +230,32 @@ def extract_errors(log_text: str, max_candidates: int = DEFAULT_MAX_CANDIDATES,
     return result
 
 
+def evidence_windows(result: Extraction, max_lines_per_window: int = 40) -> list[dict]:
+    """Quote windows around each ranked candidate (never the whole log), for agents and UI."""
+    cap = max(5, min(max_lines_per_window, 100))
+    windows = []
+    covered: set[int] = set()
+    for c in result.candidates:
+        if c.line_no in covered:
+            continue  # already shown inside an earlier, higher-ranked window
+        start, end = c.window
+        if end - start + 1 > cap:
+            start = max(start, c.line_no - cap // 3)
+            end = start + cap - 1
+        lines = [{"line_no": n, "text": result.lines[n - 1]} for n in range(start, end + 1)]
+        covered.update(range(start, end + 1))
+        windows.append({
+            "anchor": {
+                "line_no": c.line_no, "kind": c.kind, "text": c.text, "count": c.count,
+                # all repeats of this error shape, so none are lost; ask for a window at any
+                "occurrence_lines": list(c.occurrences),
+                "variants": list(c.variants),
+            },
+            "lines": lines,
+        })
+    return windows
+
+
 def _fill_facts(result: Extraction, lines: list[str], found: list[ErrorCandidate],
                 fault_kinds: frozenset[str]) -> None:
     first = found[0] if found else None

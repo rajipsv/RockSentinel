@@ -8,97 +8,41 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">RockSentinel <span>Console</span></div>
-    <nav class="tabs" role="tablist">
-      <button class="tab active" data-view="review" role="tab">Review <span id="count-review" class="pill">0</span></button>
-      <button class="tab" data-view="golden" role="tab">Golden set <span id="count-golden" class="pill">0</span></button>
-      <button class="tab" data-view="evals" role="tab">Evals</button>
-      <button class="tab" data-view="runs" role="tab">Runs</button>
-      <button class="tab" data-view="signatures" role="tab">Signatures</button>
+    <a class="brand" href="#/">RockSentinel <span>Console</span></a>
+    <nav class="tabs" aria-label="Sections">
+      <a class="tab" data-tab="home" href="#/">Home</a>
+      <a class="tab" data-tab="signatures" href="#/signatures">Root causes</a>
+      <a class="tab" data-tab="quality" href="#/quality">Quality</a>
     </nav>
     <button class="btn" id="theme-toggle" type="button" aria-label="Switch colour theme">Light theme</button>
     <div class="hint">read-only toward GitHub · local only</div>
   </header>
 
   <main>
-    <!-- Review -->
-    <section id="view-review" class="view active">
-      <aside class="list" id="proposal-list" aria-label="Proposals"></aside>
-      <article class="detail" id="proposal-detail">
-        <p class="empty">No proposal selected.</p>
-      </article>
-    </section>
-
-    <!-- Golden set -->
-    <section id="view-golden" class="view">
-      <div class="panel">
-        <h2>Golden set</h2>
-        <p class="muted" id="golden-summary"></p>
-        <div class="table-wrap"><table id="golden-table"></table></div>
-      </div>
-    </section>
-
-    <!-- Evals -->
-    <section id="view-evals" class="view">
-      <div class="panel">
-        <div class="row-between">
-          <h2>Evals: non-AI baselines</h2>
-          <div>
-            <label>Split <select id="split">
-              <option value="test">test (held out)</option>
-              <option value="dev">dev (may be tuned on)</option>
-              <option value="all">all</option>
-            </select></label>
-            <label class="check"><input type="checkbox" id="confirmed-only"> confirmed only</label>
-          </div>
+    <div class="panel toolbar" id="toolbar">
+      <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"></nav>
+      <div class="filters" id="filters">
+        <div class="seg" role="group" aria-label="Date filter mode">
+          <button type="button" class="seg-btn active" data-mode="day" aria-pressed="true">On a day</button>
+          <button type="button" class="seg-btn" data-mode="range" aria-pressed="false">Between dates</button>
         </div>
-        <p class="muted">B0 = TheRock-style keyword excerpt · B1 = RockSentinel extract_errors.
-          Both use the same rules; the LLM agents must beat both.</p>
-        <p class="muted" id="evals-summary"></p>
-        <div class="table-wrap"><table id="evals-table"></table></div>
-        <h3>Per case</h3>
-        <div class="table-wrap"><table id="evals-cases"></table></div>
-      </div>
-    </section>
-    <!-- Runs + Case -->
-    <section id="view-runs" class="view">
-      <div class="panel runs-toolbar">
-        <nav class="crumbs" id="runs-crumbs" aria-label="Breadcrumb"></nav>
-        <div class="filters">
-          <div class="seg" role="group" aria-label="Date filter mode">
-            <button type="button" class="seg-btn active" data-mode="day" aria-pressed="true">On a day</button>
-            <button type="button" class="seg-btn" data-mode="range" aria-pressed="false">Between dates</button>
-          </div>
-          <label class="date-field"><span id="lbl-from">Day</span>
-            <input type="date" id="date-from" aria-label="Start day (UTC)"></label>
-          <label class="date-field" id="field-to" hidden><span>to</span>
-            <input type="date" id="date-to" aria-label="End day (UTC)"></label>
-          <div class="presets" role="group" aria-label="Quick date ranges">
-            <button type="button" class="btn small" data-preset="all">All dates</button>
-            <button type="button" class="btn small" data-preset="latest">Latest day</button>
-            <button type="button" class="btn small" data-preset="3">Last 3 days</button>
-            <button type="button" class="btn small" data-preset="7">Last 7 days</button>
-          </div>
+        <label class="date-field"><span id="lbl-from">Day</span>
+          <input type="date" id="date-from" aria-label="Start day (UTC)"></label>
+        <label class="date-field" id="field-to" hidden><span>to</span>
+          <input type="date" id="date-to" aria-label="End day (UTC)"></label>
+        <div class="presets" role="group" aria-label="Quick date ranges">
+          <button type="button" class="btn small" data-preset="all">All dates</button>
+          <button type="button" class="btn small" data-preset="latest">Latest day</button>
+          <button type="button" class="btn small" data-preset="3">Last 3 days</button>
+          <button type="button" class="btn small" data-preset="7">Last 7 days</button>
         </div>
-        <div class="filters">
-          <input type="search" id="runs-search" placeholder="Filter workflows…" aria-label="Filter">
-          <label class="check"><input type="checkbox" id="failing-only"> failing only</label>
-          <label class="check"><input type="checkbox" id="auto-refresh" checked> auto-refresh (60 s)</label>
-          <span class="muted small-text" id="runs-updated" aria-live="polite"></span>
-        </div>
+        <input type="search" id="search" placeholder="Filter…" aria-label="Filter this page">
+        <label class="check"><input type="checkbox" id="failing-only"> failing only</label>
+        <label class="check"><input type="checkbox" id="auto-refresh" checked> auto-refresh</label>
+        <span class="muted small-text" id="updated" aria-live="polite"></span>
       </div>
-      <div class="stats" id="runs-stats"></div>
-      <div id="runs-body"></div>
-    </section>
-
-    <!-- Signatures -->
-    <section id="view-signatures" class="view">
-      <div class="panel">
-        <h2>Failure signatures (memory)</h2>
-        <p class="muted" id="sig-summary"></p>
-        <div class="table-wrap"><table id="sig-table"></table></div>
-      </div>
-    </section>
+    </div>
+    <div id="view" aria-live="polite"></div>
   </main>
 
   <div id="toast" role="status" aria-live="polite"></div>

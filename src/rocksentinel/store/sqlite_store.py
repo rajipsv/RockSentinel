@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import functools
+import json
 import sqlite3
 import threading
 from collections.abc import Callable
@@ -41,6 +42,25 @@ CREATE TABLE IF NOT EXISTS triage_queue (
     status     TEXT NOT NULL DEFAULT 'pending',
     queued_at  TEXT NOT NULL
 );
+
+-- Deterministic triage of one failed job (root cause, verdict, evidence windows as JSON).
+CREATE TABLE IF NOT EXISTS triage_results (
+    job_id       INTEGER PRIMARY KEY,
+    repo         TEXT NOT NULL,
+    signature    TEXT,
+    root_kind    TEXT,
+    root_line    TEXT,
+    headline     TEXT NOT NULL,
+    category     TEXT NOT NULL,
+    reason       TEXT NOT NULL,
+    failing_test TEXT,
+    faulting_kernel TEXT,
+    ignored_noise INTEGER NOT NULL DEFAULT 0,
+    evidence     TEXT NOT NULL,
+    source       TEXT NOT NULL,
+    triaged_at   TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS ix_triage_signature ON triage_results (signature);
 
 CREATE TABLE IF NOT EXISTS state (
     key   TEXT PRIMARY KEY,
@@ -187,6 +207,78 @@ class SQLiteStore:
             (limit,),
         ).fetchall()
         return [r[0] for r in rows]
+
+    @_locked
+    def mark_queue(self, case_key: str, status: str) -> None:
+        with self._db:
+            self._db.execute("UPDATE triage_queue SET status = ? WHERE case_key = ?",
+                             (status, case_key))
+
+    # --- Triage results -----------------------------------------------------------------
+
+    _TRIAGE_COLS = ("job_id", "repo", "signature", "root_kind", "root_line", "headline",
+                    "category", "reason", "failing_test", "faulting_kernel", "ignored_noise",
+                    "evidence", "source", "triaged_at")
+
+    @_locked
+    def save_triage(self, row: dict) -> None:
+        values = dict(row, evidence=json.dumps(row["evidence"]))
+        cols = self._TRIAGE_COLS
+        with self._db:
+            self._db.execute(
+                f"INSERT OR REPLACE INTO triage_results ({', '.join(cols)}) "
+                f"VALUES ({', '.join('?' for _ in cols)})", [values[c] for c in cols])
+
+    def _triage_row(self, r: tuple) -> dict:
+        row = dict(zip(self._TRIAGE_COLS, r, strict=True))
+        row["evidence"] = json.loads(row["evidence"])
+        return row
+
+    @_locked
+    def get_triage(self, job_id: int) -> dict | None:
+        r = self._db.execute(f"SELECT {', '.join(self._TRIAGE_COLS)} FROM triage_results "
+                             "WHERE job_id = ?", (job_id,)).fetchone()
+        return self._triage_row(r) if r else None
+
+    @_locked
+    def triaged_failures(self, since: str | None = None, until: str | None = None,
+                         repo: str | None = None) -> list[dict]:
+        """Triaged failed jobs joined with their job facts (newest first), for grouping."""
+        rows = self._db.execute(
+            "SELECT t.job_id, t.repo, t.signature, t.root_kind, t.root_line, t.headline, "
+            "t.category, t.reason, t.failing_test, j.run_id, j.workflow, j.job_name, "
+            "j.component, j.gpu_family, j.platform, j.started_at "
+            "FROM triage_results t JOIN job_results j ON j.job_id = t.job_id "
+            "WHERE (? IS NULL OR substr(j.started_at, 1, 10) >= ?) "
+            "AND (? IS NULL OR substr(j.started_at, 1, 10) <= ?) "
+            "AND (? IS NULL OR t.repo = ?) ORDER BY j.started_at DESC",
+            (since, since, until, until, repo, repo)).fetchall()
+        keys = ("job_id", "repo", "signature", "root_kind", "root_line", "headline", "category",
+                "reason", "failing_test", "run_id", "workflow", "job_name", "component",
+                "gpu_family", "platform", "started_at")
+        return [dict(zip(keys, r, strict=True)) for r in rows]
+
+    @_locked
+    def signature_first_seen(self) -> dict[str, str]:
+        """Earliest job start per signature across all triaged jobs."""
+        return dict(self._db.execute(
+            "SELECT t.signature, MIN(j.started_at) FROM triage_results t "
+            "JOIN job_results j ON j.job_id = t.job_id WHERE t.signature IS NOT NULL "
+            "GROUP BY t.signature").fetchall())
+
+    @_locked
+    def failed_job_count(self, since: str | None = None, until: str | None = None,
+                         repo: str | None = None) -> tuple[int, int]:
+        """(failed jobs, of which triaged) in the range."""
+        r = self._db.execute(
+            "SELECT COUNT(*), SUM(t.job_id IS NOT NULL) FROM job_results j "
+            "LEFT JOIN triage_results t ON t.job_id = j.job_id "
+            "WHERE j.conclusion IN ('failure','timed_out') "
+            "AND (? IS NULL OR substr(j.started_at, 1, 10) >= ?) "
+            "AND (? IS NULL OR substr(j.started_at, 1, 10) <= ?) "
+            "AND (? IS NULL OR j.repo = ?)",
+            (since, since, until, until, repo, repo)).fetchone()
+        return r[0], r[1] or 0
 
     # --- StateStore ---------------------------------------------------------------------
 

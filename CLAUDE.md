@@ -35,7 +35,7 @@ Design: `docs/ADLC-RockSentinel.md`. Keep code consistent with it; if a decision
   - [x] P1. Pack architecture: `core` + `rocm` packs, `ci_evidence` engine (pure refactor, evals byte-identical)
   - [x] P2. Per-repo config (`config/repos.toml`), tenants, multi-repo ingestion (TheRock + rockrel polled; pandas-dev/pandas configured, not polled yet)
   - [ ] P3. GitHub App auth (installation tokens) + webhook handler (offline-tested; live in step 9)
-  - [ ] P4. Console: org → repo → workflow → run → case, root cause first, triage worker, Quality tab, no Review tab
+  - [x] P4. Console: org → repo → workflow → run → case, root cause first, triage worker, Quality tab, no Review tab
   - [ ] P5. Docs: product architecture, private-repo/data handling, onboarding
 - [ ] 8a. Adapt real ECC skills (read ECC SKILL.md files, adapt with MIT attribution into skills/, wire into agents)
 - [ ] 9. Azure deployment (Bicep + azd; switch `LLMProvider` to Azure OpenAI; rerun evals)

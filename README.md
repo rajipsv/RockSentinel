@@ -99,16 +99,29 @@ The build story for interviews, updated after each step: [docs/BUILD-LOG.md](doc
 ```bash
 .venv/Scripts/python -m rocksentinel.console.server     # http://127.0.0.1:8765
 ```
-- **Review:** each pending proposal with its highlighted evidence lines, failing-since and
-  co-failure context, a category picker and Accept/Reject (keys A / R, J / K to move).
-- **Golden set:** all labelled cases and who confirmed them.
-- **Evals:** B0 vs B1 metrics and per-case results, by dev/test split.
-- **Runs / Case:** recent runs, failures grouped by runner pool, and a per-job case view (history, flake evidence, B1 verdict, top error lines, memory match).
-- **Signatures:** memory's failure signatures and learned instincts.
+One flow from "what's failing" to "why"; every screen has its own URL, so Back and links work.
+- **Home:** totals, then **what's failing, grouped by root cause** (new causes first, with
+  how many jobs and runs each one hit), then one card per repository.
+- **Repository → workflow → run:** workflow cards with recent-run strips, runs grouped by
+  day, and a run's failed jobs grouped by runner pool, each with its root-cause headline.
+- **Case (one job):** the **root cause first** (one plain sentence, the verdict and the
+  error line), then the evidence windows, then context (history, flakiness, co-failures,
+  other jobs with the same cause). A job with no saved log gets a **Fetch log & triage**
+  button: the only network action, one job, read-only.
+- **Root causes:** every root-cause signature and the jobs it hit.
+- **Quality:** B0 vs B1 metrics by dev/test split, and the golden set.
 
-Local only (binds to 127.0.0.1, same-origin writes); it edits only the golden-set files and
-never writes to GitHub. In Azure, `web/` is served by Static Web Apps and
-`src/rocksentinel/console/api.py` runs as its managed Functions.
+Root causes come from the deterministic triage worker (no LLM), which runs offline over the
+saved log excerpts:
+```bash
+.venv/Scripts/python -m rocksentinel.triage.worker                  # offline
+.venv/Scripts/python -m rocksentinel.triage.worker --job <id> --fetch  # one job, downloads its log
+```
+Golden-set labelling is command-line only (`python -m rocksentinel.evals.labeler`).
+
+Local only (binds to 127.0.0.1, same-origin POSTs only) and never writes to GitHub. In Azure,
+`web/` is served by Static Web Apps and `src/rocksentinel/console/api.py` runs as its managed
+Functions.
 
 ## Grow the golden set (human review)
 ```bash
