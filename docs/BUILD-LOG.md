@@ -17,7 +17,7 @@ The design is in [ADLC-RockSentinel.md](ADLC-RockSentinel.md). Working rules and
 
 - Golden set: 35 real TheRock failures, 33 confirmed by a human; 24 dev / 11 held-out test.
 - Pattern coverage on 25 failures *outside* the golden set: 92% hit a specific pattern.
-- Tests: 267 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
+- Tests: 282 unit/integration tests, all offline (recorded GitHub responses, replayed model turns).
 
 ---
 
@@ -300,7 +300,7 @@ All read-only toward GitHub; local only.
 
 **Interview talking point:** "Onboarding a new repo is a config change, validated like code, and it can't carry secrets."
 
-## Product track P4: Console as one flow, root cause first (this commit)
+## Product track P4: Console as one flow, root cause first (b278b7d)
 **Built:**
 - **Console flow:** Home → repository → workflow → run → case, plus Root causes and Quality tabs, with a URL for every screen ([web/app.js](../web/app.js)).
 - **Home** leads with "what's failing", grouped by root-cause signature, new causes first.
@@ -321,6 +321,31 @@ All read-only toward GitHub; local only.
 **Checks:** tests rewritten for the new API (triage via recorded GitHub responses, grouping, "new" flag, signatures, repo cards, cross-origin POST blocked). Eval output is byte-identical to P2.
 
 **Interview talking point:** "The first thing you see is the problem, in one sentence, with the line that proves it; the log is one click further."
+
+## Product track P3: GitHub App auth and webhook receiver (this commit)
+**Built:**
+- **[github/app_auth.py](../src/rocksentinel/github/app_auth.py):** the App signs a short JWT, looks up its installation per repo owner, and mints installation tokens. They are cached and refreshed 5 minutes before expiry.
+- **Client:** takes a per-path token function, so one client serves repos in several orgs. With no token given, it uses the App when `GITHUB_APP_ID` + key path are set, else the personal token.
+- **[ingest/webhook.py](../src/rocksentinel/ingest/webhook.py):** a framework-free receiver for `workflow_run` completed events, plus a small local server.
+
+**Why / decisions:**
+- **Tokens ask for read-only permissions explicitly**, so they stay read-only even if the App's installation is granted more. Minting is the system's only POST and changes no repository.
+- **Webhooks listen to `workflow_run`, not `workflow_job`:** job events don't carry the workflow file name. A run event plus one job-list read gives the same rows the poller writes.
+- **Response codes are chosen for GitHub's retries:**
+  - repeat deliveries are acknowledged and skipped;
+  - ignored events get 202, so GitHub doesn't keep retrying;
+  - a failed job read gets 503 and isn't marked as seen, so GitHub redelivers;
+  - the poller stays as the catch-up path.
+
+**Found:** App auth errors are now a kind of `GitHubError`, so an owner without the App installed skips that repo instead of crashing a poll (test-driven).
+
+**Checks:** 15 new offline tests:
+- **App auth:** throwaway RSA key and mocked GitHub; covers the JWT claims, the read-only request body, caching, refresh and "not installed".
+- **Webhook:** recorded run fixture; covers the signature check, de-duplication, filters, malformed input, the outage case, and that only GETs reach GitHub.
+
+Eval output is byte-identical. Not yet tried against a real App: that comes with the Azure deployment (step 9).
+
+**Interview talking point:** "The token itself asks for read-only access, so even a misconfigured App can't make RockSentinel write."
 
 ---
 

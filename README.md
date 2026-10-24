@@ -49,6 +49,22 @@ git-ignored `.env` file at the repo root:
 ```
 GITHUB_TOKEN=<your token>
 ```
+
+**GitHub App (for private repos and other orgs).** Set these instead, and every GitHub call
+uses short-lived, read-only installation tokens (actions, contents and metadata: read), one per
+repo owner where the App is installed:
+```
+GITHUB_APP_ID=<app id>
+GITHUB_APP_PRIVATE_KEY_PATH=<path to the app's .pem, outside the repo>
+```
+**Webhooks.** For repos where the App is installed, GitHub can push `workflow_run` events
+instead of waiting for the poller (which stays as the catch-up path):
+```bash
+.venv/Scripts/python -m rocksentinel.ingest.webhook --port 8790   # needs GITHUB_WEBHOOK_SECRET in .env
+```
+It checks GitHub's signature, ignores repeat deliveries and unconfigured repos, and stores
+the completed run's jobs.
+
 Tests never use the network: they replay recorded responses from `tests/fixtures/github/`.
 
 ## Onboard a repo (config only)

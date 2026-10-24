@@ -216,7 +216,7 @@ flowchart TB
 | **App Insights + Log Analytics + Workbook** | Observability | End-to-end OpenTelemetry traces, KQL and dashboards in one place. |
 | **Azure Monitor alerts + Action Groups** | Alerting | SLO, DLQ and budget alerts sent to email or Teams. |
 
-**Ingestion note:** GitHub sends webhooks only to repo owners, so upstream TheRock is **polled** through the REST API. ETag caching keeps this within rate limits.
+**Ingestion note:** GitHub sends webhooks only to repo owners (or to a GitHub App they install), so upstream TheRock is **polled** through the REST API, with ETag caching keeping this within rate limits. Where the RockSentinel App is installed, a **webhook receiver** (`ingest/webhook.py`) takes `workflow_run` completed events: it verifies the HMAC signature, skips repeat deliveries and unconfigured repos, applies the repo's branch/workflow filters, then reads that one run's jobs. Polling stays as the catch-up path; both write through the same idempotent upserts.
 
 **GitHub access is read-only by construction.** No component holds a GitHub write token, so the worst a prompt injection hidden in a CI log can do is produce a wrong verdict in the Console, which a human reviews.
 
@@ -517,7 +517,7 @@ A repo's **profile** is its domain packs followed by **`core`** (crashes, saniti
 ### 2.5b Per-repo config, tenants and private repos
 - **Central config** (`config/repos.toml` locally, Cosmos DB in Azure): each repo lists its packs, branches (`all` or a list), workflows, an optional tenant (default: the repo owner) and optional job-name regexes. Central rather than in-repo, so repos we don't own (TheRock, rockrel) can be onboarded. The file is validated on load and never holds secrets.
 - **A tenant is a customer org.** Repo names already carry it, and per-tenant partitions and secrets come with the hosted (SaaS) model.
-- **Private repos:** the customer installs the read-only GitHub App on chosen repos. RockSentinel gets short-lived installation tokens scoped to those repos (Actions read, Metadata read) that the customer can revoke. Nothing else changes downstream.
+- **Private repos:** the customer installs the read-only GitHub App on chosen repos. RockSentinel gets short-lived installation tokens scoped to those repos that the customer can revoke. Nothing else changes downstream. Built in P3 (`github/app_auth.py`): the app signs a 9-minute JWT, finds the installation per repo owner, and mints tokens that **request read-only permissions** (Actions, Contents, Metadata: read; Contents is for commit comparison in RCA), so a token stays read-only even if the App were granted more. Tokens are cached and refreshed 5 minutes before expiry. Minting a token is the only POST in the system, and it changes nothing in any repository.
 - **Deployment models:**
   1. **Self-hosted in the customer's Azure first** (`azd up`; logs, data and the LLM stay in their tenant).
   2. **Hosted multi-tenant later.**

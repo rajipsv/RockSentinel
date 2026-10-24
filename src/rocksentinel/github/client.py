@@ -1,6 +1,8 @@
 """Minimal read-only GitHub REST client for Actions runs, jobs and job logs.
 
-- Token comes from the GITHUB_TOKEN environment variable, else from the repo's `.env`.
+- Auth: a GitHub App when GITHUB_APP_ID + GITHUB_APP_PRIVATE_KEY_PATH are set (read-only
+  installation tokens per repo owner, see app_auth.py), else GITHUB_TOKEN. Both come from
+  the environment, else from the repo's git-ignored `.env`.
 - Read-only by construction: only GET requests exist on this class.
 - ETag caching for list endpoints (304 responses don't count against the rate limit).
 - Retries 5xx with backoff; raises RateLimitedError when the quota is exhausted.
@@ -12,6 +14,7 @@ import logging
 import os
 import re
 import time
+from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
@@ -43,17 +46,25 @@ class RateLimitedError(GitHubError):
         self.reset_at = reset_at
 
 
-def load_token(env_file: Path | None = None) -> str:
-    """Return GITHUB_TOKEN from the environment, else from a `KEY=value` .env file."""
-    token = os.environ.get("GITHUB_TOKEN")
-    if token:
-        return token.strip()
+def read_env(name: str, env_file: Path | None = None) -> str | None:
+    """A setting from the environment, else from a `KEY=value` .env file; None if unset."""
+    value = os.environ.get(name)
+    if value:
+        return value.strip()
     path = env_file or _DEFAULT_ENV_FILE
     if path.is_file():
         for raw in path.read_text(encoding="utf-8").splitlines():
-            key, sep, value = raw.strip().partition("=")
-            if sep and key.strip() == "GITHUB_TOKEN" and value.strip():
-                return value.strip().strip('"').strip("'")
+            key, sep, val = raw.strip().partition("=")
+            if sep and key.strip() == name and val.strip():
+                return val.strip().strip('"').strip("'")
+    return None
+
+
+def load_token(env_file: Path | None = None) -> str:
+    """Return GITHUB_TOKEN from the environment, else from a `KEY=value` .env file."""
+    token = read_env("GITHUB_TOKEN", env_file)
+    if token:
+        return token
     raise GitHubError("GITHUB_TOKEN not set (environment or .env)")
 
 
@@ -131,18 +142,27 @@ def _job_from_api(j: dict[str, Any]) -> JobRef:
 class GitHubClient:
     def __init__(
         self,
-        token: str | None = None,
+        token: str | Callable[[str], str] | None = None,
         *,
         transport: httpx.BaseTransport | None = None,
         max_retries: int = 3,
         backoff_s: float = 1.0,
         api_url: str = API_URL,
     ):
+        """`token`: a fixed token, or a function path -> token (GitHub App: one installation
+        token per repo owner). None: GitHub App settings if present, else GITHUB_TOKEN."""
         # api_url: GitHub Enterprise Server uses https://<host>/api/v3
+        self._app = None
+        if token is None:
+            from rocksentinel.github.app_auth import load_app_auth
+
+            self._app = load_app_auth(api_url, transport=transport)
+            token = self._app.token_for_path if self._app else load_token()
+        self._token_fn = token if callable(token) else None
         self._http = httpx.Client(
             base_url=api_url,
             headers={
-                "Authorization": f"Bearer {token or load_token()}",
+                "Authorization": f"Bearer {token if isinstance(token, str) else ''}",
                 "Accept": "application/vnd.github+json",
                 "X-GitHub-Api-Version": "2022-11-28",
                 "User-Agent": "rocksentinel",
@@ -157,6 +177,8 @@ class GitHubClient:
 
     def close(self) -> None:
         self._http.close()
+        if self._app:
+            self._app.close()
 
     def __enter__(self) -> GitHubClient:
         return self
@@ -169,6 +191,8 @@ class GitHubClient:
     def _get(self, path: str, params: dict[str, Any] | None = None) -> httpx.Response:
         for attempt in range(self._max_retries + 1):
             try:
+                if self._token_fn:  # per-repo installation token, refreshed before expiry
+                    self._http.headers["Authorization"] = f"Bearer {self._token_fn(path)}"
                 resp = self._http.get(path, params=params)
             except httpx.TransportError as exc:
                 # Dropped connections / incomplete bodies / timeouts: retry like a 5xx, then
